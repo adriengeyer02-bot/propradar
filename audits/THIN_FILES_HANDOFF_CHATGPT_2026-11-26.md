@@ -127,3 +127,21 @@ Claude peut les lire lui-même (lecture interrompue le 26/11 faute de crédits F
 | Upcomers | `upcomers` | https://upcomers.com | prix, programmes |
 | WeMasterTrade | `wemastertrade` | https://wemastertrade.com | drawdown |
 | Willis Capital | `willis-capital` | https://wfunded.io | prix, drawdown |
+
+## Résultat de l'intégration des 15 dossiers ChatGPT (Claude, 26/11/2026)
+
+Intégré dans `app/data/firm-updates.json` (source officielle + lien vers le dossier ChatGPT dans les sources) :
+- **TX3 Funding** : Instant 5 % trailing, consistency 15 %, buffer 3 %. **Contradiction conservée** sur le Flex : la page de comparaison (5 % daily, 10 % max, paiement à 10 j puis 7 j, plafond 2 %/jour) contredit l'article de règles Flex (comptes ouverts depuis le 24/08/2026). Les deux sont affichés. Pro et 1 Phase notés au journal, sans tailles lues.
+- **ThinkCapital** : drawdown Hybride (Lightning et Bolt trailing, Dual Step et Nexus statiques, CG §6). Plancher Bolt (equity) et Bolt Flex (solde clôturé) précisés.
+- **MyFundedCapital** : partage 80 %, drawdown Hybride, délais de paiement 2-Step et Instant. Les anciennes pages FR ne sont pas utilisées.
+- **Hola Prime** : types de drawdown confirmés sur le tableau de comparaison (relu par Claude). Pas de tailles ni de prix sur la page.
+- **Monevis** : programme Instant (prix catalogue 29 à 499 $, 6 %, 2 %, 8 % statique, 50 %). **Contradictions conservées** : toutes les cartes sont étiquetées 3 000 $, et la page dit à la fois « 30 jours » et « illimité ».
+- **Alpine Funded** : partage 80 % (2-Step). **Contradiction conservée** entre la FAQ Base Camp et la promesse « dès 3 jours ». Prix en euros affichés à -50 % : non enregistrés.
+- **FundedHive** : partage 80 %. Frais de 19 $ non généralisés.
+
+Non intégré :
+- **Forex Funds Flow** : il manque le type de drawdown du FFF Boost.
+- **Moneta Funded** : extraits indexés seulement ; ni tailles ni prix.
+- **FXCI** : données historiques en euros, site en erreur 502.
+- **FXRK** : copie Framer sans opérateur confirmé ; alerte CNMV déjà au dossier.
+- **GetCryptoFunded, Leveled Up Society, Rocket21, The Funded Trader** : sites injoignables (DNS, boucle de redirection, 523, 402). Poser un avertissement de domaine demande l'accord de Geyer et une source externe. Rien n'est changé.

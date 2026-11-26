@@ -9827,7 +9827,8 @@
           "source": "https://holaprime.com/terms-conditions/",
           "fields": ["restrictiveRules"]
         },
-        {"date": "2026-11-26", "summary": "Read on the official 2-Step Prime FAQ: 8% then 5% targets, 5% daily (4% on 200K) from the previous close, 10% max loss of the initial balance (8% on 200K), 3 minimum days; bi-weekly 80%, monthly 95% or on-demand 80% (40% consistency, 2% minimum profit); 2.5% payout fee; fee refunded with the 4th payout.", "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/", "fields": ["profitSplit"]}
+        {"date": "2026-11-26", "summary": "Read on the official 2-Step Prime FAQ: 8% then 5% targets, 5% daily (4% on 200K) from the previous close, 10% max loss of the initial balance (8% on 200K), 3 minimum days; bi-weekly 80%, monthly 95% or on-demand 80% (40% consistency, 2% minimum profit); 2.5% payout fee; fee refunded with the 4th payout.", "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/", "fields": ["profitSplit"]},
+        {"date": "2026-11-26", "summary": "Official comparison table read on 26 Nov 2026 (consistent with ChatGPT's dossier and the Prime Rulebook): 1-Step Prime 10% target, 3% daily, 6% static; 2-Step Pro and 2-Step Prime 8%/5%, 5% daily, 10% static (8% and 4% on 200K); Direct 3% daily, 7% EOD trailing, up to 90%; Fly accounts use EOD or intraday trailing limits once funded (Rulebook). The 'no-rules' Fly marketing does not mean no drawdown. Sizes and prices are not on the comparison page; Black Friday prices excluded.", "source": "https://holaprime.com/forex/challenge-comparison/", "fields": ["drawdownType"]}
       ],
       "set": {
         "profitSplit": 80,
@@ -9899,7 +9900,10 @@
           "label": "Terms & conditions read in full (2026-11-19)",
           "url": "https://holaprime.com/terms-conditions/"
         },
-        {"label": "hola-prime official rules/pricing page (read 2026-11-26)", "url": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/"}
+        {"label": "hola-prime official rules/pricing page (read 2026-11-26)", "url": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/"},
+        {"label": "Hola Prime challenge comparison (official)", "url": "https://holaprime.com/forex/challenge-comparison/"},
+        {"label": "Hola Prime Rulebook schedules (official)", "url": "https://holaprime.com/fr/rulebook/schedules/"},
+        {"label": "ChatGPT dossier on Hola Prime (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/hola-prime/program-evidence-chatgpt-2026-11-26.md"}
       ],
       "auditedPrograms": [
         {
@@ -15090,8 +15094,8 @@
     "thinkcapital": {
       "reviewedAt": "2026-11-26",
       "setProducts": [
-        {"id": "thinkcapital-bolt", "name": "Bolt (instant funding)", "type": "Instant funding", "description": "No evaluation. From $39; sizes $2.5K to $100K.", "accountSizeMin": 2500, "accountSizeMax": 100000, "entryFeeMin": 39, "profitTarget": "none", "maxDailyLoss": "3%, equity-based", "maxDrawdown": "6%, trailing", "profitSplit": "80%, 90% with an add-on", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"},
-        {"id": "thinkcapital-bolt-flex", "name": "Bolt Flex (instant funding)", "type": "Instant funding", "description": "No evaluation. From $59; sizes $2.5K to $50K.", "accountSizeMin": 2500, "accountSizeMax": 50000, "entryFeeMin": 59, "profitTarget": "none", "maxDailyLoss": "3%", "maxDrawdown": "7%, balance-based", "profitSplit": "80%, 90% with an add-on", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
+        {"id": "thinkcapital-bolt", "name": "Bolt (instant funding)", "type": "Instant funding", "description": "No evaluation. From $39; sizes $2.5K to $100K.", "accountSizeMin": 2500, "accountSizeMax": 100000, "entryFeeMin": 39, "profitTarget": "none", "maxDailyLoss": "3%, equity-based", "maxDrawdown": "6%, trailing the equity high-water mark; locks at the initial balance after +6% (Terms of Service)", "profitSplit": "80%, 90% with an add-on", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"},
+        {"id": "thinkcapital-bolt-flex", "name": "Bolt Flex (instant funding)", "type": "Instant funding", "description": "No evaluation. From $59; sizes $2.5K to $50K.", "accountSizeMin": 2500, "accountSizeMax": 50000, "entryFeeMin": 59, "profitTarget": "none", "maxDailyLoss": "3%", "maxDrawdown": "7%, balance-based: trails the highest closed balance and locks at the initial balance after +7% (Terms of Service)", "profitSplit": "80%, 90% with an add-on", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
       ],
       "changelog": [
         {
@@ -15135,12 +15139,14 @@
           "source": "https://find-and-update.company-information.service.gov.uk/company/10537331",
           "fields": ["entities"]
         },
-        {"date": "2026-11-26", "summary": "Read on the official Bolt page: Bolt from $39 ($2.5K to $100K, 3% equity-based daily loss, 6% trailing max loss) and Bolt Flex from $59 ($2.5K to $50K, 3% daily, 7% balance-based); standard split 80%, 90% with an add-on.", "source": "https://www.thinkcapital.com/instant-funding/", "fields": ["products"]}
+        {"date": "2026-11-26", "summary": "Read on the official Bolt page: Bolt from $39 ($2.5K to $100K, 3% equity-based daily loss, 6% trailing max loss) and Bolt Flex from $59 ($2.5K to $50K, 3% daily, 7% balance-based); standard split 80%, 90% with an add-on.", "source": "https://www.thinkcapital.com/instant-funding/", "fields": ["products"]},
+        {"date": "2026-11-26", "summary": "Terms of Service §6 (read by ChatGPT on 26 Nov 2026; the page did not render for Claude): Lightning 10% target, 3% daily on balance, 6% trailing; Dual Step 9%/5%, 4% daily, 7% (challenge) / 8% (funded) static on the initial balance; Nexus 7%/6%/5%, 4% daily, 8% static; Bolt 6% trailing on equity high-water, Bolt Flex 7% trailing on the highest closed balance, both locking at the initial balance. Static and trailing programmes: Hybride. Account sizes of Lightning, Dual Step and Nexus not read, so they are not listed as programmes.", "source": "https://www.thinkcapital.com/terms-of-services/", "fields": ["drawdownType", "products"]}
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/thinkcapital.com)."
       ],
       "set": {
+        "drawdownType": "Hybride",
         "score": 58,
         "verdict": "ThinkCapital continues to offer broker-backed branded simulated evaluations with named UK contracting provider TFG (Payments) Limited and substantive plan-specific terms. However, ThinkMarkets' regulatory authorisations do not protect the separate prop challenge as a regulated client brokerage account. Trustpilot currently withholds the rating following a guideline breach and removal of fake reviews, leaving 605 reviews without a usable TrustScore; the platform does not identify who authored the removed reviews. Complaints about refused rewards remain disputed. Detailed payout gates and restricted refunds justify a reduction from 65 (previously capped at 64) to 58/100, not a closure label.",
         "auditSummary": "17 November 2026: ThinkCapital's official Terms of Service name TFG (Payments) Limited as the provider of simulated, fictitious-funds trading programmes; the firm's association with ThinkMarkets does not extend that group's broker regulation, client-money rights or investor compensation to the challenge contract. The contract lists Bolt, Bolt Flex, Nexus, Lightning and Dual Step routes with different loss and consistency rules. For Bolt/Bolt Flex, eligible first performance reward requests may require 6%-7% closed simulated profit, 14 calendar days from first virtual trade and a 20%-25% best-day consistency cap, depending on plan or paid add-ons; $100 is the specified minimum request. Cooling-off/refund exceptions are narrow and an administration charge of up to $20 can apply in listed circumstances. Trustpilot still suppresses ThinkCapital's score over a guideline breach and records removed fake reviews; 605 reviews are visible but no valid live star rating exists. Neither the notice nor unadjudicated customer payout refusals proves the company itself commissioned false reviews or unlawfully withheld a particular payment. Score 58/100 reflects contract clarity tempered by review-integrity concerns, complicated reward gates and limited independently reconciled payments.",
@@ -15197,7 +15203,9 @@
         {
           "label": "ThinkCapital news trading FAQ (official, 2026-11-18)",
           "url": "https://www.thinkcapital.com/tc-faqs/funded-accounts/news-trading-policy-rule-and-restriction/"
-        }
+        },
+        {"label": "ThinkCapital Terms of Service (official)", "url": "https://www.thinkcapital.com/terms-of-services/"},
+        {"label": "ChatGPT dossier on ThinkCapital (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/thinkcapital/program-evidence-chatgpt-2026-11-26.md"}
       ],
       "auditedPrograms": [
         {
@@ -23619,8 +23627,8 @@
         }
       ],
       "setProducts": [
-        {"id": "tx3-instant", "name": "Instant Funding", "type": "Instant funding", "description": "Sizes $7.5K to $100K. Fees displayed as a 'Limited Offer' during a Black Friday promotion, so no list price is recorded.", "accountSizeMin": 7500, "accountSizeMax": 100000, "profitTarget": "none", "maxDailyLoss": "3%", "maxDrawdown": "5%", "profitSplit": "80/20", "platforms": ["Match-Trader"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"},
-        {"id": "tx3-flex", "name": "Flex Challenge", "type": "Challenge", "description": "Two phases (30 days each, 5 profitable days of 0.5%). Rules for accounts opened from 24 August 2026. Funded: 0.5% max risk at a time, 20% consistency, payout minimum 2% and maximum 5% of the initial balance per bi-weekly cycle.", "accountSizeMin": 10000, "accountSizeMax": 100000, "profitTarget": "10% then 5%", "maxDailyLoss": "none in phases 1-2; 2.5% when funded", "maxDrawdown": "5% of the initial balance, static", "profitSplit": "80%", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": true, "consistencyRule": "20% when funded"}
+        {"id": "tx3-instant", "name": "Instant Funding", "type": "Instant funding", "description": "Sizes $7.5K to $100K. Fees displayed as a 'Limited Offer' during a Black Friday promotion, so no list price is recorded. Instant Standard rules: 3% profit buffer, 7 profitable days of at least 0.25%, 1% maximum risk per trade.", "accountSizeMin": 7500, "accountSizeMax": 100000, "profitTarget": "none", "maxDailyLoss": "3%", "maxDrawdown": "5%, trailing", "profitSplit": "80/20", "platforms": ["Match-Trader"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": true, "consistencyRule": "15% (Instant Standard)"},
+        {"id": "tx3-flex", "name": "Flex Challenge", "type": "Challenge", "description": "Two phases (30 days each, 5 profitable days of 0.5%). Rules for accounts opened from 24 August 2026. Funded: 0.5% max risk at a time, 20% consistency, payout minimum 2% and maximum 5% of the initial balance per bi-weekly cycle. WARNING, contradictory official pages: the comparison page still lists 5% daily, 10% maximum drawdown (type not stated), first payout 10 days after the first trade then every 7 days, and a 2% daily profit cap; the figures here come from the dedicated rules article for accounts opened from 24 August 2026.", "accountSizeMin": 10000, "accountSizeMax": 100000, "profitTarget": "10% then 5%", "maxDailyLoss": "none in phases 1-2; 2.5% when funded", "maxDrawdown": "5% of the initial balance, static", "profitSplit": "80%", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": true, "consistencyRule": "20% when funded"}
       ],
       "changelog": [
         {
@@ -23659,7 +23667,8 @@
           "source": "https://faq.tx3funding.com/help/tx3-funding/instant-standard-vs-instant-pro-what-s-the-difference",
           "fields": ["auditSummary", "newsTrading", "payoutDelay", "restrictiveRules", "verdict"]
         },
-        {"date": "2026-11-26", "summary": "Read on the official site and FAQ: Instant Funding ($7.5K to $100K, 3% daily, 5% max loss, 80/20, 7 minimum days) and Flex Challenge ($10K to $100K, 10% then 5%, 5% static max loss, 2.5% daily once funded, 20% consistency, payouts bi-weekly capped at 5% per cycle).", "source": "https://www.tx3funding.com/en/fx/select-challenge", "fields": ["products", "profitSplit"]}
+        {"date": "2026-11-26", "summary": "Read on the official site and FAQ: Instant Funding ($7.5K to $100K, 3% daily, 5% max loss, 80/20, 7 minimum days) and Flex Challenge ($10K to $100K, 10% then 5%, 5% static max loss, 2.5% daily once funded, 20% consistency, payouts bi-weekly capped at 5% per cycle).", "source": "https://www.tx3funding.com/en/fx/select-challenge", "fields": ["products", "profitSplit"]},
+        {"date": "2026-11-26", "summary": "Cross-check with ChatGPT's dossier: the official comparison page (Flex: 5% daily, 10% max, first payout after 10 days then every 7, 2% daily profit cap) contradicts the dedicated Flex rules article for accounts opened from 24 August 2026 (no daily limit in the phases, 2.5% funded, 5% static, bi-weekly). Both kept, flagged on the programme. Instant Standard: 5% trailing, 15% consistency, 3% buffer. Pro (10%/5%, 5% daily, 10% max, 80%/90%) and 1 Phase (10%, 3% daily, 6% trailing locking after +6%, 85%/90%) noted; their account sizes were not read, so they are not listed as programmes and the drawdown type stays unset.", "source": "https://faq.tx3funding.com/help/tx3-funding/comparing-tx3-funding-forex-challenges", "fields": ["products"]}
       ],
       "set": {
         "profitSplit": 80,
@@ -23735,7 +23744,9 @@
           "label": "faq.tx3funding.com official page (read 2026-11-19)",
           "url": "https://faq.tx3funding.com/help/tx3-funding/payouts-guide-first-and-subsequent-withdrawals-1-phase"
         },
-        {"label": "tx3-funding official rules/pricing page (read 2026-11-26)", "url": "https://www.tx3funding.com/en/fx/select-challenge"}
+        {"label": "tx3-funding official rules/pricing page (read 2026-11-26)", "url": "https://www.tx3funding.com/en/fx/select-challenge"},
+        {"label": "TX3 Funding forex challenge comparison (official FAQ)", "url": "https://faq.tx3funding.com/help/tx3-funding/comparing-tx3-funding-forex-challenges"},
+        {"label": "ChatGPT dossier on TX3 Funding (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/tx3-funding/program-evidence-chatgpt-2026-11-26.md"}
       ]
     },
     "fxrk": {
@@ -24196,7 +24207,13 @@
       ]
     },
     "myfundedcapital": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-26",
+      "addSources": [
+        {"label": "MyFundedCapital 1-Step FAQ (official)", "url": "https://myfundedcapital.com/faq/1-step-mfc-challenge/"},
+        {"label": "MyFundedCapital 2-Step FAQ (official)", "url": "https://myfundedcapital.com/faq/2-step-mfc-challenge/"},
+        {"label": "MyFundedCapital Instant Funding FAQ (official)", "url": "https://myfundedcapital.com/faq/instant-funding/"},
+        {"label": "ChatGPT dossier on MyFundedCapital (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/myfundedcapital/program-evidence-chatgpt-2026-11-26.md"}
+      ],
       "changelog": [
         {
           "date": "2026-11-09",
@@ -24207,9 +24224,13 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official FAQ (read by ChatGPT on 26 Nov 2026; the site refused Claude's request): 1-Step 10% target, 5% daily on the previous EOD closed balance, 10% trailing on the highest closed balance locking at the initial balance at +10%, 80% split (90/95% options); 2-Step 8%/5%, 5% daily, 10% static, 80% (95% option); Instant no target, 3% daily, 6% trailing locking at the initial balance, 70% (80% option). Since 22 Oct 2026: best day 50% in evaluations, 35% consistency when funded. Older French pages show different limits and were not used. Account sizes and list prices per size not read.", "source": "https://myfundedcapital.com/faq/1-step-mfc-challenge/", "fields": ["profitSplit", "drawdownType", "payoutDelay"]}
       ],
       "set": {
+        "payoutDelay": "2-Step: first request 14 days after the first trade, then every 14 days. Instant: first request after 14 days, then every 7 days ($50 minimum, $5,000 maximum per request). Since 22 Oct 2026 a funded cycle needs 3 days with at least 0.25% risk.",
+        "drawdownType": "Hybride",
+        "profitSplit": 80,
         "trustpilotRating": 3.5,
         "trustpilotReviewCount": 82,
         "trustpilotSourceUrl": "https://au.trustpilot.com/review/myfundedcapital.com"
@@ -24972,7 +24993,7 @@
       ]
     },
     "alpine-funded": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-26",
       "changelog": [
         {
           "date": "2026-11-09",
@@ -25009,9 +25030,11 @@
           "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 2 new classified restrictive rules.",
           "source": "https://help.alpinefunded.com/en/articles/9690819-what-is-the-payout-schedule",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official pages (read by ChatGPT on 26 Nov 2026): Alpine 2-Step 8%/5%, 5% daily, 10% total, 80% then 90% with scaling, payouts every 14 days then weekly after 3 rewards; Base Camp Instant 3% daily and 5% trailing on the intraday equity high, split advertised up to 100%. Prices are in euros and shown at -50%, so no list price is recorded. The Base Camp FAQ still describes a 5% threshold and paying the first two rewards with the third, which conflicts with the current 'from 3 days' claim: kept as unresolved. Old 'Peak' pages return 404 and are not the current 2-Step.", "source": "https://alpinefunded.com/faq/base-camp-payouts/", "fields": ["profitSplit"]}
       ],
       "set": {
+        "profitSplit": 80,
         "payoutDelay": "Program-dependent: older help describes a first-after-21-days rule, current homepage describes Alpine 2-Step every 14 days, and Alpine Pass FAQ describes Thursday processing after a Tuesday 12:00 UTC cutoff with a $40 fee. Confirm current program-specific terms.",
         "newsTrading": "Variable",
         "verdict": "Alpine Funded now sells an Alpine Pass subscription alongside evaluated and instant models, so its former blanket '21 days then biweekly' payout description was misleading. The Pass requires recurring fees, ten qualifying profit days and a 10% milestone, and rewards are fixed by subscription tier with a $40 processing charge. The company publishes payout certificates, but they are not independently matched to receiving accounts. A previously reported Ukrainian regulator watchlist entry remains an important due-diligence item.",
@@ -25053,7 +25076,9 @@
         {
           "label": "Alpine Funded Base Camp payouts (official, read 2026-11-18)",
           "url": "https://help.alpinefunded.com/en/articles/9963151-how-do-payouts-work"
-        }
+        },
+        {"label": "Alpine Funded Base Camp payouts FAQ (official)", "url": "https://alpinefunded.com/faq/base-camp-payouts/"},
+        {"label": "ChatGPT dossier on Alpine Funded (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/alpine-funded/program-evidence-chatgpt-2026-11-26.md"}
       ],
       "addIncidents": ["Finance Magnates reported on 2025-03-05 (Arnab Shome) that Ukraine's National Securities and Stock Market Commission (NSSMC) added Alpine Funded and Aura Funded to its warning list, among seven names flagged the week before; the article notes the regulator gave no reason for their inclusion (https://www.financemagnates.com/forex/ukraine-flags-two-prop-trading-firms-is-it-a-signal-of-incoming-regulations/)."],
       "addPayoutProofs": [
@@ -25167,7 +25192,8 @@
       }
     },
     "fundedhive": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-26",
+      "set": {"profitSplit": 80},
       "restrictiveRules": [
         {
           "program": "FundedHive Pay From Profits 2-Step — upfront versus deferred fee",
@@ -25200,6 +25226,10 @@
           "clarity": "clear"
         }
       ],
+      "addSources": [
+        {"label": "FundedHive Pay From Profits (official)", "url": "https://fundedhive.com/pay_from_profits"},
+        {"label": "ChatGPT dossier on FundedHive (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/fundedhive/program-evidence-chatgpt-2026-11-26.md"}
+      ],
       "changelog": [
         {
           "date": "2026-11-18",
@@ -25224,7 +25254,8 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://fundedhive.com/faq",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official Pay From Profits page (read by ChatGPT on 26 Nov 2026): one phase, 10% target, 5% daily (EOD), 10% static, 3% risk per trade, 80% funded split, three profitable days; $19 access fee and a funded fee from $49 depending on the risk category. Another risk group uses 1% per trade, 2% daily and 5% drawdown; a funded breach suspends the account until a fee difference is paid. The $19 fee does not apply to every size, so no 'from' price is recorded; the full grid and payout timing were not confirmed.", "source": "https://fundedhive.com/pay_from_profits", "fields": ["profitSplit"]}
       ],
       "addIncidents": [
         "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au and ie mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedhive.com)."
@@ -26766,7 +26797,10 @@
       ]
     },
     "monevis": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-26",
+      "setProducts": [
+        {"id": "monevis-instant", "name": "Instant Funding", "type": "Instant funding", "description": "Regular prices $29, $59, $99, $149, $249, $499 (50% off with a code during the read). WARNING: every card on the page is labelled $3,000; the targets and limits ($180 to $3,000 = 6%) match the $3K, $6K, $10K, $15K, $25K and $50K tabs, so sizes are read from those figures. The page also says both '30 calendar days' after the first trade and 'Unlimited Time'; the detailed rule asks for 6% within 30 days, renewable for a fee.", "accountSizeMin": 3000, "accountSizeMax": 50000, "entryFeeMin": 29, "entryFeeMax": 499, "profitTarget": "6% reward target", "maxDailyLoss": "2%", "maxDrawdown": "8%, static", "profitSplit": "50%", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
+      ],
       "changelog": [
         {
           "date": "2026-11-17",
@@ -26791,7 +26825,8 @@
           "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 4 new classified restrictive rules.",
           "source": "https://help.monevis.com/en/articles/9961179-group-trading",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official Instant Funding page read on 26 Nov 2026 (and ChatGPT's dossier): regular prices $29 to $499, 6% reward target, 2% daily, 8% static, 50% split, bi-weekly payouts. Contradictions kept on the programme: all cards labelled $3,000; '30 days' vs 'unlimited time'. The 50% split applies to Instant only; One-Step and Three-Step grids not read.", "source": "https://monevis.com/instant-funding", "fields": ["products"]}
       ],
       "set": {
         "payoutDelay": "Company reports 7- or 14-day payout schedule by program; instant program claims biweekly with 50% split. Independent settlement unverified.",
@@ -26864,7 +26899,9 @@
         {
           "label": "Monevis copy trading rule (official, 2026-11-18)",
           "url": "https://help.monevis.com/en/articles/9620576-can-i-use-copy-trading"
-        }
+        },
+        {"label": "Monevis Instant Funding (official)", "url": "https://monevis.com/instant-funding"},
+        {"label": "ChatGPT dossier on Monevis (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/monevis/program-evidence-chatgpt-2026-11-26.md"}
       ],
       "auditedPrograms": [
         {
