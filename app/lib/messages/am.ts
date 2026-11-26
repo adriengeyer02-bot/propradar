@@ -466,6 +466,8 @@ const am: Messages = {
     priceSource: 'የዋጋ ምንጭ',
     pricePromoTitle: 'ለዚህ ፕሮግራም ቅናሽ',
     pricePromoAllTitle: 'ለሁሉም ፕሮግራሞች ቅናሽ',
+    promoNow: 'አሁን',
+    promoDirectLink: 'ቀጥተኛ ሊንክ',
     pricePromoTermsLabel: 'የቅናሽ ውሎችና ምንጭ',
     programDetails: 'የፕሮግራም ደረጃዎችና ደንቦች',
     pricePromoCode: 'የቅናሽ ኮድ',

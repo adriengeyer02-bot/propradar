@@ -101,3 +101,23 @@
 .pr-promo-dropdown > summary::-webkit-details-marker { display: none; }
 .pr-promo-dropdown > summary::before { content: '▸'; color: var(--accent); font-size: 11px; }
 .pr-promo-dropdown[open] > summary::before { content: '▾'; }
+/* Current offer on each programme card (Geyer, 2026-11-26) */
+.pr-offer-key dd s { color: var(--muted); font-weight: 600; text-decoration-thickness: 2px; }
+.pr-offer-now { display: grid; gap: 6px; padding: 10px 12px; border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); border-radius: 10px; background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.pr-offer-now-line { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.pr-offer-badge { padding: 2px 8px; border-radius: 999px; background: var(--accent); color: #04121a; font-weight: 800; font-size: 13px; font-variant-numeric: tabular-nums; }
+.pr-offer-now-label { font-size: 13px; font-weight: 700; }
+.pr-offer-now-price { font-variant-numeric: tabular-nums; font-size: 14px; }
+.pr-offer-now-price span { color: var(--muted); font-size: 12px; }
+.pr-offer-now-price s { color: var(--muted); }
+.pr-offer-now-price strong { color: var(--accent); font-size: 16px; }
+.pr-offer-now-extra { font-size: 12px; color: var(--muted); }
+.pr-offer-code { font-size: 12px; color: var(--muted); }
+.pr-offer-code code { margin-left: 4px; padding: 2px 8px; border: 1px dashed var(--accent); border-radius: 6px; color: var(--text, inherit); font-weight: 800; letter-spacing: .04em; }
+.pr-offer-direct { font-size: 13px; font-weight: 700; color: var(--accent); text-decoration: none; }
+.pr-offer-direct:hover { text-decoration: underline; }
+.pr-offer-terms { margin-left: auto; font-size: 11px; }
+.pr-offer-terms summary { cursor: pointer; color: var(--muted); }
+.pr-offer-terms[open] { flex-basis: 100%; margin-left: 0; }
+.pr-offer-terms p { margin: 6px 0 0; color: var(--muted); }
+.pr-offer-key-sale { color: var(--accent); }

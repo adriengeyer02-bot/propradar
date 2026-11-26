@@ -553,6 +553,8 @@ const en = {
     priceSource: "Pricing page",
     pricePromoTitle: "Offer on this program",
     pricePromoAllTitle: "Offer on every program",
+    promoNow: "Right now",
+    promoDirectLink: "Direct link",
     pricePromoTermsLabel: "Offer terms and source",
     programDetails: "Program steps and rules",
     pricePromoCode: "Code",

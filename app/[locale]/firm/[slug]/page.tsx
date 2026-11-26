@@ -542,10 +542,6 @@ export default async function FirmPage({ params }: Props) {
   if (!firm) {
     notFound();
   }
-  const promosByProduct = firm.products.map((product) => getProgramPromotions(firm.slug, product.id));
-  const promoKey = (list: { id: string }[]) => list.map((promo) => promo.id).sort().join('|');
-  // Same offer on every programme: shown once above the cards (Geyer, 2026-11-26).
-  const sharedPromos = firm.status !== 'Fermée' && promosByProduct.length > 1 && promosByProduct.every((list) => list.length > 0 && promoKey(list) === promoKey(promosByProduct[0])) ? promosByProduct[0] : [];
 
 
   const isFtmo = firm.slug === 'ftmo';
@@ -1167,24 +1163,6 @@ export default async function FirmPage({ params }: Props) {
             <span>{firm.products.length === 1 ? f.programOne : fmt(f.programs, { n: firm.products.length })}</span>
           </div>
         </header>
-        {sharedPromos.map((promo) => (
-          <aside className="pr-program-promo pr-offers-promo" key={promo.id} aria-label={f.pricePromoAllTitle}>
-            <div className="pr-program-promo-head">
-              <span>{f.pricePromoAllTitle}</span>
-              <strong>{promo.offer}</strong>
-            </div>
-            {promo.code ? <p className="pr-program-promo-code">{f.pricePromoCode} <code>{promo.code}</code></p> : null}
-            <details className="pr-program-promo-details">
-              <summary>{f.pricePromoTermsLabel}</summary>
-              <p className="pr-program-promo-terms" lang="en">{promo.terms}</p>
-              <p className="pr-program-promo-check">{f.pricePromoCheckout}</p>
-              <div className="pr-program-promo-foot">
-                <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small>
-                <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a>
-              </div>
-            </details>
-          </aside>
-        ))}
         {firm.products.length > 0 ? (
           <div className={firm.products.length >= 3 ? 'grid-2 pr-offers-grid-3' : 'grid-2'}>
             {firm.products.map((product) => (
@@ -1195,48 +1173,54 @@ export default async function FirmPage({ params }: Props) {
                 </div>
                 <h3>{tx(product.name)}</h3>
                 {(() => {
-                  const rows = (priceTable?.programs ?? []).filter((program) => program.productId === product.id).flatMap((program) => program.rows.map((row) => ({ price: row.price, currency: program.currency })));
+                  const rows = (priceTable?.programs ?? []).filter((program) => program.productId === product.id).flatMap((program) => program.rows.map((row) => ({ price: row.price, size: row.size, currency: program.currency })));
                   const cheapest = rows.length ? rows.reduce((low, row) => (row.price < low.price ? row : low)) : undefined;
                   const from = cheapest ? formatListPrice(cheapest.price, cheapest.currency) : product.entryFeeMin ? formatUsd(product.entryFeeMin) : '—';
                   const split = /(\d{2,3})\s?%/.exec(product.profitSplit ?? '')?.[1];
                   const ddText = `${product.drawdownType ?? ''} ${product.maxDrawdown ?? ''}`;
                   const dd = product.drawdownType ?? (/end.of.day|\bEOD\b|fin de journée/i.test(ddText) ? 'EOD' : /trail|suiveur/i.test(ddText) ? 'Trailing' : /static|fixed|fixe|statique/i.test(ddText) ? 'Static' : undefined);
+                  const promos = firm.status !== 'Fermée' ? getProgramPromotions(firm.slug, product.id) : [];
+                  const offerHref = firm.partnerOffer?.href || product.linkToStart;
+                  // Struck "from" price only when a published sale amount exists for that same size.
+                  const fromSale = cheapest ? promos.map((promo) => /(\d+(?:\.\d+)?)K\s*·\s*[€$£]\s?([\d,.]+)\s*\/\s*[€$£]\s?([\d,.]+)/.exec(promo.offer)).find((m) => m && Number(m[1]) * 1000 === cheapest.size && Number(m[3].replace(/,/g, '')) === cheapest.price) : undefined;
                   return (
-                    <dl className="pr-offer-key">
-                      <div><dt>{f.facts.from}</dt><dd>{from}</dd></div>
-                      <div><dt>{f.facts.split}</dt><dd>{split ? `${split}%` : '—'}</dd></div>
-                      <div><dt>{f.facts.drawdown}</dt><dd>{dd ? v(dd) : '—'}</dd></div>
-                    </dl>
-                  );
-                })()}
-                {(() => {
-                  const cardPromos = firm.status !== 'Fermée' && !sharedPromos.length ? getProgramPromotions(firm.slug, product.id) : [];
-                  if (!cardPromos.length) return null;
-                  return (
-                    <details className="pr-product-details pr-promo-dropdown">
-                      <summary>
-                        <span>{f.pricePromoTitle}</span>
-                        <strong>{cardPromos[0].offer}{cardPromos.length > 1 ? ` +${cardPromos.length - 1}` : ''}</strong>
-                      </summary>
-                    {cardPromos.map((promo) => (
-                      <aside className="pr-program-promo" key={promo.id} aria-label={f.pricePromoTitle}>
-                        <div className="pr-program-promo-head">
-                          <span>{f.pricePromoTitle}</span>
-                          <strong>{promo.offer}</strong>
-                        </div>
-                        {promo.code ? <p className="pr-program-promo-code">{f.pricePromoCode} <code>{promo.code}</code></p> : null}
-                        <details className="pr-program-promo-details">
-                          <summary>{f.pricePromoTermsLabel}</summary>
-                          <p className="pr-program-promo-terms" lang="en">{promo.terms}</p>
-                          <p className="pr-program-promo-check">{f.pricePromoCheckout}</p>
-                          <div className="pr-program-promo-foot">
-                            <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small>
-                            <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a>
+                    <>
+                      <dl className="pr-offer-key">
+                        <div><dt>{f.facts.from}</dt><dd>{fromSale && cheapest ? <><s>{from}</s> <span className="pr-offer-key-sale">{formatListPrice(Number(fromSale[2].replace(/,/g, '')), cheapest.currency)}</span></> : from}</dd></div>
+                        <div><dt>{f.facts.split}</dt><dd>{split ? `${split}%` : '—'}</dd></div>
+                        <div><dt>{f.facts.drawdown}</dt><dd>{dd ? v(dd) : '—'}</dd></div>
+                      </dl>
+                      {promos.map((promo) => {
+                        // Published before/after amounts only ("100K · €432 / €540"); a headline percentage is never turned into a price.
+                        const pair = /(\d+(?:\.\d+)?)K\s*·\s*([€$£])\s?([\d,.]+)\s*\/\s*[€$£]\s?([\d,.]+)/.exec(promo.offer);
+                        const sale = pair ? Number(pair[3].replace(/,/g, '')) : undefined;
+                        const regular = pair ? Number(pair[4].replace(/,/g, '')) : undefined;
+                        const pct = /(\d{1,2})\s?%/.exec(promo.offer)?.[1] ?? (sale && regular ? String(Math.round((1 - sale / regular) * 100)) : undefined);
+                        const extra = pair ? '' : promo.offer.replace(/^[−-]?\s?\d{1,2}\s?%\s*·?\s*/, '');
+                        return (
+                          <div className="pr-offer-now" key={promo.id}>
+                            <div className="pr-offer-now-line">
+                              {pct ? <span className="pr-offer-badge">−{pct}%</span> : null}
+                              <span className="pr-offer-now-label">{f.promoNow}</span>
+                              {pair ? (
+                                <span className="pr-offer-now-price"><span>{pair[1]}K</span> <s>{pair[2]}{pair[4]}</s> <strong>{pair[2]}{pair[3]}</strong></span>
+                              ) : extra ? <span className="pr-offer-now-extra">{extra}</span> : null}
+                            </div>
+                            <div className="pr-offer-now-line">
+                              {promo.code ? <span className="pr-offer-code">{f.pricePromoCode} <code>{promo.code}</code></span> : offerHref ? (
+                                <a className="pr-offer-direct" href={offerHref} target="_blank" rel={firm.partnerOffer?.href || isAffiliateUrl(offerHref) ? 'noreferrer sponsored' : 'noreferrer'}>{f.promoDirectLink} ↗</a>
+                              ) : null}
+                              <details className="pr-offer-terms">
+                                <summary>{f.pricePromoTermsLabel}</summary>
+                                <p lang="en">{promo.terms}</p>
+                                <p>{f.pricePromoCheckout}</p>
+                                <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''} · <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a></small>
+                              </details>
+                            </div>
                           </div>
-                        </details>
-                      </aside>
-                    ))}
-                    </details>
+                        );
+                      })}
+                    </>
                   );
                 })()}
                 <details className="pr-product-details">

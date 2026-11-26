@@ -637,6 +637,8 @@ const pt: Messages = {
     "priceSource": "Página de preços",
     "pricePromoTitle": "Oferta para este programa",
     "pricePromoAllTitle": "Oferta para todos os programas",
+    "promoNow": "Neste momento",
+    "promoDirectLink": "Link direto",
     "pricePromoTermsLabel": "Condições e fonte da oferta",
     "programDetails": "Etapas e regras do programa",
     "pricePromoCode": "Código",

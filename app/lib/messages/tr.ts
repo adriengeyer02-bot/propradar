@@ -486,6 +486,8 @@ const tr: Messages = {
     priceSource: 'Fiyat kaynağı', offersTitle: '{name} programları ve fiyatları',
     pricePromoTitle: 'Bu programdaki kampanya',
     pricePromoAllTitle: 'Tüm programlardaki kampanya',
+    promoNow: 'Şu anda',
+    promoDirectLink: 'Doğrudan bağlantı',
     pricePromoTermsLabel: 'Kampanya koşulları ve kaynak',
     programDetails: 'Program aşamaları ve kuralları',
     pricePromoCode: 'Kod',

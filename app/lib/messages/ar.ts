@@ -488,6 +488,8 @@ const ar: Messages = {
     oneTime: 'لمرة واحدة', priceSource: 'صفحة الأسعار',
     pricePromoTitle: 'عرض على هذا البرنامج',
     pricePromoAllTitle: 'عرض على جميع البرامج',
+    promoNow: 'الآن',
+    promoDirectLink: 'رابط مباشر',
     pricePromoTermsLabel: 'شروط العرض ومصدره',
     programDetails: 'مراحل البرنامج وقواعده',
     pricePromoCode: 'رمز الخصم',

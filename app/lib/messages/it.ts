@@ -549,6 +549,8 @@ const it: Messages = {
     priceSource: "Pagina prezzi",
     pricePromoTitle: "Offerta per questo programma",
     pricePromoAllTitle: "Offerta su tutti i programmi",
+    promoNow: "In questo momento",
+    promoDirectLink: "Link diretto",
     pricePromoTermsLabel: "Condizioni e fonte dell'offerta",
     programDetails: "Fasi e regole del programma",
     pricePromoCode: "Codice",

@@ -428,6 +428,8 @@ const ha: Messages = {
     priceSource: 'Tushen farashi',
     pricePromoTitle: 'Rangwamen wannan shirin',
     pricePromoAllTitle: 'Rangwame ga dukkan shirye-shirye',
+    promoNow: 'Yanzu',
+    promoDirectLink: 'Hanyar kai tsaye',
     pricePromoTermsLabel: 'Sharuɗɗan rangwame da tushe',
     programDetails: 'Matakai da dokokin shirin',
     pricePromoCode: 'Lambar ragi',
