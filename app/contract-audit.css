@@ -83,3 +83,24 @@
 .pr-price-all tbody tr + tr > * { border-top: 1px solid var(--line); }
 .pr-price-notes { margin: 10px 0 0; padding-left: 18px; font-size: 12px; color: var(--muted); display: grid; gap: 4px; }
 .pr-price-notes strong { color: var(--soft, inherit); font-weight: 650; margin-right: 4px; }
+
+/* Premium programme cards: price tiles remain legible at every viewport. */
+.pr-offers-premium { grid-template-columns: repeat(2,minmax(0,1fr)); align-items:stretch; gap:18px; }
+.pr-offers-premium .pr-product { display:flex; flex-direction:column; min-width:0; gap:12px; }
+.pr-offer-price-stack { display:grid; gap:10px; min-width:0; }
+.pr-offer-price-group { display:grid; gap:10px; border:1px solid var(--line); border-radius:12px; padding:12px; background:var(--surface-2,rgba(100,150,200,.045)); min-width:0; }
+.pr-offer-price-heading { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:5px 12px; }
+.pr-offer-price-heading strong { font-size:14px; line-height:1.35; overflow-wrap:anywhere; }
+.pr-offer-price-heading > span { color:var(--muted); font-size:11px; }
+.pr-offer-price-tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(105px,100%),1fr)); gap:8px; }
+.pr-offer-price-tile { min-width:0; display:flex; flex-direction:column; gap:5px; padding:10px 12px; border:1px solid var(--line); border-radius:9px; background:color-mix(in srgb,var(--surface, #121a25) 90%,var(--accent,#22d3ee) 10%); }
+.pr-offer-price-tile > span { color:var(--muted); font-size:12px; }
+.pr-offer-price-tile > strong { color:var(--text,inherit); font-size:clamp(17px,1.7vw,23px); font-weight:750; line-height:1.15; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+.pr-offer-price-tile > small { font-size:11px; color:var(--muted); overflow-wrap:anywhere; }
+.pr-offer-price-group .pr-product-prices-links { display:flex; flex-wrap:wrap; gap:8px; justify-content:space-between; }
+.pr-offers-premium .pr-product-details { margin-top:auto; border:1px solid var(--line); border-radius:9px; padding:10px 12px; }
+.pr-offers-premium .pr-product-details > summary { cursor:pointer; font-weight:650; }
+.pr-offers-premium .pr-product > .btn-primary { width:100%; justify-content:center; margin-top:0; }
+.pr-offers-premium .pr-product-highlights > div { min-width:0; overflow-wrap:anywhere; }
+@media(max-width:800px) { .pr-offers-premium { grid-template-columns:minmax(0,1fr); } }
+@media(max-width:420px) { .pr-offer-price-tiles { grid-template-columns:repeat(2,minmax(0,1fr)); } .pr-offer-price-tile { padding:9px; } }
