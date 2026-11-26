@@ -1,5 +1,7 @@
 # Claude — consignes prioritaires de scoring PropRadar
 
+> **Décision du 26/11/2026 :** pour toutes les firmes, la grille Trustpilot de SCORING.md §1 prévaut sur les consignes historiques ci-dessous : note 4–5 = 0, 3,5–<4 = −3, 3–<3,5 = −6, <3 = −10 ; notice actuelle documentée = −10 sans cumul ; moins de 30 avis ou donnée absente = 0, 30–99 = moitié arrondie au supérieur, 100+ = intégral. Les autres critères et plafonds existants sont inchangés.
+
 *Décision d'Adrien Geyer, 19 novembre 2026. À lire avec `AGENTS.md`, `CLAUDE.md` et surtout le barème canonique `SCORING.md`.*
 
 ## Barème définitivement validé
