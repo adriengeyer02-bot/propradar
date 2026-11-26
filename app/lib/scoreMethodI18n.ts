@@ -783,6 +783,72 @@ const am: ScoreMethodCopy = {
 
 const COPY: Record<Locale, ScoreMethodCopy> = { en, fr, de, it, es, pt, zh, ja, hi, tr, ar, ko, sw, ha, am };
 
+// The same operational Trustpilot policy applies to every scoring generation.
+const TP_GRID: Record<Locale, [string, string]> = {
+  "en": [
+    "Trustpilot: 4–5 = 0; 3.5–<4 = −3; 3–<3.5 = −6; <3 = −10. A documented current withholding notice = −10, once, instead of the rating deduction.",
+    "Missing rating or review count, or fewer than 30 reviews: no rating deduction; 30–99 reviews: half, rounded up; 100+ reviews: full deduction."
+  ],
+  "fr": [
+    "Trustpilot : 4–5 = 0 ; 3,5–<4 = −3 ; 3–<3,5 = −6 ; <3 = −10. Un retrait de note documenté et actuel = −10, une seule fois, à la place du malus de note.",
+    "Note ou nombre d’avis manquant, ou moins de 30 avis : aucun malus de note ; 30–99 avis : moitié, arrondie au supérieur ; 100 avis et plus : malus intégral."
+  ],
+  "de": [
+    "Trustpilot: 4–5 = 0; 3,5–<4 = −3; 3–<3,5 = −6; <3 = −10. Eine aktuell dokumentierte Sperrung der Bewertung = −10, einmal statt des Bewertungsabzugs.",
+    "Fehlende Bewertung oder Anzahl bzw. weniger als 30 Bewertungen: kein Bewertungsabzug; 30–99: Hälfte, aufgerundet; ab 100: voller Abzug."
+  ],
+  "it": [
+    "Trustpilot: 4–5 = 0; 3,5–<4 = −3; 3–<3,5 = −6; <3 = −10. Un avviso documentato e attuale di sospensione del punteggio = −10, una sola volta, al posto della penalità per il voto.",
+    "Voto o numero di recensioni mancante, oppure meno di 30 recensioni: nessuna penalità per il voto; 30–99: metà, arrotondata per eccesso; da 100: penalità intera."
+  ],
+  "es": [
+    "Trustpilot: 4–5 = 0; 3,5–<4 = −3; 3–<3,5 = −6; <3 = −10. Un aviso documentado y vigente de suspensión de la puntuación = −10, una sola vez, en lugar de la penalización por nota.",
+    "Nota o número de reseñas desconocido, o menos de 30 reseñas: sin penalización por nota; 30–99: mitad, redondeada hacia arriba; 100 o más: penalización completa."
+  ],
+  "pt": [
+    "Trustpilot: 4–5 = 0; 3,5–<4 = −3; 3–<3,5 = −6; <3 = −10. Aviso atual e documentado de suspensão da nota = −10, uma única vez, em vez da penalização pela nota.",
+    "Nota ou número de avaliações em falta, ou menos de 30 avaliações: sem penalização pela nota; 30–99: metade, arredondada para cima; 100 ou mais: penalização integral."
+  ],
+  "zh": [
+    "Trustpilot：4–5 分不扣分；3.5–<4 扣 3 分；3–<3.5 扣 6 分；<3 扣 10 分。当前有记录的评分暂停公告扣 10 分，仅扣一次，不与评分扣分叠加。",
+    "缺少评分或评论数量，或评论少于 30 条：不因评分扣分；30–99 条：扣分减半并向上取整；100 条以上（含）：全额扣分。"
+  ],
+  "ja": [
+    "Trustpilot：4～5 は減点なし、3.5～4 未満は −3、3～3.5 未満は −6、3 未満は −10。評価非表示の現行通知が確認されている場合は −10 のみとし、評価による減点と重複させません。",
+    "評価またはレビュー件数が不明、もしくは30件未満なら評価による減点なし。30～99件は半分（切り上げ）、100件以上は全額を適用します。"
+  ],
+  "hi": [
+    "Trustpilot: 4–5 = 0; 3.5–<4 = −3; 3–<3.5 = −6; <3 = −10। रेटिंग रोके जाने की वर्तमान प्रमाणित सूचना पर रेटिंग की कटौती के बजाय एक बार −10 अंक।",
+    "रेटिंग या समीक्षाओं की संख्या उपलब्ध न हो, या 30 से कम समीक्षाएँ हों: रेटिंग पर कटौती नहीं; 30–99: आधी कटौती, ऊपर की ओर पूर्णांक; 100 या अधिक: पूरी कटौती।"
+  ],
+  "tr": [
+    "Trustpilot: 4–5 = 0; 3,5–<4 = −3; 3–<3,5 = −6; <3 = −10. Belgelenmiş güncel puan gizleme bildirimi varsa puan kesintisi yerine bir kez −10 uygulanır.",
+    "Puan veya yorum sayısı bilinmiyorsa ya da 30’dan az yorum varsa puan kesintisi yoktur; 30–99 yorumda yarısı yukarı yuvarlanır; 100 ve üzeri yorumda tam kesinti."
+  ],
+  "ar": [
+    "Trustpilot: من 4 إلى 5 = 0؛ من 3.5 إلى أقل من 4 = −3؛ من 3 إلى أقل من 3.5 = −6؛ أقل من 3 = −10. إشعار حجب تقييم موثّق وساري = −10 مرة واحدة بدلاً من خصم التقييم.",
+    "إذا غاب التقييم أو عدد المراجعات، أو قلّ العدد عن 30، فلا خصم بسبب التقييم؛ من 30 إلى 99 مراجعة: نصف الخصم مع التقريب للأعلى؛ 100 فأكثر: الخصم الكامل."
+  ],
+  "ko": [
+    "Trustpilot: 4~5 = 0, 3.5 이상 4 미만 = −3, 3 이상 3.5 미만 = −6, 3 미만 = −10. 현재 확인된 평점 비공개 공지가 있으면 평점 감점 대신 −10을 한 번 적용합니다.",
+    "평점 또는 리뷰 수가 없거나 리뷰가 30개 미만이면 평점 감점 없음. 30~99개는 절반(올림), 100개 이상은 전체 감점을 적용합니다."
+  ],
+  "sw": [
+    "Trustpilot: 4–5 = 0; 3.5–<4 = −3; 3–<3.5 = −6; <3 = −10. Notisi ya sasa iliyothibitishwa ya kuficha ukadiriaji = −10 mara moja badala ya adhabu ya ukadiriaji.",
+    "Ukadiriaji au idadi ya maoni haijulikani, au maoni ni chini ya 30: hakuna makato ya ukadiriaji; maoni 30–99: nusu, ikizungushwa juu; 100 au zaidi: makato kamili."
+  ],
+  "ha": [
+    "Trustpilot: 4–5 = 0; 3.5–<4 = −3; 3–<3.5 = −6; <3 = −10. Sanarwar yanzu da aka tabbatar ta ɓoye ƙimar = −10 sau ɗaya maimakon cire maki saboda ƙimar.",
+    "Idan babu ƙima ko adadin bita, ko bita bai kai 30 ba: babu cire maki saboda ƙima; bita 30–99: rabin maki, a zagaye zuwa sama; 100 ko fiye: cikakken cire maki."
+  ],
+  "am": [
+    "Trustpilot፦ 4–5 = 0፣ 3.5–<4 = −3፣ 3–<3.5 = −6፣ <3 = −10። የተረጋገጠ ወቅታዊ የደረጃ መደበቅ ማስታወቂያ ካለ፣ ከደረጃ ቅናሹ ይልቅ −10 አንድ ጊዜ ይተገበራል።",
+    "ደረጃ ወይም የግምገማ ብዛት ካልታወቀ፣ ወይም ከ30 በታች ከሆነ፣ የደረጃ ቅናሽ የለም፤ 30–99፦ ግማሽ፣ ወደ ላይ የተጠጋጋ፤ 100 እና በላይ፦ ሙሉ ቅናሽ።"
+  ]
+};
+
 export function scoreMethodCopy(locale: Locale): ScoreMethodCopy {
-  return COPY[locale] ?? en;
+  const copy = COPY[locale] ?? en;
+  const [grid, sample] = TP_GRID[locale] ?? TP_GRID.en;
+  return { ...copy, scale: [copy.scale[0], copy.scale[1], copy.scale[2], grid, sample, copy.scale[5]], simpleScale: [copy.simpleScale[0], copy.simpleScale[1], grid + ' ' + sample, copy.simpleScale[3]] };
 }
