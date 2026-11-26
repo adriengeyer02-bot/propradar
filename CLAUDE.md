@@ -19,6 +19,15 @@ Read also `SCORING.md` (how scores move, restrictive-rules penalty) and
 editing the same files). Restrictive rules need `category`, `severity`,
 `clarity` and `appliesTo` (plus `auditedPrograms` on the firm) to count.
 
+## Shared branch with ChatGPT (Geyer, 2026-11-26)
+
+`main` is the only shared baseline and it is production (Vercel publishes every
+commit on `main`). Fetch the latest `origin/main` before any edit and again before
+committing; work on a short `claude/...` branch and open a PR into `main` (Geyer
+merges). ChatGPT owns translations (`app/lib/dataI18n/`, message text) and the terms
+archive; Claude owns scoring, `firm-updates.json` and the firm page layout. The same
+rules are in `AGENTS.md`: change both files together.
+
 ## Where the data lives
 
 - `app/lib/propFirms.ts` - base profiles (core firms + "universe" watchlist

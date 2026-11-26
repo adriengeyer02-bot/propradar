@@ -16,15 +16,27 @@ any change, in this order:
    (including how to correct manual scores that embedded the former -8).
 4. `README.md`: product overview (French).
 
-## Active integration branch — 2026-11-26 (owner coordination request)
+## Shared branch — from PR #283 (Geyer, 2026-11-26)
 
-**Until the owner approves a reconciled production baseline, use `claude/scale-c-batch2` as the shared integration baseline for current Scale C, offers UI and translations. Do not start current work from stale `main`, or deploy it.** PR #281 documents the approved Scale C changes. This instruction supersedes older references below to starting from main or the V4 audit split for current Scale C work; it does not authorize changes to scores or sensitive data.
+**`main` is the only shared baseline and it is production: Vercel publishes every
+commit that lands on `main`.** `claude/scale-c-batch2` is retired once PR #283 is
+merged; do not push to it any more.
 
-- Before editing, fetch the latest remote branch HEAD and the current file. Check open PRs and coordinate overlapping files; do not work concurrently on the same file from stale snapshots.
-- ChatGPT/Codex owns translations in the existing `app/lib/dataI18n/` dictionaries (including `scaleCEvidence.json`); Claude owns source clauses and scoring. Both agents must use the same canonical files, not alternative copies or older dictionaries. If an English source changes, review the corresponding translations; preserve unchanged entries and other locales. Match by firm slug, criterion code and exact source, not array position alone.
-- Make narrowly scoped changes against the latest file SHA, preserve unrelated changes, reject conflicts rather than force-push, and verify the diff and existing entries after each commit. Do not overwrite the entire branch or reset it to an old deployment.
-- For parallel changes, branch from the latest shared baseline and integrate by a reviewed, conflict-free PR into that baseline, not into stale main. Keep the production domain on a verified approved build; confirm scores, audit data, translations and offers UI before promotion. Do not merge the diverged main blindly.
-- Reconcile main and the production branch separately with an explicit file-level review and owner approval. Once that is done, update this instruction and Vercel's production branch together.
+- Before any edit: `git fetch` and start from the latest `origin/main`, never from a
+  local copy or an older branch. Re-fetch right before committing.
+- Work on a short branch (`claude/...` or `chatgpt/...`), open a PR into `main`.
+  Geyer merges. Never push directly to `main`.
+- File ownership, to avoid undoing each other:
+  - ChatGPT/Codex: translations in `app/lib/dataI18n/` and `app/lib/messages/` text
+    values, contract archives (`terms-archive/` on `agent/terms-archive`).
+  - Claude: scoring (`scale-c.json`, `scripts/*scale-c*`, `propFirms.ts` pipeline),
+    firm data (`app/data/firm-updates.json`), firm page layout
+    (`app/[locale]/firm/[slug]/page.tsx`, its components and CSS).
+  - A change in the other agent's files goes through a PR that says so in its title.
+- If a PR conflicts, merge the latest `main` into the branch and keep both sides'
+  work; never force-push and never overwrite a whole file from an old copy.
+- Both instruction files say the same thing: `CLAUDE.md` (Claude) and this file
+  (ChatGPT/Codex). Change both together.
 
 ## Who does what (set by Geyer on 2026-11-18)
 
