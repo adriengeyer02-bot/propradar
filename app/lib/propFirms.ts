@@ -12957,7 +12957,8 @@ function applyRulesPenaltyRule(firm: PropFirm): PropFirm {
  * Scale C already contains its own complete Trustpilot calculation.
  */
 function restoreIncludedTrustpilotPenalty(firm: PropFirm): PropFirm {
-  if (firm.status === 'Fermée' || getScaleC(firm.slug) || !getFirmUpdate(firm.slug)?.set?.trustpilotPenaltyIncluded) return firm;
+  const set = getFirmUpdate(firm.slug)?.set;
+  if (firm.status === 'Fermée' || getScaleC(firm.slug) || !set?.trustpilotPenaltyIncluded || typeof set.score !== 'number' || set.score !== firm.score) return firm;
   return { ...firm, score: Math.min(100, firm.score + HISTORICAL_INCLUDED_NOTICE_PENALTY) };
 }
 
