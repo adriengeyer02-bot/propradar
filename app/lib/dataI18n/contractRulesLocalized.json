@@ -1,0 +1,432 @@
+{
+  "es": {
+    "ftmo": [
+      {
+        "source": [
+          "FTMO 1-Step — evaluation and FTMO Account",
+          "10% maximum loss trails the highest end-of-day closed balance; the 50% best-day share of total profit applies to passing and withdrawal for accounts ordered on/after 12 October 2026. The older best-day denominator remains for legacy accounts.",
+          "A large single winning day can delay passing and payout without being a hard breach. Loss floor only moves upward until a reward account reset."
+        ],
+        "localized": [
+          "FTMO 1-Step — evaluación y FTMO Account",
+          "La pérdida máxima del 10 % sigue el saldo cerrado más alto al final del día; el límite del 50 % del beneficio total correspondiente al mejor día se aplica tanto a la superación de la evaluación como al retiro en las cuentas contratadas a partir del 12 de octubre de 2026. Las cuentas anteriores conservan el denominador anterior para el cálculo del mejor día.",
+          "Un único día con ganancias elevadas puede retrasar la superación de la evaluación y el retiro sin constituir una infracción definitiva. El umbral de pérdida solo sube hasta el reinicio de la cuenta tras una recompensa."
+        ]
+      },
+      {
+        "source": [
+          "FTMO Instant — direct simulated account",
+          "10% maximum loss trails the highest closed balance intraday. At reward request, the largest profitable day must be no more than 30% of cumulative net profit; 3% daily equity limit also applies.",
+          "A trader can be profitable yet not eligible for a reward until more eligible profit days dilute the best day."
+        ],
+        "localized": [
+          "FTMO Instant — cuenta simulada directa",
+          "La pérdida máxima del 10 % sigue el saldo cerrado más alto durante el día. Al solicitar una recompensa, el día más rentable no puede representar más del 30 % del beneficio neto acumulado; también se aplica un límite diario del 3 % sobre el patrimonio de la cuenta.",
+          "Un trader puede tener beneficios sin cumplir los requisitos de recompensa hasta que más días rentables reduzcan el peso del mejor día."
+        ]
+      },
+      {
+        "source": [
+          "FTMO 2-Step — Standard/Swing challenge",
+          "2-Step retains the static 10% maximum and 5% daily loss, with four evaluation trading days and different rules from the EOD trailing 1-Step.",
+          "Do not transfer the 1-Step consistency and trailing figures to the legacy-style 2-Step purchase."
+        ],
+        "localized": [
+          "FTMO 2-Step — challenge Standard/Swing",
+          "2-Step conserva la pérdida máxima fija del 10 % y el límite diario del 5 %, con cuatro días de negociación durante la evaluación y reglas distintas del drawdown dinámico de fin de día de 1-Step.",
+          "No se deben trasladar las cifras de consistencia y drawdown dinámico de 1-Step al modelo 2-Step."
+        ]
+      },
+      {
+        "source": [
+          "FTMO Account (non-Swing, after evaluation) and FTMO Instant Account — news",
+          "FTMO \"restricts order execution for 2 minutes before and 2 minutes after selected news releases\" on symbols containing the affected currency or asset. The restriction \"applies to any order execution, including your Stop Loss, Take Profit or any other pending orders.\" Swing accounts and accounts in the Challenge or Verification are exempt. \"Violating this rule may result in termination of an FTMO Account / FTMO Instant Account.\"",
+          "On a funded Standard or Instant account, a stop-loss or take-profit that fills inside the 4-minute window counts as a violation and can end the account; profits on it are not protected."
+        ],
+        "localized": [
+          "FTMO Account (no Swing, tras la evaluación) y FTMO Instant Account — noticias",
+          "FTMO «restringe la ejecución de órdenes durante los 2 minutos anteriores y los 2 minutos posteriores a determinadas noticias» en instrumentos que incluyan la divisa o el activo afectado. La restricción «se aplica a cualquier ejecución de órdenes, incluidos Stop Loss, Take Profit u otras órdenes pendientes». Las cuentas Swing y las cuentas en Challenge o Verification están exentas. «La infracción de esta regla puede dar lugar a la cancelación de una FTMO Account / FTMO Instant Account».",
+          "En una cuenta financiada Standard o Instant, un stop-loss o take-profit ejecutado dentro de la ventana de 4 minutos constituye una infracción y puede causar el cierre de la cuenta; sus beneficios no están protegidos."
+        ]
+      },
+      {
+        "source": [
+          "FTMO Account (non-Swing, after evaluation) and FTMO Instant Account — market breaks",
+          "FTMO \"restricts holding positions through market breaks longer than 2 hours\"; all positions must be closed before such a break. Swing accounts and accounts in the FTMO Challenge or Verification are exempt. Violating it \"may result in termination of an FTMO Account / FTMO Instant Account.\"",
+          "Funded Standard and Instant traders must be flat before weekends and other breaks over two hours; a position left open can end the account."
+        ],
+        "localized": [
+          "FTMO Account (no Swing, tras la evaluación) y FTMO Instant Account — cierres del mercado",
+          "FTMO «restringe el mantenimiento de posiciones durante interrupciones del mercado superiores a 2 horas»; todas las posiciones deben cerrarse antes de dicha interrupción. Las cuentas Swing y las cuentas en FTMO Challenge o Verification están exentas. La infracción «puede dar lugar a la cancelación de una FTMO Account / FTMO Instant Account».",
+          "Los traders financiados Standard e Instant deben cerrar todas sus posiciones antes del fin de semana y de otras interrupciones superiores a dos horas; dejar una posición abierta puede provocar el cierre de la cuenta."
+        ]
+      },
+      {
+        "source": [
+          "All FTMO accounts — gap trading",
+          "The Forbidden Trading Practices page bans \"gap trading\", defined as opening trades when major events are scheduled, or \"two hours or less before a relevant financial market is closed for at least two hours.\" Possible consequences include \"forfeiture of any potential Rewards\" or \"termination of all agreements you have with us.\" The page does not exempt Swing or evaluation accounts, while the FAQ says Swing and evaluation accounts may hold positions through news and market breaks.",
+          "A Swing or evaluation trader relying on the FAQ exemption could still be found to have opened a position too close to a scheduled event or weekend close; which text prevails is not stated."
+        ],
+        "localized": [
+          "Todas las cuentas FTMO — trading de gaps",
+          "La página de prácticas prohibidas veta el «gap trading», definido como la apertura de operaciones cuando hay acontecimientos importantes programados o «dos horas o menos antes de que un mercado financiero relevante cierre durante al menos dos horas». Las consecuencias pueden incluir la «pérdida de cualquier recompensa potencial» o la «terminación de todos los acuerdos que tenga con nosotros». La página no exime a las cuentas Swing ni de evaluación, mientras que la FAQ permite mantener posiciones durante noticias y cierres del mercado en dichas cuentas.",
+          "Un trader Swing o en evaluación que se ampare en la excepción de la FAQ podría aun así ser considerado infractor por abrir una posición demasiado cerca de un acontecimiento programado o del cierre del fin de semana; no se indica qué texto prevalece."
+        ]
+      },
+      {
+        "source": [
+          "All FTMO accounts — forbidden trading practices",
+          "Trades that \"contradict how trading is actually performed in the financial markets (e.g., overleveraging, overexposure, one-sided bets, account rolling)\" are forbidden, as is opening \"substantially larger position sizes compared to your other simulated trades, on any of your accounts\" or a \"substantially smaller or larger number of positions\". None of these terms is quantified. A breach \"may result in corrective actions, including, but not limited to\" removal of trades, \"forfeiture of any potential Rewards\" or termination of all agreements.",
+          "Rewards can be forfeited for sizing or exposure judged excessive without a published threshold; the trader cannot check compliance in advance."
+        ],
+        "localized": [
+          "Todas las cuentas FTMO — prácticas de trading prohibidas",
+          "Se prohíben las operaciones que «contradigan la forma en que se realiza realmente el trading en los mercados financieros (p. ej., apalancamiento excesivo, sobreexposición, apuestas unidireccionales, rotación de cuentas)», así como abrir «posiciones de tamaño sustancialmente mayor que el de sus otras operaciones simuladas, en cualquiera de sus cuentas» o un «número de posiciones sustancialmente menor o mayor». Ninguno de estos términos está cuantificado. Una infracción «puede dar lugar a medidas correctivas, entre otras» la eliminación de operaciones, la «pérdida de cualquier recompensa potencial» o la terminación de todos los acuerdos.",
+          "Las recompensas pueden perderse por un tamaño de posición o una exposición considerados excesivos sin umbral publicado; el trader no puede comprobar de antemano si cumple la norma."
+        ]
+      },
+      {
+        "source": [
+          "All FTMO accounts — capital allocation and identical strategies",
+          "\"The total capital allocation across all accounts and products is limited to $400,000 per trader or strategy\" (before scaling; higher with the Premium Programme). Where trading is identical or substantially similar across accounts, including trades copied from the same third-party source, and the total exceeds the limit, FTMO \"reserves the right to suspend the affected accounts.\" The strategy FAQ warns a third-party EA can lead to being \"denied the FTMO Account\" under this rule.",
+          "A trader using a commercial EA or signal also used by unrelated FTMO clients can have accounts suspended or a funded account refused because of other people's capital, which the trader cannot see."
+        ],
+        "localized": [
+          "Todas las cuentas FTMO — asignación de capital y estrategias idénticas",
+          "«La asignación total de capital entre todas las cuentas y productos está limitada a 400.000 USD por trader o estrategia» (antes del escalado; mayor con Premium Programme). Si las operaciones son idénticas o sustancialmente similares entre cuentas, incluidas las copiadas de una misma fuente externa, y el total supera el límite, FTMO «se reserva el derecho de suspender las cuentas afectadas». La FAQ sobre estrategias advierte de que un EA de terceros puede provocar que se «deniegue la FTMO Account» en virtud de esta regla.",
+          "Un trader que utilice un EA comercial o una señal que también utilicen clientes de FTMO sin relación con él puede sufrir la suspensión de sus cuentas o la denegación de una cuenta financiada por el capital de otras personas, que no puede conocer."
+        ]
+      }
+    ],
+    "the5ers": [
+      {
+        "source": [
+          "The5ers High Stakes — evaluation and Pro",
+          "Maximum loss is 8%-10% fixed from starting capital; daily 3%-5% recalculates on the higher of closing balance/equity. Executing trades 2 minutes before or after high-impact news removes those trade profits, while losses still count.",
+          "Daily-loss breach terminates the account; a profitable news trade can lose its eligible profits despite remaining open."
+        ],
+        "localized": [
+          "The5ers High Stakes — evaluación y Pro",
+          "La pérdida máxima fija es del 8 % al 10 % respecto al capital inicial; el límite diario del 3 % al 5 % se recalcula sobre el mayor entre saldo de cierre y patrimonio. Ejecutar operaciones 2 minutos antes o después de noticias de alto impacto elimina los beneficios de esas operaciones, mientras que las pérdidas sí se contabilizan.",
+          "Superar el límite diario de pérdida cancela la cuenta; una operación rentable durante noticias puede perder sus beneficios elegibles aunque siga abierta."
+        ]
+      },
+      {
+        "source": [
+          "The5ers High Stakes — Pro withdrawals",
+          "Published $50K / $100K Pro payout caps are $3,000 / $4,000, with minimum payout profits $300 / $500; requests are every 14 days.",
+          "Not all accumulated profit is immediately withdrawable. Check exact size and current plan in the dashboard."
+        ],
+        "localized": [
+          "The5ers High Stakes — retiros Pro",
+          "Los límites de retiro publicados para Pro de 50.000 / 100.000 USD son 3.000 / 4.000 USD, con beneficios mínimos de retiro de 300 / 500 USD; se puede solicitar cada 14 días.",
+          "No todo el beneficio acumulado es inmediatamente retirable. Compruebe el tamaño exacto y el plan vigente en el panel."
+        ]
+      },
+      {
+        "source": [
+          "The5ers Bootcamp — three evaluation stages vs Pro",
+          "Bootcamp evaluation has no daily pause; its Pro stage adds a 3% daily pause, changes maximum loss in the $20K example from 5% to 4%, and its purchase fee is nonrefundable. Inactivity over 30 days closes accounts.",
+          "Passing changes the operative risk controls and does not reimburse the entry fee."
+        ],
+        "localized": [
+          "The5ers Bootcamp — tres etapas de evaluación frente a Pro",
+          "La evaluación Bootcamp no tiene pausa diaria; la fase Pro añade una pausa diaria del 3 %, modifica la pérdida máxima del ejemplo de 20.000 USD del 5 % al 4 % y la tarifa de compra no es reembolsable. Una inactividad superior a 30 días cierra las cuentas.",
+          "Superar la evaluación cambia los controles de riesgo aplicables y no implica el reembolso de la tarifa de entrada."
+        ]
+      },
+      {
+        "source": [
+          "The5ers Bootcamp and Hyper Growth — drawdown explanation",
+          "The official July drawdown examples leave the floor at the original starting-capital less loss percentage as retained gains rise, but newer official education pages call these drawdowns trailing. These descriptions do not consistently specify floor movement.",
+          "Do not assume the floor is static or trailing based on one marketing explanation; obtain the purchased programme contract and live dashboard threshold."
+        ],
+        "localized": [
+          "The5ers Bootcamp y Hyper Growth — explicación del drawdown",
+          "Los ejemplos oficiales de julio mantienen el umbral en el capital inicial menos el porcentaje de pérdida mientras aumentan los beneficios retenidos, pero páginas educativas oficiales más recientes califican estos drawdowns de dinámicos. Las descripciones no indican de forma coherente cómo se mueve el umbral.",
+          "No suponga que el umbral es fijo o dinámico basándose en una sola explicación comercial; obtenga el contrato del programa adquirido y el umbral real del panel."
+        ]
+      },
+      {
+        "source": [
+          "All programmes — prohibited trading practices",
+          "The terms ban \"other conduct which in the sole discretion of the Company, represents uncommercial activity, is intended to game the market, or otherwise is not a viable trading strategy\" (Trading Rule 19). The prohibited-practices FAQ adds unquantified items such as \"one-sided bets\", \"bulk trading, is when multiple trades are open simultaneously\", position sizes \"substantially larger or smaller than your typical trading activity\", \"disproportionate concentrated exposure\" and \"speculative position-taking that resembles gambling\". On a breach the FAQ states: \"Any refund or profit will not be processed, and you will be permanently banned.\" (prohibited-trading-practices FAQ)",
+          "Earned profit can be withheld and the trader banned on criteria with no published threshold, assessed at the firm's sole discretion; the rules apply to evaluation and funded accounts."
+        ],
+        "localized": [
+          "Todos los programas — prácticas de trading prohibidas",
+          "Las condiciones prohíben «otras conductas que, a la sola discreción de la empresa, constituyan una actividad no comercial, pretendan manipular el mercado o no sean una estrategia de trading viable» (regla de trading 19). La FAQ de prácticas prohibidas añade criterios no cuantificados, como «apuestas unidireccionales», «trading masivo, cuando se abren varias operaciones simultáneamente», tamaños de posición «sustancialmente mayores o menores que su actividad habitual», «exposición concentrada desproporcionada» y «toma especulativa de posiciones similar a las apuestas». Ante una infracción la FAQ indica: «No se tramitará ningún reembolso ni beneficio y quedará excluido permanentemente».",
+          "Los beneficios obtenidos pueden retenerse y el trader puede quedar excluido según criterios sin umbral publicado, valorados a la sola discreción de la empresa; las reglas se aplican a cuentas de evaluación y financiadas."
+        ]
+      },
+      {
+        "source": [
+          "All programmes — verification interview",
+          "Section 3.2: if the Company requests an interview, scheduling and conducting it \"must take place within five (5) business days from the date of the request.\" Failure \"will result in the denial of any pending payouts, immediate cancellation of all associated accounts, and termination of the collaboration.\" The verification process may be conducted \"at any time on our sole discretion.\"",
+          "A trader who is unavailable for five business days after an interview request (travel, illness) loses pending payouts and every linked account."
+        ],
+        "localized": [
+          "Todos los programas — entrevista de verificación",
+          "Sección 3.2: si la empresa solicita una entrevista, su programación y realización «deberán tener lugar en un plazo de cinco (5) días hábiles desde la fecha de la solicitud». El incumplimiento «dará lugar a la denegación de todos los retiros pendientes, la cancelación inmediata de todas las cuentas asociadas y la terminación de la colaboración». La verificación puede realizarse «en cualquier momento, a nuestra sola discreción».",
+          "Un trader que no esté disponible durante cinco días hábiles tras solicitarse una entrevista (viaje, enfermedad) pierde los retiros pendientes y todas las cuentas vinculadas."
+        ]
+      },
+      {
+        "source": [
+          "All programmes — public statements",
+          "Section 10.1 (item 11) allows termination for \"any defamatory, disparaging, or harmful statements about the Company, its employees, or the Services on any public platform, including but not limited to social media networks, public groups, forums, or review sites\", including publishing support tickets or chats. It is \"a fundamental breach\": accounts terminated \"without any refund of fees paid\" and \"any accrued profits or Reward Balance shall be immediately forfeited.\"",
+          "A negative public review or a posted support exchange can cost the trader accrued profits; 'disparaging' and 'harmful' are not defined."
+        ],
+        "localized": [
+          "Todos los programas — declaraciones públicas",
+          "La sección 10.1 (apartado 11) permite resolver el contrato por «cualquier declaración difamatoria, denigrante o perjudicial sobre la empresa, sus empleados o los servicios en cualquier plataforma pública, incluidas, entre otras, redes sociales, grupos públicos, foros o sitios de reseñas», incluida la publicación de conversaciones o solicitudes de soporte. Es «un incumplimiento esencial»: se cierran las cuentas «sin reembolso de las tarifas abonadas» y «todos los beneficios acumulados o el saldo de recompensas se perderán inmediatamente».",
+          "Una reseña pública negativa o la publicación de una conversación con soporte puede costar al trader sus beneficios acumulados; no se definen los términos «denigrante» ni «perjudicial»."
+        ]
+      },
+      {
+        "source": [
+          "All funded accounts — large payouts",
+          "Section 7.6: the Company \"reserves the right, at its sole and absolute discretion, to establish a maximum payout amount permitted per single transaction\". Above that unpublished Payout Threshold, \"the approved payout amount shall be disbursed in consecutive weekly installments of $10,000\" until paid in full. The threshold is not stated and may change without notice.",
+          "A large approved payout can be spread over several weeks at $10,000 per week; the trader cannot know in advance from what amount this applies."
+        ],
+        "localized": [
+          "Todas las cuentas financiadas — retiros elevados",
+          "Sección 7.6: la empresa «se reserva el derecho, a su sola y absoluta discreción, de establecer un importe máximo de retiro permitido por transacción». Por encima de ese umbral no publicado, «el importe de retiro aprobado se abonará en cuotas semanales consecutivas de 10.000 USD» hasta su pago íntegro. El umbral no se indica y puede cambiar sin aviso.",
+          "Un retiro elevado ya aprobado puede distribuirse durante varias semanas a razón de 10.000 USD semanales; el trader no puede conocer de antemano a partir de qué importe se aplica."
+        ]
+      },
+      {
+        "source": [
+          "All programmes — VPN and geographic restrictions",
+          "Section 1.9: \"circumvention of geographical restrictions (including through the use of VPN or any other technical means)\" is \"a fundamental breach of the Terms.\" Section 1.10: if this or residence in a forbidden/sanctioned territory is discovered \"at any stage (including during or after the KYC process)\", the account can be closed immediately. Section 1.11: no refund of fees and \"Any accrued balance of profits or rewards shall be canceled and forfeited.\"",
+          "Using a VPN that masks location, or later being found resident in a restricted country, can void all accrued profits even after KYC."
+        ],
+        "localized": [
+          "Todos los programas — VPN y restricciones geográficas",
+          "Sección 1.9: la «elusión de restricciones geográficas (incluido el uso de VPN u otros medios técnicos)» es «un incumplimiento esencial de las condiciones». Sección 1.10: si se descubre dicha conducta o la residencia en un territorio prohibido o sancionado «en cualquier etapa (incluso durante o después del proceso KYC)», la cuenta puede cerrarse inmediatamente. Sección 1.11: no hay reembolso y «se cancelará y perderá todo saldo acumulado de beneficios o recompensas».",
+          "Utilizar una VPN para ocultar la ubicación, o descubrirse posteriormente que se reside en un país restringido, puede anular todos los beneficios acumulados incluso después del KYC."
+        ]
+      },
+      {
+        "source": [
+          "All programmes — copy trading and third-party EAs",
+          "Prohibited: \"Trade coordination or copy trading with other traders or accounts\", an \"EA from a third party, where other traders have the same trades open\", \"Using an EA from a provider where the trader does not own the source code\", and EAs generating \"an excessive number of server requests\". Consequence: \"Any refund or profit will not be processed, and you will be permanently banned.\"",
+          "A commercial EA bought without its source code is enough to lose profits, even if no other trader uses it."
+        ],
+        "localized": [
+          "Todos los programas — copy trading y EA de terceros",
+          "Se prohíbe «coordinar o copiar operaciones con otros traders o cuentas», un «EA de terceros con el que otros traders tengan las mismas operaciones abiertas», «utilizar un EA de un proveedor cuyo código fuente no pertenezca al trader» y los EA que generen «un número excesivo de solicitudes al servidor». Consecuencia: «No se tramitará ningún reembolso ni beneficio y quedará excluido permanentemente».",
+          "Un EA comercial comprado sin su código fuente basta para perder beneficios, aunque ningún otro trader lo utilice."
+        ]
+      },
+      {
+        "source": [
+          "All programmes — short-duration trading",
+          "Prohibited: \"High-frequency trading, in which the majority of trade durations span is measured within a few seconds or less\" and \"Tick Scalping\". No minimum duration in seconds is published. Consequence: profit not processed and permanent ban.",
+          "Scalpers cannot tell how short is too short; the threshold ('a few seconds') is not defined."
+        ],
+        "localized": [
+          "Todos los programas — operaciones de corta duración",
+          "Se prohíbe el «trading de alta frecuencia, en el que la duración de la mayoría de las operaciones se mide en unos pocos segundos o menos» y el «Tick Scalping». No se publica una duración mínima en segundos. Consecuencia: no se tramitan beneficios y se impone una exclusión permanente.",
+          "Los scalpers no pueden saber qué duración es demasiado corta; no se define el umbral de «unos pocos segundos»."
+        ]
+      },
+      {
+        "source": [
+          "All programmes — changes to rules",
+          "\"We may modify these Terms from time to time in Our sole discretion\" and \"You shall be bound by such modifications effective immediately upon posting on the Website.\" Trading Rules and Prohibited Conduct \"are subject to change at any time and from time to time, with or without notice.\" Only fees and programme parameters carry a carve-out: \"The change does not affect the Services purchased before the change is notified.\"",
+          "Trading rules on an account already bought can change without notice; only fees and parameters are protected for existing purchases."
+        ],
+        "localized": [
+          "Todos los programas — modificación de las reglas",
+          "«Podemos modificar estas condiciones periódicamente a nuestra sola discreción» y «usted quedará vinculado por dichas modificaciones desde su publicación en el sitio web». Las reglas de trading y conductas prohibidas «pueden cambiar en cualquier momento, periódicamente, con o sin aviso». Solo las tarifas y los parámetros del programa tienen una excepción: «El cambio no afecta a los servicios adquiridos antes de que se notifique el cambio».",
+          "Las reglas de trading de una cuenta ya comprada pueden cambiar sin aviso; solo las tarifas y los parámetros están protegidos para las compras anteriores."
+        ]
+      },
+      {
+        "source": [
+          "The5ers High Stakes — inactivity",
+          "Evaluation accounts expire after 30 consecutive days of inactivity and funded accounts after 60 consecutive days.",
+          "A funded High Stakes trader who pauses for two months loses the account."
+        ],
+        "localized": [
+          "The5ers High Stakes — inactividad",
+          "Las cuentas de evaluación caducan después de 30 días consecutivos de inactividad y las cuentas financiadas después de 60 días consecutivos.",
+          "Un trader financiado de High Stakes que interrumpa su actividad durante dos meses pierde la cuenta."
+        ]
+      }
+    ],
+    "topstep": [
+      {
+        "source": [
+          "Topstep Trading Combine — standard evaluation",
+          "MLL trails end-of-day balance and is recalculated at daily close, but an intraday unrealized equity touch triggers liquidation. Standard Combine profit-day concentration is limited to 55% of its target.",
+          "Profitable open positions that reverse can breach a threshold set at the previous EOD; a single oversized winning day delays passing."
+        ],
+        "localized": [
+          "Topstep Trading Combine — evaluación Standard",
+          "El MLL sigue el saldo de fin de día y se recalcula al cierre diario, pero alcanzar el umbral durante el día con el patrimonio no realizado provoca la liquidación. La concentración de beneficios de un día en Standard Combine está limitada al 55 % de su objetivo.",
+          "Las posiciones abiertas rentables que se reviertan pueden infringir el umbral fijado al cierre del día anterior; un único día de ganancias excesivas retrasa la superación de la evaluación."
+        ]
+      },
+      {
+        "source": [
+          "Topstep Express Funded Account — payout",
+          "Despite a nominal $50K–$150K buying-power label, the XFA starts at $0. MLL rises from a negative floor, locks at $0 and is set to $0 after first payout; on the optional Consistency payout path, best day ≤40% and at least 3 trading days.",
+          "A payout can reduce remaining loss cushion, and payout eligibility differs between Standard and Consistency paths."
+        ],
+        "localized": [
+          "Topstep Express Funded Account — retiros",
+          "Aunque el poder de compra nominal sea de 50.000 a 150.000 USD, la XFA comienza en 0 USD. El MLL sube desde un umbral negativo, se fija en 0 USD y pasa a 0 USD después del primer retiro; en la modalidad opcional de retiro Consistency, el mejor día debe ser ≤40 % y se exigen al menos 3 días de trading.",
+          "Un retiro puede reducir el margen de pérdida restante y los requisitos de retiro difieren entre las modalidades Standard y Consistency."
+        ]
+      },
+      {
+        "source": [
+          "Topstep Trading Combine and XFA — daily loss options",
+          "Daily Loss Limit is not necessarily universal: checkout can add DLL and change a funded payout cap; self-set personal loss controls are distinct from mandatory MLL.",
+          "Do not present an optional daily lockout as a compulsory hard breach for every Topstep programme."
+        ],
+        "localized": [
+          "Topstep Trading Combine y XFA — opciones de pérdida diaria",
+          "El límite de pérdida diaria (DLL) no es necesariamente universal: en la compra se puede añadir un DLL y modificar un límite de retiro de la cuenta financiada; los controles de pérdida personalizados son distintos del MLL obligatorio.",
+          "No se debe presentar un bloqueo diario opcional como una infracción definitiva obligatoria en todos los programas Topstep."
+        ]
+      },
+      {
+        "source": [
+          "Express Funded Account — payout size",
+          "Each Express Funded Account payout is limited to \"50% of your account balance up to the cap\", with caps from $2,000 to $6,000 depending on account size and payout path. \"Minimum Payout: $125.\" Live Funded Account payouts are not capped.",
+          "Only part of the accumulated profit can be withdrawn per request on the simulated funded account; the rest stays exposed to the Maximum Loss Limit."
+        ],
+        "localized": [
+          "Express Funded Account — importe de retiro",
+          "Cada retiro de Express Funded Account está limitado al «50 % del saldo de su cuenta hasta el límite», con topes de 2.000 a 6.000 USD según el tamaño de la cuenta y la modalidad de retiro. «Retiro mínimo: 125 USD». Los retiros de Live Funded Account no tienen tope.",
+          "Solo se puede retirar parte del beneficio acumulado por solicitud en la cuenta financiada simulada; el resto sigue expuesto al límite de pérdida máxima."
+        ]
+      },
+      {
+        "source": [
+          "Express Funded Account — Standard payout path",
+          "A Standard payout requires \"5 winning days of $150+ Net P&L\" (not necessarily consecutive); after each payout \"your 5-day count restarts\". At least $0.01 must have been earned since the last payout (first payout exempt).",
+          "Each payout needs a new set of five qualifying days, so profits made in fewer, larger days wait longer."
+        ],
+        "localized": [
+          "Express Funded Account — modalidad de retiro Standard",
+          "Un retiro Standard exige «5 días rentables con P&L neto de 150 USD o más» (no necesariamente consecutivos); después de cada retiro «se reinicia el cómputo de 5 días». Debe haberse ganado al menos 0,01 USD desde el último retiro (excepto el primero).",
+          "Cada retiro exige cinco nuevos días que cumplan los requisitos; los beneficios obtenidos en menos días de mayor cuantía deben esperar más."
+        ]
+      },
+      {
+        "source": [
+          "Trading Combine, Express Funded and Live — prohibited conduct",
+          "Section 27 bans conduct that \"knowingly or unknowingly circumvents targets and rules\", \"Taking advantage of the simulated environment\", and anything that \"is intended to game the market, is not a viable trading strategy\"; section 8 treats \"substantially (i) larger position sizes\" or \"(ii) a smaller or larger number of positions compared to your other trades\" as failing risk standards. Topstep may \"remove any Simulated Account profits, delete a trading day, reset an Account, or ban a User\"; where profits were gained through the simulated environment after graduating, \"you will not be entitled to receive any withdrawals from any other account maintained with Topstep\", \"all of which will be forfeited and closed immediately.\" The help centre adds \"Delay or denial of a Payout request\", decided \"case-by-case based on severity and history.\"",
+          "Profits and withdrawals on every Topstep account can be removed for conduct the firm classifies as prohibited under undefined standards, including unknowing circumvention."
+        ],
+        "localized": [
+          "Trading Combine, Express Funded y Live — conductas prohibidas",
+          "La sección 27 prohíbe conductas que «eludan consciente o inconscientemente objetivos y reglas», «aprovechar el entorno simulado» y cualquier práctica que «pretenda manipular el mercado o no sea una estrategia de trading viable»; la sección 8 considera que tamaños de posición «sustancialmente (i) mayores» o «(ii) un número menor o mayor de posiciones respecto a sus otras operaciones» incumplen los estándares de riesgo. Topstep puede «eliminar cualquier beneficio de la cuenta simulada, borrar un día de trading, reiniciar una cuenta o excluir a un usuario»; si se obtuvieron beneficios aprovechando el entorno simulado tras superar la evaluación, «no tendrá derecho a recibir retiros de ninguna otra cuenta mantenida con Topstep», «todas las cuales se perderán y cerrarán inmediatamente». El centro de ayuda añade «retraso o denegación de una solicitud de retiro», decidido «caso por caso en función de la gravedad y los antecedentes».",
+          "Los beneficios y retiros de todas las cuentas Topstep pueden perderse por conductas clasificadas como prohibidas por la empresa conforme a criterios indefinidos, incluida la elusión involuntaria."
+        ]
+      },
+      {
+        "source": [
+          "All accounts — VPN, proxy and remote access",
+          "Section 28: \"Using any VPN, VPS, proxy (including residential), or other service masking your IP address or location on Accounts is strictly prohibited, and violations may result in account termination and forfeiture of profits\"; location spoofing apps and remote access tools are also banned.",
+          "Trading through a VPS or VPN (common for automated setups) can cost the account and its profits."
+        ],
+        "localized": [
+          "Todas las cuentas — VPN, proxy y acceso remoto",
+          "Sección 28: «Está estrictamente prohibido utilizar cualquier VPN, VPS, proxy (incluido residencial) u otro servicio que oculte su dirección IP o ubicación en las cuentas; las infracciones pueden provocar la cancelación de la cuenta y la pérdida de beneficios»; también se prohíben las aplicaciones de falsificación de ubicación y las herramientas de acceso remoto.",
+          "Operar mediante un VPS o VPN (habitual en configuraciones automatizadas) puede costar la cuenta y sus beneficios."
+        ]
+      },
+      {
+        "source": [
+          "All accounts — coordinated trading and cross-account hedging",
+          "Prohibited: \"performing trades in concert with others (including unconnected accounts or third parties)\", \"holding opposite positions across multiple accounts simultaneously\", \"repeatedly hitting the Maximum Loss Limit in one account and switching to another\" (account stacking), and trading on behalf of others. Listed consequences include \"Delay or denial of a Payout request\" and \"Permanent account closure\".",
+          "Following the same signals as other traders, or hedging between one's own accounts, can lead to payout denial or closure."
+        ],
+        "localized": [
+          "Todas las cuentas — trading coordinado y cobertura entre cuentas",
+          "Se prohíbe «realizar operaciones de forma concertada con otros (incluidas cuentas no vinculadas o terceros)», «mantener simultáneamente posiciones opuestas en varias cuentas», «alcanzar repetidamente el límite de pérdida máxima en una cuenta y pasar a otra» (acumulación de cuentas) y operar en nombre de terceros. Las consecuencias enumeradas incluyen «retraso o denegación de una solicitud de retiro» y «cierre permanente de la cuenta».",
+          "Seguir las mismas señales que otros traders o cubrir posiciones entre cuentas propias puede provocar la denegación de un retiro o el cierre."
+        ]
+      },
+      {
+        "source": [
+          "Express Funded Account — live restricted jurisdictions",
+          "Section 30: in Live Restricted Jurisdictions (where Topstep \"does not maintain an active relationship with a futures commission merchant partner who accepts live traders\"), \"any such Express Funded Account will operate exclusively in a simulated trading environment\" and \"Restricted Participants will not migrate from an Express Funded Account to a Live Funded Account, regardless of trading performance\".",
+          "Traders in those countries stay on the capped simulated payout path permanently; the uncapped Live Funded payouts are not available to them."
+        ],
+        "localized": [
+          "Express Funded Account — jurisdicciones con restricciones de acceso a Live",
+          "Sección 30: en las jurisdicciones restringidas para Live (donde Topstep «no mantiene una relación activa con un intermediario de futuros asociado que acepte traders en real»), «cualquier Express Funded Account funcionará exclusivamente en un entorno de trading simulado» y «los participantes restringidos no pasarán de una Express Funded Account a una Live Funded Account, independientemente de su rendimiento».",
+          "Los traders de esos países permanecen de forma permanente en la modalidad simulada con límites de retiro; no pueden acceder a los retiros sin tope de Live Funded."
+        ]
+      },
+      {
+        "source": [
+          "Trading Combine — activation deadline",
+          "Section 9: \"If you do not activate the Trading Combine® within 30 calendar days of the date on which it was made available to you, your access to it will be suspended\"; it must be renewed within 6 months of the suspension, \"otherwise we will terminate the provision of the Services\" without a fee refund.",
+          "A Combine bought but not started within 30 days is suspended and can be lost after six months."
+        ],
+        "localized": [
+          "Trading Combine — plazo de activación",
+          "Sección 9: «Si no activa el Trading Combine® en los 30 días naturales siguientes a la fecha en que se puso a su disposición, se suspenderá su acceso»; debe renovarse en los 6 meses siguientes a la suspensión, «de lo contrario, terminaremos la prestación de los servicios» sin reembolso de la tarifa.",
+          "Un Combine adquirido pero no iniciado en 30 días queda suspendido y puede perderse tras seis meses."
+        ]
+      },
+      {
+        "source": [
+          "All accounts — changes to rules",
+          "Trading Rules are \"subject to change by Topstep in its sole and absolute discretion from time to time\" and account parameters \"remain subject to adjustment and change from time to time, without notice\" (sections 27 and 9). Changes to the Terms themselves require notice.",
+          "Rules and parameters on an existing account can change without notice; the terms do not protect accounts already bought."
+        ],
+        "localized": [
+          "Todas las cuentas — modificación de reglas",
+          "Las reglas de trading «están sujetas a cambios periódicos por Topstep a su sola y absoluta discreción» y los parámetros de las cuentas «siguen sujetos a ajustes y cambios periódicos sin aviso» (secciones 27 y 9). Los cambios de las propias condiciones requieren aviso.",
+          "Las reglas y los parámetros de una cuenta existente pueden cambiar sin aviso; las condiciones no protegen las cuentas ya adquiridas."
+        ]
+      }
+    ],
+    "axi-select": [
+      {
+        "source": [
+          "Axi Select Seed → Pro500 — broker-funded stages",
+          "User must deposit and trade personal real money (minimum stage equity $500 to $10K), satisfy a minimum performance/Edge score and 7% static allocation maximum-loss ceiling.",
+          "Losses can affect trader-owned capital even before Axi allocation; no free trial account equivalent to a simulated prop challenge."
+        ],
+        "localized": [
+          "Axi Select Seed → Pro500 — etapas financiadas por el bróker",
+          "El usuario debe depositar y operar con dinero real propio (patrimonio mínimo por etapa de 500 a 10.000 USD), cumplir un mínimo de rendimiento/Edge Score y respetar un límite fijo de pérdida máxima del 7 % sobre la asignación.",
+          "Las pérdidas pueden afectar al capital propio del trader incluso antes de la asignación de Axi; no existe una cuenta de prueba gratuita equivalente a un challenge simulado."
+        ]
+      },
+      {
+        "source": [
+          "Axi Select — own-funds withdrawal",
+          "Withdrawing from the linked real-money brokerage balance can reduce programme allocation by the applicable multiplier while the original loss limit does not automatically move downward.",
+          "A cash withdrawal of the trader’s own funds may trigger disqualification if it reduces allocation equity below the existing floor."
+        ],
+        "localized": [
+          "Axi Select — retiro de fondos propios",
+          "Retirar dinero del saldo real de la cuenta de corretaje vinculada puede reducir la asignación del programa en función del multiplicador aplicable, mientras que el límite original de pérdida no baja automáticamente.",
+          "Un retiro de efectivo de los fondos propios del trader puede provocar la descalificación si reduce el patrimonio de la asignación por debajo del umbral existente."
+        ]
+      },
+      {
+        "source": [
+          "Axi Select — country and operator eligibility",
+          "Axi regional help centres have different answers (selected jurisdictions, region-specific exclusions) for the same programme; correct legal counterparty must be confirmed at onboarding.",
+          "Do not promise access to a French/EU resident on the basis of a generic global marketing page."
+        ],
+        "localized": [
+          "Axi Select — elegibilidad por país y operador",
+          "Los centros de ayuda regionales de Axi dan respuestas distintas (jurisdicciones seleccionadas, exclusiones regionales) para el mismo programa; debe confirmarse la contraparte jurídica correcta al incorporarse.",
+          "No se debe garantizar el acceso a un residente de Francia o la UE basándose en una página comercial global genérica."
+        ]
+      }
+    ]
+  }
+}
