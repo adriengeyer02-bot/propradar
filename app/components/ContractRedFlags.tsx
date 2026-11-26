@@ -2,12 +2,14 @@ import type { Locale } from '../lib/locales';
 import { getScaleC, SCALE_C_CONTRACT_CODES, type ScaleCCode } from '../lib/scaleC';
 import { scaleCCopy } from '../lib/scaleCI18n';
 import { getContractAudit } from '../lib/contractAudits';
+import { localizeScaleCEvidence } from '../lib/dataI18n/scaleCEvidence';
+import { localizeContractAuditText } from '../lib/dataI18n/contractAuditTexts';
 
 /**
  * "Contractual points to watch" box near the top of a firm page (Geyer,
  * 2026-11-25): the clauses read in the firm's own terms that can cost a payout
  * or change an account, each with its locator and source. Facts only; the
- * excerpts stay in the source language.
+ * excerpts use reviewed translations where available; source links remain intact.
  */
 const COPY: Record<string, { title: string; lead: string; more: string }> = {
   en: { title: 'Contractual points to watch', lead: 'Clauses in the firm’s own terms that can cost you a payout or change your account, with their source.', more: 'Full contract file' },
@@ -44,14 +46,14 @@ export default function ContractRedFlags({ slug, locale }: { slug: string; local
     items = entry.penalties
       .filter((p) => RED.includes(p.code) && p.text)
       .sort((a, b) => b.points - a.points)
-      .map((p) => ({ label: cc.codes[p.code], points: p.points, text: clip(p.text), locator: p.locator, source: p.source }));
+      .map((p) => ({ label: cc.codes[p.code], points: p.points, text: clip(localizeScaleCEvidence(locale, slug, p)), locator: p.locator, source: p.source }));
   }
   if (!items.length) {
     const audit = getContractAudit(slug);
     items = (audit?.findings ?? [])
       .filter((x) => (x.group === 'discretion' || x.group === 'contradiction') && x.publish !== false && !x.hidden && x.source.startsWith('https://'))
       .slice(0, 4)
-      .map((x) => ({ text: clip(x.text), locator: x.locator, source: x.source }));
+      .map((x) => ({ text: clip(localizeContractAuditText(locale, x.text)), locator: x.locator, source: x.source }));
   }
   if (!items.length) return null;
   return (

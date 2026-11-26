@@ -1,9 +1,9 @@
 import type { Locale } from './locales';
 
 /**
- * Interface strings of the contract-audit section on firm pages. Findings stay
- * in English (PropRadar's sourced paraphrase of the official documents); only
- * the frame is translated. Translation agent: refine freely, keep the meaning
+ * Interface strings of the contract-audit section on firm pages. Reviewed
+ * translations of findings are kept separately in dataI18n/contractAuditTexts.
+ * Translation agent: refine freely, keep the meaning
  * of `partial`, `notScore` and `noEvidence` intact (legal caution).
  */
 export type ContractAuditCopy = {
