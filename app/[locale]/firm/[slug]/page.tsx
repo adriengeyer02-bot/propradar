@@ -60,6 +60,7 @@ import { guideCardText, localizedGuidePath } from '../../../lib/guideI18n';
 import { getManualCommunityReview } from '../../../lib/manualCommunityReviews';
 import { getFirmContentLastModified, getFirmSearchProfile } from '../../../lib/firmSearchProfiles';
 import { td } from '../../../lib/dataI18n';
+import { localizeScoreEvidence, localizeContractProtection } from '../../../lib/dataI18n/scoreEvidence';
 import { toEnglishText } from '../../../lib/i18n';
 import { editorialBriefs, getEditorialBriefPath } from '../../../lib/editorialBriefs';
 import GuideCover from '../../../components/guide-visuals/GuideCover';
@@ -744,8 +745,8 @@ export default async function FirmPage({ params }: Props) {
       tradingLabel: ruleCopy.tradingLabel,
     } : undefined,
     v5Evidence: breakdown.v5 ? {
-      deductions: breakdown.v5.ruleDeductions,
-      contractProtection: breakdown.v5.contractProtection,
+      deductions: breakdown.v5.ruleDeductions.map((item) => localizeScoreEvidence(locale, item)),
+      contractProtection: localizeContractProtection(locale, firm.slug, breakdown.v5.contractProtection),
       checkedOn: breakdown.v5.checkedOn,
       limitedPayoutProof: breakdown.v5.independentPayoutProofLimited,
       copy: scoreV5EvidenceCopy(locale),
