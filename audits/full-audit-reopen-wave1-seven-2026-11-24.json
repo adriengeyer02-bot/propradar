@@ -1,0 +1,638 @@
+{
+  "date": "2026-11-24",
+  "status": "AUDIT_ONLY_SCORE_FREEZE",
+  "scope": "Seven reopened priority profiles, targeted primary-source sections and current FAQ; not full contracts or program audits. No numeric scores. Payout evidence labels distinguish external tracking and independent individual verification.",
+  "findingsCount": 52,
+  "firms": [
+    {
+      "slug": "hyrotrader",
+      "terms": {
+        "url": "https://www.hyrotrader.com/terms-and-conditions/",
+        "status": "CURRENT_HTML_SECTIONS_REVIEWED_NOT_FULL_CLAUSE_COVERAGE",
+        "funded": "separate agreement not captured"
+      },
+      "programs": [
+        "Hyro Core",
+        "One-Step",
+        "Two-Step",
+        "Hyro Instant",
+        "Zero-Step (legacy only from 4 Nov 2026)"
+      ],
+      "findings": [
+        {
+          "source": "https://www.hyrotrader.com/terms-and-conditions/",
+          "locator": "§6.1A",
+          "scope": "Core / One-Step / Two-Step evaluation",
+          "finding": "40% of target per day; excess remains in balance but does not count toward target; losses fully count. No breach for exceeding cap.",
+          "kind": "quantified"
+        },
+        {
+          "source": "https://www.hyrotrader.com/terms-and-conditions/",
+          "locator": "§6.1C",
+          "scope": "Zero-Step legacy",
+          "finding": "50% per trade cap; no new entry since 4 Nov, prior terms maintained.",
+          "kind": "cohort"
+        },
+        {
+          "source": "https://www.hyrotrader.com/terms-and-conditions/",
+          "locator": "§6.1B",
+          "scope": "Hyro Instant funded",
+          "finding": "Loss >2% per closed trade net of fees triggers permanent warning; second closes account and unpaid profit not rewarded. Three qualifying days first withdrawal, any result.",
+          "kind": "hard_breach"
+        },
+        {
+          "source": "https://www.hyrotrader.com/terms-and-conditions/",
+          "locator": "§6.2–6.4",
+          "scope": "All",
+          "finding": "Progression can be declined for risk review; refundable deposit returned for refusal unrelated to breach. Separate funded agreement mandatory before reward accrues.",
+          "kind": "discretion_and_safeguard"
+        },
+        {
+          "source": "https://www.hyrotrader.com/terms-and-conditions/",
+          "locator": "§6.3",
+          "scope": "All",
+          "finding": "Nonretroactive rule changes on enrolled accounts with law/fraud/abuse/material harm exceptions; published changelog.",
+          "kind": "safeguard"
+        },
+        {
+          "source": "https://www.hyrotrader.com/terms-and-conditions/",
+          "locator": "§10.2",
+          "scope": "All phases",
+          "finding": "Third-party strategies, coordinated multiple accounts and nonpermitted hedging banned; personal automation permitted subject to compliance.",
+          "kind": "strategy"
+        },
+        {
+          "source": "https://www.hyrotrader.com/trading-rules/",
+          "locator": "Trading rules",
+          "scope": "All",
+          "finding": "Current product rule page must prevail over older marketing; reconcile old Zero-Step display with legacy status.",
+          "kind": "version"
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/hyrotrader.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4,
+        "count": 246
+      },
+      "payoutEvidence": [
+        {
+          "url": "https://payoutjunction.com/firms/hyrotrader",
+          "method": "Direct Crypto",
+          "amountUSD": 1720128,
+          "count": 2235,
+          "period": "tracked through 23 Nov 2026",
+          "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED",
+          "checkedOn": "2026-11-24"
+        }
+      ],
+      "missing": [
+        "Funded Trader Agreement and actual reward/withdrawal cap by program",
+        "register and dates of launch/operator continuity; historical disputes",
+        "individual hash matched to actual trader and applicable program"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "payoutSearchResult": "EXTERNAL_EVIDENCE_RECORDED_NOT_CERTIFICATION",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED",
+      "auditDate": "2026-11-24"
+    },
+    {
+      "slug": "hash-hedge",
+      "terms": {
+        "url": "https://www.hashhedge.com/terms-and-conditions",
+        "commercial": "https://www.hashhedge.com/commercial-terms",
+        "status": "CURRENT_TWO_HTML_CONTRACTS_TARGETED_SECTIONS_REVIEWED"
+      },
+      "programs": [
+        "Challenge Plan Conditions by checkout (full catalog not yet captured)"
+      ],
+      "findings": [
+        {
+          "source": "https://www.hashhedge.com/terms-and-conditions",
+          "locator": "§4.5–4.6; §16",
+          "scope": "All",
+          "finding": "Subjective disqualification must follow investigation and confirmed breach; quantitative automatic breaches treated separately.",
+          "kind": "safeguard"
+        },
+        {
+          "source": "https://www.hashhedge.com/terms-and-conditions",
+          "locator": "§16.1–16.3",
+          "scope": "All",
+          "finding": "Hold can be imposed for suspected breach, material reputational risk or broadly defined integrity needs; no compensation for duration; notice within seven business days; investigation target 30 business days extendable.",
+          "kind": "hold"
+        },
+        {
+          "source": "https://www.hashhedge.com/terms-and-conditions",
+          "locator": "§15.7(c)",
+          "scope": "All",
+          "finding": "90 calendar days without outcome allows dispute procedure; not a 90-day mandatory payout deadline.",
+          "kind": "recourse"
+        },
+        {
+          "source": "https://www.hashhedge.com/terms-and-conditions",
+          "locator": "§7.11; §16.5",
+          "scope": "All",
+          "finding": "Written appeal within seven calendar days; internal decision within fourteen.",
+          "kind": "recourse"
+        },
+        {
+          "source": "https://www.hashhedge.com/commercial-terms",
+          "locator": "§1.3",
+          "scope": "Eligible first-stage bonus",
+          "finding": "Bonus is 2% of target, not 2% of account; ordinary second-stage failure protected but subsequent failure/closure can cancel unpaid bonus. Separate from funded reward.",
+          "kind": "bonus"
+        },
+        {
+          "source": "https://www.hashhedge.com/commercial-terms",
+          "locator": "§3",
+          "scope": "Funded",
+          "finding": "72h conditional guarantee subject to investigation/verification exceptions; restart after corrected payment information. Conditional contract duty, not proof of payments.",
+          "kind": "payout"
+        },
+        {
+          "source": "https://www.hashhedge.com/commercial-terms",
+          "locator": "§4.1–4.4; §6",
+          "scope": "All",
+          "finding": "Confirmed disqualification can forfeit affected pending rewards; temporary Hold itself does not extinguish earned reward.",
+          "kind": "forfeiture_and_safeguard"
+        },
+        {
+          "source": "https://www.hashhedge.com/commercial-terms",
+          "locator": "§8 (prior audit)",
+          "scope": "Legal",
+          "finding": "Commercial counterparty FinSmart Solution Ltd vs platform operator Empower Academy Ltd; independent registry outstanding.",
+          "kind": "identity"
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/hashhedge.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.5,
+        "count": 121
+      },
+      "payoutEvidence": [],
+      "missing": [
+        "Full checkout plan/add-on matrix, payout thresholds and cohort terms",
+        "primary registries and independent payout attribution; no independently verified transfers in this pass",
+        "full clause-by-clause read and historical incident reconciliation"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "payoutSearchResult": "NO_NEW_INDEPENDENT_EVIDENCE_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED",
+      "auditDate": "2026-11-24"
+    },
+    {
+      "slug": "ment-funding",
+      "terms": {
+        "url": "https://mentfunding.com/terms-of-service",
+        "status": "CURRENT_HTML_TARGETED_SECTIONS_REVIEWED",
+        "funded": "separate Trader Agreement unavailable"
+      },
+      "programs": [
+        "Forex",
+        "Futures",
+        "Equities"
+      ],
+      "findings": [
+        {
+          "source": "https://mentfunding.com/terms-of-service",
+          "locator": "Introduction",
+          "scope": "All",
+          "finding": "Agreement may be modified or terminated at sole discretion; no automatic inference of actual retroactive change.",
+          "kind": "discretion"
+        },
+        {
+          "source": "https://mentfunding.com/terms-of-service",
+          "locator": "§4",
+          "scope": "Evaluation and funded scope to confirm",
+          "finding": "Changing strategy between stages can be treated as prohibited; discretionary forfeiture of sums owed in prohibited-trading provision, exact scope of fees/rewards to reconcile.",
+          "kind": "forfeiture"
+        },
+        {
+          "source": "https://mentfunding.com/terms-of-service",
+          "locator": "§4",
+          "scope": "All subject to applicable contract",
+          "finding": "Opening within ±3 min of a News Event may lead to trade P&L removal, reduced leverage or breach; company defines event. Public home also advertises news trading allowed, scope must be reconciled per market.",
+          "kind": "potential_conflict"
+        },
+        {
+          "source": "https://mentfunding.com/terms-of-service",
+          "locator": "§5",
+          "scope": "All",
+          "finding": "Broad excessive leverage and all-in classification; immediate account closure and forfeiture of fees owed possible.",
+          "kind": "discretion"
+        },
+        {
+          "source": "https://mentfunding.com/terms-of-service",
+          "locator": "§6–7",
+          "scope": "All",
+          "finding": "Copy own accounts only; third-party strategies and cross-account hedging restricted; intra-account hedge permitted.",
+          "kind": "strategy"
+        },
+        {
+          "source": "https://mentfunding.com/terms-of-service",
+          "locator": "§9",
+          "scope": "All",
+          "finding": "One active account per assessment level unless prior written approval.",
+          "kind": "allocation"
+        },
+        {
+          "source": "https://mentfunding.com/terms-of-service",
+          "locator": "Shared Wallet provision",
+          "scope": "Payout",
+          "finding": "Reasonable determination of shared wallet allows refusal, hold, additional verification, termination; separate from trading rule.",
+          "kind": "hold"
+        },
+        {
+          "source": "https://mentfunding.com/terms-of-service",
+          "locator": "§8",
+          "scope": "Funded",
+          "finding": "Live account subject to separate Trader Agreement; Prop Account group identified in intro, payer per market unresolved.",
+          "kind": "identity"
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/www.mentfunding.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.6,
+        "count": 238
+      },
+      "payoutEvidence": [],
+      "missing": [
+        "Forex/Futures/Equities detailed rules per offer and date, resolve news marketing vs clause",
+        "signed Trader Agreements, payer and registry, actual payout evidence",
+        "full clause read and historical incidents"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "payoutSearchResult": "NO_NEW_INDEPENDENT_EVIDENCE_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED",
+      "auditDate": "2026-11-24"
+    },
+    {
+      "slug": "instant-funding",
+      "terms": {
+        "url": "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+        "older": "https://instantfunding.com/wp-content/uploads/2026/06/Instant-Funding-General-Terms-Conditions.pdf",
+        "status": "OCTOBER_PDF_IDENTIFIED_AND_PAGE_1_VISUALLY_CHECKED; JUNE_PDF_PAGES_1_25_CHECKED; NO_FULL_READ_CLAIM",
+        "funded": "2025 account agreement indexed, not treated as current; priority current agreement missing"
+      },
+      "programs": [
+        "One-Phase Pro",
+        "Two-Phase",
+        "IF Micro Pro",
+        "IF Starter",
+        "One-Phase Micro",
+        "Two-Phase Micro",
+        "IF Micro Lite",
+        "IF Micro Clarity",
+        "other offers and add-ons pending full reconciliation"
+      ],
+      "findings": [
+        {
+          "source": "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+          "locator": "p1 §1.1–1.3",
+          "scope": "All",
+          "finding": "Acello Ltd UK 12696083 named; Trader Agreement takes priority; website also names IF Pro Ltd. Entity roles to reconcile.",
+          "kind": "identity"
+        },
+        {
+          "source": "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+          "locator": "§8.3; §9.5–9.6",
+          "scope": "All",
+          "finding": "Crypto fee 0.5%, Rise $5; unilateral changes to success parameters; refund limits after first trade or 14 days subject to law.",
+          "kind": "fees_and_change"
+        },
+        {
+          "source": "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+          "locator": "§11.2; R2 table",
+          "scope": "Applicable programs only",
+          "finding": "Discretion to remove trades/results or terminate; certain accounts have 2% floating account drawdown, first trigger positions closed and split 50%, second breach closes account.",
+          "kind": "sanction"
+        },
+        {
+          "source": "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+          "locator": "§18.5–18.6",
+          "scope": "All",
+          "finding": "Performance test results confidential; public announcement concerning terms requires written consent except legally required disclosures. No automatic payout forfeiture established.",
+          "kind": "confidentiality"
+        },
+        {
+          "source": "https://instantfunding.com/wp-content/uploads/2026/06/Instant-Funding-General-Terms-Conditions.pdf",
+          "locator": "§19.1; §22.1 p25 (June version)",
+          "scope": "Historical June version",
+          "finding": "Variation effective on publication or use; complaint resolution target 30 calendar days. Reconcile current October equivalent.",
+          "kind": "historical"
+        },
+        {
+          "source": "https://instantfunding.com/help/payout-on-demand/",
+          "locator": "Best day limit",
+          "scope": "One-Phase Pro / Two-Phase",
+          "finding": "40% eligibility threshold; routine consistency recorded as such.",
+          "kind": "quantified"
+        },
+        {
+          "source": "https://instantfunding.com/help/payout-on-demand/",
+          "locator": "Best day limit",
+          "scope": "IF Micro Pro, IF Starter, One/Two-Phase Micro, IF Micro Lite",
+          "finding": "15% best day; IF Micro Pro paid add-on 20%; Lite fixed 14-day cycle.",
+          "kind": "quantified"
+        },
+        {
+          "source": "https://instantfunding.com/help/payout-on-demand/",
+          "locator": "Minimum profit",
+          "scope": "IF Micro Pro / Starter / Clarity",
+          "finding": "Minimum 5% / 2% / 3% respectively; Clarity 20% best day; 5 profitable days at 0.5% per Clarity FAQ.",
+          "kind": "payout"
+        },
+        {
+          "source": "https://instantfunding.com/help/payout-on-demand/",
+          "locator": "Minimum profit",
+          "scope": "IF Micro Lite",
+          "finding": "5% minimum and Smart Drawdown locked at 3% before payout.",
+          "kind": "payout"
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/instantfunding.com",
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "rating": null,
+        "count": null
+      },
+      "payoutEvidence": [
+        {
+          "url": "https://payoutjunction.com/weekly/2026-w47",
+          "method": "Rise",
+          "amountUSD": 35440,
+          "count": 18,
+          "period": "16–22 Nov 2026",
+          "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "url": "https://cryptoslate.com/prop-firms/instantfunding-review/",
+          "grade": "EXTERNAL_ANALYSIS_OF_RISE_SETTLEMENT",
+          "amountUSD": 555956.65,
+          "period": "21 Jun–19 Aug 2026",
+          "note": "external analysis of transactions including token burns; not direct proof of each trader receiving funds"
+        }
+      ],
+      "missing": [
+        "Current complete Trader Agreement, full October PDF section coverage",
+        "full program list and all risk, news, weekend, payout variants and dates",
+        "primary registry, historical incidents, independently matched receipt/hash"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "payoutSearchResult": "EXTERNAL_EVIDENCE_RECORDED_NOT_CERTIFICATION",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED",
+      "auditDate": "2026-11-24"
+    },
+    {
+      "slug": "fintokei",
+      "terms": {
+        "url": "https://www.fintokei.com/terms-and-conditions/",
+        "status": "CURRENT_V17_PDF_ACCESS_FAILED",
+        "funded": "FPP annexes not captured"
+      },
+      "programs": [
+        "StartTrader",
+        "SwiftTrader",
+        "ProTrader",
+        "ProTrader Swing",
+        "ProTrader Scalp"
+      ],
+      "findings": [
+        {
+          "source": "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices",
+          "locator": "risk management steps",
+          "scope": "All",
+          "finding": "Case-by-case assessment of excessive/unsustainable trading; steps may be skipped; risk lowered from 3% to 1%, profit split/leverage and daily cap may be changed.",
+          "kind": "discretion"
+        },
+        {
+          "source": "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices",
+          "locator": "hard breach vs unsustainable",
+          "scope": "All",
+          "finding": "Hard breach means no refund/payout; flagged unsustainable traders can elect termination and request pending payout or refund. Distinguish these cases.",
+          "kind": "safeguard"
+        },
+        {
+          "source": "https://support.fintokei.com/en/articles/10166343-what-is-unsustainable-trading-on-fintokei-accounts",
+          "locator": "risk methodology",
+          "scope": "All",
+          "finding": "Standard deviation of trade-idea returns used as signal; other qualitative strategy factors matter; individual restrictions may extend to future accounts.",
+          "kind": "discretion"
+        },
+        {
+          "source": "https://support.fintokei.com/en/articles/9579997-how-does-starttrader-challenge-work-what-are-the-rules",
+          "locator": "StartTrader current cohort",
+          "scope": "StartTrader",
+          "finding": "No default consistency since 21 Oct 2026; minimum 2% profit per payout, 14 calendar days, cumulative $400 cap over at most two requests on USD offer.",
+          "kind": "payout"
+        },
+        {
+          "source": "https://support.fintokei.com/en/articles/12040973-how-does-swifttrader-challenge-work-what-are-the-rules",
+          "locator": "risk rule",
+          "scope": "SwiftTrader",
+          "finding": "Maximum open risk violation warns or triggers consistency measures rather than automatic account loss; payout minimum each request.",
+          "kind": "quantified"
+        },
+        {
+          "source": "https://www.fintokei.com/terms-and-conditions/",
+          "locator": "footer",
+          "scope": "All",
+          "finding": "Fintokei a.s. Czech ID 09110127 disclosed, not independently registry-verified.",
+          "kind": "identity"
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/fintokei.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.4,
+        "count": 1474
+      },
+      "payoutEvidence": [],
+      "missing": [
+        "V17 and all FPP annexes including Swing/Scalp; compare to older contracts without treating historical version as current",
+        "specific risk restrictions and payout variants, registry and historical events",
+        "payment evidence, not marketing claims"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "payoutSearchResult": "NO_NEW_INDEPENDENT_EVIDENCE_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED",
+      "auditDate": "2026-11-24"
+    },
+    {
+      "slug": "city-traders-imperium",
+      "terms": {
+        "url": "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf",
+        "status": "PREVIOUSLY_RECORDED_JUNE_PDF_NOW_404; CURRENT_CHECKOUT_TERMS_NOT_CAPTURED"
+      },
+      "programs": [
+        "1-Step",
+        "2-Step",
+        "Instant Funding",
+        "Direct Funding"
+      ],
+      "findings": [
+        {
+          "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+          "locator": "Updated 29 Oct 2026",
+          "scope": "All",
+          "finding": "Marketing says news, overnight and weekend allowed. Compare exact forbidden methods/EA and version before calling contradiction established.",
+          "kind": "potential_conflict"
+        },
+        {
+          "source": "https://citytradersimperium.com/forex-calculators/consistency-score-calculator/",
+          "locator": "scaling",
+          "scope": "Instant / Direct",
+          "finding": "Consistency uses absolute best profit or loss day divided by absolute sum of daily results; applies to scaling, not payout or evaluation per current site.",
+          "kind": "quantified"
+        },
+        {
+          "source": "https://citytradersimperium.com/instant-funding/",
+          "locator": "offer and footer",
+          "scope": "Instant",
+          "finding": "Starts with half nominal allocation; 50% split and 6% static drawdown as published; entity City Traders Imperium Limited disclosed.",
+          "kind": "offer"
+        },
+        {
+          "source": "https://citytradersimperium.com/direct-funding/",
+          "locator": "payout",
+          "scope": "Direct",
+          "finding": "70% initial split; first withdrawal from day five, no minimum profitable days; no payout consistency.",
+          "kind": "offer"
+        },
+        {
+          "source": "https://citytradersimperium.com/ea-trading-rules/",
+          "locator": "rules updated 7 Oct",
+          "scope": "All",
+          "finding": "Visible stop on each trade, approved VPS and own-account EA; coordinated identical trades risk flags.",
+          "kind": "strategy"
+        },
+        {
+          "source": "https://citytradersimperium.com/contact-us/",
+          "locator": "complaints",
+          "scope": "All",
+          "finding": "Public complaint channel; compare with contract appeal and remedy.",
+          "kind": "recourse"
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/citytradersimperium.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.3,
+        "count": 1646
+      },
+      "payoutEvidence": [],
+      "missing": [
+        "New actual legal checkout document; old June findings retained as historical, not erased",
+        "reconcile 2025 PDFs and 2026 terms, actual payer/registry; press reports and company response",
+        "independent transfer evidence and program variants"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "payoutSearchResult": "NO_NEW_INDEPENDENT_EVIDENCE_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED",
+      "auditDate": "2026-11-24"
+    },
+    {
+      "slug": "audacity-capital",
+      "terms": {
+        "url": "https://audacity.capital/terms-and-conditions/",
+        "status": "CURRENT_HTML_TARGETED_SECTIONS_REVIEWED; MULTIPLE_TEXT_BLOCKS_REQUIRE_RECONCILIATION"
+      },
+      "programs": [
+        "Ability Challenge 2-Step",
+        "Ability One 1-Step",
+        "FTP Instant Funding"
+      ],
+      "findings": [
+        {
+          "source": "https://audacity.capital/terms-and-conditions/",
+          "locator": "§2.1–2.6",
+          "scope": "All",
+          "finding": "Initially simulated; live transfer discretionary; provider bears live capital risk; six months inactivity termination.",
+          "kind": "scope"
+        },
+        {
+          "source": "https://audacity.capital/terms-and-conditions/",
+          "locator": "§3.2–3.5",
+          "scope": "All",
+          "finding": "Fees generally non-refundable after use; 2-Step only reimbursement benefit; legal payment disputes and consumer cancellation rights expressly preserved.",
+          "kind": "safeguard"
+        },
+        {
+          "source": "https://audacity.capital/terms-and-conditions/",
+          "locator": "Irresponsible Trading",
+          "scope": "All",
+          "finding": "Reasonable determination of gambling/excessive risk can suspend/terminate. Review specific payout consequences separately.",
+          "kind": "discretion"
+        },
+        {
+          "source": "https://audacity.capital/knowledge-center/trading-guidelines/",
+          "locator": "Notice 2 Nov 2026; consistency table",
+          "scope": "Ability One / FTP",
+          "finding": "New purchases: 50% live stage for One, 35% FTP, reset after payout; old cohorts retain prior rules.",
+          "kind": "quantified"
+        },
+        {
+          "source": "https://audacity.capital/knowledge-center/trading-guidelines/",
+          "locator": "Minimum trading days",
+          "scope": "All",
+          "finding": "2-Step four days per evaluation phase, no funded minimum. One-Step no minimum on current guide; old apparent contradiction must be checked against dated checkout.",
+          "kind": "cohort"
+        },
+        {
+          "source": "https://audacity.capital/knowledge-center/trading-guidelines/",
+          "locator": "Allocation and EA",
+          "scope": "All",
+          "finding": "One FTP active, aggregate live $400k, own account copying allowed; third-party signals forbidden.",
+          "kind": "strategy"
+        },
+        {
+          "source": "https://audacity.capital/knowledge-center/trading-guidelines/",
+          "locator": "Weekend gap exploitation",
+          "scope": "All",
+          "finding": "Intentional exploitation can cause profit removal, payout refusal or termination after review.",
+          "kind": "sanction"
+        },
+        {
+          "source": "https://audacity.capital/terms-and-conditions/",
+          "locator": "Legal footer",
+          "scope": "All",
+          "finding": "AudaCity Global LTD Comoros 15850 trading operator, Dubai facilitator, Cyprus Propmetry payment partner; registrations disclosed not independently verified.",
+          "kind": "identity"
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/audacity.capital",
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "rating": null,
+        "count": null
+      },
+      "payoutEvidence": [],
+      "missing": [
+        "Exact checkout and funded agreement; verify current prohibited practices and dispute provisions in every text block",
+        "ability one old/new FAQ discrepancy, programme fees and reward calculation",
+        "registry and independently verified payments, historical incidents"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "payoutSearchResult": "NO_NEW_INDEPENDENT_EVIDENCE_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED",
+      "auditDate": "2026-11-24"
+    }
+  ]
+}

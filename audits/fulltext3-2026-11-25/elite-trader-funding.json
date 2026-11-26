@@ -1,0 +1,36 @@
+{
+ "slug": "elite-trader-funding",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "ETF 'reserves the right to withhold or delay Rewards ... if it determines, in its sole discretion, that a User has engaged in behavior that is inconsistent with or in violations of the Terms', and retains 'the sole and absolute discretion to determine whether a Trader's trading behavior is in accordance with the Terms'.",
+   "source": "https://elitetraderfunding.app/terms-of-service",
+   "locator": "Reward eligibility; violations",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B6",
+   "text": "Prohibited conduct includes 'conduct or activities that, in ETF's sole discretion creates, reputational, regulatory, or financial risk to ETF'.",
+   "source": "https://elitetraderfunding.app/terms-of-service",
+   "locator": "Prohibited conduct (ad)",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B3",
+   "text": "ETF may modify the Terms 'including Reward limits and eligibility requirements, ATD limits, drawdown limits, or any other parameters of the LIVE ELITE Account', and may convert a trader to LIVE ELITE 'at any time, before, during, or after a Reward request'.",
+   "source": "https://elitetraderfunding.app/terms-of-service",
+   "locator": "LIVE ELITE program",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "Emotional or gambling-like trading may be a supporting factor, but ETF 'will not deny a Reward based on this subsection (t) alone'; reducing account limits does not close accounts already held.",
+   "source": "https://elitetraderfunding.app/terms-of-service",
+   "locator": "Prohibited conduct (t); account limits",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

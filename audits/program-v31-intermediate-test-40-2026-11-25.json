@@ -1,0 +1,2161 @@
+{
+  "date": "2026-11-25",
+  "status": "EXPERIMENT_ONLY_NOT_APPROVED_NOT_RANKING",
+  "baseFile": "audits/program-v3-deduction-test-40-2026-11-25.json",
+  "baseBlob": "319b54785c30011c97b3bd28c4de1b5ac9b311e9",
+  "method": {
+    "description": "Same 40-program V3 documented penalty set; no new research or evidence coverage changes. Reweighting only, proportional adjustment of earlier overrides rounded to nearest integer; zero remains zero. Hard news breach previously scored 3 now 5. Scores are provisional optimistic calculations; unverified contract clauses not awarded verified safety, no publication. No firm score, affiliate, price promo, forced distribution or ceiling.",
+    "weights": {
+      "Q": {
+        "label": "Qualitative trading restriction without quantified sanction",
+        "previous": 2,
+        "points": 4
+      },
+      "D6": {
+        "label": "Subjective decision tied to breach/risk",
+        "previous": 6,
+        "points": 8
+      },
+      "D10": {
+        "label": "Broad discretionary denial/reversal",
+        "previous": 10,
+        "points": 16
+      },
+      "D16": {
+        "label": "Any/no-reason reward denial",
+        "previous": 16,
+        "points": 25
+      },
+      "R4": {
+        "label": "Explicit changes applicable immediately to existing accounts",
+        "previous": 4,
+        "points": 7
+      },
+      "C30": {
+        "label": "Consistency 30–39%",
+        "previous": 1,
+        "points": 1
+      },
+      "C20": {
+        "label": "Consistency 20–29%",
+        "previous": 3,
+        "points": 3
+      },
+      "C15": {
+        "label": "Consistency 15–19%",
+        "previous": 5,
+        "points": 5
+      },
+      "EOD": {
+        "label": "EOD trailing",
+        "previous": 1,
+        "points": 1
+      },
+      "ID": {
+        "label": "Intraday trailing",
+        "previous": 3,
+        "points": 3
+      },
+      "S70": {
+        "label": "Initial split 70–79%",
+        "previous": 1,
+        "points": 1
+      },
+      "S50": {
+        "label": "Initial split 50–59%",
+        "previous": 3,
+        "points": 4
+      },
+      "N": {
+        "label": "Ordinary news restriction",
+        "previous": 1,
+        "points": 1
+      },
+      "A3": {
+        "label": "Limited asymmetric gains removal",
+        "previous": 3,
+        "points": 5
+      },
+      "A5": {
+        "label": "Material asymmetric gains removal",
+        "previous": 5,
+        "points": 8
+      },
+      "A6": {
+        "label": "Broad asymmetric gains removal",
+        "previous": 6,
+        "points": 10
+      },
+      "P4": {
+        "label": "Permanent excess profit deletion, limited/high cap",
+        "previous": 4,
+        "points": 7
+      },
+      "P6": {
+        "label": "Material permanent excess deletion",
+        "previous": 6,
+        "points": 10
+      },
+      "P8": {
+        "label": "Severe permanent excess deletion",
+        "previous": 8,
+        "points": 12
+      },
+      "H": {
+        "label": "Additional historical-best-day calculation",
+        "previous": 2,
+        "points": 4
+      },
+      "L1": {
+        "label": "Moderate payout cap",
+        "previous": 1,
+        "points": 2
+      },
+      "L2": {
+        "label": "Material cap or fraction withdrawal limit",
+        "previous": 2,
+        "points": 4
+      },
+      "L3": {
+        "label": "Especially restrictive liquidity limit",
+        "previous": 3,
+        "points": 6
+      },
+      "F4": {
+        "label": "Mandatory finite payout path",
+        "previous": 4,
+        "points": 7
+      },
+      "F6": {
+        "label": "Only one payout permitted",
+        "previous": 6,
+        "points": 10
+      },
+      "B1": {
+        "label": "Material payout reserve",
+        "previous": 1,
+        "points": 2
+      },
+      "B2": {
+        "label": "High retained buffer / loss-floor reset",
+        "previous": 2,
+        "points": 4
+      },
+      "M3": {
+        "label": "High minimum profit to request",
+        "previous": 3,
+        "points": 5
+      },
+      "T2": {
+        "label": "High profitable-day burden",
+        "previous": 2,
+        "points": 3
+      },
+      "W1": {
+        "label": "Weekend/overnight restriction",
+        "previous": 1,
+        "points": 2
+      },
+      "K2": {
+        "label": "Qualitative position/strategy restrictions with independent scope",
+        "previous": 2,
+        "points": 3
+      },
+      "G3": {
+        "label": "Additional trade-idea loss limit",
+        "previous": 3,
+        "points": 5
+      },
+      "G4": {
+        "label": "Very tight hard loss limit",
+        "previous": 4,
+        "points": 7
+      },
+      "X6": {
+        "label": "Severe split reduction / closure strike mechanism",
+        "previous": 6,
+        "points": 11
+      },
+      "X8": {
+        "label": "Cycle reward reduced to 10% or lost on cumulative strikes",
+        "previous": 8,
+        "points": 15
+      },
+      "Z2": {
+        "label": "Other independently documented material constraint",
+        "previous": 2,
+        "points": 3
+      }
+    },
+    "warning": "Q applies to documented open-ended qualitative risk restrictions, not routine anti-fraud/KYC. General discretionary denial tiers reflect scope and safeguards; proportional overrides preserve previous editorial judgment, not fully calibrated objective criteria. L/F/B grouped as prior experiment; no new penalties inferred. Price not calibrated, remaining 40 contracts incomplete. Not comparable with historical trading outcomes."
+  },
+  "stats": {
+    "sample": 40,
+    "firms": 24,
+    "meanV3": 89.1,
+    "meanV31": 82.85,
+    "distributionV3": {
+      "90–100": 20,
+      "80–89": 16,
+      "70–79": 4,
+      "60–69": 0,
+      "50–59": 0,
+      "0–49": 0
+    },
+    "distributionV31": {
+      "90–100": 16,
+      "80–89": 9,
+      "70–79": 10,
+      "60–69": 5,
+      "50–59": 0,
+      "0–49": 0
+    },
+    "minimum": 61,
+    "maximum": 96,
+    "validated": 0
+  },
+  "records": [
+    {
+      "slug": "ftmo",
+      "program": "CFD 1-Step",
+      "market": "CFD",
+      "previousV1": 72,
+      "documentedDeduction": 6,
+      "provisionalV3": 96,
+      "delta": 24,
+      "penalties": [
+        {
+          "key": "EOD",
+          "criterion": "EOD trailing",
+          "points": 1,
+          "reason": "EOD high-water balance trailing",
+          "v3Points": 1
+        },
+        {
+          "key": "Q",
+          "criterion": "Qualitative trading restriction without quantified sanction",
+          "points": 4,
+          "reason": "Qualitative sizing and correlation risk rules",
+          "v3Points": 2
+        },
+        {
+          "key": "N",
+          "criterion": "Ordinary news restriction",
+          "points": 1,
+          "reason": "Gap-trading restrictions around events/closures",
+          "v3Points": 1
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "originalAuditNotes": "50% net eligibility; EOD trailing; 90% split; qualitative risk rules",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 96,
+      "provisionalV31": 94,
+      "deltaV3": -2
+    },
+    {
+      "slug": "ftmo",
+      "program": "CFD 2-Step Standard",
+      "market": "CFD",
+      "previousV1": 64,
+      "documentedDeduction": 5,
+      "provisionalV3": 97,
+      "delta": 33,
+      "penalties": [
+        {
+          "key": "Q",
+          "criterion": "Qualitative trading restriction without quantified sanction",
+          "points": 4,
+          "reason": "Qualitative sizing and correlation rules",
+          "v3Points": 2
+        },
+        {
+          "key": "N",
+          "criterion": "Ordinary news restriction",
+          "points": 1,
+          "reason": "Standard news/gap restrictions; separate from qualitative exposure",
+          "v3Points": 1
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "originalAuditNotes": "No percentage rule; gap/news and general restrictions; exact funded split and agreement need reconciliation",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 97,
+      "provisionalV31": 95,
+      "deltaV3": -2
+    },
+    {
+      "slug": "ftmo",
+      "program": "CFD Instant",
+      "market": "Instant",
+      "previousV1": 68,
+      "documentedDeduction": 6,
+      "provisionalV3": 96,
+      "delta": 28,
+      "penalties": [
+        {
+          "key": "C30",
+          "criterion": "Consistency 30–39%",
+          "points": 1,
+          "reason": "30% consistency resets at withdrawal",
+          "v3Points": 1
+        },
+        {
+          "key": "Q",
+          "criterion": "Qualitative trading restriction without quantified sanction",
+          "points": 4,
+          "reason": "Qualitative sizing and correlation rules",
+          "v3Points": 2
+        },
+        {
+          "key": "N",
+          "criterion": "Ordinary news restriction",
+          "points": 1,
+          "reason": "Gap-trading restrictions",
+          "v3Points": 1
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "originalAuditNotes": "30% resets each payout; 90% split; funded terms accepted at purchase",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 96,
+      "provisionalV31": 94,
+      "deltaV3": -2
+    },
+    {
+      "slug": "the5ers",
+      "program": "Bootcamp",
+      "market": "CFD",
+      "previousV1": 62.5,
+      "documentedDeduction": 10,
+      "provisionalV3": 93,
+      "delta": 30.5,
+      "penalties": [
+        {
+          "key": "S50",
+          "criterion": "Initial split 50–59%",
+          "points": 4,
+          "reason": "Starting split 50%, later 75%",
+          "v3Points": 3
+        },
+        {
+          "key": "Z2",
+          "criterion": "Other independently documented material constraint",
+          "points": 3,
+          "reason": "14-day clock restarts on scaling; not ordinary 14-day wait",
+          "v3Points": 2
+        },
+        {
+          "key": "K2",
+          "criterion": "Qualitative position/strategy restrictions with independent scope",
+          "points": 3,
+          "reason": "Different methods required per active account",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "originalAuditNotes": "3% soft pause in Pro; 14-day cycle resets on scaling; 50% starting split",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 93,
+      "provisionalV31": 90,
+      "deltaV3": -3
+    },
+    {
+      "slug": "the5ers",
+      "program": "High Stakes",
+      "market": "CFD",
+      "previousV1": 61,
+      "documentedDeduction": 16,
+      "provisionalV3": 91,
+      "delta": 30,
+      "penalties": [
+        {
+          "key": "A5",
+          "criterion": "Material asymmetric gains removal",
+          "points": 8,
+          "reason": "Prohibited news executions: gains removed, losses kept",
+          "v3Points": 5
+        },
+        {
+          "key": "L2",
+          "criterion": "Material cap or fraction withdrawal limit",
+          "points": 4,
+          "reason": "50K/100K payout caps; deletion not established",
+          "v3Points": 2
+        },
+        {
+          "key": "Q",
+          "criterion": "Qualitative trading restriction without quantified sanction",
+          "points": 4,
+          "reason": "Qualitative prohibited practices",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "originalAuditNotes": "News profits removed, losses retained; 50K/100K caps; 80% starting split",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 91,
+      "provisionalV31": 84,
+      "deltaV3": -7
+    },
+    {
+      "slug": "the5ers",
+      "program": "Hyper Growth",
+      "market": "CFD",
+      "previousV1": 60.5,
+      "documentedDeduction": 8,
+      "provisionalV3": 95,
+      "delta": 34.5,
+      "penalties": [
+        {
+          "key": "S50",
+          "criterion": "Initial split 50–59%",
+          "points": 4,
+          "reason": "Starting split 50%, later 75%",
+          "v3Points": 3
+        },
+        {
+          "key": "Q",
+          "criterion": "Qualitative trading restriction without quantified sanction",
+          "points": 4,
+          "reason": "Qualitative prohibited practices; ordinary news/holding allowed",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "originalAuditNotes": "News/weekend allowed subject to prohibited strategies; 14 days; initial 50% split",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 95,
+      "provisionalV31": 92,
+      "deltaV3": -3
+    },
+    {
+      "slug": "topstep",
+      "program": "XFA Standard (50K path)",
+      "market": "Futures",
+      "previousV1": 61,
+      "documentedDeduction": 12,
+      "provisionalV3": 94,
+      "delta": 33,
+      "penalties": [
+        {
+          "key": "L2",
+          "criterion": "Material cap or fraction withdrawal limit",
+          "points": 4,
+          "reason": "50% balance and $2K cap (50K)",
+          "v3Points": 2
+        },
+        {
+          "key": "B2",
+          "criterion": "High retained buffer / loss-floor reset",
+          "points": 4,
+          "reason": "MLL fixed at zero after first payout",
+          "v3Points": 2
+        },
+        {
+          "key": "Q",
+          "criterion": "Qualitative trading restriction without quantified sanction",
+          "points": 4,
+          "reason": "Qualitative irresponsible-trading criteria",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "originalAuditNotes": "Five $150 winning days; 50% balance/$2K cap; MLL zero after payout; 90%",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 94,
+      "provisionalV31": 88,
+      "deltaV3": -6
+    },
+    {
+      "slug": "topstep",
+      "program": "XFA Consistency (50K path)",
+      "market": "Futures",
+      "previousV1": 63,
+      "documentedDeduction": 10,
+      "provisionalV3": 95,
+      "delta": 32,
+      "penalties": [
+        {
+          "key": "L1",
+          "criterion": "Moderate payout cap",
+          "points": 2,
+          "reason": "50% balance and higher $3K cap (50K)",
+          "v3Points": 1
+        },
+        {
+          "key": "B2",
+          "criterion": "High retained buffer / loss-floor reset",
+          "points": 4,
+          "reason": "MLL fixed at zero after first payout",
+          "v3Points": 2
+        },
+        {
+          "key": "Q",
+          "criterion": "Qualitative trading restriction without quantified sanction",
+          "points": 4,
+          "reason": "Qualitative irresponsible-trading criteria",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "originalAuditNotes": "Three days, 40% eligibility; 50% balance/$3K cap; MLL zero; 90%",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 95,
+      "provisionalV31": 90,
+      "deltaV3": -5
+    },
+    {
+      "slug": "apex-trader-funding",
+      "program": "EOD evaluation → PA (50K)",
+      "market": "Futures",
+      "previousV1": 42,
+      "documentedDeduction": 37,
+      "provisionalV3": 77,
+      "delta": 35,
+      "penalties": [
+        {
+          "key": "D16",
+          "criterion": "Any/no-reason reward denial",
+          "points": 25,
+          "reason": "Reward can be denied for any or no reason; exceptional-performance clause grouped",
+          "v3Points": 16
+        },
+        {
+          "key": "EOD",
+          "criterion": "EOD trailing",
+          "points": 1,
+          "reason": "EOD trailing",
+          "v3Points": 1
+        },
+        {
+          "key": "F4",
+          "criterion": "Mandatory finite payout path",
+          "points": 7,
+          "reason": "Six payouts then mandatory closure",
+          "v3Points": 4
+        },
+        {
+          "key": "L2",
+          "criterion": "Material cap or fraction withdrawal limit",
+          "points": 4,
+          "reason": "Per-request caps and lifetime safety net grouped as liquidity burden",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "originalAuditNotes": "Any/no-reason reward denial; six payouts then closure; 50% consistency; safety net",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 77,
+      "provisionalV31": 63,
+      "deltaV3": -14
+    },
+    {
+      "slug": "apex-trader-funding",
+      "program": "Intraday trailing evaluation → PA",
+      "market": "Futures",
+      "previousV1": 39.5,
+      "documentedDeduction": 39,
+      "provisionalV3": 75,
+      "delta": 35.5,
+      "penalties": [
+        {
+          "key": "D16",
+          "criterion": "Any/no-reason reward denial",
+          "points": 25,
+          "reason": "Same discretionary reward clause",
+          "v3Points": 16
+        },
+        {
+          "key": "ID",
+          "criterion": "Intraday trailing",
+          "points": 3,
+          "reason": "Intraday trailing",
+          "v3Points": 3
+        },
+        {
+          "key": "F4",
+          "criterion": "Mandatory finite payout path",
+          "points": 7,
+          "reason": "Six payouts then closure",
+          "v3Points": 4
+        },
+        {
+          "key": "L2",
+          "criterion": "Material cap or fraction withdrawal limit",
+          "points": 4,
+          "reason": "Per-request cap/safety requirements, exact tiers not assumed",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "originalAuditNotes": "Same reward discretion; intraday trailing; six payouts; 50% gate",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 75,
+      "provisionalV31": 61,
+      "deltaV3": -14
+    },
+    {
+      "slug": "fundednext",
+      "program": "Stellar Instant",
+      "market": "Instant",
+      "previousV1": 49,
+      "documentedDeduction": 19,
+      "provisionalV3": 88,
+      "delta": 39,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Reasonable indications permit denial/reversal and contractual penalty; group enforcement",
+          "v3Points": 10
+        },
+        {
+          "key": "S70",
+          "criterion": "Initial split 70–79%",
+          "points": 1,
+          "reason": "Starting 70%",
+          "v3Points": 1
+        },
+        {
+          "key": "M3",
+          "criterion": "High minimum profit to request",
+          "points": 2,
+          "reason": "5% growth for on-demand access; 14-day alternative reduces burden: partial penalty applied below",
+          "v3Points": 1
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "originalAuditNotes": "Conditional reward and clawback; 5% on demand or 14 days/1%; initial 70% split",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 88,
+      "provisionalV31": 81,
+      "deltaV3": -7
+    },
+    {
+      "slug": "fundednext",
+      "program": "Futures Direct",
+      "market": "Futures",
+      "previousV1": 44.5,
+      "documentedDeduction": 23,
+      "provisionalV3": 85,
+      "delta": 40.5,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Same general denial/reversal provisions",
+          "v3Points": 10
+        },
+        {
+          "key": "C20",
+          "criterion": "Consistency 20–29%",
+          "points": 3,
+          "reason": "20% consistency",
+          "v3Points": 3
+        },
+        {
+          "key": "H",
+          "criterion": "Additional historical-best-day calculation",
+          "points": 4,
+          "reason": "Historical best day remains after payout",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "originalAuditNotes": "20% perpetual best-day rule; conditional reward, repayment and penalty provisions",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 85,
+      "provisionalV31": 77,
+      "deltaV3": -8
+    },
+    {
+      "slug": "hyrotrader",
+      "program": "One-Step",
+      "market": "CFD/crypto",
+      "previousV1": 62.5,
+      "documentedDeduction": 4,
+      "provisionalV3": 97,
+      "delta": 34.5,
+      "penalties": [
+        {
+          "key": "D6",
+          "criterion": "Subjective decision tied to breach/risk",
+          "points": 4,
+          "reason": "Progression may be refused after risk review; refund safeguard when unrelated to breach: reduced penalty below",
+          "v3Points": 3
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "originalAuditNotes": "40% target-based cap; excess excluded from target, not deleted; nonretroactivity safeguards",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 97,
+      "provisionalV31": 96,
+      "deltaV3": -1
+    },
+    {
+      "slug": "hyrotrader",
+      "program": "Hyro Instant",
+      "market": "Instant",
+      "previousV1": 59.5,
+      "documentedDeduction": 9,
+      "provisionalV3": 94,
+      "delta": 34.5,
+      "penalties": [
+        {
+          "key": "D6",
+          "criterion": "Subjective decision tied to breach/risk",
+          "points": 4,
+          "reason": "Risk review, separate funded agreement; refund safeguard: reduced penalty below",
+          "v3Points": 3
+        },
+        {
+          "key": "G3",
+          "criterion": "Additional trade-idea loss limit",
+          "points": 5,
+          "reason": "2% per closed trade; second violation closes account, same mechanism counted once",
+          "v3Points": 3
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "originalAuditNotes": "2% loss per closed trade, second breach closes; three days first payout",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 94,
+      "provisionalV31": 91,
+      "deltaV3": -3
+    },
+    {
+      "slug": "city-traders-imperium",
+      "program": "Instant Funding",
+      "market": "Instant",
+      "previousV1": 54.5,
+      "documentedDeduction": 10,
+      "provisionalV3": 93,
+      "delta": 38.5,
+      "penalties": [
+        {
+          "key": "S50",
+          "criterion": "Initial split 50–59%",
+          "points": 4,
+          "reason": "Initial 50% split",
+          "v3Points": 3
+        },
+        {
+          "key": "Z2",
+          "criterion": "Other independently documented material constraint",
+          "points": 3,
+          "reason": "Only half nominal allocation at start",
+          "v3Points": 2
+        },
+        {
+          "key": "K2",
+          "criterion": "Qualitative position/strategy restrictions with independent scope",
+          "points": 3,
+          "reason": "Mandatory visible stop / approved VPS and EA conditions grouped",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "originalAuditNotes": "6% static; initial half allocation and 50% split; consistency scaling only; funded contract missing",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 93,
+      "provisionalV31": 90,
+      "deltaV3": -3
+    },
+    {
+      "slug": "city-traders-imperium",
+      "program": "Direct Funding",
+      "market": "Instant",
+      "previousV1": 61,
+      "documentedDeduction": 4,
+      "provisionalV3": 97,
+      "delta": 36,
+      "penalties": [
+        {
+          "key": "S70",
+          "criterion": "Initial split 70–79%",
+          "points": 1,
+          "reason": "Initial 70% split",
+          "v3Points": 1
+        },
+        {
+          "key": "K2",
+          "criterion": "Qualitative position/strategy restrictions with independent scope",
+          "points": 3,
+          "reason": "Mandatory visible stop / approved VPS and EA conditions grouped",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "originalAuditNotes": "70% initial split, day five first request; no payout consistency; funded contract missing",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 97,
+      "provisionalV31": 96,
+      "deltaV3": -1
+    },
+    {
+      "slug": "audacity-capital",
+      "program": "Ability One",
+      "market": "CFD",
+      "previousV1": 57,
+      "documentedDeduction": 8,
+      "provisionalV3": 94,
+      "delta": 37,
+      "penalties": [
+        {
+          "key": "D6",
+          "criterion": "Subjective decision tied to breach/risk",
+          "points": 8,
+          "reason": "Reasonable determination of gambling/excess risk can terminate; not unconditional denial",
+          "v3Points": 6
+        },
+        {
+          "key": "Z2",
+          "criterion": "Other independently documented material constraint",
+          "points": 0,
+          "reason": "Intentional gap exploitation profits may be removed; not ordinary news restriction: no extra penalty below",
+          "v3Points": 0
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "originalAuditNotes": "50% live consistency; reasonable gambling/risk discretion; prior cohorts protected",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 94,
+      "provisionalV31": 92,
+      "deltaV3": -2
+    },
+    {
+      "slug": "audacity-capital",
+      "program": "FTP Instant",
+      "market": "Instant",
+      "previousV1": 55,
+      "documentedDeduction": 9,
+      "provisionalV3": 93,
+      "delta": 38,
+      "penalties": [
+        {
+          "key": "D6",
+          "criterion": "Subjective decision tied to breach/risk",
+          "points": 8,
+          "reason": "Same risk/termination review",
+          "v3Points": 6
+        },
+        {
+          "key": "C30",
+          "criterion": "Consistency 30–39%",
+          "points": 1,
+          "reason": "35% live-stage consistency",
+          "v3Points": 1
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "originalAuditNotes": "35% live consistency; own copying allowed; risk review; nonrefundable fee",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 93,
+      "provisionalV31": 91,
+      "deltaV3": -2
+    },
+    {
+      "slug": "instant-funding",
+      "program": "One-Phase Pro",
+      "market": "CFD",
+      "previousV1": 51,
+      "documentedDeduction": 16,
+      "provisionalV3": 90,
+      "delta": 39,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Discretionary trade/result removal and termination; applicable funded terms still missing",
+          "v3Points": 10
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "originalAuditNotes": "40% on-demand eligibility; trader agreement priority; general discretionary trade removal",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 90,
+      "provisionalV31": 84,
+      "deltaV3": -6
+    },
+    {
+      "slug": "instant-funding",
+      "program": "IF Micro Lite",
+      "market": "Instant",
+      "previousV1": 39.5,
+      "documentedDeduction": 30,
+      "provisionalV3": 80,
+      "delta": 40.5,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Same general sanction",
+          "v3Points": 10
+        },
+        {
+          "key": "C15",
+          "criterion": "Consistency 15–19%",
+          "points": 5,
+          "reason": "15% consistency",
+          "v3Points": 5
+        },
+        {
+          "key": "M3",
+          "criterion": "High minimum profit to request",
+          "points": 5,
+          "reason": "5% payout minimum",
+          "v3Points": 3
+        },
+        {
+          "key": "B2",
+          "criterion": "High retained buffer / loss-floor reset",
+          "points": 4,
+          "reason": "Smart drawdown locked at 3% before payout",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "originalAuditNotes": "15% consistency; 5% payout minimum, 3% lock and 14-day cycle",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 80,
+      "provisionalV31": 70,
+      "deltaV3": -10
+    },
+    {
+      "slug": "fintokei",
+      "program": "StartTrader",
+      "market": "CFD",
+      "previousV1": 56,
+      "documentedDeduction": 15,
+      "provisionalV3": 90,
+      "delta": 34,
+      "penalties": [
+        {
+          "key": "D6",
+          "criterion": "Subjective decision tied to breach/risk",
+          "points": 8,
+          "reason": "Individual risk adjustments and reduced split; exit/payout or refund option moderates severity",
+          "v3Points": 6
+        },
+        {
+          "key": "F4",
+          "criterion": "Mandatory finite payout path",
+          "points": 7,
+          "reason": "At most two payouts, cumulative $400 cap grouped into same family",
+          "v3Points": 4
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json",
+        "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json"
+      ],
+      "originalAuditNotes": "No default consistency; $400 total over at most two payouts; exit option after risk flag",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 90,
+      "provisionalV31": 85,
+      "deltaV3": -5
+    },
+    {
+      "slug": "fintokei",
+      "program": "SwiftTrader (new cohort)",
+      "market": "CFD",
+      "previousV1": 54,
+      "documentedDeduction": 16,
+      "provisionalV3": 89,
+      "delta": 35,
+      "penalties": [
+        {
+          "key": "D6",
+          "criterion": "Subjective decision tied to breach/risk",
+          "points": 8,
+          "reason": "Individual risk controls with exit safeguard",
+          "v3Points": 6
+        },
+        {
+          "key": "G3",
+          "criterion": "Additional trade-idea loss limit",
+          "points": 5,
+          "reason": "3% static max loss, 2% daily; very narrow envelope, not trailing",
+          "v3Points": 3
+        },
+        {
+          "key": "Z2",
+          "criterion": "Other independently documented material constraint",
+          "points": 3,
+          "reason": "3% daily target cap; not a 40% consistency rule",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json",
+        "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json"
+      ],
+      "originalAuditNotes": "3% static overall, 2% daily, 60-day evaluation; 3% daily target cap; qualitative risk controls",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 89,
+      "provisionalV31": 84,
+      "deltaV3": -5
+    },
+    {
+      "slug": "fxify",
+      "program": "Instant Lite",
+      "market": "Instant",
+      "previousV1": 49.5,
+      "documentedDeduction": 7,
+      "provisionalV3": 94,
+      "delta": 44.5,
+      "penalties": [
+        {
+          "key": "D6",
+          "criterion": "Subjective decision tied to breach/risk",
+          "points": 4,
+          "reason": "Additional prohibited strategies possible with seven days notice; signed funded version unresolved: reduced penalty below",
+          "v3Points": 3
+        },
+        {
+          "key": "C20",
+          "criterion": "Consistency 20–29%",
+          "points": 3,
+          "reason": "20% consistency",
+          "v3Points": 3
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ],
+      "originalAuditNotes": "20% consistency; ten days and five traded days; agreement version and lock scope unresolved",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 94,
+      "provisionalV31": 93,
+      "deltaV3": -1
+    },
+    {
+      "slug": "alpha-futures",
+      "program": "Zero (50K)",
+      "market": "Futures",
+      "previousV1": 51.5,
+      "documentedDeduction": 22,
+      "provisionalV3": 87,
+      "delta": 35.5,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Sole discretion to determine breach/deny fee",
+          "v3Points": 10
+        },
+        {
+          "key": "L2",
+          "criterion": "Material cap or fraction withdrawal limit",
+          "points": 4,
+          "reason": "$1500 cap at 50K; $200 min not separately deducted",
+          "v3Points": 2
+        },
+        {
+          "key": "Z2",
+          "criterion": "Other independently documented material constraint",
+          "points": 2,
+          "reason": "Mandatory trading pause pending debit: reduced penalty below",
+          "v3Points": 1
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ],
+      "originalAuditNotes": "40% funded; $200 min/$1500 cap; sole discretion and trading pause on request",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 87,
+      "provisionalV31": 78,
+      "deltaV3": -9
+    },
+    {
+      "slug": "alpha-futures",
+      "program": "Advanced",
+      "market": "Futures",
+      "previousV1": 54,
+      "documentedDeduction": 20,
+      "provisionalV3": 88,
+      "delta": 34,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Same sole discretion",
+          "v3Points": 10
+        },
+        {
+          "key": "L1",
+          "criterion": "Moderate payout cap",
+          "points": 2,
+          "reason": "$15K cap and $1K minimum",
+          "v3Points": 1
+        },
+        {
+          "key": "Z2",
+          "criterion": "Other independently documented material constraint",
+          "points": 2,
+          "reason": "Trading pause pending debit: reduced penalty below",
+          "v3Points": 1
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ],
+      "originalAuditNotes": "No funded consistency; $1000 min/$15K cap; sole discretion and trading pause",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 88,
+      "provisionalV31": 80,
+      "deltaV3": -8
+    },
+    {
+      "slug": "alpha-capital-group",
+      "program": "Direct",
+      "market": "Instant",
+      "previousV1": 44.5,
+      "documentedDeduction": 33,
+      "provisionalV3": 78,
+      "delta": 33.5,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Discretionary performance-fee denial; focused risk sanctions grouped",
+          "v3Points": 10
+        },
+        {
+          "key": "C15",
+          "criterion": "Consistency 15–19%",
+          "points": 5,
+          "reason": "15% consistency",
+          "v3Points": 5
+        },
+        {
+          "key": "G3",
+          "criterion": "Additional trade-idea loss limit",
+          "points": 5,
+          "reason": "Separate per-asset drawdown hard breach",
+          "v3Points": 3
+        },
+        {
+          "key": "N",
+          "criterion": "Ordinary news restriction",
+          "points": 1,
+          "reason": "Restricted news execution; gain removal scope uncertain",
+          "v3Points": 1
+        },
+        {
+          "key": "W1",
+          "criterion": "Weekend/overnight restriction",
+          "points": 2,
+          "reason": "Weekend restriction",
+          "v3Points": 1
+        },
+        {
+          "key": "B2",
+          "criterion": "High retained buffer / loss-floor reset",
+          "points": 4,
+          "reason": "3% buffer plus 1% gross profit",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ],
+      "originalAuditNotes": "15% gate; 3% buffer +1%; 90% split; per-asset hard breach and news/weekend restrictions",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 78,
+      "provisionalV31": 67,
+      "deltaV3": -11
+    },
+    {
+      "slug": "myfundedfutures",
+      "program": "Rapid Intraday (50K)",
+      "market": "Futures",
+      "previousV1": 53.5,
+      "documentedDeduction": 25,
+      "provisionalV3": 84,
+      "delta": 30.5,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Broad withholding and suspension powers",
+          "v3Points": 10
+        },
+        {
+          "key": "ID",
+          "criterion": "Intraday trailing",
+          "points": 3,
+          "reason": "Intraday trailing model",
+          "v3Points": 3
+        },
+        {
+          "key": "B2",
+          "criterion": "High retained buffer / loss-floor reset",
+          "points": 4,
+          "reason": "$2100 buffer on 50K",
+          "v3Points": 2
+        },
+        {
+          "key": "Z2",
+          "criterion": "Other independently documented material constraint",
+          "points": 2,
+          "reason": "Automatic transition at $10K single day; no assumed forfeiture: reduced penalty below",
+          "v3Points": 1
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ],
+      "originalAuditNotes": "Daily after 24h; no consistency; $2100 buffer; automatic live trigger",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 84,
+      "provisionalV31": 75,
+      "deltaV3": -9
+    },
+    {
+      "slug": "myfundedfutures",
+      "program": "Builder (50K)",
+      "market": "Futures",
+      "previousV1": 55,
+      "documentedDeduction": 24,
+      "provisionalV3": 86,
+      "delta": 31,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Same withholding and suspension powers",
+          "v3Points": 10
+        },
+        {
+          "key": "B2",
+          "criterion": "High retained buffer / loss-floor reset",
+          "points": 4,
+          "reason": "Reserve / reset MLL grouped",
+          "v3Points": 2
+        },
+        {
+          "key": "L2",
+          "criterion": "Material cap or fraction withdrawal limit",
+          "points": 4,
+          "reason": "$2K cap at 50K",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ],
+      "originalAuditNotes": "50% consistency; 2 days possible; $2K cap and buffer; 80% split",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 86,
+      "provisionalV31": 76,
+      "deltaV3": -10
+    },
+    {
+      "slug": "take-profit-trader",
+      "program": "EOD Test → PRO (50K)",
+      "market": "Futures",
+      "previousV1": 57.5,
+      "documentedDeduction": 6,
+      "provisionalV3": 96,
+      "delta": 38.5,
+      "penalties": [
+        {
+          "key": "EOD",
+          "criterion": "EOD trailing",
+          "points": 1,
+          "reason": "EOD trailing",
+          "v3Points": 1
+        },
+        {
+          "key": "N",
+          "criterion": "Ordinary news restriction",
+          "points": 1,
+          "reason": "Flat through specified news",
+          "v3Points": 1
+        },
+        {
+          "key": "B2",
+          "criterion": "High retained buffer / loss-floor reset",
+          "points": 4,
+          "reason": "$2K reserve on 50K; split in buffer only after closure grouped",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ],
+      "originalAuditNotes": "EOD trailing; conditional DLL; news flat; $2K buffer, 80% above buffer; current signed contract missing",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 96,
+      "provisionalV31": 94,
+      "deltaV3": -2
+    },
+    {
+      "slug": "maven-trading",
+      "program": "Instant",
+      "market": "Instant",
+      "previousV1": 44,
+      "documentedDeduction": 20,
+      "provisionalV3": 87,
+      "delta": 43,
+      "penalties": [
+        {
+          "key": "C20",
+          "criterion": "Consistency 20–29%",
+          "points": 3,
+          "reason": "20% consistency",
+          "v3Points": 3
+        },
+        {
+          "key": "P6",
+          "criterion": "Material permanent excess deletion",
+          "points": 10,
+          "reason": "$10K combined gross cap, surplus deleted",
+          "v3Points": 6
+        },
+        {
+          "key": "K2",
+          "criterion": "Qualitative position/strategy restrictions with independent scope",
+          "points": 3,
+          "reason": "At least half trades must last 60 seconds",
+          "v3Points": 2
+        },
+        {
+          "key": "Q",
+          "criterion": "Qualitative trading restriction without quantified sanction",
+          "points": 4,
+          "reason": "Broad termination language; exact discretionary reward scope unresolved",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ],
+      "originalAuditNotes": "20% consistency, $10K gross cap excess deleted; termination discretion",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 87,
+      "provisionalV31": 80,
+      "deltaV3": -7
+    },
+    {
+      "slug": "maven-trading",
+      "program": "2-Step OMO",
+      "market": "CFD",
+      "previousV1": 48,
+      "documentedDeduction": 22,
+      "provisionalV3": 87,
+      "delta": 39,
+      "penalties": [
+        {
+          "key": "A5",
+          "criterion": "Material asymmetric gains removal",
+          "points": 8,
+          "reason": "Funded gains under 150 sec removed; losses retained",
+          "v3Points": 5
+        },
+        {
+          "key": "P6",
+          "criterion": "Material permanent excess deletion",
+          "points": 10,
+          "reason": "First 6%/8% caps, excess void",
+          "v3Points": 6
+        },
+        {
+          "key": "Q",
+          "criterion": "Qualitative trading restriction without quantified sanction",
+          "points": 4,
+          "reason": "Broad termination; exact funded discretionary reward scope unresolved",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ],
+      "originalAuditNotes": "150s gains removed; 6%/8% caps excess void; four profitable days, 10 business days",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 87,
+      "provisionalV31": 78,
+      "deltaV3": -9
+    },
+    {
+      "slug": "blue-guardian",
+      "program": "Instant Standard",
+      "market": "Instant",
+      "previousV1": 44.5,
+      "documentedDeduction": 19,
+      "provisionalV3": 87,
+      "delta": 42.5,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Final discretionary breach decision/withdrawal denial",
+          "v3Points": 10
+        },
+        {
+          "key": "C20",
+          "criterion": "Consistency 20–29%",
+          "points": 3,
+          "reason": "20% consistency",
+          "v3Points": 3
+        },
+        {
+          "key": "T2",
+          "criterion": "High profitable-day burden",
+          "points": 0,
+          "reason": "Five profitable days: ordinary requirement, no additional deduction below",
+          "v3Points": 0
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ],
+      "originalAuditNotes": "20% gate; 3% daily/6% trailing; five profitable days; broad withdrawal denial",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 87,
+      "provisionalV31": 81,
+      "deltaV3": -6
+    },
+    {
+      "slug": "blue-guardian",
+      "program": "Instant Starter",
+      "market": "Instant",
+      "previousV1": 37.5,
+      "documentedDeduction": 31,
+      "provisionalV3": 79,
+      "delta": 41.5,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Same broad discretion",
+          "v3Points": 10
+        },
+        {
+          "key": "C15",
+          "criterion": "Consistency 15–19%",
+          "points": 5,
+          "reason": "15% consistency",
+          "v3Points": 5
+        },
+        {
+          "key": "F6",
+          "criterion": "Only one payout permitted",
+          "points": 10,
+          "reason": "Only one payout, max $250; cap grouped",
+          "v3Points": 6
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ],
+      "originalAuditNotes": "15% gate; one payout only up to $250 on $5K; five profitable days",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 79,
+      "provisionalV31": 69,
+      "deltaV3": -10
+    },
+    {
+      "slug": "for-traders",
+      "program": "Instant Pro",
+      "market": "Instant",
+      "previousV1": 48,
+      "documentedDeduction": 22,
+      "provisionalV3": 87,
+      "delta": 39,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Discretionary reward/contract admission and qualitative criteria grouped",
+          "v3Points": 10
+        },
+        {
+          "key": "B2",
+          "criterion": "High retained buffer / loss-floor reset",
+          "points": 4,
+          "reason": "3% buffer and cap grouped",
+          "v3Points": 2
+        },
+        {
+          "key": "Z2",
+          "criterion": "Other independently documented material constraint",
+          "points": 2,
+          "reason": "Seven-day inactivity + 5s holding: reduced penalty below",
+          "v3Points": 1
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ],
+      "originalAuditNotes": "No consistency/minimum days; 6% trailing and 3% buffer; 5s min hold; split conflict",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 87,
+      "provisionalV31": 78,
+      "deltaV3": -9
+    },
+    {
+      "slug": "finotive-funding",
+      "program": "2-Step Pro",
+      "market": "CFD",
+      "previousV1": 43,
+      "documentedDeduction": 29,
+      "provisionalV3": 83,
+      "delta": 40,
+      "penalties": [
+        {
+          "key": "X8",
+          "criterion": "Cycle reward reduced to 10% or lost on cumulative strikes",
+          "points": 15,
+          "reason": "2% risk strike can cut cycle reward to 10%, fifth strike eliminates it; no separate loss-limit penalty",
+          "v3Points": 8
+        },
+        {
+          "key": "R4",
+          "criterion": "Explicit changes applicable immediately to existing accounts",
+          "points": 7,
+          "reason": "Risk/compliance changes can apply immediately to existing accounts",
+          "v3Points": 4
+        },
+        {
+          "key": "D6",
+          "criterion": "Subjective decision tied to breach/risk",
+          "points": 4,
+          "reason": "Independent broad retrospective reward reversal/recovery; avoid double-counting ordinary strike enforcement: reduced penalty below",
+          "v3Points": 3
+        },
+        {
+          "key": "K2",
+          "criterion": "Qualitative position/strategy restrictions with independent scope",
+          "points": 3,
+          "reason": "Pro ongoing trade volume and rolling-profit conditions; loss of Pro benefits",
+          "v3Points": 2
+        },
+        {
+          "key": "A3",
+          "criterion": "Limited asymmetric gains removal",
+          "points": 0,
+          "reason": "Scalping strike feeds same strike mechanism: no separate penalty below",
+          "v3Points": 0
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ],
+      "originalAuditNotes": "2% floating loss strike, cycle reduced to 10%; fifth strike forfeits; Pro 90-day/volume conditions",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 83,
+      "provisionalV31": 71,
+      "deltaV3": -12
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "program": "Break (100K)",
+      "market": "CFD/crypto",
+      "previousV1": 48,
+      "documentedDeduction": 23,
+      "provisionalV3": 86,
+      "delta": 38,
+      "penalties": [
+        {
+          "key": "D10",
+          "criterion": "Broad discretionary denial/reversal",
+          "points": 16,
+          "reason": "Discretionary prohibited-practice determination and forfeiture; interview grouped",
+          "v3Points": 10
+        },
+        {
+          "key": "P4",
+          "criterion": "Permanent excess profit deletion, limited/high cap",
+          "points": 7,
+          "reason": "$10K profit/day or trade cap, excess deducted",
+          "v3Points": 4
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ],
+      "originalAuditNotes": "40% gate; $10K profit cap deleted; interview and broad gambling classification",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 86,
+      "provisionalV31": 77,
+      "deltaV3": -9
+    },
+    {
+      "slug": "the-trading-pit",
+      "program": "Instant CFD (100K)",
+      "market": "Instant",
+      "previousV1": 47.5,
+      "documentedDeduction": 7,
+      "provisionalV3": 95,
+      "delta": 47.5,
+      "penalties": [
+        {
+          "key": "C20",
+          "criterion": "Consistency 20–29%",
+          "points": 3,
+          "reason": "20% consistency at 100K",
+          "v3Points": 3
+        },
+        {
+          "key": "L2",
+          "criterion": "Material cap or fraction withdrawal limit",
+          "points": 4,
+          "reason": "Lower of half realized profit or $4500 cap; no assumption of profit deletion",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json"
+      ],
+      "originalAuditNotes": "20% consistency; half realized profit or $4500 cap; 14 days, >$200; contract not fully mapped",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 95,
+      "provisionalV31": 93,
+      "deltaV3": -2
+    },
+    {
+      "slug": "goat-funded-trader",
+      "program": "2-Step Standard (new cohort)",
+      "market": "CFD",
+      "previousV1": 38,
+      "documentedDeduction": 31,
+      "provisionalV3": 82,
+      "delta": 44,
+      "penalties": [
+        {
+          "key": "A5",
+          "criterion": "Material asymmetric gains removal",
+          "points": 8,
+          "reason": "New cohort sub-60s gains removed, losses retained",
+          "v3Points": 5
+        },
+        {
+          "key": "P6",
+          "criterion": "Material permanent excess deletion",
+          "points": 10,
+          "reason": "$3K daily/first payouts excess deletion grouped",
+          "v3Points": 6
+        },
+        {
+          "key": "X6",
+          "criterion": "Severe split reduction / closure strike mechanism",
+          "points": 11,
+          "reason": "Guard 2% floating, first split cut to 50%, second closes",
+          "v3Points": 6
+        },
+        {
+          "key": "T2",
+          "criterion": "High profitable-day burden",
+          "points": 2,
+          "reason": "Four funded days at 0.5%: reasonable count but substantial qualifying profit; reduced penalty below",
+          "v3Points": 1
+        }
+      ],
+      "sourceEvidence": [
+        "audits/v63-counteraudit-bulenox-goat-fundingpips-2026-11-24.json"
+      ],
+      "originalAuditNotes": "60s gains removed; $3K daily profit cap excess deleted; Guard 2%/50% then closure; four 0.5% days",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 82,
+      "provisionalV31": 69,
+      "deltaV3": -13
+    },
+    {
+      "slug": "funding-pips",
+      "program": "Zero",
+      "market": "Instant",
+      "previousV1": 35,
+      "documentedDeduction": 29,
+      "provisionalV3": 81,
+      "delta": 46,
+      "penalties": [
+        {
+          "key": "C15",
+          "criterion": "Consistency 15–19%",
+          "points": 5,
+          "reason": "15% payout consistency",
+          "v3Points": 5
+        },
+        {
+          "key": "G4",
+          "criterion": "Very tight hard loss limit",
+          "points": 7,
+          "reason": "1% combined floating hard breach",
+          "v3Points": 4
+        },
+        {
+          "key": "N",
+          "criterion": "Ordinary news restriction",
+          "points": 5,
+          "reason": "News ±10 min hard breach incl holding: higher than ordinary restriction below",
+          "v3Points": 3
+        },
+        {
+          "key": "W1",
+          "criterion": "Weekend/overnight restriction",
+          "points": 2,
+          "reason": "Weekend hard breach",
+          "v3Points": 1
+        },
+        {
+          "key": "B2",
+          "criterion": "High retained buffer / loss-floor reset",
+          "points": 4,
+          "reason": "First 3% profit nonwithdrawable",
+          "v3Points": 2
+        },
+        {
+          "key": "T2",
+          "criterion": "High profitable-day burden",
+          "points": 3,
+          "reason": "Seven 0.25% days rolling 30",
+          "v3Points": 2
+        },
+        {
+          "key": "Z2",
+          "criterion": "Other independently documented material constraint",
+          "points": 3,
+          "reason": "Largest losing trade cannot exceed largest winner",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/v63-counteraudit-bulenox-goat-fundingpips-2026-11-24.json"
+      ],
+      "originalAuditNotes": "15% consistency; news/weekend hard breach; 1% floating hard breach; 3% nonwithdrawable",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 81,
+      "provisionalV31": 71,
+      "deltaV3": -10
+    },
+    {
+      "slug": "brightfunded",
+      "program": "2-Step Bright (new cohort)",
+      "market": "CFD",
+      "previousV1": 68.5,
+      "documentedDeduction": 4,
+      "provisionalV3": 98,
+      "delta": 29.5,
+      "penalties": [
+        {
+          "key": "Q",
+          "criterion": "Qualitative trading restriction without quantified sanction",
+          "points": 4,
+          "reason": "Passing evaluation does not guarantee admission; internal criteria can change, funded contract unresolved",
+          "v3Points": 2
+        }
+      ],
+      "sourceEvidence": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ],
+      "originalAuditNotes": "8% static/4% daily; no consistency, buffer/minimum; 14 days; weekend allowed; prior purchases protected",
+      "missingCriteria": [
+        "contract",
+        "drawdown",
+        "freedom",
+        "payout",
+        "cost",
+        "split"
+      ],
+      "status": "PROVISIONAL_OPTIMISTIC_DOCUMENTED_DEDUCTIONS_ONLY",
+      "canPublish": false,
+      "previousV3": 98,
+      "provisionalV31": 96,
+      "deltaV3": -2
+    }
+  ]
+}

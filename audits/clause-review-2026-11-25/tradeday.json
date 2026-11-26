@@ -1,0 +1,11 @@
+{
+ "slug": "tradeday",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [],
+ "rejected": {},
+ "toVerify": {
+  "B7": "Funded SIM accounts are governed by a separate agreement: check whether it is published before purchase."
+ },
+ "safeguards": []
+}

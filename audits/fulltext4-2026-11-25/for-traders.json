@@ -1,0 +1,29 @@
+{
+ "slug": "for-traders",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B7",
+   "text": "13.4: Master Account rules are communicated by separate agreement and/or e-mail, not published in the terms.",
+   "source": "https://www.fortraders.com/terms-and-conditions",
+   "locator": "§13.4",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B2",
+   "text": "The Platform reserves the right to determine, at its own discretion, the nature of behaviour linked to Prohibited Trading Practices and reasonable boundaries for such determination, and may act upon any breach regardless of when it is discovered, even weeks or months later, at its sole discretion.",
+   "source": "https://www.fortraders.com/terms-and-conditions",
+   "locator": "§5; §10",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "Changes to challenge types and trading conditions shall not affect the parameters of a Challenge already purchased.",
+   "source": "https://www.fortraders.com/terms-and-conditions",
+   "locator": "§9.a.3",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

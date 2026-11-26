@@ -1,0 +1,22 @@
+{
+ "slug": "orion-funded",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B6",
+   "text": "Acting in a manner that may damage the firm’s reputation, including after termination, leads to termination of the agreements; breaches of the trading clauses lead to disqualification and forfeiture of pending rewards.",
+   "source": "https://www.orionfunded.com/docs/terms-and-conditions.pdf",
+   "locator": "§14.1",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "Best Day Rule (20%) applies to Orion Zero (instant funding) only.",
+   "source": "https://www.orionfunded.com/docs/terms-and-conditions.pdf",
+   "locator": "§7.2.1",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

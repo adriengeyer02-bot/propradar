@@ -1,0 +1,294 @@
+{
+  "schema": "PROP_RADAR_CONTRACT_REVIEW_RESEARCH",
+  "date": "2026-11-24",
+  "publicationStatus": "INTERNAL_RESEARCH_ONLY",
+  "firmCount": 7,
+  "observationCount": 25,
+  "warning": "Some online terms are cached from months earlier, signed funded agreements absent. Only source text supported findings are called verified; historical conflicts are explicitly not rechecked. No scoring.",
+  "firms": [
+    {
+      "slug": "funder-trading",
+      "name": "Funder Trading",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "website_terms_not_funded_agreement",
+      "primarySource": "https://fundertrading.com/terms-conditions/",
+      "findings": [
+        {
+          "factId": "funder-trading-cgu-v4-20261124-01",
+          "section": "Terms opening",
+          "riskFamily": "legal_supplier",
+          "contractualMeaning": "Website Terms identifient Funder Trading LLC et décrivent coaching/éducation; elles ne constituent pas une convention funded qui promet un reward spécifique.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://fundertrading.com/terms-conditions/"
+        },
+        {
+          "factId": "funder-trading-cgu-v4-20261124-02",
+          "section": "Terms §1 risk disclosure",
+          "riskFamily": "live_vs_simulated",
+          "contractualMeaning": "Les contenus déclarent l'activité comme simulation et évoquent séparément des opportunités de compte discrétionnaire détenu par Funder; ne pas extrapoler le statut du programme actuel.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://fundertrading.com/terms-conditions/"
+        },
+        {
+          "factId": "funder-trading-cgu-v4-20261124-03",
+          "section": "Historic product pages",
+          "riskFamily": "program_mismatch",
+          "contractualMeaning": "Ancien audit détectait des ratios et objectifs divergents entre How It Works et TrueEdge. Non réévalués lors de cette passe, donc contradiction encore à confirmer.",
+          "evidenceStatus": "historical_unrechecked",
+          "sourceUrl": "https://fundertrading.com/terms-conditions/"
+        }
+      ],
+      "remainingWork": "Obtenir accords TrueEdge funded et partenaire éventuel; confirmer les chiffres et la version des pages commerciales. Page générale insuffisante pour noter les payouts.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "tradersedgefx",
+      "name": "TradersEdgeFX",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "website_terms_web_crawled_older",
+      "primarySource": "https://tradersedgefx.com/terms-of-services/",
+      "findings": [
+        {
+          "factId": "tradersedgefx-cgu-v4-20261124-01",
+          "section": "§3 General Prohibited Conduct",
+          "riskFamily": "open_ended_subjective_risk",
+          "contractualMeaning": "Tailles de position notablement différentes et stratégies atypiques sont prohibées; la firme décide discrétionnairement ce qui compte comme conduite interdite et peut fermer les services.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://tradersedgefx.com/terms-of-services/"
+        },
+        {
+          "factId": "tradersedgefx-cgu-v4-20261124-02",
+          "section": "§3 Prohibited Trading",
+          "riskFamily": "account_termination_no_compensation",
+          "contractualMeaning": "Sanction annoncée sans compensation/refund en cas de Prohibited Conduct, sans distinction contractuelle claire de récompenses déjà approuvées dans cet extrait.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://tradersedgefx.com/terms-of-services/"
+        },
+        {
+          "factId": "tradersedgefx-cgu-v4-20261124-03",
+          "section": "Company identification",
+          "riskFamily": "entity",
+          "contractualMeaning": "La page identifie TradersEdgeFX LLC comme opérateur du site; le payeur du funded reward n'est pas établi dans ce seul document.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://tradersedgefx.com/terms-of-services/"
+        }
+      ],
+      "remainingWork": "Lire accord rémunérateur / fonctionnement exact du statut funded; vérifier dates de la version et limites des interdictions vagues.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "funded-trader-markets",
+      "name": "Funded Trader Markets",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_web_crawled_older",
+      "primarySource": "https://fundedtradermarkets.com/terms-conditions",
+      "findings": [
+        {
+          "factId": "funded-trader-markets-cgu-v4-20261124-01",
+          "section": "Legal introduction",
+          "riskFamily": "contracting_party_conflict",
+          "contractualMeaning": "En-tête donne société chypriote FTM Funded Trader Markets LTD HE462185 comme cocontractant, activités simulées par société sainte-lucienne 2025-00239; art.1.A mentionne encore une s.r.o. non rapprochée.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://fundedtradermarkets.com/terms-conditions"
+        },
+        {
+          "factId": "funded-trader-markets-cgu-v4-20261124-02",
+          "section": "§5.C–5.F",
+          "riskFamily": "open_ended_strategy_restrictions",
+          "contractualMeaning": "Interdiction des stratégies du commerce et du changement de stratégie entre évaluation/funded; clause laisse une large appréciation sur les stratégies interdites et le droit de bloquer un trader.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://fundedtradermarkets.com/terms-conditions"
+        },
+        {
+          "factId": "funded-trader-markets-cgu-v4-20261124-03",
+          "section": "§4.J",
+          "riskFamily": "payout_invalid_above_allocation",
+          "contractualMeaning": "Dépasser l'allocation totale autorisée peut invalider le reward généré pendant la période; portée/mesure à vérifier par programme.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://fundedtradermarkets.com/terms-conditions"
+        },
+        {
+          "factId": "funded-trader-markets-cgu-v4-20261124-04",
+          "section": "§5.G",
+          "riskFamily": "funded_signed_contract_precedence",
+          "contractualMeaning": "KYC et signature d'un Trader Agreement via le tableau de bord obligatoires avant de trader en funded; conditions précises de récompenses ne peuvent être déduites des seules CGU de site.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://fundedtradermarkets.com/terms-conditions"
+        }
+      ],
+      "remainingWork": "Réconcilier trois sociétés, obtenir Trader Agreement dans dashboard et annexes par programme, contrôler refus rewards acquis et recours.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "atlas-funded",
+      "name": "Atlas Funded",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_recent_web",
+      "primarySource": "https://www.atlasfunded.com/terms",
+      "findings": [
+        {
+          "factId": "atlas-funded-cgu-v4-20261124-01",
+          "section": "Terms updated 12 Nov 2026 §1",
+          "riskFamily": "legal_party",
+          "contractualMeaning": "Marque ATLAS VANQUISH FZCO aux EAU; service de simulation fourni par Atlas Funded LTD à Sainte-Lucie; établir le payeur des récompenses et cocontractant effectif.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://www.atlasfunded.com/terms"
+        },
+        {
+          "factId": "atlas-funded-cgu-v4-20261124-02",
+          "section": "§5.2–5.4",
+          "riskFamily": "risk_and_payout_adjustment",
+          "contractualMeaning": "Comportements apparentés au gambling revus individuellement; certaines opérations news funded à ±5 minutes entraînent déduction du profit de la période sans échec automatique du compte.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://www.atlasfunded.com/terms"
+        },
+        {
+          "factId": "atlas-funded-cgu-v4-20261124-03",
+          "section": "§6.2–6.3",
+          "riskFamily": "reward_timing_and_first_ondemand_split",
+          "contractualMeaning": "Cycle de payout par défaut 30 jours, variantes payantes, paiements approuvés annoncés sous 1–5 jours ouvrés; premier payout on-demand plafonné à 50% du split.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://www.atlasfunded.com/terms"
+        },
+        {
+          "factId": "atlas-funded-cgu-v4-20261124-04",
+          "section": "§7",
+          "riskFamily": "honest_feedback_protection",
+          "contractualMeaning": "La firme reconnaît explicitement droit à critique/avis honnête et annonce en principe avertir avant sanctions pour fausses affirmations, menace ou divulgation trompeuse.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://www.atlasfunded.com/terms"
+        }
+      ],
+      "remainingWork": "Confirmer contrat de reward funded et juridiction du payeur; examiner annexes CFD/Futures, plans Direct/Access et cas de clawback.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "hola-prime",
+      "name": "Hola Prime",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_web_crawled_older",
+      "primarySource": "https://holaprime.com/terms-conditions/",
+      "findings": [
+        {
+          "factId": "hola-prime-cgu-v4-20261124-01",
+          "section": "§20",
+          "riskFamily": "withdrawal_denial_discretion",
+          "contractualMeaning": "Une violation des règles propres au programme peut entraîner retrait ou reversal des payouts et forfeiture de profits; la compagnie conserve un pouvoir d'appréciation et de modification des règles.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://holaprime.com/terms-conditions/"
+        },
+        {
+          "factId": "hola-prime-cgu-v4-20261124-02",
+          "section": "§8.2.3–8.5",
+          "riskFamily": "kyc_before_first_payout",
+          "contractualMeaning": "Entretien KYC requis avant premier payout et possible ultérieurement; refus si contrôle d'identité non satisfaisant, à distinguer de confiscation abusive.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://holaprime.com/terms-conditions/"
+        },
+        {
+          "factId": "hola-prime-cgu-v4-20261124-03",
+          "section": "§12.2",
+          "riskFamily": "prohibited_trading_termination",
+          "contractualMeaning": "Pratiques interdites peuvent faire fermer les comptes sans remboursement ou préavis; portée exacte sur rewards déjà approuvés pas précisée.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://holaprime.com/terms-conditions/"
+        },
+        {
+          "factId": "hola-prime-cgu-v4-20261124-04",
+          "section": "§Prime Circle Benefits 6",
+          "riskFamily": "promo_reward_not_core_payout",
+          "contractualMeaning": "Bonus additionnel de 5% Prime Circle est une récompense de fidélité rattachée à des payouts approuvés, à distinguer des droits au payout sous-jacent.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://holaprime.com/terms-conditions/"
+        }
+      ],
+      "remainingWork": "Vérifier contrepartie pays/produit et version signée, accords funded Forex et Futures, risques de suspension d'un paiement approuvé.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "earn2trade",
+      "name": "Earn2Trade",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "website_terms_not_live_funded_contract",
+      "primarySource": "https://www.earn2trade.com/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "earn2trade-cgu-v4-20261124-01",
+          "section": "Terms introduction",
+          "riskFamily": "education_company",
+          "contractualMeaning": "Les CGU de site concernent Earn2Trade LLC et le service d'évaluation/éducation; ne prouvent pas l'identité du partenaire qui verse les récompenses du compte live.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://www.earn2trade.com/terms-and-conditions"
+        },
+        {
+          "factId": "earn2trade-cgu-v4-20261124-02",
+          "section": "License grant",
+          "riskFamily": "access_discretion",
+          "contractualMeaning": "Earn2Trade peut modifier/suspendre l'accès au site et aux services sans préavis; clause non équivalente à confiscation de profits du compte funded.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://www.earn2trade.com/terms-and-conditions"
+        },
+        {
+          "factId": "earn2trade-cgu-v4-20261124-03",
+          "section": "Sanctioned countries clause",
+          "riskFamily": "country_restrictions",
+          "contractualMeaning": "Les CGU annoncent des conséquences pour clients de pays sanctionnés, avec absence de remboursement de certains achats; vérifier date d'entrée en vigueur et légalité selon pays.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://www.earn2trade.com/terms-and-conditions"
+        }
+      ],
+      "remainingWork": "Contrats LiveSim/Live du partenaire de trading effectif, recours et règles de payout selon programme; ne pas convertir suspension du site en suppression de rémunération.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "moneta-funded",
+      "name": "Moneta Funded",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "official_program_rules_only_pdf_not_read",
+      "primarySource": "https://www.monetafunded.com/general-rules/",
+      "findings": [
+        {
+          "factId": "moneta-funded-cgu-v4-20261124-01",
+          "section": "General Rules — Daily Drawdown",
+          "riskFamily": "objective_loss_limit",
+          "contractualMeaning": "Fenêtre journalière à 22h UTC avec balance/équité la plus haute et pourcentage variable selon programmes; règle de perte annoncée chiffrée, pas discretionnaire en soi.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://www.monetafunded.com/general-rules/"
+        },
+        {
+          "factId": "moneta-funded-cgu-v4-20261124-02",
+          "section": "General Rules — Max Drawdown",
+          "riskFamily": "objective_account_loss",
+          "contractualMeaning": "La perte totale est trailing sur Instant (5%) et Instant Pro (8%), statique sur 1-Step/Phoenix (6%) et 2-Step (8% ou 10% selon add-on).",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://www.monetafunded.com/general-rules/"
+        },
+        {
+          "factId": "moneta-funded-cgu-v4-20261124-03",
+          "section": "General Rules — Inactivity",
+          "riskFamily": "objective_inactivity",
+          "contractualMeaning": "Inactivité 30 jours sans trade provoque breach annoncé sans exception; vérifier si un reward déjà autorisé est affecté.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://www.monetafunded.com/general-rules/"
+        },
+        {
+          "factId": "moneta-funded-cgu-v4-20261124-04",
+          "section": "September 2026 PDF previously indexed",
+          "riskFamily": "critical_unread_contract",
+          "contractualMeaning": "Le précédent inventaire cite un PDF contractuel septembre 2026 et d'anciennes notes de clauses de retenue de payouts. PDF non examiné ici : ne pas valider ses clauses ni les risques signalés avant lecture visuelle.",
+          "evidenceStatus": "historical_unrechecked",
+          "sourceUrl": "https://www.monetafunded.com/general-rules/"
+        }
+      ],
+      "remainingWork": "Lire intégralement le PDF officiel avec contrôle des pages/versions, vérifier §5.1J et §6.9 historiques sur pouvoirs de payout et contradictions sur news; agreement funded signé par programme.",
+      "noScore": true,
+      "finalAuditComplete": false
+    }
+  ]
+}

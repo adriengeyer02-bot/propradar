@@ -1,0 +1,335 @@
+{
+  "date": "2026-11-25",
+  "status": "IN_PROGRESS_THREE_PUBLIC_CONTRACTS_FULL_TEXT_REVIEWED",
+  "method": "Record discovery, retrieved text coverage, actual reviewed excerpts, separate contract versions, and outstanding sources. No final score changes until coverage and scope reconciliation. Do not mark complete merely because URL opened.",
+  "firms": [
+    {
+      "slug": "blue-guardian",
+      "documents": [
+        {
+          "url": "https://blueguardian.com/terms-and-conditions",
+          "status": "full_public_text_reviewed",
+          "lineCount": 313,
+          "reviewed": "Selected contract paragraphs including incorporation, prohibited strategies, discretionary enforcement, arbitration, liability and consumer mandatory-law exception",
+          "findings": [
+            "FAQ and other policies incorporated; risk management review at any stage; broad withdrawal denial and final breach decisions; individual arbitration and class waiver; mandatory local consumer protections preserved.",
+            "Main site §Education says successful traders allocated live account, footer says all activity simulated and any live trading outside Blue Guardian; separate actual signed contract needed.",
+            "Main terms allow changes with continued use; UK checkout §19 written notice, §10.3 price changes exclude existing purchases; UK checkout §§28–29 England/Wales law and courts versus Dubai/ICDR main terms. Main terms preserve mandatory consumer-law rights; don't assume arbitration enforceable universally.",
+            "Footer identifies Blue Guardian Limited (Saint Lucia) platform provider and Iconic Exchange FZCO (Dubai) educational/payment services. Paysagi named merchant of record; separate terms still required.",
+            "Affiliate terms restrict paid brand keyword bids and landing pages primarily for redirecting to affiliate links, require clear commission disclosure and forbid earnings guarantees. Editorial content not automatically prohibited."
+          ],
+          "reviewedLineRange": "0–312",
+          "coverageNotes": "All visible text including affiliate conditions and footer. Public snapshot crawled five days ago."
+        },
+        {
+          "url": "https://checkout.blueguardian.com/terms-and-conditions/",
+          "status": "full_public_text_reviewed",
+          "lineCount": 273,
+          "reviewed": "Selected clauses 1–22 and 26",
+          "findings": [
+            "Different named UK entity (12087566) versus Dubai FZCO on main site; §14.3 discretion to reject funding even after objectives achieved, possible refund or retake; §14.5 appears incomplete in extracted page; §16 caps liability at evaluation fees subject to exceptions; §19 written notice for amendments; §13.2.12–14 legacy copy strategy restrictions; reconcile scope with current FAQ.",
+            "§17.1.1 provides 14 days to cure a remediable material breach after written notice; §13.4 separately permits suspension/termination on suspected prohibited trading. §22 mutual confidentiality for two years after end, legal/adviser exceptions. §28–29 English law/courts."
+          ],
+          "reviewedLineRange": "0–272",
+          "coverageNotes": "All 29 numbered clauses reviewed, visible §14.5 ends mid-sentence; no claim of recovering absent text. Public snapshot crawled two weeks ago."
+        },
+        {
+          "url": "https://blueguardian.com/faq",
+          "status": "partial_read_legacy_snapshot",
+          "lineCount": 733,
+          "findings": [
+            "Older FAQ snapshot includes own-account copying and EA permission; legacy instant news permission differs from newer programme rules. Version scope unresolved."
+          ]
+        },
+        {
+          "url": "https://help.blueguardian.com/en",
+          "status": "inventory_only",
+          "note": "Current search listing reports 35 articles across 9 categories (3+3+1+3+5+4+7+7+2); opened older index differs. Inventory needs exact URL enumeration, deduplication and version reconciliation."
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/18426780-instant-starter-account-rules",
+          "status": "search_excerpt_only_open_failed"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/18426779-instant-standard-account-rules",
+          "status": "search_excerpt_only_open_failed"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/18426783-2-step-standard-rules",
+          "status": "search_excerpt_only_open_failed"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/18426605-how-payouts-work",
+          "status": "search_excerpt_only_open_failed"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/18446026-zero-account-rules",
+          "status": "search_excerpt_only_open_failed"
+        },
+        {
+          "url": "https://blueguardian.com/faq/articles/18426782-1-step-standard-rules",
+          "status": "search_excerpt_only_open_failed"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/14061082-instant-standard-account-rules",
+          "lineCount": 303,
+          "status": "full_public_text_reviewed",
+          "findings": [
+            "6% highest closed trade trailing loss, lock at start then 1% buffer; 5 qualifying 0.5% days; 20% best day, 15% for 300K/400K; first two $10K caps 200K/300K/400K.",
+            "2-minute minimum, affected news gains removed, news restriction for purchases after 13 Nov 2025. Guardian Shield 1% combined floating loss, first trigger 50% permanent split, second closure. Example 1 has contradictory $97K versus correctly calculated $99K floor; example 3 contradicts fixed initial-balance daily amount."
+          ],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs",
+          "reviewedLineRange": "0–302"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/14061939-instant-starter",
+          "lineCount": 270,
+          "status": "full_public_text_reviewed",
+          "findings": [
+            "$5K, $250 gross maximum, one payout, 90% split ($225 before fees), five 0.5% profitable days, 15% best day, 5% trailing, 1% buffer at lock, 2 minute holding, news allowed.",
+            "Guardian Shield explicitly confirmed: 1% floating loss trigger, first permanently 50% split, second closure. Rise minimum $500 incompatible with published $250 gross cap; crypto $100 minimum. Clarify buffer at final payout, payout-method restriction."
+          ],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs",
+          "reviewedLineRange": "0–269"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/14062186-1-step-standard-rules",
+          "lineCount": 282,
+          "status": "opened_body_not_reviewed",
+          "findings": [],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/14062228-1-step-pro-rules-legacy-model",
+          "lineCount": 247,
+          "status": "opened_body_not_reviewed",
+          "findings": [],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules",
+          "lineCount": 265,
+          "status": "opened_body_not_reviewed",
+          "findings": [],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/14062433-2-step-pro-rules",
+          "lineCount": 290,
+          "status": "opened_body_not_reviewed",
+          "findings": [],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/14062468-3-step-rules-legacy-model",
+          "lineCount": 252,
+          "status": "opened_body_not_reviewed",
+          "findings": [],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/15859899-buy-now-pay-later-bnpl-rules",
+          "lineCount": 290,
+          "status": "opened_body_not_reviewed",
+          "findings": [],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/9660857-how-do-payouts-work",
+          "lineCount": 150,
+          "status": "full_public_text_reviewed",
+          "findings": [
+            "2% processing fee all payouts, read-only while pending; standard 14 calendar days, optional 7 day; instant separate eligibility; crypto $100 minimum and under $5K, Rise $500 minimum; $10K first two on large accounts."
+          ],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs",
+          "reviewedLineRange": "0–149"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/14187958-24-hours-payout-guarantee",
+          "lineCount": 48,
+          "status": "full_public_text_reviewed",
+          "findings": [
+            "24 business hours, additional 10% profit share for qualifying firm delay; risk/compliance reviews, customer response and Rise onboarding excluded."
+          ],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs",
+          "reviewedLineRange": "0–47"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/9661512-prohibited-trading-practices-account-policies",
+          "lineCount": 135,
+          "status": "full_public_text_reviewed",
+          "findings": [
+            "80% margin usage gambling threshold, can deny payout or remove profit; shared devices including VPS linked to multiple traders prohibited; no password changes; inactivity one trade per 30 days; manual reviews final."
+          ],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs",
+          "reviewedLineRange": "0–134"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/9661525-platform-rules",
+          "lineCount": 165,
+          "status": "partial_read",
+          "findings": [
+            "MT5 unavailable to US clients, migration before first trade only; giveaway accounts cannot migrate."
+          ],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/15618204-general-information-rules",
+          "lineCount": 159,
+          "status": "opened_body_not_reviewed",
+          "findings": [],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/15846933-can-i-purchase-more-accounts-than-the-maximum-allocation-limit",
+          "lineCount": 48,
+          "status": "opened_body_not_reviewed",
+          "findings": [],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/9756839-how-to-become-an-affiliate",
+          "lineCount": 146,
+          "status": "opened_body_not_reviewed",
+          "findings": [],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/10209820-blue-guardian-competition",
+          "lineCount": 166,
+          "status": "opened_body_not_reviewed",
+          "findings": [],
+          "version": "older help centre snapshot crawled approximately 3 months before review; must reconcile with current FAQ IDs"
+        }
+      ],
+      "outstanding": [
+        "Retrieve actual signed Trader Agreement (sent after passing); checkout-specific entity and effective date; refund/privacy/payment processor terms; enumerate all current CFD and Futures FAQ pages, review every body; verify Guardian Shield applicability on Instant Starter rather than extrapolating; reconcile old FAQ."
+      ],
+      "olderFaqInventory": {
+        "source": "https://help.blueguardian.com/en",
+        "categories": 6,
+        "articles": 16,
+        "bodiesFullyReviewed": 5,
+        "bodiesPartial": 1,
+        "bodiesNotReviewed": 10,
+        "warning": "Current index previously reported 35 articles; do not treat older 16 as complete or current."
+      }
+    },
+    {
+      "slug": "apex-trader-funding",
+      "documents": [
+        {
+          "url": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "status": "full_public_text_reviewed",
+          "lineCount": 409,
+          "findings": [
+            "§11 penalties include unpaid reward forfeiture and repayment of prior rewards for breaches; §12 reward release and calculation are discretionary; §14 graduation can occur outside milestones and final reward at discretion; §15 exceptional performance/professional sophistication may lead to termination and unpaid reward denial, with potential exceptions; dormant PA can lose all rewards; rules effective when posted; manual order requirement; §24 individual dispute resolution; communications publication restrictions.",
+            "§4 background check may end or refuse relationship without reason; §8 corporate authorized user must own at least 80%; simulated strategies may be used for live execution without trader revenue share; evaluation subscription continues after failure and after passing until manually cancelled; household combined PA limit 20.",
+            "§9 fees generally nonrefundable subject to applicable law; §10 distinguishes invalid chargeback, but §12 permits reversal tied to refunded subscription periods regardless of intent, including linked profiles.",
+            "§11 manual orders except defined own-account mirroring and native order types; trading rules can change without prior notice. §12 explicitly permits denial/revocation for any or no reason; no appeal except discretionary correction or unlawful conduct.",
+            "§13 48-hour response deadline unless written extension, possible video or live session and tool audit. §15 exceptions may include approved affiliates. §20–21 restrictions on publication of private dispute and communications; false/defamatory statements prohibited, not blanket ban on truthful public criticism.",
+            "§24 AAA commercial arbitration, Texas or virtual, English, small claims exception; §26 liability capped at fees; §30 material changes notified by dashboard/site/email, effective on posting unless stated otherwise. Mandatory-law enforceability not established."
+          ],
+          "reviewedLineRange": "0–408",
+          "coverageNotes": "All 38 sections and electronic signatures; overlapping retrieved line ranges cover 0–408. Public cached version, not customer signed copy."
+        },
+        {
+          "url": "https://apextraderfunding.com/terms-of-use/",
+          "status": "partial_read",
+          "lineCount": 90
+        },
+        {
+          "url": "https://apextraderfunding.com/privacy-policy/",
+          "status": "body_read",
+          "lineCount": 238,
+          "note": "Public policy dated 2025-10-06; sections 1–19 displayed, retention and data sharing reviewed. Cookie addendum linked separately."
+        },
+        {
+          "url": "https://apextraderfunding.com/risk-disclosure/",
+          "status": "partial_read",
+          "lineCount": 115
+        },
+        {
+          "url": "https://dashboard.apextraderfunding.com/legal/trading-rules",
+          "status": "open_failed_404"
+        },
+        {
+          "url": "https://sim.apextraderfunding.com/legal/user-agreement",
+          "status": "search_excerpt_only",
+          "note": "Compare dashboard and sim versions."
+        },
+        {
+          "url": "https://apextraderfunding.com/hc-category/eod-trailing-drawdown-accounts/",
+          "status": "index_read",
+          "listedItems": 4
+        },
+        {
+          "url": "https://apextraderfunding.com/hc-category/intraday-trailing-drawdown-accounts/",
+          "status": "index_read",
+          "listedItems": 4
+        },
+        {
+          "url": "https://apextraderfunding.com/hc-category/getting-started/",
+          "status": "index_read",
+          "listedItems": 15
+        },
+        {
+          "url": "https://apextraderfunding.com/hc-category/billing/",
+          "status": "index_read",
+          "listedItems": 9
+        },
+        {
+          "url": "https://apextraderfunding.com/hc-category/platform-set-up-guides/",
+          "status": "index_read",
+          "listedItems": 4
+        },
+        {
+          "url": "https://apextraderfunding.com/hc-category/legacy-products/",
+          "status": "index_read",
+          "listedItems": 6
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-evaluations/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-drawdown-explained/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-explained/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-performance-accounts-pa/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+          "status": "opened_indexed_body_not_reviewed"
+        }
+      ],
+      "outstanding": [
+        "Review 38 contract sections end-to-end plus signature; complete risk disclosure and Terms of Use; obtain current Live Market Proprietary Account Agreement; resolve broken incorporated Trading Rules link; enumerate support.apextraderfunding.com and platform subcategories; read all 8 programme pages and remaining indexed help entries; separate legacy rules; verify actual applicability and consumer-law enforceability before score changes."
+      ]
+    }
+  ],
+  "blockers": [
+    "Firecrawl inventory request refused due to insufficient credits. Web search/open returned cache misses on six Blue Guardian current FAQ pages and selective excerpts on long contracts; coverage incomplete. No claim of exhaustive audit.",
+    "Public Web cache exposed older Blue Guardian FAQ index and full bodies for five articles, current cohort needs verification. Signed contracts and missing text not obtained."
+  ],
+  "next": "Complete remaining 11 older FAQ bodies, current CFD and futures indexes, refund/privacy and Paysagi terms; then Apex incorporated trading/payout rules and live agreement. No score changes from unresolved scope.",
+  "lastProgress": "2026-11-25"
+}

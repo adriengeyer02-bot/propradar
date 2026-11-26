@@ -1,0 +1,22 @@
+# PropRadar — Passation Claude — 24 novembre 2026
+## Consigne du propriétaire
+Audit documentaire approfondi de tout le catalogue, programme par programme. **Scores publics gelés. Aucun déploiement, aucune modification de main, aucune modification des notes, promotions, affiliations ou classement pendant la collecte.** Cette branche est la source de travail, pas la production. La publication ultérieure des constats doit être distinguée de la renotation, qui nécessite une décision séparée du propriétaire.
+ 
+## Point d'entrée à lire en premier
+- `audits/full-audit-coverage-register-2026-11-24.json` : registre vivant, 198 profils candidats, 121 anciens dossiers, 15 contre-audits partiels engagés, 0 homologués selon le nouveau protocole à la création de cette passation. Relire le registre à chaque reprise, ces compteurs évolueront.
+- `audits/contract-coverage-master-121-2026-11-24.json` : index des 121 anciens dossiers et 373 constats. Chaque record pointe vers son sourceFile. Zéro dossier de recherche manquant dans cet ancien périmètre ne signifie pas zéro audit incomplet.
+- `audits/full-audit-reopen-wave1-seven-2026-11-24.json` : 52 constats supplémentaires (HyroTrader, Hash Hedge, Ment Funding, Instant Funding, Fintokei, CTI, Audacity).
+- `audits/full-audit-reopen-wave2-five-2026-11-24.json` : 60 constats (FTMO, The5ers, Topstep, FundedNext, Apex), programmes CFD/Futures.
+- `audits/v63-counteraudit-bulenox-goat-fundingpips-2026-11-24.json` : contre-audits ciblés, preuves contractuelles à conserver; chiffres de simulation NON approuvés.
+- Tout fichier ultérieur `audits/full-audit-reopen-wave*.json` et les latestEvidence du registre. Ne pas se limiter à la liste statique ci-dessus.
+- `audits/v63-backtest-46-2026-11-24.json` : **INVALIDÉ**, ne jamais utiliser ses notes. Les simulations V6/V6.1/V6.2/V6.3 ne constituent pas des notes validées.
+ 
+## Méthode obligatoire
+Pour chaque firme et chaque programme/cohorte, lire intégralement CGU, contrat funded/live, annexes, règles officielles et FAQ; documenter les versions et clauses, leur portée exacte (évaluation, funded, live), seuils, conséquences, protections, voies de recours. Relever les contradictions FAQ/CGU, restrictions cachées, pouvoirs subjectifs, suppression des gains, rétroactivité, passage en live, délais/plafonds/retrait, frais, risque, EA/news/scalping/copy/swing. Identifier vendeur, opérateur et débiteur des rewards; vérifier les registres et alertes. Revoir les incidents historiques et leur résolution. Vérifier le domaine exact Trustpilot, date et statut, sans déduire automatiquement une fraude. Inventorier les preuves de payout avec source, dates, méthode, montant, indépendance et limites. Absence de preuve ≠ absence de paiement. Consistency transparente à partir de 40% : renseigner sans malus automatique; sous 40% relever le seuil et la conséquence sans calculer de note. 
+Chaque constat porte source URL, locator (article/page/FAQ), scope, kind, finding, date et statut de vérification. Les anciens constats restent conservés; expliciter les changements de version. Si un PDF ou contrat est inaccessible, signaler le blocage, ne jamais inventer. Une fiche partielle ne devient pas homologuée parce qu'elle a un fichier. Aucune note de travail n'est une note publique.
+ 
+## Intégration ultérieure sur le site (seulement sur instruction du propriétaire)
+Comparer main, production et branche d'audit; ne pas merger la branche entière aveuglément. Reporter uniquement les constats documentés dans les structures de données existantes, par slug, programme, phase et cohorte. Vérifier les champs existants dans app/lib/firmUpdates.ts et app/lib/propFirms.ts, localisations et sources. Conserver le score affiché actuellement en production, y compris les anciens correctifs et le veto CK Capital. Ne pas activer le moteur scoringV6Preview ni les simulations invalidées. Vérifier que les changements documentaires ne déclenchent pas indirectement un recalcul des scores; comparer snapshot avant/après. Prévisualiser et tester les fiches, traductions, promotions, liens. Demander une validation éditoriale distincte avant toute renotation.
+ 
+## Suite immédiate
+Priorité suivante : FXIFY, Tradeify, MyFundedFutures, Alpha Capital Group, Alpha Futures, Take Profit Trader, Funding Traders, puis les autres profils. Reprendre également les contrats funded manquants des contre-audits déjà engagés. L'objectif est la profondeur et la traçabilité, pas le nombre de fiches annoncées comme terminées.

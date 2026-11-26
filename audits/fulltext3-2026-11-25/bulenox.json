@@ -1,0 +1,22 @@
+{
+ "slug": "bulenox",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Abuse includes 'implementation of reckless transactions in rough markets'; 'If abuse is suspected, we reserve the right to refuse to claim any profit.' Bulenox may also 'restrict or limit or terminate account(s) for any reasons at any time without prior notice'.",
+   "source": "https://bulenox.com/legal/Terms_of_Use.pdf",
+   "locator": "Algorithms and auto trading; user representations",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "Consistency rule: a request that does not meet it is not a violation; the account stays open.",
+   "source": "https://bulenox.com/faq",
+   "locator": "Consistency rule",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

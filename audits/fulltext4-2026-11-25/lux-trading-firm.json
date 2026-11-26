@@ -1,0 +1,22 @@
+{
+ "slug": "lux-trading-firm",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "In the case of serious negligence, or poor risk management, your account might be closed at our discretion, and you will be expelled from the program.",
+   "source": "https://luxtradingfirm.com/trading-rules/",
+   "locator": "Rules of engagement",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "NOTE",
+   "text": "Each individual position is capped at a realized profit of 5% of the stage profit target; INSTA withdrawals pay 80% of the profit target after a risk desk review.",
+   "source": "https://luxtradingfirm.com/rules-of-engagement-3/",
+   "locator": "Rules of engagement",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

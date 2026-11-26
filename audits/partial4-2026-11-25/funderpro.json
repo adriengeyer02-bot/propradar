@@ -1,0 +1,15 @@
+{
+ "slug": "funderpro",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "PARTIAL",
+ "facts": [
+  {
+   "code": "NOTE",
+   "text": "Only the Instant Account terms were archived: the Trading Rules form an integral part of the terms and may be amended by the Company from time to time at its sole discretion; a 15% consistency rule delays (does not forfeit) instant rewards. The terms of the main challenge programmes were not captured.",
+   "source": "https://funderpro.com/instant-account-terms-and-conditions/",
+   "locator": "Instant Account terms §2, §6.4",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

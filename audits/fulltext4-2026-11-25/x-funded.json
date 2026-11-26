@@ -1,0 +1,22 @@
+{
+ "slug": "x-funded",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "X-Funded reserves the right to terminate or suspend your account and bar access to the services immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the terms.",
+   "source": "https://x-funded.com/x-funded-zero/",
+   "locator": "Terms, Amendments and Termination (PDF saved by Geyer)",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "45% consistency threshold on single trades (payout rejected and account reset if exceeded).",
+   "source": "https://x-funded.com/x-funded-zero/",
+   "locator": "Program rules",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

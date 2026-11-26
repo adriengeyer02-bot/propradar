@@ -1,0 +1,36 @@
+{
+ "slug": "alpha-capital-group",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "'The Analyst Performance Fee will not be paid where we ascertain, in our sole discretion, that any of your virtual trades have been made in contravention of the Virtual Trading Rules ... or otherwise in contravention of these Terms'; Alpha 'reserve[s] the right to determine, at our own discretion, whether certain virtual trades, practices, strategies, or situations are not allowed'; trades judged gambling lead to 'removal of profits'.",
+   "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+   "locator": "Schedule Analyst Performance Fees §2.6; §9.1.7; Alpha Direct plan",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B6",
+   "text": "§27.1: the user 'irrevocably agrees ... not to disparage or denigrate Alpha', including 'any form of public statement ... on any social media platforms ... that could be construed as negative'; Alpha may suspend or terminate access for such conduct at its sole discretion, 'final and binding'.",
+   "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+   "locator": "§27.1; §27.3",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B3",
+   "text": "Alpha may change the Terms and Services by posting updates and 'will, however, notify you by email if there is a material change to an Evaluation which you are currently participating in': changes reach evaluations already bought.",
+   "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+   "locator": "§5.1",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_40_DELAY",
+   "text": "Best Day Rule 40% for Alpha Pro, Swing, One and Three (15% for Alpha Direct).",
+   "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+   "locator": "Performance fees on-demand",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

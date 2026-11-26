@@ -1,0 +1,22 @@
+{
+ "slug": "fintokei",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Prohibited practices include 'gambling or unsustainable practices - trading practices that contradict the systematic, consistent and long-term approach' the Company is looking for; in that case 'you are not entitled to any performance reward payouts'. Entry into the virtually funded phase can be refused, and the Company 'is not responsible or liable for you being rejected for any or no reason'.",
+   "source": "https://www.fintokei.com/",
+   "locator": "General Terms and Conditions V17 (Nov 2026, PDF saved by Geyer 25 Nov 2026): prohibited trading xvii and consequences; virtually funded phase §2",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B3",
+   "text": "To restrict prohibited trading the Company may apply 'Consistency rules' (cap daily profit or loss, reduce leverage, cap lot exposure, require stop losses, restrict news trading) 'to any or all of your active Fintokei demo accounts'; they 'may remain applicable for indefinite period of time' and 'may apply even on any new Fintokei challenge purchased by you'.",
+   "source": "https://support.fintokei.com/en/articles/11315971-other-restrictions-that-may-be-part-of-consistency-rules",
+   "locator": "General Terms V17, consistency rules (consequences iii); support article",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

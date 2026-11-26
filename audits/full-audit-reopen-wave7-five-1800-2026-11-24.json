@@ -1,0 +1,299 @@
+{
+  "date": "2026-11-24",
+  "status": "AUDIT_ONLY_SCORE_FREEZE",
+  "scope": "Five profiles, Fintokei follow-up plus four newly reopened. Targeted official excerpts and secondary leads; no full audit.",
+  "firms": [
+    {
+      "slug": "fintokei",
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "findings": [
+        {
+          "source": "https://support.fintokei.com/it/articles/8409176-quali-regole-devo-seguire-per-mantenere-l-account-swifttrader",
+          "locator": "before/after 15 July 2026",
+          "scope": "SwiftTrader",
+          "finding": "New cohort static max loss 3%, daily equity loss 2%, 3 trading days and 60-day evaluation; old cohort 6%, 3%, 5 days and unlimited evaluation. New evaluation daily profit cap 3% of initial balance, not best-day percentage.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://www.fintokei.com/is-fintokei-legit/",
+          "locator": "rule change FAQ",
+          "scope": "all",
+          "finding": "Firm claims 14 days notice and no retroactivity; contractual enforceability not verified. Named testimonial claims over $60k received; marketing testimony, date and transaction absent, not independent proof.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/fintokei.com",
+        "rating": 4.4,
+        "count": 1474,
+        "checkedOn": "2026-11-24",
+        "status": "VISIBLE_INDEXED"
+      },
+      "payoutEvidence": [],
+      "missing": [
+        "Full current CGU and signed funded/live agreements, checkout versions and all cohorts not fully retrieved",
+        "Primary legal registry, regulator alerts, incident resolution and formal appeals not validated",
+        "Independent dated payment records with attribution not captured; absence is not nonpayment",
+        "V17 and FPP annexes still blocked"
+      ]
+    },
+    {
+      "slug": "fundedelite",
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "findings": [
+        {
+          "source": "https://www.fundedelite.com/terms-and-conditions",
+          "locator": "§5.3–5.5",
+          "scope": "all",
+          "finding": "Mandatory interview within five business days or cancellation and pending reward denial; verification may be declined for commercial reasons.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://www.fundedelite.com/terms-and-conditions",
+          "locator": "§6.3, §27 and footer",
+          "scope": "all",
+          "finding": "Earlier purchases protected from parameter changes notified later. Quantum SRL Italy VAT 03095010595 named in terms; footer also names FundedElite Ltd Saint Lucia. Identify actual debtor and registry.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://faq.fundedelite.com/en/articles/17566618-what-is-the-live-trading-programme",
+          "locator": "12 Oct FAQ",
+          "scope": "funded/live",
+          "finding": "Fourth consecutive payout triggers simulated Live programme, potentially earlier at risk team discretion; pending reward becomes new account starting balance instead of cash.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://faq.fundedelite.com/en/articles/17437349-when-can-i-request-a-payout",
+          "locator": "12 Oct FAQ",
+          "scope": "1/2-step, Lite, Instant, Flash, Catalyst",
+          "finding": "First payout 21 days except Flash/Catalyst 14; later 14 days for 1/2-step and Lite 2-step, 21 for Lite 1-step/Instant, 14 Flash/Catalyst; interval options do not shorten first wait. No minimum amount.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/fundedelite.com",
+        "rating": null,
+        "count": 762,
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH"
+      },
+      "payoutEvidence": [],
+      "missing": [
+        "Full current CGU and signed funded/live agreements, checkout versions and all cohorts not fully retrieved",
+        "Primary legal registry, regulator alerts, incident resolution and formal appeals not validated",
+        "Independent dated payment records with attribution not captured; absence is not nonpayment"
+      ]
+    },
+    {
+      "slug": "funded-bull",
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "findings": [
+        {
+          "source": "https://fundedbull.com/terms/",
+          "locator": "§1.2,1.5",
+          "scope": "all",
+          "finding": "RateRight Pte Ltd Singapore declared; immediate changes upon publication, reasonable notification effort only.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://fundedbull.com/terms/",
+          "locator": "§5.2.1–5.2.6",
+          "scope": "funded",
+          "finding": "Minimum $200 on 5/10k, 2% on 25–250k. Standard split 90%; first 14 days, later 7, schedule adjustable; no reward after breach, trading locked during processing, drawdown resets to initial balance. Calculation disputes within seven business days.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://fundedbull.com/trading-rules/",
+          "locator": "first payout; gambling",
+          "scope": "challenge/funded",
+          "finding": "Five trading days plus 14 days account age; qualitative position sizing and duration risk review.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://theindustryspread.com/fundedbull-review-the-checkout-has-been-down-since-march/",
+          "locator": "25 Aug 2026 tests",
+          "scope": "operational",
+          "finding": "Secondary report of HTTP 522 on dashboard paths; last working archive March 6. Current operation not directly tested.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://www.bestforex.io/news/fundedbull-closed-flag-review-2026",
+          "locator": "26 Sep 2026",
+          "scope": "operational",
+          "finding": "Secondary report of tracker closed flag; not official closure confirmation.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/fundedbull.com",
+        "rating": 2.8,
+        "count": 15,
+        "checkedOn": "2026-11-24",
+        "status": "VISIBLE_INDEXED"
+      },
+      "payoutEvidence": [],
+      "missing": [
+        "Full current CGU and signed funded/live agreements, checkout versions and all cohorts not fully retrieved",
+        "Primary legal registry, regulator alerts, incident resolution and formal appeals not validated",
+        "Independent dated payment records with attribution not captured; absence is not nonpayment",
+        "Direct dashboard availability and official closure confirmation"
+      ]
+    },
+    {
+      "slug": "sabiotrade",
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "findings": [
+        {
+          "source": "https://sabiotrade.us/terms",
+          "locator": "Rules §5,7",
+          "scope": "US domain only pending jurisdiction mapping",
+          "finding": "40% best day or single trade in general rule; 55% single trade in reward criteria. Discretionary denial despite numerical compliance. Transparent thresholds >=40% no automatic penalty; discrepancy separately recorded.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://sabiotrade.us/terms",
+          "locator": "Rules §8",
+          "scope": "accounts created following evaluation from 2 Feb 2026",
+          "finding": "Breach can terminate account and forfeit previously granted discretionary rewards; distinguish unpaid and already transferred amounts, unresolved.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://sabiotrade.us/trading-rules",
+          "locator": "summary and consistency",
+          "scope": "Single/Intraday",
+          "finding": "Targets 10/12%, daily loss 5/4%, trailing 6/5%; evaluation best-day 55% raises target rather than breach; FAQ says no reward-account consistency, conflicting with terms reward single-trade requirement.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://sabiotrade.us/trading-rules",
+          "locator": "FAQ",
+          "scope": "reward",
+          "finding": "SWIFT and crypto advertised, instant to five business days; no fee refund. Not payment proof.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://www.proptraderz.com/prop-firms/sabiotrade/",
+          "locator": "18 Nov 2026 secondary review",
+          "scope": "international scope unverified",
+          "finding": "Reports split reduction to 70%, scalping/news conflicts and Irish CODEVIL IT ENGINEERING LIMITED 680139; verify primary international contract and registry before publication.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/sabiotrade.com",
+        "rating": null,
+        "count": 698,
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH"
+      },
+      "payoutEvidence": [],
+      "missing": [
+        "Full current CGU and signed funded/live agreements, checkout versions and all cohorts not fully retrieved",
+        "Primary legal registry, regulator alerts, incident resolution and formal appeals not validated",
+        "Independent dated payment records with attribution not captured; absence is not nonpayment",
+        "International .com contract and US applicability reconciliation"
+      ]
+    },
+    {
+      "slug": "the-trading-pit",
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "findings": [
+        {
+          "source": "https://www.thetradingpit.com/cfds-prop-trading",
+          "locator": "CFDs Rewards Policy",
+          "scope": "Prime CFD",
+          "finding": "1-phase 100/200k created from 6 July 2026: 3 trading days and 50% positive-days consistency; older accounts 3 profitable days at 0.5%, pre-5 March additionally 5 trading days. 80% share, 14-day cycle, above $100.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://www.thetradingpit.com/cfds-prop-trading",
+          "locator": "CFDs Instant Rewards Policy",
+          "scope": "Instant CFD",
+          "finding": "Withdrawal limited to lower of half realized profit or cap $2500 for 5/10/20k, $3500 for 50k, $4500 for 100k. Consistency 30/25/20% respectively, 14-day cycle above $200, positive new profit after first payout.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://www.thetradingpit.com/ja/cfds-prop-trading",
+          "locator": "Instant policy",
+          "scope": "Japanese localization",
+          "finding": "Older indexed version states flat $2500 cap and 30% consistency; reconcile cohort/localization with English page.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://www.thetradingpit.com/cfds-prop-trading",
+          "locator": "Classic policy",
+          "scope": "Classic CFD",
+          "finding": "Payout tied to reaching scaling target, five trading days, 50–80% share.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        },
+        {
+          "source": "https://www.thetradingpit.com/blog/futures-prime-program",
+          "locator": "2 Aug 2024 announcement",
+          "scope": "historical Futures Prime",
+          "finding": "First payout ten $200 profitable days, second five, then 14-day cycle; historical only, current rules not established.",
+          "date": "2026-11-24",
+          "kind": "documentary",
+          "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/thetradingpit.com",
+        "rating": null,
+        "count": 1091,
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH"
+      },
+      "payoutEvidence": [],
+      "missing": [
+        "Full current CGU and signed funded/live agreements, checkout versions and all cohorts not fully retrieved",
+        "Primary legal registry, regulator alerts, incident resolution and formal appeals not validated",
+        "Independent dated payment records with attribution not captured; absence is not nonpayment"
+      ]
+    }
+  ]
+}

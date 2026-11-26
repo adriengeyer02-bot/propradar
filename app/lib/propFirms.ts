@@ -1,7 +1,6 @@
 import { applyFirmUpdates, getFirmUpdate } from './firmUpdates';
-import statusReviewData from '../data/status-review-37-decisions-2026-11-23.json';
+import { getScaleC, isFullyRead, UNAUDITED_SCORE_CAP } from './scaleC';
 import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
-import { getPublishedV52Score, isPublishedV52 } from './scoringV52Published';
 import { computeRulesPenalty, RULES_PENALTY_ENABLED } from './restrictiveRules';
 import { narrativeOriginals, stripScoreClaims } from './scoreClaims';
 import { toEnglishText } from './i18n';
@@ -145,10 +144,12 @@ export type PropFirm = {
   trustpilotPenalty?: { before: number; penalty: number; included: boolean };
   /** V5 legal safety cap, after ordinary scoring and Trustpilot. */
   v5SafetyCap?: { before: number; cap: 55 };
-  /** V5.2 evidence ceiling; a cap, not a second score deduction. */
-  v52PayoutCap?: { before: number; cap: 64 | 69 | 79 };
   /** Closed-firm cap (CLOSED_FIRM_SCORE_CAP), set when it lowered the score. */
   closedCap?: { before: number; cap: number };
+  /** Scale C (SCORING.md): set when the score comes from app/data/scale-c.json; `before` = previous pipeline score. */
+  scaleC?: { before: number };
+  /** Cap at 60 while the terms are not read in full (scaleC.ts), set when it lowered the score. */
+  unauditedCap?: { before: number; cap: number };
   /** Zero when the brand's founding year has not been confirmed. */
   founded: number;
   headquarters: string;
@@ -1219,7 +1220,7 @@ const corePropFirms: PropFirm[] = [
     weaknesses: ['More complex drawdown rules', 'Less suited to forex/CFD traders'],
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'Official rules rechecked July 15, 2026. Official Topstep rules checked 2026-11-21: Trading Combine uses a 55% Consistency Target (best day versus profit target); Express Funded Account Consistency requires 3 trading days and a 40% objective for payout eligibility; XFA Standard requires five $150+ winning days, with no 40% consistency objective. Sources: https://help.topstep.com/en/articles/8284208-consistency-at-topstep and https://help.topstep.com/en/articles/8284233-topstep-payout-policy. Payout eligibility, caps and split can also depend on the account cohort.',
+      'Official rules rechecked July 15, 2026. The Trading Combine uses a 50% consistency target; Express Funded Account Standard and Consistency paths use different payout qualification rules. Payout eligibility, caps and split can also depend on the account cohort.',
     auditSourcesChecked: ['Official site', 'Trading Combine parameters', 'Express Funded Account parameters', 'Official payout policy', 'Trustpilot'],
     regulatoryAudit: {
       riskLevel: 'Medium to high',
@@ -10374,18 +10375,17 @@ const universePropFirms: PropFirm[] = [
     name: 'MiFunder',
     website: 'https://mifunder.com/',
     status: 'À surveiller',
-    listedDomainWarning: 'MiFunder official website and current legal terms returned Cloudflare error 521 on 22 November 2026. Current checkout and operating entity are unverified; this historical rating is not a V5.2 assessment. Do not purchase until official access and contractual rights can be verified.',
     score: 56,
     founded: 2023,
     priceFrom: 0,
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      '22 November 2026 operational update: mifunder.com and its live Terms of Service both returned a Cloudflare 521 origin-server error. A separate Vercel mirror hosts an August 2023 contract naming Gigimobile Technology Solutions PTY Ltd, but this copy is not confirmed as the current contracting offer and must not be treated as a 2026 funded agreement. Historical score remains provisional and is not an approved V5.2 calculation; no closure or unlawful conduct can be inferred from an HTTP failure.',
+      'Official site and footer checked. MiFunder states it does not provide investment services as defined in applicable regulations, is not a broker and does not accept deposits from traders. No concrete company name, jurisdiction or registration number was captured from the public page in this pass.',
     regulatoryAudit: {
       riskLevel: 'Medium to high',
-      lastChecked: '2026-11-22',
+      lastChecked: '2026-07-08',
       summary:
-        'Operational status unverified on November 22, 2026. The official MiFunder website and terms return HTTP 521, preventing verification of current products, selling entity, reward contract and checkout. An older, differently hosted legal document cannot be assumed authentic for the present seller. No dissolution, criminality or payout refusal is established by this technical error.',
+        'Medium-to-high regulatory risk. MiFunder gives clear non-broker/non-deposit wording, but the legal entity remains unidentified. The product markets Match Trader, Platform 5 and TradingView access plus funded-phase reset features, so detailed terms are needed before ranking it above watchlist level.',
       entities: [
         {
           name: 'MiFunder',
@@ -10403,8 +10403,6 @@ const universePropFirms: PropFirm[] = [
         'Platform-specific rules for Match Trader, Platform 5 and TradingView need manual confirmation.',
       ],
       redFlags: [
-        'Official primary domain and legal-terms URL both return Cloudflare HTTP 521 on 2026-11-22.',
-        'The 2023 third-party mirror is not verified as a current enforceable contract.',
         'No concrete legal entity captured.',
         'Broker/platform-like marketing with non-broker disclaimer.',
         'Reset add-ons can create fee and rule-dispute risk.',
@@ -12376,7 +12374,7 @@ const universePropFirms: PropFirm[] = [
     headquarters: 'Malta',
     priceFrom: 56,
     profitSplit: 90,
-    payoutProof: false,
+    payoutProof: true,
     incidents: 4,
     styles: ['Forex', 'CFD', 'TradeLocker', 'Simulated evaluation'],
     productName: 'Cove Funded Challenges',
@@ -12393,7 +12391,7 @@ const universePropFirms: PropFirm[] = [
     consistencyRule: 'Not clearly captured; full program and add-on rules must be checked before purchase.',
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'No independently attributable completed payout proof captured in the July 2026 source review; payoutProof is unverified, not evidence of non-payment. Official site, Terms and Risk Disclosure checked. Cove Funded discloses Collective Holdings Limited with a Malta address. Footer says COVEFUNDED is not a broker, does not accept deposits, provides demo accounts in a simulated trading environment, and its platform/data feed is powered by third-party liquidity providers. Terms are short and include a no-refund policy plus Malta governing law.',
+      'Official site, Terms and Risk Disclosure checked. Cove Funded discloses Collective Holdings Limited with a Malta address. Footer says COVEFUNDED is not a broker, does not accept deposits, provides demo accounts in a simulated trading environment, and its platform/data feed is powered by third-party liquidity providers. Terms are short and include a no-refund policy plus Malta governing law.',
     auditSourcesChecked: ['Official site', 'Terms and Conditions', 'Risk Disclosure', 'Privacy Policy', 'Trustpilot link'],
     regulatoryAudit: {
       riskLevel: 'Medium to high',
@@ -12945,7 +12943,7 @@ function applyClosedScoreRule(firm: PropFirm): PropFirm {
 function applyRulesPenaltyRule(firm: PropFirm): PropFirm {
   // V5 B2 has already reduced the editorial score. A second legacy rules
   // deduction would punish the same contract clause twice.
-  if (isPublishedV52(firm.slug) || getFirmUpdate(firm.slug)?.scoringVersion === 5.2 || isPublishedV5(firm.slug) || getFirmUpdate(firm.slug)?.scoringVersion === 5) return firm;
+  if (isPublishedV5(firm.slug) || getFirmUpdate(firm.slug)?.scoringVersion === 5) return firm;
   if (!RULES_PENALTY_ENABLED || firm.status === 'Fermée') return firm;
   const result = computeRulesPenalty(getFirmUpdate(firm.slug));
   if (!result?.penalty) return firm;
@@ -12963,45 +12961,14 @@ function applyRulesPenaltyRule(firm: PropFirm): PropFirm {
 export const TRUSTPILOT_NOTICE_PENALTY = 6;
 
 function applyTrustpilotPenaltyRule(firm: PropFirm): PropFirm {
-  if (firm.status === 'Fermée') return firm;
-  // A published V5.2 score has ALREADY deducted Trustpilot's exact-domain -6
-  // in computeV52Scorecard/computeV52Candidate. Applying the legacy site-wide
-  // penalty here again silently deducts 12 points and breaks the modal.
-  // Respect the source-date gate: if a later score edit superseded V5.2, it
-  // must use its own legacy penalty policy instead.
-  const current = getFirmUpdate(firm.slug);
-  const v52Current = current?.scoringVersion === 5.2 || (!current && isPublishedV52(firm.slug));
-  if (v52Current) {
-    return firm.reviewSignals.trustpilotRatingWithheld
-      ? { ...firm, trustpilotPenalty: { before: firm.score, penalty: 0, included: true } }
-      : firm;
-  }
-  if (!firm.reviewSignals.trustpilotRatingWithheld) return firm;
-  if (current?.set?.trustpilotPenaltyIncluded) {
+  if (firm.status === 'Fermée' || !firm.reviewSignals.trustpilotRatingWithheld) return firm;
+  if (getFirmUpdate(firm.slug)?.set?.trustpilotPenaltyIncluded) {
     return { ...firm, trustpilotPenalty: { before: firm.score, penalty: 0, included: true } };
   }
   return { ...firm, score: Math.max(0, firm.score - TRUSTPILOT_NOTICE_PENALTY), trustpilotPenalty: { before: firm.score, penalty: TRUSTPILOT_NOTICE_PENALTY, included: false } };
 }
 
-/** Apply V5.2 proof ceiling and (if required) legal ceiling AFTER Trustpilot once. */
-function applyV52CapsRule(firm: PropFirm): PropFirm {
-  if (firm.status === 'Fermée') return firm;
-  const audit = getPublishedV52Score(firm);
-  if (!audit) return firm;
-  let next = firm;
-  const proof = audit.payoutEvidenceCap;
-  if (proof !== null && next.score > proof) {
-    next = { ...next, score: proof, v52PayoutCap: { before: next.score, cap: proof } };
-  }
-  const legal = audit.safetyCap;
-  if (legal !== null && next.score > legal) {
-    next = { ...next, score: legal, v5SafetyCap: { before: next.score, cap: legal } };
-  }
-  return next;
-}
-
 function applyV5SafetyCapRule(firm: PropFirm): PropFirm {
-  if (isPublishedV52(firm.slug)) return firm; // legal cap already applied by V5.2 pipeline
   if (getFirmUpdate(firm.slug)?.scoringVersion !== 5 && !(!getFirmUpdate(firm.slug) && isPublishedV5(firm.slug))) return firm;
   const v5 = getPublishedV5Score(firm);
   if (!v5 || firm.status === 'Fermée' || v5.safetyCap === null || firm.score <= v5.safetyCap) return firm;
@@ -13051,37 +13018,24 @@ function applyNarrativeScoreRule(firm: PropFirm): PropFirm {
   return verdict === firm.verdict && auditSummary === firm.auditSummary ? firm : { ...firm, verdict, auditSummary };
 }
 
-// Status-only documentary review overlay, separate from all scoring and ranking logic.
-// Records for all 37 uncertain operators are available to researchers; only 11
-// verified/high-concern cases receive a buyer-facing warning and disabled purchases.
-// Never mark a whole brand legally closed solely because a historic LLC was dissolved.
-type PublicStatusDecision = typeof statusReviewData.rows[number];
-const statusReviewMap=new Map<string,PublicStatusDecision>(statusReviewData.rows.map(item=>[item.slug,item]));
-if(statusReviewMap.size!==37||statusReviewData.firmCount!==37||statusReviewData.publicWarningCount!==11||!statusReviewData.ckCapitalVeto) throw Error('37 status review invalid');
-function applyStatusReviewForBuyers(firm:PropFirm):PropFirm {
-  const decision=statusReviewMap.get(firm.slug);
-  if(!decision||decision.publicAction!=='display_warning_and_disable_new_purchases') return firm;
-  if(!decision.publicWarning||!decision.sourceLinks.length) throw Error('Missing status warning sources '+firm.slug);
-  // Preserve original sources[0], which the firm detail UI uses to detect an
-  // unsafe historic destination. Additional official evidence goes at the end.
-  const sources=[...firm.sources];
-  const seen=new Set(sources.map(item=>item.url));
-  for(const url of decision.sourceLinks.slice(0,6)){
-    if(!seen.has(url)){sources.push({label:'Status review, 23 Nov 2026',url});seen.add(url);}
-  }
-  // Existing 2026 status decisions remain watchlist entries, not judicial
-  // insolvency findings for an unrelated successor/brand.
-  return {
-    ...firm,
-    status:firm.status==='Fermée'?'Fermée':'À surveiller',
-    listedDomainWarning:decision.publicWarning,
-    lastReviewed:firm.lastReviewed>statusReviewData.reviewDate?firm.lastReviewed:statusReviewData.reviewDate,
-    sources,
-    products:firm.products.map(product=>({...product,linkToStart:undefined})),
-    partnerOffer:undefined,
-  };
+/**
+ * Scale C (Geyer, 2026-11-25; SCORING.md "Scale C"): for a firm whose contract
+ * was read by hand, the displayed score is the scale C score. It already
+ * includes the Trustpilot notice (−6) and the contract clauses, so it replaces
+ * the earlier steps instead of stacking on them. Closed firms are never listed.
+ */
+function applyScaleCRule(firm: PropFirm): PropFirm {
+  const entry = getScaleC(firm.slug);
+  if (!entry || firm.status === 'Fermée') return firm;
+  return { ...firm, score: entry.score, scaleC: { before: firm.score } };
 }
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV52CapsRule).map(applyV5SafetyCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer).map(applyStatusReviewForBuyers);
+
+function applyUnauditedCapRule(firm: PropFirm): PropFirm {
+  if (firm.status === 'Fermée' || isFullyRead(firm.slug) || firm.score <= UNAUDITED_SCORE_CAP) return firm;
+  return { ...firm, score: UNAUDITED_SCORE_CAP, unauditedCap: { before: firm.score, cap: UNAUDITED_SCORE_CAP } };
+}
+
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV5SafetyCapRule).map(applyScaleCRule).map(applyUnauditedCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');

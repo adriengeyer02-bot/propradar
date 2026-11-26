@@ -1,0 +1,22 @@
+{
+ "slug": "equity-edge",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "SAFE",
+   "text": "Account decisions can be appealed by e-mail to the compliance team, which reviews the case.",
+   "source": "https://equityedge.io/terms-and-conditions",
+   "locator": "§10 Complaints & Appeals",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "NOTE",
+   "text": "Prohibited practices are listed (gap trading, HFT, latency arbitrage, one-sided betting, hedging...); no clause giving the firm discretion to refuse earned payouts was found in the archived terms.",
+   "source": "https://equityedge.io/trading-rules/trading-rules-and-guidelines",
+   "locator": "§3 Trading strategy",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

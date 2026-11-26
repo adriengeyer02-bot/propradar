@@ -1,0 +1,36 @@
+{
+ "slug": "alpha-futures",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "'The Analyst Performance Fee will not be paid where we ascertain, in our sole discretion, that any of your virtual trades have been made in contravention of the Virtual Trading Rules ... or otherwise in contravention of these Terms'; Alpha may determine at its own discretion whether practices are not allowed.",
+   "source": "https://alpha-futures.com/terms-and-conditions",
+   "locator": "Schedule §1.2.6; §8.1.7",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B6",
+   "text": "§26.1: the user irrevocably agrees not to disparage or denigrate Alpha in any public statement 'that could be construed as negative', under threat of 'injunctive relief and damages'; the clause survives termination.",
+   "source": "https://alpha-futures.com/terms-and-conditions",
+   "locator": "§26.1",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B3",
+   "text": "Alpha may change the Terms by posting and 'will, however, notify you by email if there is a material change to a Challenge which you are currently participating in'; Schedule 5 rules 'may be updated from time to time'.",
+   "source": "https://alpha-futures.com/terms-and-conditions",
+   "locator": "§4.1; §8.1.8",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "Advanced Qualified accounts: no consistency rule (Zero and Standard Qualified 40%, Direct 20%).",
+   "source": "https://help.alpha-futures.com/en/articles/9492048-consistency-rule",
+   "locator": "Consistency rule",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

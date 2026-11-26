@@ -2766,7 +2766,7 @@
       ]
     },
     "blusky-trading": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-26",
       "changelog": [
         {
           "date": "2026-11-17",
@@ -2796,9 +2796,11 @@
           "summary": "Restrictive-rules audit: read the Sim Funded rules, Ethical Trading & Conduct Policy, Launch, Orbit and Instant Funding help articles; 12 rules across Launch, Orbit and Instant Funding.",
           "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Profit split read on the official site: 90/10 on all three evaluation plans; Instant Sim Funded (Orbit) 80/20 ($599 for 50K); Direct to Funded 50% for the first 30 trading days, then 80%. Evaluation list prices were only shown with discount codes, so the price stays unrecorded.", "source": "https://blusky.pro/how-blusky-compares/", "fields": ["profitSplit"]}
       ],
       "set": {
+        "profitSplit": 90,
         "verdict": "BluSky has a detailed official futures help center, but its October 2026 terms make Sim Funded withdrawals conditional on a $500 minimum, fresh profits between payouts and rolling seven-day caps. A compulsory brokerage review at $10,000 cumulative profit can end Sim Funded payout eligibility immediately on invitation; residence and brokerage KYC may impose additional restrictions. These are material conditions for a buyer, not proof of misconduct or of actual payments.",
         "auditSummary": "Deep audit (17 November 2026): the official Sim Funded rules effective 1 October require a minimum $500 withdrawal, at least $500 of new ordinary trading profit before a subsequent request, and a rolling 7-day payout cap. The trader must contact support before crossing $10,000 total account profit including payouts; reviews may take five trading days and continued trading during review can put the account at risk. The invitation to Live Brokerage immediately terminates eligibility for new Sim Funded requests; an approved live trader starts at $0, with eligible simulated profits moved to a Bonus Vault, or may choose a defined buyout subject to restrictions. Brokerage checks demand identity and address documents, and certain nationalities or residences cannot qualify; BluSky says risk parameters and profit splits may differ for some simulation-only traders. Platform, size and plan-specific rules vary: the stored Launch evaluation figures are not a blanket rule for all BluSky programs. No independently authenticated payout or execution/slippage test was performed by PropRadar.",
         "trustpilotRating": 4.7,
@@ -2854,7 +2856,8 @@
         {
           "label": "BluSky Instant Funding (official, 2026-11-18)",
           "url": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded"
-        }
+        },
+        {"label": "blusky-trading official rules/pricing page (read 2026-11-26)", "url": "https://blusky.pro/how-blusky-compares/"}
       ],
       "auditedPrograms": [
         {
@@ -5564,7 +5567,7 @@
       ]
     },
     "for-traders": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-26",
       "restrictiveRules": [
         {
           "program": "Forex Instant — Master Account",
@@ -5594,13 +5597,16 @@
         }
       ],
       "set": {
-        "profitSplit": 90,
+        "profitSplit": 80,
         "payoutDelay": "processing guarantee of 48 hours according to the site, subject to discretionary payout terms and plan-specific eligibility",
         "drawdownType": "Hybride",
         "auditSummary": "18 November 2026 program-level audit of For Traders' Forex Instant, Pay After Pass, Fast and Fast Static help pages. The eligible-payout consistency ratio is 15% of total profit on Instant Master and 20% on Pay After Pass Master; the current rules explicitly exempt Instant Pro, Fast, Fast Static and Classic. The firm's current help also distinguishes static maximum loss on Fast Static from balance-based or trailing variants on other Forex paths. A generic firm-level consistency or drawdown claim would therefore misstate what is bought. Its advertised 48-hour processing promise is conditional on award eligibility and discretionary terms, not independently verified bank settlement. The prior visible 64/100 Trustpilot-withheld cap remains in place."
       },
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fortraders.com)."
+      ],
+      "setProducts": [
+        {"id": "fortraders-1-step", "name": "1-Step (Fast)", "type": "Challenge", "description": "Sizes $6K to $100K. Fees shown on the home page on 2026-11-26 ($36 for 6K to $351 for 100K) may include a sale, so no list price is recorded. Other programs: Pay After Pass, Instant, Instant Pro and Classic 2-step (static drawdown), not read.", "accountSizeMin": 6000, "accountSizeMax": 100000, "profitTarget": "9%", "maxDailyLoss": "3%", "maxDrawdown": "6%, trailing or static (option)", "profitSplit": "80%", "platforms": ["not stated"], "tradableAssets": ["Forex", "Stocks", "Commodities", "Indices", "Crypto"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
       ],
       "changelog": [
         {
@@ -5631,7 +5637,8 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://help.fortraders.com/en/articles/10442201-how-does-the-consistency-score-work-on-instant-and-pay-after-pass-accounts",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Read on the official home page: 1-Step ($6K to $100K, 9% target, 3% daily, 6% trailing or static drawdown, 3 profitable days, no time limit, 80% split, bi-weekly rewards). Pay After Pass, Instant, Instant Pro and Classic 2-step (static) also listed.", "source": "https://fortraders.com/", "fields": ["products", "profitSplit"]}
       ],
       "setEntities": [
         {
@@ -5651,7 +5658,8 @@
         {
           "label": "For Traders: how it works (official)",
           "url": "https://fortraders.com/how-it-works"
-        }
+        },
+        {"label": "for-traders official rules/pricing page (read 2026-11-26)", "url": "https://fortraders.com/"}
       ],
       "auditedPrograms": [
         {
@@ -8504,7 +8512,7 @@
       ]
     },
     "fx2-funding": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-26",
       "changelog": [
         {
           "date": "2026-11-17",
@@ -9641,7 +9649,7 @@
       ]
     },
     "hola-prime": {
-      "reviewedAt": "2026-11-19",
+      "reviewedAt": "2026-11-26",
       "restrictiveRules": [
         {
           "program": "2-Step Pro / Prime and 1-Step Prime — funded withdrawal choice",
@@ -9818,9 +9826,12 @@
           "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 9 new classified restrictive rules.",
           "source": "https://holaprime.com/terms-conditions/",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Read on the official 2-Step Prime FAQ: 8% then 5% targets, 5% daily (4% on 200K) from the previous close, 10% max loss of the initial balance (8% on 200K), 3 minimum days; bi-weekly 80%, monthly 95% or on-demand 80% (40% consistency, 2% minimum profit); 2.5% payout fee; fee refunded with the 4th payout.", "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/", "fields": ["profitSplit"]},
+        {"date": "2026-11-26", "summary": "Official comparison table read on 26 Nov 2026 (consistent with ChatGPT's dossier and the Prime Rulebook): 1-Step Prime 10% target, 3% daily, 6% static; 2-Step Pro and 2-Step Prime 8%/5%, 5% daily, 10% static (8% and 4% on 200K); Direct 3% daily, 7% EOD trailing, up to 90%; Fly accounts use EOD or intraday trailing limits once funded (Rulebook). The 'no-rules' Fly marketing does not mean no drawdown. Sizes and prices are not on the comparison page; Black Friday prices excluded.", "source": "https://holaprime.com/forex/challenge-comparison/", "fields": ["drawdownType"]}
       ],
       "set": {
+        "profitSplit": 80,
         "score": 67,
         "verdict": "Hola Prime publishes detailed, product-specific simulated trading rules, identifies multiple platform/legal entities and has 4.6/5 on Trustpilot from 4,324 reviews. A payout-processing review commissioned from Deloitte and examined by financial press offers more documentation than normal industry self-reporting, but the company itself expressly says the engagement was neither a full audit nor an assurance opinion; the report is not published and the fast-processing figures cover a defined set of eligible requests. Some users dispute account restrictions and payment decisions. PropRadar raises the score cautiously from 64 to 67/100 for transparency, not a guarantee of solvency or future rewards.",
         "auditSummary": "17 November 2026: Hola Prime's published rulebook distinguishes static maximum loss limits on some Prime/Pro evaluations, intraday trailing rules on Fly funded programmes and end-of-day trailing limits on Direct. Payout timing and reward shares depend on each selected schedule; its own Fly schedules have differed on whether the split is 70% or 80%, so a universal split should not be inferred. The footer identifies separate Hong Kong, Cyprus, Mauritius and technology-provider roles; Mauritius investment-dealer authorisation for one related broker entity is not equivalent to investor protection for every simulated challenge. Finance Magnates reported reviewing materials from the Deloitte-commissioned payout-processing exercise for 15 October 2025–15 March 2026. The seller's summary says 98.35% of requests with complete information were processed within one hour, 1.65% later and no denials in the scoped reviewed population. Crucially, the same summary says this is NOT an audit or assurance opinion, the full report is not publicly distributed and the engagement was not designed for third-party reliance. These percentages therefore do not establish that all people buying challenges qualified, that bank deposits were independently reconciled or that future payments are guaranteed. Trustpilot currently displays 4.6/5 on 4,324 reviews with both positive experiences and contested payout/KYC restrictions. Balanced score: 67/100, below the independently established, multi-year industry leaders.",
@@ -9888,7 +9899,11 @@
         {
           "label": "Terms & conditions read in full (2026-11-19)",
           "url": "https://holaprime.com/terms-conditions/"
-        }
+        },
+        {"label": "hola-prime official rules/pricing page (read 2026-11-26)", "url": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/"},
+        {"label": "Hola Prime challenge comparison (official)", "url": "https://holaprime.com/forex/challenge-comparison/"},
+        {"label": "Hola Prime Rulebook schedules (official)", "url": "https://holaprime.com/fr/rulebook/schedules/"},
+        {"label": "ChatGPT dossier on Hola Prime (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/hola-prime/program-evidence-chatgpt-2026-11-26.md"}
       ],
       "auditedPrograms": [
         {
@@ -9914,7 +9929,7 @@
       ]
     },
     "hyrotrader": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-26",
       "restrictiveRules": [
         {
           "program": "Hyro Instant — funded risk",
@@ -10037,6 +10052,9 @@
           "source": "https://www.hyrotrader.com/terms-and-conditions/"
         }
       ],
+      "setProducts": [
+        {"id": "hyro-core", "name": "Hyro Core (one phase)", "type": "Challenge", "description": "Fees: $9 (2.5K), $19 (5K), $39 (10K), $99 (25K), $189 (50K), $349 (100K). At most 40% of the target can come from one day (evaluation only).", "accountSizeMin": 2500, "accountSizeMax": 100000, "entryFeeMin": 9, "entryFeeMax": 349, "profitTarget": "10%", "maxDailyLoss": "3% of the starting balance", "maxDrawdown": "5%, static", "profitSplit": "80% fixed", "platforms": ["not stated"], "tradableAssets": ["Crypto"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
+      ],
       "changelog": [
         {
           "date": "2026-11-18",
@@ -10085,9 +10103,11 @@
           "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 8 new classified restrictive rules, 1 outdated rule(s) removed.",
           "source": "https://www.hyrotrader.com/terms-and-conditions/",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Read on HyroTrader's own pages: Hyro Core from $9 (2.5K) to $349 (100K), 10% target, 3% daily, 5% static, 80% fixed; One-Step 4%/8% static; Two-Step 5%/10% static; Hyro Instant 3%/5% static; split 80% up to 90%. The 2026 relaunch made the drawdown static on every challenge.", "source": "https://www.hyrotrader.com/blog/cheap-crypto-prop-firm-challenge-9-dollars/", "fields": ["products", "priceFrom"]}
       ],
       "set": {
+        "priceFrom": 9,
         "trustpilotRating": 4.0,
         "trustpilotReviewCount": 229,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/hyrotrader.com",
@@ -10133,7 +10153,11 @@
         {
           "label": "Terms & conditions read in full (2026-11-20)",
           "url": "https://www.hyrotrader.com/terms-and-conditions/"
-        }
+        },
+        {"label": "hyrotrader official rules/pricing page (read 2026-11-26)", "url": "https://www.hyrotrader.com/blog/cheap-crypto-prop-firm-challenge-9-dollars/"},
+        {"label": "hyrotrader official rules/pricing page (read 2026-11-26)", "url": "https://www.hyrotrader.com/blog/what-is-trailing-drawdown/"},
+        {"label": "hyrotrader official rules/pricing page (read 2026-11-26)", "url": "https://www.hyrotrader.com/blog/hyrotrader-relaunch/"},
+        {"label": "hyrotrader official rules/pricing page (read 2026-11-26)", "url": "https://www.hyrotrader.com/trading-rules/"}
       ],
       "addPayoutProofs": [
         {
@@ -12468,7 +12492,7 @@
       ]
     },
     "ofp-funding": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-26",
       "changelog": [
         {
           "date": "2026-11-17",
@@ -12493,12 +12517,14 @@
           "summary": "Restrictive-rules audit: read the official pricing section, the help-centre trading rules, prohibited strategies and payout articles; 6 rules across the four programmes on the pricing table (terms page not readable by automated tools).",
           "source": "https://help.ofpfunding.com/which-strategies-are-not-allowed-hedging-arbitrage-hft-martingale/",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Drawdown type set to Hybride from the programmes already on file. Programmes already read on the official site: instant funding uses a balance-trailing maximum loss, the two-step challenge a balance-based one.", "source": "https://ofpfunding.com/", "fields": ["drawdownType"]}
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/ofpfunding.com)."
       ],
       "set": {
+        "drawdownType": "Hybride",
         "verdict": "OFP Funding has a documented Trustpilot rating-withheld notice concerning removed fake reviews, alongside material contractual risk rules: daily limits recalculate from prior-day equity, a 1% floating-risk breach resets the account, and inconsistent profits may stop a reward. The firm's processing times and rewards are unverified claims. Elevated caution is warranted; this review does not alter its existing score.",
         "auditSummary": "Deep rules audit on 17 November 2026 using OFP's official help centre and terms, expanding the October program-price review. Daily drawdown is recalculated at GMT+2 (with DST) from previous-day closing equity, so an intraday breach can terminate a challenge even after profits made the prior day. A separate maximum 1% floating loss rule is described as 'soft': breach resets account balance rather than directly terminating the account. OFP reserves the right to withhold reward eligibility for its Inconsistency Score and prohibits delayed-feed/arbitrage exploitation, cross-account hedging, AI/HFT or mass-entry systems and some news-gap strategies. Its FAQ advertises typical processing of 2–3 business days; it describes bank/USDC for amounts under $500 and Rise above $500 with a $50 fee. None of those payment statements was confirmed by independent transfer records. The existing October Trustpilot breach/fake-review notice remains disclosed. No spread, slippage or firsthand withdrawal test was conducted.",
         "priceFrom": 23,
@@ -13573,7 +13599,7 @@
       ]
     },
     "sabiotrade": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-26",
       "addSources": [
         {
           "label": "FXEmpire SabioTrade profile",
@@ -13587,6 +13613,9 @@
           "label": "SabioTrade plans, US site (official, 2026-11-18)",
           "url": "https://sabiotrade.us/"
         }
+      ],
+      "setProducts": [
+        {"id": "sabiotrade-evaluation", "name": "SabioTrade Evaluation", "type": "Challenge", "description": "One-step evaluation with no time limit and a 55% consistency rule. List prices on the US site (sabiotrade.com redirected to sabiotrade.us when read): $139 (20K), $339 (50K), $549 (100K), $1,079 (200K), $6,889 (1M).", "accountSizeMin": 20000, "accountSizeMax": 1000000, "profitTarget": "10%", "maxDailyLoss": "5%", "maxDrawdown": "6%, trailing", "profitSplit": "80% (20K, 50K); 90% (100K and above)", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": true, "consistencyRule": "55%"}
       ],
       "changelog": [
         {
@@ -13629,12 +13658,14 @@
           "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: payoutDelay, entities.",
           "source": "https://sabiotrade.us/terms",
           "fields": ["payoutDelay", "entities"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Read on the official site (served as sabiotrade.us): $20K to $1M, 10% target, 5% daily, 6% trailing, 55% consistency rule, weekly rewards, 80% (20K/50K) or 90% (100K+) reward share.", "source": "https://sabiotrade.us/", "fields": ["products", "profitSplit"]}
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/sabiotrade.com)."
       ],
       "set": {
+        "profitSplit": 80,
         "score": 55,
         "verdict": "SabioTrade still offers simulated one-step trading evaluations through an identifiable Irish contracting company, and its terms publish loss limits, consistency rules, reward-review discretion and non-refundable purchases. However, Trustpilot still withholds its public score for a guideline breach, with 705 reviews visible and an earlier removal of fake reviews recorded. Trustpilot does not identify the author of those reviews. The terms provide no independently reconciled payout history, and reward decisions depend on compliance conditions. PropRadar cuts its score from 64 to 55/100; this is a significant transparency and customer-review signal, not proof of illegal conduct or commercial closure.",
         "auditSummary": "17 November 2026: SabioTrade's current terms name CODEVIL IT ENGINEERING LIMITED, company number 680139 according to its legal disclosures, as provider of simulated evaluations, not deposits or actual market trades. The company describes a 10% evaluation objective, a 5% daily-loss limit, generally 6% maximum trailing drawdown and a 40% best-day consistency provision with other single-trade concentration restrictions; the exact plan governs. KYC, inactivity beyond 30 days, closure of positions and a minimum seven-day interval between eligible performance rewards are additional terms. Risk and compliance reviews can adjust, reduce or withhold rewards under the written contract, which should be read alongside the promotional weekly-payment claim. Trustpilot's exact-domain page still states that its rating is unavailable because its rules were breached; the previously documented fake-review removals are not an adjudication of which party authored them. There are 705 reviews but no valid current TrustScore to publish. User praise and complaints alike are unverified individual reports, and PropRadar found no independent settlement ledger for all reward obligations. Score 55/100: legal traceability is positive, but review-integrity concerns and unilateral compensation controls deserve substantial caution.",
@@ -13783,7 +13814,7 @@
       ]
     },
     "sure-leverage": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-26",
       "set": {
         "officialWebsite": "https://sureleveragefunding.com/",
         "score": 53,
@@ -13859,7 +13890,13 @@
         {
           "label": "Sure Leverage Funding One Step Pro rules (official, 2026-11-18)",
           "url": "https://help.sureleveragefunding.com/en/articles/16100455-one-step-pro-futures-style"
-        }
+        },
+        {"label": "sure-leverage official rules/pricing page (read 2026-11-26)", "url": "https://sureleveragefunding.com/instant-funding"},
+        {"label": "sure-leverage official rules/pricing page (read 2026-11-26)", "url": "https://help.sureleveragefunding.com/en/articles/12141581-ea-challenge-faq-rules"},
+        {"label": "sure-leverage official rules/pricing page (read 2026-11-26)", "url": "https://sureleveragefunding.com/blog/instant-funding-vs-two-step-challenge"}
+      ],
+      "setProducts": [
+        {"id": "slf-instant-zero", "name": "Instant Funding Zero", "type": "Instant funding", "description": "No evaluation. Sizes $5K to $200K. A fee was shown during an 'up to 50% off' sale, so no list price is recorded. Instant Funding Static also exists (not read).", "accountSizeMin": 5000, "accountSizeMax": 200000, "profitTarget": "none (3% profit buffer before the first reward)", "maxDailyLoss": "2% (optional daily loss limit)", "maxDrawdown": "4%, static or trailing (chosen option)", "profitSplit": "70%", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
       ],
       "changelog": [
         {
@@ -13891,7 +13928,8 @@
           "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: payoutDelay.",
           "source": "https://help.sureleveragefunding.com/en/articles/12141636-general-rules-sure-leverage-funding",
           "fields": ["payoutDelay"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Read on the official site: Instant Funding Zero ($5K to $200K, 4% max loss static or trailing, 2% optional daily limit, 70% split, bi-weekly rewards after 14 days and a 3% buffer); EA Challenge (6% target, 8% trailing locking at the starting balance, 4% daily, 50% rising to 80%, payout capped at 5% per cycle); two-step standard split 80/20 (official blog).", "source": "https://sureleveragefunding.com/instant-funding", "fields": ["products"]}
       ],
       "auditedPrograms": [
         {
@@ -14576,7 +14614,8 @@
       ]
     },
     "the-funded-trader": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-26",
+      "set": {"listedDomainWarning": "PROBABLY CLOSED: thefundedtraderprogram.com refused PropRadar's request on 26 Nov 2026, and BestProps reported on 9 Nov 2026 that the firm is offline and not selling, its official addresses returning a hosting 'deployment paused' page and its help centre 'Not found'. No closure notice has been found, but the firm has probably stopped operating. Any website using this name or logo is not recognised as official by PropRadar: do not pay on it."},
       "changelog": [
         {
           "date": "2026-10-28",
@@ -14593,7 +14632,8 @@
           "fields": [
             "incidents"
           ]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official site unreachable in PropRadar's check of 26 Nov 2026, confirmed by an external source: warning set under the 'probably closed' policy approved by Geyer on 26 Nov 2026. Status unchanged; no closure is recorded without an official notice.", "source": "https://bestprops.com/status/the-funded-trader-status/", "fields": ["listedDomainWarning"]}
       ],
       "addIncidents": [
         "Finance Magnates reported on 14 March 2024 that The Funded Trader confirmed it had halted all payouts, citing a \"self-imposed internal audit\" (https://www.financemagnates.com/forex/prop-trading-firm-the-funded-trader-cites-internal-audit-to-suspend-payouts/).",
@@ -14608,7 +14648,8 @@
         {
           "label": "Finance Magnates: 900 traders await payouts (20 Nov 2024)",
           "url": "https://financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/amp"
-        }
+        },
+        {"label": "BestProps status page: The Funded Trader offline (9 Nov 2026)", "url": "https://bestprops.com/status/the-funded-trader-status/"}
       ]
     },
     "the-trading-pit": {
@@ -15054,7 +15095,11 @@
       ]
     },
     "thinkcapital": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-26",
+      "setProducts": [
+        {"id": "thinkcapital-bolt", "name": "Bolt (instant funding)", "type": "Instant funding", "description": "No evaluation. From $39; sizes $2.5K to $100K.", "accountSizeMin": 2500, "accountSizeMax": 100000, "entryFeeMin": 39, "profitTarget": "none", "maxDailyLoss": "3%, equity-based", "maxDrawdown": "6%, trailing the equity high-water mark; locks at the initial balance after +6% (Terms of Service)", "profitSplit": "80%, 90% with an add-on", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"},
+        {"id": "thinkcapital-bolt-flex", "name": "Bolt Flex (instant funding)", "type": "Instant funding", "description": "No evaluation. From $59; sizes $2.5K to $50K.", "accountSizeMin": 2500, "accountSizeMax": 50000, "entryFeeMin": 59, "profitTarget": "none", "maxDailyLoss": "3%", "maxDrawdown": "7%, balance-based: trails the highest closed balance and locks at the initial balance after +7% (Terms of Service)", "profitSplit": "80%, 90% with an add-on", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
+      ],
       "changelog": [
         {
           "date": "2026-11-17",
@@ -15096,12 +15141,15 @@
           "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: entities.",
           "source": "https://find-and-update.company-information.service.gov.uk/company/10537331",
           "fields": ["entities"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Read on the official Bolt page: Bolt from $39 ($2.5K to $100K, 3% equity-based daily loss, 6% trailing max loss) and Bolt Flex from $59 ($2.5K to $50K, 3% daily, 7% balance-based); standard split 80%, 90% with an add-on.", "source": "https://www.thinkcapital.com/instant-funding/", "fields": ["products"]},
+        {"date": "2026-11-26", "summary": "Terms of Service §6 (read by ChatGPT on 26 Nov 2026; the page did not render for Claude): Lightning 10% target, 3% daily on balance, 6% trailing; Dual Step 9%/5%, 4% daily, 7% (challenge) / 8% (funded) static on the initial balance; Nexus 7%/6%/5%, 4% daily, 8% static; Bolt 6% trailing on equity high-water, Bolt Flex 7% trailing on the highest closed balance, both locking at the initial balance. Static and trailing programmes: Hybride. Account sizes of Lightning, Dual Step and Nexus not read, so they are not listed as programmes.", "source": "https://www.thinkcapital.com/terms-of-services/", "fields": ["drawdownType", "products"]}
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/thinkcapital.com)."
       ],
       "set": {
+        "drawdownType": "Hybride",
         "score": 58,
         "verdict": "ThinkCapital continues to offer broker-backed branded simulated evaluations with named UK contracting provider TFG (Payments) Limited and substantive plan-specific terms. However, ThinkMarkets' regulatory authorisations do not protect the separate prop challenge as a regulated client brokerage account. Trustpilot currently withholds the rating following a guideline breach and removal of fake reviews, leaving 605 reviews without a usable TrustScore; the platform does not identify who authored the removed reviews. Complaints about refused rewards remain disputed. Detailed payout gates and restricted refunds justify a reduction from 65 (previously capped at 64) to 58/100, not a closure label.",
         "auditSummary": "17 November 2026: ThinkCapital's official Terms of Service name TFG (Payments) Limited as the provider of simulated, fictitious-funds trading programmes; the firm's association with ThinkMarkets does not extend that group's broker regulation, client-money rights or investor compensation to the challenge contract. The contract lists Bolt, Bolt Flex, Nexus, Lightning and Dual Step routes with different loss and consistency rules. For Bolt/Bolt Flex, eligible first performance reward requests may require 6%-7% closed simulated profit, 14 calendar days from first virtual trade and a 20%-25% best-day consistency cap, depending on plan or paid add-ons; $100 is the specified minimum request. Cooling-off/refund exceptions are narrow and an administration charge of up to $20 can apply in listed circumstances. Trustpilot still suppresses ThinkCapital's score over a guideline breach and records removed fake reviews; 605 reviews are visible but no valid live star rating exists. Neither the notice nor unadjudicated customer payout refusals proves the company itself commissioned false reviews or unlawfully withheld a particular payment. Score 58/100 reflects contract clarity tempered by review-integrity concerns, complicated reward gates and limited independently reconciled payments.",
@@ -15158,7 +15206,9 @@
         {
           "label": "ThinkCapital news trading FAQ (official, 2026-11-18)",
           "url": "https://www.thinkcapital.com/tc-faqs/funded-accounts/news-trading-policy-rule-and-restriction/"
-        }
+        },
+        {"label": "ThinkCapital Terms of Service (official)", "url": "https://www.thinkcapital.com/terms-of-services/"},
+        {"label": "ChatGPT dossier on ThinkCapital (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/thinkcapital/program-evidence-chatgpt-2026-11-26.md"}
       ],
       "auditedPrograms": [
         {
@@ -17763,8 +17813,9 @@
       ]
     },
     "rocket21-challenge": {
-      "reviewedAt": "2026-11-17",
+      "reviewedAt": "2026-11-26",
       "set": {
+        "listedDomainWarning": "PROBABLY CLOSED: rocket21challenge.com did not answer when PropRadar checked it on 26 Nov 2026, and Cuentas Fondeadas reported an error 523 (origin unreachable) in its review updated on 14 Oct 2026. No closure notice has been found, but the firm has probably stopped operating. Any website using this name or logo is not recognised as official by PropRadar: do not pay on it.",
         "auditSummary": "Deep review, 17 November 2026: the historical Rocket21 assessment terms identify Prop Trade Tech Pty Ltd, Australian ABN 71 661 045 950, as contracting company. An official Australian Business Register history independently confirms the same ABN and its 14 March 2025 renaming to TRADESIM PTY LTD; this verifies the legal company's existence, not that Rocket21 continues to accept or pay traders. The Nov 2024 schedule describes demo-only funded accounts, Apollo 11 first withdrawal after 14 days, Standard Regular/Swing after 30 days, later requests every 14 days, a no-HFT/no-martingale/no-grid policy, and exclusion of high-impact-news profits within four minutes on either side. Apollo 11 fee refunds were conditional on the first successful withdrawal. Third-party domain checks classify the historical challenge site as unavailable in 2026; no active checkout or current settlement receipts were independently confirmed. All quoted programme rules are historical, not a current offer."
       },
       "setEntities": [
@@ -17804,6 +17855,9 @@
           { "label": "October 2026 independent Rocket21 domain checks", "url": "https://mypropgenius.com/closed-firms/" }
         ]
       },
+      "addSources": [
+        {"label": "Cuentas Fondeadas: Rocket21 site returned error 523 (14 Oct 2026)", "url": "https://cuentasfondeadas.net/rocket21-opinion-y-revision/"}
+      ],
       "changelog": [
         {
           "date": "2026-11-17",
@@ -17816,7 +17870,8 @@
           "summary": "Historical schedule and contract recovered: simulated accounts, 14-day vs 30-day initial withdrawals by programme, 14-day repeats, conditional refunds, restricted strategies and high-impact-news profit exclusions. Current availability and payout completion remain unverified.",
           "source": "https://portal.rocket21challenge.com/schedule-of-assessment/",
           "fields": ["legalReview"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official site unreachable in PropRadar's check of 26 Nov 2026, confirmed by an external source: warning set under the 'probably closed' policy approved by Geyer on 26 Nov 2026. Status unchanged; no closure is recorded without an official notice.", "source": "https://cuentasfondeadas.net/rocket21-opinion-y-revision/", "fields": ["listedDomainWarning"]}
       ]
     },
     "traders-central": {
@@ -19001,7 +19056,7 @@
       ]
     },
     "willis-capital": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-26",
       "set": {
         "officialWebsite": "https://wfunded.io/",
         "status": "À surveiller",
@@ -19011,11 +19066,14 @@
         "trustpilotRating": 3.4,
         "trustpilotReviewCount": 294,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/williscapitals.com",
-        "profitSplit": 80,
+        "profitSplit": 70,
         "payoutDelay": "First withdrawal after one month, then every two weeks; processed within 24 hours; $100 minimum (FAQ)",
         "newsTrading": "Allowed; funded traders need a stop loss placed at least 15 minutes before the news event",
         "eaAllowed": "Yes, except HFT, grid/martingale, arbitrage and tick scalping"
       },
+      "setProducts": [
+        {"id": "wfunded-skillcheck", "name": "SkillCheck programs (Two-Phase, One-Phase, Direct Funding)", "type": "Challenge", "description": "Sizes $5,000 to $200,000 on the checkout page; the FAQ caps SkillCheck enrolment at $50,000 per trader, with scaling to $250,000 funded live and up to $500,000. A profit-share increase add-on is sold at checkout. Prices and per-program drawdown were not read for each size.", "accountSizeMin": 5000, "accountSizeMax": 200000, "profitTarget": "not stated", "maxDailyLoss": "not stated per program", "maxDrawdown": "not stated per program", "profitSplit": "70/30", "platforms": ["MatchTrade"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
+      ],
       "changelog": [
         {
           "date": "2026-11-17",
@@ -19046,7 +19104,8 @@
           "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: profitSplit, payoutDelay, newsTrading, eaAllowed.",
           "source": "https://www.wfunded.io/en/faq",
           "fields": ["profitSplit", "payoutDelay", "newsTrading", "eaAllowed"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Read on the official FAQ and checkout: 70/30 profit split; Two-Phase, One-Phase and Direct Funding programs sized $5,000 to $200,000 at checkout, while the FAQ caps SkillCheck enrolment at $50,000 per trader (scaling to $250,000 live, up to $500,000); MatchTrade platform.", "source": "https://www.wfunded.io/en/faq", "fields": ["products", "profitSplit"]}
       ],
       "setEntities": [
         {
@@ -19103,7 +19162,8 @@
         {
           "label": "WFunded Terms and Conditions (official, 2026-11-18)",
           "url": "https://www.wfunded.io/en/terms-and-conditions"
-        }
+        },
+        {"label": "willis-capital official rules/pricing page (read 2026-11-26)", "url": "https://www.wfunded.io/en/checkout"}
       ],
       "auditedPrograms": [
         {
@@ -19199,7 +19259,7 @@
       ]
     },
     "wsfunded": {
-      "reviewedAt": "2026-11-19",
+      "reviewedAt": "2026-11-26",
       "changelog": [
         {
           "date": "2026-10-26",
@@ -19236,9 +19296,11 @@
           "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 8 new restrictive rules; 1 outdated rule(s) removed; 7 programmes; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
           "source": "https://wsfunded.com/en/terms-conditions",
           "fields": ["auditSummary", "eaAllowed", "newsTrading", "products", "restrictiveRules", "verdict"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Profit split read on the official help article for Wall Street STELLAR: 80% to the trader, 20% to the firm (12% static max drawdown, 4% daily, withdrawals every 15 days).", "source": "https://faq.wsfunded.com/en/articles/15691317-1-phase-wall-street-stellar", "fields": ["profitSplit"]}
       ],
       "set": {
+        "profitSplit": 80,
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 4858,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com",
@@ -19301,7 +19363,8 @@
         {
           "label": "faq.wsfunded.com official page (read 2026-11-19)",
           "url": "https://faq.wsfunded.com/en/articles/8717151-how-many-accounts-can-i-manage"
-        }
+        },
+        {"label": "wsfunded official rules/pricing page (read 2026-11-26)", "url": "https://faq.wsfunded.com/en/articles/15691317-1-phase-wall-street-stellar"}
       ],
       "auditedPrograms": [
         {
@@ -21072,7 +21135,7 @@
       ]
     },
     "daytraders-com": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-26",
       "restrictiveRules": [
         {
           "program": "DayTraders.com Trail / Static / EOD evaluations versus Pro",
@@ -21191,6 +21254,11 @@
           "source": "https://daytraders.com/help/articles/17704103-who-can-sign-up"
         }
       ],
+      "setProducts": [
+        {"id": "daytraders-trailing", "name": "Trailing evaluation", "type": "Futures evaluation", "description": "Single-phase evaluation, 25K to 300K. Intraday trailing drawdown (e.g. $2,500 on 50K). Profit target $1,500 on 25K up to $15,000 on 300K. Consistency: no day above 50% of profits in evaluation.", "accountSizeMin": 25000, "accountSizeMax": 300000, "profitTarget": "$1,500 (25K) to $15,000 (300K)", "maxDailyLoss": "not stated", "maxDrawdown": "intraday trailing (e.g. $2,500 on 50K)", "profitSplit": "100% on sim-funded (Pro) accounts", "platforms": ["ArcTrader", "Rithmic"], "tradableAssets": ["Futures"], "hasConsistencyRule": true, "consistencyRule": "50% in evaluation, 30% on Pro"},
+        {"id": "daytraders-eod", "name": "EOD evaluation", "type": "Futures evaluation", "description": "25K to 300K. From $75 per account (25K EOD), plus a flat $5 activation fee. 25K: $1,500 target, $1,000 drawdown, $800 daily loss.", "accountSizeMin": 25000, "accountSizeMax": 300000, "entryFeeMin": 75, "profitTarget": "$1,500 on 25K", "maxDailyLoss": "$800 on 25K", "maxDrawdown": "$1,000 on 25K, end-of-day trailing", "profitSplit": "100% on sim-funded (Pro) accounts", "platforms": ["ArcTrader", "Rithmic"], "tradableAssets": ["Futures"], "hasConsistencyRule": true, "consistencyRule": "50% in evaluation, 30% on Pro"},
+        {"id": "daytraders-static", "name": "Static evaluation", "type": "Futures evaluation", "description": "25K to 150K. Fixed drawdown floor that never moves.", "accountSizeMin": 25000, "accountSizeMax": 150000, "profitTarget": "proportional to account size", "maxDailyLoss": "not stated", "maxDrawdown": "static (fixed floor)", "profitSplit": "100% on sim-funded (Pro) accounts", "platforms": ["ArcTrader", "Rithmic"], "tradableAssets": ["Futures"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
+      ],
       "changelog": [
         {
           "date": "2026-11-18",
@@ -21233,9 +21301,11 @@
           "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 9 new classified restrictive rules.",
           "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Read on the official site: Trailing (25K-300K, intraday trailing), EOD (25K-300K, from $75 + $5 activation; 25K: $1,500 target, $1,000 EOD trailing, $800 daily), Static (25K-150K) and S2F (no evaluation, EOD); 100% split on sim-funded accounts, 80/20 on the S2L live account; consistency 50% (eval) / 30% (Pro). Drawdown types differ by account: Hybride.", "source": "https://daytraders.com/", "fields": ["products", "drawdownType"]}
       ],
       "set": {
+        "drawdownType": "Hybride",
         "profitSplit": 100,
         "trustpilotRating": 4.6,
         "trustpilotReviewCount": 518,
@@ -21259,7 +21329,8 @@
         {
           "label": "Terms & conditions read in full (2026-11-20)",
           "url": "https://daytraders.com/help/articles/17704078-terms-of-use"
-        }
+        },
+        {"label": "daytraders-com official rules/pricing page (read 2026-11-26)", "url": "https://daytraders.com/how-futures-funding-evaluations-work"}
       ],
       "auditedPrograms": [
         {
@@ -21625,7 +21696,7 @@
       ]
     },
     "atlas-funded": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-26",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -21655,9 +21726,11 @@
           "summary": "Restrictive-rules audit: read the help-centre rules summary, prohibited practices, Atlas Protector, short trades, trading days, consistency, Instant Funded and Atlas Standard futures pages; 13 rules across 1-Step, 2-Step, Instant Funded and Atlas Standard.",
           "source": "https://help.atlasfunded.com/rules",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Drawdown type set to Static from the programmes already on file. 1-Step and 2-Step both use a static maximum loss (7% and 10%) per the products already read on the official help pages.", "source": "https://www.atlasfunded.com/trading-rules", "fields": ["drawdownType"]}
       ],
       "set": {
+        "drawdownType": "Static",
         "profitSplit": 90,
         "newsTrading": "Restricted",
         "eaAllowed": "Yes",
@@ -22443,7 +22516,7 @@
       }
     },
     "traders-launch": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-26",
       "restrictiveRules": [
         {
           "program": "Traders Launch Standard Futures 100K / 200K / 300K — buffer and payouts",
@@ -22572,9 +22645,11 @@
           "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 7 new classified restrictive rules, 1 outdated rule(s) removed.",
           "source": "https://www.traderslaunch.com/terms",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Drawdown type set to Hybride from the programmes already on file. Programmes already read on the official site: standard and Legacy NYC evaluations use an end-of-day drawdown, Static 25K a static one.", "source": "https://traderslaunch.com/", "fields": ["drawdownType"]}
       ],
       "set": {
+        "drawdownType": "Hybride",
         "profitSplit": 80,
         "payoutDelay": "daily once the account is above +1% profit, no payout cap; crypto and ACH every 24 hours, wire weekly",
         "trustpilotRating": 4.7,
@@ -23405,7 +23480,7 @@
       ]
     },
     "tx3-funding": {
-      "reviewedAt": "2026-11-19",
+      "reviewedAt": "2026-11-26",
       "restrictiveRules": [
         {
           "program": "TX3 Forex Pro — funded payout and major news",
@@ -23559,6 +23634,10 @@
           "source": "https://www.tx3funding.com/en/terms"
         }
       ],
+      "setProducts": [
+        {"id": "tx3-instant", "name": "Instant Funding", "type": "Instant funding", "description": "Sizes $7.5K to $100K. Fees displayed as a 'Limited Offer' during a Black Friday promotion, so no list price is recorded. Instant Standard rules: 3% profit buffer, 7 profitable days of at least 0.25%, 1% maximum risk per trade.", "accountSizeMin": 7500, "accountSizeMax": 100000, "profitTarget": "none", "maxDailyLoss": "3%", "maxDrawdown": "5%, trailing", "profitSplit": "80/20", "platforms": ["Match-Trader"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": true, "consistencyRule": "15% (Instant Standard)"},
+        {"id": "tx3-flex", "name": "Flex Challenge", "type": "Challenge", "description": "Two phases (30 days each, 5 profitable days of 0.5%). Rules for accounts opened from 24 August 2026. Funded: 0.5% max risk at a time, 20% consistency, payout minimum 2% and maximum 5% of the initial balance per bi-weekly cycle. WARNING, contradictory official pages: the comparison page still lists 5% daily, 10% maximum drawdown (type not stated), first payout 10 days after the first trade then every 7 days, and a 2% daily profit cap; the figures here come from the dedicated rules article for accounts opened from 24 August 2026.", "accountSizeMin": 10000, "accountSizeMax": 100000, "profitTarget": "10% then 5%", "maxDailyLoss": "none in phases 1-2; 2.5% when funded", "maxDrawdown": "5% of the initial balance, static", "profitSplit": "80%", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": true, "consistencyRule": "20% when funded"}
+      ],
       "changelog": [
         {
           "date": "2026-11-18",
@@ -23595,9 +23674,12 @@
           "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 12 new restrictive rules; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
           "source": "https://faq.tx3funding.com/help/tx3-funding/instant-standard-vs-instant-pro-what-s-the-difference",
           "fields": ["auditSummary", "newsTrading", "payoutDelay", "restrictiveRules", "verdict"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Read on the official site and FAQ: Instant Funding ($7.5K to $100K, 3% daily, 5% max loss, 80/20, 7 minimum days) and Flex Challenge ($10K to $100K, 10% then 5%, 5% static max loss, 2.5% daily once funded, 20% consistency, payouts bi-weekly capped at 5% per cycle).", "source": "https://www.tx3funding.com/en/fx/select-challenge", "fields": ["products", "profitSplit"]},
+        {"date": "2026-11-26", "summary": "Cross-check with ChatGPT's dossier: the official comparison page (Flex: 5% daily, 10% max, first payout after 10 days then every 7, 2% daily profit cap) contradicts the dedicated Flex rules article for accounts opened from 24 August 2026 (no daily limit in the phases, 2.5% funded, 5% static, bi-weekly). Both kept, flagged on the programme. Instant Standard: 5% trailing, 15% consistency, 3% buffer. Pro (10%/5%, 5% daily, 10% max, 80%/90%) and 1 Phase (10%, 3% daily, 6% trailing locking after +6%, 85%/90%) noted; their account sizes were not read, so they are not listed as programmes and the drawdown type stays unset.", "source": "https://faq.tx3funding.com/help/tx3-funding/comparing-tx3-funding-forex-challenges", "fields": ["products"]}
       ],
       "set": {
+        "profitSplit": 80,
         "trustpilotRating": 3.0,
         "trustpilotReviewCount": 4311,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.tx3funding.com",
@@ -23669,7 +23751,10 @@
         {
           "label": "faq.tx3funding.com official page (read 2026-11-19)",
           "url": "https://faq.tx3funding.com/help/tx3-funding/payouts-guide-first-and-subsequent-withdrawals-1-phase"
-        }
+        },
+        {"label": "tx3-funding official rules/pricing page (read 2026-11-26)", "url": "https://www.tx3funding.com/en/fx/select-challenge"},
+        {"label": "TX3 Funding forex challenge comparison (official FAQ)", "url": "https://faq.tx3funding.com/help/tx3-funding/comparing-tx3-funding-forex-challenges"},
+        {"label": "ChatGPT dossier on TX3 Funding (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/tx3-funding/program-evidence-chatgpt-2026-11-26.md"}
       ]
     },
     "fxrk": {
@@ -23757,7 +23842,7 @@
       ]
     },
     "now-trade-funded": {
-      "reviewedAt": "2026-11-19",
+      "reviewedAt": "2026-11-26",
       "restrictiveRules": [
         {
           "program": "Now Trade Funded — historical June 2024 Schedule of Assessment, payout limits",
@@ -23850,6 +23935,11 @@
           "source": "https://nowtradefunded.com/faqs/"
         }
       ],
+      "setProducts": [
+        {"id": "ntf-standard-two-step", "name": "Standard Challenge (Two-Step)", "type": "Challenge", "description": "Access fees: $8 (2.5K), $25 (5K), $75 (15K), $125 (25K), $250 (50K), $450 (100K), $900 (200K). Profit cap: 2.5% of the starting balance on the first withdrawal, 5% thereafter.", "accountSizeMin": 2500, "accountSizeMax": 200000, "entryFeeMin": 8, "entryFeeMax": 900, "profitTarget": "10% then 7%", "maxDailyLoss": "5% of the start-of-day balance", "maxDrawdown": "10%, static (equity-based)", "profitSplit": "50% on the first withdrawal (after 30 days funded), then 80%", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"},
+        {"id": "ntf-progressive-one-step", "name": "Progressive Challenge (One-Step)", "type": "Challenge", "description": "Access fees: $5 (5K), $15 (15K), $25 (25K), $30 (50K), $40 (100K), $50 (200K). Same profit cap as the Standard Challenge.", "accountSizeMin": 5000, "accountSizeMax": 200000, "entryFeeMin": 5, "entryFeeMax": 50, "profitTarget": "10%", "maxDailyLoss": "not stated", "maxDrawdown": "trailing", "profitSplit": "50% on the first withdrawal, then 80%", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"},
+        {"id": "ntf-1k-starter", "name": "1K Starter (Three-Step)", "type": "Challenge", "description": "Small-account programme with three phases.", "accountSizeMin": 1000, "accountSizeMax": 1000, "profitTarget": "10%, 7%, then 5%", "maxDailyLoss": "5% of the start-of-day balance", "maxDrawdown": "10%, static (equity-based)", "profitSplit": "50% on the first withdrawal, then 80%", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
+      ],
       "changelog": [
         {
           "date": "2026-11-18",
@@ -23880,9 +23970,12 @@
           "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 7 new restrictive rules; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
           "source": "https://nowtradefunded.com/faqs/",
           "fields": ["auditSummary", "payoutDelay", "restrictiveRules", "verdict"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Read on the official Schedule of Assessment Programs and Fees: Standard two-step ($8 for 2.5K to $900 for 200K; 10%/7% targets, 5% daily, 10% static), Progressive one-step ($5 for 5K to $50 for 200K; 10% target, trailing drawdown) and 1K Starter (three steps, static); split 50% on the first withdrawal then 80%; profit cap 2.5% then 5% of the starting balance.", "source": "https://www.nowtradefunded.com/schedule-of-programs", "fields": ["products", "priceFrom", "drawdownType"]}
       ],
       "set": {
+        "drawdownType": "Hybride",
+        "priceFrom": 5,
         "trustpilotRating": 3.1,
         "trustpilotReviewCount": 16,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/nowtradefunded.com",
@@ -23915,7 +24008,8 @@
         {
           "label": "nowtradefunded.com official page (read 2026-11-19)",
           "url": "https://nowtradefunded.com/product/5k-two-phase-standard-challenge-2/"
-        }
+        },
+        {"label": "now-trade-funded official rules/pricing page (read 2026-11-26)", "url": "https://www.nowtradefunded.com/schedule-of-programs"}
       ],
       "auditedPrograms": [
         {
@@ -23925,7 +24019,10 @@
       ]
     },
     "getcryptofunded": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-26",
+      "addSources": [
+        {"label": "CryptoPropFirms: GetCryptoFunded domain DNS failure (29 Sep 2026)", "url": "https://cryptopropfirms.io/learn/are-crypto-prop-firms-legit/"}
+      ],
       "changelog": [
         {
           "date": "2026-11-09",
@@ -23936,9 +24033,11 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official site unreachable in PropRadar's check of 26 Nov 2026, confirmed by an external source: warning set under the 'probably closed' policy approved by Geyer on 26 Nov 2026. Status unchanged; no closure is recorded without an official notice.", "source": "https://cryptopropfirms.io/learn/are-crypto-prop-firms-legit/", "fields": ["listedDomainWarning"]}
       ],
       "set": {
+        "listedDomainWarning": "PROBABLY CLOSED: getcryptofunded.com served only an empty page when PropRadar checked it on 26 Nov 2026, and CryptoPropFirms reported a DNS failure on the domain on 29 Sep 2026. No closure notice has been found, but the firm has probably stopped operating. Any website using this name or logo is not recognised as official by PropRadar: do not pay on it.",
         "trustpilotRating": 2.3,
         "trustpilotReviewCount": 7,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/getcryptofunded.com"
@@ -23956,16 +24055,28 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
+        },
+        {
+          "date": "2026-11-25",
+          "summary": "Status set to closed: Forex Peace Army lists Fidelcrest.com as \"Out of business\" (\"Website is down. Company seems to be out of business\", updated 29 Jan 2025); Trustpilot shows no review since 4 Jan 2025. Closure reported by Geyer on 2026-11-25.",
+          "source": "https://www.forexpeacearmy.com/forex-reviews/18879/fidelcrest-prop-firm",
+          "fields": [
+            "status"
+          ]
         }
       ],
       "set": {
+        "status": "Fermée",
         "trustpilotRating": 3.9,
         "trustpilotReviewCount": 1766,
         "trustpilotSourceUrl": "https://ca.trustpilot.com/review/fidelcrest.com"
       }
     },
     "leveled-up-society": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-26",
+      "addSources": [
+        {"label": "MyPropGenius rule changes, October 2026: Leveled Up Society domain redirect", "url": "https://mypropgenius.com/rule-changes/2026-10/"}
+      ],
       "changelog": [
         {
           "date": "2026-11-09",
@@ -23992,9 +24103,11 @@
           "fields": [
             "incidents"
           ]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official site unreachable in PropRadar's check of 26 Nov 2026, confirmed by an external source: warning set under the 'probably closed' policy approved by Geyer on 26 Nov 2026. Status unchanged; no closure is recorded without an official notice.", "source": "https://mypropgenius.com/rule-changes/2026-10/", "fields": ["listedDomainWarning"]}
       ],
       "set": {
+        "listedDomainWarning": "PROBABLY CLOSED: leveledupsociety.com did not answer when PropRadar checked it on 26 Nov 2026; MyPropGenius reported on 9 Oct 2026 that the domain redirects to an unrelated gambling site and that the firm's October 2023 notice said all services were temporarily paused, with no sign of a restart. No closure notice has been found, but the firm has probably stopped operating. Any website using this name or logo is not recognised as official by PropRadar: do not pay on it.",
         "trustpilotRating": 3.3,
         "trustpilotReviewCount": 1286,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.leveledupsociety.com"
@@ -24112,7 +24225,13 @@
       ]
     },
     "myfundedcapital": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-26",
+      "addSources": [
+        {"label": "MyFundedCapital 1-Step FAQ (official)", "url": "https://myfundedcapital.com/faq/1-step-mfc-challenge/"},
+        {"label": "MyFundedCapital 2-Step FAQ (official)", "url": "https://myfundedcapital.com/faq/2-step-mfc-challenge/"},
+        {"label": "MyFundedCapital Instant Funding FAQ (official)", "url": "https://myfundedcapital.com/faq/instant-funding/"},
+        {"label": "ChatGPT dossier on MyFundedCapital (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/myfundedcapital/program-evidence-chatgpt-2026-11-26.md"}
+      ],
       "changelog": [
         {
           "date": "2026-11-09",
@@ -24123,9 +24242,13 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official FAQ (read by ChatGPT on 26 Nov 2026; the site refused Claude's request): 1-Step 10% target, 5% daily on the previous EOD closed balance, 10% trailing on the highest closed balance locking at the initial balance at +10%, 80% split (90/95% options); 2-Step 8%/5%, 5% daily, 10% static, 80% (95% option); Instant no target, 3% daily, 6% trailing locking at the initial balance, 70% (80% option). Since 22 Oct 2026: best day 50% in evaluations, 35% consistency when funded. Older French pages show different limits and were not used. Account sizes and list prices per size not read.", "source": "https://myfundedcapital.com/faq/1-step-mfc-challenge/", "fields": ["profitSplit", "drawdownType", "payoutDelay"]}
       ],
       "set": {
+        "payoutDelay": "2-Step: first request 14 days after the first trade, then every 14 days. Instant: first request after 14 days, then every 7 days ($50 minimum, $5,000 maximum per request). Since 22 Oct 2026 a funded cycle needs 3 days with at least 0.25% risk.",
+        "drawdownType": "Hybride",
+        "profitSplit": 80,
         "trustpilotRating": 3.5,
         "trustpilotReviewCount": 82,
         "trustpilotSourceUrl": "https://au.trustpilot.com/review/myfundedcapital.com"
@@ -24888,7 +25011,7 @@
       ]
     },
     "alpine-funded": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-26",
       "changelog": [
         {
           "date": "2026-11-09",
@@ -24925,9 +25048,11 @@
           "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 2 new classified restrictive rules.",
           "source": "https://help.alpinefunded.com/en/articles/9690819-what-is-the-payout-schedule",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official pages (read by ChatGPT on 26 Nov 2026): Alpine 2-Step 8%/5%, 5% daily, 10% total, 80% then 90% with scaling, payouts every 14 days then weekly after 3 rewards; Base Camp Instant 3% daily and 5% trailing on the intraday equity high, split advertised up to 100%. Prices are in euros and shown at -50%, so no list price is recorded. The Base Camp FAQ still describes a 5% threshold and paying the first two rewards with the third, which conflicts with the current 'from 3 days' claim: kept as unresolved. Old 'Peak' pages return 404 and are not the current 2-Step.", "source": "https://alpinefunded.com/faq/base-camp-payouts/", "fields": ["profitSplit"]}
       ],
       "set": {
+        "profitSplit": 80,
         "payoutDelay": "Program-dependent: older help describes a first-after-21-days rule, current homepage describes Alpine 2-Step every 14 days, and Alpine Pass FAQ describes Thursday processing after a Tuesday 12:00 UTC cutoff with a $40 fee. Confirm current program-specific terms.",
         "newsTrading": "Variable",
         "verdict": "Alpine Funded now sells an Alpine Pass subscription alongside evaluated and instant models, so its former blanket '21 days then biweekly' payout description was misleading. The Pass requires recurring fees, ten qualifying profit days and a 10% milestone, and rewards are fixed by subscription tier with a $40 processing charge. The company publishes payout certificates, but they are not independently matched to receiving accounts. A previously reported Ukrainian regulator watchlist entry remains an important due-diligence item.",
@@ -24969,7 +25094,9 @@
         {
           "label": "Alpine Funded Base Camp payouts (official, read 2026-11-18)",
           "url": "https://help.alpinefunded.com/en/articles/9963151-how-do-payouts-work"
-        }
+        },
+        {"label": "Alpine Funded Base Camp payouts FAQ (official)", "url": "https://alpinefunded.com/faq/base-camp-payouts/"},
+        {"label": "ChatGPT dossier on Alpine Funded (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/alpine-funded/program-evidence-chatgpt-2026-11-26.md"}
       ],
       "addIncidents": ["Finance Magnates reported on 2025-03-05 (Arnab Shome) that Ukraine's National Securities and Stock Market Commission (NSSMC) added Alpine Funded and Aura Funded to its warning list, among seven names flagged the week before; the article notes the regulator gave no reason for their inclusion (https://www.financemagnates.com/forex/ukraine-flags-two-prop-trading-firms-is-it-a-signal-of-incoming-regulations/)."],
       "addPayoutProofs": [
@@ -25083,7 +25210,8 @@
       }
     },
     "fundedhive": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-26",
+      "set": {"profitSplit": 80},
       "restrictiveRules": [
         {
           "program": "FundedHive Pay From Profits 2-Step — upfront versus deferred fee",
@@ -25116,6 +25244,10 @@
           "clarity": "clear"
         }
       ],
+      "addSources": [
+        {"label": "FundedHive Pay From Profits (official)", "url": "https://fundedhive.com/pay_from_profits"},
+        {"label": "ChatGPT dossier on FundedHive (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/fundedhive/program-evidence-chatgpt-2026-11-26.md"}
+      ],
       "changelog": [
         {
           "date": "2026-11-18",
@@ -25140,7 +25272,8 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://fundedhive.com/faq",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official Pay From Profits page (read by ChatGPT on 26 Nov 2026): one phase, 10% target, 5% daily (EOD), 10% static, 3% risk per trade, 80% funded split, three profitable days; $19 access fee and a funded fee from $49 depending on the risk category. Another risk group uses 1% per trade, 2% daily and 5% drawdown; a funded breach suspends the account until a fee difference is paid. The $19 fee does not apply to every size, so no 'from' price is recorded; the full grid and payout timing were not confirmed.", "source": "https://fundedhive.com/pay_from_profits", "fields": ["profitSplit"]}
       ],
       "addIncidents": [
         "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au and ie mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedhive.com)."
@@ -26682,7 +26815,10 @@
       ]
     },
     "monevis": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-26",
+      "setProducts": [
+        {"id": "monevis-instant", "name": "Instant Funding", "type": "Instant funding", "description": "Regular prices $29, $59, $99, $149, $249, $499 (50% off with a code during the read). WARNING: every card on the page is labelled $3,000; the targets and limits ($180 to $3,000 = 6%) match the $3K, $6K, $10K, $15K, $25K and $50K tabs, so sizes are read from those figures. The page also says both '30 calendar days' after the first trade and 'Unlimited Time'; the detailed rule asks for 6% within 30 days, renewable for a fee.", "accountSizeMin": 3000, "accountSizeMax": 50000, "entryFeeMin": 29, "entryFeeMax": 499, "profitTarget": "6% reward target", "maxDailyLoss": "2%", "maxDrawdown": "8%, static", "profitSplit": "50%", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
+      ],
       "changelog": [
         {
           "date": "2026-11-17",
@@ -26707,7 +26843,8 @@
           "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 4 new classified restrictive rules.",
           "source": "https://help.monevis.com/en/articles/9961179-group-trading",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official Instant Funding page read on 26 Nov 2026 (and ChatGPT's dossier): regular prices $29 to $499, 6% reward target, 2% daily, 8% static, 50% split, bi-weekly payouts. Contradictions kept on the programme: all cards labelled $3,000; '30 days' vs 'unlimited time'. The 50% split applies to Instant only; One-Step and Three-Step grids not read.", "source": "https://monevis.com/instant-funding", "fields": ["products"]}
       ],
       "set": {
         "payoutDelay": "Company reports 7- or 14-day payout schedule by program; instant program claims biweekly with 50% split. Independent settlement unverified.",
@@ -26780,7 +26917,9 @@
         {
           "label": "Monevis copy trading rule (official, 2026-11-18)",
           "url": "https://help.monevis.com/en/articles/9620576-can-i-use-copy-trading"
-        }
+        },
+        {"label": "Monevis Instant Funding (official)", "url": "https://monevis.com/instant-funding"},
+        {"label": "ChatGPT dossier on Monevis (26 Nov 2026)", "url": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/monevis/program-evidence-chatgpt-2026-11-26.md"}
       ],
       "auditedPrograms": [
         {
@@ -27042,9 +27181,18 @@
             "trustpilotReviewCount",
             "legalReview"
           ]
+        },
+        {
+          "date": "2026-11-25",
+          "summary": "Status set to closed: TheTrustedProp marks The Forex Funder as closed (\"This prop firm is no longer operating\"). Closure reported by Geyer on 2026-11-25; no official closure notice or date verified.",
+          "source": "https://thetrustedprop.com/prop-firms/theforexfunder/news",
+          "fields": [
+            "status"
+          ]
         }
       ],
       "set": {
+        "status": "Fermée",
         "trustpilotRating": 2.5,
         "trustpilotReviewCount": 1574,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/theforexfunder.com",
@@ -28293,7 +28441,12 @@
       ]
     },
     "equity-edge": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-26",
+      "setProducts": [
+        {"id": "equity-edge-1-step-legacy", "name": "1-Step Legacy", "type": "Challenge", "description": "Sizes $2,500 to $100,000 ($200K and $300K are reserved for Flagship and Instant accounts). Prices are shown in a dynamic table that was not read as text.", "accountSizeMin": 2500, "accountSizeMax": 100000, "profitTarget": "10%", "maxDailyLoss": "4%", "maxDrawdown": "6%, trailing from the highest balance or equity", "profitSplit": "80%, up to 90% with the scaling plan", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"},
+        {"id": "equity-edge-1-step-swift", "name": "1-Step Swift", "type": "Challenge", "description": "Sizes $2,500 to $100,000. Prices are shown in a dynamic table that was not read as text.", "accountSizeMin": 2500, "accountSizeMax": 100000, "profitTarget": "8%", "maxDailyLoss": "3%", "maxDrawdown": "5%, trailing from the highest balance or equity", "profitSplit": "80%, up to 90% with the scaling plan", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"},
+        {"id": "equity-edge-instant", "name": "Instant account", "type": "Instant funding", "description": "No challenge. Sizes up to $300,000. Maximum loss not stated on the rules page read.", "accountSizeMin": 2500, "accountSizeMax": 300000, "profitTarget": "none", "maxDailyLoss": "not stated", "maxDrawdown": "not stated", "profitSplit": "90%", "platforms": ["not stated"], "tradableAssets": ["Forex", "CFD"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
+      ],
       "changelog": [
         {
           "date": "2026-11-17",
@@ -28330,9 +28483,11 @@
           "summary": "Restrictive-rules audit: read the trading rules and guidelines, the payout process page and the terms and conditions; 9 rules across 1-Step, 2-Step and Instant.",
           "source": "https://equityedge.io/trading-rules/trading-rules-and-guidelines",
           "fields": ["restrictiveRules"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Programs read on the official rules and FAQ pages: account sizes $2,500 to $300,000, 80% split (90% via scaling, 90% on Instant), 1-Step Legacy (10% target, 4% daily, 6% trailing) and 1-Step Swift (8% target, 3% daily, 5% trailing). Prices are in a dynamic table and were not read.", "source": "https://equityedge.io/general/available-account-sizes", "fields": ["products", "profitSplit"]}
       ],
       "set": {
+        "profitSplit": 80,
         "status": "À surveiller",
         "score": 58,
         "officialWebsite": "https://equityedge.io/",
@@ -28424,7 +28579,9 @@
         {
           "label": "Official biweekly/VIP reward request and conditional 48h processing rules",
           "url": "https://equityedge.io/funded-traders/payout-process"
-        }
+        },
+        {"label": "equity-edge official rules/pricing page (read 2026-11-26)", "url": "https://equityedge.io/general/available-account-sizes"},
+        {"label": "equity-edge official rules/pricing page (read 2026-11-26)", "url": "https://equityedge.io/general/profit-split"}
       ],
       "addPayoutProofs": [
         {

@@ -10,7 +10,7 @@ export const FTMO_BLACK_FRIDAY_CREATIVE = 'https://cdn.ftmo.com/06087f2803df4f8d
 
 // Our own conservative homepage display cutoff, NOT a claimed FTMO promo end date.
 // Revalidated at most hourly by the homepage ISR setting.
-export const FTMO_BLACK_FRIDAY_DISPLAY_UNTIL = '2026-12-01T00:00:00Z';
+export const FTMO_BLACK_FRIDAY_DISPLAY_UNTIL = '2026-11-30T09:00:00Z';
 
 type Copy = {
   label: string;

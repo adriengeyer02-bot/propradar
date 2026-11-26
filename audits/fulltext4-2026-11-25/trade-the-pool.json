@@ -1,0 +1,22 @@
+{
+ "slug": "trade-the-pool",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B6",
+   "text": "Defamatory, disparaging or harmful statements on review sites or social media are listed among the grounds of termination for cause.",
+   "source": "https://tradethepool.com/terms-and-conditions/",
+   "locator": "Termination for Cause",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B7",
+   "text": "Once a user becomes a Professional User, the relationship is governed by additional terms which the user will be required to accept in addition to these Terms; they are not published with the terms.",
+   "source": "https://tradethepool.com/terms-and-conditions/",
+   "locator": "Professional User / additional terms",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

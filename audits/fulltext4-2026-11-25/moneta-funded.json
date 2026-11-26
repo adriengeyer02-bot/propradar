@@ -1,0 +1,22 @@
+{
+ "slug": "moneta-funded",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Moneta may, at its sole discretion, delay, reduce, deduct, refuse, cancel or void any pending or future payout for Prohibited Conduct or any breach of the Program Rules, and remove the related profits.",
+   "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+   "locator": "Terms (September 2026) §5 payouts / Prohibited Conduct",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B7",
+   "text": "Passing the Evaluation leads to an offer 'subject to additional verification and the execution of a separate Funded Trader Agreement'; profit split arises only under that separate agreement, not published with the terms. Passing 'does not automatically guarantee you will become a Funded Trader' (full discretion).",
+   "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+   "locator": "§3.6-3.10",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

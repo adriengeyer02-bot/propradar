@@ -1,0 +1,145 @@
+/* Contract audit dossier on firm pages (documentary, not a score input). */
+.pr-contract-audit .ca-badges { display: flex; flex-wrap: wrap; gap: 6px; margin: -4px 0 16px; }
+.pr-contract-audit .ca-hint { margin-top: 14px; }
+.pr-contract-audit .ca-inline-tag { margin-right: 8px; vertical-align: 1px; font-size: 11px; }
+.pr-contract-audit .ca-locator, .pr-contract-audit .ca-date { color: var(--muted); }
+.pr-contract-audit .ca-note { margin: 12px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.pr-contract-audit .ca-missing { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 13.5px; line-height: 1.5; color: var(--text); }
+.pr-contract-audit .ca-trustpilot { margin: 14px 0 0; color: var(--muted); font-size: 13px; }
+.pr-contract-audit .ca-trustpilot a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.pr-contract-audit .pr-section-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; color: var(--muted); font-size: 12.5px; }
+.pr-contract-audit .pr-section-meta b { color: var(--text); font-weight: 600; }
+.ca-menu-safeguard .pr-rules-list li { border-left-color: var(--tone-good, var(--line)); }
+
+/* Scale C score dialog (ScoreBreakdownDialog, view.scaleC) */
+.psb-c-evidence { margin: 6px 0 0; padding: 0 0 0 16px; font-size: 12px; line-height: 1.45; color: var(--hud-faint); }
+.psb-c-items li em { overflow-wrap: anywhere; }
+.psb-c-items li a { display: inline-block; margin-top: 3px; font-size: 11.5px; }
+.psb-c-locator { display: block; margin-top: 2px; font-size: 11px; color: var(--hud-faint); opacity: .8; }
+
+/* Contractual points to watch (ContractRedFlags) */
+.pr-red-flags-box { border: 1px solid rgba(239, 68, 68, .35); border-left: 4px solid #ef4444; border-radius: 12px; padding: 18px 20px; background: rgba(239, 68, 68, .05); }
+.pr-red-flags-box h2 { margin: 0 0 4px; font-size: 1.15rem; }
+.pr-red-flags-lead { margin: 0 0 12px; font-size: .9rem; opacity: .8; }
+.pr-red-flags-box ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.pr-red-flags-box li { display: grid; gap: 3px; }
+.pr-red-flags-box li strong { font-size: .95rem; }
+.pr-red-flags-pts { color: #ef4444; font-variant-numeric: tabular-nums; }
+.pr-red-flags-text { font-size: .88rem; line-height: 1.45; overflow-wrap: anywhere; }
+.pr-red-flags-meta { display: flex; gap: 12px; flex-wrap: wrap; font-size: .78rem; opacity: .75; }
+.pr-red-flags-more { display: inline-block; margin-top: 12px; font-size: .88rem; font-weight: 600; }
+
+/* Firm "at a glance" card (Geyer, 2026-11-26) */
+.pr-glance { margin-top: 1.25rem; padding: 1.1rem 1.25rem; border: 1px solid var(--pr-border, rgba(120,140,170,.25)); border-radius: 14px; background: var(--pr-surface, rgba(255,255,255,.03)); display: grid; gap: .85rem; }
+.pr-glance-title { font-size: .8rem; letter-spacing: .02em; font-weight: 600; opacity: .7; margin: 0; }
+.pr-glance-row { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .75rem; }
+.pr-glance-label { font-size: .85rem; opacity: .75; }
+.pr-glance-chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+.pr-glance-chip { font-size: .85rem; font-weight: 600; padding: .25rem .65rem; border-radius: 999px; background: rgba(34,211,238,.12); color: var(--pr-accent, #22d3ee); border: 1px solid rgba(34,211,238,.3); }
+.pr-glance-muted { font-size: .85rem; opacity: .6; }
+.pr-glance-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .5rem 1rem; margin: 0; padding: .75rem 0; border-top: 1px solid var(--pr-border, rgba(120,140,170,.2)); border-bottom: 1px solid var(--pr-border, rgba(120,140,170,.2)); }
+.pr-glance-facts dt { font-size: .75rem; opacity: .65; }
+.pr-glance-facts dd { margin: .1rem 0 0; font-size: 1.05rem; font-weight: 700; }
+.pr-glance-watch { display: flex; align-items: baseline; gap: .55rem; margin: 0; font-size: .92rem; }
+.pr-glance-icon { flex: none; width: 1.25rem; height: 1.25rem; border-radius: 50%; display: inline-grid; place-items: center; font-weight: 800; font-size: .75rem; background: #f87171; color: #1b0b0b; }
+.pr-glance-pts { font-weight: 700; color: #f87171; margin-left: .25rem; }
+.pr-glance-watch a { margin-left: auto; white-space: nowrap; }
+.pr-glance-reading { margin: 0; font-size: .85rem; }
+.pr-glance-reading-full span[aria-hidden] { color: #34d399; font-weight: 700; }
+.pr-glance-reading-none span[aria-hidden], .pr-glance-reading-excerpts span[aria-hidden] { color: #fbbf24; }
+.pr-firm-verdict > p { margin: 0; }
+.pr-verdict-more { margin-top: .35rem; }
+.pr-verdict-more summary { cursor: pointer; color: var(--pr-accent, #22d3ee); font-size: .9rem; font-weight: 600; list-style: none; }
+.pr-verdict-more summary::-webkit-details-marker { display: none; }
+.pr-verdict-more[open] summary { display: none; }
+.pr-verdict-more > p { margin: 0; }
+
+/* Programmes and prices (Geyer, 2026-11-26): one shared offer, one price grid per programme */
+.pr-offers-promo { margin: 0 0 16px; }
+.pr-price-matrix { display: grid; gap: 8px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2, rgba(64, 180, 180, 0.045)); overflow-x: auto; }
+.pr-price-matrix table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.pr-price-matrix th, .pr-price-matrix td { padding: 6px 8px; text-align: right; white-space: nowrap; }
+.pr-price-matrix thead th { font-size: 11px; font-weight: 600; color: var(--muted); border-bottom: 1px solid var(--line); }
+.pr-price-matrix thead th:first-child, .pr-price-matrix tbody th { text-align: left; }
+.pr-price-matrix tbody th { font-size: 12px; font-weight: 600; white-space: normal; color: var(--soft, inherit); }
+.pr-price-matrix tbody td { font-size: 15px; font-weight: 700; }
+.pr-price-matrix tbody tr + tr th, .pr-price-matrix tbody tr + tr td { border-top: 1px solid var(--line); }
+.pr-price-matrix td small { display: block; font-size: 10px; font-weight: 500; color: var(--muted); }
+.pr-product-details-content > .pr-product-intro { margin: 0 0 10px; }
+.pr-offers-promo .pr-program-promo-head > strong { color: var(--accent); font-size: 1.25rem; }
+.pr-offers-promo .pr-program-promo-details summary { color: var(--accent); font-weight: 650; cursor: pointer; }
+@media (min-width: 1100px) { .pr-offers-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.pr-price-all { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+.pr-price-all table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.pr-price-all th, .pr-price-all td { padding: 10px 12px; text-align: right; white-space: nowrap; }
+.pr-price-all thead th { font-size: 12px; font-weight: 600; color: var(--muted); border-bottom: 1px solid var(--line); }
+.pr-price-all thead th:first-child, .pr-price-all tbody th { text-align: left; }
+.pr-price-all tbody th { white-space: normal; min-width: 180px; font-weight: 650; }
+.pr-price-all tbody th a { color: inherit; text-decoration: none; }
+.pr-price-all tbody th a:hover { color: var(--accent); text-decoration: underline; }
+.pr-price-all tbody th small { display: block; font-size: 11px; font-weight: 500; color: var(--muted); }
+.pr-price-all tbody td { font-weight: 700; }
+.pr-price-all td small { display: block; font-size: 10px; font-weight: 500; color: var(--muted); }
+.pr-price-all tbody tr + tr > * { border-top: 1px solid var(--line); }
+.pr-price-notes { margin: 10px 0 0; padding-left: 18px; font-size: 12px; color: var(--muted); display: grid; gap: 4px; }
+.pr-price-notes strong { color: var(--soft, inherit); font-weight: 650; margin-right: 4px; }
+
+/* Premium programme cards: price tiles remain legible at every viewport. */
+.pr-offers-premium { grid-template-columns: repeat(2,minmax(0,1fr)); align-items:stretch; gap:18px; }
+.pr-offers-premium .pr-product { display:flex; flex-direction:column; min-width:0; gap:12px; }
+.pr-offer-price-stack { display:grid; gap:10px; min-width:0; }
+.pr-offer-price-group { display:grid; gap:10px; border:1px solid var(--line); border-radius:12px; padding:12px; background:var(--surface-2,rgba(100,150,200,.045)); min-width:0; }
+.pr-offer-price-heading { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:5px 12px; }
+.pr-offer-price-heading strong { font-size:14px; line-height:1.35; overflow-wrap:anywhere; }
+.pr-offer-price-heading > span { color:var(--muted); font-size:11px; }
+.pr-offer-price-tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(105px,100%),1fr)); gap:8px; }
+.pr-offer-price-tile { min-width:0; display:flex; flex-direction:column; gap:5px; padding:10px 12px; border:1px solid var(--line); border-radius:9px; background:color-mix(in srgb,var(--surface, #121a25) 90%,var(--accent,#22d3ee) 10%); }
+.pr-offer-price-tile > span { color:var(--muted); font-size:12px; }
+.pr-offer-price-tile > strong { color:var(--text,inherit); font-size:clamp(17px,1.7vw,23px); font-weight:750; line-height:1.15; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+.pr-offer-price-tile > small { font-size:11px; color:var(--muted); overflow-wrap:anywhere; }
+.pr-offer-price-group .pr-product-prices-links { display:flex; flex-wrap:wrap; gap:8px; justify-content:space-between; }
+.pr-offers-premium .pr-product-details { margin-top:auto; border:1px solid var(--line); border-radius:9px; padding:10px 12px; }
+.pr-offers-premium .pr-product-details > summary { cursor:pointer; font-weight:650; }
+.pr-offers-premium .pr-product > .btn-primary { width:100%; justify-content:center; margin-top:0; }
+.pr-offers-premium .pr-product-highlights > div { min-width:0; overflow-wrap:anywhere; }
+@media(max-width:800px) { .pr-offers-premium { grid-template-columns:minmax(0,1fr); } }
+@media(max-width:420px) { .pr-offer-price-tiles { grid-template-columns:repeat(2,minmax(0,1fr)); } .pr-offer-price-tile { padding:9px; } }
+/* Lighter programme cards: key figures visible, rules and prices in dropdowns (Geyer, 2026-11-26) */
+.pr-offer-key { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 4px 0 0; padding: 10px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.pr-offer-key dt { font-size: 11px; color: var(--muted); }
+.pr-offer-key dd { margin: 2px 0 0; font-size: 18px; font-weight: 750; font-variant-numeric: tabular-nums; }
+.pr-price-dropdown > .pr-price-matrix { margin-top: 8px; }
+.pr-price-tables-dropdown > summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 8px; }
+.pr-price-tables-dropdown > summary::-webkit-details-marker { display: none; }
+.pr-price-tables-dropdown > summary::before { content: '▸'; color: var(--accent); font-size: 14px; }
+.pr-price-tables-dropdown[open] > summary::before { content: '▾'; }
+.pr-price-tables-dropdown > summary h3 { margin: 0; }
+.pr-promo-dropdown > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.pr-promo-dropdown > summary span { font-size: 12px; color: var(--muted); font-weight: 600; }
+.pr-promo-dropdown > summary strong { color: var(--accent); font-size: 13px; font-weight: 750; }
+.pr-promo-dropdown .pr-program-promo { margin-top: 8px; }
+.pr-promo-dropdown > summary { list-style: none; cursor: pointer; }
+.pr-promo-dropdown > summary::-webkit-details-marker { display: none; }
+.pr-promo-dropdown > summary::before { content: '▸'; color: var(--accent); font-size: 11px; }
+.pr-promo-dropdown[open] > summary::before { content: '▾'; }
+/* Current offer on each programme card (Geyer, 2026-11-26) */
+.pr-offer-key dd s { color: var(--muted); font-weight: 600; text-decoration-thickness: 2px; }
+.pr-offer-now { display: grid; gap: 6px; padding: 10px 12px; border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); border-radius: 10px; background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.pr-offer-now-line { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.pr-offer-badge { padding: 2px 8px; border-radius: 999px; background: var(--accent); color: #04121a; font-weight: 800; font-size: 13px; font-variant-numeric: tabular-nums; }
+.pr-offer-now-label { font-size: 13px; font-weight: 700; }
+.pr-offer-now-price { font-variant-numeric: tabular-nums; font-size: 14px; }
+.pr-offer-now-price span { color: var(--muted); font-size: 12px; }
+.pr-offer-now-price s { color: var(--muted); }
+.pr-offer-now-price strong { color: var(--accent); font-size: 16px; }
+.pr-offer-now-extra { font-size: 12px; color: var(--muted); }
+.pr-offer-code { font-size: 12px; color: var(--muted); }
+.pr-offer-code code { margin-left: 4px; padding: 2px 8px; border: 1px dashed var(--accent); border-radius: 6px; color: var(--text, inherit); font-weight: 800; letter-spacing: .04em; }
+.pr-offer-direct { font-size: 13px; font-weight: 700; color: var(--accent); text-decoration: none; }
+.pr-offer-direct:hover { text-decoration: underline; }
+.pr-offer-terms { margin-left: auto; font-size: 11px; }
+.pr-offer-terms summary { cursor: pointer; color: var(--muted); }
+.pr-offer-terms[open] { flex-basis: 100%; margin-left: 0; }
+.pr-offer-terms p { margin: 6px 0 0; color: var(--muted); }
+.pr-offer-key-sale { color: var(--accent); }
+.pr-offer-computed { margin: -2px 0 0; font-size: 11px; color: var(--muted); }

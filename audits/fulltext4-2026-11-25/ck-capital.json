@@ -1,0 +1,22 @@
+{
+ "slug": "ck-capital",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Additionally, the Company reserves the right to disallow or block any Trader from participating in the program for any reason, in the Company’s sole and absolute discretion.",
+   "source": "https://ckpropfirm.com/en/terms-conditions",
+   "locator": "§3 Prohibited Uses",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "2-phase evaluation: 50% consistency; instant funding 20%.",
+   "source": "https://ckpropfirm.com/en/trading-objectives",
+   "locator": "Trading objectives",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

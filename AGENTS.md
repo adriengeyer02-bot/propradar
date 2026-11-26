@@ -1,5 +1,3 @@
-> **POLITIQUE ACTUELLE (décision propriétaire 2026-11-22) : V5.2.** Lire d'abord [SCORING_V5_2.md](SCORING_V5_2.md), puis [claude/V52_HANDOFF_2026-11-22.md](claude/V52_HANDOFF_2026-11-22.md). Les mentions V4/V5 et plafonds Trustpilot à 64 ci-dessous sont **historiques**. Ne jamais publier automatiquement des migrations : seules les entrées explicitement admises dans `scoring-v52-published.json` sont actives après fusion. Les nouvelles firmes sont notées nativement avec `app/lib/scoringV52.ts` (13 critères). Les agents ChatGPT et Claude travaillent désormais sur la **même** file 122, sans exclusivité ancienne C/N, en évitant les slugs traités dans d'autres PR.
-
 # Instructions for AI agents (ChatGPT/Codex, Claude and others)
 
 Several AI agents work on this repository for Geyer. Read these files before
@@ -17,6 +15,28 @@ any change, in this order:
 3. `claude/README.md`: short, dated implementation brief for Claude
    (including how to correct manual scores that embedded the former -8).
 4. `README.md`: product overview (French).
+
+## Shared branch — from PR #283 (Geyer, 2026-11-26)
+
+**`main` is the only shared baseline and it is production: Vercel publishes every
+commit that lands on `main`.** `claude/scale-c-batch2` is retired once PR #283 is
+merged; do not push to it any more.
+
+- Before any edit: `git fetch` and start from the latest `origin/main`, never from a
+  local copy or an older branch. Re-fetch right before committing.
+- Work on a short branch (`claude/...` or `chatgpt/...`), open a PR into `main`.
+  Geyer merges. Never push directly to `main`.
+- File ownership, to avoid undoing each other:
+  - ChatGPT/Codex: translations in `app/lib/dataI18n/` and `app/lib/messages/` text
+    values, contract archives (`terms-archive/` on `agent/terms-archive`).
+  - Claude: scoring (`scale-c.json`, `scripts/*scale-c*`, `propFirms.ts` pipeline),
+    firm data (`app/data/firm-updates.json`), firm page layout
+    (`app/[locale]/firm/[slug]/page.tsx`, its components and CSS).
+  - A change in the other agent's files goes through a PR that says so in its title.
+- If a PR conflicts, merge the latest `main` into the branch and keep both sides'
+  work; never force-push and never overwrite a whole file from an old copy.
+- Both instruction files say the same thing: `CLAUDE.md` (Claude) and this file
+  (ChatGPT/Codex). Change both together.
 
 ## Who does what (set by Geyer on 2026-11-18)
 
@@ -39,7 +59,7 @@ publish a V4 note for a firm of the other agent's lots.
   (`GET repos/adriengeyer02-bot/propradar/pulls?state=open`). Do not edit a
   firm (a key of `firm-updates.json`) or a file that another agent's open PR
   changes; pick other work or wait.
-- **Start from an up-to-date `main`** and rebase on `main` right before you
+- **Start from the active integration baseline above** and synchronize with it right before you
   push. `app/data/firm-updates.json` is shared and large: change only the
   firm entries you work on, never reformat the whole file.
 - **Small PRs, one topic each.** Say in the PR body which firms or files you

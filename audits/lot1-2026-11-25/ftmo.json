@@ -1,0 +1,44 @@
+{
+ "slug": "ftmo",
+ "checkedOn": "2026-11-25",
+ "status": "COMPLETE_EXCEPT_FTMO_ACCOUNT_TERMS",
+ "checklist": {
+  "currentTermsRead": "General Terms and Conditions - Global, last updated 1 Nov 2026 (23-page PDF)",
+  "fundedAgreement": "FTMO Account Terms and Conditions offered after the Challenge (cl. 6.1; executed together for Instant, cl. 6.2); public availability not confirmed",
+  "trustpilotExactDomain": "4.8/5, 57,782 reviews (2026-11-24 check)",
+  "entityRegistry": "Czech law and courts (cl. 18); EU consumer ODR available (cl. 17)",
+  "payoutEvidence": "Trustpilot >= 4.5 with >= 20,000 reviews; firm-reported aggregate rewards",
+  "incidents": "none found"
+ },
+ "facts": [
+  {
+   "code": "B2",
+   "text": "FTMO reserves the right to determine 'at our own discretion' whether trades fall within a Forbidden Trading Practice; acting reasonably, it may cancel trades and cancel all FTMO Accounts or rewards, without prior notice (endeavours to notify) and without compensation; may also impose temporary or permanent consistency measures.",
+   "source": "https://cdn.ftmo.com/docs%2Fterms-and-conditions%2F118cdaed571a48529431ffa6ff28a91b",
+   "locator": "cl. 7.3; 7.5; 7.6.2; 7.6.4; 7.6.9; 7.7; 7.9",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B6",
+   "text": "Acting 'in a manner that may damage our reputation, including after termination' leads to termination of agreements and loss of access.",
+   "source": "https://cdn.ftmo.com/docs%2Fterms-and-conditions%2F118cdaed571a48529431ffa6ff28a91b",
+   "locator": "cl. 11.1",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "Instant consistency 30% of net total profit; exceeding delays the reward (prior dossier).",
+   "source": "https://ftmo.com/en/",
+   "locator": "Instant account rules",
+   "checkedOn": "2026-11-24",
+   "scoreNote": "Revised 2026-11-25: threshold applies to a secondary programme only (most lenient main programme scored), no penalty."
+  },
+  {
+   "code": "SAFE",
+   "text": "Terms changes notified at least 7 days ahead; trader can reject them (agreements then terminate); complaints answered within 30 days.",
+   "source": "https://cdn.ftmo.com/docs%2Fterms-and-conditions%2F118cdaed571a48529431ffa6ff28a91b",
+   "locator": "cl. 15.1; 14.3",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

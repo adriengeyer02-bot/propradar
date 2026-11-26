@@ -1,0 +1,616 @@
+{
+  "date": "2026-11-25",
+  "status": "REOPENED_PARTIAL_RESEARCH_ONLY_NO_SCORES",
+  "scope": "Four user-requested dossiers. Exact source coverage recorded. No automatic score, status, public dossier, or ranking change. Findings are proposed editorial observations; contractual enforceability not determined. Public source cache dates differ; indexed snippets never count as full documents. Preserve historical cohorts.",
+  "firms": [
+    {
+      "slug": "breakout-prop",
+      "name": "Breakout Prop",
+      "contractEvidenceStatus": "primary_evaluation_and_funded_contracts_partial_text",
+      "documents": [
+        {
+          "url": "https://www.breakoutprop.com/breakout-evaluation-agreement/",
+          "type": "evaluation agreement",
+          "status": "selected_sections_reviewed",
+          "lineCount": 311,
+          "locators": "31,45–48,99–102,109–125,167–172,261–267; remaining sections and annexes not fully read"
+        },
+        {
+          "url": "https://assets-cms.kraken.com/files/51n36hrp/facade/8b3d8193e52fa0fbe113d487e91c6238c863346e.pdf?dl=",
+          "type": "funded trader agreement",
+          "version": "2026-09-22",
+          "status": "selected_sections_reviewed",
+          "lineCount": 345,
+          "locators": "9,22–80,98–105,127,153–172,319; screenshot failed (cache miss); remaining clauses and annex not fully reviewed"
+        },
+        {
+          "url": "https://www.breakoutprop.com/program-rules/",
+          "status": "selected_rules_reviewed",
+          "lineCount": 369
+        },
+        {
+          "url": "https://intercom.help/breakoutprop/en/",
+          "status": "index_read",
+          "categories": 5,
+          "advertisedArticles": 110,
+          "categoryCounts": {
+            "evaluation": 45,
+            "funded": 46,
+            "nonCrypto": 7,
+            "terminal": 7,
+            "affiliates": 5
+          },
+          "note": "Index cached around three months earlier; not confirmed current and not deduplicated."
+        },
+        {
+          "url": "https://intercom.help/breakoutprop/en/articles/11647224-when-can-i-request-a-payout-from-my-funded-account",
+          "status": "complete_visible_article_read",
+          "lineCount": 25,
+          "articleDate": "2025-12-12"
+        }
+      ],
+      "observations": [
+        {
+          "finding": "The evaluation provider determines achievement of the required objectives under its exclusive discretion; passing requires compliance with limits and other contractual rules.",
+          "source": "https://www.breakoutprop.com/breakout-evaluation-agreement/",
+          "locator": "Line 31",
+          "scope": "Evaluation",
+          "category": "discretionary",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "The evaluation contract permits immediate termination on the provider's classification of prohibited trading, without fee reimbursement; a disagreement about that classification is excluded from the contractual arbitration procedure. The clause's legal enforceability is not established.",
+          "source": "https://www.breakoutprop.com/breakout-evaluation-agreement/",
+          "locator": "Use of Evaluation Dashboard, termination clause; lines 110–112",
+          "scope": "Evaluation",
+          "category": "discretionary",
+          "severity": "critical",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Separate right to terminate access and evaluation without advance notice at the company's discretion; no claim that every termination triggers forfeiture beyond the specific contractual language.",
+          "source": "https://www.breakoutprop.com/breakout-evaluation-agreement/",
+          "locator": "Term, Termination and Suspension §3; lines 114–119",
+          "scope": "Evaluation",
+          "category": "discretionary",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "The company may alter the agreement without prior notice; continued dashboard use is treated as acceptance.",
+          "source": "https://www.breakoutprop.com/breakout-evaluation-agreement/",
+          "locator": "Amendment and Waiver; line 167",
+          "scope": "Evaluation",
+          "category": "version_precedence",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "The agreement requires the trader to warrant having read and understood the help centre. This creates a large incorporated/documentary rule surface.",
+          "source": "https://www.breakoutprop.com/breakout-evaluation-agreement/",
+          "locator": "FAQs; line 113",
+          "scope": "Evaluation",
+          "category": "version_precedence",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Funded prohibited trading includes use of third-party approaches and ideas derived from other traders, analysts, communities or research. Breadth reaches inspiration, not merely automated copying.",
+          "source": "https://assets-cms.kraken.com/files/51n36hrp/facade/8b3d8193e52fa0fbe113d487e91c6238c863346e.pdf?dl=",
+          "locator": "§3(b)(vii)–(ix), lines 47–50",
+          "scope": "Funded",
+          "category": "discretionary",
+          "severity": "critical",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Strategies deemed difficult or unusually risky by the company's judgment may be prohibited, including large floating P&L variation; separate subjective provisions cover provider relationships and regulatory issues.",
+          "source": "https://assets-cms.kraken.com/files/51n36hrp/facade/8b3d8193e52fa0fbe113d487e91c6238c863346e.pdf?dl=",
+          "locator": "§3(b)(v)–(viii), lines 44–49",
+          "scope": "Funded",
+          "category": "discretionary",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Company may refuse orders, limit open positions and change the drawdown levels for trading halts in response to market conditions. B-book fills/prices are company-determined using market data. Independent company hedges do not change the contractual reward formula except as provided.",
+          "source": "https://assets-cms.kraken.com/files/51n36hrp/facade/8b3d8193e52fa0fbe113d487e91c6238c863346e.pdf?dl=",
+          "locator": "§3(d)–(f), lines 53–62",
+          "scope": "Funded",
+          "category": "rules_by_programme",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Company determines prohibited trading and can terminate immediately with loss of reward entitlement/withdrawal access; breach termination can be without advance notice. Distinguish this from ordinary KYC or fraud controls.",
+          "source": "https://assets-cms.kraken.com/files/51n36hrp/facade/8b3d8193e52fa0fbe113d487e91c6238c863346e.pdf?dl=",
+          "locator": "§5(y), §6(b), lines 154–164",
+          "scope": "Funded",
+          "category": "discretionary",
+          "severity": "critical",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Separate no-notice termination discretion may rest on confidential risk/security criteria that the company need not disclose. Do not infer that every no-breach termination forfeits already approved rewards: that specific consequence needs clarification.",
+          "source": "https://assets-cms.kraken.com/files/51n36hrp/facade/8b3d8193e52fa0fbe113d487e91c6238c863346e.pdf?dl=",
+          "locator": "§6(c), lines 165–166",
+          "scope": "Funded",
+          "category": "discretionary",
+          "severity": "critical",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Trader may disclose the relationship or role but is contractually restricted from publicly disclosing agreement terms.",
+          "source": "https://assets-cms.kraken.com/files/51n36hrp/facade/8b3d8193e52fa0fbe113d487e91c6238c863346e.pdf?dl=",
+          "locator": "§5(j), lines 99–103",
+          "scope": "Funded",
+          "category": "trader_protections",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Personal trading data is treated as company property and can be sold/licensed or shared under the contract; separate legal/data-protection constraints may apply.",
+          "source": "https://assets-cms.kraken.com/files/51n36hrp/facade/8b3d8193e52fa0fbe113d487e91c6238c863346e.pdf?dl=",
+          "locator": "§7(a), lines 170–172",
+          "scope": "Funded",
+          "category": "trader_protections",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Minimum payout $50 net of split, flat positions and no breach; amount debited at request while trading may continue. Older FAQ specifies USDC ERC-20, while the September agreement permits changing available payout methods. Verify current channel and version.",
+          "source": "https://assets-cms.kraken.com/files/51n36hrp/facade/8b3d8193e52fa0fbe113d487e91c6238c863346e.pdf?dl=",
+          "locator": "§4(b), lines 66–67; trading rules line 319",
+          "scope": "Funded",
+          "category": "payout_terms",
+          "severity": "medium",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "No evaluation time limit or minimum trading days in the retrieved public rule text; no payout during evaluation; hard breach at equity thresholds. Refunds generally unavailable except active evaluations rejected at KYC.",
+          "source": "https://www.breakoutprop.com/program-rules/",
+          "locator": "Lines 63–94,138–157,248–266",
+          "scope": "Evaluation",
+          "category": "rules_by_programme",
+          "severity": "medium",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Older FAQ describes weekend/weekday payouts subject to approval and USDC-network risks, with no adjustment for USDC price fluctuations.",
+          "source": "https://intercom.help/breakoutprop/en/articles/11647224-when-can-i-request-a-payout-from-my-funded-account",
+          "locator": "Lines 15–19",
+          "scope": "Funded",
+          "category": "payout_terms",
+          "severity": "medium",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        }
+      ],
+      "remainingCriticalDocument": "Read full evaluation and funded agreement (all clauses/annexes), screenshot PDF pages if accessible, current checkout acceptance and Kraken Consumer/Pro channel variants; enumerate and read all FAQ bodies, confirm current payout routing and treatment of pending/approved rewards after discretionary no-breach termination; verify official current legal entities, no score extrapolation across Kraken variants.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ftuk",
+      "name": "FTUK",
+      "contractEvidenceStatus": "primary_faq_bodies_partial_contract_blocked",
+      "documents": [
+        {
+          "url": "https://faq.ftuk.com/en/",
+          "status": "index_read_old_snapshot",
+          "categoryCounts": {
+            "about": 13,
+            "programs": 12,
+            "futures": 25,
+            "tradingRules": 23,
+            "purchases": 3,
+            "payouts": 6
+          },
+          "advertisedArticles": 82
+        },
+        {
+          "url": "https://faq.ftuk.com/en/",
+          "status": "recent_index_search_excerpt_only",
+          "categoryCounts": {
+            "start": 8,
+            "forex": 16,
+            "futures": 19,
+            "payouts": 6,
+            "payments": 6,
+            "tradingRules": 13,
+            "account": 2,
+            "platforms": 1,
+            "partners": 2,
+            "legacy": 7
+          },
+          "advertisedArticles": 80,
+          "note": "New indexed structure differs from old cached index; no assumption of coverage."
+        },
+        {
+          "url": "https://faq.ftuk.com/en/collections/15181749-about-ftuk",
+          "status": "collection_opened"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/collections/15181752-our-programs",
+          "status": "collection_opened"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/collections/15457090-futures",
+          "status": "collection_opened"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/collections/15181758-trading-rules",
+          "status": "collection_opened"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/collections/15181790-purchases",
+          "status": "collection_opened"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/collections/15457089-payouts",
+          "status": "collection_opened"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/12339790-what-are-account-breaches",
+          "lineCount": 50,
+          "status": "complete_visible_text_reviewed_older_snapshot"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/14364125-restricted-strategies-for-manual-trading",
+          "lineCount": 41,
+          "status": "complete_visible_text_reviewed_older_snapshot"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/12332935-what-is-the-account-protector",
+          "lineCount": 83,
+          "status": "complete_visible_text_reviewed_older_snapshot"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/13770309-partial-trade-closing-policy",
+          "lineCount": 33,
+          "status": "complete_visible_text_reviewed_older_snapshot"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/12339847-what-is-the-payout-locker",
+          "lineCount": 91,
+          "status": "complete_visible_text_reviewed_older_snapshot"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/14322511-new-flex-challenge-explained",
+          "lineCount": 174,
+          "status": "complete_visible_text_reviewed_older_snapshot"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/12310214-instant-funding-program-forex",
+          "lineCount": 43,
+          "status": "complete_visible_text_reviewed_older_snapshot"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/12333477-program-rules",
+          "lineCount": 33,
+          "status": "complete_visible_text_reviewed_older_snapshot"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/12339852-how-do-i-request-a-profit-payout",
+          "lineCount": 70,
+          "status": "partial_read",
+          "locators": "49–69"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/12354050-futures-trading-rules-permitted-prohibited-trading",
+          "status": "indexed_excerpt_direct_open_failed"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/14364398-can-i-use-expert-advisors-eas-or-trading-bots",
+          "status": "indexed_excerpt_direct_open_failed"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/18247501-ip-address-vpn-location-rules",
+          "status": "indexed_excerpt_direct_open_failed"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/18516107-instant-funding-pro-forex",
+          "status": "indexed_excerpt_direct_open_failed"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/17563548-flex-futures-account-rules-overview",
+          "status": "indexed_excerpt_direct_open_failed"
+        },
+        {
+          "url": "https://faq.ftuk.com/en/articles/17589503-flex-futures-payout-requirements",
+          "status": "indexed_excerpt_direct_open_failed"
+        },
+        {
+          "url": "https://ftuk.com/terms-of-service",
+          "status": "direct_open_failed_indexed_excerpt_only"
+        }
+      ],
+      "observations": [
+        {
+          "finding": "Payouts can be approved automatically; previous approval does not establish that a trading strategy is compliant. Each cycle may be subjected to a full risk review; interviews may be requested randomly. Account remains read-only pending approval in retrieved FAQ.",
+          "source": "https://faq.ftuk.com/en/articles/12339852-how-do-i-request-a-profit-payout",
+          "locator": "Lines 49–64",
+          "scope": "General payout FAQ",
+          "category": "discretionary",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Instant Funding rewards at levels through 6 are calculated on the level target rather than profit above the 10% threshold; this is a payout calculation constraint, not necessarily confiscation of all excess profits in every scenario.",
+          "source": "https://faq.ftuk.com/en/articles/12339852-how-do-i-request-a-profit-payout",
+          "locator": "Line 58",
+          "scope": "Instant Funding levels 1–6",
+          "category": "payout_terms",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Account Protector triggers automatic liquidation at 2% floating loss on an instrument or account as specified. New purchases from 27 Jan 2026: second trigger closes Flex Funded/Instant; fourth trigger closes legacy One-/Two-Step. Team may assess cases individually.",
+          "source": "https://faq.ftuk.com/en/articles/12332935-what-is-the-account-protector",
+          "locator": "Lines 25–32,66–76",
+          "scope": "Forex programmes, cohort from 2026-01-27",
+          "category": "rules_by_programme",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Flex/Instant partial exits require closing the remainder on the same trading day; positions on same instrument opened within 30 minutes count together. Violation resets consistency, repeated violations may close the account.",
+          "source": "https://faq.ftuk.com/en/articles/13770309-partial-trade-closing-policy",
+          "locator": "Lines 17–26; article dated 26 May 2026",
+          "scope": "Flex and Instant Forex",
+          "category": "rules_by_programme",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Manual strategies include Anti Scaling, grid, martingale, tick scalping and HFT within 30 seconds; prohibited strategies result in closure. Anti Scaling is not defined in this article. Ordinary arbitrage/fraud controls should not be separately inflated.",
+          "source": "https://faq.ftuk.com/en/articles/14364125-restricted-strategies-for-manual-trading",
+          "locator": "Lines 17–32",
+          "scope": "Manual trading, confirm exact programme scope",
+          "category": "rules_by_programme",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Trading strategies using demo conditions for risk-free/guaranteed profit may be terminated following review; 30 days inactivity is an account breach; team retains individual assessment.",
+          "source": "https://faq.ftuk.com/en/articles/12339790-what-are-account-breaches",
+          "locator": "Lines 17–41",
+          "scope": "General / older policy",
+          "category": "discretionary",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Flex Forex starts with 60% split; smaller withdrawals below the specified 10% scaling threshold remain at 60% even at higher levels. Best day must be below 20% initially, scaling to 40%; maximum trailing loss starts at 6% and follows highest closed balance until initial balance. Daily loss resets on higher balance/equity at 22 UTC.",
+          "source": "https://faq.ftuk.com/en/articles/14322511-new-flex-challenge-explained",
+          "locator": "Lines 47–93",
+          "scope": "Flex Forex, July 2026 version",
+          "category": "payout_terms",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Flex Forex funded reset fees are equal to activation fees, $56–$672 across sizes in the July FAQ. Marketing says low initial cost yet references zero upfront risk despite setup fee from $9; distinguish claim from actual total fee.",
+          "source": "https://faq.ftuk.com/en/articles/14322511-new-flex-challenge-explained",
+          "locator": "Lines 23–31,150–164",
+          "scope": "Flex Forex, July 2026 version",
+          "category": "contradiction",
+          "severity": "medium",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Instant Forex: 65% initial split, 10% level target, 6% relative maximum drawdown, initially below 20% best-day rule, 2% protector. Daily limit resets at 22 UTC on higher equity/balance. Partial-close table says no, whereas detailed policy allows same-day completion; reconcile table with actual detailed rule.",
+          "source": "https://faq.ftuk.com/en/articles/12310214-instant-funding-program-forex",
+          "locator": "Lines 18–36",
+          "scope": "Instant Forex, June 2026 version",
+          "category": "contradiction",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Payout Locker in older scaling challenge FAQ raises the loss floor to level starting balance after first payout; first payout at a new level requires ten trading days. Example: $20k level, $21k after withdrawal, floor $20k. Do not apply this to newer Flex/Futures/Instant without exact scope evidence.",
+          "source": "https://faq.ftuk.com/en/articles/12339847-what-is-the-payout-locker",
+          "locator": "Lines 29–60,79–84",
+          "scope": "Legacy scaling challenge programmes; applicability unresolved",
+          "category": "payout_terms",
+          "severity": "high",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Recent index says legacy One-/Two-Step Forex sales ceased on 14 September 2026, while cached May programme index still lists them. Treat as new-version lead requiring body/checkout confirmation.",
+          "source": "https://faq.ftuk.com/en/articles/12333477-program-rules",
+          "locator": "Recent search excerpt vs opened May body",
+          "scope": "Legacy Forex",
+          "category": "version_precedence",
+          "severity": "high",
+          "evidence": "indexed_excerpt_only",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Recent Instant Funding PRO excerpt advertises no consistency rule, seven profitable days and 3% retained safety buffer. New programme must be separately audited; full body inaccessible.",
+          "source": "https://faq.ftuk.com/en/articles/18516107-instant-funding-pro-forex",
+          "locator": "Search excerpt",
+          "scope": "Instant Funding PRO Forex",
+          "category": "payout_terms",
+          "severity": "high",
+          "evidence": "indexed_excerpt_only",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Recent Flex Futures excerpt says payout requires account balance above buffer plus $500; 40% consistency applies funded only. Exact thresholds and cap not established here.",
+          "source": "https://faq.ftuk.com/en/articles/17589503-flex-futures-payout-requirements",
+          "locator": "Search excerpt; see also 17589500-flex-futures-funded-consistency-rule",
+          "scope": "Flex Futures",
+          "category": "payout_terms",
+          "severity": "high",
+          "evidence": "indexed_excerpt_only",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Recent Futures rules excerpt prohibits copying even between own FTUK accounts, and permits holds/restriction/closure where activity deemed abusive or unfair. Full body not recovered; no cross-program inference.",
+          "source": "https://faq.ftuk.com/en/articles/12354050-futures-trading-rules-permitted-prohibited-trading",
+          "locator": "Search excerpt",
+          "scope": "Futures",
+          "category": "discretionary",
+          "severity": "high",
+          "evidence": "indexed_excerpt_only",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Indexed FTUK terms mention changing incorporated guidelines in company discretion and termination for suspected non-compliance. Direct terms page failed, so not a verified complete clause; obtain signed/current terms.",
+          "source": "https://ftuk.com/terms-of-service?campaign=forexfactory_guide",
+          "locator": "Search excerpt",
+          "scope": "General",
+          "category": "discretionary",
+          "severity": "high",
+          "evidence": "indexed_excerpt_only",
+          "checkedOn": "2026-11-25"
+        }
+      ],
+      "remainingCriticalDocument": "Current FTUK terms and funded agreement; complete 80-article current inventory with exact URLs; reconcile legacy cached 82 article index and newer 80 article listing, verify 8 complete older text articles vs present programme cohorts. Retrieve current Instant PRO, Flex Futures, IP/copy rules, refund terms, exact payout locker scope. No verified full audit.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "bespoke-funding-program",
+      "name": "Bespoke Funding Program",
+      "contractEvidenceStatus": "official_domain_403_registry_dissolved",
+      "documents": [
+        {
+          "url": "https://www.bespokefundingprogram.com/",
+          "status": "403_forbidden"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/14377446",
+          "status": "primary_registry_full_visible_record",
+          "lineCount": 52
+        },
+        {
+          "url": "https://www.fca.org.uk/news/warnings/bespoke-funding-program-limited-https-wwwbespokefundingprogramcom",
+          "status": "primary_regulator_warning_body_reviewed",
+          "published": "2023-10-31",
+          "updated": "2023-11-01"
+        },
+        {
+          "url": "https://propfirmmatch.com/unlisted-prop-firms/bespoke-funding-program",
+          "status": "secondary_search_excerpt_only"
+        }
+      ],
+      "observations": [
+        {
+          "finding": "UK BESPOKE FUNDING PROGRAM LTD (14377446) is recorded as dissolved on 4 August 2026, incorporated 26 September 2022. This proves the legal status of this entity, not that all successor entities are dissolved.",
+          "source": "https://find-and-update.company-information.service.gov.uk/company/14377446",
+          "locator": "Company status, lines 13–36",
+          "scope": "UK legal entity",
+          "category": "legal_entity",
+          "severity": "critical",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "FCA issued a warning on 31 October 2023 identifying the name and domain, saying the firm was not authorised and may have targeted UK customers. This is a regulator warning, not a criminal judgment.",
+          "source": "https://www.fca.org.uk/news/warnings/bespoke-funding-program-limited-https-wwwbespokefundingprogramcom",
+          "locator": "Warning and unauthorised firm details, lines 258–285",
+          "scope": "Named brand/domain",
+          "category": "legal_entity",
+          "severity": "critical",
+          "evidence": "primary_text_reviewed",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "Prop Firm Match search result reports delisting due to reports of payout delays and refusals; do not treat complaints as established individual contractual breaches.",
+          "source": "https://propfirmmatch.com/crypto/unlisted-prop-firms/bespoke-funding-program",
+          "locator": "Search excerpt",
+          "scope": "Historical brand",
+          "category": "payout_terms",
+          "severity": "high",
+          "evidence": "secondary_excerpt_only",
+          "checkedOn": "2026-11-25"
+        }
+      ],
+      "remainingCriticalDocument": "Historical accepted CGU/FAQ unavailable. Check any separately constituted successor; confirm status label before public update. Do not use unrelated successor or Foxx terms as Bespoke contract. Recommend archival status review, no new active programme score.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "leveled-up-society",
+      "name": "Leveled Up Society",
+      "contractEvidenceStatus": "historical_suspension_report_primary_contract_unavailable",
+      "documents": [
+        {
+          "url": "https://www.leveledupsociety.com/",
+          "status": "inaccessible"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/",
+          "status": "secondary_report_body_reviewed",
+          "published": "2023-10-20",
+          "lineCount": 695
+        }
+      ],
+      "observations": [
+        {
+          "finding": "Finance Magnates dated 20 Oct 2023 reports service suspension after separation from Easton Consulting Technologies in late September. The quoted public message described a temporary pause; a later resumption is not verified in this audit.",
+          "source": "https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/",
+          "locator": "Lines 91–107",
+          "scope": "Historical brand",
+          "category": "legal_entity",
+          "severity": "high",
+          "evidence": "secondary_report",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "The same report describes claimed payout delays/refusals and the brand's claim that pending payments had resumed. No independent reconciliation of unpaid balances or legal liability obtained.",
+          "source": "https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/",
+          "locator": "Lines 112–131",
+          "scope": "Historical brand",
+          "category": "payout_terms",
+          "severity": "high",
+          "evidence": "secondary_report",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "finding": "The report identifies potentially stale promotional member/payout figures from archived pages, but the underlying archived website was not directly accessed in this audit.",
+          "source": "https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/",
+          "locator": "Lines 139–146",
+          "scope": "Historical brand",
+          "category": "contradiction",
+          "severity": "medium",
+          "evidence": "secondary_report",
+          "checkedOn": "2026-11-25"
+        }
+      ],
+      "remainingCriticalDocument": "Recover historical terms/FAQ and exact entity register if obtainable; no current primary contract, no confirmed dissolution; distinguish inactive historical brand from LVLUP Futures and any unrelated similarly named domains. Status/archive review needed.",
+      "canPublishNewScore": false
+    }
+  ],
+  "limitations": [
+    "Breakout PDF text available only in retrieved sections; screenshot failed. No claim entire contract or all FAQs read.",
+    "FTUK older and recent indexed versions differ; direct recent FAQ opens failed in several cases. Only eight older FAQ bodies fully visible in this wave; one other FTUK FAQ partially read. Index counts are not unique-document completion counts.",
+    "Bespoke domain 403; Leveled Up original domain inaccessible. No current CGU clause attributed to either.",
+    "Independent payout proof and exact-domain Trustpilot not reverified in this wave. No court findings about enforceability; no score changes."
+  ],
+  "nextAction": "Claude: merge source-located findings after verifying scope and publication criteria. Do not mark complete. Prioritize current full Breakout/FTUK agreements and recent FAQ; assess archival status of historical brands separately."
+}

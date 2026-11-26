@@ -1,0 +1,29 @@
+{
+ "slug": "tradeify",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every paragraph of the archived terms, help and agreement pages matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B3",
+   "text": "The Funded Trader Agreement lets the Company 'modify, amend, or update the terms, conditions, plans, and payout requirements of this Agreement, and the rules published at the Help Center ... at its sole discretion and at any time', effective upon posting; Help Center rules are incorporated by reference.",
+   "source": "https://tradeify.co/funded-trader-agreement",
+   "locator": "§16 Amendments; §4.1",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "Forfeiture is tied to named sections (hedging/collaborative trading §6.7, expired contracts and non-market prices §6.11, chargebacks §7.6); suspended payouts are notified and reviewed within a commercially reasonable period. The Funded Trader Agreement is published.",
+   "source": "https://tradeify.co/funded-trader-agreement",
+   "locator": "§4.4; §6.7(h); §6.11(e); §8",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_40_EVAL",
+   "text": "Select evaluation: 40% consistency during the evaluation only (Growth: 35% on funded payouts; Lightning: 20-30%).",
+   "source": "https://intercom.help/tradeify/en/articles/14369021-tradeify-pricing",
+   "locator": "Account types overview",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

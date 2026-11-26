@@ -87,6 +87,7 @@ const NEW_LANGUAGE_PATHS = [/^\/$/, /^\/prop-firm-radar$/, /^\/prop-firm-compari
 
 export function isTranslatedPath(path: string, locale: Locale = 'en') {
   const clean = path.replace(/\/+$/, '') || '/';
+  if (clean === '/prop-firms-fermees') return locale === 'fr';
   if (locale === 'tr' || locale === 'ar' || locale === 'ko' || locale === 'sw' || locale === 'ha' || locale === 'am') {
     return NEW_LANGUAGE_PATHS.some((pattern) => pattern.test(clean));
   }

@@ -1,0 +1,308 @@
+{
+  "date": "2026-11-24",
+  "status": "RESEARCH_ONLY",
+  "method": "V6.3 unchanged; same age proxies as 46-row pilot, no newly verified incidents or payout bonus. Exact-domain Trustpilot checked today: Goat rating withheld and fake review removal notice; Bulenox/FundingPips score displayed. Program estimates not firm scores. Do not infer zero for unknowns.",
+  "firms": [
+    {
+      "slug": "bulenox",
+      "old": 90,
+      "editorial": 95,
+      "ageProxy": 20,
+      "tp": 0,
+      "tpSource": "https://www.trustpilot.com/review/bulenox.com",
+      "common": [
+        {
+          "family": "subjective-reward",
+          "points": 8,
+          "finding": "Master §§7–8: qualitative Flipping and Account Cycling, past behavior and payout-to-fee ratio may trigger individualized restrictions and reward denial; ordinary single failure explicitly not sufficient. Count related mechanisms once.",
+          "source": "https://form.jotform.com/230508683548160",
+          "locator": "lines 426–464"
+        },
+        {
+          "family": "existing-contract-change",
+          "points": 4,
+          "finding": "§§4,23 rules change with or without notice; continuing use binds trader, no actual retroactive change established.",
+          "source": "https://form.jotform.com/230508683548160",
+          "locator": "408, 721–724"
+        }
+      ],
+      "programs": [
+        {
+          "name": "Traditional Master",
+          "rules": [
+            {
+              "family": "live-transition",
+              "points": 8,
+              "finding": "§13.1 declining proposed live transition closes Master with no further reward; not proof of cancellation of already approved transfer.",
+              "source": "https://form.jotform.com/230508683548160",
+              "locator": "567–584"
+            },
+            {
+              "family": "withdrawal-limit",
+              "points": 4,
+              "finding": "First three capped by size, after third 50% of total PnL; safety reserve. Group related liquidity restrictions.",
+              "source": "https://form.jotform.com/230508683548160",
+              "locator": "528–563"
+            },
+            {
+              "family": "correlated-direction",
+              "points": 2,
+              "finding": "§14 no opposed index exposure across accounts; breach terminates applicable account.",
+              "source": "https://form.jotform.com/230508683548160",
+              "locator": "602–608"
+            },
+            {
+              "family": "consistency",
+              "points": 0,
+              "finding": "40% consistency delays eligibility, not breach by itself.",
+              "source": "https://form.jotform.com/230508683548160",
+              "locator": "428–436"
+            }
+          ],
+          "rawSpecific": 14,
+          "specificPenalty": 14,
+          "score": 69
+        }
+      ],
+      "missing": [
+        "Separate current Fast Track/Momentum agreements and expanded payout tables; public HTML only displays headings.",
+        "Current funded/live contract https://form.jotform.com/252115546606151 identified; not fully scored.",
+        "Jotform contains historic and current text; confirm exact signed version/cohort.",
+        "Historical incidents, registry, payout proof not reassessed."
+      ],
+      "commonPenalty": 12,
+      "rankEligible": false,
+      "status": "COUNTERAUDIT_PARTIAL_NOT_CLOSED",
+      "incidentPenalty": 0,
+      "payoutBonus": 0
+    },
+    {
+      "slug": "goat-funded-trader",
+      "old": 81,
+      "editorial": 87,
+      "ageProxy": 12,
+      "tp": 8,
+      "tpSource": "https://www.trustpilot.com/review/goatfundedtrader.com",
+      "common": [
+        {
+          "family": "subjective-reward",
+          "points": 8,
+          "finding": "Prohibited practices including broker relationship risks may cause loss of pending rewards; distinguish unsuitable style alone with fee refund.",
+          "source": "https://help.goatfundedtrader.com/en/articles/10742118-what-are-prohibited-trading-practices",
+          "locator": "FAQ lines 6–17"
+        },
+        {
+          "family": "retroactive-news-method",
+          "points": 8,
+          "finding": "FAQ updated Nov 23: per-release cap instead of per-trade effective Nov 24, applies even to previously submitted pending payout requests. Not applied to already decided requests.",
+          "source": "https://help.goatfundedtrader.com/en/articles/10742084-is-news-trading-allowed",
+          "locator": "44–48"
+        }
+      ],
+      "programs": [
+        {
+          "name": "2-Step Standard",
+          "rules": [
+            {
+              "family": "short-hold-asymmetry",
+              "points": 6,
+              "finding": "Funded gains below 60 seconds removed, losses remain; pre-Oct 6 purchases 120 seconds.",
+              "source": "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades",
+              "locator": "5–18"
+            },
+            {
+              "family": "profit-cap-deletion",
+              "points": 6,
+              "finding": "Daily $3k profit and first two payout limits: excess profits deleted, not deferred; count the two caps as one family.",
+              "source": "https://help.goatfundedtrader.com/en/articles/11472001-funded-account-reward-guidelines",
+              "locator": "7–15"
+            },
+            {
+              "family": "goat-guard",
+              "points": 4,
+              "finding": "2% combined floating loss; first trigger split 50%, second closure; exclusions apply to other models.",
+              "source": "https://help.goatfundedtrader.com/en/articles/10742107-what-is-goat-guard",
+              "locator": "25–37, 68–72"
+            },
+            {
+              "family": "profitable-days",
+              "points": 2,
+              "finding": "Four funded days of >=0.5% for July 25 onward purchases.",
+              "source": "https://help.goatfundedtrader.com/2-step-standard.html",
+              "locator": "Funded conditions"
+            }
+          ],
+          "rawSpecific": 18,
+          "specificPenalty": 18,
+          "score": 45
+        }
+      ],
+      "missing": [
+        "Other products including Instant, Blitz, Pay Later, Premium, promo and legacy cohorts; cannot apply Goat Guard indiscriminately.",
+        "Exact contract and legal identities behind Trustpilot label Wishes Tower; registry, historical incidents and payout proof not reassessed."
+      ],
+      "commonPenalty": 16,
+      "rankEligible": false,
+      "status": "COUNTERAUDIT_PARTIAL_NOT_CLOSED",
+      "incidentPenalty": 0,
+      "payoutBonus": 0
+    },
+    {
+      "slug": "funding-pips",
+      "old": 87,
+      "editorial": 91,
+      "ageProxy": 16,
+      "tp": 0,
+      "tpSource": "https://www.trustpilot.com/review/fundingpips.com",
+      "common": [
+        {
+          "family": "subjective-termination",
+          "points": 4,
+          "finding": "Qualitative toxic trading/churning prohibitions and possible immediate closure; no general arbitrary confiscation established from FAQ alone.",
+          "source": "https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards",
+          "locator": "Forbidden strategies"
+        },
+        {
+          "family": "ea-approval",
+          "points": 4,
+          "finding": "Discretionary proof of own EA, third-party automation outside exception may lead to reward denial; 1K Instant exception.",
+          "source": "https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards",
+          "locator": "Expert Advisors"
+        }
+      ],
+      "programs": [
+        {
+          "name": "2-Step Standard – weekly/biweekly, no Swing add-on",
+          "rules": [
+            {
+              "family": "news-profit-deduction",
+              "points": 4,
+              "finding": "Funded news trade gains may be entirely removed, deductions can cause drawdown breach. 5h exception; intentional news trading separately forbidden, not double counted.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding",
+              "locator": "33–57, 176"
+            },
+            {
+              "family": "holding",
+              "points": 2,
+              "finding": "Automatic overnight/weekend closure unless Swing add-on, no breach per FAQ.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+              "locator": "204–221"
+            }
+          ],
+          "rawSpecific": 6,
+          "specificPenalty": 6,
+          "score": 77
+        },
+        {
+          "name": "2-Step Standard – On Demand, no Swing add-on",
+          "rules": [
+            {
+              "family": "news-profit-deduction",
+              "points": 4,
+              "finding": "Same news profit deduction.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding",
+              "locator": "33–57"
+            },
+            {
+              "family": "holding",
+              "points": 2,
+              "finding": "No overnight/weekend without Swing.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+              "locator": "204–221"
+            },
+            {
+              "family": "striking-system",
+              "points": 6,
+              "finding": "1% trade idea loss: profit removed on warned trades, cumulative split reductions and 4th closure; one family.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+              "locator": "291–312"
+            },
+            {
+              "family": "profitable-days",
+              "points": 2,
+              "finding": "Seven funded days at 0.5% for On Demand.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+              "locator": "288–291"
+            },
+            {
+              "family": "consistency",
+              "points": 0,
+              "finding": "35% consistency only delays payout.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+              "locator": "289"
+            }
+          ],
+          "rawSpecific": 14,
+          "specificPenalty": 14,
+          "score": 69
+        },
+        {
+          "name": "Zero",
+          "rules": [
+            {
+              "family": "consistency",
+              "points": 5,
+              "finding": "15% consistency as payout eligibility, not hard breach.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+              "locator": "228–242"
+            },
+            {
+              "family": "news-hard-breach",
+              "points": 4,
+              "finding": "±10 minute opening/closing/holding prohibition; immediate closure.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+              "locator": "199–216"
+            },
+            {
+              "family": "weekend-hard-breach",
+              "points": 2,
+              "finding": "Weekend holding immediate closure.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+              "locator": "218–223"
+            },
+            {
+              "family": "floating-loss",
+              "points": 4,
+              "finding": "Combined floating loss of 1% immediate closure, separate from normal drawdown.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+              "locator": "142–167"
+            },
+            {
+              "family": "profitable-days",
+              "points": 2,
+              "finding": "Seven days at 0.25% in rolling 30 days.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+              "locator": "169–180"
+            },
+            {
+              "family": "safety-cushion",
+              "points": 2,
+              "finding": "First 3% profit not withdrawable.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+              "locator": "307–310"
+            },
+            {
+              "family": "largest-win-loss",
+              "points": 2,
+              "finding": "Largest losing trade cannot exceed largest winner for payout.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+              "locator": "312–315"
+            }
+          ],
+          "rawSpecific": 21,
+          "specificPenalty": 20,
+          "score": 63
+        }
+      ],
+      "missing": [
+        "Main terms URL https://fundingpips.com/legal/terms-and-conditions returned 403 on direct fetch; May 15 indexed excerpt not complete.",
+        "Other models, Pro, Flex, Prime, 1-Step, 1K Instant and cohorts not exhaustively scored; current rules/registry/incident/payout reconciliation outstanding."
+      ],
+      "commonPenalty": 8,
+      "rankEligible": false,
+      "status": "COUNTERAUDIT_PARTIAL_NOT_CLOSED",
+      "incidentPenalty": 0,
+      "payoutBonus": 0
+    }
+  ]
+}

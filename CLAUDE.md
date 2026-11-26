@@ -1,5 +1,3 @@
-> **INSTRUCTION PRIORITAIRE POUR CLAUDE — 22/11/2026 :** Le barème canonique est désormais **[SCORING_V5_2.md](SCORING_V5_2.md)** et la feuille de route commune est **[claude/V52_HANDOFF_2026-11-22.md](claude/V52_HANDOFF_2026-11-22.md)**. Le barème V5.2 prime sur tous les chapitres V4/legacy ci-dessous lorsqu'ils décrivent des notes, pénalités, plafonds ou étapes de publication. **Trustpilot = −6 une fois, aucun plafond Trustpilot**, mais les plafonds **A3 = 64/69/79**, le cap juridique 55 et les règles B2=−3/−4 demeurent. Ne pas abroger les tests hérités ; distinguer les firmes non migrées (affichage temporaire hérité) de celles auditées en V5.2. Les 75 audits manquants de la file sont à réaliser critère par critère, jamais à inventer à partir d'un score V4.
-
 # PropRadar - working rules for Claude
 
 PropRadar (www.propradar.tech) is an independent prop-firm comparator. Its only
@@ -13,10 +11,22 @@ load through `app/site.css`, in cascade order (globals, design-system,
 design-refresh, design-epure); add a sheet there, never as a separate import.
 Site language: English. Owner: Geyer (writes in French, answer him in French).
 
+Scale C (approved 2026-11-25) scores the firms listed in `app/data/scale-c.json`;
+regenerate it with `scripts/build-scale-c.py`, never by hand (SCORING.md "Scale C").
+
 Read also `SCORING.md` (how scores move, restrictive-rules penalty) and
 `AGENTS.md` (who does what between Claude and ChatGPT/Codex, and how to avoid
 editing the same files). Restrictive rules need `category`, `severity`,
 `clarity` and `appliesTo` (plus `auditedPrograms` on the firm) to count.
+
+## Shared branch with ChatGPT (Geyer, 2026-11-26)
+
+`main` is the only shared baseline and it is production (Vercel publishes every
+commit on `main`). Fetch the latest `origin/main` before any edit and again before
+committing; work on a short `claude/...` branch and open a PR into `main` (Geyer
+merges). ChatGPT owns translations (`app/lib/dataI18n/`, message text) and the terms
+archive; Claude owns scoring, `firm-updates.json` and the firm page layout. The same
+rules are in `AGENTS.md`: change both files together.
 
 ## Where the data lives
 
@@ -159,6 +169,16 @@ project doc `claude/data-audit-2026-10.md`.
    Every warning text must also cite an external source (Trustpilot notice,
    trade press, registry, regulator) next to PropRadar's own check (Geyer,
    2026-11-15: avoid any defamation risk).
+   **"Probably closed" policy (Geyer, 2026-11-26):** when the official site
+   cannot be reached (error, empty page, redirect to unrelated content) and no
+   new official domain is found, set `listedDomainWarning` starting with
+   "PROBABLY CLOSED:", giving PropRadar's dated check and the external source,
+   and ending with: "No closure notice has been found, but the firm has
+   probably stopped operating. Any website using this name or logo is not
+   recognised as official by PropRadar: do not pay on it." Status stays as it
+   is (no `Fermée` without an official notice). Look-alike sites are never
+   called a scam in our own voice (rule 2): the warning says they are not
+   recognised as official.
 6. **Sensitive changes need Geyer's approval**: status changes, score drops of
    5+ points or moves of 10+, domain warnings, new incidents, accusation-type
    wording. The validator flags them. Open the PR and leave it unmerged.

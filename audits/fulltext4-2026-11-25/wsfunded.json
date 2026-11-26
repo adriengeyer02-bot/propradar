@@ -1,0 +1,22 @@
+{
+ "slug": "wsfunded",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "The Company reserves the right to cancel or suspend any Trader’s participation in the programme for any reason it deems appropriate, at its sole and absolute discretion.",
+   "source": "https://wsfunded.com/en/terms-conditions",
+   "locator": "Terms and conditions of sale",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "40% consistency during the funded phase of the main challenge (Instant Standard 30%, Instant Pro 15%, 1-Phase 20%).",
+   "source": "https://wsfunded.com/en/faq",
+   "locator": "FAQ consistency",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

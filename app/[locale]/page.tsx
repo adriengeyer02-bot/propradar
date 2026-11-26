@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import FTMOBlackFridayBanner from '../components/FTMOBlackFridayBanner';
+import '../ftmo-black-friday.css';
 import FirmLogo from '../components/FirmLogo';
 import HomeGlobe from '../components/ui/HomeGlobe';
-import FTMOBlackFridayBanner from '../components/FTMOBlackFridayBanner';
 import { buildRadar } from '../lib/radar';
 import { withOptionsGlobe } from '../lib/optionsGlobe';
 import { optionsCopy } from '../lib/optionsI18n';
@@ -31,7 +32,6 @@ import { fmt, formatDateLong, getMessages, tv } from '../lib/messages';
 import IntentLink from '../components/IntentLink';
 import { DISCORD_URL, communityCopy } from '../lib/community';
 
-// Refresh the temporary promotion automatically; a full rebuild is not needed to hide it.
 export const revalidate = 3600;
 
 type Props = { params: Promise<{ locale: string }> };

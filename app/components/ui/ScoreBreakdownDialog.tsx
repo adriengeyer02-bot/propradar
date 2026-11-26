@@ -2,14 +2,11 @@
 
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import type { ScoreMethodCopy } from '../../lib/scoreMethodI18n';
-import type { ScoreRuleCopy } from '../../lib/scoreRuleCopy';
-import { ruleAmountDisplay } from '../../lib/ruleAmountDisplay';
 import type { ScoreV4Copy } from '../../lib/scoreV4I18n';
 import type { V5RuleDeduction } from '../../lib/scoringV5';
-import type { V52Rule } from '../../lib/scoringV52Candidate';
 
 export type ScoreStep = {
-  kind: 'editorial' | 'rules' | 'trustpilot' | 'safety' | 'proof' | 'closed';
+  kind: 'editorial' | 'rules' | 'trustpilot' | 'safety' | 'closed' | 'unaudited';
   label: string;
   detail: string;
   /** Score after this step. */
@@ -23,29 +20,36 @@ export type ScoreBreakdownView = {
   name: string;
   score: number;
   pillars?: {
-    version: 4 | 5 | 5.2;
+    version: 4 | 5;
     values: [number, number, number, number, number];
     maxima: [number, number, number, number, number];
     copy: ScoreV4Copy;
   };
   tone: string;
   steps: ScoreStep[];
-  ruleCopy: ScoreRuleCopy;
-  /** True only when the rules amount is an actually assessed score component. */
-  ruleAmountAudited: boolean;
   signals: { label: string; value: string; tone: string }[];
   programs: { name: string; load: number }[];
-  heaviest: { text: string; program: string; severity: string; severityKey: string; clarity: string; points: number; source?: string; kind?: 'restriction' | 'risk' | 'classic' }[];
+  heaviest: { text: string; program: string; severity: string; severityKey: string; clarity: string; points: number; kind?: 'restriction' | 'risk' | 'classic' }[];
   rulesNotes: string[];
-  /** V4 criteria B1/B4 shortfall is within the editorial score, never an extra deduction. */
-  v4RuleImpact?: { rewardLoss: number; tradingLoss: number; rewardLabel: string; tradingLabel: string };
   v5Evidence?: {
-    deductions: (V5RuleDeduction | V52Rule)[];
+    deductions: V5RuleDeduction[];
     contractProtection: { points: number; reason: string; source: string };
     checkedOn: string;
     limitedPayoutProof: boolean;
     copy: { contract: string; consequence: string; source: string; evidence: string; limited: string; rulesClarification: string };
   };
+  /** Scale C (scaleC.ts): ceiling earned with evidence, minus sourced penalties. */
+  scaleC?: {
+    ceiling: number;
+    ceilingLabel: string;
+    evidence: string[];
+    items: { label: string; points: number; text: string; source?: string; locator?: string }[];
+    lostTotal: number;
+    notes: string[];
+    copy: { ceiling: string; lost: string; none: string; source: string; method: string[] };
+  };
+  /** Shown when the firm is not on scale C yet. */
+  pendingNote?: string;
   methodHref: string;
   rulesHref: string;
 };
@@ -88,18 +92,6 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
   };
   const steps: ScoreStep[] = [editorial, rules];
   const adjustments = view.steps.filter((step) => step.kind !== 'editorial' && step.kind !== 'rules');
-  const v4IncludedImpact = view.v4RuleImpact
-    ? view.v4RuleImpact.rewardLoss + view.v4RuleImpact.tradingLoss
-    : null;
-  const rulesAudited = view.ruleAmountAudited || v4IncludedImpact !== null;
-  const ruleAmount = ruleAmountDisplay(v4IncludedImpact, rulesAudited, rules.delta);
-  // The visible equation must reach the public score exactly, including
-  // Trustpilot and any actual cap impacts. Never show an invented deduction.
-  const effectiveRuleDelta = rules.delta;
-  const adjustmentLoss = adjustments.reduce((sum, item) => sum + Math.max(0, item.delta), 0);
-  const scoreReconciles = Math.max(0, editorial.value - effectiveRuleDelta - adjustmentLoss) === view.score;
-  const showEquation = rulesAudited && scoreReconciles &&
-    (effectiveRuleDelta > 0 || adjustmentLoss > 0);
 
   return (
     <>
@@ -139,42 +131,69 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
               <h2 id={titleId}>{fill(copy.title, { name: view.name, score: view.score })}</h2>
             </header>
 
+            {view.scaleC ? (
+              <ol className="psb-steps psb-scale-c">
+                <li className="psb-step psb-step-editorial prg-hud-reveal" style={delay(2)}>
+                  <div className="psb-step-line">
+                    <span className="psb-step-label">{view.scaleC.copy.ceiling}</span>
+                    <span className="psb-step-value">{view.scaleC.ceiling}</span>
+                  </div>
+                  <div className="psb-bar" aria-hidden="true"><span className="psb-bar-fill" style={{ width: `${view.scaleC.ceiling}%` }} /></div>
+                  <p>{view.scaleC.ceilingLabel}</p>
+                  {view.scaleC.evidence.length ? <ul className="psb-c-evidence">{view.scaleC.evidence.map((line) => <li key={line}>{line}</li>)}</ul> : null}
+                </li>
+                <li className="psb-step psb-step-rules prg-hud-reveal" style={delay(3)}>
+                  <div className="psb-step-line">
+                    <span className="psb-step-label">{view.scaleC.copy.lost}</span>
+                    <span className={`psb-step-value${view.scaleC.lostTotal ? ' psb-step-minus' : ''}`}>{view.scaleC.lostTotal ? `−${view.scaleC.lostTotal}` : '—'}</span>
+                  </div>
+                  <div className="psb-bar" aria-hidden="true">
+                    <span className="psb-bar-fill" style={{ width: `${view.score}%` }} />
+                    {view.scaleC.lostTotal ? <span className="psb-bar-cut" style={{ left: `${view.score}%`, width: `${Math.max(0, view.scaleC.ceiling - view.score)}%` }} /> : null}
+                  </div>
+                  {view.scaleC.items.length ? (
+                    <div className="psb-heaviest psb-c-items">
+                      <ul>
+                        {view.scaleC.items.map((item, itemIndex) => (
+                          <li key={itemIndex}>
+                            <span className="psb-pts psb-kind-risk">−{item.points}</span>
+                            <span>
+                              <strong>{item.label}</strong>
+                              {item.text ? <em>{item.text}</em> : null}
+                              {item.locator ? <small className="psb-c-locator">{item.locator}</small> : null}
+                              {item.source ? <a href={item.source} target="_blank" rel="noopener noreferrer">{view.scaleC!.copy.source} ↗</a> : null}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : <p>{view.scaleC.copy.none}</p>}
+                  {view.scaleC.notes.map((note) => <p key={note} className="psb-note">{note}</p>)}
+                </li>
+                <li className="psb-step psb-step-final prg-hud-reveal" style={delay(4)}>
+                  <div className="psb-step-line">
+                    <span className="psb-step-label">{copy.final}</span>
+                    <span className={`psb-step-value psb-tone-${view.tone}`}>{view.score}/100</span>
+                  </div>
+                </li>
+              </ol>
+            ) : (
             <ol className="psb-steps">
               {steps.map((step, index) => (
                 <li key={step.kind} className={`psb-step psb-step-${step.kind} prg-hud-reveal`} style={delay(index + 2)}>
                   <div className="psb-step-line">
                     <span className="psb-step-label">{step.label}</span>
-                    <span className={`psb-step-value${step.kind === 'rules' && ruleAmount.points !== null && ruleAmount.points > 0 ? ' psb-step-minus' : ''}${step.kind === 'rules' && ruleAmount.kind === 'pending' ? ' psb-step-pending' : ''}`}>
-                      {step.kind === 'editorial' ? step.value
-                        : ruleAmount.kind === 'pending' ? view.ruleCopy.pending
-                        : ruleAmount.points > 0 ? `−${ruleAmount.points}` : '0'}
+                    <span className={`psb-step-value${step.delta ? ' psb-step-minus' : ''}`}>
+                      {step.kind === 'editorial' ? step.value : step.delta ? `−${step.delta}` : '—'}
                     </span>
                   </div>
                   <div className="psb-bar" aria-hidden="true">
                     <span className="psb-bar-fill" style={{ width: `${step.value}%` }} />
                     {step.delta ? <span className="psb-bar-cut" style={{ left: `${step.value}%`, width: `${step.delta}%` }} /> : null}
                   </div>
-                  <p>{step.kind === 'rules'
-                    ? v4IncludedImpact !== null ? view.ruleCopy.includedDetail
-                      : !rulesAudited ? view.ruleCopy.pendingDetail
-                      : step.delta > 0 && !view.v5Evidence ? copy.rulesSimple
-                      : step.detail
-                    : step.detail}</p>
-                  {step.kind === 'rules' && v4IncludedImpact !== null ? <small className="psb-rule-accounting-note">{view.ruleCopy.included}</small> : null}
+                  <p>{step.kind === 'rules' && step.delta > 0 && !view.v5Evidence ? copy.rulesSimple : step.detail}</p>
                   {step.note ? <p className="psb-note">{step.note}</p> : null}
-                  {step.kind === 'rules' && view.v4RuleImpact ? (
-                    <div className="psb-v4-embedded-impact" aria-label={view.pillars?.copy.restriction}>
-                      <div>
-                        <span>{view.v4RuleImpact.rewardLabel}</span>
-                        <strong>{view.v4RuleImpact.rewardLoss > 0 ? `−${view.v4RuleImpact.rewardLoss}` : '0'} <small>/15</small></strong>
-                      </div>
-                      <div>
-                        <span>{view.v4RuleImpact.tradingLabel} (B4)</span>
-                        <strong>{view.v4RuleImpact.tradingLoss > 0 ? `−${view.v4RuleImpact.tradingLoss}` : '0'} <small>/5</small></strong>
-                      </div>
-                    </div>
-                  ) : null}
-                  {step.kind === 'rules' && adjustments.length ? (
+                  {step.kind === 'editorial' && adjustments.length ? (
                     <div className="psb-adjustments">
                       {adjustments.map((adjustment) => (
                         <div key={adjustment.kind}>
@@ -200,27 +219,13 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                               <span className="psb-v5-consequence">{view.v5Evidence!.copy.consequence}: {item.consequence}</span>
                               <a href={item.source} target="_blank" rel="noopener noreferrer">{view.v5Evidence!.copy.source} ↗</a>
                             </span>
-                            <b className="psb-v5-rule-points">−{item.points}</b>
                           </li>
                         ))}
                       </ul>
                       <p className="psb-v5-footnote">{view.v5Evidence.copy.rulesClarification}</p>
                     </div>
                   ) : null}
-                  {step.kind === 'rules' && view.v5Evidence ? (
-                    <div className="psb-v5-b1-impact">
-                      <div>
-                        <strong>{view.v5Evidence.copy.contract}</strong>
-                        <b>{view.v5Evidence.contractProtection.points}/15</b>
-                      </div>
-                      <p>{view.ruleCopy.noDoubleCount}</p>
-                      <a href={view.v5Evidence.contractProtection.source} target="_blank" rel="noopener noreferrer">{view.v5Evidence.copy.source} ↗</a>
-                    </div>
-                  ) : null}
-                  {step.kind === 'rules' && view.rulesNotes.length ? (
-                    <p className="psb-rule-accounting-note">{view.rulesNotes.join(' · ')}</p>
-                  ) : null}
-                  {step.kind === 'rules' && !view.v5Evidence && (step.delta > 0 || Boolean(view.pillars) || !rulesAudited) && view.heaviest.length ? (
+                  {step.kind === 'rules' && !view.v5Evidence && (step.delta > 0 || Boolean(view.pillars)) && view.heaviest.length ? (
                     <div className="psb-heaviest">
                       <span className="prg-hud-label">{copy.heaviest}</span>
                       <ul>
@@ -230,7 +235,6 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                             <span>
                               <strong>{rule.program === 'All programs' || rule.program === 'All programmes' ? copy.allPrograms : rule.program}</strong>
                               <em>{rule.text}</em>
-                              {rule.source?.startsWith('https://') ? <a className="psb-rule-source" href={rule.source} target="_blank" rel="noopener noreferrer">{view.ruleCopy.sourceLabel} ↗</a> : null}
                             </span>
                           </li>
                         ))}
@@ -239,26 +243,16 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                   ) : null}
                 </li>
               ))}
-              {showEquation ? (
-                <li className="psb-equation prg-hud-reveal" aria-label={copy.final} style={delay(steps.length + 2)}>
-                  <strong>{editorial.value}</strong>
-                  {effectiveRuleDelta > 0 ? <><span aria-hidden="true">−</span><span>{effectiveRuleDelta}</span></> : null}
-                  {adjustments.filter((item) => item.delta > 0).map((item) => (
-                    <span className="psb-equation-deduction" key={item.kind}>
-                      <span aria-hidden="true">−</span><span>{item.delta}</span>
-                    </span>
-                  ))}
-                  <span aria-hidden="true">=</span>
-                  <b>{view.score}<small>/100</small></b>
-                </li>
-              ) : null}
-              <li className="psb-step psb-step-final prg-hud-reveal" style={delay(steps.length + 3)}>
+              <li className="psb-step psb-step-final prg-hud-reveal" style={delay(steps.length + 2)}>
                 <div className="psb-step-line">
                   <span className="psb-step-label">{copy.final}</span>
                   <span className={`psb-step-value psb-tone-${view.tone}`}>{view.score}/100</span>
                 </div>
               </li>
             </ol>
+            )}
+
+            {view.pendingNote ? <p className="psb-note psb-c-pending prg-hud-reveal">{view.pendingNote}</p> : null}
 
             {view.signals.length ? (
               <div className="psb-signals prg-hud-reveal" style={delay(steps.length + 3)}>
@@ -273,7 +267,9 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
 
             <details className="psb-scale prg-hud-reveal" style={delay(steps.length + 4)}>
               <summary>{copy.scaleTitle}</summary>
-              {view.pillars ? (
+              {view.scaleC ? (
+                <ul>{view.scaleC.copy.method.map((line) => <li key={line}>{line}</li>)}</ul>
+              ) : view.pillars ? (
                 <>
                   <p>{view.pillars.copy.method}</p>
                   <p>{view.pillars.copy.caution}</p>

@@ -1,9 +1,9 @@
+import { scaleCChangelog } from './scaleC';
 import type { Product, PropFirm, RegulatoryAudit, RegulatoryEntity, SourceLink, PayoutProof } from './propFirms';
 import { firmLogoFor } from './firmLogos';
 import updatesFile from '../data/firm-updates.json';
 import { getPublishedV4Score, isPublishedV4 } from './scoringV4Published';
 import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
-import { getPublishedV52Score, isPublishedV52 } from './scoringV52Published';
 
 /**
  * Data updates layer.
@@ -56,7 +56,7 @@ export type AuditedProgram = { key: string; name: string };
 export type FirmUpdate = {
   reviewedAt: string;
   /** Published, independently approved audit gate; not in raw Claude JSON. */
-  scoringVersion?: 4 | 5 | 5.2;
+  scoringVersion?: 4 | 5;
   restrictiveRules?: RestrictiveRule[];
   auditedPrograms?: AuditedProgram[];
   set?: Partial<{
@@ -127,9 +127,6 @@ export function getFirmUpdate(slug: string): FirmUpdate | undefined {
   const update = updates[slug];
   if (!update) return undefined;
   const latestScoreReview = update.changelog.filter((entry) => entry.fields?.includes('score')).map((entry) => entry.date).sort().pop();
-  if (isPublishedV52(slug, latestScoreReview)) {
-    return { ...update, scoringVersion: 5.2, set: update.set ? { ...update.set, trustpilotPenaltyIncluded: undefined } : undefined };
-  }
   if (isPublishedV5(slug, latestScoreReview)) {
     return { ...update, scoringVersion: 5, set: update.set ? { ...update.set, trustpilotPenaltyIncluded: undefined } : undefined };
   }
@@ -140,7 +137,7 @@ export function getFirmUpdate(slug: string): FirmUpdate | undefined {
 }
 
 /** Align the entire public profile with the dated V5 evidence, not just the score ring. */
-function applyPublishedV5Evidence(firm: PropFirm, audit: Pick<NonNullable<ReturnType<typeof getPublishedV5Score>>, 'afterRules' | 'checkedOn' | 'positivePayoutEvidence' | 'contractingEntityVerified'> & { nativeAudit?: { A3:number; B1:number; C1:number; trustpilotNotice?:boolean } }): PropFirm {
+function applyPublishedV5Evidence(firm: PropFirm, audit: NonNullable<ReturnType<typeof getPublishedV5Score>>): PropFirm {
   const independent = audit.positivePayoutEvidence;
   const proof: PayoutProof | undefined = independent ? {
     date: audit.checkedOn,
@@ -152,8 +149,6 @@ function applyPublishedV5Evidence(firm: PropFirm, audit: Pick<NonNullable<Return
   } : undefined;
   const payoutProofs = [...(firm.payoutProofs ?? [])];
   if (proof && !payoutProofs.some((item) => item.url === proof.url)) payoutProofs.unshift(proof);
-  const native = audit.nativeAudit;
-  const auditedTrustpilot = native?.trustpilotNotice;
   return {
     ...firm,
     score: audit.afterRules,
@@ -161,115 +156,11 @@ function applyPublishedV5Evidence(firm: PropFirm, audit: Pick<NonNullable<Return
     payoutProof: Boolean(independent),
     payoutProofs,
     legalVerified: audit.contractingEntityVerified,
-    // Keep the public summary consistent with the score the visitor sees.
-    // Historical partial audit notes are not a substitute for the new V5.2 audit.
-    ...(native ? {
-      auditStatus: 'Partiellement vérifié' as const,
-      auditSummary: `V5.2 audit dated ${audit.checkedOn}: 13 source-linked risk criteria. Independently verified final payouts remain limited (payment proof A3 ${native.A3}/5); reward protection B1 ${native.B1}/15 and contracting identity C1 ${native.C1}/10 are documented in the clickable score breakdown. This remains an editorial risk assessment, not a payout guarantee.`,
-    } : {}),
-    ...(auditedTrustpilot === undefined ? {} : {
-      reviewSignals: { ...firm.reviewSignals, trustpilotRatingWithheld: auditedTrustpilot },
-      ...(auditedTrustpilot ? { trustpilotRating: 0 } : {}),
-    }),
-    // FFN's July 2026 partial profile explicitly said no contract/entity could be
-    // found. The November 2026 V5.2 file includes the funded agreement and two
-    // ACTIVE Florida entities. Keep the public narrative and legal card aligned
-    // with the revised 55/100 rating rather than repeating a superseded finding.
-    ...(native && firm.slug === 'funded-futures-network' ? {
-      verdict: 'Funded Futures Network offers MAX and STEADY futures evaluations. Its funded Trader Agreement permits forfeiture of account profits for rule breaches and lets the firm determine some gambling violations at its discretion. The two related Florida entities are active, but independently verified final trader payouts remain limited. PropRadar V5.2: 55/100, proceed carefully.',
-      incidents: 0,
-      reviewSignals: {
-        ...firm.reviewSignals,
-        // A2 remains neutral and we have no independently corroborated
-        // payout-incident count. Keep the payout-risk LABEL unassessed; describe
-        // the DOCUMENTED contractual risk and pending complaints instead.
-        radarVerdict: 'The November 2026 V5.2 assessment confirms that the funded Trader Agreement permits forfeiture of account profits after rule breaches and gives FFN broad discretion over certain gambling definitions. Final trader payouts remain independently unverified; public delayed-payout allegations are under investigation, not established as unjustified refusals. Review exact funded terms before purchase.',
-        lastSignalCheck: audit.checkedOn,
-        ...(auditedTrustpilot === undefined ? {} : {trustpilotRatingWithheld: auditedTrustpilot}),
-      },
-      regulatoryAudit: {
-        ...firm.regulatoryAudit,
-        riskLevel: 'High' as const,
-        lastChecked: audit.checkedOn,
-        summary: 'The 22 November 2026 V5.2 review confirmed that Funded Futures Network LLC (L22000267808) and FFN Cap LLC (L22000325983) are active in the Florida business register with February 2026 filings. The funded Trader Agreement names FFN Cap LLC, allows profit forfeiture after breaches and gives FFN broad discretion to identify gambling. Allocation of each company\'s obligations, trader payout finality and any broker/FCM arrangements require additional checking.',
-        entities: [
-          {name: 'Funded Futures Network LLC', jurisdiction: 'United States (Florida)', registrationNumber: 'L22000267808', role: 'Challenge offer / brand operator; ACTIVE in Florida register'},
-          {name: 'FFN Cap LLC', jurisdiction: 'United States (Florida)', registrationNumber: 'L22000325983', role: 'Entity named in funded Trader Agreement; ACTIVE in Florida register'},
-        ],
-        regulatoryStatus: [
-          'Both identified Florida LLCs are ACTIVE according to official business filings in 2026; this is not proof of payment reliability.',
-          'The funded agreement, including clauses 5 and 16.12, has been reviewed for contractual reward/strategy risk.',
-          'Broker/FCM relationships, NFA/CFTC applicability and any additional regulatory warnings remain pending independent review.',
-        ],
-        complaintsAndDisputes: [
-          'October-November 2026 public complaints report delayed or disputed Rise payouts; due dates, completed bank/crypto settlements and alleged rule breaches require individual corroboration.',
-          'No count of unjustified reward refusals is established solely from online allegations; A2 is neutral 6/10 pending incident review.',
-        ],
-        redFlags: [
-          'Broad contract-based forfeiture of account profits for rule breaches (B1=0/15).',
-          'Gambling and broker-harm determinations use open-ended discretion in the funded agreement (B2=7/10).',
-          'Self-hosted payout ledger is not independent verification of final transfers (A3=1/5).',
-        ],
-        sources: [
-          {label:'FFN funded Trader Agreement',url:'https://storage.googleapis.com/ffn-files/FFN_TRADER_AGREEMENT.pdf'},
-          {label:'Florida register — Funded Futures Network LLC',url:'https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=flal-l22000267808-ef268e24-6504-4505-a9de-a2ecfd86df50&directionType=Initial&inquirytype=EntityName&listNameOrder=FUNDECONUSA+L190002146180&searchNameOrder=FUNDEDFUTURESNETWORK+L220002678080&searchTerm=FUNDECON+USA%2C+LLC'},
-          {label:'Florida register — FFN Cap LLC',url:'https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=flal-l22000325983-8d56024d-c38a-4937-9ba3-0a3f28b85df7&directionType=ForwardList&inquirytype=OfficerRegisteredAgentName&listNameOrder=TYILLIANGREGORYJ+L170001473950&searchNameOrder=TYJCAPITALLLC+L220003259833&searchTerm=Tyg+Media+Llc'},
-          {label:'FFN Trustpilot review record',url:'https://www.trustpilot.com/review/fundedfuturesnetwork.com'},
-        ],
-      },
-      auditSourcesChecked: [
-        'Trader Agreement — funded rewards and subjective strategy clauses',
-        'Florida official registry — both LLCs and 2026 filings',
-        'Product-specific futures payout FAQ and independent-incident review',
-      ],
-    } : {}),
-    // The 17 November Titan profile incorrectly described the UK supplier's
-    // strike-off action as active. Companies House filing history shows the
-    // action was SUSPENDED on 23 October 2026. Preserve outstanding
-    // compliance concerns, without asserting an ongoing unsuspended strike-off.
-    ...(native && firm.slug === 'titan-capital-markets' ? {
-      listedDomainWarning: 'UK supplier TFT TITAN SOLUTIONS LIMITED (15229528) is ACTIVE; compulsory strike-off action was SUSPENDED on 23 October 2026 according to Companies House filing history. Outstanding filing requirements still warrant monitoring. Titan contracts name multiple parties; Trustpilot withholds its rating after a guidelines breach. Verify the contracting party, funded rules and KYC before buying. Purchase links remain disabled pending clarification.',
-      regulatoryAudit: {
-        ...firm.regulatoryAudit,
-        lastChecked: audit.checkedOn,
-        summary: 'Companies House confirms TFT TITAN SOLUTIONS LIMITED (UK 15229528) is active and that compulsory strike-off action was SUSPENDED on 23 October 2026, not an ongoing active unsuspended proposal. Accounts/confirmation obligations still require verification. The terms also mention TG Markets LTD and an external merchant of record, whose roles require reconciliation. Trustpilot withheld the domain-matched score after a guidelines breach; that private platform notice is distinct from UK corporate status.',
-        entities: firm.regulatoryAudit.entities.map((entity) => entity.name.toLowerCase().includes('tft titan')
-          ? {...entity, role:'UK service supplier identified in Titan terms; ACTIVE on Companies House, strike-off action SUSPENDED 23 October 2026; verify overdue statutory filings'}
-          : entity),
-        regulatoryStatus: [
-          'UK Companies House filing history for TFT TITAN SOLUTIONS LIMITED 15229528: ACTIVE, with compulsory strike-off action SUSPENDED on 23 October 2026; no completed dissolution is asserted.',
-          'Any overdue accounts or confirmation filings remain compliance matters to verify, without describing the strike-off action as ongoing.',
-          'Titan terms also mention TG Markets LTD and external payment agents; current funded and reward obligations require contract-by-contract review.',
-        ],
-        redFlags: [
-          'Corporate filings and previously proposed compulsory strike-off require continued monitoring; action recorded as SUSPENDED on 23 October 2026.',
-          'Trustpilot rating withheld following a platform-guidelines breach; no duplicate score deduction.',
-          'Supplier/contracting party and payout merchant terminology differs across official documents.',
-          'Fast payout claims have no fully independent recipient-level settlement proof in the V5.2 dossier.',
-        ],
-        sources: [
-          ...firm.regulatoryAudit.sources.filter((item) => !item.url.includes('company-information.service.gov.uk/company/15229528')),
-          {label:'UK Companies House — TFT TITAN SOLUTIONS LIMITED filing history',url:'https://find-and-update.company-information.service.gov.uk/company/15229528/filing-history'},
-        ],
-      },
-      incidentsDetails: (firm.incidentsDetails ?? []).map((item) =>
-        /(?:active proposal to strike off|active strike-off proposal)/i.test(item)
-          ? '2026-11-22 — Updated Companies House check: UK supplier TFT Titan Solutions Limited 15229528 remains ACTIVE, but the compulsory strike-off action was SUSPENDED on 23 October 2026; verify pending statutory filings. Source: https://find-and-update.company-information.service.gov.uk/company/15229528/filing-history'
-          : item),
-      reviewSignals: {
-        ...firm.reviewSignals,
-        ...(auditedTrustpilot === undefined ? {} : {trustpilotRatingWithheld: auditedTrustpilot}),
-        payoutIssues: (firm.reviewSignals.payoutIssues ?? []).map((item) =>
-          /(?:active proposal to strike off|active strike-off proposal)/i.test(item)
-            ? 'Companies House strike-off action for the UK supplier was SUSPENDED on 23 October 2026; statutory filings still require follow-up.'
-            : item),
-      },
-    } : {}),
   };
 }
 
 export function getFirmChangelog(slug: string): FirmChangelogEntry[] {
-  return [...(updates[slug]?.changelog ?? [])].sort((a, b) => b.date.localeCompare(a.date));
+  return [...(updates[slug]?.changelog ?? []), ...scaleCChangelog(slug)].sort((a, b) => b.date.localeCompare(a.date));
 }
 
 /**
@@ -294,8 +185,6 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
   return firms.map((firm) => {
     const update = updates[firm.slug];
     if (!update) {
-      const v52 = getPublishedV52Score(firm);
-      if (v52 && v52.final !== null) return applyPublishedV5Evidence(firm, v52);
       const v5 = getPublishedV5Score(firm);
       if (v5 && v5.final !== null) return applyPublishedV5Evidence(firm, v5);
       const v4 = getPublishedV4Score(firm);
@@ -462,10 +351,10 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     }
 
     const latestScoreReview = update.changelog.filter((entry) => entry.fields?.includes('score')).map((entry) => entry.date).sort().pop();
-    const v52 = getPublishedV52Score(next, latestScoreReview);
-    if (v52 && v52.final !== null) return applyPublishedV5Evidence(next, v52);
     const v5 = getPublishedV5Score(next, latestScoreReview);
-    if (v5 && v5.final !== null) return applyPublishedV5Evidence(next, v5);
+    if (v5 && v5.final !== null) {
+      return applyPublishedV5Evidence(next, v5);
+    }
     const v4 = getPublishedV4Score(next, latestScoreReview);
     if (v4) {
       next.score = v4.editorial;

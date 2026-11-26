@@ -1,0 +1,22 @@
+{
+ "slug": "finotive-funding",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B3",
+   "text": "Compliance, risk, security, fraud, prohibited strategy, and platform-integrity updates may apply immediately to existing accounts where Finotive considers this necessary.",
+   "source": "https://finotivefunding.com/terms-and-conditions",
+   "locator": "§1.7 Amendments",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B2",
+   "text": "Prohibited Behaviour covers conduct that is abusive, non-reproducible, manipulative, deceptive, non-compliant, or otherwise prohibited, and may lead to payout delay, payout rejection or account closure after Risk or Compliance review.",
+   "source": "https://finotivefunding.com/terms-and-conditions",
+   "locator": "§2 Definitions (Prohibited Behaviour)",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

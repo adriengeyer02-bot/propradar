@@ -1,0 +1,22 @@
+{
+ "slug": "e8-futures",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "If 'E8 otherwise determines in its sole discretion that you do not meet the eligibility requirements or are not in compliance with the agreements, E8 reserves the right to terminate your account and withhold or revoke the awarding of any payout awards'; forfeiture may occur 'if it is determined that a participant did not comply with the agreements in any manner as determined by E8 in its sole discretion'.",
+   "source": "https://e8futures.com/e8-markets-terms-and-conditions",
+   "locator": "§5 Payout awards; §9.3",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B3",
+   "text": "'E8 may modify or eliminate features retroactively, and no user shall have a claim to prior functionality, pricing, payout structure, or simulation logic'; Terms changes are effective immediately upon posting.",
+   "source": "https://e8futures.com/e8-markets-terms-and-conditions",
+   "locator": "§6 (no grandfathering or legacy rights); §13.1",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

@@ -661,12 +661,12 @@ export const seoGuides: SeoGuide[] = [
     intent: 'comparer',
     demandSignal: 'Decision search: the user hesitates between two possible purchases and wants to know which one really fits.',
     answer:
-      'FTMO and The5ers target different forex/CFD trading styles. FTMO’s **1-Step consistency rule for new purchases from October 12, 2026** should not be confused with its 2-Step objectives. The5ers High Stakes has separate payout and risk rules. FTMO’s November 2026 Black Friday partner creative offers **up to 30%** on eligible challenges; the actual checkout total, not the headline, decides the discount. Commercial links do not change PropRadar’s scores.',
+      'FTMO and The5ers are two solid profiles, but they do not serve the same need. FTMO stands out for history, documentation and benchmark status. The5ers often speaks to careful traders who want clearer limits by program. The right choice depends on trading style, budget, accepted drawdown, news/EA restrictions and payout-rule comfort.',
     primaryKeywords: ['FTMO vs The5ers', 'FTMO or The5ers', 'The5ers vs FTMO review'],
     secondaryKeywords: ['FTMO payout', 'The5ers rules', 'prop firm compare', 'challenge forex'],
     checks: [
-      'Compare the current checkout price and target account size, including temporary discounts (FTMO Black Friday up to 30% on eligible products in November 2026).',
-      'Separate the FTMO 1-Step consistency rule effective for new purchases from October 12, 2026, from FTMO 2-Step and The5ers High Stakes.',
+      'Compare minimum price and target account size.',
+      'Read news, EA, drawdown and profit-target rules.',
       'Identify affiliate links, coupons and displayed commercial interests.',
       'Choose by trading style, not popularity alone.',
     ],
@@ -699,26 +699,25 @@ export const seoGuides: SeoGuide[] = [
     intent: 'comparer',
     demandSignal: 'Futures decision search: real cost, drawdown, withdrawal conditions and payout trust before buying an evaluation.',
     answer:
-      "Topstep XFA and Apex Performance Accounts have fundamentally different payout contracts in November 2026. Topstep's Standard XFA needs five winning days of $150+, while its Consistency path uses three trading days and a 40% target. Apex's EOD Performance Account requires five qualifying days, a 50% consistency test, a $500 minimum request and no more than six approved payouts before that PA closes. Compare the account version and current agreement, not only the promotional fee or profit split.",
+      'Apex attracts traders with aggressive promotions and a wide choice of account sizes. Topstep leans on its established futures profile and a framework many traders find easier to identify. The match is not only about price: compare drawdown, recurring fees, payout caps, platforms and recent community feedback.',
     primaryKeywords: ['Topstep vs Apex', 'Apex vs Topstep', 'best futures prop firm'],
     secondaryKeywords: ['Apex Trader Funding promo', 'Topstep payout', 'futures funded account'],
     checks: [
-      'Compare challenge price, activation charges, recurring fees and payout terms.',
-      'Compare Topstep XFA Standard and Consistency with Apex EOD and Intraday PA separately.',
-      'Check Apex EOD\'s six-approved-payout limit per PA, not per trader.',
-      'Check loss limits, consistency, country eligibility and the account version.',
-      'Read official payout terms instead of relying on promotions.',
+      'Compare promotions and total cost after funded status.',
+      'Check EOD/trailing drawdown and consistency rules.',
+      'Read community signals and recent incidents.',
+      'Choose by platform and intraday style.',
     ],
     faq: [
       {
         question: 'Is Apex cheaper than Topstep?',
         answer:
-          'Apex may offer large discounts, but compare all fees and the six-payout lifecycle of its current EOD Performance Accounts before calling it cheaper.',
+          'Apex often displays large promotions, but price must be compared with the full rules and fees.',
       },
       {
         question: 'Is Topstep more reliable?',
         answer:
-          'Topstep has an established public history, but the firms have different funded-stage and payout contracts. Verify the current score and official policy for the exact account.',
+          'It has a strong historical presence, but every trader must verify current conditions before buying.',
       },
     ],
     internalLinks: [
@@ -738,20 +737,20 @@ export const seoGuides: SeoGuide[] = [
     intent: 'risque',
     demandSignal: 'Trust search before buying a futures evaluation: legitimacy, current rules, payout conditions and public reviews.',
     answer:
-      'Topstep is a long-running US futures prop firm founded in 2012. Its Combine has no time limit, a 55% consistency target and a trailing Maximum Loss Limit. The Standard and Consistency funded payout paths have **different withdrawal caps**; geography and account cohort also affect eligibility. The latest country restrictions took effect November 17, 2026.',
+      'Topstep is a legitimate, long-running US futures prop firm founded in 2012. Its Trading Combine has no time limit, a 55% consistency target and a Maximum Loss Limit that trails the end-of-day balance but is monitored live. New traders keep 90% of payouts. The main drawbacks are futures-only trading, no overnight holds and frequent rule changes since late 2025.',
     primaryKeywords: ['topstep review', 'is topstep legit', 'topstep reviews'],
     secondaryKeywords: ['topstep rules', 'topstep payout', 'topstep consistency rule', 'topstep trading combine', 'topstep trustpilot'],
     checks: [
       'Confirm the current Combine price and whether the plan carries an activation fee.',
       'Size positions from the Maximum Loss Limit, which trails the end-of-day balance.',
-      'Choose the Express Funded Account payout path carefully: the choice is permanent and per-request payout caps differ.',
-      'Remember the MLL resets to $0 after the first payout; verify new country restrictions effective November 17, 2026.',
+      'Choose the Express Funded Account payout path carefully: the choice is permanent.',
+      'Remember the MLL resets to $0 after the first payout.',
     ],
     faq: [
       {
         question: 'Is Topstep legit?',
         answer:
-          'Topstep has operated since 2012 from Chicago and publishes detailed program and payout rules. An affiliated introducing broker does not turn the simulated Trading Combine or XFA into a live brokerage account. For PropRadar’s current score and assessment date, consult the firm profile.',
+          'Yes. Topstep has operated since 2012 from Chicago, publishes detailed rules in its help center and launched an affiliated introducing broker in 2026. PropRadar scores it 84/100 with no regulator warning recorded. As with all prop firms, the evaluation and funded stages are simulated.',
       },
       {
         question: 'What is the Topstep consistency rule?',
@@ -899,21 +898,21 @@ export const seoGuides: SeoGuide[] = [
   },
   {
     slug: 'goat-funded-trader-avis',
-    title: 'GOAT Funded Trader Review 2026: Codes, Payouts & Rules',
+    title: 'GOAT Funded Trader Review: FIRSTGFT, BOGO40 and Payouts',
     metaDescription:
-      'GOAT Funded Trader review: FIRSTGFT and BOGO40 conditions, 2% payout fee, 1- or 2-minute funded holding time, 1-step, 2-step and legacy program rules.',
+      'GOAT Funded Trader review: compare FIRSTGFT and BOGO40, 1-step, 2-step, 3-step and Instant rules, payout terms, news trading and key risks.',
     eyebrow: 'Brand review',
     h1: 'Goat Funded Trader review: strong offer, but reread the rules before buying',
     intent: 'risque',
     demandSignal:
-      'Brand decision search: verify whether FIRSTGFT or BOGO40 applies to the chosen live offer, whether the legacy model is sold, and funded payout terms.',
+      'Brand decision search: the trader wants to know whether GFT is reliable, which current code gives the better immediate value, which model to choose and which rules to verify before paying.',
     answer:
-      'GOAT lists FIRSTGFT as a new-customer offer with up to 50% off eligible plans, while its BOGO40 FAQ describes 40% off selected plans and a same-size bonus account **only after the first successful payout** and contacting support. Both are time-limited and must be confirmed at checkout. The 2-Step Standard is no longer sold to new customers; the 3-Step help page may remain online for legacy traders. For funded accounts bought before 6 October 2026 the minimum trade duration is 2 minutes; newer purchases use 1 minute.',
+      'GOAT Funded Trader combines 1-step, 2-step, 3-step and Instant Funding models with two current official offers: FIRSTGFT gives new customers up to 50% off eligible plans, while BOGO40 gives 40% off and a conditional same-size account only after the first successful payout. Compare the exact model before choosing the code.',
     primaryKeywords: ['Goat Funded Trader review', 'GFT prop firm', 'Goat Funded Trader discount code'],
     secondaryKeywords: ['FIRSTGFT code', 'BOGO40 code', 'GFT payout', 'GFT instant funding', 'Goat Funded Trader rules'],
     checks: [
       'Compare FIRSTGFT and BOGO40 at checkout without selecting an oversized account.',
-      'Compare 1-step, 2-step and Instant models; confirm whether a legacy 3-step plan is actually available before selecting it.',
+      'Compare 1 step, 2 step, 3 step and Instant because the rules are not identical.',
       'Verify news trading, weekend holding, lot size, daily loss, max loss and payout delay.',
       'Read recent feedback from the last 30 to 60 days across Reddit, Discord and X.',
       'Look for payout-denial examples and the most common rejection reasons on the exact program you want.',
@@ -922,12 +921,12 @@ export const seoGuides: SeoGuide[] = [
       {
         question: 'Should I use FIRSTGFT or BOGO40 at GOAT Funded Trader?',
         answer:
-          'GOAT advertises FIRSTGFT up to 50% for new customers and BOGO40 with a 40% discount on eligible accounts. A BOGO bonus account requires an actual first payout and a support request, and is **not** issued at purchase. Confirm code eligibility and the final checkout amount; limited-time campaigns can expire.',
+          'FIRSTGFT is the simpler new-customer offer and can reach 50% on eligible plans. BOGO40 gives 40% off, but its same-size bonus account is claimable only after a first successful payout and contact with support. Compare the immediate checkout totals before choosing.',
       },
       {
         question: 'Which GFT model should I choose?',
         answer:
-          'Instant and 1-step models can involve tighter funded rules. Compare currently sold 2-step plans by their exact name. GOAT still documents some retired or legacy products (including 3-Step and Standard) but a help-center page does not prove current checkout availability.',
+          'Instant and 1-step models are faster, but they can be stricter. 2-step or 3-step models may be easier to read if you want more validation and less pressure before funded-stage rules apply.',
       },
     ],
     internalLinks: [
@@ -1895,9 +1894,9 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     primaryKeywords: ['goat funded trader review', 'is goat funded trader legit', 'goat funded trader'],
     secondaryKeywords: ['goat funded trader trustpilot', 'goat funded trader rules', 'goat funded trader payout', 'goat guard', 'GFT prop firm', 'goatfundedtrader'],
     checks: [
-      'Read the funded-account rules, not only the challenge: Goat Guard, the **1- or 2-minute** holding rule (depending on purchase date) and the news-window cap can change payouts.',
-      'Check the first-two-reward cap and the **2%** processing fee in GOAT’s November 23, 2026 help center, plus the $5K 2-Step 4% exception.',
-      'Confirm the exact model sold: GOAT retains legacy 3-Step help pages, **2-Step Standard** is explicitly unavailable to new buyers, and older models can be excluded from resets.',
+      'Read the funded-account rules, not only the challenge: Goat Guard, the 2-minute rule and the news-window cap apply after you pass.',
+      'Check the payout cap on your first two withdrawals and the 3% processing fee.',
+      'Confirm which model you are buying: the 3-Step model was retired in August 2026 and 2-Step Pro stopped selling in June 2026.',
       'Read recent payout feedback from the last 30 to 60 days, not only star ratings.',
       'Compare discount codes only after choosing a model that fits your trading.',
     ],
@@ -1905,7 +1904,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       {
         question: 'Is GOAT Funded Trader legit?',
         answer:
-          'GOAT publishes rules for simulated accounts and reward payouts but retains broad contractual discretion. Check PropRadar’s **live profile** for its current score instead of a frozen figure. Trustpilot still displayed a guideline-breach withholding notice on November 23, 2026; under V5.2 that implies a **−6 deduction, not an automatic 64-point score ceiling**.',
+          'It is a real operator that pays traders, but it is not regulated by any financial authority and its terms give it wide discretion over payouts. PropRadar keeps it on the watchlist with a 58/100 score, and Trustpilot withholds its rating for a breach of its guidelines (checked October 23, 2026).',
       },
       {
         question: 'Why is the GOAT Funded Trader Trustpilot rating unavailable?',

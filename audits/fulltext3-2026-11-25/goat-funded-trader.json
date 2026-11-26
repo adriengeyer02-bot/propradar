@@ -1,0 +1,36 @@
+{
+ "slug": "goat-funded-trader",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "GOAT may 'disallow or block any Trader from participating in the program for any reason, in the Company's sole and absolute discretion'; several prohibited practices are 'as determined by the Company in its sole and absolute discretion', with forfeiture of associated profits or payouts.",
+   "source": "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+   "locator": "§4.6; prohibited practices",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B5",
+   "text": "Trades closed faster than the minimum holding time: 'Profits from those trades are not included in payout calculations, while losses still count.'",
+   "source": "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades",
+   "locator": "Minimum holding time",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "An account closed because GOAT judges the trading style unsuitable, without any other violation, is refunded in full.",
+   "source": "https://help.goatfundedtrader.com/en/articles/10742118-what-are-prohibited-trading-practices",
+   "locator": "Prohibited trading practices",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "1-Step and 2-Step models: no consistency rule (Instant GOAT 15%).",
+   "source": "https://help.goatfundedtrader.com/en/articles/10630134-1-step-model",
+   "locator": "Model overview",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

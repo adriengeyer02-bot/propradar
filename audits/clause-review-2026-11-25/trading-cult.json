@@ -1,0 +1,19 @@
+{
+ "slug": "trading-cult",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "CONS_30_DELAY",
+   "text": "Funded accounts: no trade or day above 30 % of profits; failure rejects the payout and extends the date by 15 days (20 % on no-evaluation challenges).",
+   "source": "https://faq.tradingcult.com/",
+   "excerpt": "requests can be made 14 days after your first funded trade. * Consistency Rule: The Consistency Rule applies only to funded accounts and is designed to encourage disciplined and consistent trading. No single trade or trading day should contribute more than 30% of the total profits when requesting a payout. If multiple payouts have been made, only the trading activity since the previous payout will be considered when calculating the profit consistency rule. Failure to meet this objective will result in the payout being rejected and the new payout date being extended by 14 days. * The rule me",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {
+  "B3": "FAQ rules text."
+ },
+ "toVerify": {},
+ "safeguards": []
+}

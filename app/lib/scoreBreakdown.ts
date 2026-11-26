@@ -3,7 +3,7 @@ import { getFirmUpdate, type RestrictiveRule } from './firmUpdates';
 import { computeRulesPenalty, isScoredRule, ruleKind, rulePoints, RULES_PENALTY_ENABLED, RULES_PENALTY_MAX } from './restrictiveRules';
 import { getPublishedV4Score, isPublishedV4, type PublishedV4Score } from './scoringV4Published';
 import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
-import { getPublishedV52Score, isPublishedV52 } from './scoringV52Published';
+import { getScaleC, type ScaleCEntry } from './scaleC';
 
 /**
  * Step-by-step explanation of a firm's displayed score (SCORING.md): the
@@ -19,8 +19,7 @@ export type ScoreBreakdown = {
   editorial: number;
   /** Validated V4 five-block breakdown; no second legacy rules deduction. */
   v4?: PublishedV4Score;
-  v5?: NonNullable<ReturnType<typeof getPublishedV5Score>> | NonNullable<ReturnType<typeof getPublishedV52Score>>;
-  v52?: boolean;
+  v5?: NonNullable<ReturnType<typeof getPublishedV5Score>>;
   rules?: {
     penalty: number;
     applied: boolean;
@@ -35,24 +34,26 @@ export type ScoreBreakdown = {
   trustpilot?: { penalty: number; included: boolean; before: number };
   closedCap?: { cap: number; before: number };
   safetyCap?: { cap: number; before: number };
-  payoutEvidenceCap?: { cap: number; before: number };
   final: number;
   maxPenalty: number;
+  /** Scale C: the score is the ceiling minus the listed penalties (see scaleC.ts). */
+  scaleC?: ScaleCEntry;
 };
 
 export function getScoreBreakdown(firm: PropFirm): ScoreBreakdown {
   const update = getFirmUpdate(firm.slug);
-  const v52 = (update?.scoringVersion === 5.2 || (!update && isPublishedV52(firm.slug)))
-    ? getPublishedV52Score(firm) : undefined;
-  const v5 = v52 ?? ((update?.scoringVersion === 5 || (!update && isPublishedV5(firm.slug)))
-    ? getPublishedV5Score(firm) : undefined);
+  const scaleC = firm.scaleC ? getScaleC(firm.slug) : undefined;
+  if (scaleC) {
+    return { editorial: scaleC.ceiling, unclassifiedOnly: 0, final: firm.score, maxPenalty: 0, scaleC };
+  }
+  const v5 = (update?.scoringVersion === 5 || (!update && isPublishedV5(firm.slug)))
+    ? getPublishedV5Score(firm) : undefined;
   if (v5) {
     const allRules = update?.restrictiveRules ?? [];
     const classified = allRules.filter(isScoredRule);
     return {
       editorial: v5.editorialGross,
       v5,
-      v52: Boolean(v52),
       rules: {
         penalty: v5.rulesPenalty,
         applied: true,
@@ -67,7 +68,6 @@ export function getScoreBreakdown(firm: PropFirm): ScoreBreakdown {
       unclassifiedOnly: allRules.length - classified.length,
       trustpilot: firm.trustpilotPenalty,
       safetyCap: firm.v5SafetyCap,
-      payoutEvidenceCap: firm.v52PayoutCap,
       closedCap: firm.closedCap,
       final: firm.score,
       maxPenalty: 10,

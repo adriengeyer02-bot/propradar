@@ -1,0 +1,344 @@
+{
+  "date": "2026-11-24",
+  "status": "AUDIT_ONLY_SCORE_FREEZE",
+  "scope": "Targeted public source review; prior uncommitted findings reconciled; no full contract coverage claimed.",
+  "findingsCount": 25,
+  "firms": [
+    {
+      "slug": "aqua-funded",
+      "programs": [
+        "Instant Standard",
+        "Instant Pro",
+        "AquaMan",
+        "One Step Pro",
+        "Two Step Pro",
+        "Pay After Pass",
+        "TryAqua"
+      ],
+      "findings": [
+        {
+          "source": "https://help.aquafunded.com/en/articles/11875903",
+          "locator": "Consistency Standard",
+          "scope": "Instant Standard",
+          "kind": "conflict",
+          "finding": "Same FAQ alternates 15% and 20%; $1000/$5000 example corresponds to 20%.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://help.aquafunded.com/en/articles/10476448",
+          "locator": "Consistency and rewards",
+          "scope": "Instant Standard",
+          "kind": "cohort",
+          "finding": "15% threshold, five days at 0.5%, 90% split, 14-day cycle.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://help.aquafunded.com/en/articles/15281077",
+          "locator": "Consistency and floating loss",
+          "scope": "Instant Standard",
+          "kind": "conflict",
+          "finding": "20% threshold and combined floating loss hard breach at 2%; reconcile checkout version.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://help.aquafunded.com/en/articles/15281078",
+          "locator": "Limited Time Offer",
+          "scope": "Instant Pro",
+          "kind": "cohort",
+          "finding": "20% for purchases from Sep 8 2026 during offer, earlier 15%.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://help.aquafunded.com/en/articles/11875903",
+          "locator": "Other models",
+          "scope": "funded",
+          "kind": "quantified",
+          "finding": "AquaMan 15%, One Step Pro 25%, Two Step Pro 50%; no automatic malus for transparent 50%.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://help.aquafunded.com/en/articles/13322298",
+          "locator": "Hard breach and consistency",
+          "scope": "Pay After Pass from Aug 4",
+          "kind": "risk",
+          "finding": "5% equity trailing and 15% consistency, five days required.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://help.aquafunded.com/en/articles/9250906",
+          "locator": "Rewards",
+          "scope": "funded",
+          "kind": "payout",
+          "finding": "3% processing fee; first two withdrawals capped at $10k each for 100K+; $100 minimum; 24 business hour guarantee applies to approved payouts.",
+          "checkedOn": "2026-11-24"
+        }
+      ],
+      "missing": [
+        "Current full CGU and funded agreements not retrieved; exact Standard cohorts and trailing formula; registry and regulatory checks; independent payout proof"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "auditDate": "2026-11-24",
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/aquafunded.com",
+        "rating": null,
+        "count": 1224,
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "checkedOn": "2026-11-24"
+      },
+      "payoutEvidence": [],
+      "payoutSearchResult": "NO_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "ofp-funding",
+      "programs": [
+        "Instant Lite",
+        "Instant Classic",
+        "Instant Plus"
+      ],
+      "findings": [
+        {
+          "source": "https://help.ofpfunding.com/how-does-the-payout-process-work-at-ofp-funding/",
+          "locator": "Eligibility and processing",
+          "scope": "general FAQ Oct 17 2025",
+          "kind": "payout",
+          "finding": "Only eligible profits paid; repeated prohibited strategies may forfeit rewards and terminate account; typical processing 1–3 calendar days after invoice approval.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://uk.trustpilot.com/review/ofpfunding.com",
+          "locator": "Company response to Nov 13 complaint",
+          "scope": "Instant Plus",
+          "kind": "discretion",
+          "finding": "Company confirms no consistency rule but exposure and risk assessment still applies; complainant alleges reduction from $2010.23 to $29, not independently verified.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://bestprops.com/rules/ofp-funding-rules/",
+          "locator": "Secondary review Nov 9",
+          "scope": "Classic",
+          "kind": "lead",
+          "finding": "Secondary source reports 20% current vs 25% old terms; primary contract not accessed, not validated.",
+          "checkedOn": "2026-11-24"
+        }
+      ],
+      "missing": [
+        "Official www homepage inaccessible through research tool; full terms, current plan rules and exposure thresholds not retrieved; registry and independent payout verification"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "auditDate": "2026-11-24",
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/ofpfunding.com",
+        "rating": null,
+        "count": 4443,
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "checkedOn": "2026-11-24"
+      },
+      "payoutEvidence": [],
+      "payoutSearchResult": "NO_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "thinkcapital",
+      "programs": [
+        "Lightning",
+        "Dual Step",
+        "Nexus",
+        "Bolt",
+        "Bolt Flex"
+      ],
+      "findings": [
+        {
+          "source": "https://www.thinkcapital.com/terms-of-services/",
+          "locator": "§7.6.2–3",
+          "scope": "Bolt/Flex",
+          "kind": "risk",
+          "finding": "20%/25% best-day cap; 6% equity/7% closed balance trailing respectively, locks at initial balance; 3% daily loss.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://www.thinkcapital.com/terms-of-services/",
+          "locator": "§7.6.5–7",
+          "scope": "Bolt/Flex",
+          "kind": "payout",
+          "finding": "Combined initial allocation $192500, $500k including scaling; no monthly cap; first payout 6%/7% profit and 14 days unless add-on.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://www.thinkcapital.com/terms-of-services/",
+          "locator": "§7.6.8–10",
+          "scope": "Bolt/Flex",
+          "kind": "risk",
+          "finding": "Weekend holding breach unless add-on; fee refunded third approved payout; general prohibited practices and inactivity apply.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://www.thinkcapital.com/terms-of-services/",
+          "locator": "Additional service limitations",
+          "scope": "geography",
+          "kind": "eligibility",
+          "finding": "Malaysia Pakistan Cambodia Indonesia only Bolt/Flex; US ThinkMarkets app only; circumvention can disqualify payout.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://www.thinkcapital.com/tc-faqs/introduction-to-thinkcapital-programs/bolt-flex-plan/",
+          "locator": "News and refund",
+          "scope": "Bolt Flex",
+          "kind": "risk",
+          "finding": "News ±5 min hard breach without add-on; 14-day refund if untraded; no EA deployment currently supported.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://www.thinkcapital.com/tc-faqs/funded-accounts/how-often-are-payouts-offered-for-simulated-funded-accounts/",
+          "locator": "Payout cycle",
+          "scope": "all",
+          "kind": "payout",
+          "finding": "14 days standard, 7-day add-on for evaluation models; three profitable days for Lightning/Dual/Nexus; $100 minimum.",
+          "checkedOn": "2026-11-24"
+        }
+      ],
+      "missing": [
+        "Full clause-by-clause CGU and schedules not read; signed funded agreement and all cohort rules, legal registry and regulatory checks, independent payout evidence"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "auditDate": "2026-11-24",
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/thinkcapital.com",
+        "rating": null,
+        "count": 605,
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "checkedOn": "2026-11-24"
+      },
+      "payoutEvidence": [],
+      "payoutSearchResult": "NO_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "ic-funded",
+      "programs": [
+        "Professional 2-Step",
+        "Accelerated 1-Step",
+        "Instant"
+      ],
+      "findings": [
+        {
+          "source": "https://www.icfunded.com/",
+          "locator": "Current catalogue and Professional 5K Step 1",
+          "scope": "Professional",
+          "kind": "risk",
+          "finding": "10% target, 5% daily and 10% max drawdown, three active days, news allowed, weekend holding not allowed in displayed phase.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://www.icfunded.com/pricing",
+          "locator": "Pricing",
+          "scope": "all",
+          "kind": "scope",
+          "finding": "Three product families; up to 90% split is add-on, not universal.",
+          "checkedOn": "2026-11-24"
+        }
+      ],
+      "missing": [
+        "Rules page located but full matrix not extracted; full CGU and signed funded agreement not retrieved; entity, registry, alerts, independent payout evidence"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "auditDate": "2026-11-24",
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/www.icfunded.com",
+        "rating": 3.4,
+        "count": 203,
+        "status": "RATING_DISPLAYED",
+        "checkedOn": "2026-11-24"
+      },
+      "payoutEvidence": [],
+      "payoutSearchResult": "NO_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "sway-funded",
+      "programs": [
+        "Challenge",
+        "Funded Simulation",
+        "Instant (marketing inventory only)"
+      ],
+      "findings": [
+        {
+          "source": "https://www.swayfunded.com/terms",
+          "locator": "§1.1–1.3; §4.5",
+          "scope": "all",
+          "kind": "change",
+          "finding": "SF Funded Ltd named; broad unilateral amendment and suspension powers, continued use acceptance.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://www.swayfunded.com/terms",
+          "locator": "§8.1–8.2",
+          "scope": "evaluation",
+          "kind": "termination",
+          "finding": "Funding discretionary even after passing; six months inactivity voids challenge without advance notice or refund.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://www.swayfunded.com/terms",
+          "locator": "§9; §14",
+          "scope": "funded",
+          "kind": "discretion",
+          "finding": "Rewards discretionary; may refuse reduce or withhold on breach; no guarantee of compensation.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://www.swayfunded.com/terms",
+          "locator": "§10",
+          "scope": "all",
+          "kind": "eligibility",
+          "finding": "Restricted list includes Australia Japan New Zealand Pakistan UAE Vietnam and Saint Lucia; future restrictions possible.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://www.swayfunded.com/terms",
+          "locator": "§13",
+          "scope": "all",
+          "kind": "safeguard",
+          "finding": "Price/availability changes do not affect prior purchases; no refunds stated; processor documents within 24h may be required.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://www.swayfunded.com/terms",
+          "locator": "§20.3; §23; §27",
+          "scope": "all",
+          "kind": "recourse",
+          "finding": "Liability capped at lesser of fees or $1000; local arbitration unspecified; Saint Lucia law; mandatory rights not assessed.",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "source": "https://swayfunded.com/",
+          "locator": "Timeline and reward claims",
+          "scope": "all",
+          "kind": "payout",
+          "finding": "Firm claims $1m+ rewarded and $165k largest reward; not independent evidence.",
+          "checkedOn": "2026-11-24"
+        }
+      ],
+      "missing": [
+        "Full terms not exhaustively read; linked FAQ and funded rules, dated contracts and acquisition cohorts; Saint Lucia registry and regulatory checks; independent payout proof"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "auditDate": "2026-11-24",
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/swayfunded.com",
+        "rating": 4,
+        "count": 621,
+        "status": "RATING_DISPLAYED",
+        "checkedOn": "2026-11-24"
+      },
+      "payoutEvidence": [],
+      "payoutSearchResult": "NO_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_VERIFIED"
+    }
+  ]
+}

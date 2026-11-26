@@ -1,0 +1,486 @@
+{
+  "date": "2026-11-24",
+  "status": "AUDIT_ONLY_SCORE_FREEZE",
+  "scope": "Five firms, targeted primary terms and programme FAQ plus historical TPT mirror explicitly unverified as current; no full read or closure claimed.",
+  "findingsCount": 45,
+  "firms": [
+    {
+      "slug": "take-profit-trader",
+      "programs": [
+        "Classic",
+        "Intraday",
+        "EOD",
+        "Legacy",
+        "PRO+ live"
+      ],
+      "findings": [
+        {
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+          "locator": "updated Nov 23 §§2–6",
+          "scope": "PRO",
+          "kind": "risk",
+          "finding": "Limit-up/down exposure can liquidate account; opposite positions across related products prohibited across Test/PRO/PRO+. Monthly round trip required with possible support exception."
+        },
+        {
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+          "locator": "drawdown table",
+          "scope": "PRO",
+          "kind": "risk",
+          "finding": "Classic/Intraday/Legacy intraday equity high-water; EOD plan end-of-day balance trailing. EOD DLL soft if balance at or above starting size, otherwise hard; other plans no DLL."
+        },
+        {
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+          "locator": "§6",
+          "scope": "PRO",
+          "kind": "news",
+          "finding": "Must be flat with no orders one minute either side and during listed news; FOMC minutes currently allowed, announcements/NFP/CPI restricted."
+        },
+        {
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules",
+          "locator": "withdrawals Nov 23",
+          "scope": "PRO",
+          "kind": "payout",
+          "finding": "80% above buffer, 50% of buffer after closure; new 25K/50K/150K buffers $1000/$2000/$4500. Purchases before Nov 23 retain old size tables."
+        },
+        {
+          "source": "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725",
+          "locator": "PRO+ FAQ",
+          "scope": "live",
+          "kind": "payout",
+          "finding": "90% split, no buffer, daily withdrawals, no cap. FAQ weekly activity vs current PRO+ help monthly; reconcile cohort."
+        },
+        {
+          "source": "https://www.propfirm007.page/downloads/pf-contract-tutorial/take-profit-trader-contract.pdf",
+          "locator": "PDF June 3 2026 §4.H p13 visually checked",
+          "scope": "historical third-party mirror",
+          "kind": "confidentiality",
+          "finding": "Material confidentiality breach can terminate and halt all compensation on written notice. Not verified current checkout."
+        },
+        {
+          "source": "https://www.propfirm007.page/downloads/pf-contract-tutorial/take-profit-trader-contract.pdf",
+          "locator": "§7A.5–6",
+          "scope": "historical PRO mirror",
+          "kind": "forfeiture",
+          "finding": "News violation and subjective suspected bot/reckless short scalps may close account and forfeit affected gains. Current bot clause and news list need signed-version reconciliation."
+        },
+        {
+          "source": "https://www.propfirm007.page/downloads/pf-contract-tutorial/take-profit-trader-contract.pdf",
+          "locator": "§7D; §8B",
+          "scope": "historical mirror",
+          "kind": "transition",
+          "finding": "$10k daily profit cap with excess not paid, mandatory live upgrade at discretion (illustrative milestones $10k profit or $20k withdrawn); NOT assumed current."
+        },
+        {
+          "source": "https://www.propfirm007.page/downloads/pf-contract-tutorial/take-profit-trader-contract.pdf",
+          "locator": "§6 buffer; §7A.3",
+          "scope": "historical mirror",
+          "kind": "version",
+          "finding": "Old buffer split 50% below 60 active days/80% above and weekly activity; current FAQ differs, do not conflate."
+        },
+        {
+          "source": "https://www.bbb.org/us/fl/windermere/profile/financial-services/takeprofittrader-0733-235965089/complaints?page=10",
+          "locator": "company responses",
+          "scope": "PRO historical incident leads",
+          "kind": "complaints",
+          "finding": "Company responses describe news-rule forfeiture and disputed withdrawals; not independent adjudication of misconduct."
+        }
+      ],
+      "missing": [
+        "Current official signed PRO and PRO+ contracts for Nov 23 plan change; complete EOD and Test matrix; historic mirror provenance and enforceability; primary registry and verified payout records"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/takeprofittrader.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.4,
+        "count": 11373
+      },
+      "payoutEvidence": [],
+      "payoutSearchResult": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "slug": "funding-traders",
+      "programs": [
+        "1-Step Pro",
+        "2-Step Pro",
+        "2-Step Day",
+        "2-Step Swing",
+        "Instant Funding",
+        "legacy variants"
+      ],
+      "findings": [
+        {
+          "source": "https://fundingtraders.com/terms-of-service",
+          "locator": "effective Sep 1 2026 §§3.4–3.5",
+          "scope": "all",
+          "kind": "linked accounts",
+          "finding": "Forbidden practices across linked accounts may trigger termination across contracts."
+        },
+        {
+          "source": "https://fundingtraders.com/terms-of-service",
+          "locator": "§6.3.3–4",
+          "scope": "funded",
+          "kind": "risk",
+          "finding": "Risk hygiene: >50% trades under 2 min or majority profit from them; negative risk/reward criterion >60% setups below 0.9x planned risk; stopless pattern ≥50%; minimum 10 closed trades for pattern assessment. Negative R/R first detection warning only."
+        },
+        {
+          "source": "https://fundingtraders.com/terms-of-service",
+          "locator": "§6.3.5–6",
+          "scope": "funded",
+          "kind": "sanction",
+          "finding": "Four-tier strikes: first RMG restrictions, second 70% split and 50% violation-profit deduction, third 60% split and 100% deduction, fourth discontinuation; add-on temporarily overridden."
+        },
+        {
+          "source": "https://fundingtraders.com/terms-of-service",
+          "locator": "§6.3.7–8",
+          "scope": "RMG",
+          "kind": "payout",
+          "finding": "Max 30% margin, 1% planned risk per idea, stop within 3 minutes; deductions applied to net eligible profits before split, can reduce payment to zero without account closure."
+        },
+        {
+          "source": "https://fundingtraders.com/terms-of-service",
+          "locator": "§6.3.9–11",
+          "scope": "funded",
+          "kind": "graduation",
+          "finding": "Warned status requires 15 strike-free days and balance threshold; Tier1/2 require 30 days and 10% net realized profit; evaluation behavior can cause starting funded status; restrictions can extend across accounts."
+        },
+        {
+          "source": "https://fundingtraders.com/terms-of-service",
+          "locator": "§6.3.13",
+          "scope": "funded",
+          "kind": "recourse",
+          "finding": "Appeal by email, target 48h review; appeal does not stop payout schedule."
+        },
+        {
+          "source": "https://fundingtraders.com/terms-of-service",
+          "locator": "§9",
+          "scope": "all",
+          "kind": "privacy/reputation",
+          "finding": "Company may disclose account identifier and trading evidence for reasonably substantiated serious abuse subject to law; intentional material reputation harm can trigger termination. Not a blanket prohibition of honest review."
+        },
+        {
+          "source": "https://fundingtraders.com/terms-of-service",
+          "locator": "§10.1",
+          "scope": "evaluation refund",
+          "kind": "refund",
+          "finding": "Refund after second processed payout conditional on continued compliance; breach can remove eligibility."
+        },
+        {
+          "source": "https://fundingtraders.com/help/en/articles/12838492-general-trading-guidelines",
+          "locator": "EA",
+          "scope": "all",
+          "kind": "strategy",
+          "finding": "Automation allowed only for risk management; own account copying permitted, third-party signals prohibited."
+        }
+      ],
+      "missing": [
+        "Read all 447 lines and exact checkout versions; verify all product payout cycles and day/swing variants; legal registry, incidents and direct payout proof"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/fundingtraders.com",
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "rating": null,
+        "count": null
+      },
+      "payoutEvidence": [],
+      "payoutSearchResult": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "slug": "maven-trading",
+      "programs": [
+        "Standard 1/2/3-Step",
+        "Static 1-Step (scope pending)",
+        "2-Step OMO",
+        "BNPL",
+        "Instant",
+        "Instant Mini",
+        "Prediction Markets"
+      ],
+      "findings": [
+        {
+          "source": "https://maventrading.com/terms-and-conditions",
+          "locator": "§4.5",
+          "scope": "all applicable",
+          "kind": "strategy",
+          "finding": "At least half of trades held ≥60 seconds; OMO funded and Mini profits under 150 seconds deleted, losses retained."
+        },
+        {
+          "source": "https://maventrading.com/terms-and-conditions",
+          "locator": "§10.7",
+          "scope": "Standard 1/2/3, BNPL, Instant",
+          "kind": "forfeiture",
+          "finding": "Combined trader-wide $10k gross cap across two payouts or rolling 30 days based on profit generation; surplus deleted, not deferred."
+        },
+        {
+          "source": "https://maventrading.com/terms-and-conditions",
+          "locator": "§10.8",
+          "scope": "OMO",
+          "kind": "forfeiture",
+          "finding": "First/second caps 6%/8%; surplus void at payout and balance reset, no product cap from third; Mini excluded from general cap."
+        },
+        {
+          "source": "https://maventrading.com/terms-and-conditions",
+          "locator": "§10.9; schedule 1",
+          "scope": "BNPL",
+          "kind": "risk",
+          "finding": "8% trailing before first withdrawal then floor fixed at starting balance; M2 first trigger closes positions and split falls to 50%, second deactivation."
+        },
+        {
+          "source": "https://maventrading.com/terms-and-conditions",
+          "locator": "schedule 1",
+          "scope": "Instant/Mini/BNPL",
+          "kind": "quantified",
+          "finding": "Instant 20% day consistency or 30% add-on, BNPL 20%, Mini 15% trade or 25% add-on. Mini one request within 24h, 3% minimum, one open trade."
+        },
+        {
+          "source": "https://maventrading.com/terms-and-conditions",
+          "locator": "schedule 1",
+          "scope": "Standard/OMO",
+          "kind": "payout",
+          "finding": "10 business days, Standard 2 three fresh profitable days; OMO four, 80/90% split reduced after M2."
+        },
+        {
+          "source": "https://maventrading.com/terms-and-conditions",
+          "locator": "§13.2–3",
+          "scope": "all",
+          "kind": "discretion",
+          "finding": "Broad termination including reasons deemed necessary; risk interviews and support query route, ordinary drawdown breach alone not platform ban."
+        },
+        {
+          "source": "https://maventrading.com/terms-and-conditions",
+          "locator": "§12",
+          "scope": "all",
+          "kind": "safeguard",
+          "finding": "Mandatory consumer rights and regulator complaints preserved."
+        },
+        {
+          "source": "https://maventrading.com/terms-and-conditions",
+          "locator": "schedule 3",
+          "scope": "Prediction Markets",
+          "kind": "strategy",
+          "finding": "Manual independent trading; own-account copying permission overridden; no 60-second/news restriction; 70% split on demand with compliance checks."
+        }
+      ],
+      "missing": [
+        "Full clause and schedule 2 news read, M2 exact thresholds and Static/Prediction product versions; registry and individual payout evidence"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/maventrading.com",
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "rating": null,
+        "count": null
+      },
+      "payoutEvidence": [],
+      "payoutSearchResult": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "slug": "e8-markets",
+      "programs": [
+        "E8 One",
+        "Signature Forex",
+        "Signature Crypto",
+        "Signature Futures",
+        "Classic v2",
+        "Pro",
+        "Perpetuals"
+      ],
+      "findings": [
+        {
+          "source": "https://e8markets.com/e8-markets-terms-and-conditions",
+          "locator": "effective date printed 11/03/2025 §§5,12",
+          "scope": "all",
+          "kind": "discretion",
+          "finding": "Firm can deny/revoke rewards and terminate for noncompliance at sole discretion including conduct judged reputationally harmful; separate ESPA needed."
+        },
+        {
+          "source": "https://e8markets.com/e8-markets-terms-and-conditions",
+          "locator": "§13.1–2",
+          "scope": "all",
+          "kind": "change",
+          "finding": "Changes effective on posting; material notice optional; continued use acceptance. Not proof of actual retroactivity."
+        },
+        {
+          "source": "https://e8markets.com/e8-markets-terms-and-conditions",
+          "locator": "intro",
+          "scope": "all",
+          "kind": "recourse",
+          "finding": "Mandatory arbitration and class action waiver in US-oriented terms; enforceability depends on jurisdiction."
+        },
+        {
+          "source": "https://help.e8markets.com/en/articles/11755943-e8-signature",
+          "locator": "performance rules",
+          "scope": "Signature Futures",
+          "kind": "payout",
+          "finding": "35% best day, five profitable days ≥0.3% after first payout, buffer equal drawdown, minimum net $100."
+        },
+        {
+          "source": "https://help.e8markets.com/en/articles/11755943-e8-signature",
+          "locator": "payout mechanism",
+          "scope": "Signature Futures",
+          "kind": "forfeiture",
+          "finding": "Four payouts then deactivation/free new challenge; prior-cycle unused profit not eligible for later payout. Treatment of buffer at closure to confirm."
+        },
+        {
+          "source": "https://help.e8markets.com/en/articles/11755943-e8-signature",
+          "locator": "daily pause/news",
+          "scope": "Signature Futures",
+          "kind": "safeguard",
+          "finding": "2% daily pause soft, not breach; news permitted; positions closed daily at 23:00 server time."
+        },
+        {
+          "source": "https://help.e8markets.com/en/articles/11775980-e8-one",
+          "locator": "consistency",
+          "scope": "One",
+          "kind": "quantified",
+          "finding": "40% best day funded only; no evaluation consistency; own-account copy permitted."
+        },
+        {
+          "source": "https://help.e8markets.com/en/articles/9448349-what-is-payout-on-demand",
+          "locator": "first payout",
+          "scope": "One/Signature",
+          "kind": "payout",
+          "finding": "Earliest first payout three days as a consequence of best-day math, not separate wait."
+        }
+      ],
+      "missing": [
+        "Current ESPA and Futures/perpetual agreements; full program caps and risk rules, registry and historical incidents, individual payments"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/e8markets.com",
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "rating": null,
+        "count": null
+      },
+      "payoutEvidence": [
+        {
+          "amountUSD": 1037499,
+          "count": 442,
+          "method": "Rise",
+          "url": "https://payoutjunction.com/monthly",
+          "period": "November 2026 month-to-date as of Nov 24",
+          "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED"
+        }
+      ],
+      "payoutSearchResult": "EXTERNAL_TRACKER_RECORDED_PARTIAL",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "slug": "brightfunded",
+      "programs": [
+        "1-Step Daily",
+        "2-Step Bright",
+        "Instant",
+        "pre-Nov-16 legacy",
+        "Futures separate"
+      ],
+      "findings": [
+        {
+          "source": "https://brightfunded.com/terms-and-conditions",
+          "locator": "§6.18–19, §7.2–5",
+          "scope": "evaluation",
+          "kind": "discretion",
+          "finding": "Passing does not guarantee funded offer; internal selection criteria may change without notice; evaluation performance bonus discretionary, distinguish funded reward agreement."
+        },
+        {
+          "source": "https://brightfunded.com/terms-and-conditions",
+          "locator": "§16.1",
+          "scope": "all",
+          "kind": "change",
+          "finding": "Revisions effective on posting or notification; reconcile grandfathering in current FAQ."
+        },
+        {
+          "source": "https://brightfunded.com/terms-and-conditions",
+          "locator": "§15.2–4",
+          "scope": "all",
+          "kind": "safeguard",
+          "finding": "Withdrawal process and reimbursement within 14 days described subject to conditions."
+        },
+        {
+          "source": "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me",
+          "locator": "cohort",
+          "scope": "all",
+          "kind": "safeguard",
+          "finding": "Pre-Nov-16 purchases keep original rules."
+        },
+        {
+          "source": "https://help.brightfunded.com/en/articles/18450321-instant-account-rules",
+          "locator": "loss limits",
+          "scope": "Instant",
+          "kind": "risk",
+          "finding": "1% combined real-time floating loss hard breach; 5% trailing max and 3% daily; weekend auto close."
+        },
+        {
+          "source": "https://help.brightfunded.com/en/articles/18450321-instant-account-rules",
+          "locator": "payout requirements",
+          "scope": "Instant",
+          "kind": "payout",
+          "finding": "15% consistency resets at request, 3% retained buffer, 1% min withdrawal, five days ≥0.5%; biggest loss cannot exceed biggest winner."
+        },
+        {
+          "source": "https://help.brightfunded.com/en/articles/18450321-instant-account-rules",
+          "locator": "news/hedging",
+          "scope": "Instant",
+          "kind": "sanction",
+          "finding": "±5min news profit removal soft breach, TP held ≥48h exempt; first cross-account hedge soft, second hard. 30-day inactivity hard, reactivation ends Nov 30."
+        },
+        {
+          "source": "https://help.brightfunded.com/en/articles/18450319-1-step-daily-evaluation-rules",
+          "locator": "funded",
+          "scope": "1-Step Daily",
+          "kind": "payout",
+          "finding": "No consistency, 1% retained buffer, any day after first funded trade; 6% intraday equity trailing, 3% daily loss; new account after payout."
+        },
+        {
+          "source": "https://help.brightfunded.com/en/articles/18450320-2-step-bright-evaluation-rules",
+          "locator": "funded",
+          "scope": "2-Step Bright",
+          "kind": "payout",
+          "finding": "No consistency, no buffer/minimum, 14-day first and later cycles (7-day add-on), 8% static drawdown, 4% daily loss; weekend permitted."
+        }
+      ],
+      "missing": [
+        "Complete funded agreement, full general terms/linked policies and separate Futures contracts, old cohort rules and all news treatment, registry and historical incident reconciliation"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/brightfunded.com",
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "rating": null,
+        "count": null
+      },
+      "payoutEvidence": [
+        {
+          "amountUSD": 496478,
+          "count": 444,
+          "method": "Direct Crypto",
+          "url": "https://payoutjunction.com/monthly",
+          "period": "November 2026 month-to-date as of Nov 24",
+          "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED"
+        }
+      ],
+      "payoutSearchResult": "EXTERNAL_TRACKER_RECORDED_PARTIAL",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED"
+    }
+  ]
+}

@@ -24,6 +24,485 @@ export type FrArticle = GuideArticle & {
 
 export const frArticles: FrArticle[] = [
   {
+    "slug": "prop-firms-fermees",
+    "title": "Prop firms fermées : 24 cas recensés, les causes et les risques (2026)",
+    "metaDescription": "80 à 100 prop firms auraient cessé leur activité depuis 2024. Découvrez 17 cas datés, 7 marques signalées inactives, leurs causes et les précautions avant un challenge.",
+    "eyebrow": "Enquête PropRadar · 25 novembre 2026",
+    "h1": "Pourquoi les prop firms ferment-elles ? Les chiffres, la liste et les causes",
+    "answer": "Finance Magnates Intelligence estime à 80–100 le nombre de prop firms ayant cessé leur activité entre janvier 2024 et le premier trimestre 2026. Notre enquête rassemble 24 marques ou activités : 17 événements datés (cessation, suspension, procédure ou retrait stratégique) et 7 signalements d’inactivité sans date de fermeture confirmée. Ces chiffres ne s’additionnent pas.",
+    "keywords": [
+      "prop firms fermées",
+      "liste prop firms fermées",
+      "faillite prop firm",
+      "pourquoi les prop firms ferment",
+      "prop firm fermeture 2026",
+      "risques prop firm"
+    ],
+    "published": "2026-11-25",
+    "updated": "2026-11-25",
+    "intro": "Un challenge à prix réduit ne vaut que si l’opérateur peut assurer les services promis. Les cessations d’activité montrent un autre risque que celui du trading : celui de la contrepartie commerciale. Cette enquête porte sur les offres de prop trading destinées aux particuliers, souvent en environnement simulé, et non sur l’ensemble des sociétés traditionnelles de trading pour compte propre.",
+    "keyPoints": [
+      "**80 à 100** cessations estimées à l’échelle du secteur entre janvier 2024 et le T1 2026 (Finance Magnates Intelligence). Ce n’est pas un chiffre officiel ni le total à novembre 2026.",
+      "**24 cas nominatifs** dans cet article, dont 17 événements datés et 7 signalements d’inactivité. Certains événements sont des suspensions, des rachats ou des retraits d’activité, pas des faillites.",
+      "Une fermeture n’établit ni fraude, ni insolvabilité, ni perte de l’ensemble des fonds des clients.",
+      "La dépendance technologique, la trésorerie, la concurrence et les choix stratégiques ressortent de plusieurs cas documentés."
+    ],
+    "sections": [
+      {
+        "heading": "Combien de prop firms ont fermé depuis 2024 ?",
+        "paragraphs": [
+          "En février 2025, Finance Magnates Intelligence évoquait déjà une fourchette de 80 à 100 marques disparues en 2024. Son analyse publiée en 2026 retient un ordre de grandeur similaire pour janvier 2024–T1 2026. Ces estimations de périmètres différents ne constituent pas deux séries cumulables. Les cessations intervenues plus tard en 2026 ne permettent pas de recalculer un total mondial fiable.",
+          "Le registre statistique PropRadar comprend 17 entrées documentaires à la date de consultation du code source. Nous reprenons ces 17 marques et ajoutons sept cas de presse spécialisée dans cet article. Les sept ajouts ne constituent pas automatiquement de nouveaux profils dans le radar."
+        ],
+        "stats": [
+          {
+            "value": "80–100",
+            "label": "Estimation sectorielle, janvier 2024–T1 2026"
+          },
+          {
+            "value": "17",
+            "label": "Événements datés dans l’enquête"
+          },
+          {
+            "value": "7",
+            "label": "Signalements sans date confirmée"
+          }
+        ],
+        "callout": {
+          "kind": "warning",
+          "text": "Il n’existe pas ici de dénominateur mondial vérifié ni de cohorte suivie dans le temps. Diviser les fermetures historiques par le nombre de firmes actuellement listées ne donnerait pas un taux de faillite valide."
+        }
+      },
+      {
+        "heading": "Liste chronologique : 17 arrêts ou événements datés",
+        "paragraphs": [
+          "La date correspond à une annonce, une échéance d’arrêt ou une procédure, selon le cas. Les motifs sont ceux rapportés par les sources et ne constituent pas une expertise comptable indépendante. Une fermeture historique peut être suivie d’une relance."
+        ],
+        "compare": {
+          "columns": [
+            "Date",
+            "Nature de l’événement",
+            "Motif ou contexte documenté"
+          ],
+          "rows": [
+            {
+              "label": "Skilled Funded Trader",
+              "values": [
+                "28 mars 2024",
+                "Suspension annoncée",
+                "Raison précise non établie dans l'annonce initiale ; ne pas assimiler à une faillite."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/easton-controlled-skilled-funded-trader-suspends-prop-trading-operations/"
+            },
+            {
+              "label": "True Forex Funds",
+              "values": [
+                "14 mai 2024",
+                "Fermeture définitive annoncée",
+                "Insolvabilité déclarée après la perte d'accès à MetaTrader en février."
+              ],
+              "sourceUrl": "https://fxnewsgroup.com/forex-news/retail-forex/prop-firm-true-forex-funds-folds/"
+            },
+            {
+              "label": "SurgeTrader",
+              "values": [
+                "24 mai 2024",
+                "Cessation annoncée",
+                "Perte de la licence Match-Trader quelques jours auparavant ; désaccord avec le prestataire."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/prop-firm-surgetrader-shuts-down-a-week-after-losing-match-trader-license/"
+            },
+            {
+              "label": "Funded Engineer",
+              "values": [
+                "15 juillet 2024",
+                "Fermeture définitive annoncée",
+                "Tentatives de restructuration infructueuses et intention de déposer le bilan ; jugement non établi par cette source."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/breaking-prop-trading-firm-funded-engineer-shuts-down/"
+            },
+            {
+              "label": "Karma Prop Traders",
+              "values": [
+                "Août 2024",
+                "Suspension puis acquisition",
+                "Le fondateur a invoqué des difficultés de trésorerie liées à des abus présumés ; acquisition ultérieure par Sway Funded. Pas de conclusion de fraude."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/another-prop-firm-shuts-down-founder-blames-cheaters-for-liquidity-issues/"
+            },
+            {
+              "label": "Funds For Traders",
+              "values": [
+                "Août 2024",
+                "Cessation annoncée",
+                "Arrêt du support MT4/MT5 d'Eightcap pour le prop trading, selon la société."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/prop-trading-funds-for-traders-closes-operations/"
+            },
+            {
+              "label": "Indigo Trader Funding",
+              "values": [
+                "Août 2024",
+                "Cessation confirmée",
+                "Échec commercial reconnu ; demande de radiation au Royaume-Uni. Remboursements annoncés, exécution non établie."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/prop-trading-firm-indigo-trader-funding-confirms-shutdown/"
+            },
+            {
+              "label": "MPFunds",
+              "values": [
+                "Septembre 2024",
+                "Cessation annoncée",
+                "Le dirigeant a attribué l'arrêt à la perte des services bancaires."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/prop-trading-prop-firm-match-users-left-in-limbo-after-affiliated-company-shuts-down/"
+            },
+            {
+              "label": "Ascetic Capital",
+              "values": [
+                "3 décembre 2024",
+                "Cessation annoncée",
+                "Quatre ventes la première semaine, retrait des investisseurs selon la société ; remboursement annoncé."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/prop-firm-shuts-down-after-one-week-we-only-made-four-sales/"
+            },
+            {
+              "label": "Smart Prop Trader",
+              "values": [
+                "29 décembre 2024",
+                "Date d'arrêt annoncée",
+                "Arrêt programmé ; motif financier précis non établi."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter/"
+            },
+            {
+              "label": "Fast Track Trading",
+              "values": [
+                "16 janvier 2025",
+                "Procédure Chapter 7",
+                "Date de dépôt de la procédure de faillite aux États-Unis, pas nécessairement dernier jour d'activité."
+              ],
+              "sourceUrl": "https://www.bkalerts.com/recent-bankruptcy-cases/new-jersey-bankruptcy-court/3:25-bk-10470/bankruptcy-case-fast-track-trading-llc"
+            },
+            {
+              "label": "Funded Unicorn",
+              "values": [
+                "Juillet 2025",
+                "Cessation annoncée",
+                "Pertes importantes et obstacles administratifs invoqués par la firme."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/prop-trading-germanys-funded-unicorn-fails-raising-questions-on-risk-models/"
+            },
+            {
+              "label": "Propel Capital",
+              "values": [
+                "2025",
+                "Cessation annoncée",
+                "Concurrence jugée insoutenable par le dirigeant ; comptes antérieurs montrant des dettes supérieures aux actifs."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/prop-firm-propel-capital-folds-after-14-months-ceo-blames-fierce-competition/"
+            },
+            {
+              "label": "FundingTicks",
+              "values": [
+                "Janvier 2026",
+                "Cessation progressive de l'activité annoncée",
+                "Arrêt engagé après modifications des règles et rémunérations ; causalité précise non établie."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/following-profit-cuts-and-trading-limits-prop-firm-fundingticks-begins-winding-down/"
+            },
+            {
+              "label": "MyFundedFX / SeacrestFunded",
+              "values": [
+                "6 février 2026",
+                "Arrêt de l'activité prop trading",
+                "Recentrage stratégique de Seacrest sur le courtage CFD ; ne signifie pas faillite de l'entreprise."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/seacrest-ends-prop-trading-after-integrating-myfundedfx-shifts-focus-to-cfds/"
+            },
+            {
+              "label": "Rev One Trading",
+              "values": [
+                "Août 2026",
+                "Fermeture annoncée",
+                "Le fondateur a expliqué que le manque de plateforme adaptée limitait le développement."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/tft-founder-closes-futures-prop-firm-turns-to-prediction-markets/"
+            },
+            {
+              "label": "FundedSeat",
+              "values": [
+                "Septembre 2026",
+                "Fermeture annoncée",
+                "La firme a invoqué les limitations des grandes plateformes et un développement insuffisant."
+              ],
+              "sourceUrl": "https://www.financemagnates.com/forex/futures-prop-firm-fundedseat-closes-due-to-limitations-from-big-trading-platforms/"
+            }
+          ],
+          "note": "Les lignes Karma et Skilled Funded Trader concernent des suspensions historiques ; MyFundedFX et SeacrestFunded sont comptés ensemble. La source Fast Track Trading est un miroir du dossier judiciaire, pas la décision de clôture de la procédure."
+        }
+      },
+      {
+        "heading": "Sept autres marques signalées inactives : preuves plus limitées",
+        "paragraphs": [
+          "Les entrées suivantes proviennent du registre PropRadar, dont les contrôles antérieurs remontent à octobre ou novembre 2026. Elles n’ont pas toutes fait l’objet d’une nouvelle vérification directe dans cette enquête. Elles restent distinctes des arrêts confirmés par un communiqué ou une procédure judiciaire."
+        ],
+        "compare": {
+          "columns": [
+            "Indice conservé dans le registre"
+          ],
+          "rows": [
+            {
+              "label": "Trade Amber",
+              "values": [
+                "Domaine indisponible et signalement de site fermé sur Trustpilot. Motif de cessation non établi."
+              ],
+              "sourceUrl": "https://www.trustpilot.com/review/tradeamber.com"
+            },
+            {
+              "label": "Limitless Funding",
+              "values": [
+                "Anciens domaines parqués ou redirigés vers d'autres activités. Motif de cessation non établi."
+              ],
+              "sourceUrl": "https://shortlist.trading/firma/"
+            },
+            {
+              "label": "Fortunes Funding",
+              "values": [
+                "Hébergement suspendu lors du contrôle de novembre ; historique d'activité discontinu. Motif de cessation non établi."
+              ],
+              "sourceUrl": "https://propfirmreviews.net/unlisted-prop-firms/"
+            },
+            {
+              "label": "Syndicate Funded",
+              "values": [
+                "Signalement de cessation et redirection vers un site sans rapport. Motif de cessation non établi."
+              ],
+              "sourceUrl": "https://thetrustedprop.com/prop-firms/syndicate-funded/news"
+            },
+            {
+              "label": "Inspire Funding",
+              "values": [
+                "Signalements de cessation et site fermé. Motif de cessation non établi."
+              ],
+              "sourceUrl": "https://thetrustedprop.com/prop-firms/inspire-funding/news"
+            },
+            {
+              "label": "ForFX",
+              "values": [
+                "Signalement d'inactivité par un comparateur tiers. Motif de cessation non établi."
+              ],
+              "sourceUrl": "https://thetrustedprop.com/prop-firms/for-fx/news"
+            },
+            {
+              "label": "Alpicap",
+              "values": [
+                "Signalement d'inactivité par un comparateur tiers. Motif de cessation non établi."
+              ],
+              "sourceUrl": "https://thetrustedprop.com/prop-firms/alpicap/news"
+            }
+          ],
+          "note": "Un domaine hors ligne, un site parqué ou un annuaire tiers ne démontre pas à lui seul une dissolution légale."
+        }
+      },
+      {
+        "heading": "Pourquoi les prop firms ferment : cinq mécanismes de risque",
+        "paragraphs": [
+          "**1. Dépendance à une plateforme ou un intermédiaire.** SurgeTrader et Funds For Traders illustrent la fragilité d’un modèle dépendant d’une licence ou d’un prestataire. Une solution de secours doit être opérationnelle, pas seulement annoncée.",
+          "**2. Trésorerie et solvabilité.** Les frais de challenges, les coûts d’acquisition, les dépenses techniques et les récompenses doivent rester compatibles avec les ressources disponibles. True Forex Funds a explicitement cité son insolvabilité ; Karma a invoqué des tensions de trésorerie. Sans comptes audités, impossible de quantifier les réserves de la majorité des opérateurs.",
+          "**3. Concurrence et acquisition de clients.** Ascetic Capital a expliqué avoir réalisé quatre ventes en une semaine. Propel Capital a cité la pression concurrentielle. Une croissance rapide des inscriptions n’est pas non plus une preuve de rentabilité.",
+          "**4. Services bancaires et réglementation.** MPFunds a attribué son arrêt à la perte de services bancaires. Un gel d’avoirs, un changement de prestataire ou une restriction géographique peuvent perturber les opérations. Une action réglementaire n’est pas une condamnation.",
+          "**5. Retrait stratégique ou changement de propriétaire.** Seacrest a choisi de quitter le prop trading au profit des CFD. Une cessation de service n’implique donc pas toujours la faillite du groupe."
+        ],
+        "callout": {
+          "kind": "tip",
+          "text": "Ces mécanismes sont des explications illustrées par des dossiers, pas un classement statistique des causes mondiales. Plusieurs causes peuvent se cumuler."
+        }
+      },
+      {
+        "heading": "My Forex Funds : pourquoi nous le traitons à part",
+        "paragraphs": [
+          "L’arrêt de My Forex Funds en août 2023 a suivi une action de la CFTC et un gel d’avoirs. La plainte américaine a été rejetée avec préjudice en mai 2025 (la même action ne peut pas être simplement réintroduite). En septembre 2026, la presse a annoncé la cession d’actifs de marque à Global Solutions, puis un lancement prévu le 23 novembre 2026 sous un nouveau propriétaire. Nous n’avons pas confirmé ici le démarrage effectif ni le règlement de toutes les créances historiques.",
+          "Ce dossier est antérieur au périmètre statistique de janvier 2024 et n’entre pas dans les 24 cas du tableau. Une relance annoncée ne prouve ni continuité juridique ni remboursement de tous les anciens clients."
+        ]
+      },
+      {
+        "heading": "Comment réduire le risque avant d’acheter un challenge ?",
+        "paragraphs": [
+          "La notation d’un challenge doit être séparée de l’évaluation de l’entreprise qui le vend. Un programme souple peut être proposé par une contrepartie fragile. Une note élevée ne constitue ni assurance, ni garantie de payout, ni garantie de pérennité."
+        ],
+        "bullets": [
+          "Identifier l’entité qui facture et signe le contrat ; vérifier le registre officiel et les conditions de remboursement.",
+          "Lire les clauses de suspension, de résiliation, de modifications et de refus de récompense.",
+          "Distinguer les paiements annoncés par la firme des preuves indépendantes ; un historique de payouts ne garantit pas ses réserves.",
+          "Vérifier les coûts complets et limiter les sommes engagées sur plusieurs challenges auprès du même opérateur.",
+          "Conserver les CGU acceptées, les factures, les règles du produit et les justificatifs de retrait."
+        ],
+        "bulletStyle": "check"
+      },
+      {
+        "heading": "Si votre prop firm cesse son activité",
+        "paragraphs": [
+          "Conservez vos documents, captures de compte et échanges. Identifiez le cocontractant, contactez les canaux officiels et vérifiez les annonces du liquidateur ou du repreneur, le cas échéant. Interrogez votre prestataire de paiement sur les recours éventuels et leurs délais ; un remboursement n’est pas automatique. Ne versez pas de frais supplémentaires à un prétendu récupérateur de fonds."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Finance Magnates Intelligence — estimation 2024",
+        "url": "https://www.financemagnates.com/forex/exclusive-80-100-prop-firms-wiped-out-in-2024s-industry-collapse/"
+      },
+      {
+        "label": "Finance Magnates Intelligence — analyse T1 2026",
+        "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026"
+      },
+      {
+        "label": "Finance Magnates — économie des offres futures, novembre 2026",
+        "url": "https://www.financemagnates.com/forex/the-49-challenge-problem-are-futures-prop-margins-meeting-the-exit-door/"
+      },
+      {
+        "label": "Finance Magnates — acquisition de Karma par Sway Funded",
+        "url": "https://www.financemagnates.com/forex/offshore-cfds-broker-axe-enters-prop-trading-acquires-the-forex-funder/"
+      },
+      {
+        "label": "Finance Magnates — rejet du dossier CFTC et contexte sectoriel",
+        "url": "https://www.financemagnates.com/forex/analysis/prop-firm-crypto-payouts-doubled-to-115-million-in-q1-2026-but-growth-has-stalled-since-december/"
+      },
+      {
+        "label": "Finance Magnates — vente des actifs MyForexFunds",
+        "url": "https://www.financemagnates.com/forex/breaking-myforexfunds-brand-assets-sold-to-dubai-based-firm/"
+      },
+      {
+        "label": "Finance Magnates — relance annoncée",
+        "url": "https://www.financemagnates.com/forex/myforexfunds-unveils-evolution-hitting-2-drawdown-gets-you-demoted-to-intern/"
+      },
+      {
+        "label": "PropRadar — registre et statistiques",
+        "url": "https://propradar.tech/fr/prop-firm-statistics"
+      },
+      {
+        "label": "Skilled Funded Trader",
+        "url": "https://www.financemagnates.com/forex/easton-controlled-skilled-funded-trader-suspends-prop-trading-operations/"
+      },
+      {
+        "label": "True Forex Funds",
+        "url": "https://fxnewsgroup.com/forex-news/retail-forex/prop-firm-true-forex-funds-folds/"
+      },
+      {
+        "label": "SurgeTrader",
+        "url": "https://www.financemagnates.com/forex/prop-firm-surgetrader-shuts-down-a-week-after-losing-match-trader-license/"
+      },
+      {
+        "label": "Funded Engineer",
+        "url": "https://www.financemagnates.com/forex/breaking-prop-trading-firm-funded-engineer-shuts-down/"
+      },
+      {
+        "label": "Karma Prop Traders",
+        "url": "https://www.financemagnates.com/forex/another-prop-firm-shuts-down-founder-blames-cheaters-for-liquidity-issues/"
+      },
+      {
+        "label": "Funds For Traders",
+        "url": "https://www.financemagnates.com/forex/prop-trading-funds-for-traders-closes-operations/"
+      },
+      {
+        "label": "Indigo Trader Funding",
+        "url": "https://www.financemagnates.com/forex/prop-trading-firm-indigo-trader-funding-confirms-shutdown/"
+      },
+      {
+        "label": "MPFunds",
+        "url": "https://www.financemagnates.com/forex/prop-trading-prop-firm-match-users-left-in-limbo-after-affiliated-company-shuts-down/"
+      },
+      {
+        "label": "Ascetic Capital",
+        "url": "https://www.financemagnates.com/forex/prop-firm-shuts-down-after-one-week-we-only-made-four-sales/"
+      },
+      {
+        "label": "Smart Prop Trader",
+        "url": "https://www.financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter/"
+      },
+      {
+        "label": "Fast Track Trading",
+        "url": "https://www.bkalerts.com/recent-bankruptcy-cases/new-jersey-bankruptcy-court/3:25-bk-10470/bankruptcy-case-fast-track-trading-llc"
+      },
+      {
+        "label": "Funded Unicorn",
+        "url": "https://www.financemagnates.com/forex/prop-trading-germanys-funded-unicorn-fails-raising-questions-on-risk-models/"
+      },
+      {
+        "label": "Propel Capital",
+        "url": "https://www.financemagnates.com/forex/prop-firm-propel-capital-folds-after-14-months-ceo-blames-fierce-competition/"
+      },
+      {
+        "label": "FundingTicks",
+        "url": "https://www.financemagnates.com/forex/following-profit-cuts-and-trading-limits-prop-firm-fundingticks-begins-winding-down/"
+      },
+      {
+        "label": "MyFundedFX / SeacrestFunded",
+        "url": "https://www.financemagnates.com/forex/seacrest-ends-prop-trading-after-integrating-myfundedfx-shifts-focus-to-cfds/"
+      },
+      {
+        "label": "Rev One Trading",
+        "url": "https://www.financemagnates.com/forex/tft-founder-closes-futures-prop-firm-turns-to-prediction-markets/"
+      },
+      {
+        "label": "FundedSeat",
+        "url": "https://www.financemagnates.com/forex/futures-prop-firm-fundedseat-closes-due-to-limitations-from-big-trading-platforms/"
+      },
+      {
+        "label": "Trade Amber — signal d’inactivité conservé",
+        "url": "https://www.trustpilot.com/review/tradeamber.com"
+      },
+      {
+        "label": "Limitless Funding — signal d’inactivité conservé",
+        "url": "https://shortlist.trading/firma/"
+      },
+      {
+        "label": "Fortunes Funding — signal d’inactivité conservé",
+        "url": "https://propfirmreviews.net/unlisted-prop-firms/"
+      },
+      {
+        "label": "Syndicate Funded — signal d’inactivité conservé",
+        "url": "https://thetrustedprop.com/prop-firms/syndicate-funded/news"
+      },
+      {
+        "label": "Inspire Funding — signal d’inactivité conservé",
+        "url": "https://thetrustedprop.com/prop-firms/inspire-funding/news"
+      },
+      {
+        "label": "ForFX — signal d’inactivité conservé",
+        "url": "https://thetrustedprop.com/prop-firms/for-fx/news"
+      },
+      {
+        "label": "Alpicap — signal d’inactivité conservé",
+        "url": "https://thetrustedprop.com/prop-firms/alpicap/news"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Combien de prop firms ont fermé depuis 2024 ?",
+        "answer": "Selon Finance Magnates Intelligence, environ 80 à 100 entre janvier 2024 et le premier trimestre 2026. Aucun total mondial exhaustif à novembre 2026 n’est établi ici."
+      },
+      {
+        "question": "Pourquoi les prop firms font-elles faillite ?",
+        "answer": "Les dossiers montrent notamment des problèmes de solvabilité, de financement, de concurrence ou de dépendance aux prestataires. Une fermeture n’est pas forcément une faillite."
+      },
+      {
+        "question": "Peut-on récupérer son argent après une fermeture ?",
+        "answer": "Cela dépend de l’entité, du contrat, du paiement, de la situation juridique et des fonds disponibles. Conservez les justificatifs et renseignez-vous sur les recours applicables."
+      },
+      {
+        "question": "Une prop firm avec beaucoup de payouts peut-elle fermer ?",
+        "answer": "Oui. Les récompenses passées ne démontrent ni la solvabilité actuelle, ni la continuité des licences et des services nécessaires."
+      }
+    ],
+    "firmSlugs": [],
+    "related": [
+      "regles-cachees-prop-firm",
+      "drawdown-prop-firm",
+      "meilleures-prop-firms-2026"
+    ]
+  },
+  {
     slug: 'regles-cachees-prop-firm',
     enPath: '/guides/prop-firm-hidden-rules',
     title: 'Prop firms : 9 règles cachées à vérifier avant de payer (2026)',
@@ -231,9 +710,9 @@ export const frArticles: FrArticle[] = [
     eyebrow: 'Classement 2026',
     h1: 'Meilleures prop firms 2026 : le classement par fiabilité',
     answer:
-      'Il n\'existe pas de meilleure prop firm universelle. Le tableau ci-dessous conserve **un relevé éditorial d’octobre 2026** : FTMO (91/100), The5ers (85/100) et Topstep (84/100). **Ce ne sont pas des notes garanties à jour** : consultez chaque fiche pour son score actuel, sa version de barème et la date des preuves, surtout pendant la migration V5.2.',
+      'Il n\'existe pas de meilleure prop firm universelle, mais certaines sont nettement plus sûres que d\'autres. En octobre 2026, les scores PropRadar les plus élevés reviennent à FTMO (91/100), The5ers (85/100) et Topstep (84/100) : les historiques publics les plus longs, les règles les plus lisibles et le moins de signaux de payout non résolus.',
     keywords: ['meilleure prop firm', 'meilleures prop firms 2026', 'classement prop firm', 'prop firm fiable'],
-    updated: '2026-11-23',
+    updated: '2026-11-12',
     intro:
       'Choisir une prop firm, c\'est d\'abord choisir **un opérateur à qui vous confiez de l\'argent** : des frais de challenge, et plus tard des payouts. Avant de comparer les pourcentages de partage ou les codes promo, ce classement vérifie la question qui compte le plus : **cette société sera-t-elle encore là, et paiera-t-elle**, le jour où vous aurez gagné ?',
     keyPoints: [
@@ -246,7 +725,7 @@ export const frArticles: FrArticle[] = [
       {
         heading: 'Comment ce classement est construit',
         paragraphs: [
-          'Chaque firme **notée et publiée** possède un score éditorial sur 100 ; les profils en attente ou fermés peuvent ne pas avoir de nouvelle note V5.2. Le barème V5.2 distingue **preuves de paiement (25 points)**, **règles contractuelles (25)**, **identité et risques juridiques (20)**, **transparence (20)** et **historique/support (10)**. Les notes précédentes restent identifiées tant que leur nouvel audit n’est pas approuvé.',
+          'Chaque prop firm suivie par PropRadar reçoit un **score sur 100**, calculé à partir de la clarté des règles, des preuves de payout, de la transparence juridique (entité, juridiction, conditions générales), des signaux d\'avis publics et de l\'ancienneté.',
           'Les liens d\'affiliation sont signalés sur chaque fiche et **ne modifient jamais un score** : une firme partenaire garde ses points faibles affichés, et une firme sans partenariat peut être en tête.',
         ],
         callout: { kind: 'warning', text: 'Le score **n\'est pas une promesse de paiement**. C\'est un résumé des preuves disponibles à une date donnée ; chaque changement est daté dans l\'historique de la fiche.' },
@@ -265,7 +744,7 @@ export const frArticles: FrArticle[] = [
             { label: 'Prix d\'entrée', values: ['environ 155 $', 'environ 39 $', 'abonnement mensuel'] },
             { label: 'Trustpilot', values: ['4,8 (près de 55 000 avis)', '4,7 (plus de 40 000 avis)', '3,7'] },
           ],
-          note: 'Capture historique octobre 2026, et non classement en direct. Confirmez les scores, barèmes, avis et tarifs actuels sur les fiches. Partenariats FTMO/The5ers signalés sans influence sur les notes.',
+          note: 'Relevé en octobre 2026. PropRadar a une relation d\'affiliation avec FTMO et The5ers, pas avec Topstep : sans effet sur les scores.',
         },
         bulletStyle: 'check',
         bullets: [
@@ -315,7 +794,7 @@ export const frArticles: FrArticle[] = [
       {
         question: 'Quelle est la prop firm la plus fiable en 2026 ?',
         answer:
-          'Dans le relevé d’octobre 2026, FTMO était à 91/100, The5ers à 85/100 et Topstep à 84/100. **Ce relevé historique peut différer des fiches publiques actualisées** lors du passage progressif au barème V5.2. Comparez votre marché, les règles du programme et la preuve de payout avant le score.',
+          'Selon les preuves recensées par PropRadar en octobre 2026, FTMO obtient le score le plus élevé (91/100), suivie de The5ers (85/100) et Topstep (84/100). La meilleure firme dépend toutefois de votre marché et de votre style.',
       },
       {
         question: 'Les prop firms sont-elles réglementées ?',
@@ -696,7 +1175,7 @@ export const frArticles: FrArticle[] = [
     answer:
       'Oui, Topstep est une prop firm futures sérieuse et ancienne (fondée en 2012 à Chicago). Son Trading Combine n\'a pas de limite de temps, une règle de consistance à 55 % et une Maximum Loss Limit qui suit le solde de fin de journée. Les nouveaux traders gardent 90 % des payouts. Limites : futures uniquement, pas de position overnight, règles souvent modifiées depuis fin 2025.',
     keywords: ['avis topstep', 'topstep fiable', 'topstep avis 2026', 'règles topstep'],
-    updated: '2026-11-23',
+    updated: '2026-11-12',
     intro:
       'Topstep est **le nom le plus ancien du prop trading sur futures**. Cet historique est sa principale force. Ses faiblesses : une offre **limitée aux futures**, des règles **plusieurs fois modifiées** depuis fin 2025 et une limite de perte **suiveuse** qui exige de la discipline.',
     keyPoints: [
@@ -704,7 +1183,6 @@ export const frArticles: FrArticle[] = [
       'Le Combine n\'a **pas de limite de temps**, et toutes les positions sont **fermées en fin de séance**.',
       'Les nouveaux traders gardent **90 %** des payouts ; payout minimum **125 $**.',
       'Après le premier payout, la limite de perte passe à **0 $** : plus aucun coussin.',
-      'Depuis le **17 novembre 2026**, certains pays ont des restrictions supplémentaires : nationalité, résidence et phase du compte doivent être vérifiées.',
     ],
     sections: [
       {
@@ -715,7 +1193,7 @@ export const frArticles: FrArticle[] = [
         ],
         stats: [
           { value: '2012', label: 'fondée à Chicago' },
-          { value: '84/100', label: 'score oct. 2026, non actualisé' },
+          { value: '84/100', label: 'score PropRadar' },
           { value: '3,7', label: 'Trustpilot, 14 955 avis (23 oct. 2026)' },
         ],
       },
@@ -740,16 +1218,15 @@ export const frArticles: FrArticle[] = [
       {
         heading: 'Compte Express Funded et payouts',
         paragraphs: [
-          'Après validation, vous tradez un compte **Express Funded (XFA)**, toujours simulé, où commencent les payouts. Les parcours **Standard** et **Consistency** ont des conditions et **des plafonds par retrait différents** ; le choix est définitif pour ce compte.',
-          'Les traders inscrits depuis le 12 janvier 2026 touchent **90 %** des payouts validés ; les traders de l’ancien tableau de bord bénéficient de règles spécifiques pour leurs 10 000 premiers dollars. Payout minimum : **125 $**. Sur les comptes Express Funded, chaque demande est limitée à **50 % du solde**, sous réserve d’un plafond par taille et parcours. Une **option temporaire de Daily Loss Limit achetée avec un nouveau Combine** peut augmenter les plafonds. Les comptes Live suivent une autre politique.',
+          'Après validation, vous tradez un compte **Express Funded (XFA)**, toujours simulé, où commencent les payouts. Depuis février 2026, deux parcours au choix, et **le choix est définitif**.',
+          'Les traders inscrits depuis le 12 janvier 2026 touchent **90 %** des payouts validés ; les plus anciens gardent 100 % de leurs 10 000 premiers dollars, puis 90 %. Payout minimum : **125 $**.',
         ],
         compare: {
           columns: ['Parcours Standard', 'Parcours Consistency'],
           rows: [
-            { label: 'Avant chaque payout', values: ["**5 journées gagnantes** d'au moins 150 $", '**3 jours de trading**, meilleure journée **≤ 40 %** du profit net'] },
-            { label: 'Plafond de base (50K / 100K / 150K)', values: ['**2 000 / 3 000 / 5 000 $**', '**3 000 / 4 000 / 6 000 $**'] },
+            { label: 'Avant chaque payout', values: ['**5 journées gagnantes** d\'au moins 150 $', '**3 jours de trading**, meilleure journée **≤ 40 %** du profit net'] },
           ],
-          note: 'Plafonds de base vérifiés le 23 novembre 2026. Une option Daily Loss Limit à l’achat d’un nouveau Combine peut les relever temporairement. Le choix du parcours est définitif.',
+          note: 'Le choix entre les deux parcours est définitif.',
         },
         callout: { kind: 'warning', text: 'Après le premier payout, la limite de perte passe à **0 $** : **une mauvaise journée après un retrait peut suffire à perdre le compte.**' },
       },
@@ -770,17 +1247,9 @@ export const frArticles: FrArticle[] = [
         },
       },
       {
-        heading: 'Pays acceptés : changement du 17 novembre 2026',
-        paragraphs: [
-          'Depuis le **17 novembre 2026**, Topstep bloque les **nouveaux achats** pour des adresses situées en Andorre, Cambodge, Éthiopie, Guinée, Kirghizistan, Laos, Macao, Mozambique, Namibie, Sénégal, Serbie, Ouzbékistan et Zimbabwe. Selon la transition annoncée, le trading et les payouts des comptes existants concernés restent possibles jusqu’au **31 décembre 2026**, sous réserve des autres restrictions.',
-          'La **nationalité**, la **résidence** et le **pays depuis lequel vous tradez** peuvent changer l’éligibilité. Certains pays sont admis au compte Express simulé mais **pas au compte Live**. Vérifiez toujours la page officielle avant d’acheter ou de voyager.',
-        ],
-      },
-      {
         heading: 'Pour qui ?',
         paragraphs: [
           'L\'abonnement mensuel rend une **évaluation lente** plus coûteuse qu\'un challenge à frais unique.',
-          "**Face à Apex**, attention aux cycles de retrait : sur ses Performance Accounts EOD actuels, Apex limite chaque compte à six payouts approuvés, puis clôture ce compte. Il ne s'agit pas d'une limite de six retraits à vie pour un trader. Les comptes Express Funded de Topstep suivent d'autres règles selon le parcours Standard ou Consistency.",
         ],
         fit: {
           yes: ['**Day traders futures**', 'Envie d\'un **opérateur établi**', 'À l\'aise avec une **limite suiveuse surveillée en direct**'],
@@ -791,9 +1260,7 @@ export const frArticles: FrArticle[] = [
     sources: [
       { label: 'Centre d\'aide Topstep : Maximum Loss Limit', url: 'https://intercom.help/topstep-llc/en/articles/8284204' },
       { label: 'Centre d\'aide Topstep : consistance', url: 'https://help.topstep.com/en/articles/8284208-consistency-at-topstep' },
-      { label: 'Topstep : politique de payout et plafonds (23 novembre 2026)', url: 'https://help.topstep.com/en/articles/8284233-topstep-payout-policy' },
-      { label: 'Apex : limite de six payouts par Performance Account EOD', url: 'https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/' },
-      { label: 'Topstep : éligibilité par pays, mise à jour 17 novembre 2026', url: 'https://help.topstep.com/en/articles/8284116-am-i-eligible-to-trade-with-topstep' },
+      { label: 'Centre d\'aide Topstep : payouts', url: 'https://intercom.help/topstep-llc/en/articles/8284234-payout-faqs' },
       { label: 'Topstep sur Trustpilot', url: 'https://www.trustpilot.com/review/topstep.com' },
     ],
     faq: [
@@ -826,7 +1293,7 @@ export const frArticles: FrArticle[] = [
     answer:
       'FTMO et The5ers font partie des prop firms forex les plus fiables (91/100 et 85/100 chez PropRadar). FTMO est la référence la plus documentée mais plus chère ; The5ers est moins chère à l\'entrée et utilise souvent des limites statiques. Le choix dépend surtout de votre budget et de votre façon de gérer le drawdown.',
     keywords: ['ftmo vs the5ers', 'ftmo ou the5ers', 'the5ers avis', 'ftmo avis'],
-    updated: '2026-11-23',
+    updated: '2026-11-12',
     intro:
       'FTMO et The5ers reviennent dans presque tous les classements sérieux. Les deux sont **anciennes, transparentes et bien notées** sur Trustpilot. Elles ne s\'adressent pourtant **pas exactement au même trader**.',
     keyPoints: [
@@ -834,7 +1301,6 @@ export const frArticles: FrArticle[] = [
       'FTMO : **la plus documentée**, mais plus chère (environ 155 $).',
       'The5ers : **entrée moins chère** (environ 39 $) et limites souvent **statiques**.',
       'Les règles évoluent : **vérifiez la page officielle** avant d\'acheter.',
-      'FTMO annonce **jusqu’à 30 % de réduction pour le Black Friday 2026**, sur les produits éligibles uniquement : comparez le total réellement affiché au paiement.',
     ],
     sections: [
       {
@@ -853,7 +1319,7 @@ export const frArticles: FrArticle[] = [
         },
       },
       {
-        heading: 'Règles des programmes phares (recontrôlées en novembre 2026)',
+        heading: 'Règles des programmes phares (relevées en juillet 2026)',
         paragraphs: [
           'Depuis le **12 octobre 2026**, le challenge FTMO 1-Step utilise une **règle de consistance** (meilleure journée comparée au profit total) à la place de l\'ancienne « Best Day Rule », qui reste valable pour les commandes antérieures. PropRadar n\'a pas relevé de règle de meilleure journée en pourcentage sur le programme High Stakes de The5ers.',
         ],
@@ -865,15 +1331,14 @@ export const frArticles: FrArticle[] = [
             { label: 'Perte journalière max', values: ['5 %', '5 %'] },
             { label: 'Perte totale max', values: ['10 %', '10 %'] },
           ],
-          note: 'Conditions officielles 1-Step/2-Step FTMO et High Stakes The5ers recoupées en novembre 2026. Vérifier la date de commande et la phase du compte.',
+          note: 'Relevé en juillet 2026 : vérifiez la page officielle du programme avant d\'acheter.',
         },
       },
       {
         heading: 'Payouts et annonces économiques',
         paragraphs: [
           '**FTMO** traite généralement les payouts en **1 à 3 jours ouvrés**. Le trading des annonces est autorisé en évaluation et sur les comptes Swing, mais certaines annonces sont **restreintes sur les comptes financés Standard**.',
-          '**The5ers High Stakes** prévoit un retrait depuis le tableau de bord tous les **14 jours** après passage en compte Pro (FAQ du 3 novembre 2026). Vérifiez les règles propres à la phase, notamment l’inactivité, les jours qualifiants et les éventuels plafonds.',
-          '**Black Friday 2026 (au 23 novembre)** : FTMO affiche **jusqu’à −30 %**, sans garantie de remise uniforme sur tous les challenges. Offre temporaire, conditions et prix final à confirmer dans le panier FTMO ; cet avantage commercial ne modifie ni le score ni les risques du compte.',
+          '**The5ers** verse en général ses payouts en **quelques jours ouvrés** ; certains programmes sont moins souples pour les profils news ou scalping, à vérifier selon le programme choisi.',
         ],
       },
       {
@@ -892,10 +1357,7 @@ export const frArticles: FrArticle[] = [
     ],
     sources: [
       { label: 'FTMO : objectifs de trading', url: 'https://ftmo.com/en/trading-objectives/' },
-      { label: 'FTMO : modification 1-Step du 8 octobre 2026', url: 'https://ftmo.com/fr/blog/trading-updates/mises-a-jour-de-trading-8-oct-2026/' },
-      { label: 'FTMO : objectifs de trading, produits 1-Step et 2-Step', url: 'https://ftmo.com/fr/trading-objectives/' },
-      { label: 'The5ers : règles High Stakes (3 novembre 2026)', url: 'https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/' },
-      { label: 'FTMO : page officielle et Black Friday (novembre 2026)', url: 'https://ftmo.com/en/' },
+      { label: 'FTMO : mise à jour du 8 octobre 2026', url: 'https://ftmo.com/au/blog/trading-updates/trading-update-8-oct-2026/' },
       { label: 'The5ers : programmes', url: 'https://the5ers.com/programs/' },
       { label: 'FTMO sur Trustpilot', url: 'https://www.trustpilot.com/review/ftmo.com' },
       { label: 'The5ers sur Trustpilot', url: 'https://www.trustpilot.com/review/the5ers.com' },

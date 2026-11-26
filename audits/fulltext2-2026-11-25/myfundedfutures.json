@@ -1,0 +1,29 @@
+{
+ "slug": "myfundedfutures",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every paragraph of the archived terms, help and agreement pages matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Prohibited Conduct includes 'any other type of behavior that the Company deems, in its sole and reasonable discretion, to be unlawful, unethical, deceptive, manipulative, high-risk, or otherwise posing an undue risk'; the Company has 'sole and absolute discretion in determining whether a violation has occurred', and corrective actions include 'withholding or forfeiture of funds, payouts, or rewards', without refund or compensation.",
+   "source": "https://myfundedfutures.com/terms",
+   "locator": "§23.1.11; §23.3; §16.2.3; §16.3; §16.5",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B6",
+   "text": "'Acting in a manner that may cause reputational or financial harm to the Company' is a violation that allows the same corrective actions, including withholding or forfeiture of payouts.",
+   "source": "https://myfundedfutures.com/terms",
+   "locator": "§16.1.3; §16.2.3; §17.5",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_50_EVAL",
+   "text": "Flex plan: 50% consistency during the evaluation only; Pro funded accounts state no consistency rule.",
+   "source": "https://help.myfundedfutures.com/en/articles/15072271-flex-plan-50-0",
+   "locator": "Flex plan",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

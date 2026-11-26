@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-24",
+  "status": "RESEARCH_ONLY_NO_SCORES",
+  "observations": 22,
+  "scope": "Six nouvelles fiches; trois CGU lisibles et trois couvertures partielles (Purdia, Alpine, FundedSquad). Aucun payout indépendant certifié.",
+  "firms": [
+    {
+      "slug": "tradeday",
+      "scope": "CGU générales et FAQ; conventions SIM/LIVE distinctes non obtenues",
+      "sources": [
+        "https://www.tradeday.com/terms-and-conditions",
+        "https://tradeday.freshdesk.com/en/support/solutions/articles/103000121031",
+        "https://www.trustpilot.com/review/tradeday.com"
+      ],
+      "observations": [
+        {
+          "type": "discretion",
+          "locator": "CGU §23",
+          "finding": "Stratégie non commercialement viable ou jeu du marché appréciés par TradeDay; suppression de profits simulés, journées, reset ou bannissement possibles."
+        },
+        {
+          "type": "change",
+          "locator": "§23",
+          "finding": "Règles de trading modifiables avec ou sans préavis; vérifier clause spécifique de cohorte dans les contrats funded."
+        },
+        {
+          "type": "objective",
+          "locator": "§23",
+          "finding": "Plus de 200 trades par jour pour stratégies automatisées interdit; interdiction de trading funded à moins de 2% d'une limite de prix. Ne pas confondre avec discrétion."
+        },
+        {
+          "type": "missing",
+          "locator": "Définitions et § financement",
+          "finding": "Conventions écrites SIM et LIVE séparées; le choix du parcours relève de TradeDay. Pas de conclusion sur récompenses déjà approuvées."
+        }
+      ],
+      "trustpilot": "Profil exact accessible; aucune retenue officielle établie dans la consultation.",
+      "remaining": "Accords SIM/LIVE et Quick Pay/Fast Pass; recours et retrait déjà approuvé; débiteur juridique, preuve primaire et paiements indépendants."
+    },
+    {
+      "slug": "funded7",
+      "scope": "CGU et FAQ risk",
+      "sources": [
+        "https://funded7.com/terms-and-conditions/",
+        "https://funded7.com/faq/rule-2-3-position-risk-execution/",
+        "https://funded7.com/faq/what-happens-if-rule-violations-are-detected-during-a-payout-request/",
+        "https://www.trustpilot.com/review/funded7.com"
+      ],
+      "observations": [
+        {
+          "type": "asymmetry",
+          "locator": "FAQ Rules 2–3, Violations & Remediation",
+          "finding": "Les gains des trades sanctionnés sont supprimés, les pertes conservées; rétrogradation possible en Silver/Bronze."
+        },
+        {
+          "type": "objective",
+          "locator": "Rules 2–3",
+          "finding": "Risque total 3/2/1% selon tier; seuils scalping de plus de 2% des trades sous 15 secondes ou plus de 3% sous 30 secondes."
+        },
+        {
+          "type": "change",
+          "locator": "CGU introduction",
+          "finding": "Modifications en ligne sans préavis; utilisation continue vaut acceptation annoncée."
+        },
+        {
+          "type": "entity",
+          "locator": "CGU introduction",
+          "finding": "ICHIBAN TECH LTD HE470329 (Chypre), SUCCESSIO LTD 245758 (Seychelles), rôles du vendeur et débiteur à confirmer."
+        },
+        {
+          "type": "ambiguity",
+          "locator": "Provision 1",
+          "finding": "Le texte limite les évaluations identiques puis autorise les comptes identiques sous restrictions; clarifier portée et cohortes."
+        }
+      ],
+      "trustpilot": "Profil exact accessible; aucune retenue officielle établie dans la consultation.",
+      "remaining": "Contrat de rémunération, recours sur nullification, version OREF applicable, identités primaires et preuves de payouts."
+    },
+    {
+      "slug": "purdia-capital",
+      "scope": "Extraits CGU indexés et documentation; lecture intégrale non obtenue",
+      "sources": [
+        "https://purdia.com/terms-and-conditions",
+        "https://purdia.com/knowledgebase/general/getting-started/funding-process-overview",
+        "https://purdia.com/knowledgebase/general/payouts-global/payouts-overview",
+        "https://www.trustpilot.com/review/purdia.com"
+      ],
+      "observations": [
+        {
+          "type": "conditional_protection",
+          "locator": "CGU extrait indexé, résiliation",
+          "finding": "Les demandes en attente peuvent être annulées sauf celles déjà approuvées et en traitement; portée à confirmer dans le texte intégral."
+        },
+        {
+          "type": "discretion",
+          "locator": "Funding process overview, extrait",
+          "finding": "Risk Team peut restreindre l'accès aux payouts ou au financement pour risque inacceptable ou comportement jugé non soutenable; conditions et exceptions à lire intégralement."
+        },
+        {
+          "type": "missing",
+          "locator": "Payouts overview",
+          "finding": "Transition SFA/LFA documentée; vérifier contrat du broker et traitement du solde éligible. Les extraits ne constituent pas une preuve de paiement."
+        }
+      ],
+      "trustpilot": "Profil exact accessible; avis sur retards allégués, non corroborés.",
+      "remaining": "Texte intégral CGU (rendu web limité), contrat SFA/LFA, broker, entité juridique et preuves de retraits."
+    },
+    {
+      "slug": "alpine-funded",
+      "scope": "FAQ officielle et pages produits; CGU intégrales dans iframe non lues",
+      "sources": [
+        "https://alpinefunded.com/terms-and-conditions/",
+        "https://alpinefunded.com/faq/what-trading-strategies-are-prohibited/",
+        "https://alpinefunded.com/how-it-works/",
+        "https://www.trustpilot.com/review/alpinefunded.com"
+      ],
+      "observations": [
+        {
+          "type": "program_distinction",
+          "locator": "FAQ Prohibited strategies",
+          "finding": "Violation de stratégies: perte du compte Base Camp et 2-Step; réduction de reward ou timeout Alpine Pass selon FAQ, pas perte du compte selon cette page."
+        },
+        {
+          "type": "objective",
+          "locator": "How it works – Alpine Pass",
+          "finding": "Reward par palier de 10%, minimum dix jours à +0,5% et limite de 30% de la cible par jour; modèle abonnement."
+        },
+        {
+          "type": "entity",
+          "locator": "FAQ footer",
+          "finding": "Alpine Funded GmbH, Cham, Suisse; comptes simulés, rémunérations conditionnelles. Certificats affichés par la firme, pas preuves indépendantes."
+        }
+      ],
+      "trustpilot": "Profil exact accessible; aucune retenue officielle établie dans la consultation.",
+      "remaining": "Récupérer iframe CGU §7, vérifier éventuelle contradiction entre FAQ et page commerciale, convention reward, registre suisse et preuve de paiement."
+    },
+    {
+      "slug": "funded-squad",
+      "scope": "FAQ officielle et risk disclosure; contrat d'évaluation/funded non obtenu",
+      "sources": [
+        "https://intercom.help/fundedsquad/en/articles/17015352-prohibited-trading-strategies",
+        "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules",
+        "https://fundedsquad.com/risk-disclosure",
+        "https://www.trustpilot.com/review/fundedsquad.com"
+      ],
+      "observations": [
+        {
+          "type": "objective",
+          "locator": "Prohibited Trading Strategies 20/09/2026",
+          "finding": "Trois positions simultanées sur même actif interdites; plafond de marge utilisée 70%; sanctions possibles sur profits et payouts."
+        },
+        {
+          "type": "discretion",
+          "locator": "Third-Party Strategies and Expert Advisors",
+          "finding": "Possibilité d'exiger preuve de propriété/originalité d'un EA dont son code source, à appréciation de la firme; manquement susceptible d'entraîner confiscation."
+        },
+        {
+          "type": "entity",
+          "locator": "Risk Disclosure",
+          "finding": "Devionics Technology FZCO licence 46706 EAU, affiliée FundedSquad Ltd Sainte-Lucie 2026-00549 pouvant traiter certains paiements; payeur précis non vérifié."
+        }
+      ],
+      "trustpilot": "Profil exact accessible; plaintes non établies par preuve indépendante.",
+      "remaining": "Contrats évaluation/funded, seuils temporels news et variantes, recours et rewards acquis, registres primaires."
+    },
+    {
+      "slug": "fundyourfx",
+      "scope": "CGU générales et trading rules intégrées",
+      "sources": [
+        "https://fundyourfx.com/terms-conditions",
+        "https://fundyourfx.com/faqs/trading-rules-guide/general-trading-rules",
+        "https://www.trustpilot.com/review/fundyourfx.com",
+        "https://www.trustpilot.com/review/fundyourfx.io"
+      ],
+      "observations": [
+        {
+          "type": "discretion",
+          "locator": "CGU §3; Trading Rules §4.7",
+          "finding": "Payouts non garantis, refus/réduction/rétention possibles pour violation, soupçon d'abus ou éligibilité jugée non remplie raisonnablement; droit non acquis avant vérification et approbation."
+        },
+        {
+          "type": "recourse",
+          "locator": "CGU §22",
+          "finding": "Droit et tribunaux HK sous réserve des droits impératifs locaux du consommateur; tentative amiable trente jours."
+        },
+        {
+          "type": "entity",
+          "locator": "Pied CGU",
+          "finding": "FYFX Capital Limited Hong Kong 75280952-000; vérifier registre et évolution entre domaines."
+        },
+        {
+          "type": "trustpilot",
+          "locator": "Profil fundyourfx.com",
+          "finding": "Trustpilot n'accepte plus de nouveaux avis, indiquant site fermé, alors que CGU .com consultables. Profil .io distinct accessible. Ne pas conclure fermeture de l'entreprise ni retenue pour faux avis; rapprocher entités, checkout et domaines."
+        }
+      ],
+      "trustpilot": "Fermeture des avis .com annoncée par Trustpilot; .io distinct, statut à clarifier.",
+      "remaining": "Vérifier domaine réellement utilisé au checkout, avis de migration, registre HK, protection payouts après approbation et preuves indépendantes."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+ "slug": "the-trading-pit",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B6",
+   "text": "14.2.5: breach of the non-disparagement obligation (clause 16) is a ground for termination; clause 16 survives termination.",
+   "source": "https://www.thetradingpit.com/general-terms-and-conditions",
+   "locator": "§14.2.5; §16",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B2A",
+   "text": "Responsible-trading measures can lead to adverse measures on accounts; automated or AI-assisted decisions can be reviewed, and a measure not confirmed on review is reversed.",
+   "source": "https://www.thetradingpit.com/general-terms-and-conditions",
+   "locator": "§4.6; §6.5",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "On closure of the client account, amounts already determined remain payable except where the determination was procured by fraud or the trading data is tainted by a breach of the Trading Rules.",
+   "source": "https://www.thetradingpit.com/general-terms-and-conditions",
+   "locator": "§4.7",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

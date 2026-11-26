@@ -1,0 +1,15 @@
+{"slug":"hash-hedge","checkedOn":"2026-11-25","status":"COMPLETE_EXCEPT_COMMERCIAL_TERMS",
+ "checklist":{
+  "currentTermsRead":"Terms last updated 5 Nov 2026",
+  "payoutClausesRead":"Live Account payouts governed by separate Commercial Terms; rewards owed by the Commercial Counterparty (FinSmart Solution Ltd, Seychelles 246832)",
+  "fundedAgreement":"Commercial Terms not located publicly in this pass",
+  "prohibitedPractices":"cl. 4.5 list plus 'any other conduct which, in the reasonable opinion of the Company, may harm the integrity'; measures 'in its sole discretion and without prior notice'; hedging presumption at Pearson >= 0.6 (cl. 4.6)",
+  "consistency":"none found",
+  "trustpilotExactDomain":"4.4/5, 125 reviews, no breach notice, claimed (2026-11-25)",
+  "entityRegistry":"Empower Academy Ltd (UAE 01011157) operator; FinSmart Solution Ltd (Seychelles 246832) counterparty; registries not checked",
+  "payoutEvidence":"firm-published payout certificates and claim of 17,800+ payouts (firm-reported, not independent); not on PayoutJunction",
+  "incidents":"Oct 2026 platform outage acknowledged by the firm in a public reply (already in the firm file); no regulator or court record found"},
+ "facts":[
+  {"code":"B2A","text":"Open-ended prohibition ('any other conduct which, in the reasonable opinion of the Company, may harm the integrity') with sole-discretion measures; pending payouts can be put on Hold for suspected breach or reputational risk. Mitigated: written appeal within 7 days with decision in 14 days, 30-business-day investigation target and a 90-day backstop opening the dispute procedure.","source":"https://www.hashhedge.com/terms-and-conditions","locator":"cl. 4.5; 16.1; 16.3(e); 15.7(c); 7.11","checkedOn":"2026-11-25"},
+  {"code":"SAFE","text":"Changes do not alter the conditions of an existing purchase unless agreed or required by law; ICC arbitration after negotiation and mediation.","source":"https://www.hashhedge.com/terms-and-conditions","locator":"cl. 2.5; 20.1-20.2","checkedOn":"2026-11-25"}
+ ]}

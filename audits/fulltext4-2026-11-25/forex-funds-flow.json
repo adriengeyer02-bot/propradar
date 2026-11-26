@@ -1,0 +1,15 @@
+{
+ "slug": "forex-funds-flow",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "NOTE",
+   "text": "Prohibited practices are listed (copy trading between traders, intentional drawdown breach after payout, selling accounts, delayed feeds); for violations FFF may suspend accounts, forfeit paid fees and reject rewards. No discretionary clause on undefined conduct and no rule-change clause reaching existing accounts were found.",
+   "source": "https://www.forexfundsflow.com/terms-conditions",
+   "locator": "Prohibited Trading Practices",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

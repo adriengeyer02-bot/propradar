@@ -1,5 +1,3 @@
-> **PASSATION 22/11/2026 — PRIORITÉ ABSOLUE :** [SCORING_V5_2.md](../SCORING_V5_2.md) + [V52_HANDOFF_2026-11-22.md](V52_HANDOFF_2026-11-22.md). La liste de règles V4/legacy ci-dessous est conservée pour l'historique et **ne doit plus être appliquée aux nouveaux audits**. Nouvelles fiches : `app/data/scoring-v52-new-audits.json` et calcul natif `app/lib/scoringV52.ts`, activation uniquement par publication-gate après vérification.
-
 # Claude — consignes prioritaires de scoring PropRadar
 
 *Décision d'Adrien Geyer, 19 novembre 2026. À lire avec `AGENTS.md`, `CLAUDE.md` et surtout le barème canonique `SCORING.md`.*

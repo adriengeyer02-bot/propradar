@@ -1,0 +1,42 @@
+{
+ "slug": "topstep",
+ "checkedOn": "2026-11-25",
+ "status": "COMPLETE_EXCEPT_XFA_LFA_AGREEMENTS",
+ "checklist": {
+  "currentTermsRead": "Terms of Use last updated 4 Nov 2026",
+  "fundedAgreement": "XFA and Live Funded Account governed by separate or supplemental written agreements (§3); not located publicly",
+  "trustpilotExactDomain": "3.7/5, 15,147 reviews, no breach notice (2026-11-24 check)",
+  "entityRegistry": "Topstep LLC (Delaware); TopstepFunded LLC (Illinois)",
+  "payoutEvidence": "2025 disclosures: 33.3% of Funded Level participants received a payout; 0.71% of XFA participants moved to Live (re-read 2026-11-25)",
+  "incidents": "individual pro se complaint filed 2026-04-09 (already in firm file); no regulator action found"
+ },
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Prohibited conduct includes conduct that 'in the sole discretion of Topstep, represents uncommercial activity, is intended to game the market, is not a viable trading strategy, or is not responsible trading'; consequence can be forfeiture of withdrawals from every other account.",
+   "source": "https://www.topstep.com/terms-of-use",
+   "locator": "§27",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B3",
+   "text": "Trading Rules 'remain subject to change at any time and from time to time, with or without notice'; terms changes effective upon notice in a form at Topstep's discretion.",
+   "source": "https://www.topstep.com/terms-of-use",
+   "locator": "§9; §27; introduction",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "corrections": [
+  {
+   "date": "2026-11-25",
+   "text": "B1 and B6 withdrawn: §29 'Rewards' covers promotional prizes, incentives and the referral discount programme, and states that it does not include any payout under the Challenge, Express Funded or Live Funded agreements. The first reading took §29 sentences out of their section context.",
+   "source": "https://www.topstep.com/terms-of-use",
+   "locator": "§29 heading and final paragraph"
+  },
+  {
+   "date": "2026-11-25",
+   "text": "Confirmed on the full Terms of Use PDF saved by Geyer (42 pages, OCR, headings intact): §27 'Prohibited conduct' carries the sole-discretion forfeiture (B2) and the rules-change-without-notice clause (B3); §29 'Rewards' is promotional only. Topstep in scale C: 95 - 8 - 5 - 3 = 79.",
+   "source": "upload:0be75719-topstep.pdf"
+  }
+ ]
+}

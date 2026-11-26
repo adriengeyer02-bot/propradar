@@ -5,7 +5,6 @@ import { getFirmChangelog, getFirmUpdate } from '../../../lib/firmUpdates';
 import Link from 'next/link';
 import FirmSectionNav from '../../../components/ui/FirmSectionNav';
 import { notFound } from 'next/navigation';
-import FirmSnapshot, { snapshotCopy } from '../../../components/FirmSnapshot';
 import FirmLogo from '../../../components/FirmLogo';
 import PartnerCodeOffer from '../../../components/PartnerCodeOffer';
 import SourceSubmission from '../../../components/SourceSubmission';
@@ -19,10 +18,13 @@ import ScoreRing from '../../../components/ui/ScoreRing';
 import ScoreBreakdownDialog, { type ScoreBreakdownView, type ScoreStep } from '../../../components/ui/ScoreBreakdownDialog';
 import { getScoreBreakdown } from '../../../lib/scoreBreakdown';
 import { scoreV4Copy } from '../../../lib/scoreV4I18n';
-import { scoreV5Copy, scoreV5EvidenceCopy, scoreV5LegalCapCopy, scoreV52Copy, scoreV52EvidenceCapCopy } from '../../../lib/scoreV5I18n';
+import { scoreV5Copy, scoreV5EvidenceCopy, scoreV5LegalCapCopy } from '../../../lib/scoreV5I18n';
 import { ruleKind } from '../../../lib/restrictiveRules';
 import { scoreMethodCopy } from '../../../lib/scoreMethodI18n';
-import { scoreRuleCopy } from '../../../lib/scoreRuleCopy';
+import { localizeScaleCEvidence } from '../../../lib/dataI18n/scaleCEvidence';
+import { localizeScoreEvidence, localizeContractProtection } from '../../../lib/dataI18n/scoreEvidence';
+import { scaleCCopy } from '../../../lib/scaleCI18n';
+import { SCALE_C_CONTRACT_CODES } from '../../../lib/scaleC';
 import ReviewFreshness from '../../../components/ui/ReviewFreshness';
 import RevealOnView from '../../../components/ui/RevealOnView';
 import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, trustpilotPip, type Tone } from '../../../lib/riskTone';
@@ -61,7 +63,6 @@ import { guideCardText, localizedGuidePath } from '../../../lib/guideI18n';
 import { getManualCommunityReview } from '../../../lib/manualCommunityReviews';
 import { getFirmContentLastModified, getFirmSearchProfile } from '../../../lib/firmSearchProfiles';
 import { td } from '../../../lib/dataI18n';
-import { localizeScoreEvidence, localizeContractProtection } from '../../../lib/dataI18n/scoreEvidence';
 import { toEnglishText } from '../../../lib/i18n';
 import { editorialBriefs, getEditorialBriefPath } from '../../../lib/editorialBriefs';
 import GuideCover from '../../../components/guide-visuals/GuideCover';
@@ -74,8 +75,14 @@ import { getClosureRecord } from '../../../lib/closures';
 import { isFirmIndexable } from '../../../lib/firmIndexing';
 import { feeStats } from '../../../lib/industryStats';
 import { HTML_LANG, OG_LOCALE, countryLabel, isLocale, localeAlternates, localePath, type Locale } from '../../../lib/locales';
-import { fmt, formatDateLong, getMessages, tv, type Messages } from '../../../lib/messages';
+import { fmt, formatDateLong, getMessages, numberLocale, tv, type Messages } from '../../../lib/messages';
 import IntentLink from '../../../components/IntentLink';
+import ContractAuditSection from '../../../components/ContractAuditSection';
+import ContractRedFlags from '../../../components/ContractRedFlags';
+import { promoSale, publishedPairs } from '../../../lib/promoPricing';
+import FirmAtAGlance, { GLANCE_COPY } from '../../../components/FirmAtAGlance';
+import { getContractAudit } from '../../../lib/contractAudits';
+import { contractAuditCopy } from '../../../lib/contractAuditI18n';
 
 type FirmT = Messages['firm'];
 
@@ -511,6 +518,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+function glanceShort(text: string): string {
+  const first = text.split(/[.;](?:\s|$)/)[0].trim();
+  return first.length > 64 ? `${first.slice(0, 63).replace(/\s+\S*$/, '')}…` : first;
+}
+
+/** First sentence of the verdict, the rest behind "Read more" (Geyer, 2026-11-26). */
+function splitVerdict(text: string): [string, string] {
+  if (text.length <= 200) return [text, ''];
+  const m = /^([\s\S]{60,}?[.。!?])\s+([\s\S]+)$/.exec(text);
+  return m ? [m[1], m[2]] : [text, ''];
+}
+
 export default async function FirmPage({ params }: Props) {
   const { locale, slug } = await readParams(params);
   const firm = getFirmBySlug(slug);
@@ -518,7 +537,6 @@ export default async function FirmPage({ params }: Props) {
   const priceTable = getPriceTable(slug);
   /** Displayed firm data: English text, then its translation when the data dictionary has one. */
   const tx = (text?: string | null) => td(locale, toEnglishText(text ?? ''));
-  // Contract evidence is already in English. Never normalize it before an exact translation lookup.
   const ruleTx = (text: string) => td(locale, text);
   const f = t.firm;
   const v = (value: string) => tv(t, value);
@@ -528,6 +546,7 @@ export default async function FirmPage({ params }: Props) {
   if (!firm) {
     notFound();
   }
+
 
   const isFtmo = firm.slug === 'ftmo';
   const isThe5ers = firm.slug === 'the5ers';
@@ -634,78 +653,48 @@ export default async function FirmPage({ params }: Props) {
       };
     });
   const scoreCopy = scoreMethodCopy(locale);
-  const ruleCopy = scoreRuleCopy(locale);
   const breakdown = getScoreBreakdown(firm);
-  const modernCopy = breakdown.v52 ? scoreV52Copy(locale) : scoreV5Copy(locale);
-  // V4 scores already include B1/B4 lost points. The modal reconstructs an
-  // explanatory pre-B1/B4 base so its visible arithmetic reconciles with the
-  // *unchanged* published net score (e.g. FXIFY 83 − 8 = 75). This is not a
-  // re-score nor an additional penalty.
-  const v4IncludedLoss = breakdown.v4
-    ? breakdown.v4.embeddedRuleImpact.rewardProtectionLoss + breakdown.v4.embeddedRuleImpact.tradingRulesLoss
-    : 0;
-  const displayedBase = breakdown.editorial + v4IncludedLoss;
-  const scoreSteps: ScoreStep[] = [{
-    kind: 'editorial',
-    label: breakdown.v4 ? ruleCopy.reconstructedBase : scoreCopy.editorial,
-    detail: breakdown.v5 ? modernCopy.method : breakdown.v4 ? ruleCopy.reconstructedDetail : scoreCopy.editorialDetail,
-    value: displayedBase,
-    delta: 0,
-  }];
-  if (breakdown.v4) {
-    scoreSteps.push({
-      kind: 'rules',
-      label: ruleCopy.v4RuleLabel,
-      detail: ruleCopy.includedDetail,
-      value: breakdown.editorial,
-      delta: v4IncludedLoss,
-    });
-  } else {
+  const scoreSteps: ScoreStep[] = [{ kind: 'editorial', label: scoreCopy.editorial, detail: breakdown.v5 ? scoreV5Copy(locale).method : breakdown.v4 ? scoreV4Copy(locale).method : scoreCopy.editorialDetail, value: breakdown.editorial, delta: 0 }];
+  if (!breakdown.v4) {
     const rules = breakdown.rules;
     const applied = Boolean(rules?.applied && rules.penalty);
-    // The engine floors at zero. Show the actual points removed rather than
-    // claiming the whole nominal cost was subtracted past zero.
-    const actualRuleDelta = applied ? Math.min(breakdown.editorial, rules!.penalty) : 0;
     scoreSteps.push({
       kind: 'rules',
       label: scoreCopy.rules,
-      detail: breakdown.v5 ? modernCopy.restriction : rules
+      detail: breakdown.v5 ? scoreV5Copy(locale).restriction : rules
         ? fmt(scoreCopy.rulesDetail, { counted: rules.counted, programs: rules.programs.length, load: rules.rawLoad })
         : breakdown.unclassifiedOnly ? fmt(scoreCopy.rulesUnclassified, { n: breakdown.unclassifiedOnly }) : scoreCopy.rulesNone,
-      value: Math.max(0, breakdown.editorial - actualRuleDelta),
-      delta: actualRuleDelta,
+      value: applied ? breakdown.editorial - rules!.penalty : breakdown.editorial,
+      delta: applied ? rules!.penalty : 0,
       note: rules && rules.penalty && !applied ? scoreCopy.rulesNotApplied : undefined,
     });
   }
-  if (breakdown.trustpilot) {
-    const afterTrustpilot = Math.max(0, breakdown.trustpilot.before - breakdown.trustpilot.penalty);
-    scoreSteps.push({
-      kind: 'trustpilot',
-      label: scoreCopy.trustpilotCap,
-      detail: breakdown.trustpilot.included ? scoreCopy.trustpilotIncluded : fmt(scoreCopy.trustpilotCapDetail, { penalty: breakdown.trustpilot.penalty }),
-      value: afterTrustpilot,
-      delta: breakdown.trustpilot.before - afterTrustpilot,
-    });
-  }
-  if (breakdown.payoutEvidenceCap) {
-    const evidence = scoreV52EvidenceCapCopy(locale, breakdown.payoutEvidenceCap.cap);
-    scoreSteps.push({ kind: 'proof', label: evidence.label, detail: evidence.detail,
-      value: breakdown.payoutEvidenceCap.cap, delta: breakdown.payoutEvidenceCap.before - breakdown.payoutEvidenceCap.cap });
-  }
+  if (breakdown.trustpilot) scoreSteps.push({
+    kind: 'trustpilot',
+    label: scoreCopy.trustpilotCap,
+    detail: breakdown.trustpilot.included ? scoreCopy.trustpilotIncluded : fmt(scoreCopy.trustpilotCapDetail, { penalty: breakdown.trustpilot.penalty }),
+    value: breakdown.trustpilot.before - breakdown.trustpilot.penalty,
+    delta: breakdown.trustpilot.penalty,
+  });
   if (breakdown.safetyCap) {
     const safety = scoreV5LegalCapCopy(locale, breakdown.safetyCap.cap);
     scoreSteps.push({ kind: 'safety', label: safety.label, detail: safety.detail,
       value: breakdown.safetyCap.cap, delta: breakdown.safetyCap.before - breakdown.safetyCap.cap });
+  }
+  if (firm.unauditedCap && !breakdown.scaleC) {
+    const cc = scaleCCopy(locale);
+    scoreSteps.push({ kind: 'unaudited', label: cc.unauditedCap, detail: fmt(cc.unauditedCapDetail, { before: firm.unauditedCap.before }),
+      value: firm.unauditedCap.cap, delta: firm.unauditedCap.before - firm.unauditedCap.cap });
   }
   if (breakdown.closedCap) scoreSteps.push({ kind: 'closed', label: scoreCopy.closedCap, detail: fmt(scoreCopy.closedCapDetail, { cap: breakdown.closedCap.cap }), value: breakdown.closedCap.cap, delta: breakdown.closedCap.before - breakdown.closedCap.cap });
   const scoreView: ScoreBreakdownView = {
     name: firm.name,
     score: firm.score,
     pillars: breakdown.v5 ? {
-      version: breakdown.v52 ? 5.2 : 5,
+      version: 5,
       values: [breakdown.v5.blocks.A, breakdown.v5.blocks.B, breakdown.v5.blocks.C, breakdown.v5.blocks.D, breakdown.v5.blocks.E],
       maxima: [25, 25, 20, 20, 10],
-      copy: modernCopy,
+      copy: scoreV5Copy(locale),
     } : breakdown.v4 ? {
       version: 4,
       values: [breakdown.v4.blocks.A, breakdown.v4.blocks.B, breakdown.v4.blocks.C, breakdown.v4.blocks.D, breakdown.v4.blocks.E],
@@ -714,8 +703,6 @@ export default async function FirmPage({ params }: Props) {
     } : undefined,
     tone: scoreTone(firm.score),
     steps: scoreSteps,
-    ruleCopy,
-    ruleAmountAudited: Boolean(breakdown.v4 || breakdown.v5 || breakdown.rules?.applied),
     signals: [
       { label: f.legal, value: v(regulatoryAudit.riskLevel), tone: legalTone(regulatoryAudit.riskLevel) },
       { label: f.payout, value: v(toEnglishText(firm.reviewSignals.payoutRisk)), tone: payoutTone(firm.reviewSignals.payoutRisk) },
@@ -733,25 +720,49 @@ export default async function FirmPage({ params }: Props) {
         clarity: f.rulesClarity[rule.status === 'conflicting' ? 'vague' : rule.clarity!],
         points: Math.round(points * 10) / 10,
         kind: ruleKind(rule),
-        source: rule.source,
       };
     }) ?? [],
     rulesNotes: breakdown.rules?.uncounted ? [fmt(scoreCopy.rulesUncounted, { n: breakdown.rules.uncounted })] : [],
-    // V4: expose already-scored B1/B4 losses, without subtracting them from
-    // the headline score again. V5/V5.2 use their actual sourced B2 deductions.
-    v4RuleImpact: breakdown.v4 ? {
-      rewardLoss: breakdown.v4.embeddedRuleImpact.rewardProtectionLoss,
-      tradingLoss: breakdown.v4.embeddedRuleImpact.tradingRulesLoss,
-      rewardLabel: ruleCopy.rewardLabel,
-      tradingLabel: ruleCopy.tradingLabel,
-    } : undefined,
     v5Evidence: breakdown.v5 ? {
-      deductions: breakdown.v5.ruleDeductions.map((item) => localizeScoreEvidence(locale, item)),
+      deductions: breakdown.v5.ruleDeductions.map(item => localizeScoreEvidence(locale, item)),
       contractProtection: localizeContractProtection(locale, firm.slug, breakdown.v5.contractProtection),
       checkedOn: breakdown.v5.checkedOn,
       limitedPayoutProof: breakdown.v5.independentPayoutProofLimited,
       copy: scoreV5EvidenceCopy(locale),
     } : undefined,
+    scaleC: breakdown.scaleC ? (() => {
+      const c = breakdown.scaleC!;
+      const cc = scaleCCopy(locale);
+      const nf = (n: number) => new Intl.NumberFormat(numberLocale(locale)).format(n);
+      const age = c.founded ? Number(c.checkedOn.slice(0, 4)) - c.founded : 0;
+      const contractTotal = c.penalties.filter((p) => SCALE_C_CONTRACT_CODES.includes(p.code)).reduce((sum, p) => sum + p.points, 0);
+      const lostTotal = Math.max(0, c.ceiling - firm.score);
+      const notes = [
+        c.contractCap && contractTotal > c.contractCap ? fmt(cc.contractCap, { cap: c.contractCap }) : '',
+        c.score !== c.raw && c.score > c.raw ? cc.fallCap : '',
+        fmt(c.reading === 'full' ? cc.readingFull : cc.readingExcerpts, { date: formatDateLong(locale, c.checkedOn) }),
+        firm.unauditedCap ? fmt(cc.unauditedCapDetail, { before: firm.unauditedCap.before }) : '',
+        c.previous !== firm.score ? fmt(cc.previous, { n: c.previous }) : '',
+      ].filter(Boolean);
+      return {
+        ceiling: c.ceiling,
+        ceilingLabel: fmt(cc.tiers[c.tier], { age }),
+        evidence: c.ceilingEvidence.map((e) => e.kind === 'tracker'
+          ? fmt(cc.tracker, { amount: new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 0 }).format(e.amountUSD) })
+          : e.kind === 'trustpilot' ? fmt(cc.trustpilot, { rating: e.rating, count: nf(e.count) }) : cc.stats),
+        items: c.penalties.map((p) => ({
+          label: cc.codes[p.code] ?? p.code,
+          points: p.points,
+          text: p.code === 'TPW' ? cc.tpwText : (p.code === 'TPMID' || p.code === 'TPR') ? fmt(cc.tpmidText, { detail: p.locator }) : localizeScaleCEvidence(locale, firm.slug, p),
+          source: p.source || ((p.code === 'TPW' || p.code === 'TPMID' || p.code === 'TPR') ? firm.reviewSignals.trustpilotSourceUrl : undefined),
+          locator: (p.code === 'TPMID' || p.code === 'TPR') ? undefined : p.locator,
+        })),
+        lostTotal,
+        notes,
+        copy: { ceiling: cc.ceiling, lost: cc.lost, none: cc.none, source: cc.source, method: cc.method },
+      };
+    })() : undefined,
+    pendingNote: breakdown.scaleC || firm.status === 'Fermée' || firm.unauditedCap ? undefined : scaleCCopy(locale).pending,
     methodHref: L('/audit'),
     rulesHref: '#rules',
   };
@@ -767,48 +778,6 @@ export default async function FirmPage({ params }: Props) {
     : firm.name.length >= 22 || longestFirmNameToken >= 14
       ? 'firm-title firm-title-long'
       : 'firm-title';
-  // Snapshot: display only recorded programme data, and leave placeholders explicit.
-  const showSnapshot = !isClosedOrParked && !firm.listedDomainWarning;
-  const sc = snapshotCopy(locale);
-  const unknown = v('To verify');
-  const verifiedProducts = firm.products.filter(product =>
-    !/not yet audited|à auditer|to verify|à vérifier/i.test(product.description) &&
-    !product.tradableAssets.some(asset => /to verify|à vérifier/i.test(asset)) &&
-    !product.platforms.some(platform => /to verify|à vérifier/i.test(platform)));
-  const marketKeys = new Set<string>();
-  for (const product of verifiedProducts) for (const asset of product.tradableAssets) {
-    const a = asset.toLowerCase();
-    if (/forex|currenc|^fx$/.test(a)) marketKeys.add(t.styles.Forex);
-    if (/indic|index/.test(a)) marketKeys.add(t.styles.Indices);
-    if (/metal|commod|energ|oil|gold|silver/.test(a)) marketKeys.add(sc.commodities);
-    if (/stock|equit|share|action/.test(a)) marketKeys.add(t.styles.Stocks);
-    if (/crypto|bitcoin/.test(a)) marketKeys.add(t.styles.Crypto);
-    if (/futur/.test(a)) marketKeys.add(t.styles.Futures);
-    if (/option/.test(a)) marketKeys.add(sc.options);
-    if (/cfd/.test(a)) marketKeys.add(t.styles.CFD);
-  }
-  const programmeTypes = [...new Set(verifiedProducts.map(product => product.type === 'Scaling' ? sc.scaling : v(product.type)))];
-  const allTypesKnown = firm.products.length > 0 && firm.products.every(product => product.drawdownType && product.drawdownSource);
-  const exactTypes = [...new Set(firm.products.map(product => product.drawdownType).filter(Boolean))];
-  const snapshotDrawdown = allTypesKnown ? (exactTypes.length > 1 ? sc.variable : v(exactTypes[0] === 'Hybride' ? 'Hybrid' : exactTypes[0]!)) : v(drawdownLabel(firm, toEnglishText));
-  const snapshotPositive = allTypesKnown && exactTypes.length === 1 && exactTypes[0] === 'Static'
-    ? sc.staticLoss : firm.legalVerified && regulatoryAudit.entities.length > 0 ? sc.entity : undefined;
-  const leadingRule = [...constraintRules].filter(rule => Boolean(rule.source)).sort((a,b) =>
-    (ruleKind(a) === 'risk' ? 0 : 1) - (ruleKind(b) === 'risk' ? 0 : 1) || severityRank(a) - severityRank(b))[0];
-  const translatedLeadingRule = leadingRule ? ruleTx(leadingRule.rule) : '';
-  const shortRule = leadingRule && translatedLeadingRule.length <= 125 && (locale === 'en' || translatedLeadingRule !== leadingRule.rule) ? translatedLeadingRule : '';
-  const snapshotWatch = leadingRule ? (leadingRule.status === 'conflicting' ? f.rulesConflict :
-    shortRule || (leadingRule.category === 'discretionary-clause' ? sc.discretion : ruleKind(leadingRule) === 'risk' ? sc.ambiguous : f.rulesUi.restrictionsShort)) :
-    hasPayoutRiskSignal(firm) ? f.payout + ': ' + v(toEnglishText(firm.reviewSignals.payoutRisk)) :
-    !isPayoutRiskAssessed(firm) ? f.checklist.payoutProof : undefined;
-  const snapshotCells = [
-    {icon:'🌐',label:sc.market,value:[...marketKeys].join(' / ') || unknown},
-    {icon:'🎯',label:sc.programmes,value:programmeTypes.join(' · ') || unknown},
-    {icon:'🛡️',label:f.facts.drawdown,value:snapshotDrawdown},
-    {icon:'💳',label:f.facts.from,value:v(priceLabel(firm))},
-    {icon:'💰',label:f.facts.split,value:v(profitSplitLabel(firm))},
-    {icon:'⚡',label:f.facts.payout,value:isPayoutDelayUnknown(firm) ? unknown : payoutShort(tx(firm.payoutDelay))},
-  ];
   const sourceCount = regulatoryAudit.sources.length || firm.sources.length;
   const specificStrengthPoints = uniqueProfilePoints(firm.strengths);
   const specificRiskPoints = uniqueProfilePoints([
@@ -1086,10 +1055,21 @@ export default async function FirmPage({ params }: Props) {
             <p className="firm-domain-warning pr-firm-verdict" role="note">
               <strong>{f.domainWarning}</strong> {tx(firm.listedDomainWarning)}
             </p>
-          ) : showSnapshot ? (
-            <FirmSnapshot locale={locale} cells={snapshotCells} positive={snapshotPositive} watch={snapshotWatch} watchHref={leadingRule ? '#rules' : '#decision'} date={<ReviewFreshness date={firm.lastReviewed} labels={{ today: t.radar.today, yesterday: t.radar.yesterday, daysAgo: t.radar.daysAgo }} />} />
           ) : (
-            <p className="pr-firm-verdict">{tx(firm.verdict)}</p>
+            (() => {
+              const [lead, rest] = splitVerdict(tx(firm.verdict));
+              return (
+                <div className="pr-firm-verdict">
+                  <p>{lead}</p>
+                  {rest ? (
+                    <details className="pr-verdict-more">
+                      <summary>{(GLANCE_COPY[locale] ?? GLANCE_COPY.en).readMore}</summary>
+                      <p>{rest}</p>
+                    </details>
+                  ) : null}
+                </div>
+              );
+            })()
           )}
 
           <aside className="pr-firm-scorecard" aria-label={fmt(f.scoreAria, { name: firm.name })}>
@@ -1115,19 +1095,18 @@ export default async function FirmPage({ params }: Props) {
           </aside>
         </div>
 
-        {!showSnapshot ? (
-        <dl className="pr-key-facts">
-          <div><dt>{f.facts.from}</dt><dd>{v(priceLabel(firm))}</dd></div>
-          <div><dt>{f.facts.split}</dt><dd>{v(profitSplitLabel(firm))}</dd></div>
-          <div><dt>{f.facts.drawdown}</dt><dd>{v(drawdownLabel(firm, toEnglishText))}</dd></div>
-          <div><dt>{f.facts.news}</dt><dd>{v(toEnglishText(firm.newsTrading))}</dd></div>
-          <div><dt>{f.facts.proof}</dt><dd>{v(toEnglishText(firm.auditStatus))}</dd></div>
-          <div><dt>{f.facts.lastReview}</dt><dd><ReviewFreshness date={firm.lastReviewed} labels={{ today: t.radar.today, yesterday: t.radar.yesterday, daysAgo: t.radar.daysAgo }} /></dd></div>
-          {isPayoutDelayUnknown(firm) ? null : (
-            <div className="pr-key-facts-wide"><dt>{f.facts.payout}</dt><dd><PayoutFact text={tx(firm.payoutDelay)} label={f.details} /></dd></div>
-          )}
-        </dl>
-        ) : null}
+        {/* "At a glance" card (Geyer, 2026-11-26): replaces the key-facts grid. */}
+        <FirmAtAGlance
+          slug={firm.slug}
+          locale={locale}
+          products={firm.products}
+          facts={[
+            { label: f.facts.from, value: v(priceLabel(firm)) },
+            { label: f.facts.split, value: v(profitSplitLabel(firm)) },
+            ...(isPayoutDelayUnknown(firm) ? [] : [{ label: f.facts.payout, value: glanceShort(tx(firm.payoutDelay)) }]),
+            { label: f.facts.drawdown, value: v(drawdownLabel(firm, toEnglishText)) },
+          ]}
+        />
 
         {locale !== 'en' ? <p className="pr-fineprint pr-data-note">{f.dataNote}</p> : null}
 
@@ -1164,6 +1143,7 @@ export default async function FirmPage({ params }: Props) {
           items={[
             ...(firm.products.length ? [{ id: 'produits', label: f.nav.offers }] : []),
             { id: 'rules', label: f.rulesUi.nav },
+            ...(getContractAudit(firm.slug) ? [{ id: 'contract-audit', label: contractAuditCopy(locale).nav }] : []),
             { id: 'decision', label: f.nav.decision },
             ...(auditCaseFile ? [{ id: 'case-timeline', label: f.nav.timeline }] : []),
             { id: 'regulatory', label: f.nav.legal },
@@ -1174,6 +1154,8 @@ export default async function FirmPage({ params }: Props) {
           ]}
         />
       </section>
+
+      <ContractRedFlags slug={firm.slug} locale={locale} />
 
       <section className="container pr-section pr-offers" id="produits" aria-labelledby={`offers-${firm.slug}`}>
         <header className="pr-section-head">
@@ -1186,7 +1168,7 @@ export default async function FirmPage({ params }: Props) {
           </div>
         </header>
         {firm.products.length > 0 ? (
-          <div className="grid-2">
+          <div className={firm.products.length >= 3 ? 'grid-2 pr-offers-grid-3' : 'grid-2'}>
             {firm.products.map((product) => (
               <article className="card product-card pr-product pr-product-compact" key={product.id}>
                 <div className="pr-product-tags">
@@ -1194,67 +1176,81 @@ export default async function FirmPage({ params }: Props) {
                   {product.isPopular ? <span className="pr-tag">{f.popular}</span> : null}
                 </div>
                 <h3>{tx(product.name)}</h3>
-                <p className="muted pr-product-intro">{tx(product.description)}</p>
-                <dl className="pr-product-highlights">
-                  <div><dt>{f.path.pass}</dt><dd>{tx(product.profitTarget)}</dd></div>
-                  <div><dt>{f.path.stay}</dt><dd>{tx(product.maxDrawdown)}</dd></div>
-                  <div><dt>{f.path.paid}</dt><dd>{tx(product.profitSplit)}</dd></div>
-                </dl>
-                {product.hasConsistencyRule ? (
-                  <p className="pr-product-rule pr-tone-watch">
-                    <span className="pr-pip-dot" aria-hidden="true" />
-                    {tx(product.consistencyRule ?? 'Règle de cohérence à vérifier')}
-                  </p>
-                ) : (
-                  <p className="pr-product-rule pr-tone-good">
-                    <span className="pr-pip-dot" aria-hidden="true" />
-                    {f.noConsistency}
-                  </p>
-                )}
-                {firm.status !== 'Fermée' ? getProgramPromotions(firm.slug, product.id).map((promo) => (
-                  <aside className="pr-program-promo" key={promo.id} aria-label={f.pricePromoTitle}>
-                    <div className="pr-program-promo-head">
-                      <span>{f.pricePromoTitle}</span>
-                      <strong>{promo.offer}</strong>
-                    </div>
-                    {promo.code ? <p className="pr-program-promo-code">{f.pricePromoCode} <code>{promo.code}</code></p> : null}
-                    <details className="pr-program-promo-details">
-                      <summary>{f.pricePromoTermsLabel}</summary>
-                      <p className="pr-program-promo-terms" lang="en">{promo.terms}</p>
-                      <p className="pr-program-promo-check">{f.pricePromoCheckout}</p>
-                      <div className="pr-program-promo-foot">
-                        <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small>
-                        <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a>
-                      </div>
-                    </details>
-                  </aside>
-                )) : null}
-                {firm.status !== 'Fermée' ? priceTable?.programs.filter((program) => program.productId === product.id).map((program) => (
-                  <div className="pr-product-prices" key={program.name}>
-                    <div className="pr-product-prices-head">
-                      <strong>{tx(program.name)}</strong>
-                      <span>{f.priceList}{program.billing === 'monthly' ? ` ${f.perMonth}` : ''}</span>
-                    </div>
-                    <div className="pr-product-price-tiers">
-                      {pricePreviewRows(program, getProgramPromotions(firm.slug, product.id).flatMap((promo) => promo.highlightedSizes ?? [])).map((row) => (
-                        <div className="pr-product-price-tier" key={row.size}>
-                          <span>{formatAccountSize(row.size)}</span>
-                          <strong>{formatListPrice(row.price, program.currency)}</strong>
-                          {row.upfrontPrice != null && row.completionFee != null ? (
-                            <small>{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small>
-                          ) : null}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="pr-product-prices-links">
-                      <a href="#prices">{f.priceTableTitle} ↓</a>
-                      <a href={program.sourceUrl} target="_blank" rel="noopener noreferrer">{f.priceSource} ↗</a>
-                    </div>
-                  </div>
-                )) : null}
+                {(() => {
+                  const rows = (priceTable?.programs ?? []).filter((program) => program.productId === product.id).flatMap((program) => program.rows.map((row) => ({ price: row.price, size: row.size, currency: program.currency })));
+                  const cheapest = rows.length ? rows.reduce((low, row) => (row.price < low.price ? row : low)) : undefined;
+                  const from = cheapest ? formatListPrice(cheapest.price, cheapest.currency) : product.entryFeeMin ? formatUsd(product.entryFeeMin) : '—';
+                  const split = /(\d{2,3})\s?%/.exec(product.profitSplit ?? '')?.[1];
+                  const ddText = `${product.drawdownType ?? ''} ${product.maxDrawdown ?? ''}`;
+                  const dd = product.drawdownType ?? (/end.of.day|\bEOD\b|fin de journée/i.test(ddText) ? 'EOD' : /trail|suiveur/i.test(ddText) ? 'Trailing' : /static|fixed|fixe|statique/i.test(ddText) ? 'Static' : undefined);
+                  const promos = firm.status !== 'Fermée' ? getProgramPromotions(firm.slug, product.id) : [];
+                  const offerHref = firm.partnerOffer?.href || product.linkToStart;
+                  // Sale "from" price: published amount, or list price minus the advertised percentage (flagged as computed).
+                  const fromSale = cheapest ? promos.map((promo) => promoSale(promo.offer, cheapest.size, cheapest.price)).filter((x): x is NonNullable<typeof x> => Boolean(x)).sort((x, y) => x.sale - y.sale)[0] : undefined;
+                  const anyComputed = Boolean(cheapest) && promos.some((promo) => promoSale(promo.offer, cheapest!.size, cheapest!.price)?.computed);
+                  return (
+                    <>
+                      <dl className="pr-offer-key">
+                        <div><dt>{f.facts.from}</dt><dd>{fromSale && cheapest ? <><s>{from}</s> <span className="pr-offer-key-sale">{formatListPrice(fromSale.sale, cheapest.currency)}{fromSale.computed ? '*' : ''}</span></> : from}</dd></div>
+                        <div><dt>{f.facts.split}</dt><dd>{split ? `${split}%` : '—'}</dd></div>
+                        <div><dt>{f.facts.drawdown}</dt><dd>{dd ? v(dd) : '—'}</dd></div>
+                      </dl>
+                      {promos.map((promo) => {
+                        // Published before/after amounts only ("100K · €432 / €540"); a headline percentage is never turned into a price.
+                        const pair = publishedPairs(promo.offer)[0];
+                        const shown = !pair && cheapest ? promoSale(promo.offer, cheapest.size, cheapest.price) : undefined;
+                        const pct = shown ? String(shown.pct) : pair ? String(Math.round((1 - pair.sale / pair.regular) * 100)) : /(\d{1,2})\s?%/.exec(promo.offer)?.[1];
+                        const extra = pair ? '' : promo.offer;
+                        return (
+                          <div className="pr-offer-now" key={promo.id}>
+                            <div className="pr-offer-now-line">
+                              {pct ? <span className="pr-offer-badge">−{pct}%</span> : null}
+                              <span className="pr-offer-now-label">{f.promoNow}</span>
+                              {pair ? (
+                                <span className="pr-offer-now-price"><span>{formatAccountSize(pair.size)}</span> <s>{pair.symbol}{pair.regular.toLocaleString('en-US')}</s> <strong>{pair.symbol}{pair.sale.toLocaleString('en-US')}</strong></span>
+                              ) : shown && cheapest ? (
+                                <span className="pr-offer-now-price"><span>{formatAccountSize(cheapest.size)}</span> <s>{formatListPrice(cheapest.price, cheapest.currency)}</s> <strong>{formatListPrice(shown.sale, cheapest.currency)}*</strong></span>
+                              ) : null}
+                              {!pair && extra ? <span className="pr-offer-now-extra">{extra}</span> : null}
+                            </div>
+                            <div className="pr-offer-now-line">
+                              {promo.code ? <span className="pr-offer-code">{f.pricePromoCode} <code>{promo.code}</code></span> : offerHref ? (
+                                <a className="pr-offer-direct" href={offerHref} target="_blank" rel={firm.partnerOffer?.href || isAffiliateUrl(offerHref) ? 'noreferrer sponsored' : 'noreferrer'}>{f.promoDirectLink} ↗</a>
+                              ) : null}
+                              <details className="pr-offer-terms">
+                                <summary>{f.pricePromoTermsLabel}</summary>
+                                <p lang="en">{promo.terms}</p>
+                                <p>{f.pricePromoCheckout}</p>
+                                <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''} · <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a></small>
+                              </details>
+                            </div>
+                          </div>
+                        );
+                      })}
+                      {anyComputed ? <p className="pr-offer-computed">{f.promoComputed}</p> : null}
+                    </>
+                  );
+                })()}
                 <details className="pr-product-details">
                   <summary>{f.programDetails}</summary>
                   <div className="pr-product-details-content">
+                  <dl className="pr-product-highlights">
+                    <div><dt>{f.path.pass}</dt><dd>{tx(product.profitTarget)}</dd></div>
+                    <div><dt>{f.path.stay}</dt><dd>{tx(product.maxDrawdown)}</dd></div>
+                    <div><dt>{f.path.paid}</dt><dd>{tx(product.profitSplit)}</dd></div>
+                  </dl>
+                  {product.hasConsistencyRule ? (
+                    <p className="pr-product-rule pr-tone-watch">
+                      <span className="pr-pip-dot" aria-hidden="true" />
+                      {tx(product.consistencyRule ?? 'Règle de cohérence à vérifier')}
+                    </p>
+                  ) : (
+                    <p className="pr-product-rule pr-tone-good">
+                      <span className="pr-pip-dot" aria-hidden="true" />
+                      {f.noConsistency}
+                    </p>
+                  )}
+                    {product.description ? <p className="muted pr-product-intro">{tx(product.description)}</p> : null}
                     <ChallengePath product={product} labels={f.path} translate={(text) => td(locale, text)} />
                     <dl className="pr-product-meta">
                       <div>
@@ -1271,6 +1267,48 @@ export default async function FirmPage({ params }: Props) {
                     {product.hasConsistencyRule ? <p className="pr-product-rule pr-tone-watch">{tx(product.consistencyRule ?? 'Règle de cohérence à vérifier')}</p> : null}
                   </div>
                 </details>
+                {firm.status !== 'Fermée' ? (() => {
+                  const programs = priceTable?.programs.filter((program) => program.productId === product.id) ?? [];
+                  if (!programs.length) return null;
+                  const highlighted = getProgramPromotions(firm.slug, product.id).flatMap((promo) => promo.highlightedSizes ?? []);
+                  const sizes = [...new Set(programs.flatMap((program) => pricePreviewRows(program, highlighted).map((row) => row.size)))].sort((x, y) => x - y).slice(0, 4);
+                  const variantLabel = (name: string) => (name.includes(' — ') ? name.slice(name.indexOf(' — ') + 3) : name);
+                  const monthly = programs.some((program) => program.billing === 'monthly');
+                  return (
+                    <details className="pr-product-details pr-price-dropdown">
+                      <summary>{f.priceTableTitle}</summary>
+                    <div className="pr-price-matrix">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th scope="col">{f.priceList}{monthly ? ` ${f.perMonth}` : ''}</th>
+                            {sizes.map((size) => <th scope="col" key={size}>{formatAccountSize(size)}</th>)}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {programs.map((program) => (
+                            <tr key={program.name}>
+                              <th scope="row">{programs.length > 1 ? tx(variantLabel(program.name)) : tx(program.name)}</th>
+                              {sizes.map((size) => {
+                                const row = program.rows.find((item) => item.size === size);
+                                return (
+                                  <td key={size}>
+                                    {row ? formatListPrice(row.price, program.currency) : '—'}
+                                    {row && row.upfrontPrice != null && row.completionFee != null ? <small>{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small> : null}
+                                  </td>
+                                );
+                              })}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                      <div className="pr-product-prices-links">
+                        <a href={programs[0].sourceUrl} target="_blank" rel="noopener noreferrer">{f.priceSource} ↗</a>
+                      </div>
+                    </div>
+                    </details>
+                  );
+                })() : null}
                 {firm.status !== 'Fermée' && (firm.partnerOffer?.href || product.linkToStart) ? (
                   <a
                     href={firm.partnerOffer?.href || product.linkToStart}
@@ -1293,41 +1331,52 @@ export default async function FirmPage({ params }: Props) {
           </div>
         )}
         {priceTable && firm.status !== 'Fermée' ? (
-          <div className="pr-price-tables" id="prices">
-            <h3>{f.priceTableTitle}</h3>
+          <details className="pr-price-tables pr-price-tables-dropdown" id="prices">
+            <summary><h3>{f.priceTableTitle}</h3></summary>
             <p className="muted">{fmt(f.priceTableLead, { name: firm.name, date: formatDateLong(locale, priceTable.checkedOn) })}</p>
-            <div className="pr-price-grid">
-              {priceTable.programs.map((program) => (
-                <figure className="pr-price-table" key={program.name}>
-                  <figcaption>
-                    <strong>{program.name}</strong>
-                    <span>{program.billing === 'monthly' ? f.perMonth : f.oneTime}</span>
-                  </figcaption>
-                  <table>
-                    <thead>
-                      <tr><th scope="col">{f.priceSize}</th><th scope="col">{f.priceList}</th></tr>
-                    </thead>
-                    <tbody>
-                      {program.rows.map((row) => (
-                        <tr key={row.size}>
-                          <th scope="row">{formatAccountSize(row.size)}</th>
-                          <td>
-                            {formatListPrice(row.price, program.currency)}
-                            {program.billing === 'monthly' ? <small>{f.perMonth}</small> : null}
-                            {row.upfrontPrice != null && row.completionFee != null ? (
-                              <small className="pr-price-split">{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small>
-                            ) : null}
-                          </td>
+            {(() => {
+              const sizes = [...new Set(priceTable.programs.flatMap((program) => program.rows.map((row) => row.size)))].sort((x, y) => x - y);
+              const noted = priceTable.programs.filter((program) => program.note);
+              return (
+                <>
+                  <div className="pr-price-all">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th scope="col">{f.priceList}</th>
+                          {sizes.map((size) => <th scope="col" key={size}>{formatAccountSize(size)}</th>)}
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                  {program.note ? <p className="pr-fineprint" lang="en">{program.note}</p> : null}
-                  <a className="pr-fineprint" href={program.sourceUrl} target="_blank" rel="noopener noreferrer">{f.priceSource} ↗</a>
-                </figure>
-              ))}
-            </div>
-          </div>
+                      </thead>
+                      <tbody>
+                        {priceTable.programs.map((program) => (
+                          <tr key={program.name}>
+                            <th scope="row">
+                              <a href={program.sourceUrl} target="_blank" rel="noopener noreferrer">{tx(program.name)}</a>
+                              <small>{program.billing === 'monthly' ? f.perMonth : f.oneTime}</small>
+                            </th>
+                            {sizes.map((size) => {
+                              const row = program.rows.find((item) => item.size === size);
+                              return (
+                                <td key={size}>
+                                  {row ? formatListPrice(row.price, program.currency) : '—'}
+                                  {row && row.upfrontPrice != null && row.completionFee != null ? <small>{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small> : null}
+                                </td>
+                              );
+                            })}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  {noted.length ? (
+                    <ul className="pr-price-notes" lang="en">
+                      {noted.map((program) => <li key={program.name}><strong>{program.name}</strong> {program.note}</li>)}
+                    </ul>
+                  ) : null}
+                </>
+              );
+            })()}
+          </details>
         ) : null}
         {classicRules.length ? (
           <div className="pr-classic-rules">
@@ -1406,27 +1455,9 @@ export default async function FirmPage({ params }: Props) {
         )}
       </section>
 
-      <section className="container pr-section pr-decision" id="decision" aria-label={fmt(f.decisionAria, { name: firm.name })}>
-        {showSnapshot ? (
-          <details className="pr-rules-menu" style={{marginBottom: 18}}>
-            <summary><span className="pr-rules-menu-name">{sc.full}</span></summary>
-            <div className="pr-rules-menu-body">
-              <p>{tx(firm.verdict)}</p>
-        <dl className="pr-key-facts">
-          <div><dt>{f.facts.from}</dt><dd>{v(priceLabel(firm))}</dd></div>
-          <div><dt>{f.facts.split}</dt><dd>{v(profitSplitLabel(firm))}</dd></div>
-          <div><dt>{f.facts.drawdown}</dt><dd>{v(drawdownLabel(firm, toEnglishText))}</dd></div>
-          <div><dt>{f.facts.news}</dt><dd>{v(toEnglishText(firm.newsTrading))}</dd></div>
-          <div><dt>{f.facts.proof}</dt><dd>{v(toEnglishText(firm.auditStatus))}</dd></div>
-          <div><dt>{f.facts.lastReview}</dt><dd><ReviewFreshness date={firm.lastReviewed} labels={{ today: t.radar.today, yesterday: t.radar.yesterday, daysAgo: t.radar.daysAgo }} /></dd></div>
-          {isPayoutDelayUnknown(firm) ? null : (
-            <div className="pr-key-facts-wide"><dt>{f.facts.payout}</dt><dd><PayoutFact text={tx(firm.payoutDelay)} label={f.details} /></dd></div>
-          )}
-        </dl>
-            </div>
-          </details>
-        ) : null}
+      <ContractAuditSection slug={firm.slug} firmName={firm.name} locale={locale} />
 
+      <section className="container pr-section pr-decision" id="decision" aria-label={fmt(f.decisionAria, { name: firm.name })}>
 
         {searchProfile && locale === 'en' ? (
           <article className="firm-search-answer" aria-labelledby={`search-answer-${firm.slug}`}>

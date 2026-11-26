@@ -1,0 +1,29 @@
+{
+ "slug": "atmos-funded",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Atmos may, in its sole and absolute discretion, close your account following any violation of the Risk Management Policy as determined by the Company; prohibited practices include using a different strategy on the funded account or arbitrage 'as determined by the Company in its sole and absolute discretion'.",
+   "source": "https://atmosfunded.com/wp-content/uploads/2025/08/AtmosFunded-Ltd-Customer-Agreement-and-Risk-Management-Policy-v2.pdf",
+   "locator": "Risk Management Policy clause 2; Customer Agreement §7.5",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B3",
+   "text": "Customers accept the Risk Management Policy, 'which may be amended from time to time at the Company’s sole and absolute discretion', and violations close the account.",
+   "source": "https://atmosfunded.com/wp-content/uploads/2025/08/AtmosFunded-Ltd-Customer-Agreement-and-Risk-Management-Policy-v2.pdf",
+   "locator": "Risk Management Policy (introduction)",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "20% consistency rule applies only to Instant-Funded accounts.",
+   "source": "https://atmosfunded.com/wp-content/uploads/2025/08/AtmosFunded-Ltd-Customer-Agreement-and-Risk-Management-Policy-v2.pdf",
+   "locator": "§3.7",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

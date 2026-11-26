@@ -1,0 +1,13 @@
+{
+ "slug": "tradeify",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [],
+ "rejected": {
+  "B7": "Mentions an Account Agreement for site content use; not a payout contract withheld before purchase."
+ },
+ "toVerify": {
+  "B7": "Check whether the Account Agreement is public."
+ },
+ "safeguards": []
+}

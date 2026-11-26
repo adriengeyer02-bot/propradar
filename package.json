@@ -9,9 +9,7 @@
     "check:price-tables": "node scripts/check-price-tables.cjs",
     "check:program-promos": "node scripts/check-program-promotions.cjs",
     "start": "next start",
-    "lint": "next lint",
-    "check:scoring-v52": "node scripts/test-scoring-v52-candidate.mjs && node scripts/test-scoring-v52-runtime.mjs && node scripts/check-scoring-v52-coverage.mjs",
-    "check:score-modal": "node scripts/check-score-modal-consistency.mjs"
+    "lint": "next lint"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "5.3.0",

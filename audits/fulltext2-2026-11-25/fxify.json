@@ -1,0 +1,29 @@
+{
+ "slug": "fxify",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every paragraph of the archived terms, help and agreement pages matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Forbidden practices include 'any trading which is seen as prohibited as per the sole discretion of FXIFY' (list amendable with 7 days' notice); FXIFY 'reserves the right to determine, at its own discretion, whether certain trades, practices, strategies, or situations are Forbidden Trading Practices', and may remove their results, fail the account or terminate all contracts (also covering FXIFY Trader accounts under 5.6-5.7).",
+   "source": "https://fxify.com/wp-content/uploads/2024/12/GENERAL-TERMS-AND-CONDITIONS-FXIFY.pdf",
+   "locator": "GTC (version 6 Nov 2024) §5.4.1.8; §5.4.3; §5.5-5.7",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B3",
+   "text": "Funded traders accept the Risk Management and Program Rules 'as they are set forth here and as may be amended from time to time by The Prop Company and sent to You by email'; 'any violation thereof will result in the closing of your account'.",
+   "source": "https://fxify.com/agreement/",
+   "locator": "Risk Management and Program Rules",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "2-Phase Pro lists no consistency rule; 25-30% rules apply to 2-Phase Classic funded, Lightning, Instant and crypto programmes.",
+   "source": "https://fxify.com/blog/prop-firm-payout-process/",
+   "locator": "Payout table",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

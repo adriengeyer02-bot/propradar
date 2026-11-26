@@ -1,0 +1,19 @@
+{
+ "slug": "ment-funding",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B3",
+   "text": "Shared Dashboard Analytix terms: margin, leverage, position limits and risk controls may be changed on any account at any time without prior notice.",
+   "source": "upload:57c77dd6-ANALYTIX.pdf",
+   "excerpt": "While our current leverages and margin requirements are fixed, we reserve the right to increase the margin requirement, amend the leverage ratio limits, limit the number of open positions you may enter or maintain in an Account, or halt trading in one or more instruments at any time. Such changes may be made without prior notice. Without limiting the foregoing, we also reserve the right, in our sole and absolute discretion, to apply, modify, impose, or remove risk controls on any Account at any time. Such risk controls may include adjustments to leverage, margin requirements, position size lim",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {
+  "B2A": "Generic prohibited list."
+ },
+ "toVerify": {},
+ "safeguards": []
+}

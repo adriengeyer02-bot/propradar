@@ -1,0 +1,16 @@
+{"slug":"take-profit-trader","checkedOn":"2026-11-25","status":"COMPLETE_EXCEPT_SIGNED_PRO_CONTRACT",
+ "checklist":{
+  "currentTermsRead":"https://takeprofittrader.com/terms (in effect 1 Feb 2024): website/products only, no payout terms",
+  "payoutClausesRead":"PRO withdrawal page: 80/20 split, withdrawals from day one above buffer, 50% of buffer after closure (Tests bought from 23 Nov 2026; older keep their buffers)",
+  "fundedAgreement":"PRO contract is sent after passing ('This will all be in the PRO contract we send you'); not public -> B7",
+  "prohibitedPractices":"no bots/algos; exit before CME limit up/down (else PRO account lost); no counter positions across Test/PRO/PRO+; flat 1 min around FOMC/NFP/CPI; 1 traded day per month",
+  "consistency":"50% in Test only; none in PRO/PRO+ (plan pages) -> 0",
+  "trustpilotExactDomain":"4.4/5, 11,395 reviews, no notice, claimed (2026-11-25)",
+  "entityRegistry":"TakeProfitTrader LLC, Florida, Sunbiz doc. L21000145354, filed 2021-03-29; 9100 Conroy Windermere Rd Suite 200, Windermere FL",
+  "payoutEvidence":"not on PayoutJunction; Trustpilot >=4.0 with >=5,000 reviews counts as large-scale evidence",
+  "incidents":"web/news search 2026-11-25: no regulator action, lawsuit or payout-suspension report found; BBB complaint responses held for owner review"},
+ "facts":[
+  {"code":"B3","text":"User Agreement can change 'from time to time without notice'; continued use binds users regardless of when they registered.","source":"https://takeprofittrader.com/terms","locator":"introductory section","checkedOn":"2026-11-25"},
+  {"code":"B7","text":"Payout and PRO rules are set out in a PRO contract sent after the Test is passed; the contract itself is not published.","source":"https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules","locator":"introduction","checkedOn":"2026-11-25"},
+  {"code":"B4","text":"Older FAQ says weekly PRO+ activity, current help says one traded day per calendar month (cohort to reconcile).","source":"https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725","locator":"PRO+ FAQ vs PRO Account Rules §3","checkedOn":"2026-11-25"}
+ ]}

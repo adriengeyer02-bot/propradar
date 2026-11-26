@@ -1,0 +1,305 @@
+{
+  "schema": "PROPRADAR_CONTRACT_AUDIT_V3",
+  "date": "2026-11-24",
+  "publicationStatus": "RESEARCH_ONLY",
+  "coverage": "8 further firms with documentary source gaps explicitly marked",
+  "warning": "A public FAQ, indexed snippet, or general website terms may be incomplete and are NOT proof of the funded contract's exact terms. Avoid inferring abusive real-world enforcement; no rating changes.",
+  "firms": [
+    {
+      "slug": "hyrotrader",
+      "name": "HyroTrader",
+      "checkedOn": "2026-11-24",
+      "auditStatus": "current_terms_2026_with_funded_contract_priority",
+      "primarySource": "https://www.hyrotrader.com/terms-and-conditions/",
+      "findings": [
+        {
+          "factId": "hyrotrader-contracts-20261124-01",
+          "section": "§6; Preamble",
+          "riskFamily": "Separation funded/evaluation",
+          "effect": "La phase funded et les rewards dépendent d'un accord séparé avec HYROTRADER TECHNOLOGIES LTD (BVI n°2166693); les Terms générales couvrent principalement challenge et accès plateforme.",
+          "evidenceStatus": "primary_terms",
+          "sourceUrl": "https://www.hyrotrader.com/terms-and-conditions/"
+        },
+        {
+          "factId": "hyrotrader-contracts-20261124-02",
+          "section": "§6 and rule changes",
+          "riskFamily": "No-retroactivity safeguard",
+          "effect": "Évolutions des règles annoncées non rétroactives en principe sur les comptes actifs, sauf obligations légales, fraude, abus ou dommage significatif.",
+          "evidenceStatus": "primary_terms",
+          "sourceUrl": "https://www.hyrotrader.com/terms-and-conditions/"
+        },
+        {
+          "factId": "hyrotrader-contracts-20261124-03",
+          "section": "§8.3(c)",
+          "riskFamily": "Deposit return protections",
+          "effect": "Le dépôt est remboursable notamment si aucun contrat funded n'est proposé après challenge réussi ou si le contrat funded se termine avant premier payout sans violation du trader.",
+          "evidenceStatus": "primary_terms",
+          "sourceUrl": "https://www.hyrotrader.com/terms-and-conditions/"
+        },
+        {
+          "factId": "hyrotrader-contracts-20261124-04",
+          "section": "§9",
+          "riskFamily": "Chargeback and trader rights",
+          "effect": "La clause distingue contestation abusive/frauduleuse d'une contestation légitime; les droits légaux envers l'émetteur de carte sont explicitement préservés, mais rupture possible si chargeback injustifié.",
+          "evidenceStatus": "primary_terms",
+          "sourceUrl": "https://www.hyrotrader.com/terms-and-conditions/"
+        }
+      ],
+      "missingAgreementOrVerification": "Obtenir Funded Trader Agreement BVI, comparer avec la hiérarchie juridique CGU fournisseur UAE/BVI, vérifier modalités précises de reward acquis.",
+      "noScore": true
+    },
+    {
+      "slug": "bem-funding",
+      "name": "BEM Funding",
+      "checkedOn": "2026-11-24",
+      "auditStatus": "primary_general_and_program_terms",
+      "primarySource": "https://bemfunding.com/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "bem-funding-contracts-20261124-01",
+          "section": "BEM One — preamble",
+          "riskFamily": "Contract hierarchy discretion",
+          "effect": "Le supplément BEM One permet à la firme de déterminer la disposition applicable en cas de conflit avec CGU principales; il faudra vérifier compatibilité et effet sur comptes achetés.",
+          "evidenceStatus": "primary_program_terms",
+          "sourceUrl": "https://bemfunding.com/terms-of-use/bem-one"
+        },
+        {
+          "factId": "bem-funding-contracts-20261124-02",
+          "section": "BEM One §12",
+          "riskFamily": "Unilateral sanction proof threshold",
+          "effect": "La société indique pouvoir appliquer des sanctions sans produire ses méthodes de détection, preuves détaillées ni établir l'intention; décision laissée à sa discrétion.",
+          "evidenceStatus": "primary_program_terms",
+          "sourceUrl": "https://bemfunding.com/terms-of-use/bem-one"
+        },
+        {
+          "factId": "bem-funding-contracts-20261124-03",
+          "section": "Main CGU — prohibited practices",
+          "riskFamily": "Cross-account cancellation and forfeiture",
+          "effect": "Après pratiques interdites, possible fermeture de plusieurs comptes et annulation de rewards sous accords spécifiques; la clause prévoit une revue de risque et parfois entretien.",
+          "evidenceStatus": "primary_general_terms",
+          "sourceUrl": "https://bemfunding.com/terms-and-conditions"
+        },
+        {
+          "factId": "bem-funding-contracts-20261124-04",
+          "section": "BEM One §11",
+          "riskFamily": "Payout consistency and minimum threshold",
+          "effect": "Une règle de cohérence maximale de 35% du profit par meilleure journée est affichée sur le programme BEM One; règle chiffrée à ne pas confondre avec pouvoir discrétionnaire.",
+          "evidenceStatus": "primary_program_terms",
+          "sourceUrl": "https://bemfunding.com/terms-of-use/bem-one"
+        }
+      ],
+      "missingAgreementOrVerification": "Comparer BEM One, BEM Classic et One Only à leurs documents effectivement achetés; obtenir BEM Trader agreement et traitement des rewards déjà approuvés.",
+      "noScore": true
+    },
+    {
+      "slug": "e8-futures",
+      "name": "E8 Futures",
+      "checkedOn": "2026-11-24",
+      "auditStatus": "public_terms_read",
+      "primarySource": "https://e8futures.com/e8-markets-terms-and-conditions",
+      "findings": [
+        {
+          "factId": "e8-futures-contracts-20261124-01",
+          "section": "Trader Program and Rewards",
+          "riskFamily": "Separate eligibility from guaranteed reward",
+          "effect": "Les CGU décrivent les conditions de récompenses de performance pour traders acceptés au programme E8 Trader; éligibilité et demande de payout dépendent des conditions et vérifications.",
+          "evidenceStatus": "primary_terms",
+          "sourceUrl": "https://e8futures.com/e8-markets-terms-and-conditions"
+        },
+        {
+          "factId": "e8-futures-contracts-20261124-02",
+          "section": "§15.1–15.3",
+          "riskFamily": "Arbitration plus opt-out",
+          "effect": "Arbitrage AAA au Texas selon les CGU, assorti d'une possibilité expresse d'opt-out dans les trente jours suivant l'acceptation initiale.",
+          "evidenceStatus": "primary_terms",
+          "sourceUrl": "https://e8futures.com/e8-markets-terms-and-conditions"
+        },
+        {
+          "factId": "e8-futures-contracts-20261124-03",
+          "section": "E8 Futures entity/program",
+          "riskFamily": "Contracting party distinction",
+          "effect": "Vitrine e8futures.com présente une entité E8 Funding LLC, mais le site et les CGU évoquent la marque E8Markets; éviter d'attribuer l'accord d'une entité au mauvais produit.",
+          "evidenceStatus": "official_site",
+          "sourceUrl": "https://e8futures.com/e8-signature-futures"
+        }
+      ],
+      "missingAgreementOrVerification": "Comparer les contrats E8 Markets, E8 Funding et produits E8 Signature/Zero; obtenir l'accord E8 Trader rémunérateur et limites par programme.",
+      "noScore": true
+    },
+    {
+      "slug": "blue-guardian",
+      "name": "Blue Guardian",
+      "checkedOn": "2026-11-24",
+      "auditStatus": "official_help_source_terms_missing",
+      "primarySource": "https://help.blueguardian.com/en/articles/18426723-what-happens-if-i-break-a-rule",
+      "findings": [
+        {
+          "factId": "blue-guardian-contracts-20261124-01",
+          "section": "What happens if I break a rule? (13 Nov 2026)",
+          "riskFamily": "Manual payout review",
+          "effect": "La FAQ expose des revues de conformité manuelles au payout pouvant mener à refus de récompense, fermeture de compte ou sanctions sur comptes liés.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://help.blueguardian.com/en/articles/18426723-what-happens-if-i-break-a-rule"
+        },
+        {
+          "factId": "blue-guardian-contracts-20261124-02",
+          "section": "Risk Team decisions",
+          "riskFamily": "Appeal status",
+          "effect": "La FAQ indique que les décisions de l'équipe Risques sont finales et contraignantes; la procédure contractuelle de contestation reste à vérifier.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://help.blueguardian.com/en/articles/18426723-what-happens-if-i-break-a-rule"
+        },
+        {
+          "factId": "blue-guardian-contracts-20261124-03",
+          "section": "Reserve/Zero/Direct futures",
+          "riskFamily": "Soft versus hard breach",
+          "effect": "L'atteinte de la limite quotidienne optionnelle peut être un simple blocage jusqu'au reset (soft breach); un drawdown maximal reste une violation hard selon le programme.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://help.blueguardian.com/en/articles/18426769-direct-account-rules"
+        },
+        {
+          "factId": "blue-guardian-contracts-20261124-04",
+          "section": "Zero funded account",
+          "riskFamily": "Unexpected performance cap",
+          "effect": "Une FAQ décrit une limite de $8,000 de profits en un jour sur Zero funded : compte fermé puis option de payout fixe de $3,600 ou passage Live, profits excédentaires non conservés. À vérifier par taille/cohorte.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://help.blueguardian.com/en/articles/18446026-zero-account-rules"
+        }
+      ],
+      "missingAgreementOrVerification": "Récupérer Trader Agreement CFD/futures et versions 2026, motivations/reviews, contrat direct funded, portée juridique du plafond $8k et alternatives.",
+      "noScore": true
+    },
+    {
+      "slug": "sfx-funded",
+      "name": "SFX Funded",
+      "checkedOn": "2026-11-24",
+      "auditStatus": "official_help_only_no_current_master_terms",
+      "primarySource": "https://sfxfunded.com/help/prohibited-strategies",
+      "findings": [
+        {
+          "factId": "sfx-funded-contracts-20261124-01",
+          "section": "Prohibited Trading Styles",
+          "riskFamily": "Subjective strategy enforcement",
+          "effect": "La FAQ dit que pratiques incohérentes peuvent entraîner refus de payout ou révocation du compte funded; cadre contractuel exact et recours non établis dans cette seule FAQ.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://sfxfunded.com/help/prohibited-strategies"
+        },
+        {
+          "factId": "sfx-funded-contracts-20261124-02",
+          "section": "Breach and violations",
+          "riskFamily": "No withdrawals after breach",
+          "effect": "Après violation d'objectif/règle, compte bloqué view-only; sur funded, retraits non disponibles. Ne pas attribuer à tous les cas la confiscation des payouts déjà approuvés.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://sfxfunded.com/help/breach-and-violations"
+        },
+        {
+          "factId": "sfx-funded-contracts-20261124-03",
+          "section": "Withdrawal Processing",
+          "riskFamily": "Processing time and promise",
+          "effect": "La documentation affiche traitement des retraits sous deux jours ouvrés, avec promesse commerciale d'indemnité sous conditions; pas de preuve de virements indépendants.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://sfxfunded.com/help/withdrawal-processing"
+        }
+      ],
+      "missingAgreementOrVerification": "Obtenir contrat rémunérateur souscrit, périmètre de la garantie $1k, exceptions, définition d'inconsistent trading et procédure d'appel.",
+      "noScore": true
+    },
+    {
+      "slug": "directfundedtrader",
+      "name": "Direct Funded Trader",
+      "checkedOn": "2026-11-24",
+      "auditStatus": "official_terms_search_extract_live_blocked",
+      "primarySource": "https://www.directfundedtrader.com/termsandservices",
+      "findings": [
+        {
+          "factId": "directfundedtrader-contracts-20261124-01",
+          "section": "Terms — suspension",
+          "riskFamily": "Broad service refusal",
+          "effect": "L'index officiel contient un pouvoir de refus de service, annulation ou fermeture à discrétion; l'accès direct à la page a présenté une vérification anti-bot, donc pas de passage juridique complet.",
+          "evidenceStatus": "indexed_primary_not_reverified",
+          "sourceUrl": "https://www.directfundedtrader.com/termsandservices"
+        },
+        {
+          "factId": "directfundedtrader-contracts-20261124-02",
+          "section": "FAQ — prohibited strategies",
+          "riskFamily": "No-notice account termination",
+          "effect": "L'aide décrit certaines pratiques interdites entraînant clôture sans avertissement; attention à la distinction comptes promotionnels/giveaways et comptes achetés.",
+          "evidenceStatus": "official_faq",
+          "sourceUrl": "https://www.directfundedtrader.com/faq-rules"
+        }
+      ],
+      "missingAgreementOrVerification": "Obtenir CGU texte direct/historique, version, l'accord funded et clauses de reward, liens du vrai vendeur; ne pas marquer examen complet.",
+      "noScore": true
+    },
+    {
+      "slug": "top-one-futures",
+      "name": "Top One Futures",
+      "checkedOn": "2026-11-24",
+      "auditStatus": "help_sources_only_contract_gap",
+      "primarySource": "https://help.toponefutures.com/en/collections/12160208-general-rules",
+      "findings": [
+        {
+          "factId": "top-one-futures-contracts-20261124-01",
+          "section": "Minimum Trade Time Rule",
+          "riskFamily": "Short-trade enforcement",
+          "effect": "Une règle de durée minimale de dix secondes s'applique à certains produits; elle est chiffrée mais ses sanctions doivent être vérifiées par modèle.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://help.toponefutures.com/en/collections/12160208-general-rules"
+        },
+        {
+          "factId": "top-one-futures-contracts-20261124-02",
+          "section": "Ignite Account Overview",
+          "riskFamily": "Daily-loss-limit soft breach",
+          "effect": "Sur Ignite, l'atteinte du DLL entraîne pause jusqu'au reset, plutôt qu'une terminaison automatique, selon le programme; ne pas traiter toutes DLL comme hard breaches.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview"
+        },
+        {
+          "factId": "top-one-futures-contracts-20261124-03",
+          "section": "Payout Requirements",
+          "riskFamily": "Conditional payouts",
+          "effect": "Les demandes de retrait ont des exigences propres à l'offre ; l'aide n'établit pas en elle-même les pouvoirs de confiscation des rewards déjà dus.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://help.toponefutures.com/en/articles/10907392-what-are-the-requirements-to-request-a-payout"
+        }
+      ],
+      "missingAgreementOrVerification": "Trouver Terms & Conditions et contrat simulé funded 2026, sanctions payout revues, différentes versions Elite/Elite Daily/Ignite et recours.",
+      "noScore": true
+    },
+    {
+      "slug": "onefunded",
+      "name": "OneFunded",
+      "checkedOn": "2026-11-24",
+      "auditStatus": "official_help_only_contract_gap",
+      "primarySource": "https://help.onefunded.com/funded-vs-evaluation-what-changes/",
+      "findings": [
+        {
+          "factId": "onefunded-contracts-20261124-01",
+          "section": "Funded vs evaluation",
+          "riskFamily": "Consistency review at withdrawal",
+          "effect": "La règle de cohérence se vérifie au payout en funded, et non au même moment qu'à l'évaluation; distinction importante pour le refus de demande temporaire.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://help.onefunded.com/funded-vs-evaluation-what-changes/"
+        },
+        {
+          "factId": "onefunded-contracts-20261124-02",
+          "section": "Your First Payout",
+          "riskFamily": "Objective payout timing",
+          "effect": "Première demande après 14 jours depuis première position, ou 7 jours avec option Weekly; la règle objective seule ne constitue pas une clause arbitraire.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://help.onefunded.com/your-first-payout/"
+        },
+        {
+          "factId": "onefunded-contracts-20261124-03",
+          "section": "Payout processing",
+          "riskFamily": "Contact and resolution",
+          "effect": "La FAQ annonce suivi par support après deux jours ouvrés pour demandes non traitées, mais pas un droit contractuel au remboursement et sans contrat signé accessible.",
+          "evidenceStatus": "official_help",
+          "sourceUrl": "https://help.onefunded.com/payout-processing-time/"
+        }
+      ],
+      "missingAgreementOrVerification": "Obtenir version courante CGU client et accord funded, sanctions subjectives et recours; démêler prix/commission/refund à trois payouts.",
+      "noScore": true
+    }
+  ]
+}
