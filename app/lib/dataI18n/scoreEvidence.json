@@ -543,6 +543,12 @@
           "Avaliação e conta Reward",
           "Termos §7.2: a empresa define «qualquer outro abuso deliberado» caso a caso.",
           "O trader pode perder a elegibilidade para recompensas após uma classificação subjetiva da estratégia."
+        ],
+        "zh": [
+          "Leveraged · 所有计划",
+          "考核与 Reward 账户",
+          "条款 §7.2：公司逐案界定“任何其他故意滥用行为”。",
+          "交易者可能因策略受到主观认定而失去获得奖励的资格。"
         ]
       }
     },
@@ -589,6 +595,12 @@
           "Avaliação e Qualified",
           "Termos §8.1.7: a Alpha pode classificar uma estratégia como não autorizada a seu critério.",
           "Uma conta pode ser encerrada com base numa interpretação do estilo de trading não definida previamente."
+        ],
+        "zh": [
+          "Alpha Futures · 所有账户",
+          "考核与 Qualified",
+          "条款 §8.1.7：Alpha 可自行认定某种策略未经授权。",
+          "账户可能因事先没有明确界定的交易风格认定而被关闭。"
         ]
       }
     },
@@ -635,6 +647,12 @@
           "Avaliação e Qualified",
           "Anexo 5: os lucros de operações inferiores a dois minutos tornam-se problemáticos se representarem uma parcela «elevada» não quantificada.",
           "Parte dos lucros pode ser considerada inelegível ou a conta sancionada sem limite de concentração publicado."
+        ],
+        "zh": [
+          "Alpha Futures · 所有账户",
+          "考核与 Qualified",
+          "附表 5：持续时间不足两分钟的交易利润若占未量化的“较大”比例，则可能构成问题。",
+          "部分利润可能被认定不符合资格，或账户在没有公布集中度阈值的情况下受到处罚。"
         ]
       }
     },
@@ -681,6 +699,12 @@
           "Conta financiada simulada e pedido de recompensa",
           "Termos §§11.1–11.2: uma posição que arrisque «todo ou quase todo» o drawdown pode ser classificada como comportamento de jogo de azar, ao critério final da MilTraders.",
           "Sem percentagem limite publicada, a empresa pode encerrar várias contas e recusar uma recompensa já solicitada (Termos §12.5)."
+        ],
+        "zh": [
+          "MilTraders · Zero、Pro 和 Instant Funded",
+          "模拟资助账户与奖励申请",
+          "条款 §§11.1–11.2：使回撤额度“全部或几乎全部”面临风险的仓位，可由 MilTraders 最终认定为赌博行为。",
+          "公司可在未公布百分比阈值的情况下关闭多个账户，拒绝已申请的奖励（条款 §12.5）。"
         ]
       }
     },
@@ -727,6 +751,12 @@
           "Avaliação e conta financiada simulada",
           "Termos, usos proibidos: a empresa proíbe qualquer trading que, ao seu exclusivo critério, considere fora das práticas de risco aceitáveis.",
           "Os lucros podem ser retirados e a conta encerrada por práticas não delimitadas por um limite conhecido na compra."
+        ],
+        "zh": [
+          "Top One Trader · FLASH、NOVA、PRO 和 Instant",
+          "考核与模拟资助账户",
+          "条款（禁止使用）：禁止公司自行认定超出可接受风险管理实践的任何交易。",
+          "可能因购买时没有明确阈值的交易方式而扣除利润并关闭账户。"
         ]
       }
     },
@@ -773,6 +803,12 @@
           "Transição do challenge para a conta financiada",
           "Termos, usos proibidos: mudar de estratégia entre challenge e conta financiada é proibido conforme determinado pela empresa a seu critério.",
           "A aprovação ou o encerramento da conta pode depender de uma avaliação subjetiva da dimensão da mudança de método."
+        ],
+        "zh": [
+          "Top One Trader · FLASH/NOVA/PRO 挑战至资助阶段",
+          "从挑战转入资助账户",
+          "条款（禁止使用）：禁止在挑战与资助阶段之间改变策略，由公司自行认定。",
+          "账户获批或关闭可能取决于对策略变更程度的主观评估。"
         ]
       }
     },
@@ -819,6 +855,12 @@
           "Challenge e conta financiada",
           "Termos §6.8: a empresa pode designar qualquer outra atividade de trading como proibida, além dos casos enumerados.",
           "O trader pode sofrer o encerramento por uma estratégia não descrita exaustivamente na compra."
+        ],
+        "zh": [
+          "OneFunded · Flash、Core、Value 和 Instant",
+          "挑战与资助账户",
+          "条款 §6.8：除列举情形外，公司还可指定任何其他交易活动为禁止行为。",
+          "购买时未被详尽说明的策略可能导致账户关闭。"
         ]
       }
     },
@@ -865,6 +907,12 @@
           "Conta financiada, incluindo revisão de levantamento",
           "Centro de ajuda, trading proibido: apostas unidirecionais e concentração «excessiva» de exposição sem limite proporcional; OneFunded mantém a decisão final.",
           "Um pedido de levantamento pode ser cancelado e a conta encerrada com base numa avaliação não quantificada da exposição direcional."
+        ],
+        "zh": [
+          "OneFunded · Flash、Core、Value 和 Instant",
+          "资助账户，包括出金审核",
+          "帮助中心（禁止交易）：禁止单向押注和过度集中敞口，但未规定比例阈值；OneFunded 保留最终判断权。",
+          "可能根据未量化的方向性敞口评估取消出金申请并关闭账户。"
         ]
       }
     },
@@ -911,6 +959,12 @@
           "Avaliação e conta BEM Trader",
           "Termos §14: a empresa reserva-se o direito de classificar práticas proibidas a seu critério.",
           "Uma estratégia não enumerada com precisão pode ser sancionada com encerramento sem limite vinculativo predefinido."
+        ],
+        "zh": [
+          "BEM Funding · One、One Only、Classic、Classic Swing",
+          "考核与 BEM Trader 账户",
+          "条款 §14：公司保留自行认定禁止交易方式的权利。",
+          "未明确列举的策略可能在没有预定可执行阈值的情况下被处以关闭账户的处罚。"
         ]
       }
     },
@@ -957,6 +1011,12 @@
           "Conta BEM Trader e revisão de recompensa",
           "Termos sobre práticas proibidas: comportamento que «se assemelha a jogos de azar» ou método que não pode ser «razoavelmente replicado», sem métrica exaustiva.",
           "Lucros ou elegibilidade para recompensas podem ser anulados após classificação subjetiva da estratégia."
+        ],
+        "zh": [
+          "BEM Funding · One、One Only、Classic、Classic Swing",
+          "BEM Trader 账户与奖励审核",
+          "禁止交易条款：禁止类似赌博的行为或无法合理复制的方法，没有穷尽性衡量标准。",
+          "策略可能被主观认定，导致利润或奖励资格被取消。"
         ]
       }
     },
@@ -1003,6 +1063,12 @@
           "Conta BEM Trader após avaliação",
           "Termos de uso Classic Normal §6.2: retiram-se os lucros de operações executadas nos quatro minutos anteriores ou posteriores a notícias importantes; as perdas correspondentes são integralmente mantidas.",
           "Uma operação lucrativa durante notícias pode ser retirada do cálculo, enquanto a operação perdedora equivalente continua a ser imputada à conta."
+        ],
+        "zh": [
+          "BEM Classic Normal",
+          "考核后的 BEM Trader 账户",
+          "Classic Normal 使用条款 §6.2：扣除重大新闻公布前后四分钟内执行交易的利润，但完整保留同类交易的亏损。",
+          "盈利的新闻交易可能被排除在计算之外，而对应的亏损仍计入账户。"
         ]
       }
     },
@@ -1049,6 +1115,12 @@
           "Challenge e conta financiada simulada",
           "Termos §5.5.3: posições «substancialmente maiores» e durações «irrazoáveis» face a uma média, sem limite numérico nem tolerância.",
           "A empresa pode classificar diferenças de tamanho ou duração como estratégia proibida e encerrar a conta após revisão subjetiva."
+        ],
+        "zh": [
+          "ThinkCapital · Lightning、Dual Step、Nexus、Bolt 和 Bolt Flex",
+          "挑战与模拟资助账户",
+          "条款 §5.5.3：相对于平均水平“显著更大”的仓位及“不合理”的持仓时间，没有数值阈值或容差。",
+          "公司可主观认定仓位大小或持仓时间差异属于禁止策略，并关闭账户。"
         ]
       }
     },
@@ -1095,6 +1167,12 @@
           "Challenge e conta financiada, revisão de estratégia",
           "FAQ sobre jogo de azar: se uma mudança de estratégia «parecer oportunista ou intencionalmente agressiva», a equipa de risco pode ignorar o aviso habitual e impor resolução imediata, «sem recurso».",
           "Um aumento de risco considerado oportunista pode causar encerramento sem recurso, mesmo sem ultrapassar por si só os limites de 2,5%/4%."
+        ],
+        "zh": [
+          "ThinkCapital · 所有计划",
+          "挑战、资助账户与策略审核",
+          "赌博 FAQ：若策略变化看似投机取巧或故意激进，风险团队可跳过通常的警告程序，立即终止账户且不得申诉。",
+          "即使并未单独突破 2.5%/4% 阈值，被认定为投机取巧的风险增加也可能导致账户被关闭且无申诉机会。"
         ]
       }
     },
@@ -1141,6 +1219,12 @@
           "Avaliação e conta financiada, robôs e EAs",
           "Termos §6.4: EAs podem ser autorizados por escrito via risk@thinkcapital.com, incluindo ferramentas compatíveis com TradingView; FAQ estratégias proibidas §11: EAs «não podem atualmente ser utilizados», apenas indicadores TradingView.",
           "O comprador não consegue determinar inequivocamente se o EA autorizado por escrito pode realmente ser utilizado sem infração ou impedimento técnico."
+        ],
+        "zh": [
+          "ThinkCapital · Lightning、Dual Step、Nexus、Bolt 和 Bolt Flex",
+          "考核、资助账户、机器人及 EA",
+          "条款 §6.4：经 risk@thinkcapital.com 书面许可，可使用 EA，包括兼容 TradingView 的工具；禁止策略 FAQ §11 却称目前无法部署 EA，只能使用 TradingView 指标。",
+          "购买者无法明确判断获书面许可的 EA 能否实际使用而不违规或遭遇技术限制。"
         ]
       }
     },
@@ -1187,6 +1271,12 @@
           "Challenge, fase de avaliação",
           "Página de regras, dias mínimos: um dia para 1-Step e 2-Step; FAQ pergunta 31: três dias de trading por fase em 1/2/3-Step.",
           "O comprador não sabe se uma avaliação concluída num dia será aceite ou se mais dois dias são obrigatórios."
+        ],
+        "zh": [
+          "Tiger Funded · 1-Step 和 2-Step",
+          "挑战、考核阶段",
+          "规则页最低交易天数：1-Step 和 2-Step 为一天；FAQ 第 31 问：1/2/3-Step 每阶段需交易三天。",
+          "购买者无法知道一天通过考核是否有效，还是必须再交易两天。"
         ]
       }
     },
@@ -1233,6 +1323,12 @@
           "Avaliação, limite de perda diária",
           "Página de regras, drawdown diário: reinício à meia-noite; FAQ perguntas 19 e 21: às 20:00 EST, com outro exemplo às 17:00 EST.",
           "Uma posição aberta perto da mudança de dia pode violar o limite segundo um horário diferente do indicado no outro documento oficial."
+        ],
+        "zh": [
+          "Tiger Funded · 1-Step、2-Step 和 3-Step",
+          "考核、每日亏损限额",
+          "规则页每日回撤：午夜重置；FAQ 第 19 和 21 问：20:00 EST 重置，另有 17:00 EST 的不同示例。",
+          "临近交易日切换时仍持有的仓位，可能因另一份官方文件规定的不同重置时间而触及限额。"
         ]
       }
     },
@@ -1279,6 +1375,12 @@
           "Challenge e conta financiada",
           "Termos §7: condutas proibidas incluem, sem limitação, práticas que não refletem condições reais de mercado ou prejudicam a utilização leal, sem teste exaustivo, com suspensão ou resolução.",
           "Um método não mencionado na FAQ detalhada pode ser posteriormente classificado como abuso da simulação e causar encerramento."
+        ],
+        "zh": [
+          "Tiger Funded · Step 和 Instant（一般条款）",
+          "挑战与资助账户",
+          "条款 §7：禁止行为包括但不限于不反映真实市场条件或损害公平使用的交易方式，没有穷尽性判定标准，可暂停或终止账户。",
+          "未列入 FAQ 详细清单的方法可能事后被认定为滥用模拟环境并导致关闭账户。"
         ]
       }
     },
@@ -1325,6 +1427,12 @@
           "Avaliação",
           "Ficha da oferta: mínimo de três dias; FAQ Fast Pass de 12/11: sem mínimo; Termos §3 de 11/08: mínimo genérico de sete dias.",
           "O comprador não consegue determinar claramente quantos dias de avaliação Fast Pass exigirá para aceder à conta financiada."
+        ],
+        "zh": [
+          "TradeDay · Fast Pass",
+          "考核",
+          "产品介绍：至少三天；12/11 Fast Pass FAQ：无最低要求；11/08 条款 §3：一般最低七天。",
+          "购买者无法明确判断 Fast Pass 考核需要多少交易日才能获得资助账户。"
         ]
       }
     },
@@ -1371,6 +1479,12 @@
           "Compra e número de challenges simultâneos",
           "Termos disposição 1, duas cláusulas de limites de avaliação: uma proíbe challenges idênticos simultâneos e a outra permite-os mediante a alocação total.",
           "O cliente não sabe com certeza se a compra de contas idênticas constitui infração ou fundamento para resolução."
+        ],
+        "zh": [
+          "Funded7 · 相同计划和规模的考核",
+          "购买与同时进行的挑战数量",
+          "条款第 1 项含两条考核限制：一条禁止同时进行相同挑战，另一条在符合总资金分配限额时允许。",
+          "客户无法确定购买相同账户是否构成违规或终止合同的理由。"
         ]
       }
     },
@@ -1417,6 +1531,12 @@
           "Trading e revisão de regras antes do levantamento",
           "Termos §4: jogo de azar ou trading imprudente, alavancagem excessiva ou posições grandes face às normas e trading prejudicial às relações com corretores, sem limite exaustivo.",
           "A mesma conduta pode ser classificada posteriormente como proibida, com encerramento e retirada de lucros, fora dos limites numéricos habituais."
+        ],
+        "zh": [
+          "Top One Futures · 所有模拟期货计划",
+          "交易与出金前规则审核",
+          "条款 §4：赌博式或鲁莽交易、相对常规而言过度杠杆或过大仓位、损害经纪商关系的交易，没有穷尽性阈值。",
+          "即使符合通常的数值限额，同样的行为也可能事后被认定为禁止交易，导致关闭账户并扣除利润。"
         ]
       }
     },
@@ -1463,6 +1583,12 @@
           "Ativação, duração e pedidos de levantamento",
           "Termos franceses de 18/05/2026: 149,90 €, sete dias lucrativos de pelo menos 0,50%. Termos ingleses de 10/11/2026: 199 €, cinco dias de pelo menos 0,30%; versão francesa continua ativa.",
           "Quem consulta outra versão linguística pode pagar uma taxa adicional diferente ou enfrentar outras condições de elegibilidade."
+        ],
+        "zh": [
+          "WeGetFunded · 2 Steps Challenge 与 WGF Funded 阶段",
+          "激活、期限与出金申请",
+          "2026/05/18 法文在线条款：149.90 欧元，七个盈利日且每日至少 0.50%；2026/11/10 英文在线条款：199 欧元，五天且至少 0.30%；法文版本仍有效。",
+          "查阅不同语言版本的购买者可能支付不同的附加费用或面临不同资格条件。"
         ]
       }
     },
@@ -1509,6 +1635,12 @@
           "Trading em challenges e contas WGF",
           "Termos §14: técnicas irrealistas, incoerentes ou irresponsáveis e comportamentos «incompatíveis com o espírito dos programas», sem critério quantificado ou lista exaustiva.",
           "Uma estratégia não expressamente proibida pode ser classificada como infração após avaliação qualitativa; o impacto contratual sobre recompensas é avaliado separadamente em B1."
+        ],
+        "zh": [
+          "WeGetFunded · Instant/1 Step/2 Steps（一般规则）",
+          "挑战与 WGF 账户交易",
+          "条款 §14：不现实、不一致、不负责任的交易技术及与计划精神不符的行为，没有量化标准或穷尽清单。",
+          "未被明确禁止的策略也可能在交易后通过定性评估被认定违规；奖励方面的合同影响另在 B1 评估。"
         ]
       }
     },
@@ -1555,6 +1687,12 @@
           "Revisão da conduta e elegibilidade antes do levantamento",
           "Visão geral do financiamento: a equipa de risco pode retirar a elegibilidade por conduta insustentável, risco inaceitável ou qualquer motivo que torne inadequada a continuação, sem limite comum publicado.",
           "A empresa pode recusar a continuação e o acesso aos levantamentos com base numa avaliação não inteiramente previsível, mesmo cumprindo drawdown e dias."
+        ],
+        "zh": [
+          "Purdia Capital · SFA / Temp SFA / Live Funded",
+          "出金前交易行为与资格审核",
+          "资助流程概述：风险团队可因不可持续的交易行为、不可接受的风险或任何使继续参与不适宜的原因取消资格，没有公布统一阈值。",
+          "即使符合回撤和交易日要求，公司仍可能依据无法完全预测的评估拒绝继续参与和出金。"
         ]
       }
     },
@@ -1601,6 +1739,12 @@
           "Trading e revisão de conformidade antes do levantamento",
           "Termos de uso §26: posições «substancialmente maiores», alavancagem «manifestamente excessiva», «preocupações razoáveis com prejuízo financeiro ou outro» e decisão discricionária sobre incumprimento.",
           "Mesmo cumprindo limites numéricos, o trader pode perder lucros simulados ou a conta por uma classificação qualitativa não delimitada."
+        ],
+        "zh": [
+          "DayTraders.com · EOD/Trail/Static 考核与 Pro/S2F 账户",
+          "交易与出金前合规审核",
+          "使用条款 §26：显著更大的仓位、严重过度杠杆、对财务或其他损害的合理担忧，以及自行判定不合规的权力。",
+          "符合数值限额的交易者仍可能因未明确界定的定性认定而损失模拟利润或被关闭账户。"
         ]
       }
     },
@@ -1647,6 +1791,12 @@
           "Trading simulado e revisão de estratégia antes do levantamento",
           "Regras de trading §3: fluxo de trading tóxico e apostas unidirecionais proibidos sem limite público preciso; distinto da revisão de levantamento dos Termos §6.",
           "Lucros de estratégia conforme ao drawdown podem ser retirados após classificação subjetiva como fluxo tóxico ou aposta unidirecional."
+        ],
+        "zh": [
+          "Equity Edge · Legacy、Swift、Flagship 和 Instant",
+          "模拟交易与出金前策略审核",
+          "交易规则 §3：禁止有毒交易流和单向押注，没有明确公开阈值；不同于条款 §6 的出金审核。",
+          "符合回撤限额的策略可能因被主观认定为有毒交易流或单向押注而遭扣除利润。"
         ]
       }
     },
@@ -1693,6 +1843,12 @@
           "Trading e revisão de condutas proibidas antes do financiamento e levantamento",
           "Termos §§7.1(h)-(i) e 7.2–7.3: risco insustentavelmente elevado, práticas não profissionais ou dano reputacional, tamanhos/frequências anormais; classificação ao exclusivo critério da empresa.",
           "Uma estratégia conforme aos drawdowns pode ser declarada não profissional; operações/lucros simulados retirados e contas encerradas."
+        ],
+        "zh": [
+          "Alpine Funded · Base Camp Instant、2-Step/Peak 与一般模拟交易规则",
+          "交易与资助、出金决定前的禁止行为审核",
+          "条款 §§7.1(h)-(i) 和 7.2–7.3：不可持续的高风险、不专业行为或声誉损害、异常交易规模或频率，由公司自行认定。",
+          "符合数值回撤限额的策略仍可能被认定为不专业，导致模拟交易或利润被删除、账户终止。"
         ]
       }
     },
@@ -1739,6 +1895,12 @@
           "Trading e revisão de estratégia antes do financiamento ou levantamento",
           "Termos §4.4: práticas que possam comprometer relações com corretores, uso inadequado de sistemas de terceiros e regulamentação do corretor, sem limite material exaustivo.",
           "O operador pode classificar retroativamente uma estratégia como proibida e cancelar o acesso apesar do cumprimento de objetivos e drawdowns."
+        ],
+        "zh": [
+          "FundedSquad · 1-Step、2-Step 考核与 Instant 模式（一般条款）",
+          "交易与资助或出金前策略审核",
+          "条款 §4.4：可能危及经纪商关系的行为、不当使用第三方系统及经纪商监管规定，没有穷尽性实质阈值。",
+          "即使符合目标和回撤限额，运营方也可能事后认定策略为禁止行为并取消访问权限。"
         ]
       }
     },
@@ -1785,6 +1947,12 @@
           "Fecho durante a notícia de uma operação aberta antes da janela",
           "Regras da conta Challenge, cenário Evaluation Funded: lucro de operação aberta antes da janela e fechada durante esta é retirado na revisão; perdas continuam imputadas ao trader.",
           "O mesmo tipo de execução não preserva o ganho, mas mantém a perda realizada, mesmo sem infração da conta."
+        ],
+        "zh": [
+          "FundedSquad · Evaluation Funded（新闻交易，非考核阶段）",
+          "在新闻公布期间平掉窗口期前开立的仓位",
+          "挑战账户交易规则（Evaluation Funded 情形）：在窗口前开仓并在窗口内平仓的交易利润会在审核时被扣除，亏损仍由交易者承担。",
+          "即使未发生账户违规，同类操作也不保留盈利，却仍计入已实现亏损。"
         ]
       }
     },
@@ -1831,6 +1999,12 @@
           "Simulação e revisão antes da admissão à conta trader ou pagamento",
           "Termos V3.01 §§9.3 e 10.1: definições discricionárias de jogo de azar, operações substancialmente maiores e exposição desproporcionada sem limite firme.",
           "Uma estratégia conforme ao drawdown pode ser reclassificada como jogo de azar e ter operações anuladas ou acesso encerrado."
+        ],
+        "zh": [
+          "Orion Funded · Nova、Zero、Standard、Swing 和 Select",
+          "模拟交易与获准进入交易者账户或付款前审核",
+          "条款 V3.01 §§9.3 和 10.1：自行定义赌博、显著更大交易及不成比例的敞口，没有明确阈值。",
+          "符合回撤限额的策略可能被重新认定为赌博，交易被取消或访问权限被终止。"
         ]
       }
     },
@@ -1877,6 +2051,12 @@
           "Trading em avaliação e financiado, revisão de conformidade",
           "Termos §7.26: «transações semelhantes a uma aposta significativa sem plano claro ou estratégia definida», sem limite objetivo universal publicado.",
           "Uma estratégia conforme às perdas máximas pode ser classificada como jogo de azar sem limite previsível, levando ao cancelamento da conta financiada."
+        ],
+        "zh": [
+          "Wall Street Funded · Power/Prime/Flash/Instant 挑战",
+          "考核与资助交易、合规审核",
+          "条款 §7.26：类似重大押注且没有明确计划或策略的交易，未公布统一客观阈值。",
+          "即使遵守最大亏损限额，策略仍可能在没有可预测阈值的情况下被认定为赌博，导致资助账户取消。"
         ]
       }
     },
@@ -1923,6 +2103,12 @@
           "Trading, classificação de conduta proibida no levantamento",
           "Termos de setembro de 2026 §5.2: conduta proibida inclui estratégia abusiva ou irrealista segundo o operador, sem limite geral; consequências em §6.9.",
           "Uma abordagem não expressamente proibida por números pode ser declarada abusiva posteriormente e provocar recálculo do levantamento."
+        ],
+        "zh": [
+          "Moneta Funded · 1-Step/2-Step/Instant/Sprint",
+          "交易与出金时的禁止行为认定",
+          "2026 年 9 月条款 §5.2：禁止行为包括运营方认定的滥用或不现实策略，没有一般阈值；后果见 §6.9。",
+          "未被数值规则明确禁止的方法可能事后被认定为滥用，导致重新计算出金。"
         ]
       }
     },
@@ -1969,6 +2155,12 @@
           "Revisão de estratégia na aprovação de fase e financiamento",
           "Termos de uso, proibição de práticas de jogo: risco desproporcionado, trading semelhante a jogos de azar, aposta total e alavancagem excessiva, sem limite único por programa na cláusula.",
           "A empresa pode excluir uma estratégia por jogo excessivo e encerrar a conta apesar de cumprir o objetivo numérico."
+        ],
+        "zh": [
+          "TRADEXPROP · 外汇/加密货币考核与 Instant Funded X",
+          "阶段批准与资助时的策略审核",
+          "使用条款（禁止赌博行为）：不成比例风险、类似赌博的交易、全押及过度杠杆，该条款未规定各计划统一风险限额。",
+          "公司可能以过度赌博为由排除策略并关闭账户，即使达成数值目标。"
         ]
       }
     },
@@ -2015,6 +2207,12 @@
           "Trading e revisão de estratégia antes do levantamento",
           "Termos §5.4.3: classificação de riscos «substancialmente maiores» e transações contrárias ao comportamento habitual do mercado, sem escala objetiva uniforme por produto.",
           "A empresa pode reclassificar estratégia conforme às perdas máximas e retirar lucros ou acesso sem critério quantificado."
+        ],
+        "zh": [
+          "Monevis · CFD 考核与模拟资助账户",
+          "交易与出金前策略审核",
+          "条款 §5.4.3：认定显著更大的风险及不符合通常市场行为的交易，未按产品制定统一客观标准。",
+          "公司可在没有量化标准的情况下重新认定符合最大亏损限额的策略并扣除利润或取消访问权限。"
         ]
       }
     },
@@ -2061,6 +2259,12 @@
           "Trading e revisão de infrações antes do levantamento",
           "Termos §9.2: proibição de atividades não comerciais e posições/exposição excessivas sem limites completos, com avaliação unilateral da conformidade.",
           "Uma estratégia arriscada mas conforme aos limites numéricos pode ser reclassificada após trading e perder lucros."
+        ],
+        "zh": [
+          "FundedHive · 挑战与模拟账户",
+          "交易与出金前违规审核",
+          "条款 §9.2：禁止非商业活动和过大仓位或敞口，没有完整限额，由公司单方面评估合规性。",
+          "高风险但符合数值上限的策略可能在交易后被重新认定并扣除利润。"
         ]
       }
     },
@@ -2107,6 +2311,12 @@
           "Trading e revisão de operações no pedido de recompensa",
           "Condições de trading: proíbem jogo de azar, execução insustentável e ausência de gestão sustentável do risco, sem métrica comum exaustiva para todos os planos.",
           "Um método conforme aos limites numéricos pode ser excluído por avaliação qualitativa."
+        ],
+        "zh": [
+          "SabioTrade · CFD 考核与资助计划",
+          "交易与申请奖励时的交易审核",
+          "交易条件：禁止赌博、不可持续的交易执行及缺乏可持续风险管理，所有计划没有穷尽性统一衡量标准。",
+          "符合数值限额的方法可能因定性评估而被排除。"
         ]
       }
     },
@@ -2153,6 +2363,12 @@
           "Trading, revisão do programa e decisão da conta",
           "Termos de 03/11/2026 §§7–8: exploração abusiva e contorno do «espírito» do programa, com critério do operador insuficientemente delimitado por critérios públicos.",
           "Uma estratégia que cumpra objetivos numéricos pode ser considerada exploração, levando a exclusão ou retirada de operações."
+        ],
+        "zh": [
+          "Clarity Traders · 模拟挑战与资助账户",
+          "交易、计划审核与账户决定",
+          "2026/11/03 条款 §§7–8：禁止利用漏洞及规避计划精神，运营方裁量权未受公开标准充分限制。",
+          "达到数值目标的策略可能被认定为利用漏洞，导致被排除或删除交易。"
         ]
       }
     },
@@ -2199,6 +2415,12 @@
           "Trading e revisão de conta antes de financiamento ou recompensa",
           "Termos §3: apostas unidirecionais, preocupações justificadas de dano ao corretor e práticas perturbadoras a critério unilateral.",
           "Trading conforme ao drawdown e dias pode ser declarado irregular sem limite predefinido, com encerramento e perda de acesso."
+        ],
+        "zh": [
+          "TEFX · 1-Step、2-Step、Instant",
+          "交易与资助或奖励前账户审核",
+          "条款 §3：单向押注、有正当理由担心损害经纪商及扰乱性行为，由公司单方裁定。",
+          "符合回撤及交易日要求的交易仍可能在没有预定阈值的情况下被认定不合规，导致关闭账户并失去访问权限。"
         ]
       }
     },
@@ -2245,6 +2467,12 @@
           "Trading, revisão de estratégia e transição para financiado",
           "Condições do painel Analytix: estratégia idêntica entre avaliação e financiado ao critério exclusivo da empresa; jogo excessivo sem percentagem universal.",
           "Mudar de estratégia ou arriscar uma parcela considerada substancial pode causar infração posterior sem limite comum claro."
+        ],
+        "zh": [
+          "Lvlup Futures · Prop Account LLC 考核 / Prop Account LC 交易者协议",
+          "交易、策略审核与转入资助账户",
+          "Analytix 控制面板条件：考核与资助阶段策略须相同，由公司自行判断；过度赌博无统一百分比。",
+          "改变策略或承担被认定为重大比例的风险，可能事后触发违规，没有明确统一阈值。"
         ]
       }
     },
@@ -2291,6 +2519,12 @@
           "Trading financiado e revisão antes do levantamento",
           "Regras públicas §9: apostas unidirecionais, preço médio agressivo e mudanças significativas de estilo proibidos sem limite transversal detalhado nesta página.",
           "Uma operação conforme ao drawdown pode ser classificada como jogo de azar, com retirada de lucro ou infração."
+        ],
+        "zh": [
+          "Atmos · Nova、2-Step、Instant",
+          "资助交易与出金前审核",
+          "公开规则 §9：禁止单向押注、激进摊平成本和重大风格改变，该页面无详细跨计划阈值。",
+          "符合回撤限额的交易可能被认定为赌博，导致利润被扣除或违规。"
         ]
       }
     },
@@ -2337,6 +2571,12 @@
           "Avaliação e revisão da continuidade da estratégia no financiado",
           "§6.4: mudança de estratégia profissional para estratégia de jogo sem limite numérico de risco transversal aos programas.",
           "O trader pode ser desqualificado por avaliação de profissionalismo apesar de cumprir objetivos e drawdowns."
+        ],
+        "zh": [
+          "FundedElite · 考核 / Elite 模拟账户",
+          "考核与资助阶段策略连续性审核",
+          "§6.4：禁止从专业策略转为赌博策略，没有跨计划数值风险阈值。",
+          "即使达成目标并符合回撤限额，交易者仍可能因专业性评估而被取消资格。"
         ]
       }
     },
@@ -2383,6 +2623,12 @@
           "Trading e revisão de estratégia antes da recompensa",
           "Termos §§5.5 e 5.6: outros tipos de trading proibidos ou parâmetros definidos unilateralmente a critério da empresa.",
           "Uma estratégia pode ser proibida posteriormente e operações retiradas do PnL apesar de cumprir os limites numéricos."
+        ],
+        "zh": [
+          "Upcomers · CFD、期货与其他模拟计划",
+          "交易与奖励前策略审核",
+          "条款 §§5.5 和 5.6：其他禁止交易类型或参数由公司单方自行定义。",
+          "即使遵守数值限额，策略也可能事后被禁止，交易从损益中删除。"
         ]
       }
     },
@@ -2429,6 +2675,12 @@
           "Trading e revisão de estratégia na transição para financiado",
           "Termos §5.C: risco de comprometer relação com corretor e classificação discricionária de alterações de estratégia sem métrica pública comum.",
           "Uma estratégia conforme ao drawdown pode levar à exclusão segundo critérios qualitativos não delimitados."
+        ],
+        "zh": [
+          "Funded Trader Markets · 模拟挑战/资助账户",
+          "交易与转入资助阶段时的策略审核",
+          "条款 §5.C：危及经纪商关系的风险及策略变更由公司自行认定，没有公开统一衡量标准。",
+          "符合回撤限额的策略可能因无明确边界的定性标准被排除。"
         ]
       }
     },
@@ -2475,6 +2727,12 @@
           "Revisão de estratégia simulada e financiada antes do levantamento ou encerramento",
           "Contrato Trader §§4 e 16.12: empresa avalia ao seu exclusivo critério jogo, apostas tudo ou nada e risco de dano à relação com o corretor, sem quadro comum de limites objetivos.",
           "Lucros podem ser confiscados no encerramento se o estilo for reclassificado subjetivamente mesmo cumprindo limites numéricos; perda de recompensas avaliada uma só vez em B1."
+        ],
+        "zh": [
+          "Funded Futures Network / FFN Cap LLC — 适用协议下的 Sim-Funded Pro、STEADY 与 Live 账户",
+          "模拟与资助策略审核（出金批准或账户关闭前）",
+          "交易者协议 §§4 和 16.12：公司自行评估赌博、全有或全无押注及损害经纪商关系风险，各计划无统一客观阈值体系。",
+          "即使遵守数值限额，若交易风格被主观重新认定，账户关闭时利润可能被没收；奖励损失仅在 B1 评估一次。"
         ]
       }
     },
@@ -2521,6 +2779,12 @@
           "Revisão de estratégia no challenge e financiado antes do pedido de recompensa",
           "Termos §6: qualquer trading contrário à forma como deve ser realizado nos mercados financeiros ou que prejudique DFT GROUP, sem métrica de risco definida.",
           "Uma estratégia que cumpra objetivos numéricos pode ser reclassificada como prejudicial e causar encerramento sem critério universal previsível."
+        ],
+        "zh": [
+          "DirectFundedTrader · 两阶段考核与 Fast Funding，模拟合同",
+          "挑战和资助阶段申请奖励前策略审核",
+          "条款 §6：禁止不符合金融市场应有交易方式或损害 DFT GROUP 的任何交易，没有明确风险衡量标准。",
+          "符合数值目标的策略可能被重新认定为有害行为，导致关闭账户，没有可预测的通用标准。"
         ]
       }
     },
@@ -2567,6 +2831,12 @@
           "Trading no challenge ou revisão financiada antes do levantamento",
           "Termos §5.4: restrições qualitativas e possível retirada de operações sem escala completa por programa.",
           "Uma estratégia conforme aos objetivos pode ser reclassificada e os resultados anulados."
+        ],
+        "zh": [
+          "Fidelcrest · Pro/Micro 考核",
+          "挑战交易或出金前资助阶段审核",
+          "一般条款 §5.4：定性交易限制及可能删除交易，缺乏完整的分计划标准。",
+          "符合目标的策略可能被重新认定，其结果被取消。"
         ]
       }
     },
@@ -2613,6 +2883,12 @@
           "Trading no challenge ou revisão financiada antes do levantamento",
           "Regras Speedy: sem prazo fixo; Termos §10.6: challenge expira após 30 dias de calendário.",
           "Contradição entre oferta e contrato sobre prazo de expiração que pode causar reprovação na avaliação."
+        ],
+        "zh": [
+          "Ultimate Traders · Speedy 1-phase",
+          "挑战交易或出金前资助阶段审核",
+          "Speedy 交易规则：无固定期限；条款 §10.6：挑战在 30 个自然日后到期。",
+          "产品页和合同到期期限矛盾，可能导致考核失败。"
         ]
       }
     },
@@ -2659,6 +2935,12 @@
           "Trading no challenge ou revisão financiada antes do levantamento",
           "Termos Bullwaves: avaliação de risco excessivo e alterações de volumes/estratégia não totalmente quantificada por produto.",
           "Um estilo dentro dos limites de drawdown pode ser reclassificado na revisão do levantamento."
+        ],
+        "zh": [
+          "Bullwaves Prime · 1-Step/2-Step/Instant",
+          "挑战交易或出金前资助阶段审核",
+          "Bullwaves 条款：过度风险及交易量或策略变化的评估没有按产品充分量化。",
+          "符合回撤限额的风格可能在出金审核时被重新认定。"
         ]
       }
     },
@@ -2705,6 +2987,12 @@
           "Avaliação/financiado e verificação de estratégia antes da recompensa",
           "Termos §15(k): conduta orientada para jogo de azar, má-fé e estratégias consideradas não profissionais sem limite numérico completo.",
           "Uma estratégia dentro dos limites numéricos pode ser desqualificada pelo estilo, separadamente do direito a recompensas avaliado em B1."
+        ],
+        "zh": [
+          "DNA Funded · 模拟考核与资助账户",
+          "考核/资助及奖励前策略核查",
+          "条款 §15(k)：赌博导向、恶意行为及公司认定的不专业策略，没有完整数值阈值。",
+          "符合数值限额的策略可能因风格认定被取消资格；奖励权利另在 B1 评估。"
         ]
       }
     },
@@ -2751,6 +3039,12 @@
           "Avaliação/financiado e verificação de estratégia antes da recompensa",
           "Termos §4.4 proíbe trading considerado prejudicial às relações com corretores sem definição numérica; prevê sanções de resolução.",
           "A empresa pode sancionar técnica conforme aos limites de perdas durante revisão sem classificação previsível."
+        ],
+        "zh": [
+          "Foxx · 模拟 1-Step / Instant",
+          "考核/资助及奖励前策略核查",
+          "条款 §4.4 禁止被认定损害经纪商关系的任何交易活动，无数值定义，并规定终止处罚。",
+          "公司可能在审核时处罚符合数值亏损限额的方法，而认定结果不可预测。"
         ]
       }
     },
@@ -2797,6 +3091,12 @@
           "Avaliação/financiado e verificação de estratégia antes da recompensa",
           "Guia oficial SFX (17/08/2026): recuperação na direção oposta possível após dez minutos, apostas unidirecionais e estratégias consideradas irracionais; sanções de levantamento a critério da equipa de risco.",
           "A equipa de risco pode rejeitar um trader no levantamento por uma classificação aberta da estratégia."
+        ],
+        "zh": [
+          "SFX Funded · Ascend / Rapid / Instant",
+          "考核/资助及奖励前策略核查",
+          "SFX 官方帮助指南（2026/08/17）：十分钟窗口后允许反向恢复交易，禁止单向押注及被认定不理性的策略；出金处罚由风险团队裁定。",
+          "风险团队可在出金时依据开放式策略认定拒绝交易者。"
         ]
       }
     },
@@ -2843,6 +3143,12 @@
           "Avaliação/financiado e verificação de estratégia antes da recompensa",
           "Termos §15 também proíbe conduta aparentemente semelhante a jogo de azar ou estratégia de má-fé, com avaliação não quantificada.",
           "Ganhos do challenge podem ser invalidados por motivo qualitativo apesar de limites explícitos de perdas."
+        ],
+        "zh": [
+          "SuperFunded · 模拟考核与资助奖励",
+          "考核/资助及奖励前策略核查",
+          "一般条款 §15 还禁止表面上类似赌博的行为或恶意策略，评估未量化。",
+          "即使亏损限额明确，挑战收益仍可能因定性原因被取消。"
         ]
       }
     },
@@ -2889,6 +3195,12 @@
           "Avaliação/financiado e verificação de estratégia antes da recompensa",
           "Termos §7.3: proibição não quantificada de mudança «significativa» de comportamento ou estratégia ao exclusivo critério da First Frontier.",
           "Uma estratégia compatível com drawdown e dias mínimos pode ser considerada diferente e a recompensa recusada."
+        ],
+        "zh": [
+          "Funding Frontier · Classic 与 PRO 资助",
+          "考核/资助及奖励前策略核查",
+          "条款 §7.3：禁止重大行为或策略改变，未量化，由 First Frontier 自行裁定。",
+          "符合回撤和最低天数要求的策略可能被认定不同，奖励被拒绝。"
         ]
       }
     },
@@ -2935,6 +3247,12 @@
           "Revisão de estilo em challenge ou antes da recompensa",
           "Termos: trading tóxico e comportamento semelhante a jogos de azar classificados pela equipa de risco sem limite completo comum aos pacotes; possíveis novas condições antes de pagamento.",
           "Possível reclassificação de operações dentro dos limites numéricos, com recusa de recompensa ou encerramento."
+        ],
+        "zh": [
+          "WeMasterTrade — 模拟考核/资助计划",
+          "挑战期间或奖励前风格审核",
+          "条款由风险团队认定有毒交易和类似赌博的行为，各套餐无完整统一阈值，付款前可能增设条件。",
+          "符合数值限额的交易可能被重新认定，导致奖励被拒或账户关闭。"
         ]
       }
     },
@@ -2981,6 +3299,12 @@
           "Revisão de estilo em challenge ou antes da recompensa",
           "FAQ: práticas abusivas, manipuladoras ou antiéticas além de restrições numéricas sobre notícias, sem classificação exaustiva com limites de risco.",
           "Possível reclassificação de operações dentro dos limites numéricos, com recusa de recompensa ou encerramento."
+        ],
+        "zh": [
+          "FOREXIVE — 模拟考核/资助计划",
+          "挑战期间或奖励前风格审核",
+          "FAQ 除数值化新闻交易限制外，还涉及滥用、操纵或不道德行为，无包含风险阈值的穷尽性分类。",
+          "符合数值限额的交易可能被重新认定，导致奖励被拒或账户关闭。"
         ]
       }
     },
@@ -3027,6 +3351,12 @@
           "Revisão de estilo em challenge ou antes da recompensa",
           "Termos permitem considerar trading desleal, abusivo ou prejudicial sem definir todos os limites, com possível perda de recompensas após Outcome A.",
           "Possível reclassificação de operações dentro dos limites numéricos, com recusa de recompensa ou encerramento."
+        ],
+        "zh": [
+          "Hash Hedge — 模拟考核/资助计划",
+          "挑战期间或奖励前风格审核",
+          "条款允许在未定义全部阈值的情况下认定交易不公平、滥用或有害，Outcome A 后可能损失奖励。",
+          "符合数值限额的交易可能被重新认定，导致奖励被拒或账户关闭。"
         ]
       }
     },
@@ -3073,6 +3403,12 @@
           "Revisão de estilo em challenge ou antes da recompensa",
           "Classificação de conduta abusiva ou risco semelhante a jogo permanece parcialmente subjetiva nas regras gerais, sem limite universal por produto.",
           "Possível reclassificação de operações dentro dos limites numéricos, com recusa de recompensa ou encerramento."
+        ],
+        "zh": [
+          "Sure Leverage Funding — 模拟考核/资助计划",
+          "挑战期间或奖励前风格审核",
+          "一般规则对滥用行为或类似赌博的风险认定仍部分主观，每种产品无通用阈值。",
+          "符合数值限额的交易可能被重新认定，导致奖励被拒或账户关闭。"
         ]
       }
     },
@@ -3119,6 +3455,12 @@
           "Revisão de estilo em challenge ou antes da recompensa",
           "Regra de jogo permite à equipa de risco definir alavancagem excessiva imprudente e margem livre insuficiente sem limite único completo: uma ambiguidade estratégica, −3.",
           "Possível reclassificação de operações dentro dos limites numéricos, com recusa de recompensa ou encerramento."
+        ],
+        "zh": [
+          "Titan Capital Markets — 模拟考核/资助计划",
+          "挑战期间或奖励前风格审核",
+          "赌博规则允许风险团队定义鲁莽的过度杠杆与可用保证金不足，无完整统一阈值：一项策略歧义，−3。",
+          "符合数值限额的交易可能被重新认定，导致奖励被拒或账户关闭。"
         ]
       }
     },
@@ -3165,6 +3507,12 @@
           "Revisão de trading antes de aprovar financiamento ou levantamento",
           "Visão geral §24.5(6) proíbe técnicas consideradas contrárias ao trading de boa-fé; §25 proíbe tamanhos «notavelmente» maiores/menores sem limite, com sanções até exclusão de resultados.",
           "Classificação subjetiva de estratégia pode causar perda da conta ou lucros sem ultrapassar limites numéricos."
+        ],
+        "zh": [
+          "Prop Number One · 挑战与资助模拟",
+          "资助或出金批准前交易审核",
+          "概述 §24.5(6) 禁止公司认定违反诚信交易的技术；§25 禁止明显增大或减小交易规模，无阈值，处罚可至排除交易结果。",
+          "即使未突破数值上限，主观策略认定也可能导致账户或利润损失。"
         ]
       }
     },
@@ -3211,6 +3559,12 @@
           "Revisão de trading antes de aprovar financiamento ou levantamento",
           "Guias de financiamento proíbem estratégias incoerentes ou semelhantes a jogo e gestão inadequada de risco sem métrica transversal; sanções até anulação integral de lucros. B2 −3 por estilo vago, não por limites numéricos automaticamente.",
           "Classificação subjetiva de estratégia pode causar perda da conta ou lucros sem ultrapassar limites numéricos."
+        ],
+        "zh": [
+          "TradingCult · 挑战与资助模拟",
+          "资助或出金批准前交易审核",
+          "资助指南禁止不一致或类似赌博的策略及不充分的风险管理，无跨计划衡量标准；处罚可至全部利润取消。B2 因风格模糊扣 3 分，而非自动处罚数值上限。",
+          "即使未突破数值上限，主观策略认定也可能导致账户或利润损失。"
         ]
       }
     },
@@ -3257,6 +3611,12 @@
           "Revisão de trading antes de aprovar financiamento ou levantamento",
           "Termos reservam à equipa de risco o direito de adicionar regras e desqualificar atividades consideradas irregulares sem definição completa por programa; uma questão de estilo vago, −3, sem atribuir retroatividade efetivamente ocorrida.",
           "Classificação subjetiva de estratégia pode causar perda da conta ou lucros sem ultrapassar limites numéricos."
+        ],
+        "zh": [
+          "XFunded · 挑战与资助模拟",
+          "资助或出金批准前交易审核",
+          "条款保留风险团队增设规则和取消任何被认为不合规活动资格的权利，无完整分计划定义；一项风格模糊问题扣 3 分，未认定实际发生追溯适用。",
+          "即使未突破数值上限，主观策略认定也可能导致账户或利润损失。"
         ]
       }
     },
@@ -3303,6 +3663,12 @@
           "Qualificação e manutenção de conta",
           "Termos §§4.4–4.6: classificação de estratégias, arbitragem entre contas e perfil de risco ao exclusivo critério da empresa.",
           "Atividade dentro dos limites numéricos pode ser considerada proibida, com exclusão e recusa de acesso financiado."
+        ],
+        "zh": [
+          "GOAT Funded Trader · 考核与资助准入",
+          "账户资格与维持",
+          "条款 §§4.4–4.6：策略、跨账户套利和风险特征由公司自行认定。",
+          "符合数值限额的活动可能被认定为禁止行为，导致退出计划并被拒绝资助准入。"
         ]
       }
     },
@@ -3349,6 +3715,12 @@
           "Transição para financiado, escalonamento e levantamento simulado/real",
           "Política de revisão de risco §2.2: decisão global baseada em sinais de alerta, reconhecendo ausência de limite objetivo específico para cada variável.",
           "Conta pode ser aprovada ou levantamento atrasado/recusado após avaliação manual não inteiramente previsível; gatilhos numéricos de revisão não são penalizados por si próprios."
+        ],
+        "zh": [
+          "FT+ · 适用风险审核政策的账户",
+          "转入资助、资金扩展及模拟/真实出金",
+          "风险审核政策 §2.2：根据风险信号作整体决定，承认各变量缺少具体客观阈值。",
+          "账户可能获批，出金也可能因无法完全预测的人工评估延迟或被拒；数值审核触发条件本身不受处罚。"
         ]
       }
     },
@@ -3395,6 +3767,12 @@
           "Avaliação simulada",
           "§9.5 permite à CTI classificar práticas como proibidas a seu critério; sanções reunidas em §9.6.",
           "Possível sanção da conta ou resultado de operação, ou alteração de alavancagem e risco máximo conforme §9.6(e), sem limite exaustivo. Um facto e uma dedução."
+        ],
+        "zh": [
+          "CTI · 2026/11/20 所链接条款下科摩罗公司的考核",
+          "模拟考核",
+          "§9.5 允许 CTI 自行认定某些行为为禁止行为；对应处罚汇总于 §9.6。",
+          "账户或交易结果可能受处罚，或按 §9.6(e) 修改杠杆及最大风险，无穷尽性阈值。一项事实、一次扣分。"
         ]
       }
     },
@@ -3441,6 +3819,12 @@
           "Performance Account / manutenção do acesso financiado",
           "Termos §8: trading imprudente e comportamento de jogo proibidos sem definição numérica nem procedimento vinculativo de classificação.",
           "Encerramento de conta e desativação do utilizador por classificação subjetiva da conduta."
+        ],
+        "zh": [
+          "Leeloo Trading · Performance 账户",
+          "Performance Account / 维持资助准入",
+          "条款 §8：禁止鲁莽交易和赌博行为，无数值定义或可执行认定程序。",
+          "基于主观行为认定关闭账户并停用用户。"
         ]
       }
     },
@@ -3487,6 +3871,12 @@
           "Avaliação, Live Virtual e Live Funded",
           "Guia §§4 e 9: avaliação de risco excessivo pela concentração de lucros, tamanho de posições e histórico, sem limite decisivo exaustivo.",
           "Uma prática compatível com limites numéricos pode levar ao encerramento após revisão; eventual anulação de recompensas atribuída apenas a B1."
+        ],
+        "zh": [
+          "UProfit · 适用交易最佳实践指南的计划",
+          "考核、Live Virtual 和 Live Funded",
+          "指南 §§4 和 9：根据利润集中度、仓位规模和历史评估过度风险，无穷尽性决定阈值。",
+          "符合数值限额的行为也可能在审核后导致关闭；可能的奖励取消仅计入 B1。"
         ]
       }
     },
@@ -3533,6 +3923,12 @@
           "Conta financiada / trading sob Payward Oceanic Ltd",
           "Contrato POL §3(b)(v)–(viii): estratégias que POL considera suscetíveis de interferir com fornecedor de liquidez ou criar risco regulamentar, sem critérios exaustivos.",
           "Estratégia conforme aos limites numéricos pode ser classificada como trading proibido e causar suspensão/resolução. Consequências sobre recompensas avaliadas em B1, sem nova dedução."
+        ],
+        "zh": [
+          "Breakout Prop · Classic/Pro/Turbo 资助交易者协议",
+          "资助账户 / Payward Oceanic Ltd 下的交易",
+          "POL 协议 §3(b)(v)–(viii)：禁止 POL 认定可能干扰流动性供应商或造成监管风险的策略，无穷尽性标准。",
+          "符合数值限额的策略可能被认定为禁止交易并被暂停或终止；奖励后果在 B1 评估，此处不重复扣分。"
         ]
       }
     },
@@ -3579,6 +3975,12 @@
           "Avaliação simulada, não automaticamente contas RCF",
           "Termos §7 e regras do programa: comportamento de risco considerado excessivo ou semelhante a jogo, além de exemplos quantificados de risco.",
           "Avaliação pode falhar ou conta encerrar por interpretação qualitativa não inteiramente delimitada; contrato RCF deve ser analisado separadamente."
+        ],
+        "zh": [
+          "RebelsFunding · RF 考核",
+          "模拟考核，不自动适用于 RCF 账户",
+          "条款 §7 及计划规则：除量化风险示例外，还包括被认定为过度或类似赌博的风险行为。",
+          "考核可能因未完全界定的定性解释失败，或账户关闭；RCF 协议须另行审核。"
         ]
       }
     },
@@ -3625,6 +4027,12 @@
           "Aprovação da avaliação",
           "Termos §10.1: Lux pode, a seu exclusivo critério, excluir certas operações do cálculo para acesso à etapa seguinte.",
           "Atingir o objetivo numérico pode não ser suficiente se operações forem excluídas sem critério exaustivo."
+        ],
+        "zh": [
+          "Lux Trading Firm · 考核 / 资金扩展",
+          "考核批准",
+          "条款 §10.1：Lux 可自行判断从下一阶段资格计算中排除某些交易。",
+          "达到数值目标也可能不足以通过阶段，因为某些交易可在无穷尽性标准的情况下被排除。"
         ]
       }
     },
@@ -3671,6 +4079,12 @@
           "Avaliação e elegibilidade para financiamento",
           "Termos do challenge §13.14: avaliação qualitativa de práticas de mercado habituais e exposição/risco sem limite exaustivo de desqualificação.",
           "A passagem de fase pode ser recusada e a taxa de avaliação não reembolsada por interpretação do perfil de trading."
+        ],
+        "zh": [
+          "FunderPro Challenge · Classic / One Phase",
+          "考核与资助资格",
+          "挑战条款 §13.14：对标准市场行为及敞口或风险进行定性评估，没有穷尽性取消资格阈值。",
+          "可能根据交易特征的解释拒绝进入下一阶段且不退还考核费。"
         ]
       }
     },
@@ -3717,6 +4131,12 @@
           "Avaliação e depois Funded Trader",
           "Termos §10.2(n): alteração substancial de estratégia, instrumentos ou perfil de risco que frustre o objetivo do challenge, sem limite quantificado.",
           "Suspensão de conta e possível perda de recompensas se a alteração for classificada como prática proibida."
+        ],
+        "zh": [
+          "HyroTrader · 挑战及转入资助",
+          "考核后进入 Funded Trader",
+          "条款 §10.2(n)：实质性改变策略、交易品种或风险特征而破坏挑战目的，没有量化阈值。",
+          "若变更被认定为禁止行为，账户可能暂停且奖励可能被没收。"
         ]
       }
     },
@@ -3763,6 +4183,12 @@
           "Trading e manutenção da conta",
           "Termos §§12.2–12.4: variações «significativas ou injustificadas» da estratégia ou tamanho de posição, sem limite exaustivo.",
           "Conta conforme aos drawdowns pode ser desqualificada se a variação for considerada incompatível com a consistência; poder de recusar recompensas já avaliado em B1."
+        ],
+        "zh": [
+          "IC Funded · 考核与模拟资助账户",
+          "交易与账户维持",
+          "条款 §§12.2–12.4：策略或仓位规模的重大或无正当理由变化，无穷尽性阈值。",
+          "符合数值回撤限额的账户可能因变化被认定不符合一致性而取消资格；拒绝奖励的权力已在 B1 计分。"
         ]
       }
     },
@@ -3809,6 +4235,12 @@
           "Trading / qualidade da estratégia",
           "Termos §5.2.17: jogo de azar e aumentos aleatórios de lotes proibidos sem limite exaustivo de classificação; sanções §5.3.",
           "Posições podem ser consideradas excessivas sem medida publicada para todos os estilos; poder de confiscar recompensas contado apenas em B1."
+        ],
+        "zh": [
+          "Forex Funds Flow · FFF Boost 与模拟考核",
+          "交易 / 策略质量",
+          "条款 §5.2.17：禁止赌博及随机增加手数，无穷尽性认定阈值；处罚见 §5.3。",
+          "仓位可能在无适用于所有风格的公开衡量标准下被认定过大；没收奖励的权力仅计入 B1。"
         ]
       }
     },
@@ -3855,6 +4287,12 @@
           "Conduta financiada / avaliação",
           "Termos §12.24: atividades não replicáveis comercialmente em mercados reais proibidas sem testes exaustivos de aplicabilidade.",
           "Estratégia pode ser classificada como exploração do programa e causar perda da conta apesar de cumprir drawdowns; direito a levantamentos avaliado separadamente no contrato do prestador."
+        ],
+        "zh": [
+          "The Concept Trading · Prop 计划",
+          "资助交易行为 / 考核",
+          "条款 §12.24：禁止无法在真实市场环境中进行商业复制的活动，无穷尽性适用测试。",
+          "即使遵守回撤限额，策略也可能被认定为利用计划漏洞并导致失去账户；出金权利依据承包商协议另行评估。"
         ]
       }
     },
@@ -3901,6 +4339,12 @@
           "Trading e manutenção da conta",
           "Termos de uso, usos proibidos: não representativo de trading responsável em mercados reais e exclusivo critério; distinto da regra de microscalping agora definida como mais de 50% dos lucros em posições de cinco segundos ou menos.",
           "Desqualificação ou encerramento segundo critérios gerais subjetivos de trading responsável; riscos sobre recompensas acumuladas permanecem em B1."
+        ],
+        "zh": [
+          "Lucid Trading — 模拟 LucidFlex/Pro/Daily/Direct",
+          "交易与账户维持",
+          "使用条款（禁止使用）：不代表真实市场中负责任交易的行为，由公司自行裁定；不同于已明确的超短线规则，即超过 50% 利润来自持仓五秒或更短的交易。",
+          "基于负责任交易的一般主观标准取消资格或关闭账户；已累积奖励风险仍计入 B1。"
         ]
       }
     },
@@ -3947,6 +4391,12 @@
           "Manutenção de acesso e progressão",
           "Contrato de utilizador §15: empresa pode considerar um trader demasiado experiente ou profissional com base em critérios não exaustivos e encerrar contas.",
           "Conta e elegibilidade podem ser retiradas por sofisticação considerada incompatível com objetivo educativo; recompensas avaliadas apenas em B1."
+        ],
+        "zh": [
+          "Apex Trader Funding · 考核/Performance Account（模拟计划）",
+          "维持准入与阶段升级",
+          "用户协议 §15：公司可根据非穷尽性标准认定交易者过于资深或专业并关闭账户。",
+          "因专业程度被认为与教育目的不符，账户及计划资格可能被取消；奖励仅在 B1 计分。"
         ]
       }
     },
@@ -3993,6 +4443,12 @@
           "Avaliação e financiado se regra aplicável",
           "FAQ, estilos proibidos: trading de alta frequência sem limite; Termos, regras de trading 148–151.",
           "Risco de sanção ou recusa de levantamento por frequência considerada excessiva sem critério numérico público."
+        ],
+        "zh": [
+          "Klein Funding · 一般条款下的考核",
+          "考核及适用规则时的资助",
+          "FAQ（禁止交易风格）：高频交易，无阈值；条款交易规则 148–151。",
+          "交易频率被认为过高时，可能受到账户处罚或出金被拒，没有公开数值标准。"
         ]
       }
     },
@@ -4039,6 +4495,12 @@
           "Avaliação e conta financiada se regidas pelos termos de uso",
           "§10.1.7.20: ao exclusivo critério da empresa, estratégia pode ser considerada não comercial ou inviável sem limite objetivo ou definição exaustiva.",
           "Desqualificação, resolução e perda de direitos da conta por operação considerada inviável, sob regime contratual em que lucros podem ser confiscados."
+        ],
+        "zh": [
+          "Trade The Pool — 股票考核/资助，2026/08/03 条款",
+          "适用使用条款的考核与资助账户",
+          "§10.1.7.20：公司可自行认定策略不具商业性或不可行，无客观阈值或穷尽性定义。",
+          "交易被认为不可行时可能取消资格、终止并失去账户相关权利；合同制度下利润可能被没收。"
         ]
       }
     },
@@ -4085,6 +4547,12 @@
           "Challenge e conta Master",
           "§11.9 reserva à plataforma classificação de operações/estratégias como proibidas ao exclusivo critério, sem limite objetivo exaustivo.",
           "Resolução de contas por estratégia subitamente declarada proibida, distinta do direito unilateral de recusar remuneração nos §§17.3–17.4."
+        ],
+        "zh": [
+          "For Traders — 现行条款下的 Challenge/Master",
+          "挑战与 Master 账户",
+          "§11.9：平台保留自行认定禁止交易或策略的权力，无穷尽性客观阈值。",
+          "因策略突然被认定为禁止而终止账户；不同于 §§17.3–17.4 单方拒绝报酬的权力。"
         ]
       }
     },
@@ -4131,6 +4599,12 @@
           "Avaliação e financiado segundo regras do mesmo programa",
           "Termos §7.9: perto de notícias, estratégia não deve explorar volatilidade em vez de expressar verdadeira opinião direcional de mercado; sem limite verificável para intenção.",
           "Operação ou estratégia pode ser classificada como news straddling e encaminhada para revisão de risco, com possível aviso ou sanção."
+        ],
+        "zh": [
+          "Finotive · 挑战与模拟资助账户；新闻交易",
+          "同一计划规则下的考核与资助",
+          "条款 §7.9：新闻前后，策略不得利用波动性而非表达真实的市场方向判断；意图差异无可核查阈值。",
+          "交易或策略可能被认定为跨新闻双向交易并移交风险审核，导致警告或账户处罚。"
         ]
       }
     },
@@ -4177,6 +4651,12 @@
           "Período de levantamento após revisão com Tier1 ou Tier2",
           "Termos §6.3.8: dedução de 50% ou 100% do Violation Profit, ganhos brutos de operações sancionadas; perdas dessas operações contam como zero nesse cálculo mas reduzem o Eligible Profit líquido.",
           "Ganhos infratores são retirados separadamente após cálculo do lucro líquido que já inclui perdas, por vezes reduzindo a recompensa a zero."
+        ],
+        "zh": [
+          "Funding Traders · 1-Step Pro / 2-Step Pro / Instant，RMG 纪律计划",
+          "Tier1 或 Tier2 审核后的出金阶段",
+          "条款 §6.3.8：扣除违规利润（受罚交易的毛收益）的 50% 或 100%；相关亏损在该计算中按零计，却减少净合格利润。",
+          "在已包含亏损的净利润计算后再单独扣除违规收益，有时将奖励降至零。"
         ]
       }
     },
@@ -4223,6 +4703,12 @@
           "Conta simulada e trading financiado",
           "Termos §§6.1 e 6.6(10): boas práticas de risco ao exclusivo critério da OFP e qualquer outra estratégia invulgar que a OFP considere proibida.",
           "A empresa pode desqualificar operações ou a conta sem limite único fixado para condutas invulgares."
+        ],
+        "zh": [
+          "OFP Funding · 模拟与 Instant 账户，2026/02/09 生效条款",
+          "模拟账户及资助交易",
+          "条款 §§6.1 和 6.6(10)：良好风险实践由 OFP 自行认定，以及 OFP 认为禁止的任何其他异常策略。",
+          "公司可在没有统一固定异常行为阈值的情况下取消交易或账户资格。"
         ]
       }
     }
