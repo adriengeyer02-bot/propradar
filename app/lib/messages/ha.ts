@@ -427,6 +427,7 @@ const ha: Messages = {
     perMonth: '/wata', oneTime: 'Sau ɗaya',
     priceSource: 'Tushen farashi',
     pricePromoTitle: 'Rangwamen wannan shirin',
+    pricePromoAllTitle: 'Rangwame ga dukkan shirye-shirye',
     pricePromoTermsLabel: 'Sharuɗɗan rangwame da tushe',
     programDetails: 'Matakai da dokokin shirin',
     pricePromoCode: 'Lambar ragi',

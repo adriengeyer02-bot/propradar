@@ -548,6 +548,7 @@ const de: Messages = {
     oneTime: "einmalig",
     priceSource: "Preisseite",
     pricePromoTitle: "Angebot für dieses Programm",
+    pricePromoAllTitle: "Angebot für alle Programme",
     pricePromoTermsLabel: "Angebotsbedingungen und Quelle",
     programDetails: "Programmablauf und Regeln",
     pricePromoCode: "Code",

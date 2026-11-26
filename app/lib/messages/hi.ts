@@ -548,6 +548,7 @@ const hi: Messages = {
     "oneTime": "एकमुश्त",
     "priceSource": "प्राइसिंग पेज",
     pricePromoTitle: 'इस प्रोग्राम पर ऑफ़र',
+    pricePromoAllTitle: 'सभी प्रोग्राम पर ऑफ़र',
     pricePromoTermsLabel: 'ऑफ़र की शर्तें और स्रोत',
     programDetails: 'प्रोग्राम के चरण और नियम',
     pricePromoCode: 'कोड',

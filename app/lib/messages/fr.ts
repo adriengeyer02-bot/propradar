@@ -548,6 +548,7 @@ const fr: Messages = {
     oneTime: "paiement unique",
     priceSource: "Page des tarifs",
     pricePromoTitle: "Promotion sur ce programme",
+    pricePromoAllTitle: "Promotion sur tous les programmes",
     pricePromoTermsLabel: "Conditions et source de l'offre",
     programDetails: "Étapes et règles du programme",
     pricePromoCode: "Code",
