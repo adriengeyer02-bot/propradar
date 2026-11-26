@@ -5,6 +5,7 @@ import { getFirmChangelog, getFirmUpdate } from '../../../lib/firmUpdates';
 import Link from 'next/link';
 import FirmSectionNav from '../../../components/ui/FirmSectionNav';
 import { notFound } from 'next/navigation';
+import FirmSnapshot, { snapshotCopy } from '../../../components/FirmSnapshot';
 import FirmLogo from '../../../components/FirmLogo';
 import PartnerCodeOffer from '../../../components/PartnerCodeOffer';
 import SourceSubmission from '../../../components/SourceSubmission';
@@ -766,6 +767,48 @@ export default async function FirmPage({ params }: Props) {
     : firm.name.length >= 22 || longestFirmNameToken >= 14
       ? 'firm-title firm-title-long'
       : 'firm-title';
+  // Snapshot: display only recorded programme data, and leave placeholders explicit.
+  const showSnapshot = !isClosedOrParked && !firm.listedDomainWarning;
+  const sc = snapshotCopy(locale);
+  const unknown = v('To verify');
+  const verifiedProducts = firm.products.filter(product =>
+    !/not yet audited|à auditer|to verify|à vérifier/i.test(product.description) &&
+    !product.tradableAssets.some(asset => /to verify|à vérifier/i.test(asset)) &&
+    !product.platforms.some(platform => /to verify|à vérifier/i.test(platform)));
+  const marketKeys = new Set<string>();
+  for (const product of verifiedProducts) for (const asset of product.tradableAssets) {
+    const a = asset.toLowerCase();
+    if (/forex|currenc|^fx$/.test(a)) marketKeys.add(t.styles.Forex);
+    if (/indic|index/.test(a)) marketKeys.add(t.styles.Indices);
+    if (/metal|commod|energ|oil|gold|silver/.test(a)) marketKeys.add(sc.commodities);
+    if (/stock|equit|share|action/.test(a)) marketKeys.add(t.styles.Stocks);
+    if (/crypto|bitcoin/.test(a)) marketKeys.add(t.styles.Crypto);
+    if (/futur/.test(a)) marketKeys.add(t.styles.Futures);
+    if (/option/.test(a)) marketKeys.add(sc.options);
+    if (/cfd/.test(a)) marketKeys.add(t.styles.CFD);
+  }
+  const programmeTypes = [...new Set(verifiedProducts.map(product => product.type === 'Scaling' ? sc.scaling : v(product.type)))];
+  const allTypesKnown = firm.products.length > 0 && firm.products.every(product => product.drawdownType && product.drawdownSource);
+  const exactTypes = [...new Set(firm.products.map(product => product.drawdownType).filter(Boolean))];
+  const snapshotDrawdown = allTypesKnown ? (exactTypes.length > 1 ? sc.variable : v(exactTypes[0] === 'Hybride' ? 'Hybrid' : exactTypes[0]!)) : v(drawdownLabel(firm, toEnglishText));
+  const snapshotPositive = allTypesKnown && exactTypes.length === 1 && exactTypes[0] === 'Static'
+    ? sc.staticLoss : firm.legalVerified && regulatoryAudit.entities.length > 0 ? sc.entity : undefined;
+  const leadingRule = [...constraintRules].filter(rule => Boolean(rule.source)).sort((a,b) =>
+    (ruleKind(a) === 'risk' ? 0 : 1) - (ruleKind(b) === 'risk' ? 0 : 1) || severityRank(a) - severityRank(b))[0];
+  const translatedLeadingRule = leadingRule ? ruleTx(leadingRule.rule) : '';
+  const shortRule = leadingRule && translatedLeadingRule.length <= 125 && (locale === 'en' || translatedLeadingRule !== leadingRule.rule) ? translatedLeadingRule : '';
+  const snapshotWatch = leadingRule ? (leadingRule.status === 'conflicting' ? f.rulesConflict :
+    shortRule || (leadingRule.category === 'discretionary-clause' ? sc.discretion : ruleKind(leadingRule) === 'risk' ? sc.ambiguous : f.rulesUi.restrictionsShort)) :
+    hasPayoutRiskSignal(firm) ? f.payout + ': ' + v(toEnglishText(firm.reviewSignals.payoutRisk)) :
+    !isPayoutRiskAssessed(firm) ? f.checklist.payoutProof : undefined;
+  const snapshotCells = [
+    {icon:'🌐',label:sc.market,value:[...marketKeys].join(' / ') || unknown},
+    {icon:'🎯',label:sc.programmes,value:programmeTypes.join(' · ') || unknown},
+    {icon:'🛡️',label:f.facts.drawdown,value:snapshotDrawdown},
+    {icon:'💳',label:f.facts.from,value:v(priceLabel(firm))},
+    {icon:'💰',label:f.facts.split,value:v(profitSplitLabel(firm))},
+    {icon:'⚡',label:f.facts.payout,value:isPayoutDelayUnknown(firm) ? unknown : payoutShort(tx(firm.payoutDelay))},
+  ];
   const sourceCount = regulatoryAudit.sources.length || firm.sources.length;
   const specificStrengthPoints = uniqueProfilePoints(firm.strengths);
   const specificRiskPoints = uniqueProfilePoints([
@@ -1043,6 +1086,8 @@ export default async function FirmPage({ params }: Props) {
             <p className="firm-domain-warning pr-firm-verdict" role="note">
               <strong>{f.domainWarning}</strong> {tx(firm.listedDomainWarning)}
             </p>
+          ) : showSnapshot ? (
+            <FirmSnapshot locale={locale} cells={snapshotCells} positive={snapshotPositive} watch={snapshotWatch} watchHref={leadingRule ? '#rules' : '#decision'} date={<ReviewFreshness date={firm.lastReviewed} labels={{ today: t.radar.today, yesterday: t.radar.yesterday, daysAgo: t.radar.daysAgo }} />} />
           ) : (
             <p className="pr-firm-verdict">{tx(firm.verdict)}</p>
           )}
@@ -1070,6 +1115,7 @@ export default async function FirmPage({ params }: Props) {
           </aside>
         </div>
 
+        {!showSnapshot ? (
         <dl className="pr-key-facts">
           <div><dt>{f.facts.from}</dt><dd>{v(priceLabel(firm))}</dd></div>
           <div><dt>{f.facts.split}</dt><dd>{v(profitSplitLabel(firm))}</dd></div>
@@ -1081,6 +1127,7 @@ export default async function FirmPage({ params }: Props) {
             <div className="pr-key-facts-wide"><dt>{f.facts.payout}</dt><dd><PayoutFact text={tx(firm.payoutDelay)} label={f.details} /></dd></div>
           )}
         </dl>
+        ) : null}
 
         {locale !== 'en' ? <p className="pr-fineprint pr-data-note">{f.dataNote}</p> : null}
 
@@ -1360,6 +1407,26 @@ export default async function FirmPage({ params }: Props) {
       </section>
 
       <section className="container pr-section pr-decision" id="decision" aria-label={fmt(f.decisionAria, { name: firm.name })}>
+        {showSnapshot ? (
+          <details className="pr-rules-menu" style={{marginBottom: 18}}>
+            <summary><span className="pr-rules-menu-name">{sc.full}</span></summary>
+            <div className="pr-rules-menu-body">
+              <p>{tx(firm.verdict)}</p>
+        <dl className="pr-key-facts">
+          <div><dt>{f.facts.from}</dt><dd>{v(priceLabel(firm))}</dd></div>
+          <div><dt>{f.facts.split}</dt><dd>{v(profitSplitLabel(firm))}</dd></div>
+          <div><dt>{f.facts.drawdown}</dt><dd>{v(drawdownLabel(firm, toEnglishText))}</dd></div>
+          <div><dt>{f.facts.news}</dt><dd>{v(toEnglishText(firm.newsTrading))}</dd></div>
+          <div><dt>{f.facts.proof}</dt><dd>{v(toEnglishText(firm.auditStatus))}</dd></div>
+          <div><dt>{f.facts.lastReview}</dt><dd><ReviewFreshness date={firm.lastReviewed} labels={{ today: t.radar.today, yesterday: t.radar.yesterday, daysAgo: t.radar.daysAgo }} /></dd></div>
+          {isPayoutDelayUnknown(firm) ? null : (
+            <div className="pr-key-facts-wide"><dt>{f.facts.payout}</dt><dd><PayoutFact text={tx(firm.payoutDelay)} label={f.details} /></dd></div>
+          )}
+        </dl>
+            </div>
+          </details>
+        ) : null}
+
 
         {searchProfile && locale === 'en' ? (
           <article className="firm-search-answer" aria-labelledby={`search-answer-${firm.slug}`}>
