@@ -1,0 +1,10 @@
+{
+  "_doc": "PROPOSAL 2026-11-26. Asset classes read on an official instruments/rules page, per firm. Only what the page states; 'detail' keeps the page's own limits. Keys: forex, indices, commodities, stocks, crypto, futures, options.",
+  "axi-select": {
+    "markets": ["forex", "indices", "commodities", "stocks", "crypto", "futures"],
+    "detail": "Copied to the funded allocation account: all forex pairs and indices; UK & US oil; gold & silver; BTCUSD and ETHUSD only; 7 US shares (Meta, Microsoft, Amazon, Google, Tesla, Netflix, Apple); index futures only.",
+    "source": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Program+Rules.pdf",
+    "locator": "Program Rules, 'Symbols'",
+    "checkedOn": "2026-11-26"
+  }
+}

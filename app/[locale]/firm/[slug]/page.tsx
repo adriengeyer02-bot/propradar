@@ -77,6 +77,7 @@ import { fmt, formatDateLong, getMessages, numberLocale, tv, type Messages } fro
 import IntentLink from '../../../components/IntentLink';
 import ContractAuditSection from '../../../components/ContractAuditSection';
 import ContractRedFlags from '../../../components/ContractRedFlags';
+import FirmAtAGlance from '../../../components/FirmAtAGlance';
 import { getContractAudit } from '../../../lib/contractAudits';
 import { contractAuditCopy } from '../../../lib/contractAuditI18n';
 
@@ -512,6 +513,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
     },
   };
+}
+
+function glanceShort(text: string): string {
+  const first = text.split(/[.;(]/)[0].trim();
+  return first.length > 42 ? `${first.slice(0, 41).replace(/\s+\S*$/, '')}…` : first;
 }
 
 export default async function FirmPage({ params }: Props) {
@@ -1064,17 +1070,18 @@ export default async function FirmPage({ params }: Props) {
           </aside>
         </div>
 
-        <dl className="pr-key-facts">
-          <div><dt>{f.facts.from}</dt><dd>{v(priceLabel(firm))}</dd></div>
-          <div><dt>{f.facts.split}</dt><dd>{v(profitSplitLabel(firm))}</dd></div>
-          <div><dt>{f.facts.drawdown}</dt><dd>{v(drawdownLabel(firm, toEnglishText))}</dd></div>
-          <div><dt>{f.facts.news}</dt><dd>{v(toEnglishText(firm.newsTrading))}</dd></div>
-          <div><dt>{f.facts.proof}</dt><dd>{v(toEnglishText(firm.auditStatus))}</dd></div>
-          <div><dt>{f.facts.lastReview}</dt><dd><ReviewFreshness date={firm.lastReviewed} labels={{ today: t.radar.today, yesterday: t.radar.yesterday, daysAgo: t.radar.daysAgo }} /></dd></div>
-          {isPayoutDelayUnknown(firm) ? null : (
-            <div className="pr-key-facts-wide"><dt>{f.facts.payout}</dt><dd><PayoutFact text={tx(firm.payoutDelay)} label={f.details} /></dd></div>
-          )}
-        </dl>
+        {/* PROPOSAL 2026-11-26: "at a glance" card replaces the key-facts grid. */}
+        <FirmAtAGlance
+          slug={firm.slug}
+          locale={locale}
+          products={firm.products}
+          facts={[
+            { label: f.facts.from, value: v(priceLabel(firm)) },
+            { label: f.facts.split, value: v(profitSplitLabel(firm)) },
+            ...(isPayoutDelayUnknown(firm) ? [] : [{ label: f.facts.payout, value: glanceShort(tx(firm.payoutDelay)) }]),
+            { label: f.facts.drawdown, value: v(drawdownLabel(firm, toEnglishText)) },
+          ]}
+        />
 
         {locale !== 'en' ? <p className="pr-fineprint pr-data-note">{f.dataNote}</p> : null}
 
