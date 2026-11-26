@@ -13,6 +13,8 @@ Automatic codes are CANDIDATES found by fixed regexes on the full text, each
 with its paragraph; hand-verified sheets override them.
 """
 import glob, json, re, os, sys, glob, csv
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from scale_c_trustpilot import TP_WITHHELD, rating_penalty
 
 A = {k: v for k, v in zip(sys.argv[1::2], sys.argv[2::2])}
 BASE = json.load(open(A['--base']))
@@ -28,7 +30,7 @@ YEAR = 2026
 
 W = {  # weights, barème C final draft
     'B1': 15, 'B2': 8, 'B2A': 4, 'B3': 5, 'B4': 3, 'B4max': 6, 'B5': 3, 'B6': 5, 'B7': 5, 'Bcap': 30,
-    'TPW': 6, 'TPMID': 3, 'REGWARN': 5, 'A1': 40, 'A1_OLD_UNCLEAR': 15, 'A2ISO': 5, 'E_HARSH': 2,
+    'TPW': TP_WITHHELD, 'TPMID': 3, 'REGWARN': 5, 'A1': 40, 'A1_OLD_UNCLEAR': 15, 'A2ISO': 5, 'E_HARSH': 2,
 }
 CONS = [(40, 0), (30, 2), (20, 5), (0, 8)]
 
@@ -269,11 +271,9 @@ for f in BASE:
     if f['withheld']:
         lines.append(('Trustpilot retiré', W['TPW'])); other += W['TPW']; item('TPW', W['TPW'])
     elif f['tp'] and (f['tpCount'] or 0) >= 30:
-        # Graded Trustpilot rating (Geyer, 2026-11-25 evening): the score must track a poor rating.
+        # Revised Trustpilot-only scale (Geyer, 2026-11-26).
         r, n = f['tp'], f['tpCount']
-        pen = 0 if r >= 4.3 else 3 if r >= 4.0 else 8 if r >= 3.5 else 15 if r >= 3.0 else 22
-        if n < 100:
-            pen = (pen + 1) // 2
+        pen = rating_penalty(r, n)
         if pen:
             lines.append((f'Trustpilot {r}', pen)); other += pen
             item('TPR', pen, {'locator': f"{r} / {n}"})

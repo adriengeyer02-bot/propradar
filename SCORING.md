@@ -243,8 +243,13 @@ every point lost with the clause excerpt and its source.
    penalties capped at 30 in total. Consistency on the most lenient main
    programme: ≥ 40 %: 0; 30-39: −2; 20-29: −5; < 20: −8; doubled when the
    payout is lost, halved when the rule applies to the evaluation only.
-   Trustpilot notice (rating withheld) −6, nothing else; Trustpilot below 4.0
-   on at least 1,000 reviews −3; regulator warning −5; documented payout
+   Trustpilot (owner revision 2026-11-26): a documented guideline-breach
+   notice with rating withheld −10; displayed rating 4.0–5.0: 0, 3.5–<4.0: −3,
+   3.0–<3.5: −6, below 3.0: −10. No rating without a documented notice: 0.
+   Retain the review-volume safeguard: fewer than 30 reviews: 0; 30–99:
+   half the rating penalty, rounded up. Withholding and rating penalties never
+   stack. Ceiling evidence and all other scale C rules remain unchanged.
+   Regulator warning −5; documented payout
    default −40 (old and unclear −15, isolated −5); severe sanction for a
    procedural breach −2.
 3. **What could not be checked costs nothing.**
