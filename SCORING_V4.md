@@ -1,5 +1,7 @@
 # PropRadar — barème définitif 25 / 35 / 15 / 15 / 10
 
+> Mise à jour du 26/11/2026 : les calculs historiques V4 et les tableaux ci-dessous restent archivés pour vérifier les approbations datées. Le score opérationnel utilise désormais la grille Trustpilot commune de SCORING.md §1 : 0/−3/−6/−10 selon la note, −10 pour une notice actuelle documentée, pas de cumul, seuils d’échantillon 30/100. Les autres critères V4 sont inchangés.
+
 **Décision d'Adrien Geyer du 20 novembre 2026.** Ce document est la cible
 éditoriale des 197 fiches du comparateur. Il **remplace** les propositions
 V2 35/30/15/10/10 et V3 40/25/15/15/5, dont l'exigence excessive de preuve
