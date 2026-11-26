@@ -446,7 +446,8 @@
     "translations": {
       "fr": "E8 peut modifier ou supprimer rétroactivement des fonctionnalités, sans droit au maintien des anciennes fonctionnalités, tarifs, structures de retrait ou logiques de simulation. Les modifications des conditions prennent effet dès publication.",
       "es": "E8 puede modificar o eliminar funcionalidades con efecto retroactivo y ningún usuario puede reclamar las funcionalidades, precios, estructura de retiros o lógica de simulación anteriores. Los cambios de las condiciones surten efecto inmediatamente al publicarse.",
-      "de": "E8 kann Funktionen rückwirkend ändern oder entfernen; Nutzer haben keinen Anspruch auf frühere Funktionen, Preise, Auszahlungsstrukturen oder Simulationslogik. Änderungen der Bedingungen treten unmittelbar mit Veröffentlichung in Kraft."
+      "de": "E8 kann Funktionen rückwirkend ändern oder entfernen; Nutzer haben keinen Anspruch auf frühere Funktionen, Preise, Auszahlungsstrukturen oder Simulationslogik. Änderungen der Bedingungen treten unmittelbar mit Veröffentlichung in Kraft.",
+      "it": "E8 può modificare o eliminare funzionalità retroattivamente; nessun utente può rivendicare funzionalità, prezzi, struttura dei prelievi o logica di simulazione precedenti. Le modifiche delle condizioni entrano in vigore immediatamente alla pubblicazione."
     }
   },
   {
@@ -456,7 +457,8 @@
     "translations": {
       "fr": "E8 Signature Futures, Performance : plafonds par retrait pour 25K/50K/100K/150K : premier et deuxième 1 000/1 250/2 000/3 000 $ ; troisième et quatrième 1 250/2 000/3 000/3 495 $.",
       "es": "E8 Signature Futures, fase Performance: límites por retiro para cuentas de 25K/50K/100K/150K. Primer y segundo retiros: 1.000/1.250/2.000/3.000 USD; tercero y cuarto: 1.250/2.000/3.000/3.495 USD.",
-      "de": "E8 Signature Futures — Performance-Phase: Auszahlungslimits für Konten mit 25K/50K/100K/150K: erste und zweite Auszahlung 1.000/1.250/2.000/3.000 USD; dritte und vierte Auszahlung 1.250/2.000/3.000/3.495 USD."
+      "de": "E8 Signature Futures — Performance-Phase: Auszahlungslimits für Konten mit 25K/50K/100K/150K: erste und zweite Auszahlung 1.000/1.250/2.000/3.000 USD; dritte und vierte Auszahlung 1.250/2.000/3.000/3.495 USD.",
+      "it": "E8 Signature Futures — fase Performance: limiti per prelievo per i conti da 25K/50K/100K/150K: primo e secondo prelievo 1.000/1.250/2.000/3.000 USD; terzo e quarto 1.250/2.000/3.000/3.495 USD."
     }
   },
   {
@@ -466,7 +468,8 @@
     "translations": {
       "fr": "E8 Signature Futures, Performance : maximum quatre retraits par compte, puis un nouveau compte Challenge gratuit.",
       "es": "E8 Signature Futures, fase Performance: máximo de cuatro retiros por cuenta. Después se proporciona gratuitamente una nueva cuenta Challenge.",
-      "de": "E8 Signature Futures — Performance-Phase: höchstens vier Auszahlungen pro Konto. Danach gibt es ein kostenloses neues Challenge-Konto."
+      "de": "E8 Signature Futures — Performance-Phase: höchstens vier Auszahlungen pro Konto. Danach gibt es ein kostenloses neues Challenge-Konto.",
+      "it": "E8 Signature Futures — fase Performance: massimo quattro prelievi per conto. Successivamente viene fornito gratuitamente un nuovo conto Challenge."
     }
   },
   {
@@ -476,7 +479,8 @@
     "translations": {
       "fr": "E8 Signature Futures, Performance : au moment d'une demande de retrait, le trader doit laisser un coussin égal au drawdown dynamique EOD.",
       "es": "E8 Signature Futures, fase Performance: al solicitar un retiro, debe mantenerse en la cuenta un colchón del mismo importe que el límite dinámico de pérdida al cierre del día (EOD).",
-      "de": "E8 Signature Futures — Performance-Phase: Bei einer Auszahlungsanfrage muss ein Puffer in Höhe des dynamischen EOD-Drawdowns auf dem Konto verbleiben."
+      "de": "E8 Signature Futures — Performance-Phase: Bei einer Auszahlungsanfrage muss ein Puffer in Höhe des dynamischen EOD-Drawdowns auf dem Konto verbleiben.",
+      "it": "E8 Signature Futures — fase Performance: al momento della richiesta di prelievo bisogna lasciare sul conto un margine pari al drawdown dinamico EOD."
     }
   },
   {
@@ -486,7 +490,8 @@
     "translations": {
       "fr": "ETF peut retenir ou retarder les récompenses si elle estime à sa seule discrétion que le comportement n'est pas conforme aux conditions. Elle conserve la seule et absolue discrétion de déterminer la conformité du comportement de trading.",
       "es": "ETF se reserva el derecho de retener o retrasar recompensas si determina, a su exclusiva discreción, que el comportamiento de un usuario es incompatible con las condiciones o las infringe. Conserva la facultad exclusiva y absoluta de determinar si el comportamiento de negociación del operador se ajusta a las condiciones.",
-      "de": "ETF behält sich vor, Vergütungen zurückzuhalten oder zu verzögern, wenn es nach alleinigem Ermessen feststellt, dass das Nutzerverhalten mit den Bedingungen unvereinbar ist oder gegen diese verstößt. ETF entscheidet nach alleinigem und uneingeschränktem Ermessen, ob das Handelsverhalten eines Traders den Bedingungen entspricht."
+      "de": "ETF behält sich vor, Vergütungen zurückzuhalten oder zu verzögern, wenn es nach alleinigem Ermessen feststellt, dass das Nutzerverhalten mit den Bedingungen unvereinbar ist oder gegen diese verstößt. ETF entscheidet nach alleinigem und uneingeschränktem Ermessen, ob das Handelsverhalten eines Traders den Bedingungen entspricht.",
+      "it": "ETF si riserva il diritto di trattenere o ritardare le ricompense se stabilisce, a sua esclusiva discrezione, che la condotta di un utente è incompatibile con le condizioni o le viola. ETF conserva la facoltà esclusiva e assoluta di determinare se il comportamento di trading del trader rispetta le condizioni."
     }
   },
   {
@@ -496,7 +501,8 @@
     "translations": {
       "fr": "ETF peut modifier les conditions, notamment plafonds et éligibilité aux récompenses, limites ATD, drawdown ou autres paramètres LIVE ELITE. Elle peut transférer le trader vers LIVE ELITE à tout moment, avant, pendant ou après une demande de récompense.",
       "es": "ETF puede modificar las condiciones, incluidos los límites de recompensas, requisitos de elegibilidad, límites ATD, límites de pérdida y cualquier otro parámetro de la cuenta LIVE ELITE. También puede trasladar al operador a LIVE ELITE en cualquier momento, antes, durante o después de una solicitud de recompensa.",
-      "de": "ETF kann die Bedingungen ändern, einschließlich Vergütungslimits, Teilnahmevoraussetzungen, ATD-Limits, Drawdown-Grenzen und sonstiger Parameter des LIVE ELITE-Kontos. ETF kann einen Trader jederzeit vor, während oder nach einer Vergütungsanfrage zu LIVE ELITE überführen."
+      "de": "ETF kann die Bedingungen ändern, einschließlich Vergütungslimits, Teilnahmevoraussetzungen, ATD-Limits, Drawdown-Grenzen und sonstiger Parameter des LIVE ELITE-Kontos. ETF kann einen Trader jederzeit vor, während oder nach einer Vergütungsanfrage zu LIVE ELITE überführen.",
+      "it": "ETF può modificare le condizioni, inclusi limiti delle ricompense, requisiti di idoneità, limiti ATD, limiti di drawdown e qualsiasi altro parametro del conto LIVE ELITE. Può trasferire un trader a LIVE ELITE in qualsiasi momento, prima, durante o dopo una richiesta di ricompensa."
     }
   },
   {
@@ -506,7 +512,8 @@
     "translations": {
       "fr": "Sont notamment interdits les comportements ou activités créant, à la seule discrétion d'ETF, un risque réputationnel, réglementaire ou financier pour ETF.",
       "es": "Las conductas prohibidas incluyen comportamientos o actividades que, a la exclusiva discreción de ETF, generen riesgos reputacionales, regulatorios o financieros para ETF.",
-      "de": "Verbotenes Verhalten umfasst Handlungen oder Aktivitäten, die nach alleinigem Ermessen von ETF Reputations-, Regulierungs- oder Finanzrisiken für ETF verursachen."
+      "de": "Verbotenes Verhalten umfasst Handlungen oder Aktivitäten, die nach alleinigem Ermessen von ETF Reputations-, Regulierungs- oder Finanzrisiken für ETF verursachen.",
+      "it": "La condotta vietata comprende comportamenti o attività che, a esclusiva discrezione di ETF, generano rischi reputazionali, normativi o finanziari per ETF."
     }
   },
   {
@@ -516,7 +523,8 @@
     "translations": {
       "fr": "Comptes Elite sim-funded : minimum 100 $ par cycle, maximum selon taille et cycles accomplis (sur 50K : 1 250 $ au premier cycle, jusqu'à 2 000 $). Plafond total de 25 000 $ par trader sur tous les comptes simulés, et 150 000 $ à vie avec réinscriptions.",
       "es": "Todos los planes, fase Elite financiada simulada: cada ciclo de retiro tiene un mínimo de 100 USD y un máximo que aumenta según el tamaño de la cuenta y los ciclos completados (ejemplo en una cuenta de 50K: 1.250 USD en el primer ciclo, aumentando hasta 2.000 USD). Los retiros simulados tienen un límite total de 25.000 USD por operador entre todas las cuentas y un límite vitalicio de 150.000 USD sumando las reincorporaciones.",
-      "de": "Alle Pläne — simulierte Elite-Finanzierungsphase: Jeder Auszahlungszyklus hat einen Mindestbetrag von 100 USD und einen Höchstbetrag abhängig von Kontogröße und abgeschlossenen Zyklen (bei 50K beispielsweise 1.250 USD im ersten Zyklus, ansteigend bis 2.000 USD). Simulierte Auszahlungen sind über alle Konten auf insgesamt 25.000 USD pro Trader begrenzt, mit einem lebenslangen Limit von 150.000 USD über Wiedereinstiege hinweg."
+      "de": "Alle Pläne — simulierte Elite-Finanzierungsphase: Jeder Auszahlungszyklus hat einen Mindestbetrag von 100 USD und einen Höchstbetrag abhängig von Kontogröße und abgeschlossenen Zyklen (bei 50K beispielsweise 1.250 USD im ersten Zyklus, ansteigend bis 2.000 USD). Simulierte Auszahlungen sind über alle Konten auf insgesamt 25.000 USD pro Trader begrenzt, mit einem lebenslangen Limit von 150.000 USD über Wiedereinstiege hinweg.",
+      "it": "Tutti i piani — fase Elite finanziata simulata: ogni ciclo di prelievo ha un minimo di 100 USD e un massimo che cresce secondo dimensione del conto e cicli completati (su un conto da 50K, ad esempio, 1.250 USD al primo ciclo, fino a 2.000 USD). I prelievi simulati sono limitati a 25.000 USD complessivi per trader su tutti i conti, con un tetto a vita di 150.000 USD considerando i successivi rientri."
     }
   },
   {
@@ -526,7 +534,8 @@
     "translations": {
       "fr": "À 25 000 $ de retraits simulés cumulés, transfert vers LIVE ELITE avec partage de 80 % au trader contre jusqu'à 100 % en simulation. ETF peut aussi décider du transfert à tout moment ; le refus interdit l'utilisation de ses services pendant deux années calendaires.",
       "es": "Todos los planes, fase Elite financiada simulada: alcanzar 25.000 USD en retiros simulados acumulados implica pasar a LIVE ELITE, donde el reparto es 80 % para el operador y 20 % para ETF (en simulación, hasta el 100 %). Las condiciones añaden que ETF puede trasladar al operador a LIVE ELITE en cualquier momento a su exclusiva discreción; quien se niegue no podrá utilizar sus servicios durante dos años naturales.",
-      "de": "Alle Pläne — simulierte Elite-Finanzierungsphase: Bei kumulierten simulierten Auszahlungen von 25.000 USD wechselt der Trader zu LIVE ELITE mit einer Gewinnaufteilung von 80 % für den Trader und 20 % für ETF (simuliert bis zu 100 %). ETF kann den Wechsel jederzeit nach alleinigem Ermessen veranlassen. Wer ablehnt, darf die ETF-Dienste zwei Kalenderjahre lang nicht nutzen."
+      "de": "Alle Pläne — simulierte Elite-Finanzierungsphase: Bei kumulierten simulierten Auszahlungen von 25.000 USD wechselt der Trader zu LIVE ELITE mit einer Gewinnaufteilung von 80 % für den Trader und 20 % für ETF (simuliert bis zu 100 %). ETF kann den Wechsel jederzeit nach alleinigem Ermessen veranlassen. Wer ablehnt, darf die ETF-Dienste zwei Kalenderjahre lang nicht nutzen.",
+      "it": "Tutti i piani — fase Elite finanziata simulata: raggiungere 25.000 USD di prelievi simulati cumulativi comporta il passaggio a LIVE ELITE, con ripartizione 80% al trader e 20% a ETF (nella fase simulata, fino al 100%). ETF può disporre il passaggio in qualsiasi momento a sua esclusiva discrezione; chi rifiuta non può utilizzare i servizi ETF per due anni di calendario."
     }
   },
   {
@@ -536,7 +545,8 @@
     "translations": {
       "fr": "Comptes financés avec cycle de 14 jours : demande tous les quatorzièmes jours calendaires suivant le premier trade. Si le jour est manqué, attendre 14 jours supplémentaires. Demande avant 17 h au Royaume-Uni. Retraits à la demande réservés au VIP Spot.",
       "es": "Todas las cuentas financiadas con retiros cada 14 días: pueden solicitarse cada decimocuarto día natural desde la primera operación de la cuenta financiada. Si se pierde ese día, deben esperarse otros 14 días naturales. Las solicitudes deben enviarse antes de las 17:00, hora del Reino Unido. Los retiros bajo demanda solo están disponibles en VIP Spot.",
-      "de": "Alle finanzierten Konten mit 14-tägigen Auszahlungen: Eine Anfrage ist an jedem vierzehnten Kalendertag nach Beginn des ersten Trades auf dem finanzierten Konto möglich. Wird dieser Tag verpasst, muss man weitere 14 Kalendertage warten. Anfragen müssen vor 17:00 Uhr britischer Zeit eingereicht werden. Auszahlungen auf Abruf sind nur bei VIP Spot möglich."
+      "de": "Alle finanzierten Konten mit 14-tägigen Auszahlungen: Eine Anfrage ist an jedem vierzehnten Kalendertag nach Beginn des ersten Trades auf dem finanzierten Konto möglich. Wird dieser Tag verpasst, muss man weitere 14 Kalendertage warten. Anfragen müssen vor 17:00 Uhr britischer Zeit eingereicht werden. Auszahlungen auf Abruf sind nur bei VIP Spot möglich.",
+      "it": "Tutti i conti finanziati con prelievi ogni 14 giorni: la richiesta è possibile ogni quattordicesimo giorno di calendario a partire dalla prima operazione sul conto finanziato. Se si salta quel giorno bisogna attendere altri 14 giorni di calendario. Le richieste vanno presentate prima delle 17:00, ora britannica. Prelievi su richiesta solo con VIP Spot."
     }
   },
   {
@@ -546,7 +556,8 @@
     "translations": {
       "fr": "Les comportements abusifs, non reproductibles, manipulateurs, trompeurs, non conformes ou autrement interdits peuvent entraîner retard ou refus de paiement, ou fermeture du compte après contrôle des risques ou de conformité.",
       "es": "La conducta prohibida comprende comportamientos abusivos, no reproducibles, manipuladores, engañosos, contrarios a las normas o prohibidos por otros motivos, y puede dar lugar a retrasos o rechazos de retiros o al cierre de la cuenta tras una revisión de Riesgos o Cumplimiento.",
-      "de": "Verbotenes Verhalten umfasst missbräuchliches, nicht reproduzierbares, manipulatives, irreführendes, regelwidriges oder sonst verbotenes Verhalten und kann nach einer Risiko- oder Compliance-Prüfung zu verzögerten oder abgelehnten Auszahlungen oder einer Kontoschließung führen."
+      "de": "Verbotenes Verhalten umfasst missbräuchliches, nicht reproduzierbares, manipulatives, irreführendes, regelwidriges oder sonst verbotenes Verhalten und kann nach einer Risiko- oder Compliance-Prüfung zu verzögerten oder abgelehnten Auszahlungen oder einer Kontoschließung führen.",
+      "it": "La condotta vietata comprende comportamenti abusivi, non riproducibili, manipolatori, ingannevoli, non conformi o altrimenti vietati; può determinare ritardi, rifiuto dei prelievi o chiusura del conto dopo una revisione di Risk o Compliance."
     }
   },
   {
@@ -556,7 +567,8 @@
     "translations": {
       "fr": "Les modifications de conformité, risque, sécurité, fraude, stratégies interdites et intégrité de la plateforme peuvent s'appliquer immédiatement aux comptes existants si Finotive le juge nécessaire.",
       "es": "Las actualizaciones relativas a cumplimiento, riesgos, seguridad, fraude, estrategias prohibidas e integridad de la plataforma pueden aplicarse inmediatamente a las cuentas existentes cuando Finotive lo considere necesario.",
-      "de": "Aktualisierungen zu Compliance, Risiko, Sicherheit, Betrug, verbotenen Strategien und Plattformintegrität können unmittelbar für bestehende Konten gelten, wenn Finotive dies für erforderlich hält."
+      "de": "Aktualisierungen zu Compliance, Risiko, Sicherheit, Betrug, verbotenen Strategien und Plattformintegrität können unmittelbar für bestehende Konten gelten, wenn Finotive dies für erforderlich hält.",
+      "it": "Gli aggiornamenti riguardanti conformità, rischio, sicurezza, frode, strategie vietate e integrità della piattaforma possono applicarsi immediatamente ai conti esistenti quando Finotive lo ritiene necessario."
     }
   },
   {
@@ -566,7 +578,8 @@
     "translations": {
       "fr": "Les pratiques de jeu d'argent ou non durables contraires à l'approche systématique, cohérente et de long terme recherchée peuvent faire perdre tout droit à récompense. L'entrée dans la phase financée virtuelle peut être refusée ; Fintokei décline toute responsabilité pour un refus avec ou sans motif.",
       "es": "Las prácticas prohibidas incluyen las apuestas o prácticas insostenibles, es decir, formas de operar contrarias al enfoque sistemático, consistente y a largo plazo que busca la empresa. En ese caso no se tiene derecho a ningún pago de recompensa de rendimiento. Se puede denegar el acceso a la fase financiada virtualmente y la empresa no asume responsabilidad por el rechazo, con o sin motivo.",
-      "de": "Verbotene Praktiken umfassen Glücksspiel oder nicht nachhaltige Praktiken, die dem vom Unternehmen gewünschten systematischen, konsistenten und langfristigen Ansatz widersprechen. In diesem Fall besteht kein Anspruch auf Erfolgsvergütungen. Der Zugang zur virtuell finanzierten Phase kann verweigert werden; das Unternehmen haftet nicht für eine Ablehnung mit oder ohne Grund."
+      "de": "Verbotene Praktiken umfassen Glücksspiel oder nicht nachhaltige Praktiken, die dem vom Unternehmen gewünschten systematischen, konsistenten und langfristigen Ansatz widersprechen. In diesem Fall besteht kein Anspruch auf Erfolgsvergütungen. Der Zugang zur virtuell finanzierten Phase kann verweigert werden; das Unternehmen haftet nicht für eine Ablehnung mit oder ohne Grund.",
+      "it": "Le pratiche vietate comprendono gioco d'azzardo o pratiche non sostenibili, contrarie all'approccio sistematico, coerente e di lungo periodo ricercato dalla società. In tal caso non si ha diritto ad alcuna ricompensa di performance. L'accesso alla fase virtualmente finanziata può essere rifiutato e la società non è responsabile del rifiuto, con o senza motivo."
     }
   },
   {
@@ -576,7 +589,8 @@
     "translations": {
       "fr": "Fintokei peut imposer à tout compte démo actif des règles de régularité (plafond de gain ou perte quotidienne, levier ou lots réduits, stop-loss obligatoire, restriction des news). Elles peuvent rester applicables indéfiniment et même aux nouveaux challenges achetés.",
       "es": "Para restringir las operaciones prohibidas, la empresa puede aplicar reglas de consistencia (limitar beneficios o pérdidas diarios, reducir el apalancamiento, limitar la exposición en lotes, exigir órdenes stop-loss o restringir las operaciones durante noticias) a cualquiera o a todas las cuentas demo activas de Fintokei. Pueden mantenerse indefinidamente y aplicarse incluso a nuevos challenges adquiridos.",
-      "de": "Zur Einschränkung verbotenen Handels kann das Unternehmen Konsistenzregeln (tägliche Gewinn- oder Verlustlimits, reduzierter Hebel, Begrenzung der Lot-Exposition, Pflicht zu Stop-Loss-Orders, Beschränkung des Nachrichtenhandels) auf einzelne oder alle aktiven Fintokei-Demokonten anwenden. Sie können auf unbestimmte Zeit und sogar für neu erworbene Fintokei-Challenges gelten."
+      "de": "Zur Einschränkung verbotenen Handels kann das Unternehmen Konsistenzregeln (tägliche Gewinn- oder Verlustlimits, reduzierter Hebel, Begrenzung der Lot-Exposition, Pflicht zu Stop-Loss-Orders, Beschränkung des Nachrichtenhandels) auf einzelne oder alle aktiven Fintokei-Demokonten anwenden. Sie können auf unbestimmte Zeit und sogar für neu erworbene Fintokei-Challenges gelten.",
+      "it": "Per limitare il trading vietato la società può imporre regole di consistenza (limiti a profitti o perdite giornalieri, riduzione della leva, limite di esposizione in lotti, obbligo di stop loss, restrizioni durante le notizie) a uno o tutti i conti demo Fintokei attivi. Possono restare in vigore a tempo indeterminato e applicarsi anche a nuove challenge Fintokei acquistate."
     }
   },
   {
@@ -586,7 +600,8 @@
     "translations": {
       "fr": "Tous programmes : les conditions V17 art. V.5 autorisent un contrôle de l'activité avant chaque récompense, avec détection automatisée (art. V.4). Une sanction n'est retirée que si le client démontre le contraire au-delà de tout doute raisonnable. L'aide annonce pourtant une approbation automatique en quelques secondes, par opposition aux contrôles manuels…",
       "es": "Todos los programas Fintokei — revisión previa al retiro: condiciones generales V17, art. V.5: antes de tramitar cualquier recompensa de rendimiento, la empresa puede revisar las operaciones, con detección automatizada de prácticas prohibidas (art. V.4). Las sanciones solo se retiran si el cliente puede demostrar lo contrario más allá de toda duda razonable. El artículo de ayuda «¿Cuándo recibiré mi pago?» afirma que las solicitudes se aprueban automáticamente en segundos y lo contrapone a las revisiones manuales…",
-      "de": "Alle Fintokei-Programme — Prüfung vor Auszahlung: Allgemeine Bedingungen V17 Art. V.5: Das Unternehmen kann die Handelsaktivität vor jeder Erfolgsvergütung prüfen, einschließlich automatisierter Erkennung verbotener Praktiken (Art. V.4). Sanktionen werden nur zurückgenommen, wenn der Kunde das Gegenteil zweifelsfrei nachweisen kann. Der Hilfeartikel zur Auszahlungsdauer bezeichnet Anfragen als automatisch binnen Sekunden genehmigt und stellt dies manuellen Prüfungen gegenüber…"
+      "de": "Alle Fintokei-Programme — Prüfung vor Auszahlung: Allgemeine Bedingungen V17 Art. V.5: Das Unternehmen kann die Handelsaktivität vor jeder Erfolgsvergütung prüfen, einschließlich automatisierter Erkennung verbotener Praktiken (Art. V.4). Sanktionen werden nur zurückgenommen, wenn der Kunde das Gegenteil zweifelsfrei nachweisen kann. Der Hilfeartikel zur Auszahlungsdauer bezeichnet Anfragen als automatisch binnen Sekunden genehmigt und stellt dies manuellen Prüfungen gegenüber…",
+      "it": "Tutti i programmi Fintokei — revisione prima del prelievo: condizioni generali V17, art. V.5: prima di elaborare una ricompensa di performance, la società può verificare l'attività di trading con rilevamento automatizzato delle pratiche vietate (art. V.4). Le sanzioni vengono revocate solo se il cliente dimostra il contrario oltre ogni ragionevole dubbio. L'articolo di assistenza sui tempi di pagamento afferma che le richieste vengono approvate automaticamente in pochi secondi, contrapponendole alle revisioni manuali…"
     }
   },
   {
@@ -596,7 +611,8 @@
     "translations": {
       "fr": "La plateforme se réserve le droit de déterminer à sa discrétion la nature des comportements interdits et les limites raisonnables de cette appréciation. Elle peut sanctionner une violation même découverte des semaines ou mois plus tard.",
       "es": "La plataforma se reserva el derecho de determinar a su discreción la naturaleza de los comportamientos relacionados con las prácticas de negociación prohibidas y los límites razonables de esa determinación. Puede actuar ante cualquier infracción independientemente del momento en que se descubra, incluso semanas o meses después, a su exclusiva discreción.",
-      "de": "Die Plattform behält sich vor, nach eigenem Ermessen die Art des mit verbotenen Handelspraktiken verbundenen Verhaltens und angemessene Grenzen dieser Einstufung zu bestimmen. Sie kann nach alleinigem Ermessen gegen jeden Verstoß vorgehen, unabhängig davon, wann er entdeckt wird, selbst Wochen oder Monate später."
+      "de": "Die Plattform behält sich vor, nach eigenem Ermessen die Art des mit verbotenen Handelspraktiken verbundenen Verhaltens und angemessene Grenzen dieser Einstufung zu bestimmen. Sie kann nach alleinigem Ermessen gegen jeden Verstoß vorgehen, unabhängig davon, wann er entdeckt wird, selbst Wochen oder Monate später.",
+      "it": "La piattaforma si riserva il diritto di determinare a propria discrezione la natura dei comportamenti associati alle pratiche di trading vietate e i limiti ragionevoli di tale determinazione. Può intervenire per qualsiasi violazione, indipendentemente dal momento in cui viene scoperta, anche settimane o mesi dopo, a sua esclusiva discrezione."
     }
   },
   {
@@ -606,7 +622,8 @@
     "translations": {
       "fr": "§13.4 : les règles du Master Account sont communiquées par contrat distinct et/ou courriel, non publié avec les conditions.",
       "es": "§13.4: las reglas de la cuenta Master se comunican mediante un contrato separado o por correo electrónico, o por ambos medios, y no se publican en las condiciones.",
-      "de": "§13.4: Die Regeln für das Master-Konto werden in einem separaten Vertrag und/oder per E-Mail mitgeteilt; sie werden nicht in den Bedingungen veröffentlicht."
+      "de": "§13.4: Die Regeln für das Master-Konto werden in einem separaten Vertrag und/oder per E-Mail mitgeteilt; sie werden nicht in den Bedingungen veröffentlicht.",
+      "it": "§13.4: le regole del conto Master sono comunicate tramite contratto separato e/o e-mail, e non sono pubblicate nelle condizioni."
     }
   },
   {
@@ -658,7 +675,8 @@
     "translations": {
       "fr": "La Performance Reward est définie comme une somme que le prestataire peut rendre disponible à sa seule discrétion, sans droit acquis. Jusqu'au paiement effectif, il peut la réviser, ajuster, retenir, refuser ou annuler, notamment pour incohérences techniques ou opérationnelles. L'accès financé est révocable et ne garantit aucun futur paiement.",
       "es": "La recompensa de rendimiento se define como cualquier importe que el proveedor pueda poner a disposición a su exclusiva discreción y no constituye un derecho adquirido. En cualquier momento antes del pago efectivo, el proveedor puede revisar, ajustar, retener, rechazar o cancelar las recompensas, incluso por inconsistencias técnicas u operativas. El acceso a la fase financiada es revocable a discreción del proveedor y no genera ningún derecho adquirido ni garantía de pagos futuros.",
-      "de": "Eine Erfolgsvergütung ist als Betrag definiert, den der Anbieter nach alleinigem Ermessen bereitstellen kann; sie stellt keinen erworbenen Anspruch dar. Bis zur tatsächlichen Zahlung kann der Anbieter Vergütungen prüfen, anpassen, zurückhalten, ablehnen oder annullieren, auch bei technischen oder betrieblichen Unstimmigkeiten. Der finanzierte Zugang ist nach Ermessen des Anbieters widerruflich und begründet weder erworbene Ansprüche noch eine Garantie künftiger Zahlungen."
+      "de": "Eine Erfolgsvergütung ist als Betrag definiert, den der Anbieter nach alleinigem Ermessen bereitstellen kann; sie stellt keinen erworbenen Anspruch dar. Bis zur tatsächlichen Zahlung kann der Anbieter Vergütungen prüfen, anpassen, zurückhalten, ablehnen oder annullieren, auch bei technischen oder betrieblichen Unstimmigkeiten. Der finanzierte Zugang ist nach Ermessen des Anbieters widerruflich und begründet weder erworbene Ansprüche noch eine Garantie künftiger Zahlungen.",
+      "it": "La ricompensa di performance è definita come qualsiasi importo che il fornitore può mettere a disposizione a sua esclusiva discrezione e non costituisce un diritto acquisito. Prima del pagamento effettivo il fornitore può in qualsiasi momento riesaminare, adeguare, trattenere, rifiutare o annullare le ricompense, anche per incongruenze tecniche o operative. L'accesso finanziato è revocabile a discrezione del fornitore e non crea diritti acquisiti né garanzia di pagamenti futuri."
     }
   },
   {
@@ -668,7 +686,8 @@
     "translations": {
       "fr": "Quick Strike (trades clôturés en moins de 30 secondes) : à partir de 30 % des trades, après avertissement à 20 %, 100 % des profits concernés sont déduits de la récompense et le compte est résilié si le taux reste au moins à 30 % en fin de cycle. News importantes ±5 minutes : seuls 40 % des profits des trades gagnants sont comptés.",
       "es": "Quick Strike (operaciones cerradas en 30 segundos): si representan el 30 % o más de las operaciones, tras una advertencia al alcanzar el 20 %, se deduce el 100 % de sus beneficios de la recompensa de rendimiento y se cierra la cuenta si al final del ciclo el porcentaje sigue siendo igual o superior al 30 %. Ventana de noticias de alto impacto (±5 minutos): solo se contabiliza el 40 % del beneficio de las operaciones ganadoras.",
-      "de": "Quick Strike (Trades innerhalb von 30 Sekunden geschlossen): Ab 30 % solcher Trades nach einer Warnung bei 20 % werden 100 % ihrer Gewinne von der Erfolgsvergütung abgezogen. Das Konto wird geschlossen, wenn die Quote am Zyklusende weiterhin mindestens 30 % beträgt. Nachrichtenfenster (±5 Minuten bei wichtigen Nachrichten): Nur 40 % des Gewinns profitabler Trades zählen."
+      "de": "Quick Strike (Trades innerhalb von 30 Sekunden geschlossen): Ab 30 % solcher Trades nach einer Warnung bei 20 % werden 100 % ihrer Gewinne von der Erfolgsvergütung abgezogen. Das Konto wird geschlossen, wenn die Quote am Zyklusende weiterhin mindestens 30 % beträgt. Nachrichtenfenster (±5 Minuten bei wichtigen Nachrichten): Nur 40 % des Gewinns profitabler Trades zählen.",
+      "it": "Quick Strike (operazioni chiuse entro 30 secondi): se rappresentano almeno il 30% delle operazioni, dopo un avvertimento al 20%, il 100% dei relativi profitti viene detratto dalla ricompensa di performance. Il conto viene chiuso se la quota resta almeno al 30% alla fine del ciclo. Finestra delle notizie ad alto impatto (±5 minuti): conta solo il 40% dei profitti delle operazioni vincenti."
     }
   },
   {
@@ -678,7 +697,8 @@
     "translations": {
       "fr": "La clause de non-dénigrement couvre diffamation, discrédit, dénigrement, atteinte à la réputation et propagande négative sur les réseaux, forums, sites d'avis, tickets et courriels, y compris affirmer que la firme ne paie pas sans base factuelle vérifiable. Une violation permet de retenir, refuser ou annuler les récompenses.",
       "es": "Cláusula de no denigración que abarca la difamación, el descrédito, la denigración, los ataques reputacionales y la propaganda negativa en redes sociales, foros, plataformas de reseñas, tickets de soporte y correos electrónicos, incluida la afirmación de que la empresa «no paga» sin fundamento fáctico verificable. Su incumplimiento permite retener, rechazar o cancelar recompensas de rendimiento.",
-      "de": "Herabsetzungsklausel für Verleumdung, Diskreditierung, Herabwürdigung, Rufschädigung oder negative Propaganda in sozialen Medien, Foren, Bewertungsplattformen, Support-Tickets und E-Mails, einschließlich der Behauptung, das Unternehmen zahle nicht, ohne überprüfbare Tatsachengrundlage. Verstöße erlauben das Zurückhalten, Ablehnen oder Annullieren von Erfolgsvergütungen."
+      "de": "Herabsetzungsklausel für Verleumdung, Diskreditierung, Herabwürdigung, Rufschädigung oder negative Propaganda in sozialen Medien, Foren, Bewertungsplattformen, Support-Tickets und E-Mails, einschließlich der Behauptung, das Unternehmen zahle nicht, ohne überprüfbare Tatsachengrundlage. Verstöße erlauben das Zurückhalten, Ablehnen oder Annullieren von Erfolgsvergütungen.",
+      "it": "Clausola di non denigrazione relativa a diffamazione, discredito, denigrazione, attacchi reputazionali o propaganda negativa su social media, forum, piattaforme di recensioni, ticket di assistenza ed e-mail, incluso affermare che la società non paga senza una base fattuale verificabile. La violazione consente di trattenere, rifiutare o annullare le ricompense di performance."
     }
   },
   {
@@ -688,7 +708,8 @@
     "translations": {
       "fr": "Tous programmes Stellar : les comportements assimilés au jeu (levier ou risque excessif, style non reproductible) sont traités au titre du risque selon des indices tels que pertes supérieures aux gains moyens, violations de plusieurs comptes rapidement ou objectifs irréalistes. Le trader doit choisir les récompenses à la demande avec régularité de 40 %, ou un partage ajusté dont le taux n'est pas précisé ; la mesure s'applique à tous…",
       "es": "Todos los programas Stellar — conducta de juego de azar: el parámetro de riesgo abarca conductas como el apalancamiento o riesgo excesivo y los estilos de negociación no reproducibles, identificados mediante indicadores como pérdidas superiores a las ganancias medias, incumplimientos en varias cuentas en poco tiempo u objetivos poco realistas. El operador debe elegir entre recompensas de rendimiento bajo demanda con una regla de consistencia del 40 % o un reparto de beneficios ajustado (porcentaje no especificado); la regla se aplica a todos…",
-      "de": "Alle Stellar-Programme — Glücksspielverhalten: Übermäßiger Hebel, übermäßiges Risiko und nicht reproduzierbare Handelsstile werden unter dem Risikoparameter anhand von Indikatoren wie Verlusten über den Durchschnittsgewinnen, Verstößen auf mehreren Konten in kurzer Zeit oder unrealistischen Zielen erfasst. Der Trader muss zwischen Erfolgsvergütungen auf Abruf mit einer 40-%-Konsistenzregel und einer angepassten Gewinnaufteilung (Prozentsatz nicht angegeben) wählen; die Regel gilt über alle…"
+      "de": "Alle Stellar-Programme — Glücksspielverhalten: Übermäßiger Hebel, übermäßiges Risiko und nicht reproduzierbare Handelsstile werden unter dem Risikoparameter anhand von Indikatoren wie Verlusten über den Durchschnittsgewinnen, Verstößen auf mehreren Konten in kurzer Zeit oder unrealistischen Zielen erfasst. Der Trader muss zwischen Erfolgsvergütungen auf Abruf mit einer 40-%-Konsistenzregel und einer angepassten Gewinnaufteilung (Prozentsatz nicht angegeben) wählen; die Regel gilt über alle…",
+      "it": "Tutti i programmi Stellar — condotta assimilata al gioco d'azzardo: leva o rischio eccessivi e stili di trading non riproducibili sono gestiti mediante il parametro Risk e individuati tramite indicatori quali perdite superiori alle vincite medie, violazioni su più conti in breve tempo o obiettivi irrealistici. Il trader deve scegliere tra ricompense di performance su richiesta con una regola di consistenza del 40% o una ripartizione dei profitti modificata (percentuale non indicata); la regola si applica a tutti…"
     }
   },
   {
@@ -698,7 +719,8 @@
     "translations": {
       "fr": "La Reserve Bank of India a ajouté FundedNext (fundednext.com) à sa liste d'alerte des plateformes Forex non autorisées par communiqué du 22 octobre 2024 (2024-2025/1351). La RBI précise que la liste n'est pas exhaustive.",
       "es": "El Banco de Reserva de la India (RBI) añadió «FundedNext | https://fundednext.com» a su lista de alerta de plataformas de negociación de divisas no autorizadas mediante un comunicado del 22/10/2024 (comunicado 2024-2025/1351, https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949). El RBI indica que la lista no es exhaustiva.",
-      "de": "Die Reserve Bank of India nahm «FundedNext | https://fundednext.com» in einer Pressemitteilung vom 22.10.2024 in ihre Warnliste nicht autorisierter Devisenhandelsplattformen auf (Pressemitteilung 2024-2025/1351, https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949). Laut RBI ist die Liste nicht abschließend."
+      "de": "Die Reserve Bank of India nahm «FundedNext | https://fundednext.com» in einer Pressemitteilung vom 22.10.2024 in ihre Warnliste nicht autorisierter Devisenhandelsplattformen auf (Pressemitteilung 2024-2025/1351, https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949). Laut RBI ist die Liste nicht abschließend.",
+      "it": "La Reserve Bank of India ha aggiunto «FundedNext | https://fundednext.com» alla propria lista di allerta delle piattaforme forex non autorizzate in un comunicato del 22/10/2024 (comunicato 2024-2025/1351, https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949). Secondo la RBI, la lista non è esaustiva."
     }
   },
   {
@@ -708,7 +730,8 @@
     "translations": {
       "fr": "La société se réserve le droit de déterminer à sa discrétion quelles opérations, pratiques, stratégies ou situations sont interdites, puis de retirer des trades, imposer de nouvelles restrictions ou résilier. La politique de trading responsable permet de refuser les honoraires si le trader est jugé irresponsable ; l'annexe prévoit notamment la suppression des profits issus d'activités interdites…",
       "es": "La empresa se reserva el derecho de determinar a su discreción qué operaciones, prácticas, estrategias o situaciones constituyen prácticas prohibidas. Puede deducir operaciones, imponer nuevas restricciones o resolver el contrato. La política de negociación responsable añade que se pueden denegar los honorarios de rendimiento si se determina que el operador no opera de forma responsable; el anexo de prácticas prohibidas contempla la eliminación de los beneficios atribuibles a la actividad prohibida y…",
-      "de": "Das Unternehmen behält sich vor, nach eigenem Ermessen zu bestimmen, welche Trades, Praktiken, Strategien oder Situationen verbotene Handelspraktiken darstellen. Es kann Trades abziehen, neue Einschränkungen auferlegen oder den Vertrag beenden. Laut Richtlinie für verantwortungsvollen Handel können Erfolgsvergütungen verweigert werden, wenn der Trader als nicht verantwortungsvoll handelnd eingestuft wird. Der Anhang zu verbotenen Praktiken nennt das Entfernen der auf verbotene Aktivitäten zurückzuführenden Gewinne und…"
+      "de": "Das Unternehmen behält sich vor, nach eigenem Ermessen zu bestimmen, welche Trades, Praktiken, Strategien oder Situationen verbotene Handelspraktiken darstellen. Es kann Trades abziehen, neue Einschränkungen auferlegen oder den Vertrag beenden. Laut Richtlinie für verantwortungsvollen Handel können Erfolgsvergütungen verweigert werden, wenn der Trader als nicht verantwortungsvoll handelnd eingestuft wird. Der Anhang zu verbotenen Praktiken nennt das Entfernen der auf verbotene Aktivitäten zurückzuführenden Gewinne und…",
+      "it": "La società si riserva il diritto di determinare a propria discrezione quali operazioni, pratiche, strategie o situazioni costituiscano pratiche di trading vietate. Può dedurre operazioni, imporre nuove restrizioni o risolvere il contratto. La politica di trading responsabile aggiunge che le commissioni di performance possono essere negate se il trader non è ritenuto responsabile nel trading; l'allegato sulle pratiche vietate prevede la rimozione dei profitti attribuibili ad attività vietate e…"
     }
   },
   {
@@ -718,7 +741,8 @@
     "translations": {
       "fr": "Les utilisateurs doivent participer aux entretiens obligatoires d'évaluation du risque. Le non-respect peut entraîner la rétention de la rémunération et la résiliation des services.",
       "es": "Los usuarios deben participar en entrevistas obligatorias de evaluación del riesgo. El incumplimiento de esta obligación puede llevar a la retención de la remuneración y a la terminación de los servicios.",
-      "de": "Nutzer müssen an verpflichtenden Risikobewertungsgesprächen teilnehmen. Bei Nichterfüllung kann die Vergütung zurückgehalten und die Dienstleistung beendet werden."
+      "de": "Nutzer müssen an verpflichtenden Risikobewertungsgesprächen teilnehmen. Bei Nichterfüllung kann die Vergütung zurückgehalten und die Dienstleistung beendet werden.",
+      "it": "Gli utenti devono partecipare a colloqui obbligatori di valutazione del rischio. Il mancato rispetto può comportare la sospensione della remunerazione e la cessazione dei servizi."
     }
   },
   {
@@ -728,7 +752,8 @@
     "translations": {
       "fr": "FXIFY peut qualifier tout trading d'interdit à sa seule discrétion (liste modifiable avec préavis de sept jours), déterminer les pratiques interdites, supprimer les résultats, invalider le compte ou résilier tous les contrats, y compris les comptes FXIFY Trader selon §§5.6–5.7.",
       "es": "Las prácticas prohibidas incluyen cualquier operación que FXIFY considere prohibida a su exclusiva discreción (lista modificable con siete días de preaviso). FXIFY se reserva el derecho de determinar a su discreción qué operaciones, prácticas, estrategias o situaciones están prohibidas y puede eliminar sus resultados, declarar la cuenta no superada o resolver todos los contratos (también las cuentas FXIFY Trader conforme a los apartados 5.6–5.7).",
-      "de": "Verbotene Praktiken umfassen jeden Handel, der nach alleinigem Ermessen von FXIFY als verboten gilt (Liste mit sieben Tagen Vorankündigung änderbar). FXIFY behält sich vor, nach eigenem Ermessen zu bestimmen, welche Trades, Praktiken, Strategien oder Situationen verboten sind, und kann deren Ergebnisse entfernen, das Konto als nicht bestanden einstufen oder alle Verträge beenden (auch FXIFY Trader-Konten nach 5.6–5.7)."
+      "de": "Verbotene Praktiken umfassen jeden Handel, der nach alleinigem Ermessen von FXIFY als verboten gilt (Liste mit sieben Tagen Vorankündigung änderbar). FXIFY behält sich vor, nach eigenem Ermessen zu bestimmen, welche Trades, Praktiken, Strategien oder Situationen verboten sind, und kann deren Ergebnisse entfernen, das Konto als nicht bestanden einstufen oder alle Verträge beenden (auch FXIFY Trader-Konten nach 5.6–5.7).",
+      "it": "Le pratiche vietate comprendono qualsiasi operazione considerata vietata a esclusiva discrezione di FXIFY (lista modificabile con sette giorni di preavviso). FXIFY si riserva il diritto di determinare a propria discrezione quali operazioni, pratiche, strategie o situazioni siano vietate e può rimuoverne i risultati, dichiarare il conto non superato o risolvere tutti i contratti (anche per i conti FXIFY Trader ai sensi dei §§5.6–5.7)."
     }
   },
   {
@@ -738,7 +763,8 @@
     "translations": {
       "fr": "Les traders financés acceptent les règles de gestion des risques et du programme, telles qu'elles peuvent être modifiées par la Prop Company et communiquées par courriel ; toute violation entraîne la fermeture du compte.",
       "es": "Los operadores financiados aceptan las reglas de gestión del riesgo y del programa tal como se establecen y como The Prop Company pueda modificarlas periódicamente y comunicárselas por correo electrónico. Cualquier incumplimiento de estas reglas provoca el cierre de la cuenta.",
-      "de": "Finanzierte Trader akzeptieren die Risikomanagement- und Programmregeln in ihrer festgelegten Fassung sowie spätere Änderungen durch The Prop Company, die ihnen per E-Mail zugesandt werden. Jeder Verstoß führt zur Kontoschließung."
+      "de": "Finanzierte Trader akzeptieren die Risikomanagement- und Programmregeln in ihrer festgelegten Fassung sowie spätere Änderungen durch The Prop Company, die ihnen per E-Mail zugesandt werden. Jeder Verstoß führt zur Kontoschließung.",
+      "it": "I trader finanziati accettano le regole di gestione del rischio e del programma nella versione stabilita e come eventualmente modificate da The Prop Company e comunicate via e-mail. Qualsiasi violazione comporta la chiusura del conto."
     }
   },
   {
@@ -748,7 +774,8 @@
     "translations": {
       "fr": "Le User Agreement, §5 (page modifiée le 25 mars 2025), limite les demandes de retrait à une tous les 30 jours, alors que les offres actuelles prévoient des cycles plus courts, par exemple dix jours pour 2-Phase Pro. Le contrat ne précise pas les programmes visés par la limite de 30 jours.",
       "es": "Cuentas financiadas — frecuencia de retiro en el contrato del operador: el contrato de usuario (sección 5, página modificada el 25/03/2025) establece que los retiros no pueden solicitarse más de una vez cada 30 días, mientras que la documentación actual de FXIFY describe ciclos más cortos (por ejemplo, retiros cada diez días en 2-Phase Pro). El contrato no especifica a qué programas se aplica el límite de 30 días.",
-      "de": "Finanzierte Konten — Auszahlungsfrequenz im Trader-Vertrag: Der Nutzervertrag (Abschnitt 5, Seite geändert am 25.03.2025) erlaubt Auszahlungsanfragen höchstens einmal alle 30 Tage, während aktuelle Programmunterlagen von FXIFY kürzere Zyklen nennen (z. B. zehn Tage bei 2-Phase Pro). Der Vertrag legt nicht fest, für welche Programme die 30-Tage-Grenze gilt."
+      "de": "Finanzierte Konten — Auszahlungsfrequenz im Trader-Vertrag: Der Nutzervertrag (Abschnitt 5, Seite geändert am 25.03.2025) erlaubt Auszahlungsanfragen höchstens einmal alle 30 Tage, während aktuelle Programmunterlagen von FXIFY kürzere Zyklen nennen (z. B. zehn Tage bei 2-Phase Pro). Der Vertrag legt nicht fest, für welche Programme die 30-Tage-Grenze gilt.",
+      "it": "Conti finanziati — frequenza dei prelievi nel contratto del trader: il contratto utente (sezione 5, pagina modificata il 25/03/2025) prevede richieste al massimo una volta ogni 30 giorni, mentre la documentazione attuale di FXIFY indica cicli più brevi (ad es. dieci giorni per 2-Phase Pro). Il contratto non specifica i programmi cui si applica il limite di 30 giorni."
     }
   },
   {
@@ -758,7 +785,8 @@
     "translations": {
       "fr": "La meilleure journée ne doit pas dépasser 20 % des profits totaux avant une demande de récompense. La demande est reportée jusqu'au retour sous ce seuil.",
       "es": "El día de mayor beneficio no puede superar el 20 % del beneficio total antes de solicitar una recompensa. La solicitud se aplaza hasta que la proporción quede por debajo del límite.",
-      "de": "Der beste Handelstag darf vor einer Vergütungsanfrage höchstens 20 % des Gesamtgewinns ausmachen; die Anfrage wird verzögert, bis der Anteil unter die Grenze fällt."
+      "de": "Der beste Handelstag darf vor einer Vergütungsanfrage höchstens 20 % des Gesamtgewinns ausmachen; die Anfrage wird verzögert, bis der Anteil unter die Grenze fällt.",
+      "it": "Il giorno con il profitto maggiore non può superare il 20% del profitto totale prima della richiesta di ricompensa. La richiesta viene rinviata finché la quota non scende al di sotto del limite."
     }
   },
   {
@@ -768,7 +796,8 @@
     "translations": {
       "fr": "GOAT peut exclure tout trader pour tout motif à sa seule et absolue discrétion ; plusieurs pratiques interdites sont définies par son appréciation, avec perte des profits ou paiements associés.",
       "es": "GOAT puede impedir o bloquear la participación de cualquier operador en el programa por cualquier motivo a su exclusiva y absoluta discreción. Varias prácticas prohibidas se determinan a la exclusiva y absoluta discreción de la empresa, con pérdida de los beneficios o retiros asociados.",
-      "de": "GOAT kann jeden Trader aus beliebigem Grund nach alleinigem und uneingeschränktem Ermessen von der Programmteilnahme ausschließen oder blockieren. Mehrere verbotene Praktiken werden nach alleinigem und uneingeschränktem Ermessen des Unternehmens bestimmt, mit Verlust der zugehörigen Gewinne oder Auszahlungen."
+      "de": "GOAT kann jeden Trader aus beliebigem Grund nach alleinigem und uneingeschränktem Ermessen von der Programmteilnahme ausschließen oder blockieren. Mehrere verbotene Praktiken werden nach alleinigem und uneingeschränktem Ermessen des Unternehmens bestimmt, mit Verlust der zugehörigen Gewinne oder Auszahlungen.",
+      "it": "GOAT può impedire o bloccare la partecipazione di qualsiasi trader al programma per qualsiasi motivo a sua esclusiva e assoluta discrezione. Diverse pratiche vietate sono determinate a esclusiva e assoluta discrezione della società, con perdita dei profitti o prelievi associati."
     }
   },
   {
@@ -778,7 +807,8 @@
     "translations": {
       "fr": "Trades clôturés avant la durée minimale : leurs profits sont exclus du calcul du paiement, tandis que les pertes restent comptabilisées.",
       "es": "Operaciones cerradas antes del tiempo mínimo de mantenimiento: sus beneficios no se incluyen en el cálculo del retiro, mientras que las pérdidas sí se contabilizan.",
-      "de": "Trades, die vor Ablauf der Mindesthaltedauer geschlossen werden: Ihre Gewinne werden bei der Auszahlungsberechnung nicht berücksichtigt, während Verluste weiterhin zählen."
+      "de": "Trades, die vor Ablauf der Mindesthaltedauer geschlossen werden: Ihre Gewinne werden bei der Auszahlungsberechnung nicht berücksichtigt, während Verluste weiterhin zählen.",
+      "it": "Operazioni chiuse prima del tempo minimo di mantenimento: i relativi profitti sono esclusi dal calcolo dei prelievi, mentre le perdite continuano a essere conteggiate."
     }
   },
   {
@@ -788,7 +818,8 @@
     "translations": {
       "fr": "Programmes GOAT financés : le guide fixe un plafond quotidien de profits de 3 000 $ (excédent supprimé), des plafonds propres à chaque modèle pour les deux premières récompenses et des frais de traitement de 3 %.",
       "es": "Programas GOAT — solicitudes de recompensa en fase financiada: la guía de retiros establece un límite diario de beneficio de 3.000 USD (el exceso se elimina), límites específicos por modelo para las dos primeras recompensas y una comisión de tramitación del 3 %.",
-      "de": "GOAT-Programme — Auszahlungsanfragen in der finanzierten Phase: Der Auszahlungsleitfaden legt eine tägliche Gewinngrenze von 3.000 USD fest (Überschüsse werden entfernt), modellspezifische Limits für die ersten beiden Vergütungen sowie eine Bearbeitungsgebühr von 3 %."
+      "de": "GOAT-Programme — Auszahlungsanfragen in der finanzierten Phase: Der Auszahlungsleitfaden legt eine tägliche Gewinngrenze von 3.000 USD fest (Überschüsse werden entfernt), modellspezifische Limits für die ersten beiden Vergütungen sowie eine Bearbeitungsgebühr von 3 %.",
+      "it": "Programmi GOAT — richieste di ricompensa in fase finanziata: la guida ai prelievi stabilisce un tetto giornaliero di profitto di 3.000 USD (l'eccedenza viene rimossa), tetti specifici per modello per le prime due ricompense e una commissione di elaborazione del 3%."
     }
   },
   {
@@ -798,7 +829,8 @@
     "translations": {
       "fr": "Programmes GOAT achetés après le 8 octobre 2026 : avant de demander une récompense, le plus gros trade gagnant doit être au moins égal au plus gros trade perdant. Ce critère d'éligibilité n'est pas en lui-même une violation du compte.",
       "es": "Programas GOAT adquiridos después del 8/10/2026: antes de solicitar una recompensa, la mayor operación ganadora debe ser al menos igual a la mayor operación perdedora. Esta prueba de elegibilidad no constituye por sí misma una infracción de la cuenta.",
-      "de": "GOAT-Programme — nach dem 8. Oktober 2026 erworben: Vor einer Vergütungsanfrage muss der größte Gewinntrade mindestens so groß sein wie der größte Verlusttrade. Diese Teilnahmevoraussetzung ist für sich genommen kein Kontoverstoß."
+      "de": "GOAT-Programme — nach dem 8. Oktober 2026 erworben: Vor einer Vergütungsanfrage muss der größte Gewinntrade mindestens so groß sein wie der größte Verlusttrade. Diese Teilnahmevoraussetzung ist für sich genommen kein Kontoverstoß.",
+      "it": "Programmi GOAT acquistati dopo l'8 ottobre 2026: prima di richiedere una ricompensa, il maggiore profitto su una singola operazione deve essere almeno pari alla maggiore perdita su una singola operazione. Questo requisito di idoneità non costituisce di per sé una violazione del conto."
     }
   },
   {
@@ -808,7 +840,8 @@
     "translations": {
       "fr": "Si Hantec estime à sa seule discrétion, à tout moment, y compris sur des trades ou paiements passés, qu'un client a participé, tenté de participer, bénéficié ou est suspecté de trading interdit, elle peut prendre des mesures proportionnées sans préavis, explication ni preuve. Le paiement n'est pas dû si le trading est jugé incompatible avec l'objectif commercial du programme.",
       "es": "Si la empresa determina a su exclusiva discreción y en cualquier momento (incluso respecto a operaciones, retiros o actividad anteriores) que el cliente ha realizado, intentado realizar, se ha beneficiado de prácticas prohibidas o es sospechoso de ellas, puede adoptar medidas de ejecución proporcionadas sin aviso previo, explicación ni pruebas. Tampoco se debe abonar un retiro si se considera que la negociación es incompatible con el propósito comercial previsto del programa.",
-      "de": "Stellt das Unternehmen jederzeit nach alleinigem Ermessen fest (auch hinsichtlich früherer Trades, Auszahlungen oder Kontoaktivitäten), dass ein Kunde verbotenen Handel betrieben, versucht oder davon profitiert hat oder dessen verdächtigt wird, kann es verhältnismäßige Durchsetzungsmaßnahmen ohne Vorankündigung, Erklärung oder Nachweis ergreifen. Eine Auszahlung ist auch nicht geschuldet, wenn der Handel als unvereinbar mit dem vorgesehenen kommerziellen Zweck des Programms gilt."
+      "de": "Stellt das Unternehmen jederzeit nach alleinigem Ermessen fest (auch hinsichtlich früherer Trades, Auszahlungen oder Kontoaktivitäten), dass ein Kunde verbotenen Handel betrieben, versucht oder davon profitiert hat oder dessen verdächtigt wird, kann es verhältnismäßige Durchsetzungsmaßnahmen ohne Vorankündigung, Erklärung oder Nachweis ergreifen. Eine Auszahlung ist auch nicht geschuldet, wenn der Handel als unvereinbar mit dem vorgesehenen kommerziellen Zweck des Programms gilt.",
+      "it": "Se la società accerta a sua esclusiva discrezione, in qualsiasi momento (anche per operazioni, prelievi o attività passate), che il cliente ha effettuato, tentato, beneficiato di trading vietato o ne è sospettato, può adottare misure proporzionate senza preavviso, spiegazioni o prove. Il pagamento non è inoltre dovuto se il trading è considerato incompatibile con la finalità commerciale prevista dal programma."
     }
   },
   {
@@ -818,7 +851,8 @@
     "translations": {
       "fr": "Selon §3.6, Hantec peut modifier les paramètres de risque, drawdown et capital simulé alloué, suspendre des instruments, clôturer des positions ou suspendre des comptes, même sans trading interdit.",
       "es": "Conforme a la cláusula 3.6, la empresa puede modificar parámetros de riesgo, incluidos los límites de pérdida y el capital simulado asignado, suspender instrumentos, cerrar posiciones o suspender cuentas, independientemente de que el cliente haya incurrido o no en prácticas prohibidas.",
-      "de": "Gemäß Klausel 3.6 kann das Unternehmen Risikoparameter einschließlich Drawdown und zugeteiltem simuliertem Kapital ändern, Instrumente anhalten, Positionen schließen oder Konten aussetzen, unabhängig davon, ob der Kunde verbotenen Handel betrieben hat."
+      "de": "Gemäß Klausel 3.6 kann das Unternehmen Risikoparameter einschließlich Drawdown und zugeteiltem simuliertem Kapital ändern, Instrumente anhalten, Positionen schließen oder Konten aussetzen, unabhängig davon, ob der Kunde verbotenen Handel betrieben hat.",
+      "it": "Ai sensi della clausola 3.6, la società può modificare i parametri di rischio, inclusi drawdown e capitale simulato allocato, sospendere strumenti, chiudere posizioni o sospendere conti, indipendentemente dal fatto che il cliente abbia effettuato trading vietato."
     }
   },
   {
@@ -828,7 +862,8 @@
     "translations": {
       "fr": "RZR Funded — comptes standard : premier retrait généralement accessible 14 jours après le premier trade ; certains produits proposent sept jours ou Instant24. Toutes les positions doivent être fermées avant la demande.",
       "es": "RZR Funded — cuentas financiadas estándar: normalmente se puede solicitar el primer retiro 14 días después de la primera operación; algunos productos ofrecen siete días o una variante Instant24. Todas las posiciones deben cerrarse antes de solicitarlo.",
-      "de": "RZR Funded — standardmäßig finanzierte Konten: Die erste Auszahlung ist in der Regel 14 Tage nach dem ersten Trade möglich; einige Produkte bieten sieben Tage oder eine Instant24-Variante. Vor der Anfrage müssen alle Positionen geschlossen werden."
+      "de": "RZR Funded — standardmäßig finanzierte Konten: Die erste Auszahlung ist in der Regel 14 Tage nach dem ersten Trade möglich; einige Produkte bieten sieben Tage oder eine Instant24-Variante. Vor der Anfrage müssen alle Positionen geschlossen werden.",
+      "it": "RZR Funded — conti finanziati standard: il primo prelievo è generalmente disponibile dopo 14 giorni dalla prima operazione; alcuni prodotti prevedono sette giorni o una variante Instant24. Tutte le posizioni devono essere chiuse prima della richiesta."
     }
   },
   {
@@ -838,7 +873,8 @@
     "translations": {
       "fr": "Interdiction ouverte de toute conduite que la société estime raisonnablement nuisible à l'intégrité, avec mesures discrétionnaires. Les retraits peuvent être suspendus pour suspicion de violation ou risque réputationnel. Garanties : recours écrit sous sept jours, décision sous 14 jours, objectif d'enquête de 30 jours ouvrés et délai maximal de 90 jours ouvrant la procédure de litige.",
       "es": "Prohibición abierta de cualquier otra conducta que, según la opinión razonable de la empresa, pueda perjudicar la integridad, con medidas a su exclusiva discreción. Los retiros pendientes pueden quedar retenidos por sospecha de infracción o riesgo reputacional. Factores atenuantes: recurso escrito en siete días con resolución en 14 días, objetivo de investigación de 30 días hábiles y límite de 90 días que abre el procedimiento de controversias.",
-      "de": "Offene Verbotsklausel für jedes sonstige Verhalten, das nach vernünftiger Einschätzung des Unternehmens die Integrität beeinträchtigen könnte, mit Maßnahmen nach alleinigem Ermessen. Ausstehende Auszahlungen können bei Verdacht auf einen Verstoß oder Reputationsrisiko ausgesetzt werden. Abmilderung: schriftlicher Einspruch innerhalb von sieben Tagen, Entscheidung innerhalb von 14 Tagen, angestrebte Untersuchung innerhalb von 30 Geschäftstagen und eine Höchstfrist von 90 Tagen bis zur Eröffnung des Streitverfahrens."
+      "de": "Offene Verbotsklausel für jedes sonstige Verhalten, das nach vernünftiger Einschätzung des Unternehmens die Integrität beeinträchtigen könnte, mit Maßnahmen nach alleinigem Ermessen. Ausstehende Auszahlungen können bei Verdacht auf einen Verstoß oder Reputationsrisiko ausgesetzt werden. Abmilderung: schriftlicher Einspruch innerhalb von sieben Tagen, Entscheidung innerhalb von 14 Tagen, angestrebte Untersuchung innerhalb von 30 Geschäftstagen und eine Höchstfrist von 90 Tagen bis zur Eröffnung des Streitverfahrens.",
+      "it": "Divieto aperto di qualsiasi altra condotta che, a ragionevole giudizio della società, possa danneggiare l'integrità, con misure a esclusiva discrezione. I prelievi in sospeso possono essere bloccati per sospetta violazione o rischio reputazionale. Fattori attenuanti: ricorso scritto entro sette giorni, decisione entro 14 giorni, obiettivo di indagine di 30 giorni lavorativi e termine massimo di 90 giorni per l'avvio della procedura di controversia."
     }
   },
   {
@@ -848,7 +884,8 @@
     "translations": {
       "fr": "Tous plans Live Account, conditions commerciales §3 : plafond de paiement de 10 000 $ par période de 14 jours calendaires.",
       "es": "Todos los planes (Live Account): sección 3 de las condiciones comerciales: el importe máximo de retiro por periodo de 14 días naturales es de 10.000 USD.",
-      "de": "Alle Pläne (Live Account): Handelsbedingungen Abschnitt 3: Der maximale Auszahlungsbetrag pro Zeitraum von 14 Kalendertagen beträgt 10.000 USD."
+      "de": "Alle Pläne (Live Account): Handelsbedingungen Abschnitt 3: Der maximale Auszahlungsbetrag pro Zeitraum von 14 Kalendertagen beträgt 10.000 USD.",
+      "it": "Tutti i piani (Live Account): condizioni commerciali, sezione 3: l'importo massimo di prelievo per ciascun periodo di 14 giorni di calendario è 10.000 USD."
     }
   },
   {
@@ -858,7 +895,8 @@
     "translations": {
       "fr": "Tous plans Live Account, §3 : jour de paiement entre 14 et 60 jours calendaires après le premier trade ; aucune demande traitée avant la revérification applicable. §§6.2 et 6.5 : paiements suspendus pendant un Hold sans intérêts ni indemnité ; litige après fin du Hold ou délai maximal de 90 jours. §4.4 : la disqualification peut entraîner la confiscation…",
       "es": "Todos los planes (Live Account): sección 3 de las condiciones comerciales: el día de retiro se sitúa entre 14 y 60 días naturales desde la apertura de la primera operación. No se tramitará ningún retiro hasta cumplir el requisito de nueva verificación aplicable. Secciones 6.2 y 6.5: los retiros pueden suspenderse durante una retención, sin intereses ni compensación, y las controversias esperan hasta que termine la retención o el plazo máximo de 90 días. Sección 4.4: la descalificación puede provocar la pérdida de cualquier…",
-      "de": "Alle Pläne (Live Account): Handelsbedingungen Abschnitt 3: Der Auszahlungstag liegt zwischen 14 und 60 Kalendertagen nach Eröffnung des ersten Trades. Keine Auszahlung wird bearbeitet, bevor die vorgeschriebene erneute Verifizierung abgeschlossen ist. Abschnitte 6.2 und 6.5: Auszahlungen können während einer Sperre ohne Zinsen oder Entschädigung ausgesetzt werden; Streitverfahren warten bis zum Ende der Sperre oder der Höchstfrist von 90 Tagen. Abschnitt 4.4: Eine Disqualifikation kann zum Verlust jeglicher…"
+      "de": "Alle Pläne (Live Account): Handelsbedingungen Abschnitt 3: Der Auszahlungstag liegt zwischen 14 und 60 Kalendertagen nach Eröffnung des ersten Trades. Keine Auszahlung wird bearbeitet, bevor die vorgeschriebene erneute Verifizierung abgeschlossen ist. Abschnitte 6.2 und 6.5: Auszahlungen können während einer Sperre ohne Zinsen oder Entschädigung ausgesetzt werden; Streitverfahren warten bis zum Ende der Sperre oder der Höchstfrist von 90 Tagen. Abschnitt 4.4: Eine Disqualifikation kann zum Verlust jeglicher…",
+      "it": "Tutti i piani (Live Account): condizioni commerciali, sezione 3: il giorno del prelievo cade tra 14 e 60 giorni di calendario dall'apertura della prima operazione. Nessun prelievo viene elaborato prima del completamento della nuova verifica richiesta. Sezioni 6.2 e 6.5: i prelievi possono essere sospesi durante un blocco, senza interessi o compensi; le controversie attendono la fine del blocco o il termine massimo di 90 giorni. Sezione 4.4: la squalifica può comportare la perdita di qualsiasi…"
     }
   },
   {
