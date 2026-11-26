@@ -2,6 +2,7 @@ import type { Locale } from '../lib/locales';
 import { fmt, formatDateLong, numberLocale } from '../lib/messages';
 import { getContractAudit, type ContractFinding, type ContractFindingGroup, type PayoutEvidence } from '../lib/contractAudits';
 import { contractAuditCopy } from '../lib/contractAuditI18n';
+import { localizeContractAuditText, contractEvidenceStat } from '../lib/dataI18n/contractAuditTexts';
 
 /**
  * Contract audit dossier for one firm. Documentary only: it never reads or
@@ -18,7 +19,8 @@ export default function ContractAuditSection({ slug, firmName, locale }: { slug:
   const rules = by('rule');
   const ruleGroups = new Map<string, ContractFinding[]>();
   for (const rule of rules) {
-    const key = rule.scope?.trim() || c.allPrograms;
+    const scope = rule.scope?.trim();
+    const key = !scope || /^all$/i.test(scope) ? c.allPrograms : localizeContractAuditText(locale, scope);
     ruleGroups.set(key, [...(ruleGroups.get(key) ?? []), rule]);
   }
 
@@ -106,8 +108,8 @@ export default function ContractAuditSection({ slug, firmName, locale }: { slug:
                   {audit.payoutEvidence.map((evidence, index) => (
                     <li key={`${evidence.url}-${index}`}>
                       <span className="pr-rules-stage">{reliabilityLabel(evidence, c)}</span>
-                      <p>{evidenceLine(evidence, c, nf, usd)}</p>
-                      {evidence.note ? <p className="pr-rules-impact">{evidence.note}</p> : null}
+                      <p>{evidenceLine(evidence, c, nf, usd, locale)}</p>
+                      {evidence.note ? <p className="pr-rules-impact">{localizeContractAuditText(locale, evidence.note)}</p> : null}
                       <a href={evidence.url} target="_blank" rel="noopener noreferrer">
                         {c.source} ↗ <span>{domain(evidence.url)}</span>
                         {evidence.checkedOn ? <span className="ca-date"> · {formatDateLong(locale, evidence.checkedOn)}</span> : null}
@@ -130,7 +132,7 @@ export default function ContractAuditSection({ slug, firmName, locale }: { slug:
               <div className="pr-rules-block pr-rules-block-restriction">
                 <p className="pr-rules-block-hint ca-hint">{c.missingHint}</p>
                 <ul className="ca-missing">
-                  {missing.map((item) => <li key={item}>{item}</li>)}
+                  {missing.map((item) => <li key={item}>{localizeContractAuditText(locale, item)}</li>)}
                   {audit.registry && /NOT/.test(audit.registry) ? <li>{c.registryNot}</li> : null}
                 </ul>
               </div>
@@ -159,10 +161,10 @@ function FindingList({ items, c, locale, hideScope }: { items: ContractFinding[]
     <ul className="pr-rules-list">
       {items.map((finding, index) => (
         <li key={`${finding.source}-${index}`}>
-          {!hideScope && finding.scope ? <span className="pr-rules-stage">{finding.scope}</span> : null}
+          {!hideScope && finding.scope ? <span className="pr-rules-stage">{/^all$/i.test(finding.scope.trim()) ? c.allPrograms : localizeContractAuditText(locale, finding.scope)}</span> : null}
           <p>
             {finding.hidden ? <span className="pr-tag pr-tone-watch ca-inline-tag">{c.hidden}</span> : null}
-            {finding.text}
+            {localizeContractAuditText(locale, finding.text)}
           </p>
           {finding.sourceType ? <p className="pr-rules-impact"><span className="pr-tag pr-tone-watch">{c.thirdParty}</span></p> : null}
           <a href={finding.source} target="_blank" rel="noopener noreferrer">
@@ -182,9 +184,9 @@ function reliabilityLabel(evidence: PayoutEvidence, c: ReturnType<typeof contrac
   return c.other;
 }
 
-function evidenceLine(evidence: PayoutEvidence, c: ReturnType<typeof contractAuditCopy>, nf: Intl.NumberFormat, usd: Intl.NumberFormat) {
+function evidenceLine(evidence: PayoutEvidence, c: ReturnType<typeof contractAuditCopy>, nf: Intl.NumberFormat, usd: Intl.NumberFormat, locale: Locale) {
   const parts: string[] = [];
-  if (evidence.trackerLabel) parts.push(evidence.trackerLabel);
+  if (evidence.trackerLabel) parts.push(localizeContractAuditText(locale, evidence.trackerLabel));
   if (typeof evidence.amountUSD === 'number' && typeof evidence.count === 'number') {
     parts.push(fmt(c.payouts, { amount: usd.format(evidence.amountUSD), count: nf.format(evidence.count) }));
   } else if (typeof evidence.amountUSD === 'number') {
@@ -192,10 +194,10 @@ function evidenceLine(evidence: PayoutEvidence, c: ReturnType<typeof contractAud
   } else if (typeof evidence.amountUSDLowerBound === 'number') {
     parts.push(`> ${usd.format(evidence.amountUSDLowerBound)}`);
   }
-  if (typeof evidence.fundedParticipantsPaidPct === 'number') parts.push(`${evidence.fundedParticipantsPaidPct}% of Funded Level participants received a payout`);
-  if (typeof evidence.xfaParticipantsLivePct === 'number') parts.push(`${evidence.xfaParticipantsLivePct}% of Express Funded participants moved to Live`);
-  if (evidence.method) parts.push(evidence.method);
-  if (evidence.period) parts.push(evidence.period);
+  if (typeof evidence.fundedParticipantsPaidPct === 'number') parts.push(contractEvidenceStat(locale, evidence.fundedParticipantsPaidPct, 'paid'));
+  if (typeof evidence.xfaParticipantsLivePct === 'number') parts.push(contractEvidenceStat(locale, evidence.xfaParticipantsLivePct, 'live'));
+  if (evidence.method) parts.push(localizeContractAuditText(locale, evidence.method));
+  if (evidence.period) parts.push(localizeContractAuditText(locale, evidence.period));
   return parts.join(' · ');
 }
 
