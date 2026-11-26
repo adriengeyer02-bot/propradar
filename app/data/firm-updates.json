@@ -14614,7 +14614,8 @@
       ]
     },
     "the-funded-trader": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-26",
+      "set": {"listedDomainWarning": "PROBABLY CLOSED: thefundedtraderprogram.com refused PropRadar's request on 26 Nov 2026, and BestProps reported on 9 Nov 2026 that the firm is offline and not selling, its official addresses returning a hosting 'deployment paused' page and its help centre 'Not found'. No closure notice has been found, but the firm has probably stopped operating. Any website using this name or logo is not recognised as official by PropRadar: do not pay on it."},
       "changelog": [
         {
           "date": "2026-10-28",
@@ -14631,7 +14632,8 @@
           "fields": [
             "incidents"
           ]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official site unreachable in PropRadar's check of 26 Nov 2026, confirmed by an external source: warning set under the 'probably closed' policy approved by Geyer on 26 Nov 2026. Status unchanged; no closure is recorded without an official notice.", "source": "https://bestprops.com/status/the-funded-trader-status/", "fields": ["listedDomainWarning"]}
       ],
       "addIncidents": [
         "Finance Magnates reported on 14 March 2024 that The Funded Trader confirmed it had halted all payouts, citing a \"self-imposed internal audit\" (https://www.financemagnates.com/forex/prop-trading-firm-the-funded-trader-cites-internal-audit-to-suspend-payouts/).",
@@ -14646,7 +14648,8 @@
         {
           "label": "Finance Magnates: 900 traders await payouts (20 Nov 2024)",
           "url": "https://financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/amp"
-        }
+        },
+        {"label": "BestProps status page: The Funded Trader offline (9 Nov 2026)", "url": "https://bestprops.com/status/the-funded-trader-status/"}
       ]
     },
     "the-trading-pit": {
@@ -17810,8 +17813,9 @@
       ]
     },
     "rocket21-challenge": {
-      "reviewedAt": "2026-11-17",
+      "reviewedAt": "2026-11-26",
       "set": {
+        "listedDomainWarning": "PROBABLY CLOSED: rocket21challenge.com did not answer when PropRadar checked it on 26 Nov 2026, and Cuentas Fondeadas reported an error 523 (origin unreachable) in its review updated on 14 Oct 2026. No closure notice has been found, but the firm has probably stopped operating. Any website using this name or logo is not recognised as official by PropRadar: do not pay on it.",
         "auditSummary": "Deep review, 17 November 2026: the historical Rocket21 assessment terms identify Prop Trade Tech Pty Ltd, Australian ABN 71 661 045 950, as contracting company. An official Australian Business Register history independently confirms the same ABN and its 14 March 2025 renaming to TRADESIM PTY LTD; this verifies the legal company's existence, not that Rocket21 continues to accept or pay traders. The Nov 2024 schedule describes demo-only funded accounts, Apollo 11 first withdrawal after 14 days, Standard Regular/Swing after 30 days, later requests every 14 days, a no-HFT/no-martingale/no-grid policy, and exclusion of high-impact-news profits within four minutes on either side. Apollo 11 fee refunds were conditional on the first successful withdrawal. Third-party domain checks classify the historical challenge site as unavailable in 2026; no active checkout or current settlement receipts were independently confirmed. All quoted programme rules are historical, not a current offer."
       },
       "setEntities": [
@@ -17851,6 +17855,9 @@
           { "label": "October 2026 independent Rocket21 domain checks", "url": "https://mypropgenius.com/closed-firms/" }
         ]
       },
+      "addSources": [
+        {"label": "Cuentas Fondeadas: Rocket21 site returned error 523 (14 Oct 2026)", "url": "https://cuentasfondeadas.net/rocket21-opinion-y-revision/"}
+      ],
       "changelog": [
         {
           "date": "2026-11-17",
@@ -17863,7 +17870,8 @@
           "summary": "Historical schedule and contract recovered: simulated accounts, 14-day vs 30-day initial withdrawals by programme, 14-day repeats, conditional refunds, restricted strategies and high-impact-news profit exclusions. Current availability and payout completion remain unverified.",
           "source": "https://portal.rocket21challenge.com/schedule-of-assessment/",
           "fields": ["legalReview"]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official site unreachable in PropRadar's check of 26 Nov 2026, confirmed by an external source: warning set under the 'probably closed' policy approved by Geyer on 26 Nov 2026. Status unchanged; no closure is recorded without an official notice.", "source": "https://cuentasfondeadas.net/rocket21-opinion-y-revision/", "fields": ["listedDomainWarning"]}
       ]
     },
     "traders-central": {
@@ -24011,7 +24019,10 @@
       ]
     },
     "getcryptofunded": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-26",
+      "addSources": [
+        {"label": "CryptoPropFirms: GetCryptoFunded domain DNS failure (29 Sep 2026)", "url": "https://cryptopropfirms.io/learn/are-crypto-prop-firms-legit/"}
+      ],
       "changelog": [
         {
           "date": "2026-11-09",
@@ -24022,9 +24033,11 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official site unreachable in PropRadar's check of 26 Nov 2026, confirmed by an external source: warning set under the 'probably closed' policy approved by Geyer on 26 Nov 2026. Status unchanged; no closure is recorded without an official notice.", "source": "https://cryptopropfirms.io/learn/are-crypto-prop-firms-legit/", "fields": ["listedDomainWarning"]}
       ],
       "set": {
+        "listedDomainWarning": "PROBABLY CLOSED: getcryptofunded.com served only an empty page when PropRadar checked it on 26 Nov 2026, and CryptoPropFirms reported a DNS failure on the domain on 29 Sep 2026. No closure notice has been found, but the firm has probably stopped operating. Any website using this name or logo is not recognised as official by PropRadar: do not pay on it.",
         "trustpilotRating": 2.3,
         "trustpilotReviewCount": 7,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/getcryptofunded.com"
@@ -24060,7 +24073,10 @@
       }
     },
     "leveled-up-society": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-26",
+      "addSources": [
+        {"label": "MyPropGenius rule changes, October 2026: Leveled Up Society domain redirect", "url": "https://mypropgenius.com/rule-changes/2026-10/"}
+      ],
       "changelog": [
         {
           "date": "2026-11-09",
@@ -24087,9 +24103,11 @@
           "fields": [
             "incidents"
           ]
-        }
+        },
+        {"date": "2026-11-26", "summary": "Official site unreachable in PropRadar's check of 26 Nov 2026, confirmed by an external source: warning set under the 'probably closed' policy approved by Geyer on 26 Nov 2026. Status unchanged; no closure is recorded without an official notice.", "source": "https://mypropgenius.com/rule-changes/2026-10/", "fields": ["listedDomainWarning"]}
       ],
       "set": {
+        "listedDomainWarning": "PROBABLY CLOSED: leveledupsociety.com did not answer when PropRadar checked it on 26 Nov 2026; MyPropGenius reported on 9 Oct 2026 that the domain redirects to an unrelated gambling site and that the firm's October 2023 notice said all services were temporarily paused, with no sign of a restart. No closure notice has been found, but the firm has probably stopped operating. Any website using this name or logo is not recognised as official by PropRadar: do not pay on it.",
         "trustpilotRating": 3.3,
         "trustpilotReviewCount": 1286,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.leveledupsociety.com"

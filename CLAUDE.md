@@ -160,6 +160,16 @@ project doc `claude/data-audit-2026-10.md`.
    Every warning text must also cite an external source (Trustpilot notice,
    trade press, registry, regulator) next to PropRadar's own check (Geyer,
    2026-11-15: avoid any defamation risk).
+   **"Probably closed" policy (Geyer, 2026-11-26):** when the official site
+   cannot be reached (error, empty page, redirect to unrelated content) and no
+   new official domain is found, set `listedDomainWarning` starting with
+   "PROBABLY CLOSED:", giving PropRadar's dated check and the external source,
+   and ending with: "No closure notice has been found, but the firm has
+   probably stopped operating. Any website using this name or logo is not
+   recognised as official by PropRadar: do not pay on it." Status stays as it
+   is (no `Fermée` without an official notice). Look-alike sites are never
+   called a scam in our own voice (rule 2): the warning says they are not
+   recognised as official.
 6. **Sensitive changes need Geyer's approval**: status changes, score drops of
    5+ points or moves of 10+, domain warnings, new incidents, accusation-type
    wording. The validator flags them. Open the PR and leave it unmerged.
