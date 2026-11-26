@@ -1189,7 +1189,7 @@ export default async function FirmPage({ params }: Props) {
           </aside>
         ))}
         {firm.products.length > 0 ? (
-          <div className={firm.products.length >= 3 ? 'grid-2 pr-offers-grid-3' : 'grid-2'}>
+          <div className={'grid-2 pr-offers-premium'}>
             {firm.products.map((product) => (
               <article className="card product-card pr-product pr-product-compact" key={product.id}>
                 <div className="pr-product-tags">
@@ -1235,39 +1235,31 @@ export default async function FirmPage({ params }: Props) {
                   const programs = priceTable?.programs.filter((program) => program.productId === product.id) ?? [];
                   if (!programs.length) return null;
                   const highlighted = getProgramPromotions(firm.slug, product.id).flatMap((promo) => promo.highlightedSizes ?? []);
-                  const sizes = [...new Set(programs.flatMap((program) => pricePreviewRows(program, highlighted).map((row) => row.size)))].sort((x, y) => x - y).slice(0, 4);
-                  const variantLabel = (name: string) => (name.includes(' — ') ? name.slice(name.indexOf(' — ') + 3) : name);
-                  const monthly = programs.some((program) => program.billing === 'monthly');
                   return (
-                    <div className="pr-price-matrix">
-                      <table>
-                        <thead>
-                          <tr>
-                            <th scope="col">{f.priceList}{monthly ? ` ${f.perMonth}` : ''}</th>
-                            {sizes.map((size) => <th scope="col" key={size}>{formatAccountSize(size)}</th>)}
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {programs.map((program) => (
-                            <tr key={program.name}>
-                              <th scope="row">{programs.length > 1 ? tx(variantLabel(program.name)) : tx(program.name)}</th>
-                              {sizes.map((size) => {
-                                const row = program.rows.find((item) => item.size === size);
-                                return (
-                                  <td key={size}>
-                                    {row ? formatListPrice(row.price, program.currency) : '—'}
-                                    {row && row.upfrontPrice != null && row.completionFee != null ? <small>{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small> : null}
-                                  </td>
-                                );
-                              })}
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                      <div className="pr-product-prices-links">
-                        <a href="#prices">{f.priceTableTitle} ↓</a>
-                        <a href={programs[0].sourceUrl} target="_blank" rel="noopener noreferrer">{f.priceSource} ↗</a>
-                      </div>
+                    <div className="pr-offer-price-stack">
+                      {programs.map((program) => (
+                        <section className="pr-offer-price-group" key={program.name}>
+                          <div className="pr-offer-price-heading">
+                            <strong>{tx(program.name)}</strong>
+                            <span>{f.priceList} · {program.billing === 'monthly' ? f.perMonth : f.oneTime}</span>
+                          </div>
+                          <div className="pr-offer-price-tiles">
+                            {pricePreviewRows(program, highlighted).map((row) => (
+                              <div className="pr-offer-price-tile" key={row.size}>
+                                <span>{formatAccountSize(row.size)}</span>
+                                <strong>{formatListPrice(row.price, program.currency)}</strong>
+                                {row.upfrontPrice != null && row.completionFee != null ? (
+                                  <small>{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small>
+                                ) : null}
+                              </div>
+                            ))}
+                          </div>
+                          <div className="pr-product-prices-links">
+                            <a href="#prices">{f.priceTableTitle} ↓</a>
+                            <a href={program.sourceUrl} target="_blank" rel="noopener noreferrer">{f.priceSource} ↗</a>
+                          </div>
+                        </section>
+                      ))}
                     </div>
                   );
                 })() : null}
