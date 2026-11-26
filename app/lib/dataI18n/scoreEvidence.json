@@ -561,6 +561,12 @@
           "Değerlendirme ve Reward hesabı",
           "Şartlar §7.2: şirket, «diğer her türlü kasıtlı kötüye kullanımı» vaka bazında tanımlar.",
           "Yatırımcı, stratejisinin öznel sınıflandırılması sonucu ödül hakkını kaybedebilir."
+        ],
+        "ar": [
+          "Leveraged · جميع البرامج",
+          "التقييم وحساب Reward",
+          "الشروط §7.2: تحدد الشركة «أي إساءة متعمدة أخرى» لكل حالة على حدة.",
+          "قد يفقد المتداول أهلية الحصول على المكافآت نتيجة تصنيف ذاتي لاستراتيجيته."
         ]
       }
     },
@@ -625,6 +631,12 @@
           "Değerlendirme ve Qualified",
           "Şartlar §8.1.7: Alpha, bir stratejiyi kendi takdirine göre yetkisiz sayabilir.",
           "Önceden tanımlanmamış işlem tarzı yorumuna dayanarak hesap kapatılabilir."
+        ],
+        "ar": [
+          "Alpha Futures · جميع الحسابات",
+          "التقييم وQualified",
+          "الشروط §8.1.7: يجوز لشركة Alpha اعتبار استراتيجية ما غير مصرح بها وفق تقديرها.",
+          "قد يُغلق الحساب بناء على تفسير لأسلوب التداول لم يُحدد مسبقًا."
         ]
       }
     },
@@ -689,6 +701,12 @@
           "Değerlendirme ve Qualified",
           "Ek 5: iki dakikadan kısa işlemlerin kârları, niceliği belirtilmemiş «büyük» bir pay oluşturduğunda sorun sayılır.",
           "Yayımlanmış yoğunlaşma eşiği olmadan kârların bir kısmı uygunsuz sayılabilir veya hesaba yaptırım uygulanabilir."
+        ],
+        "ar": [
+          "Alpha Futures · جميع الحسابات",
+          "التقييم وQualified",
+          "الملحق 5: تصبح أرباح الصفقات التي تقل مدتها عن دقيقتين إشكالية إذا شكلت حصة «كبيرة» غير محددة رقميًا.",
+          "قد تُعتبر بعض الأرباح غير مؤهلة أو يُعاقب الحساب دون حد منشور لتركيز الأرباح."
         ]
       }
     },
@@ -753,6 +771,12 @@
           "Simüle fonlanmış hesap ve ödül talebi",
           "Şartlar §§11.1–11.2: düşüş limitinin «tamamını veya neredeyse tamamını» riske atan pozisyon, MilTraders'ın nihai takdirine göre kumar davranışı sayılabilir.",
           "Yayımlanmış yüzde sınırı olmadan şirket birden fazla hesabı kapatabilir ve talep edilmiş ödülü reddedebilir (Şartlar §12.5)."
+        ],
+        "ar": [
+          "MilTraders · Zero وPro وInstant Funded",
+          "حساب ممول تجريبي وطلب مكافأة",
+          "الشروط §§11.1–11.2: قد يُصنف المركز الذي يخاطر «بكامل حد التراجع أو ما يقارب كامله» كسلوك مقامرة وفق التقدير النهائي لشركة MilTraders.",
+          "يمكن للشركة إغلاق عدة حسابات ورفض مكافأة طُلبت بالفعل دون حد نسبي منشور (الشروط §12.5)."
         ]
       }
     },
@@ -817,6 +841,12 @@
           "Değerlendirme ve simüle fonlanmış hesap",
           "Şartlar, yasak kullanımlar: şirket, münhasır takdirine göre kabul edilebilir risk uygulamalarının dışında gördüğü her türlü işlemi yasaklar.",
           "Satın alma sırasında bilinen bir eşikle sınırlandırılmamış uygulamalar nedeniyle kârlar silinebilir ve hesap kapatılabilir."
+        ],
+        "ar": [
+          "Top One Trader · FLASH وNOVA وPRO وInstant",
+          "التقييم وحساب ممول تجريبي",
+          "الشروط، الاستخدامات المحظورة: تحظر الشركة أي تداول تعتبره وفق تقديرها المنفرد خارج ممارسات المخاطر المقبولة.",
+          "قد تُحذف الأرباح ويُغلق الحساب بسبب ممارسات لم تُحدد بعتبة معروفة عند الشراء."
         ]
       }
     },
@@ -881,6 +911,12 @@
           "Değerlendirmeden fonlanmış hesaba geçiş",
           "Şartlar, yasak kullanımlar: değerlendirme ile fonlanmış aşama arasında strateji değiştirmek, şirketin kendi takdirine göre belirlediği şekilde yasaktır.",
           "Hesap onayı veya kapatılması, yöntem değişikliğinin derecesine ilişkin öznel değerlendirmeye bağlı olabilir."
+        ],
+        "ar": [
+          "Top One Trader · تحديات FLASH/NOVA/PRO إلى مرحلة Funded",
+          "الانتقال من التحدي إلى الحساب الممول",
+          "الشروط، الاستخدامات المحظورة: يُحظر تغيير الاستراتيجية بين التحدي والمرحلة الممولة وفق ما تحدده الشركة بتقديرها.",
+          "قد تعتمد الموافقة على الحساب أو إغلاقه على تقييم ذاتي لدرجة تغير أسلوب التداول."
         ]
       }
     },
@@ -945,6 +981,12 @@
           "Değerlendirme ve fonlanmış hesap",
           "Şartlar §6.8: şirket listelenen durumlar dışında başka işlem faaliyetlerini de yasak olarak belirleyebilir.",
           "Satın alma sırasında kapsamlı biçimde açıklanmamış strateji nedeniyle hesap kapatılabilir."
+        ],
+        "ar": [
+          "OneFunded · Flash وCore وValue وInstant",
+          "التحدي والحساب الممول",
+          "الشروط §6.8: يجوز للشركة اعتبار أنشطة تداول أخرى محظورة بالإضافة إلى الحالات المذكورة.",
+          "قد يُغلق الحساب بسبب استراتيجية لم تُوصف بصورة شاملة عند الشراء."
         ]
       }
     },
@@ -1009,6 +1051,12 @@
           "Fonlanmış hesap, ödeme incelemesi dahil",
           "Yardım merkezi, yasak işlemler: tek yönlü bahisler ve oransal eşik olmadan aşırı pozisyon yoğunlaşması; nihai karar OneFunded'a aittir.",
           "Yönsel pozisyon yoğunluğunun sayısallaştırılmamış değerlendirmesine göre ödeme talebi iptal edilebilir ve hesap kapatılabilir."
+        ],
+        "ar": [
+          "OneFunded · Flash وCore وValue وInstant",
+          "الحساب الممول، بما في ذلك مراجعة السحب",
+          "مركز المساعدة، التداول المحظور: الرهانات أحادية الاتجاه والتركيز «المفرط» للتعرض دون حد نسبي؛ تحتفظ OneFunded بالقرار النهائي.",
+          "قد يُلغى طلب السحب ويُغلق الحساب بناءً على تقييم غير كمي للتعرض الاتجاهي."
         ]
       }
     },
@@ -1073,6 +1121,12 @@
           "Değerlendirme ve BEM Trader hesabı",
           "Şartlar §14: şirket yasak uygulamaları kendi takdirine göre sınıflandırma hakkını saklı tutar.",
           "Kesin listelenmemiş strateji, önceden uygulanabilir eşik olmadan hesap kapatmayla cezalandırılabilir."
+        ],
+        "ar": [
+          "BEM Funding · One وOne Only وClassic وClassic Swing",
+          "التقييم وحساب BEM Trader",
+          "الشروط §14: تحتفظ الشركة بحق تصنيف الممارسات المحظورة وفق تقديرها.",
+          "قد تؤدي استراتيجية غير مدرجة بدقة إلى إغلاق الحساب دون عتبة محددة مسبقًا وقابلة للتطبيق."
         ]
       }
     },
@@ -1137,6 +1191,12 @@
           "BEM Trader hesabı ve ödül incelemesi",
           "Yasak işlem uygulamaları şartları: kumara benzeyen davranış veya makul biçimde tekrarlanamayan yöntem, kapsamlı ölçüt olmadan.",
           "Stratejinin öznel sınıflandırılması sonucunda kârlar veya ödül uygunluğu iptal edilebilir."
+        ],
+        "ar": [
+          "BEM Funding · One وOne Only وClassic وClassic Swing",
+          "حساب BEM Trader ومراجعة المكافأة",
+          "شروط ممارسات التداول المحظورة: سلوك «يشبه المقامرة» أو طريقة لا يمكن «تكرارها بصورة معقولة»، دون معيار شامل.",
+          "قد تُلغى الأرباح أو أهلية المكافآت بعد تصنيف ذاتي للاستراتيجية."
         ]
       }
     },
@@ -1201,6 +1261,12 @@
           "Değerlendirme sonrası BEM Trader hesabı",
           "Classic Normal kullanım şartları §6.2: önemli haberlerden önceki veya sonraki dört dakika içinde yapılan işlemlerin kârları silinir; aynı işlemlerin zararları tamamen sayılır.",
           "Kârlı haber işlemi hesaptan çıkarılabilirken eşdeğer zararlı işlem hesaba yüklenmeye devam eder."
+        ],
+        "ar": [
+          "BEM Classic Normal",
+          "حساب BEM Trader بعد التقييم",
+          "شروط استخدام Classic Normal §6.2: تُحذف أرباح الصفقات المنفذة خلال أربع دقائق قبل الأخبار المهمة أو بعدها، بينما تُحتسب خسائر الصفقات نفسها كاملة.",
+          "قد يُستبعد ربح صفقة أخبار من الحساب، بينما تبقى خسارة الصفقة المماثلة محسوبة على الحساب."
         ]
       }
     },
@@ -1265,6 +1331,12 @@
           "Değerlendirme ve simüle fonlanmış hesap",
           "Şartlar §5.5.3: ortalamaya göre «önemli ölçüde daha büyük» pozisyonlar ve «makul olmayan» tutma süreleri; sayısal eşik veya tolerans yok.",
           "Şirket büyüklük ya da süre farkını yasak strateji sayarak öznel inceleme sonrası hesabı kapatabilir."
+        ],
+        "ar": [
+          "ThinkCapital · Lightning وDual Step وNexus وBolt وBolt Flex",
+          "التحدي وحساب ممول تجريبي",
+          "الشروط §5.5.3: أحجام مراكز «أكبر بكثير» ومدد احتفاظ «غير معقولة» مقارنة بمتوسط، دون عتبة رقمية أو هامش سماح.",
+          "قد تعتبر الشركة اختلاف الحجم أو المدة استراتيجية محظورة وتغلق الحساب بعد مراجعة ذاتية."
         ]
       }
     },
@@ -1329,6 +1401,12 @@
           "Değerlendirme ve fonlanmış hesap, strateji incelemesi",
           "Kumar SSS: strateji değişikliği «fırsatçı veya kasıtlı agresif görünüyorsa» risk ekibi olağan uyarı sürecini atlayıp «itiraz hakkı olmadan» derhal feshedebilir.",
           "Fırsatçı sayılan risk artışı, %2,5/%4 eşikleri tek başına aşılmamış olsa bile itirazsız hesap feshine yol açabilir."
+        ],
+        "ar": [
+          "ThinkCapital · جميع البرامج",
+          "التحدي والحساب الممول ومراجعة الاستراتيجية",
+          "الأسئلة الشائعة عن المقامرة: إذا بدا تغيير الاستراتيجية «انتهازيًا أو عدوانيًا عمدًا»، يجوز لفريق المخاطر تجاوز إجراءات التحذير المعتادة والإنهاء الفوري «دون استئناف».",
+          "قد تؤدي زيادة المخاطر التي تُعتبر انتهازية إلى إنهاء الحساب دون استئناف، حتى دون تجاوز حدّي 2.5%/4% بحد ذاتهما."
         ]
       }
     },
@@ -1393,6 +1471,12 @@
           "Değerlendirme ve fonlanmış hesap, robotlar ve EA'lar",
           "Şartlar §6.4: risk@thinkcapital.com üzerinden yazılı izinle TradingView uyumlu araçlar dahil EA'lar kullanılabilir; yasak stratejiler SSS §11 ise EA'ların «şu anda kullanılamadığını», yalnızca TradingView göstergelerinin kullanılabildiğini söyler.",
           "Alıcı, yazılı izinli EA'sını ihlal veya teknik engel olmadan gerçekten kullanıp kullanamayacağını kesin belirleyemez."
+        ],
+        "ar": [
+          "ThinkCapital · Lightning وDual Step وNexus وBolt وBolt Flex",
+          "التقييم والحساب الممول والروبوتات وEA",
+          "الشروط §6.4: يمكن السماح بـEA بعد إذن كتابي من risk@thinkcapital.com، بما في ذلك الأدوات المتوافقة مع TradingView؛ لكن الأسئلة الشائعة للاستراتيجيات المحظورة §11 تقول إن EA «لا يمكن نشرها حاليًا»، وأن مؤشرات TradingView وحدها متاحة.",
+          "لا يستطيع المشتري تحديد ما إذا كان يمكنه فعليًا استخدام EA المصرح به كتابيًا دون مخالفة أو عائق تقني."
         ]
       }
     },
@@ -1457,6 +1541,12 @@
           "Değerlendirme aşaması",
           "Kurallar sayfası, asgari işlem günleri: 1-Step ve 2-Step için bir gün; SSS soru 31: 1/2/3-Step için aşama başına üç işlem günü.",
           "Bir günde geçilen değerlendirmenin kabul edileceği veya iki ek gün gerekeceği belirsizdir."
+        ],
+        "ar": [
+          "Tiger Funded · 1-Step و2-Step",
+          "التحدي، مرحلة التقييم",
+          "صفحة القواعد، الحد الأدنى لأيام التداول: يوم واحد لـ1-Step و2-Step؛ السؤال 31: ثلاثة أيام تداول لكل مرحلة في 1/2/3-Step.",
+          "لا يعرف المشتري هل يُقبل تقييم ناجح في يوم واحد أم يلزم يومان إضافيان."
         ]
       }
     },
@@ -1521,6 +1611,12 @@
           "Değerlendirme, günlük zarar limiti",
           "Kurallar sayfası, günlük düşüş limiti: gece yarısı sıfırlanır; SSS sorular 19 ve 21: 20:00 EST, ayrıca farklı 17:00 EST örneği.",
           "Gün değişimine yakın açık pozisyon, diğer resmî belgede belirtilenden farklı saatte limit ihlali yaratabilir."
+        ],
+        "ar": [
+          "Tiger Funded · 1-Step و2-Step و3-Step",
+          "التقييم وحد الخسارة اليومية",
+          "صفحة القواعد، التراجع اليومي: إعادة الضبط عند منتصف الليل؛ السؤالان 19 و21: الساعة 20:00 EST، مع مثال آخر مختلف عند 17:00 EST.",
+          "قد يتجاوز مركز مفتوح قرب تبدل اليوم الحد وفق توقيت يختلف عن الوثيقة الرسمية الأخرى."
         ]
       }
     },
@@ -1585,6 +1681,12 @@
           "Değerlendirme ve fonlanmış hesap",
           "Şartlar §7: yasak davranışlar gerçek piyasa koşullarını yansıtmayan veya adil kullanımı zedeleyen uygulamaları içerir, ancak bunlarla sınırlı değildir; kapsamlı test yok, askıya alma/fesih uygulanabilir.",
           "SSS'nin ayrıntılı listesinde bulunmayan yöntem sonradan simülasyon kötüye kullanımı sayılabilir ve hesap kapatılabilir."
+        ],
+        "ar": [
+          "Tiger Funded · Step وInstant (الشروط العامة)",
+          "التحدي والحساب الممول",
+          "الشروط §7: تشمل السلوكيات المحظورة، دون حصر، ممارسات لا تعكس ظروف السوق الحقيقية أو تخل بالاستخدام العادل؛ لا يوجد اختبار شامل، مع إمكانية التعليق أو الإنهاء.",
+          "قد تُصنف طريقة غير مذكورة في القائمة التفصيلية للأسئلة الشائعة لاحقًا كإساءة لاستخدام المحاكاة، مما يؤدي إلى إغلاق الحساب."
         ]
       }
     },
@@ -1649,6 +1751,12 @@
           "Değerlendirme",
           "Teklif kartı: en az üç gün; 12/11 tarihli Fast Pass SSS: asgari süre yok; 11/08 tarihli Şartlar §3: genel asgari yedi gün.",
           "Alıcı, fonlanmış hesaba erişmek için kaç değerlendirme günü gerektiğini kesin belirleyemez."
+        ],
+        "ar": [
+          "TradeDay · Fast Pass",
+          "التقييم",
+          "بطاقة العرض: ثلاثة أيام على الأقل؛ الأسئلة الشائعة لـFast Pass بتاريخ 12/11: لا حد أدنى؛ الشروط §3 بتاريخ 11/08: حد عام أدناه سبعة أيام.",
+          "لا يمكن للمشتري تحديد عدد أيام التقييم المطلوبة للتأهل إلى الحساب الممول بوضوح."
         ]
       }
     },
@@ -1713,6 +1821,12 @@
           "Satın alma ve eşzamanlı değerlendirme sayısı",
           "Şartlar hüküm 1, iki değerlendirme limiti maddesi: biri eşzamanlı aynı değerlendirmeleri yasaklar, diğeri toplam tahsis sınırı dahilinde izin verir.",
           "Aynı hesapları satın almanın ihlal veya fesih nedeni olup olmadığı kesin değildir."
+        ],
+        "ar": [
+          "Funded7 · تقييمات بالخطة والحجم نفسيهما",
+          "الشراء وعدد التحديات المتزامنة",
+          "الشروط، البند 1، فقرتان لحدود التقييم: إحداهما تحظر التحديات المتطابقة المتزامنة والأخرى تسمح بها ضمن إجمالي التخصيص.",
+          "لا يعرف العميل على وجه اليقين هل شراء حسابات متطابقة يُعد مخالفة أو سببًا للإنهاء."
         ]
       }
     },
@@ -1777,6 +1891,12 @@
           "İşlem ve ödeme öncesi kural incelemesi",
           "Şartlar §4: kumar/pervasız işlem, normlara göre aşırı kaldıraç veya büyük pozisyonlar ve aracı kurum ilişkilerine zarar veren işlemler; kapsamlı eşik yok.",
           "Aynı davranış olağan sayısal limitler içinde olsa bile sonradan yasak sayılabilir, hesap kapatılıp kârlar silinebilir."
+        ],
+        "ar": [
+          "Top One Futures · جميع برامج العقود الآجلة التجريبية",
+          "التداول ومراجعة القواعد قبل السحب",
+          "الشروط §4: المقامرة أو التداول المتهور، الرافعة المفرطة أو المراكز الكبيرة مقارنة بالمعايير، والتداول المضر بعلاقات الوسطاء؛ دون عتبة شاملة.",
+          "قد يُصنف السلوك نفسه لاحقًا كمحظور، مع إغلاق الحساب وحذف الأرباح، رغم الالتزام بالحدود الرقمية المعتادة."
         ]
       }
     },
@@ -1841,6 +1961,12 @@
           "Aktivasyon, süre ve ödeme talepleri",
           "18/05/2026 tarihli Fransızca çevrimiçi şartlar: 149,90 €, en az %0,50 kârlı yedi gün. 10/11/2026 tarihli İngilizce şartlar: 199 €, en az %0,30 olan beş gün; Fransızca sürüm kaldırılmamış.",
           "Farklı dil sürümüne bakan alıcı farklı ek ücret veya uygunluk koşullarıyla karşılaşabilir."
+        ],
+        "ar": [
+          "WeGetFunded · 2 Steps Challenge ومرحلة WGF Funded",
+          "التفعيل والمدة وطلبات السحب",
+          "الشروط الفرنسية المنشورة في 18/05/2026: 149.90 يورو وسبعة أيام رابحة بحد أدنى 0.50%. الشروط الإنجليزية في 10/11/2026: 199 يورو وخمسة أيام بحد أدنى 0.30%؛ النسخة الفرنسية لم تُعطل.",
+          "قد يواجه من يراجع نسخة لغوية مختلفة رسومًا إضافية أو شروط أهلية مختلفة."
         ]
       }
     },
@@ -1905,6 +2031,12 @@
           "Değerlendirme ve WGF hesaplarında işlem",
           "Şartlar §14: gerçekçi, tutarlı veya sorumlu olmayan teknikler ve programların ruhuyla bağdaşmayan davranışlar; sayısal ölçüt veya kapsamlı liste yok.",
           "Açıkça yasaklanmamış strateji işlem sonrası nitel değerlendirmeyle ihlal sayılabilir; ödüllere sözleşmesel etkisi B1'de ayrı değerlendirilir."
+        ],
+        "ar": [
+          "WeGetFunded · Instant/1 Step/2 Steps (القواعد العامة)",
+          "التداول في التحديات وحسابات WGF",
+          "الشروط §14: طرق غير واقعية أو غير متسقة أو غير مسؤولة وسلوكيات «تتعارض مع روح البرامج»، دون معيار رقمي أو قائمة شاملة.",
+          "قد تُصنف استراتيجية غير محظورة صراحة كمخالفة بعد تقييم نوعي؛ ويُقيّم أثرها التعاقدي على المكافآت بصورة منفصلة في B1."
         ]
       }
     },
@@ -1969,6 +2101,12 @@
           "Ödeme öncesi işlem davranışı ve uygunluk incelemesi",
           "Fonlama süreci özeti: risk ekibi sürdürülemez işlem davranışı, kabul edilemez risk veya devamı uygunsuz kılan herhangi bir nedenle uygunluğu kaldırabilir; yayımlanmış ortak eşik yok.",
           "Düşüş ve işlem günü koşulları sağlansa bile, tamamen öngörülemeyen değerlendirmeyle devam ve ödeme erişimi reddedilebilir."
+        ],
+        "ar": [
+          "Purdia Capital · SFA / Temp SFA / Live Funded",
+          "مراجعة سلوك التداول والأهلية قبل السحب",
+          "نظرة عامة على التمويل: يجوز لفريق المخاطر إلغاء الأهلية لسلوك تداول غير مستدام أو مخاطر غير مقبولة أو لأي سبب يجعل الاستمرار غير ملائم، دون عتبة مشتركة منشورة.",
+          "قد ترفض الشركة الاستمرار والسحب بتقييم لا يمكن توقعه بالكامل حتى مع الالتزام بحد التراجع وأيام التداول."
         ]
       }
     },
@@ -2033,6 +2171,12 @@
           "İşlem ve çekim öncesi uyum incelemesi",
           "Kullanım şartları §26: «önemli ölçüde daha büyük» pozisyonlar, «aşırı yüksek kaldıraç», mali veya başka zarar konusunda makul kaygılar ve uygunsuzluğa ilişkin takdire bağlı karar.",
           "Sayısal limitleri karşılayan yatırımcının simüle kârları, sınırsız nitel sınıflandırmayla silinebilir veya hesabı kapatılabilir."
+        ],
+        "ar": [
+          "DayTraders.com · تقييمات EOD/Trail/Static وحسابات Pro/S2F",
+          "التداول ومراجعة الامتثال قبل السحب",
+          "شروط الاستخدام §26: مراكز «أكبر بكثير»، ورافعة «مفرطة للغاية»، و«مخاوف معقولة من ضرر مالي أو غيره»، وقرار تقديري بشأن عدم الامتثال.",
+          "قد تُحذف أرباح المحاكاة أو يُغلق الحساب بناء على تصنيف نوعي غير محدد رغم الالتزام بالحدود الرقمية."
         ]
       }
     },
@@ -2097,6 +2241,12 @@
           "Simüle işlem ve ödeme öncesi strateji incelemesi",
           "İşlem kuralları §3: zararlı işlem akışı ve tek yönlü bahisler yasak stratejiler arasındadır; açık yayımlanmış eşik yok. Şartlar §6'daki ödeme incelemesinden ayrıdır.",
           "Düşüş limitine uyan stratejinin kârları, zararlı akış veya tek yönlü bahis sayılarak öznel biçimde silinebilir."
+        ],
+        "ar": [
+          "Equity Edge · Legacy وSwift وFlagship وInstant",
+          "التداول التجريبي ومراجعة الاستراتيجية قبل السحب",
+          "قواعد التداول §3: تحظر تدفق التداول الضار والرهانات أحادية الاتجاه دون عتبة عامة دقيقة؛ وهذا منفصل عن مراجعة السحب في الشروط §6.",
+          "قد تُحذف أرباح استراتيجية ملتزمة بحد التراجع بعد تصنيف ذاتي كتدفق ضار أو رهان أحادي الاتجاه."
         ]
       }
     },
@@ -2161,6 +2311,12 @@
           "Fonlama ve ödeme kararı öncesi işlem ve yasak davranış incelemesi",
           "Şartlar §§7.1(h)-(i), 7.2–7.3: sürdürülemez yüksek risk, profesyonel olmayan uygulamalar veya itibar zararı, anormal büyüklük/sıklık; sınıflandırma şirketin münhasır takdirinde.",
           "Sayısal düşüş limitine uyan strateji yine de profesyonel dışı sayılabilir; simüle işlemler/kârlar silinip hesaplar feshedilebilir."
+        ],
+        "ar": [
+          "Alpine Funded · Base Camp Instant و2-Step/Peak والقواعد التجريبية العامة",
+          "التداول ومراجعة السلوك المحظور قبل قرارات التمويل والسحب",
+          "الشروط §§7.1(h)-(i) و7.2–7.3: مخاطر مرتفعة غير مستدامة، ممارسات غير مهنية أو ضرر بالسمعة، أحجام أو تكرار غير معتاد؛ التصنيف وفق تقدير الشركة المنفرد.",
+          "قد تُعد استراتيجية ملتزمة بحدود التراجع الرقمية غير مهنية، فتُحذف الصفقات والأرباح التجريبية وتُنهى الحسابات."
         ]
       }
     },
@@ -2225,6 +2381,12 @@
           "Fonlama veya ödeme öncesi işlem ve strateji incelemesi",
           "Şartlar §4.4: aracı kurum ilişkilerini tehlikeye atabilen uygulamalar, üçüncü taraf sistemlerin uygunsuz kullanımı ve aracı kurum düzenlemeleri; kapsamlı maddi eşik yok.",
           "Hedefler ve düşüş limitleri sağlansa bile işletmeci stratejiyi sonradan yasak sayıp erişimi iptal edebilir."
+        ],
+        "ar": [
+          "FundedSquad · تقييمات 1-Step و2-Step ونماذج Instant (الشروط العامة)",
+          "التداول ومراجعة الاستراتيجية قبل التمويل أو السحب",
+          "الشروط §4.4: ممارسات قد تعرض علاقة الوسيط للخطر، واستخدام غير ملائم لأنظمة طرف ثالث، وقواعد الوسيط، دون عتبة موضوعية شاملة.",
+          "قد يصنف المشغل الاستراتيجية لاحقًا كمحظورة ويلغي الوصول رغم تحقيق الأهداف واحترام حدود التراجع."
         ]
       }
     },
@@ -2289,6 +2451,12 @@
           "Haber penceresinden önce açılıp açıklama sırasında kapanan işlem",
           "Değerlendirme hesabı işlem kuralları, Evaluation Funded senaryosu: pencere öncesi açılıp içinde kapanan işlemin kârı incelemede silinir; zararı yatırımcıya yüklenir.",
           "Hesap ihlali olmasa bile aynı tür işlemde kâr korunmaz, gerçekleşen zarar sayılır."
+        ],
+        "ar": [
+          "FundedSquad · Evaluation Funded (تداول الأخبار، وليس مرحلة التقييم)",
+          "إغلاق صفقة فُتحت قبل نافذة الأخبار أثناء صدورها",
+          "قواعد حساب التحدي، سيناريو Evaluation Funded: تُحذف عند المراجعة أرباح صفقة فُتحت قبل النافذة وأُغلقت داخلها؛ وتبقى الخسائر على المتداول.",
+          "لا يحتفظ التنفيذ من النوع نفسه بالربح لكنه يحتسب الخسارة المحققة حتى دون مخالفة للحساب."
         ]
       }
     },
@@ -2353,6 +2521,12 @@
           "Simülasyon, yatırımcı hesabına kabul veya ödeme öncesi inceleme",
           "Şartlar V3.01 §§9.3 ve 10.1: kumar, önemli ölçüde büyük işlemler ve orantısız pozisyonların takdire bağlı tanımı; kesin eşik yok.",
           "Düşüş limitine uyan strateji kumar sayılabilir, işlemleri iptal edilebilir veya erişim feshedilebilir."
+        ],
+        "ar": [
+          "Orion Funded · Nova وZero وStandard وSwing وSelect",
+          "المحاكاة والمراجعة قبل دخول حساب المتداول أو الدفع",
+          "الشروط V3.01 §§9.3 و10.1: تعريفات تقديرية للمقامرة والصفقات الأكبر بكثير والتعرض غير المتناسب، دون عتبة ثابتة.",
+          "قد تُعاد تصنيف استراتيجية ملتزمة بحد التراجع كمقامرة وتُلغى صفقاتها أو يُنهى الوصول."
         ]
       }
     },
@@ -2417,6 +2591,12 @@
           "Değerlendirme ve fonlanmış işlem, uyum incelemesi",
           "Şartlar §7.26: «açık plan veya tanımlı strateji olmadan önemli bir bahse benzeyen işlemler»; yayımlanmış evrensel nesnel eşik yok.",
           "Maksimum zarar limitlerine uyan strateji öngörülebilir eşik olmadan kumar sayılabilir ve fonlanmış hesap iptal edilebilir."
+        ],
+        "ar": [
+          "Wall Street Funded · تحديات Power/Prime/Flash/Instant",
+          "التداول في التقييم والتمويل ومراجعة الامتثال",
+          "الشروط §7.26: «معاملات تشبه رهانًا كبيرًا دون خطة واضحة أو استراتيجية محددة»، دون عتبة موضوعية عامة منشورة.",
+          "قد تُصنف استراتيجية ملتزمة بحد الخسارة القصوى كمقامرة دون عتبة قابلة للتوقع، مما يؤدي إلى إلغاء الحساب الممول."
         ]
       }
     },
@@ -2481,6 +2661,12 @@
           "İşlem, çekimde yasak davranış sınıflandırması",
           "Eylül 2026 şartları §5.2: yasak davranış, işletmeci tarafından değerlendirilen kötüye kullanım veya gerçekçi olmayan stratejiyi içerir; genel eşik yok; sonuçlar §6.9.",
           "Sayısal olarak açıkça yasaklanmamış yöntem sonradan kötüye kullanım sayılıp ödeme yeniden hesaplanabilir."
+        ],
+        "ar": [
+          "Moneta Funded · 1-Step/2-Step/Instant/Sprint",
+          "التداول وتصنيف السلوك المحظور عند السحب",
+          "شروط سبتمبر 2026 §5.2: يشمل السلوك المحظور الاستراتيجيات المسيئة أو غير الواقعية وفق تقييم المشغل، دون حد عام؛ العواقب في §6.9.",
+          "قد تُعتبر طريقة غير محظورة رقميًا إساءة لاحقًا ويُعاد حساب السحب."
         ]
       }
     },
@@ -2545,6 +2731,12 @@
           "Aşama onayı ve fonlama sırasında strateji incelemesi",
           "Kullanım şartları, kumar uygulamalarının yasaklanması: orantısız risk, kumara benzeyen işlem, tümünü riske atma ve aşırı kaldıraç; maddede program başına tek risk sınırı yok.",
           "Sayısal hedef sağlansa bile şirket aşırı kumar nedeniyle stratejiyi dışlayıp hesabı kapatabilir."
+        ],
+        "ar": [
+          "TRADEXPROP · تقييمات الفوركس والعملات المشفرة وInstant Funded X",
+          "مراجعة الاستراتيجية عند اعتماد المرحلة والتمويل",
+          "شروط الاستخدام، حظر ممارسات المقامرة: مخاطر غير متناسبة وتداول يشبه المقامرة والمخاطرة بكل الرصيد ورافعة مفرطة، دون حد مخاطر موحد لكل برنامج في البند.",
+          "قد تستبعد الشركة الاستراتيجية بسبب المقامرة المفرطة وتغلق الحساب رغم تحقيق الهدف الرقمي."
         ]
       }
     },
@@ -2609,6 +2801,12 @@
           "İşlem ve ödeme öncesi strateji incelemesi",
           "Şartlar §5.4.3: «önemli ölçüde daha büyük» riskler ve olağan piyasa davranışına uymayan işlemler; ürün başına tek nesnel ölçüt yok.",
           "Maksimum zarara uyan strateji sayısal ölçüt olmadan yeniden sınıflandırılarak kâr veya erişim kaldırılabilir."
+        ],
+        "ar": [
+          "Monevis · تقييمات CFD وحسابات ممولة تجريبية",
+          "التداول ومراجعة الاستراتيجية قبل السحب",
+          "الشروط §5.4.3: تصنيف المخاطر «الأكبر بكثير» والمعاملات المخالفة لسلوك السوق المعتاد دون مقياس موضوعي موحد لكل منتج.",
+          "قد تعيد الشركة تصنيف استراتيجية ملتزمة بحد الخسارة القصوى وتحذف الأرباح أو تلغي الوصول دون معيار كمي."
         ]
       }
     },
@@ -2673,6 +2871,12 @@
           "İşlem ve çekim öncesi ihlal incelemesi",
           "Şartlar §9.2: ticari olmayan faaliyet ve aşırı pozisyon büyüklüğü/yoğunluğu yasak; kapsamlı sınırlar yok, uyum tek taraflı değerlendirilir.",
           "Riskli ancak sayısal sınırlara uygun strateji işlemden sonra yeniden sınıflandırılabilir ve kârı silinebilir."
+        ],
+        "ar": [
+          "FundedHive · تحديات وحسابات تجريبية",
+          "التداول ومراجعة المخالفات قبل السحب",
+          "الشروط §9.2: تحظر النشاط غير التجاري والأحجام أو التعرض المفرط دون حدود شاملة؛ وتُقيّم الشركة الامتثال بصورة أحادية.",
+          "قد تُعاد تصنيف استراتيجية محفوفة بالمخاطر لكنها ملتزمة بالحدود الرقمية بعد التداول وتُحذف أرباحها."
         ]
       }
     },
@@ -2737,6 +2941,12 @@
           "İşlem ve ödül talebi sırasında inceleme",
           "İşlem koşulları: kumar, sürdürülemez işlem yürütme ve sürdürülebilir risk yönetiminin yokluğu yasak; tüm planlarda kapsamlı ortak ölçüt yok.",
           "Sayısal limitlere uyan yöntem nitel değerlendirmeyle dışlanabilir."
+        ],
+        "ar": [
+          "SabioTrade · تقييمات CFD وبرامج ممولة",
+          "التداول ومراجعة الصفقات عند طلب المكافأة",
+          "شروط التداول: تحظر المقامرة والتنفيذ غير المستدام وغياب إدارة المخاطر المستدامة دون معيار شامل مشترك لكل الخطط.",
+          "قد يُستبعد أسلوب ملتزم بالحدود الرقمية بناء على تقييم نوعي."
         ]
       }
     },
@@ -2801,6 +3011,12 @@
           "İşlem, program incelemesi ve hesap kararı",
           "03/11/2026 tarihli şartlar §§7–8: istismar ve programın ruhunu dolanma; işletmecinin takdiri kamuya açık ölçütlerle yeterince sınırlanmamış.",
           "Sayısal hedefi karşılayan strateji istismar sayılıp dışlama veya işlem silinmesiyle sonuçlanabilir."
+        ],
+        "ar": [
+          "Clarity Traders · تحديات تجريبية وحسابات ممولة",
+          "التداول ومراجعة البرنامج واتخاذ قرار الحساب",
+          "شروط 03/11/2026 §§7–8: الاستغلال والتحايل على «روح» البرنامج، مع عدم تقييد تقدير المشغل بما يكفي بمعايير عامة.",
+          "قد تُصنف استراتيجية تحقق الأهداف الرقمية كاستغلال، فتؤدي إلى الاستبعاد أو حذف الصفقات."
         ]
       }
     },
@@ -2865,6 +3081,12 @@
           "Fonlama veya ödül öncesi işlem ve hesap incelemesi",
           "Şartlar §3: tek yönlü bahisler, aracı kurum zararına ilişkin haklı kaygılar ve bozucu uygulamalar tek taraflı takdire tabidir.",
           "Düşüş ve gün koşullarına uyan işlemler önceden belirlenmiş eşik olmadan uygunsuz ilan edilip hesap kapatılabilir."
+        ],
+        "ar": [
+          "TEFX · 1-Step و2-Step وInstant",
+          "التداول ومراجعة الحساب قبل التمويل أو المكافأة",
+          "الشروط §3: رهانات أحادية الاتجاه ومخاوف مبررة من الإضرار بالوسيط وممارسات معطلة وفق تقدير أحادي.",
+          "قد يُعتبر التداول الملتزم بالتراجع والأيام غير ممتثل دون عتبة مسبقة، فيُغلق الحساب ويُلغى الوصول."
         ]
       }
     },
@@ -2929,6 +3151,12 @@
           "İşlem, strateji incelemesi ve fonlanmış aşamaya geçiş",
           "Analytix panel koşulları: değerlendirme ve fonlanmış aşamada aynı strateji şartı şirketin tek takdirine bağlıdır; aşırı kumar için evrensel yüzde yok.",
           "Strateji değiştirmek veya önemli sayılan bir payı riske atmak, ortak açık eşik olmadan sonradan ihlal yaratabilir."
+        ],
+        "ar": [
+          "Lvlup Futures · تقييمات Prop Account LLC / اتفاقية متداول Prop Account LC",
+          "التداول ومراجعة الاستراتيجية والانتقال إلى التمويل",
+          "شروط لوحة Analytix: استراتيجية متطابقة بين التقييم والتمويل وفق حكم الشركة وحدها، ومقامرة مفرطة دون نسبة عامة موحدة.",
+          "قد يُعد تغيير الاستراتيجية أو المخاطرة بحصة تُعتبر كبيرة مخالفة بعد وقوعها دون حد مشترك واضح."
         ]
       }
     },
@@ -2993,6 +3221,12 @@
           "Fonlanmış işlem ve çekim öncesi inceleme",
           "Kamuya açık kurallar §9: tek yönlü bahisler, agresif maliyet ortalaması ve önemli stil değişiklikleri yasak; sayfada programlar arası ayrıntılı eşik yok.",
           "Düşüş limitine uyan işlem kumar sayılabilir; kâr silinmesi veya ihlal oluşabilir."
+        ],
+        "ar": [
+          "Atmos · Nova و2-Step وInstant",
+          "التداول الممول والمراجعة قبل السحب",
+          "القواعد العامة §9: تحظر الرهانات أحادية الاتجاه والتعزيز العدواني للمراكز وتغييرات الأسلوب المهمة دون عتبة مفصلة مشتركة بين البرامج في هذه الصفحة.",
+          "قد تُصنف صفقة ملتزمة بالتراجع كمقامرة فتُحذف أرباحها أو تُعد مخالفة."
         ]
       }
     },
@@ -3057,6 +3291,12 @@
           "Değerlendirme ve fonlanmış aşamada strateji sürekliliği",
           "§6.4: profesyonel stratejiden kumar stratejisine geçiş; programlar arası sayısal risk eşiği yok.",
           "Hedefler ve düşüş limitleri sağlansa da profesyonellik değerlendirmesiyle yatırımcı diskalifiye edilebilir."
+        ],
+        "ar": [
+          "FundedElite · تقييمات / حسابات Elite تجريبية",
+          "التقييم ومراجعة استمرار الاستراتيجية في التمويل",
+          "§6.4: الانتقال من استراتيجية مهنية إلى استراتيجية مقامرة دون عتبة رقمية للمخاطر مشتركة بين البرامج.",
+          "قد يُستبعد المتداول وفق تقييم مهنيته رغم تحقيق الأهداف واحترام حدود التراجع."
         ]
       }
     },
@@ -3121,6 +3361,12 @@
           "İşlem ve ödül öncesi strateji incelemesi",
           "Şartlar §§5.5 ve 5.6: diğer yasak işlem türleri veya parametreler tek taraflı takdirle tanımlanır.",
           "Sayısal limitler karşılansa bile strateji sonradan yasaklanıp işlemler kâr/zarardan çıkarılabilir."
+        ],
+        "ar": [
+          "Upcomers · CFD والعقود الآجلة والبرامج التجريبية الأخرى",
+          "التداول ومراجعة الاستراتيجية قبل المكافأة",
+          "الشروط §§5.5 و5.6: تحدد الشركة بصورة أحادية أنواع تداول محظورة أخرى أو معايير وفق تقديرها.",
+          "قد تُحظر استراتيجية لاحقًا وتُحذف الصفقات من الأرباح والخسائر رغم الالتزام بالحدود الرقمية."
         ]
       }
     },
@@ -3185,6 +3431,12 @@
           "Fonlanmış aşamaya geçişte işlem ve strateji incelemesi",
           "Şartlar §5.C: aracı kurum ilişkisini tehlikeye atma riski ve strateji değişikliklerinin takdire bağlı sınıflandırılması; ortak kamuya açık ölçüt yok.",
           "Düşüş limitine uyan strateji sınırlanmamış nitel ölçütlerle dışlanabilir."
+        ],
+        "ar": [
+          "Funded Trader Markets · حسابات Challenge/Funded تجريبية",
+          "التداول ومراجعة الاستراتيجية عند الانتقال إلى التمويل",
+          "الشروط §5.C: خطر تهديد علاقة الوسيط وتصنيف تغييرات الاستراتيجية وفق التقدير دون معيار عام مشترك.",
+          "قد تؤدي استراتيجية ملتزمة بالتراجع إلى الاستبعاد بناء على معايير نوعية غير محددة."
         ]
       }
     },
@@ -3249,6 +3501,12 @@
           "Ödeme onayı veya kapatma öncesi simüle ve fonlanmış strateji incelemesi",
           "Trader Agreement §§4 ve 16.12: kumar, ya hep ya hiç bahisleri ve aracı kurum ilişkisine zarar riski şirketin münhasır takdirinde; programlar arası nesnel eşik çerçevesi yok.",
           "Sayısal limitler sağlansa bile stil öznel biçimde yeniden sınıflandırılırsa kapanışta kârlar kaybedilebilir; ödül kaybı yalnızca B1'de bir kez değerlendirilir."
+        ],
+        "ar": [
+          "Funded Futures Network / FFN Cap LLC — حسابات Sim-Funded Pro وSTEADY وLive وفق الاتفاقية المطبقة",
+          "مراجعة الاستراتيجية التجريبية والممولة قبل اعتماد السحب أو الإغلاق",
+          "اتفاقية المتداول §§4 و16.12: تقيّم الشركة وفق تقديرها المنفرد المقامرة والرهانات الكلية وخطر الإضرار بعلاقة الوسيط دون إطار عتبات موضوعية مشترك بين البرامج.",
+          "قد تُصادر الأرباح عند الإغلاق إذا أعيد تصنيف الأسلوب ذاتيًا رغم الالتزام بالحدود الرقمية؛ تُقيّم خسارة المكافآت مرة واحدة فقط في B1."
         ]
       }
     },
@@ -3313,6 +3571,12 @@
           "Ödül talebi öncesi değerlendirme ve fonlanmış strateji incelemesi",
           "Şartlar §6: finansal piyasalarda yapılması gereken işlem biçimine aykırı veya DFT GROUP'a zarar veren her işlem; tanımlı risk ölçütü yok.",
           "Sayısal hedeflere uygun strateji zararlı davranış sayılıp öngörülebilir evrensel ölçüt olmadan hesap kapatılabilir."
+        ],
+        "ar": [
+          "DirectFundedTrader · تقييم بمرحلتين وFast Funding، عقود تجريبية",
+          "مراجعة الاستراتيجية في التحدي والتمويل قبل طلب المكافأة",
+          "الشروط §6: أي تداول يتعارض مع كيفية التداول في الأسواق المالية أو يسبب ضررًا لـDFT GROUP، دون معيار مخاطر محدد.",
+          "قد تُعاد تصنيف استراتيجية تحقق الأهداف الرقمية كسلوك ضار وتؤدي إلى إغلاق الحساب دون معيار عام قابل للتوقع."
         ]
       }
     },
@@ -3377,6 +3641,12 @@
           "Değerlendirme işlemi veya ödeme öncesi fonlanmış inceleme",
           "Genel şartlar §5.4: nitel işlem kısıtlamaları ve program başına tam ölçüt olmadan işlemlerin silinmesi.",
           "Hedeflere uyan strateji yeniden sınıflandırılıp sonuçları iptal edilebilir."
+        ],
+        "ar": [
+          "Fidelcrest · تقييمات Pro/Micro",
+          "التداول في التحدي أو مراجعة التمويل قبل السحب",
+          "الشروط العامة §5.4: قيود تداول نوعية وإمكانية حذف الصفقات دون مقياس شامل لكل برنامج.",
+          "قد تُعاد تصنيف استراتيجية ملتزمة بالأهداف وتُلغى نتائجها."
         ]
       }
     },
@@ -3441,6 +3711,12 @@
           "Değerlendirme işlemi veya ödeme öncesi fonlanmış inceleme",
           "Speedy işlem kuralları: sabit süre yok; Şartlar §10.6: değerlendirme 30 takvim günü sonra sona erer.",
           "Teklif ve sözleşmenin bitiş süresi çelişkisi değerlendirme başarısızlığına neden olabilir."
+        ],
+        "ar": [
+          "Ultimate Traders · Speedy 1-phase",
+          "التداول في التحدي أو مراجعة التمويل قبل السحب",
+          "قواعد Speedy: لا موعد نهائي ثابت؛ الشروط §10.6: ينتهي التحدي بعد 30 يومًا تقويميًا.",
+          "التعارض بين صفحة العرض والعقد بشأن موعد الانتهاء قد يؤدي إلى رسوب التقييم."
         ]
       }
     },
@@ -3505,6 +3781,12 @@
           "Değerlendirme işlemi veya ödeme öncesi fonlanmış inceleme",
           "Bullwaves şartları: aşırı risk ve işlem hacmi/strateji değişikliği değerlendirmesi ürün bazında tam sayısallaştırılmamış.",
           "Düşüş limitleri içinde kalan stil ödeme incelemesinde yeniden sınıflandırılabilir."
+        ],
+        "ar": [
+          "Bullwaves Prime · 1-Step/2-Step/Instant",
+          "التداول في التحدي أو مراجعة التمويل قبل السحب",
+          "شروط Bullwaves: تقييم المخاطر المفرطة وتغير أحجام التداول أو الاستراتيجية غير محدد بالكامل رقميًا لكل منتج.",
+          "قد يُعاد تصنيف أسلوب ملتزم بحدود التراجع عند مراجعة السحب."
         ]
       }
     },
@@ -3569,6 +3851,12 @@
           "Değerlendirme/fonlama ve ödül öncesi strateji doğrulaması",
           "Şartlar §15(k): kumar odaklı, kötü niyetli davranış ve şirketin profesyonel dışı gördüğü stratejiler; tam sayısal eşik yok.",
           "Sayısal limitler içindeki strateji stile göre diskalifiye edilebilir; ödül hakkı B1'de ayrı değerlendirilir."
+        ],
+        "ar": [
+          "DNA Funded · تقييمات تجريبية وحسابات ممولة",
+          "التقييم والتمويل والتحقق من الاستراتيجية قبل المكافأة",
+          "الشروط §15(k): سلوك يركز على المقامرة أو سوء النية واستراتيجيات تعتبرها الشركة غير مهنية، دون عتبة رقمية شاملة.",
+          "قد تُستبعد استراتيجية ملتزمة بالحدود الرقمية بناء على أسلوبها؛ ويُقيّم الحق في المكافآت بشكل منفصل في B1."
         ]
       }
     },
@@ -3633,6 +3921,12 @@
           "Değerlendirme/fonlama ve ödül öncesi strateji doğrulaması",
           "Şartlar §4.4: aracı kurum ilişkilerine zararlı sayılan her türlü işlem sayısal tanım olmadan yasaklanır; fesih yaptırımları öngörülür.",
           "Sayısal zarar sınırına uygun teknik, öngörülebilir sınıflandırma olmadan incelemede cezalandırılabilir."
+        ],
+        "ar": [
+          "Foxx · 1-Step / Instant تجريبيان",
+          "التقييم والتمويل والتحقق من الاستراتيجية قبل المكافأة",
+          "الشروط §4.4 تحظر أي تداول يُعد مضرًا بعلاقات الوسطاء دون تعريف رقمي، مع عقوبات الإنهاء.",
+          "قد تعاقب الشركة أسلوبًا ملتزمًا بحدود الخسارة أثناء المراجعة دون إمكانية توقع تصنيفه."
         ]
       }
     },
@@ -3697,6 +3991,12 @@
           "Değerlendirme/fonlama ve ödül öncesi strateji doğrulaması",
           "Resmî SFX yardım kılavuzu (17/08/2026): 10 dakikalık pencere sonrası ters yönlü telafi işlemi mümkün; tek yönlü bahisler ve mantıksız görülen stratejiler; ödeme yaptırımları risk ekibinin takdirinde.",
           "Risk ekibi ödeme sırasında açık uçlu strateji sınıflandırmasıyla yatırımcıyı reddedebilir."
+        ],
+        "ar": [
+          "SFX Funded · Ascend / Rapid / Instant",
+          "التقييم والتمويل والتحقق من الاستراتيجية قبل المكافأة",
+          "دليل المساعدة الرسمي (17/08/2026): استعادة في الاتجاه المعاكس ممكنة بعد نافذة عشر دقائق، ورهانات أحادية الاتجاه واستراتيجيات تُعتبر غير عقلانية؛ عقوبات السحب وفق تقدير فريق المخاطر.",
+          "قد يرفض فريق المخاطر متداولًا عند السحب بتصنيف مفتوح للاستراتيجية."
         ]
       }
     },
@@ -3761,6 +4061,12 @@
           "Değerlendirme/fonlama ve ödül öncesi strateji doğrulaması",
           "Genel şartlar §15: görünüşte kumara benzeyen davranış veya kötü niyetli strateji de yasak; değerlendirme sayısallaştırılmamış.",
           "Açık zarar sınırlarına rağmen değerlendirme kazançları nitel gerekçeyle geçersiz kılınabilir."
+        ],
+        "ar": [
+          "SuperFunded · تقييم تجريبي ومكافآت ممولة",
+          "التقييم والتمويل والتحقق من الاستراتيجية قبل المكافأة",
+          "الشروط العامة §15 تحظر أيضًا السلوك الذي يبدو شبيهًا بالمقامرة أو الاستراتيجيات سيئة النية بتقييم غير كمي.",
+          "قد تُلغى أرباح التحدي لسبب نوعي رغم وجود حدود خسارة صريحة."
         ]
       }
     },
@@ -3825,6 +4131,12 @@
           "Değerlendirme/fonlama ve ödül öncesi strateji doğrulaması",
           "Şartlar §7.3: davranış veya stratejide «önemli» değişiklik, First Frontier'ın münhasır takdirinde sayısal eşik olmadan yasak.",
           "Düşüş ve asgari gün koşullarına uyan strateji farklı sayılıp ödül reddedilebilir."
+        ],
+        "ar": [
+          "Funding Frontier · Classic وPRO ممولان",
+          "التقييم والتمويل والتحقق من الاستراتيجية قبل المكافأة",
+          "الشروط §7.3: حظر غير كمي لتغيير «مهم» في السلوك أو الاستراتيجية وفق التقدير المنفرد لـFirst Frontier.",
+          "قد تُعتبر استراتيجية ملتزمة بالتراجع والحد الأدنى للأيام مختلفة وتُرفض مكافأتها."
         ]
       }
     },
@@ -3889,6 +4201,12 @@
           "Değerlendirmede veya ödül öncesi stil incelemesi",
           "Şartlar: zararlı işlem ve kumara benzeyen davranış risk ekibi tarafından sınıflandırılır; paketler arası tam eşik yok, ödeme öncesi yeni koşullar mümkün.",
           "Sayısal limitler içindeki işlemler yeniden sınıflandırılabilir, ödül reddedilebilir veya hesap kapatılabilir."
+        ],
+        "ar": [
+          "WeMasterTrade — برنامج تقييم وتمويل تجريبي",
+          "مراجعة الأسلوب في التحدي أو قبل المكافأة",
+          "الشروط: يصنف فريق المخاطر التداول الضار والسلوك الشبيه بالمقامرة دون حد شامل مشترك بين الباقات، مع احتمال شروط جديدة قبل الدفع.",
+          "قد تُعاد تصنيف صفقات ضمن الحدود الرقمية، فتُرفض المكافأة أو يُغلق الحساب."
         ]
       }
     },
@@ -3953,6 +4271,12 @@
           "Değerlendirmede veya ödül öncesi stil incelemesi",
           "SSS: sayısal haber kısıtlamalarına ek olarak kötüye kullanım, manipülatif veya etik dışı uygulamalar; risk eşikleriyle kapsamlı sınıflandırma yok.",
           "Sayısal limitler içindeki işlemler yeniden sınıflandırılabilir, ödül reddedilebilir veya hesap kapatılabilir."
+        ],
+        "ar": [
+          "FOREXIVE — برنامج تقييم وتمويل تجريبي",
+          "مراجعة الأسلوب في التحدي أو قبل المكافأة",
+          "الأسئلة الشائعة: ممارسات مسيئة أو تلاعبية أو غير أخلاقية إضافة إلى القيود الرقمية للأخبار، دون تصنيف شامل بعتبات مخاطر.",
+          "قد تُعاد تصنيف صفقات ضمن الحدود الرقمية، فتُرفض المكافأة أو يُغلق الحساب."
         ]
       }
     },
@@ -4017,6 +4341,12 @@
           "Değerlendirmede veya ödül öncesi stil incelemesi",
           "Şartlar tüm eşikleri tanımlamadan işlemi adaletsiz, kötüye kullanım veya zararlı saymaya izin verir; Outcome A sonrası ödüller kaybedilebilir.",
           "Sayısal limitler içindeki işlemler yeniden sınıflandırılabilir, ödül reddedilebilir veya hesap kapatılabilir."
+        ],
+        "ar": [
+          "Hash Hedge — برنامج تقييم وتمويل تجريبي",
+          "مراجعة الأسلوب في التحدي أو قبل المكافأة",
+          "الشروط تسمح باعتبار التداول غير عادل أو مسيئًا أو ضارًا دون تحديد جميع العتبات، مع احتمال خسارة المكافآت بعد Outcome A.",
+          "قد تُعاد تصنيف صفقات ضمن الحدود الرقمية، فتُرفض المكافأة أو يُغلق الحساب."
         ]
       }
     },
@@ -4081,6 +4411,12 @@
           "Değerlendirmede veya ödül öncesi stil incelemesi",
           "Genel kurallarda kötüye kullanım veya kumara benzer risk sınıflandırması kısmen öznel; her ürün için evrensel eşik yok.",
           "Sayısal limitler içindeki işlemler yeniden sınıflandırılabilir, ödül reddedilebilir veya hesap kapatılabilir."
+        ],
+        "ar": [
+          "Sure Leverage Funding — برنامج تقييم وتمويل تجريبي",
+          "مراجعة الأسلوب في التحدي أو قبل المكافأة",
+          "يبقى تصنيف السلوك المسيء أو المخاطر الشبيهة بالمقامرة في القواعد العامة ذاتيًا جزئيًا، دون عتبة عامة لكل منتج.",
+          "قد تُعاد تصنيف صفقات ضمن الحدود الرقمية، فتُرفض المكافأة أو يُغلق الحساب."
         ]
       }
     },
@@ -4145,6 +4481,12 @@
           "Değerlendirmede veya ödül öncesi stil incelemesi",
           "Kumar kuralı, pervasız aşırı kaldıraç ve yetersiz serbest teminatı risk ekibinin tanımlamasına izin verir; tek tam eşik yok: bir strateji belirsizliği, −3.",
           "Sayısal limitler içindeki işlemler yeniden sınıflandırılabilir, ödül reddedilebilir veya hesap kapatılabilir."
+        ],
+        "ar": [
+          "Titan Capital Markets — برنامج تقييم وتمويل تجريبي",
+          "مراجعة الأسلوب في التحدي أو قبل المكافأة",
+          "قاعدة المقامرة تتيح لفريق المخاطر تعريف الرافعة المفرطة المتهورة وعدم كفاية الهامش الحر دون عتبة موحدة شاملة: غموض استراتيجي واحد، −3.",
+          "قد تُعاد تصنيف صفقات ضمن الحدود الرقمية، فتُرفض المكافأة أو يُغلق الحساب."
         ]
       }
     },
@@ -4209,6 +4551,12 @@
           "Fonlama veya ödeme onayı öncesi işlem incelemesi",
           "Genel bakış §24.5(6): şirketin iyi niyetli işleme aykırı gördüğü teknikler yasak; §25: eşik olmadan «belirgin» büyük/küçük pozisyonlar yasak, sonuçların dışlanmasına kadar yaptırım.",
           "Öznel strateji sınıflandırması sayısal limitler aşılmadan hesap veya kâr kaybına yol açabilir."
+        ],
+        "ar": [
+          "Prop Number One · تحديات وتمويل تجريبي",
+          "مراجعة التداول قبل اعتماد التمويل أو السحب",
+          "النظرة العامة §24.5(6) تحظر ما تعتبره الشركة مخالفًا للتداول بحسن نية؛ §25 يحظر الأحجام الأكبر أو الأصغر «بشكل ملحوظ» دون عتبة، مع عقوبات تصل إلى استبعاد النتائج.",
+          "قد يؤدي تصنيف ذاتي للاستراتيجية إلى فقدان الحساب أو الأرباح دون تجاوز الحدود الرقمية."
         ]
       }
     },
@@ -4273,6 +4621,12 @@
           "Fonlama veya ödeme onayı öncesi işlem incelemesi",
           "Fonlanmış kılavuzlar: tutarsız veya kumara benzeyen stratejiler ve yetersiz risk yönetimi, programlar arası ölçüt olmadan yasak; tüm kârların iptaline kadar yaptırım. Belirsiz stil için B2 −3; sayısal limitlerin otomatik cezası değil.",
           "Öznel strateji sınıflandırması sayısal limitler aşılmadan hesap veya kâr kaybına yol açabilir."
+        ],
+        "ar": [
+          "TradingCult · تحديات وتمويل تجريبي",
+          "مراجعة التداول قبل اعتماد التمويل أو السحب",
+          "أدلة التمويل تحظر استراتيجيات غير متسقة أو شبيهة بالمقامرة وإدارة مخاطر غير كافية دون معيار مشترك؛ عقوبات تصل إلى إلغاء الأرباح كلها. B2 −3 بسبب غموض الأسلوب، لا عقوبات تلقائية للحدود الرقمية.",
+          "قد يؤدي تصنيف ذاتي للاستراتيجية إلى فقدان الحساب أو الأرباح دون تجاوز الحدود الرقمية."
         ]
       }
     },
@@ -4337,6 +4691,12 @@
           "Fonlama veya ödeme onayı öncesi işlem incelemesi",
           "Şartlar risk ekibine ek kurallar koyma ve uygunsuz gördüğü faaliyetleri diskalifiye etme hakkı verir; program bazında tam tanım yok. Bir belirsiz stil sorunu −3, gerçekleşmiş geriye dönük uygulama isnadı yok.",
           "Öznel strateji sınıflandırması sayısal limitler aşılmadan hesap veya kâr kaybına yol açabilir."
+        ],
+        "ar": [
+          "XFunded · تحديات وتمويل تجريبي",
+          "مراجعة التداول قبل اعتماد التمويل أو السحب",
+          "الشروط تحتفظ لفريق المخاطر بحق إضافة قواعد واستبعاد أي نشاط يعتبره غير ممتثل دون تعريف شامل لكل برنامج؛ مشكلة أسلوب مبهم واحدة، −3، دون نسبة تطبيق رجعي حدث فعليًا.",
+          "قد يؤدي تصنيف ذاتي للاستراتيجية إلى فقدان الحساب أو الأرباح دون تجاوز الحدود الرقمية."
         ]
       }
     },
@@ -4401,6 +4761,12 @@
           "Hesap uygunluğu ve sürdürülmesi",
           "Şartlar §§4.4–4.6: stratejiler, hesaplar arası arbitraj ve risk profili şirketin münhasır takdirinde sınıflandırılır.",
           "Sayısal limitlere uygun faaliyet yasak sayılabilir, programdan çıkarma ve fonlanmış erişim reddi doğabilir."
+        ],
+        "ar": [
+          "GOAT Funded Trader · تقييمات والوصول للتمويل",
+          "تأهيل الحساب واستمراره",
+          "الشروط §§4.4–4.6: تصنيف الاستراتيجيات والمراجحة بين الحسابات وملف المخاطر وفق تقدير الشركة المنفرد.",
+          "قد يُعتبر نشاط ملتزم بالحدود الرقمية محظورًا، فيؤدي إلى الاستبعاد ورفض الوصول للتمويل."
         ]
       }
     },
@@ -4465,6 +4831,12 @@
           "Fonlanmış geçiş, ölçekleme ve simüle/gerçek çekim",
           "Risk inceleme politikası §2.2: uyarı işaretleri temelinde bütünsel karar; her değişken için belirli nesnel eşik olmadığını kabul eder.",
           "Tam öngörülemeyen manuel değerlendirme sonrası hesap onaylanabilir veya çekim geciktirilebilir/reddedilebilir; sayısal inceleme tetikleyicileri kendi başına cezalandırılmaz."
+        ],
+        "ar": [
+          "FT+ · حسابات تخضع لسياسة مراجعة المخاطر",
+          "الانتقال للتمويل والتوسع والسحب التجريبي أو الحقيقي",
+          "سياسة مراجعة المخاطر §2.2: قرار شامل استنادًا إلى إشارات تحذير مع الإقرار بغياب عتبة موضوعية محددة لكل متغير.",
+          "قد يُعتمد الحساب أو يتأخر السحب أو يُرفض بعد تقييم يدوي غير قابل للتوقع بالكامل؛ مؤشرات المراجعة الرقمية لا تُعاقب في حد ذاتها."
         ]
       }
     },
@@ -4529,6 +4901,12 @@
           "Simüle değerlendirme",
           "§9.5: CTI belirli uygulamaları kendi takdirine göre yasak sayabilir; ilgili yaptırımlar §9.6'da toplanır.",
           "Hesap veya işlem sonucu yaptırıma tabi olabilir ya da §9.6(e) kapsamında kaldıraç ve maksimum risk değişebilir; kapsamlı eşik yok. Bir olgu, bir kesinti."
+        ],
+        "ar": [
+          "CTI · تقييمات شركة جزر القمر وفق الشروط المرتبطة في 20/11/2026",
+          "تقييم تجريبي",
+          "§9.5 يسمح لـCTI بتصنيف بعض الممارسات كمحظورة وفق تقديرها؛ العقوبات مجمعة في §9.6.",
+          "قد يُعاقب الحساب أو نتيجة صفقة، أو تُعدّل الرافعة والحد الأقصى للمخاطر وفق §9.6(e)، دون عتبة شاملة. واقعة واحدة وخصم واحد."
         ]
       }
     },
@@ -4593,6 +4971,12 @@
           "Performance Account / fonlanmış erişimi sürdürme",
           "Şartlar §8: pervasız işlem ve kumar davranışı sayısal tanım veya uygulanabilir sınıflandırma prosedürü olmadan yasak.",
           "Davranışın öznel sınıflandırılmasına göre hesap kapatılabilir ve kullanıcı devre dışı bırakılabilir."
+        ],
+        "ar": [
+          "Leeloo Trading · حسابات Performance",
+          "Performance Account / استمرار الوصول للتمويل",
+          "الشروط §8: تحظر التداول المتهور وسلوك المقامرة دون تعريف رقمي أو إجراءات تصنيف قابلة للتطبيق.",
+          "إغلاق الحساب وتعطيل المستخدم بناء على تصنيف ذاتي للسلوك."
         ]
       }
     },
@@ -4657,6 +5041,12 @@
           "Değerlendirme, Live Virtual ve Live Funded",
           "Kılavuz §§4 ve 9: kâr yoğunluğu, pozisyon büyüklüğü ve geçmişe göre aşırı risk değerlendirmesi; kapsamlı kesin eşik yok.",
           "Sayısal limitlerle uyumlu uygulama inceleme sonrası kapanmaya yol açabilir; ödül iptali olasılığı yalnız B1'e yazılır."
+        ],
+        "ar": [
+          "UProfit · برامج تخضع لدليل أفضل ممارسات التداول",
+          "التقييم وLive Virtual وLive Funded",
+          "الدليل §§4 و9: تقييم المخاطر المفرطة حسب تركيز الأرباح وحجم المراكز والسجل، دون عتبة حاسمة شاملة.",
+          "قد تؤدي ممارسة ملتزمة بالحدود الرقمية إلى الإغلاق بعد المراجعة؛ ويُنسب إلغاء المكافآت المحتمل إلى B1 فقط."
         ]
       }
     },
@@ -4721,6 +5111,12 @@
           "Fonlanmış hesap / Payward Oceanic Ltd altında işlem",
           "POL sözleşmesi §3(b)(v)–(viii): POL'un likidite sağlayıcısına müdahale edebileceğini veya düzenleyici risk yaratabileceğini düşündüğü stratejiler; kapsamlı ölçüt yok.",
           "Sayısal limitlerle uyumlu strateji yasak işlem sayılıp askıya alma/feshe yol açabilir. Ödül sonuçları B1'de değerlendirilir, burada ikinci kez düşülmez."
+        ],
+        "ar": [
+          "Breakout Prop · اتفاقية متداول ممول Classic/Pro/Turbo",
+          "الحساب الممول / التداول تحت Payward Oceanic Ltd",
+          "اتفاقية POL §3(b)(v)–(viii): استراتيجيات ترى POL أنها قد تعيق مزود السيولة أو تنشئ مخاطر تنظيمية، دون معايير شاملة.",
+          "قد تُصنف استراتيجية ملتزمة بالحدود الرقمية كتداول محظور وتؤدي إلى التعليق أو الإنهاء. تُقيّم عواقب المكافآت في B1 دون خصم ثانٍ."
         ]
       }
     },
@@ -4785,6 +5181,12 @@
           "Simüle değerlendirme, RCF hesaplarına otomatik uygulanmaz",
           "Şartlar §7 ve program kuralları: sayısal risk örneklerine ek olarak aşırı veya kumara benzer görülen risk davranışı.",
           "Tam sınırlandırılmamış nitel yorumla değerlendirme başarısız olabilir veya hesap kapanabilir; RCF sözleşmesi ayrı incelenmelidir."
+        ],
+        "ar": [
+          "RebelsFunding · تقييم RF",
+          "تقييم تجريبي، لا يطبق تلقائيًا على حسابات RCF",
+          "الشروط §7 وقواعد البرنامج: سلوك مخاطر يُعتبر مفرطًا أو شبيهًا بالمقامرة إضافة إلى أمثلة مخاطر كمية.",
+          "قد يفشل التقييم أو يُغلق الحساب بسبب تفسير نوعي غير محدد بالكامل؛ يجب مراجعة اتفاقية RCF منفصلة."
         ]
       }
     },
@@ -4849,6 +5251,12 @@
           "Değerlendirme onayı",
           "Şartlar §10.1: Lux, sonraki aşamaya erişim hesabından belirli işlemleri kendi takdirine göre çıkarabilir.",
           "Bazı işlemler kapsamlı ölçüt olmadan çıkarılırsa sayısal hedefi karşılamak aşamayı geçmeye yetmeyebilir."
+        ],
+        "ar": [
+          "Lux Trading Firm · التقييم / التوسع",
+          "اعتماد التقييم",
+          "الشروط §10.1: يجوز لـLux وفق حكمها المنفرد استبعاد صفقات من حساب التأهل للمرحلة التالية.",
+          "قد لا يكفي تحقيق الهدف الرقمي للنجاح إذا استُبعدت صفقات دون معيار شامل."
         ]
       }
     },
@@ -4913,6 +5321,12 @@
           "Değerlendirme ve fonlanmış uygunluk",
           "Değerlendirme şartları §13.14: standart piyasa uygulamaları ve pozisyon/risk nitel değerlendirmesi; kapsamlı diskalifiye eşiği yok.",
           "İşlem profili yorumuyla aşama geçişi reddedilebilir ve değerlendirme ücreti iade edilmeyebilir."
+        ],
+        "ar": [
+          "FunderPro Challenge · Classic / One Phase",
+          "التقييم وأهلية التمويل",
+          "شروط التحدي §13.14: تقييم نوعي لممارسات السوق المعتادة والتعرض أو المخاطر دون عتبة شاملة للاستبعاد.",
+          "قد يُرفض الانتقال للمرحلة التالية ولا تُرد رسوم التقييم بناء على تفسير ملف التداول."
         ]
       }
     },
@@ -4977,6 +5391,12 @@
           "Değerlendirme ardından Funded Trader",
           "Şartlar §10.2(n): değerlendirmenin amacını bozan önemli strateji, araç veya risk profili değişikliği; sayısal eşik yok.",
           "Değişiklik yasak uygulama sayılırsa hesap askıya alınabilir ve ödüller kaybedilebilir."
+        ],
+        "ar": [
+          "HyroTrader · التحدي والانتقال إلى التمويل",
+          "التقييم ثم Funded Trader",
+          "الشروط §10.2(n): تغيير جوهري للاستراتيجية أو الأدوات أو ملف المخاطر يقوض غرض التحدي دون عتبة كمية.",
+          "قد يُعلق الحساب وتُصادر المكافآت إذا صُنّف التغيير كممارسة محظورة."
         ]
       }
     },
@@ -5041,6 +5461,12 @@
           "İşlem ve hesap sürdürme",
           "Şartlar §§12.2–12.4: strateji veya pozisyon büyüklüğünde «önemli ya da gerekçesiz» değişiklikler; kapsamlı eşik yok.",
           "Sayısal düşüş limitine uyan hesap, değişiklik tutarlılıkla bağdaşmaz sayılırsa diskalifiye edilebilir; ödül reddi yetkisi B1'de zaten değerlendirilmiştir."
+        ],
+        "ar": [
+          "IC Funded · تقييم وحساب ممول تجريبي",
+          "التداول واستمرار الحساب",
+          "الشروط §§12.2–12.4: تغييرات «كبيرة أو غير مبررة» في الاستراتيجية أو حجم المركز دون عتبة شاملة.",
+          "قد يُستبعد حساب ملتزم بحدود التراجع الرقمية إذا اعتُبر التغيير غير متسق؛ صلاحية رفض المكافأة محسوبة مسبقًا في B1."
         ]
       }
     },
@@ -5105,6 +5531,12 @@
           "İşlem / strateji kalitesi",
           "Şartlar §5.2.17: kumar ve rastgele lot artışları kapsamlı sınıflandırma eşiği olmadan yasak; yaptırımlar §5.3.",
           "Tüm stillere uygulanabilir yayımlanmış ölçüm olmadan pozisyonlar aşırı sayılabilir; ödül müsaderesi yalnız B1'de sayılır."
+        ],
+        "ar": [
+          "Forex Funds Flow · FFF Boost وتقييمات تجريبية",
+          "التداول / جودة الاستراتيجية",
+          "الشروط §5.2.17: تحظر المقامرة والزيادات العشوائية في حجم اللوت دون عتبة تصنيف شاملة؛ العقوبات §5.3.",
+          "قد تُعتبر المراكز مفرطة دون معيار منشور لجميع الأساليب؛ وتُحتسب صلاحية مصادرة المكافآت في B1 فقط."
         ]
       }
     },
@@ -5169,6 +5601,12 @@
           "Fonlanmış davranış / değerlendirme",
           "Şartlar §12.24: gerçek piyasa ortamlarında ticari olarak tekrarlanamayan faaliyetler yasak; kapsamlı uygulama testleri yok.",
           "Düşüş limitlerine rağmen strateji programı istismar sayılıp hesap kaybedilebilir; ödeme hakkı Contractor Agreement kapsamında ayrı değerlendirilir."
+        ],
+        "ar": [
+          "The Concept Trading · برنامج Prop",
+          "سلوك التداول الممول / التقييم",
+          "الشروط §12.24: تحظر الأنشطة التي لا يمكن تكرارها تجاريًا في بيئات السوق الحقيقية دون اختبارات تطبيق شاملة.",
+          "قد تُصنف استراتيجية كاستغلال للبرنامج ويُفقد الحساب رغم الالتزام بحدود التراجع؛ يُقيّم حق السحب منفصلًا في اتفاقية المتعاقد."
         ]
       }
     },
@@ -5233,6 +5671,12 @@
           "İşlem ve hesap sürdürme",
           "Kullanım şartları, yasak kullanımlar: gerçek piyasada sorumlu işlemi temsil etmeyen davranış ve münhasır takdir; beş saniye veya daha kısa pozisyonlardan elde edilen kârların %50'sinden fazlası olarak artık tanımlanmış microscalping kuralından ayrıdır.",
           "Sorumlu işleme ilişkin genel öznel ölçütlerle diskalifiye veya kapatma; birikmiş ödül riskleri B1'de sayılmaya devam eder."
+        ],
+        "ar": [
+          "Lucid Trading — LucidFlex/Pro/Daily/Direct تجريبية",
+          "التداول واستمرار الحساب",
+          "شروط الاستخدام، الاستخدامات المحظورة: ما لا يمثل تداولًا مسؤولًا في الأسواق الحقيقية وتقدير الشركة المنفرد؛ وهذا منفصل عن قاعدة التداول فائق القصر المحددة حاليًا بأكثر من 50% من الأرباح لمراكز خمس ثوانٍ أو أقل.",
+          "استبعاد أو إغلاق وفق معايير ذاتية عامة للتداول المسؤول؛ مخاطر المكافآت المستحقة تبقى محسوبة في B1."
         ]
       }
     },
@@ -5297,6 +5741,12 @@
           "Erişim sürdürme ve üst aşamaya geçiş",
           "Kullanıcı sözleşmesi §15: şirket kapsamlı olmayan ölçütlerle yatırımcıyı fazla deneyimli veya profesyonel sayıp hesaplarını kapatabilir.",
           "Eğitim amacıyla bağdaşmaz sayılan gelişmişlik nedeniyle hesap ve program uygunluğu kaldırılabilir; ödüller yalnız B1'de değerlendirilir."
+        ],
+        "ar": [
+          "Apex Trader Funding · التقييم/Performance Account (برنامج تجريبي)",
+          "استمرار الوصول والترقي",
+          "اتفاقية المستخدم §15: قد تعتبر الشركة المتداول ذا خبرة أو مهنية مفرطة وفق معايير غير شاملة وتغلق الحسابات.",
+          "قد يُلغى الحساب والأهلية بسبب مستوى خبرة يُعد غير متوافق مع الهدف التعليمي؛ تُقيّم المكافآت في B1 فقط."
         ]
       }
     },
@@ -5361,6 +5811,12 @@
           "Değerlendirme ve kural uygulanıyorsa fonlanmış aşama",
           "SSS, yasak işlem tarzları: yüksek frekanslı işlem, eşik yok; şartlar işlem kuralları 148–151.",
           "Kamuya açık sayısal ölçüt olmadan aşırı sayılan sıklık nedeniyle hesap yaptırımı veya ödeme reddi riski."
+        ],
+        "ar": [
+          "Klein Funding · تقييمات وفق الشروط العامة",
+          "التقييم والتمويل إذا انطبقت القاعدة",
+          "الأسئلة الشائعة لأساليب التداول المحظورة: تداول عالي التردد دون عتبة؛ الشروط، قواعد التداول 148–151.",
+          "احتمال عقوبة الحساب أو رفض السحب بسبب تردد يُعد مفرطًا دون معيار رقمي منشور."
         ]
       }
     },
@@ -5425,6 +5881,12 @@
           "Kullanım şartlarına tabi değerlendirme ve fonlanmış hesap",
           "§10.1.7.20: şirket münhasır takdirine göre stratejiyi ticari olmayan veya uygulanamaz sayabilir; nesnel eşik veya kapsamlı tanım yok.",
           "İşlem uygulanamaz sayılırsa diskalifiye, fesih ve hesap haklarının kaybı; kârların kaybedilebileceği sözleşme rejimi."
+        ],
+        "ar": [
+          "Trade The Pool — تقييم وتمويل الأسهم، شروط 03/08/2026",
+          "التقييم والحساب الممول الخاضعان لشروط الاستخدام",
+          "§10.1.7.20: وفق تقدير الشركة المنفرد قد تُعتبر استراتيجية غير تجارية أو غير قابلة للتطبيق دون عتبة موضوعية أو تعريف شامل.",
+          "استبعاد وإنهاء وفقدان حقوق الحساب إذا اعتُبرت الصفقة غير قابلة للتطبيق، بموجب نظام تعاقدي قد يسمح بمصادرة الأرباح."
         ]
       }
     },
@@ -5489,6 +5951,12 @@
           "Değerlendirme ve Master hesabı",
           "§11.9: işlem/stratejilerin yasak olarak sınıflandırılması platformun münhasır takdirinde; kapsamlı nesnel eşik yok.",
           "Aniden yasak sayılan strateji nedeniyle hesap feshi; §§17.3–17.4'teki tek taraflı ücret reddi hakkından ayrı."
+        ],
+        "ar": [
+          "For Traders — Challenge/Master وفق الشروط الحالية",
+          "التحدي وحساب Master",
+          "§11.9 يحتفظ للمنصة بحق تصنيف الصفقات والاستراتيجيات كمحظورة وفق تقديرها المنفرد دون عتبة موضوعية شاملة.",
+          "إنهاء الحساب بسبب استراتيجية أُعلنت فجأة محظورة؛ وهو منفصل عن الحق الأحادي في رفض الأجر وفق §§17.3–17.4."
         ]
       }
     },
@@ -5553,6 +6021,12 @@
           "Aynı program kuralları altında değerlendirme ve fonlanmış aşama",
           "Şartlar §7.9: haber çevresinde strateji gerçek yönsel piyasa görüşü ifade etmek yerine volatiliteyi istismar etmemeli; niyet ayrımı doğrulanabilir eşiğe sahip değil.",
           "İşlem veya strateji haber straddle işlemi sayılıp risk incelemesine yönlendirilebilir; uyarı veya hesap yaptırımı doğabilir."
+        ],
+        "ar": [
+          "Finotive · تحدٍ وحساب ممول تجريبي؛ ممارسات الأخبار",
+          "التقييم والتمويل وفق قواعد البرنامج نفسه",
+          "الشروط §7.9: حول الأخبار، لا يجوز للاستراتيجية استغلال التقلبات بدلًا من التعبير عن رؤية اتجاهية حقيقية للسوق؛ لا عتبة قابلة للتحقق للتمييز بين النوايا.",
+          "قد تُصنف الصفقة أو الاستراتيجية كتداول مزدوج الاتجاه حول الأخبار وتُحال لمراجعة المخاطر، مع احتمال التحذير أو العقوبة."
         ]
       }
     },
@@ -5617,6 +6091,12 @@
           "Tier1 veya Tier2 incelemesi sonrası ödeme dönemi",
           "Şartlar §6.3.8: yaptırıma tabi işlemlerin brüt kazançlarından oluşan Violation Profit'in %50 veya %100'ü düşülür; aynı işlemlerin zararları bu hesapta sıfır sayılır ancak net Eligible Profit'i azaltır.",
           "Zararları zaten içeren net kâr hesabından sonra ihlal kazançları ayrıca düşülür, bazen ödül sıfıra iner."
+        ],
+        "ar": [
+          "Funding Traders · 1-Step Pro / 2-Step Pro / Instant، برنامج الانضباط RMG",
+          "فترة السحب بعد المراجعة مع Tier1 أو Tier2",
+          "الشروط §6.3.8: خصم 50% أو 100% من أرباح المخالفة Violation Profit المكونة من إجمالي أرباح الصفقات المعاقبة؛ تُحسب خسائر تلك الصفقات بصفر في هذا الحساب لكنها تقلل صافي الربح المؤهل Eligible Profit.",
+          "تُحذف أرباح المخالفة منفصلة بعد حساب صافي الربح الذي يتضمن الخسائر بالفعل، وقد تنخفض المكافأة إلى الصفر."
         ]
       }
     },
@@ -5681,6 +6161,12 @@
           "Simüle hesap ve fonlanmış işlem",
           "Şartlar §§6.1 ve 6.6(10): iyi risk uygulaması OFP'nin münhasır takdirinde ve OFP'nin yasak saydığı diğer olağan dışı stratejiler.",
           "Şirket «olağan dışı» davranış için sabit tek eşik olmadan işlemleri veya hesabı diskalifiye edebilir."
+        ],
+        "ar": [
+          "OFP Funding · حسابات تجريبية وInstant، شروط نافذة منذ 09/02/2026",
+          "حساب تجريبي وتداول ممول",
+          "الشروط §§6.1 و6.6(10): الممارسات السليمة للمخاطر وفق تقدير OFP المنفرد وأي استراتيجية غير معتادة تعتبرها OFP محظورة.",
+          "قد تستبعد الشركة الصفقات أو الحساب دون حد ثابت موحد للسلوك «غير المعتاد»."
         ]
       }
     }
