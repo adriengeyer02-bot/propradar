@@ -552,6 +552,7 @@ const en = {
     oneTime: "one-time",
     priceSource: "Pricing page",
     pricePromoTitle: "Offer on this program",
+    pricePromoAllTitle: "Offer on every program",
     pricePromoTermsLabel: "Offer terms and source",
     programDetails: "Program steps and rules",
     pricePromoCode: "Code",

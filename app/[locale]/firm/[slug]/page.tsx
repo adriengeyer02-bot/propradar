@@ -542,6 +542,11 @@ export default async function FirmPage({ params }: Props) {
   if (!firm) {
     notFound();
   }
+  const promosByProduct = firm.products.map((product) => getProgramPromotions(firm.slug, product.id));
+  const promoKey = (list: { id: string }[]) => list.map((promo) => promo.id).sort().join('|');
+  // Same offer on every programme: shown once above the cards (Geyer, 2026-11-26).
+  const sharedPromos = firm.status !== 'Fermée' && promosByProduct.length > 1 && promosByProduct.every((list) => list.length > 0 && promoKey(list) === promoKey(promosByProduct[0])) ? promosByProduct[0] : [];
+
 
   const isFtmo = firm.slug === 'ftmo';
   const isThe5ers = firm.slug === 'the5ers';
@@ -1162,8 +1167,26 @@ export default async function FirmPage({ params }: Props) {
             <span>{firm.products.length === 1 ? f.programOne : fmt(f.programs, { n: firm.products.length })}</span>
           </div>
         </header>
+        {sharedPromos.map((promo) => (
+          <aside className="pr-program-promo pr-offers-promo" key={promo.id} aria-label={f.pricePromoAllTitle}>
+            <div className="pr-program-promo-head">
+              <span>{f.pricePromoAllTitle}</span>
+              <strong>{promo.offer}</strong>
+            </div>
+            {promo.code ? <p className="pr-program-promo-code">{f.pricePromoCode} <code>{promo.code}</code></p> : null}
+            <details className="pr-program-promo-details">
+              <summary>{f.pricePromoTermsLabel}</summary>
+              <p className="pr-program-promo-terms" lang="en">{promo.terms}</p>
+              <p className="pr-program-promo-check">{f.pricePromoCheckout}</p>
+              <div className="pr-program-promo-foot">
+                <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small>
+                <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a>
+              </div>
+            </details>
+          </aside>
+        ))}
         {firm.products.length > 0 ? (
-          <div className="grid-2">
+          <div className={firm.products.length >= 3 ? 'grid-2 pr-offers-grid-3' : 'grid-2'}>
             {firm.products.map((product) => (
               <article className="card product-card pr-product pr-product-compact" key={product.id}>
                 <div className="pr-product-tags">
@@ -1171,7 +1194,6 @@ export default async function FirmPage({ params }: Props) {
                   {product.isPopular ? <span className="pr-tag">{f.popular}</span> : null}
                 </div>
                 <h3>{tx(product.name)}</h3>
-                <p className="muted pr-product-intro">{tx(product.description)}</p>
                 <dl className="pr-product-highlights">
                   <div><dt>{f.path.pass}</dt><dd>{tx(product.profitTarget)}</dd></div>
                   <div><dt>{f.path.stay}</dt><dd>{tx(product.maxDrawdown)}</dd></div>
@@ -1188,7 +1210,7 @@ export default async function FirmPage({ params }: Props) {
                     {f.noConsistency}
                   </p>
                 )}
-                {firm.status !== 'Fermée' ? getProgramPromotions(firm.slug, product.id).map((promo) => (
+                {firm.status !== 'Fermée' && !sharedPromos.length ? getProgramPromotions(firm.slug, product.id).map((promo) => (
                   <aside className="pr-program-promo" key={promo.id} aria-label={f.pricePromoTitle}>
                     <div className="pr-program-promo-head">
                       <span>{f.pricePromoTitle}</span>
@@ -1206,32 +1228,50 @@ export default async function FirmPage({ params }: Props) {
                     </details>
                   </aside>
                 )) : null}
-                {firm.status !== 'Fermée' ? priceTable?.programs.filter((program) => program.productId === product.id).map((program) => (
-                  <div className="pr-product-prices" key={program.name}>
-                    <div className="pr-product-prices-head">
-                      <strong>{tx(program.name)}</strong>
-                      <span>{f.priceList}{program.billing === 'monthly' ? ` ${f.perMonth}` : ''}</span>
+                {firm.status !== 'Fermée' ? (() => {
+                  const programs = priceTable?.programs.filter((program) => program.productId === product.id) ?? [];
+                  if (!programs.length) return null;
+                  const highlighted = getProgramPromotions(firm.slug, product.id).flatMap((promo) => promo.highlightedSizes ?? []);
+                  const sizes = [...new Set(programs.flatMap((program) => pricePreviewRows(program, highlighted).map((row) => row.size)))].sort((x, y) => x - y).slice(0, 4);
+                  const variantLabel = (name: string) => (name.includes(' — ') ? name.slice(name.indexOf(' — ') + 3) : name);
+                  const monthly = programs.some((program) => program.billing === 'monthly');
+                  return (
+                    <div className="pr-price-matrix">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th scope="col">{f.priceList}{monthly ? ` ${f.perMonth}` : ''}</th>
+                            {sizes.map((size) => <th scope="col" key={size}>{formatAccountSize(size)}</th>)}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {programs.map((program) => (
+                            <tr key={program.name}>
+                              <th scope="row">{programs.length > 1 ? tx(variantLabel(program.name)) : tx(program.name)}</th>
+                              {sizes.map((size) => {
+                                const row = program.rows.find((item) => item.size === size);
+                                return (
+                                  <td key={size}>
+                                    {row ? formatListPrice(row.price, program.currency) : '—'}
+                                    {row && row.upfrontPrice != null && row.completionFee != null ? <small>{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small> : null}
+                                  </td>
+                                );
+                              })}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                      <div className="pr-product-prices-links">
+                        <a href="#prices">{f.priceTableTitle} ↓</a>
+                        <a href={programs[0].sourceUrl} target="_blank" rel="noopener noreferrer">{f.priceSource} ↗</a>
+                      </div>
                     </div>
-                    <div className="pr-product-price-tiers">
-                      {pricePreviewRows(program, getProgramPromotions(firm.slug, product.id).flatMap((promo) => promo.highlightedSizes ?? [])).map((row) => (
-                        <div className="pr-product-price-tier" key={row.size}>
-                          <span>{formatAccountSize(row.size)}</span>
-                          <strong>{formatListPrice(row.price, program.currency)}</strong>
-                          {row.upfrontPrice != null && row.completionFee != null ? (
-                            <small>{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small>
-                          ) : null}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="pr-product-prices-links">
-                      <a href="#prices">{f.priceTableTitle} ↓</a>
-                      <a href={program.sourceUrl} target="_blank" rel="noopener noreferrer">{f.priceSource} ↗</a>
-                    </div>
-                  </div>
-                )) : null}
+                  );
+                })() : null}
                 <details className="pr-product-details">
                   <summary>{f.programDetails}</summary>
                   <div className="pr-product-details-content">
+                    {product.description ? <p className="muted pr-product-intro">{tx(product.description)}</p> : null}
                     <ChallengePath product={product} labels={f.path} translate={(text) => td(locale, text)} />
                     <dl className="pr-product-meta">
                       <div>
@@ -1273,37 +1313,48 @@ export default async function FirmPage({ params }: Props) {
           <div className="pr-price-tables" id="prices">
             <h3>{f.priceTableTitle}</h3>
             <p className="muted">{fmt(f.priceTableLead, { name: firm.name, date: formatDateLong(locale, priceTable.checkedOn) })}</p>
-            <div className="pr-price-grid">
-              {priceTable.programs.map((program) => (
-                <figure className="pr-price-table" key={program.name}>
-                  <figcaption>
-                    <strong>{program.name}</strong>
-                    <span>{program.billing === 'monthly' ? f.perMonth : f.oneTime}</span>
-                  </figcaption>
-                  <table>
-                    <thead>
-                      <tr><th scope="col">{f.priceSize}</th><th scope="col">{f.priceList}</th></tr>
-                    </thead>
-                    <tbody>
-                      {program.rows.map((row) => (
-                        <tr key={row.size}>
-                          <th scope="row">{formatAccountSize(row.size)}</th>
-                          <td>
-                            {formatListPrice(row.price, program.currency)}
-                            {program.billing === 'monthly' ? <small>{f.perMonth}</small> : null}
-                            {row.upfrontPrice != null && row.completionFee != null ? (
-                              <small className="pr-price-split">{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small>
-                            ) : null}
-                          </td>
+            {(() => {
+              const sizes = [...new Set(priceTable.programs.flatMap((program) => program.rows.map((row) => row.size)))].sort((x, y) => x - y);
+              const noted = priceTable.programs.filter((program) => program.note);
+              return (
+                <>
+                  <div className="pr-price-all">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th scope="col">{f.priceList}</th>
+                          {sizes.map((size) => <th scope="col" key={size}>{formatAccountSize(size)}</th>)}
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                  {program.note ? <p className="pr-fineprint" lang="en">{program.note}</p> : null}
-                  <a className="pr-fineprint" href={program.sourceUrl} target="_blank" rel="noopener noreferrer">{f.priceSource} ↗</a>
-                </figure>
-              ))}
-            </div>
+                      </thead>
+                      <tbody>
+                        {priceTable.programs.map((program) => (
+                          <tr key={program.name}>
+                            <th scope="row">
+                              <a href={program.sourceUrl} target="_blank" rel="noopener noreferrer">{tx(program.name)}</a>
+                              <small>{program.billing === 'monthly' ? f.perMonth : f.oneTime}</small>
+                            </th>
+                            {sizes.map((size) => {
+                              const row = program.rows.find((item) => item.size === size);
+                              return (
+                                <td key={size}>
+                                  {row ? formatListPrice(row.price, program.currency) : '—'}
+                                  {row && row.upfrontPrice != null && row.completionFee != null ? <small>{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small> : null}
+                                </td>
+                              );
+                            })}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  {noted.length ? (
+                    <ul className="pr-price-notes" lang="en">
+                      {noted.map((program) => <li key={program.name}><strong>{program.name}</strong> {program.note}</li>)}
+                    </ul>
+                  ) : null}
+                </>
+              );
+            })()}
           </div>
         ) : null}
         {classicRules.length ? (

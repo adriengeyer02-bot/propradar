@@ -334,6 +334,7 @@ const ko: Messages = {
     priceTableLead: '{date}에 확인한 {name}의 공식 정가입니다. 임시 할인 코드, 세금, 재시험 비용 및 추가 옵션은 제외됩니다.',
     priceSize: '계좌 규모', priceList: '정가', perMonth: '/월', oneTime: '일회성', priceSource: '가격 출처',
     pricePromoTitle: '이 프로그램의 할인 혜택',
+    pricePromoAllTitle: '모든 프로그램 할인 혜택',
     pricePromoTermsLabel: '할인 조건 및 출처',
     programDetails: '프로그램 단계 및 규정',
     pricePromoCode: '할인 코드',

@@ -485,6 +485,7 @@ const tr: Messages = {
     priceSize: 'Hesap tutarı', priceList: 'Liste fiyatı', perMonth: '/ay', oneTime: 'tek seferlik',
     priceSource: 'Fiyat kaynağı', offersTitle: '{name} programları ve fiyatları',
     pricePromoTitle: 'Bu programdaki kampanya',
+    pricePromoAllTitle: 'Tüm programlardaki kampanya',
     pricePromoTermsLabel: 'Kampanya koşulları ve kaynak',
     programDetails: 'Program aşamaları ve kuralları',
     pricePromoCode: 'Kod',

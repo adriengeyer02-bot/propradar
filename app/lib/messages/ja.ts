@@ -636,6 +636,7 @@ const ja: Messages = {
     "oneTime": "一括",
     "priceSource": "料金ページ",
     "pricePromoTitle": "このプログラムの特典",
+    "pricePromoAllTitle": "全プログラム共通の特典",
     "pricePromoTermsLabel": "特典の条件と出典",
     "programDetails": "プログラムの手順とルール",
     "pricePromoCode": "コード",

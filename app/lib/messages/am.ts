@@ -465,6 +465,7 @@ const am: Messages = {
     perMonth: '/ወር', oneTime: 'አንድ ጊዜ',
     priceSource: 'የዋጋ ምንጭ',
     pricePromoTitle: 'ለዚህ ፕሮግራም ቅናሽ',
+    pricePromoAllTitle: 'ለሁሉም ፕሮግራሞች ቅናሽ',
     pricePromoTermsLabel: 'የቅናሽ ውሎችና ምንጭ',
     programDetails: 'የፕሮግራም ደረጃዎችና ደንቦች',
     pricePromoCode: 'የቅናሽ ኮድ',

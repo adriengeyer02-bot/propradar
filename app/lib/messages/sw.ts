@@ -387,6 +387,7 @@ const sw: Messages = {
     priceSize: 'Ukubwa wa akaunti', priceList: 'Bei ya kawaida',
     perMonth: '/mwezi', oneTime: 'Mara moja', priceSource: 'Chanzo cha bei',
     pricePromoTitle: 'Ofa ya programu hii',
+    pricePromoAllTitle: 'Ofa kwa programu zote',
     pricePromoTermsLabel: 'Masharti ya ofa na chanzo',
     programDetails: 'Hatua na sheria za programu',
     pricePromoCode: 'Msimbo',
