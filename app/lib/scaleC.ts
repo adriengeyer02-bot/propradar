@@ -34,6 +34,8 @@ export type ScaleCEntry = {
   reading: 'full' | 'excerpts';
   checkedOn: string;
   contractCap?: number;
+  priorRevisions?: FirmChangelogEntry[];
+  revisionSource?: string;
 };
 
 const FIRMS = (data as unknown as { firms: Record<string, ScaleCEntry> }).firms;
@@ -58,12 +60,14 @@ export const SCALE_C_CONTRACT_CODES: ScaleCCode[] = ['B1', 'B2', 'B2A', 'B3', 'B
 /** Dated changelog line shown in the firm's "Update history". */
 export function scaleCChangelog(slug: string): FirmChangelogEntry[] {
   const entry = FIRMS[slug];
-  if (!entry || entry.previous === entry.score) return [];
+  if (!entry) return [];
+  const prior = entry.priorRevisions ?? [];
+  if (entry.previous === entry.score) return prior;
   const lost = entry.penalties.map((item) => `${item.code} −${item.points}`).join(', ') || 'no penalty';
-  const source = entry.penalties.find((item) => item.source.startsWith('https://'))?.source ?? 'https://www.propradar.tech/audit';
-  return [{
-    date: SCALE_C_APPROVED_ON,
-    summary: `Score recalculated with scale C (approved 2026-11-25): ${entry.previous} → ${entry.score}. Ceiling ${entry.ceiling}; points lost: ${lost}. ${entry.reading === 'full' ? 'Contract read in full.' : `Flagged clauses re-read by hand; a rise waits for a full reading${entry.score > UNAUDITED_SCORE_CAP ? ` and the displayed score is capped at ${UNAUDITED_SCORE_CAP} until then` : ''}.`}`,
+  const source = entry.revisionSource ?? entry.penalties.find((item) => item.source.startsWith('https://'))?.source ?? 'https://www.propradar.tech/audit';
+  return [...prior, {
+    date: entry.checkedOn,
+    summary: entry.revisionSource ? `Targeted counter-audit under unchanged Scale C: ${entry.previous} → ${entry.score}. Ceiling ${entry.ceiling}; points lost: ${lost}. Previously recorded full-read status retained; newly sourced clauses checked on ${entry.checkedOn}.` : `Score recalculated with scale C (approved 2026-11-25): ${entry.previous} → ${entry.score}. Ceiling ${entry.ceiling}; points lost: ${lost}. ${entry.reading === 'full' ? 'Contract read in full.' : `Flagged clauses re-read by hand; a rise waits for a full reading${entry.score > UNAUDITED_SCORE_CAP ? ` and the displayed score is capped at ${UNAUDITED_SCORE_CAP} until then` : ''}.`}`,
     source,
     fields: ['score'],
   }];

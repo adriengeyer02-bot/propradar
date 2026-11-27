@@ -1,0 +1,375 @@
+{
+  "date": "2026-11-27",
+  "baselineCommit": "19f24d0535e0086f50a4593ac834b2656f7213cd",
+  "status": "owner-requested targeted corrections; not exhaustive certification",
+  "patches": {
+    "tradeify": {
+      "expectedScore": 80,
+      "expectedRaw": 80,
+      "expectedCodes": [
+        [
+          "B3",
+          5
+        ]
+      ],
+      "remove": [],
+      "add": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "points": 4,
+          "text": "Select Flex withdrawals are limited to 50% of profit and a fixed per-request cap ($2,500 for a 50K account purchased after September 1, 2026). Select Daily also has a per-request cap.",
+          "source": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+          "locator": "Select Flex / Daily — Payout Caps"
+        },
+        {
+          "code": "D_PAYOUT_CONDITIONS",
+          "points": 3,
+          "text": "Select Flex requires five winning days (at least $150 per day on 50K); Select Daily requires a $2,100 buffer on 50K. Both require positive net profit in subsequent payout cycles.",
+          "source": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+          "locator": "Select Flex — Winning Day Threshold; Select Daily — Buffer System; Shared Rule"
+        },
+        {
+          "code": "D_FUNDED_TRAILING_DRAWDOWN",
+          "points": 2,
+          "text": "Select Flex and Select Daily simulated funded accounts use an end-of-day trailing drawdown, which locks after reaching the specified profit threshold or requesting a payout.",
+          "source": "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns",
+          "locator": "Trailing Max Drawdowns — funded Select accounts"
+        }
+      ]
+    },
+    "tradeday": {
+      "expectedScore": 77,
+      "expectedRaw": 77,
+      "expectedCodes": [
+        [
+          "B2",
+          8
+        ],
+        [
+          "B3",
+          5
+        ],
+        [
+          "B7",
+          5
+        ]
+      ],
+      "remove": [],
+      "add": [
+        {
+          "code": "D_FUNDED_TRAILING_DRAWDOWN",
+          "points": 2,
+          "text": "Quick Pay simulated funded accounts use an intraday trailing maximum drawdown until the floor reaches the starting balance; Fast Pass funded accounts also use a trailing drawdown.",
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000250682-funded-accounts-withdrawals-and-the-impact-of-drawdowns",
+          "locator": "Quick Pay / Fast Pass — Funded accounts and drawdowns"
+        }
+      ]
+    },
+    "equity-edge": {
+      "expectedScore": 72,
+      "expectedRaw": 72,
+      "expectedCodes": [
+        [
+          "D_PAYOUT_CONDITIONS",
+          3
+        ]
+      ],
+      "remove": [],
+      "add": [
+        {
+          "code": "B2A",
+          "points": 4,
+          "text": "Section 6 allows payout refusal for suspected rule breaches or strategy manipulation. Section 10 provides an email appeal with a response within ten business days; the decision is final.",
+          "source": "https://equityedge.io/terms-and-conditions",
+          "locator": "§6 Payout Eligibility; §10 Complaints & Appeals"
+        }
+      ]
+    },
+    "oneup-trader": {
+      "expectedScore": 70,
+      "expectedRaw": 70,
+      "expectedCodes": [
+        [
+          "B7",
+          5
+        ]
+      ],
+      "remove": [],
+      "add": [
+        {
+          "code": "D_PAYOUT_CONDITIONS",
+          "points": 3,
+          "text": "Funded accounts must meet a withdrawal profit threshold ($2,500 on 50K) and a minimum transfer of $1,000 of the trader's share.",
+          "source": "https://help.oneuptrader.com/article/376-profit-info",
+          "locator": "Withdrawal Threshold; Withdrawal Process"
+        },
+        {
+          "code": "D_FUNDED_TRAILING_DRAWDOWN",
+          "points": 2,
+          "text": "Funded traders must keep their account balance above a trailing drawdown calculated in real time; the floor stops trailing at the specified level.",
+          "source": "https://help.oneuptrader.com/article/388-funded-trader-trailing-drawdown",
+          "locator": "Funded Trader Trailing Drawdown"
+        }
+      ]
+    },
+    "elite-trader-funding": {
+      "expectedScore": 68,
+      "expectedRaw": 68,
+      "expectedCodes": [
+        [
+          "B2",
+          8
+        ],
+        [
+          "B3",
+          5
+        ],
+        [
+          "B6",
+          5
+        ],
+        [
+          "D_PAYOUT_CAP",
+          4
+        ],
+        [
+          "D_SPLIT_REDUCTION",
+          2
+        ],
+        [
+          "TPR",
+          3
+        ]
+      ],
+      "remove": [],
+      "add": [
+        {
+          "code": "E_HARSH",
+          "points": 2,
+          "text": "Under Reward Interview, refusing an interview of up to 60 minutes may lead to payout denial and closure of any account held by the trader.",
+          "source": "https://elitetraderfunding.app/terms-of-service",
+          "locator": "Reward Interview (November 4, 2026)"
+        }
+      ]
+    },
+    "wsfunded": {
+      "expectedScore": 64,
+      "expectedRaw": 64,
+      "expectedCodes": [
+        [
+          "B2",
+          8
+        ],
+        [
+          "D_PAYOUT_CONDITIONS",
+          3
+        ]
+      ],
+      "remove": [],
+      "add": [
+        {
+          "code": "E_HARSH",
+          "points": 2,
+          "text": "The August 19, 2026 dashboard policy states that on funded accounts the first failure to place a stop loss within two minutes cancels the payout and the account.",
+          "source": "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach",
+          "locator": "Operational rule softbreaches — 2-minute Stop Loss rule"
+        }
+      ]
+    },
+    "top-one-futures": {
+      "expectedScore": 63,
+      "expectedRaw": 63,
+      "expectedCodes": [
+        [
+          "B6",
+          5
+        ],
+        [
+          "D_PAYOUT_CAP",
+          4
+        ],
+        [
+          "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
+          3
+        ]
+      ],
+      "remove": [],
+      "add": [
+        {
+          "code": "B2",
+          "points": 8,
+          "text": "Section 4 prohibits trading that harms broker relationships, as well as undefined excessive risk relative to account norms; violations may lead to profit forfeiture and account termination.",
+          "source": "https://www.toponefutures.com/terms-and-conditions",
+          "locator": "§4 Prohibited Trading Practices (November 9, 2026)"
+        }
+      ]
+    },
+    "top-one-trader": {
+      "expectedScore": 61,
+      "expectedRaw": 61,
+      "expectedCodes": [
+        [
+          "D_PAYOUT_CAP",
+          4
+        ],
+        [
+          "TPW",
+          10
+        ]
+      ],
+      "remove": [],
+      "add": [
+        {
+          "code": "B6",
+          "points": 5,
+          "text": "The Anti-disparagement and conduct clause explicitly covers negative reviews on public platforms; a breach can result in immediate termination, profit forfeiture or legal action.",
+          "source": "https://www.toponetrader.com/terms-and-conditions",
+          "locator": "Anti-disparagement and conduct (June 2026)"
+        }
+      ]
+    },
+    "atlas-funded": {
+      "expectedScore": 62,
+      "expectedRaw": 62,
+      "expectedCodes": [
+        [
+          "TPR",
+          3
+        ]
+      ],
+      "remove": [],
+      "add": [
+        {
+          "code": "B2A",
+          "points": 4,
+          "text": "Sections 5.2 and 5.4 allow case-by-case assessment of oversized or binary-outcome trades and withholding or voiding of profits for breaches. Section 3.4 allows appeal within ten business days of suspension or closure.",
+          "source": "https://www.atlasfunded.com/terms",
+          "locator": "§3.4 Suspension; §5.2–5.4"
+        }
+      ]
+    },
+    "fintokei": {
+      "expectedScore": 59,
+      "expectedRaw": 59,
+      "expectedCodes": [
+        [
+          "B2",
+          8
+        ],
+        [
+          "B3",
+          5
+        ],
+        [
+          "D_PAYOUT_CONDITIONS",
+          3
+        ]
+      ],
+      "remove": [],
+      "add": [
+        {
+          "code": "B6",
+          "points": 5,
+          "text": "General Terms V17 Article XXIV incorporates Appendix 2 for all contracts, surviving for two years. Appendix 2 prohibits public criticism including negative reviews and provides for recovery of damages, costs and legal fees.",
+          "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
+          "locator": "V17 Article XXIV; Appendix 2 §§2–3 (archived PDF, 25 Nov 2026)"
+        }
+      ]
+    },
+    "prop-number-one": {
+      "expectedScore": 57,
+      "expectedRaw": 57,
+      "expectedCodes": [
+        [
+          "B2",
+          8
+        ],
+        [
+          "TPR",
+          10
+        ]
+      ],
+      "remove": [],
+      "add": [
+        {
+          "code": "B3",
+          "points": 5,
+          "text": "Section 38 reserves the right to amend withdrawal limits on funded simulated accounts at the company's discretion without prior notice.",
+          "source": "https://propnumberone.com/wp-content/uploads/2025/04/Overview_1.pdf",
+          "locator": "§38 — Withdrawals from Funded Simulated Trading Accounts"
+        },
+        {
+          "code": "D_PAYOUT_CAP",
+          "points": 4,
+          "text": "Section 38 limits funded simulated withdrawals to 15% of nominal account size per 21-day period; excess profit stays on the account for a later request.",
+          "source": "https://propnumberone.com/wp-content/uploads/2025/04/Overview_1.pdf",
+          "locator": "§38 — Maximum withdrawal limit"
+        }
+      ]
+    },
+    "for-traders": {
+      "expectedScore": 52,
+      "expectedRaw": 52,
+      "expectedCodes": [
+        [
+          "B2",
+          8
+        ],
+        [
+          "B7",
+          5
+        ],
+        [
+          "TPW",
+          10
+        ]
+      ],
+      "remove": [
+        "B2"
+      ],
+      "add": [
+        {
+          "code": "B1",
+          "points": 15,
+          "text": "Sections 17.3–17.4 state that performance rewards are discretionary, not guaranteed and subject to sole approval; the platform may approve, adjust, delay or decline any performance reward at its discretion.",
+          "source": "https://fortraders.com/terms-and-conditions",
+          "locator": "§17.3–17.4 Rewards"
+        }
+      ]
+    },
+    "ftmo": {
+      "expectedScore": 85,
+      "expectedRaw": 85,
+      "expectedCodes": [
+        [
+          "B2",
+          8
+        ],
+        [
+          "B6",
+          5
+        ]
+      ],
+      "remove": [],
+      "add": [
+        {
+          "code": "REGWARN",
+          "points": 5,
+          "text": "The Reserve Bank of India Alert List, updated November 19, 2025, lists FTMO at entry 13. The list concerns forex authorization or promotion of unauthorized platforms in India; it is not a finding of payout misconduct.",
+          "source": "https://rbi.org.in/scripts/Bs_viewcontent.aspx?Id=4235",
+          "locator": "RBI Alert List, entry 13, November 19, 2025"
+        }
+      ]
+    }
+  },
+  "sourceFixes": [
+    {
+      "slug": "fundednext",
+      "code": "REGWARN",
+      "expectedSource": "https://fundednext.com\"",
+      "source": "https://www.rbi.org.in/scripts/FS_PressRelease.aspx?prid=58949",
+      "locator": "RBI press release 2024-2025/1351, October 22, 2024"
+    }
+  ],
+  "unchanged": "Ceilings, Trustpilot, historical publication gates and remaining scores unchanged. Do not infer completion of other contracts."
+}
