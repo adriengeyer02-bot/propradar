@@ -3370,6 +3370,9 @@ html[dir='rtl'] input[type='tel'],
 html[dir='rtl'] .score-value,
 html[dir='rtl'] code,
 html[dir='rtl'] pre { direction: ltr; unicode-bidi: isolate; }
+/* Diagram labels keep the anchors they were drawn with (text-anchor follows
+   `direction`), while each Arabic label still reads right to left. */
+html[dir='rtl'] svg text { direction: ltr; unicode-bidi: plaintext; }
 @media (max-width: 760px) {
   .lang-switch-button { height: 36px; }
   .lang-switch-button span { font-size: 12px; }

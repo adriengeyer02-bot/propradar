@@ -56,10 +56,16 @@ export function localizedGuideMetadata(locale: Locale, guide: SeoGuide, translat
 function mergeArticle(english: GuideArticle | undefined, translated: GuideTranslation['article']): GuideArticle | undefined {
   if (!english || !translated) return undefined;
   return {
+    published: english.published,
     updated: english.updated,
     sources: english.sources,
     intro: translated.intro,
-    sections: translated.sections.map((section, index) => ({ ...section, visual: english.sections[index]?.visual })),
+    keyPoints: translated.keyPoints,
+    sections: translated.sections.map((section, index) => ({
+      ...section,
+      visual: english.sections[index]?.visual,
+      bulletStyle: english.sections[index]?.bulletStyle,
+    })),
   };
 }
 

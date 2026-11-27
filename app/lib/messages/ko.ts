@@ -1,4 +1,5 @@
 import en, { type Messages } from './en';
+import guideUi from '../guideI18n/ui/ko';
 
 /**
  * South Korean editorial UI. Firm-supplied quotations, source documents and
@@ -489,6 +490,8 @@ const ko: Messages = {
       hollow: ' 빈 점은 잠정 수치입니다.', aria: '신뢰성 프로필',
     },
   },
+  // Guide pages, guide library and guide diagrams (app/lib/guideI18n/ui).
+  ...guideUi,
 };
 
 export default ko;

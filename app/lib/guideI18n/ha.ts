@@ -1,0 +1,1899 @@
+import type { GuideTranslations } from './types';
+
+const ha: GuideTranslations = {
+  "meilleure-prop-firm-futures": {
+    "title": "Mafi kyawun prop firm na futures: Topstep, Apex da sauransu",
+    "metaDescription": "Kwatanta prop firm na futures ta dokokin biyan kuɗi, drawdown mai bin ma'auni, kuɗaɗe, dandali da alamun haɗari na baya-bayan nan a Topstep, Apex, TPT da madadinsu.",
+    "eyebrow": "Tallafin futures",
+    "h1": "Mafi kyawun prop firm na futures: kwatanta biyan kuɗi, drawdown da ɓoyayyun kuɗaɗe",
+    "answer": "Mai trading futures ya kamata ya kwatanta fiye da rangwamen talla. Muhimman abubuwa su ne kuɗin asusun funded, iyakar cire kuɗi, nau'in drawdown, samun dandali da ko ra'ayoyin al'umma na baya-bayan nan sun tabbatar da alkawarin talla.",
+    "checks": [
+      "Kwatanta kuɗaɗen asusun funded bayan tantancewa.",
+      "Gano drawdown na ƙarshen rana (EOD), mai bin ma'auni ko tsayayye.",
+      "Karanta iyakar biyan kuɗi da sharuɗɗan daidaiton sakamako.",
+      "Tabbatar ko tayin ya shafi ainihin samfurin da kake so."
+    ],
+    "faq": [
+      {
+        "question": "Topstep ko Apex: wanne ya kamata ka fara dubawa?",
+        "answer": "Dokokin Topstep na iya zama masu sauƙin fahimta ga traders da yawa, yayin da Apex zai iya jan hankali lokacin rangwame. Zaɓi bisa dokokin yanzu, ba farashi kaɗai ba."
+      },
+      {
+        "question": "Shin prop firm na futures sun dace da scalping?",
+        "answer": "Eh ga wasu traders, amma dole ka duba dandali, bayanan kasuwa, drawdown cikin rana da sharuɗɗan biyan kuɗi."
+      }
+    ]
+  },
+  "prop-firm-news-trading": {
+    "title": "Waɗanne prop firm ke ba da damar trading lokacin labarai? Kwatancen 2026",
+    "metaDescription": "Kwatanta dokokin funded, lokutan da aka hana, NFP, CPI, FOMC, slippage, drawdown da haɗarin biyan kuɗi.",
+    "eyebrow": "Trading lokacin labarai",
+    "h1": "Waɗanne prop firm ke ba da damar trading lokacin labarai?",
+    "answer": "Wasu prop firm suna ba da damar trading lokacin labarai, amma izinin na iya sauyawa tsakanin tantancewa da funded. Kwatanta lokutan da aka hana, yadda ake kula da slippage, muhimman sanarwar tattalin arziki, drawdown da sharuɗɗan biyan kuɗi kafin trading a lokacin NFP, CPI ko FOMC.",
+    "checks": [
+      "Tabbatar da dokokin labarai a challenge da funded.",
+      "Karanta ƙuntatawa a kusa da sanarwa masu babban tasiri.",
+      "Duba drawdown na rana kafin trading lokacin tashin farashi.",
+      "Karanta sharuɗɗan biyan kuɗi da suka shafi trades na labarai."
+    ],
+    "faq": [
+      {
+        "question": "Waɗanne prop firm ke ba da damar trading lokacin labarai?",
+        "answer": "Jadawalin ya nuna kamfanonin da bayanansu na yanzu ba su nuna cikakken haramcin trading lokacin labarai ba. Izini ya danganta da shirin; tabbatar da dokokin tantancewa da funded kafin saye."
+      },
+      {
+        "question": "Shin prop firm zai iya ba da damar trading lokacin labarai amma ya ƙi biya?",
+        "answer": "Eh. Zai iya ba da izinin buɗe trades kusa da labarai amma ya ci gaba da aiwatar da dokokin slippage, dabarun da aka hana, mafi kyawun rana, latency ko nazarin biyan kuɗi. Sharuɗɗan biyan kuɗi suna da muhimmanci kamar kalmar 'an yarda'."
+      }
+    ]
+  },
+  "prop-firm-payout-rapide": {
+    "title": "Prop firm masu saurin biya: hujja, jinkiri da tarko",
+    "metaDescription": "Jagorar prop firm masu saurin biyan kuɗi: lokaci, hujjar cire kuɗi, haɗari, iyaka da sharuɗɗa kafin sayen challenge.",
+    "eyebrow": "Binciken biyan kuɗi",
+    "h1": "Prop firm masu saurin biya: duba hujja, ba alkawari kaɗai ba",
+    "answer": "Saurin biya yana da amfani ne idan sharuɗɗa a bayyane suke: mafi ƙarancin cire kuɗi, kwanakin trading da ake buƙata, iyaka, rabon riba, ra'ayin jama'a da tarihin matsaloli.",
+    "checks": [
+      "Kwatanta lokacin biyan kuɗin talla da alamun al'umma.",
+      "Tabbatar da mafi ƙarancin cire kuɗi da iyakar biyan kuɗi.",
+      "Karanta matsalolin biyan kuɗi da korafe-korafen da ke maimaituwa.",
+      "Kada ka ɗauki takardar shaidar talla a matsayin hujja mai zaman kanta."
+    ],
+    "faq": [
+      {
+        "question": "Shin biyan kuɗi cikin awa 24 abin dogaro ne?",
+        "answer": "Zai iya zama abin dogaro, amma dole a tabbatar da sharuɗɗa da tarihi. Lokacin da aka tallata kaɗai bai isa a auna haɗari ba."
+      },
+      {
+        "question": "Me ya sa haɗarin biyan kuɗi yake da muhimmanci?",
+        "answer": "Domin prop firm da yake kama da mai riba a takarda ba shi da amfani idan cire kuɗi yana da wahala, yana jinkiri ko kuma ana rigima a kai."
+      }
+    ]
+  },
+  "prop-firm-pas-cher": {
+    "title": "Prop firm mai arha: lambobin rangwame da ainihin kuɗin shiga",
+    "metaDescription": "Kwatanta prop firm masu arha ta farashin shiga, lambar rangwame, drawdown, dokokin biyan kuɗi da kuɗaɗen funded domin challenge mai arha kada ya ɓoye babban haɗari.",
+    "eyebrow": "Kasafin kuɗi da tayi",
+    "h1": "Prop firm mai arha: farashin challenge ba shi ne jimillar kuɗi ba",
+    "answer": "Prop firm mai arha zai iya dacewa idan biyan kuɗi abin dogaro ne, kuma kuɗaɗen funded, reset, drawdown da ƙuntatawa ba su sa asusun ya zama mai saurin lalacewa ba.",
+    "checks": [
+      "Kwatanta farashin shiga da kuɗaɗen funded.",
+      "Tabbatar ko rangwame yana sauya sharuɗɗa.",
+      "Kada ka sayi babban asusu don kawai rangwamen yana da yawa.",
+      "Kwatanta kasafin kuɗi, haɗarin biyan kuɗi da maki na PropRadar kafin saye."
+    ],
+    "faq": [
+      {
+        "question": "Wane prop firm ne mafi arha?",
+        "answer": "Kamfanin mafi arha yana sauyawa sau da yawa da tayi. Kwatanta kuɗin shiga da kuɗaɗen funded, reset, drawdown da haɗarin biyan kuɗi."
+      },
+      {
+        "question": "Shin lambar rangwame ta PropRadar tana sauya matsayi?",
+        "answer": "A'a. An ware hanyoyin haɗin gwiwa da tayi daga ƙididdigar maki."
+      }
+    ]
+  },
+  "prop-firm-smc-ict": {
+    "title": "Mafi kyawun prop firm ga SMC / ICT: dokoki da biyan kuɗi",
+    "metaDescription": "Jagorar PropRadar ga traders na SMC da ICT: tsarin NAS/US30/forex, drawdown EOD, labarai, daidaito, aiwatar da oda, biyan kuɗi da kamfanonin kwatantawa.",
+    "eyebrow": "Salon SMC / ICT",
+    "h1": "Prop firm ga SMC / ICT: zaɓi dokokin da suka dace da trading bisa liquidity",
+    "answer": "Traders na SMC da ICT galibi suna buƙatar damar ƙara positions cikin rana, damar trading a zaman London da New York, indices ko manyan nau'ikan forex, da dokoki bayyanannu game da labarai, drawdown da daidaito. Farashi zai iya jan hankali duk da cewa kamfanin yana hana ainihin salon trading ɗinka.",
+    "checks": [
+      "Tabbatar ko an yarda da trading lokacin labarai ko akwai bayyanannun lokutan London da New York.",
+      "Tabbatar da nau'in drawdown: EOD ko tsayayye yawanci ya fi sauƙi ga ƙara positions fiye da drawdown mai tsanani da ke bin ma'auni cikin rana.",
+      "Duba ko dokar daidaito ko iyakar ribar rana za ta hukunta rana ɗaya mai babbar riba daga liquidity sweep.",
+      "Kwatanta spread da aiwatar da oda a ainihin kayan da kake trading: NAS, US30, ES/NQ, zinariya ko manyan nau'ikan forex.",
+      "Tabbatar da mafi ƙarancin biyan kuɗi da yawan lokutan biya idan tsarin ka yana samar da ƙananan trades masu riba da yawa.",
+      "Duba ko ƙara positions a setup ana ɗauka a matsayin scaling na al'ada ko haramtaccen hali."
+    ],
+    "faq": [
+      {
+        "question": "Shin prop firm na futures sun fi dacewa da SMC / ICT?",
+        "answer": "Sau da yawa sun fi sauƙin nazarin indices saboda samfur, zaman kasuwa da ƙimar tick sun fi daidaituwa. Amma har yanzu a duba drawdown, iyakar biyan kuɗi, daidaito da lokutan labarai; sun fi sunan futures muhimmanci."
+      },
+      {
+        "question": "Mene ne babban haɗarin SMC / ICT a prop firm?",
+        "answer": "Wuce challenge da salon liquidity na al'ada, sannan a gano cewa lokutan labarai, drawdown na rana, dokokin scaling ko iyakar daidaito suna sa matakin funded ya fi wahala."
+      }
+    ]
+  },
+  "prop-firm-swing-trading": {
+    "title": "Swing trading a prop firm: dare, ƙarshen mako da biyan kuɗi",
+    "metaDescription": "Kwatanta prop firm don swing trading ta riƙe positions da dare da ƙarshen mako, ƙuntata labarai, drawdown, lokacin biya da dokokin asusu.",
+    "eyebrow": "Swing trading",
+    "h1": "Swing trading a prop firm: tabbatar da dokokin dare, ƙarshen mako da drawdown kafin farashi",
+    "answer": "Don swing trading kana buƙatar kamfanin da ke ba da damar riƙe positions na tsawon lokaci, ƙarshen mako ko aƙalla dokoki bayyanannu game da rollover, tazarar farashi, labarai da lokacin biyan kuɗi.",
+    "checks": [
+      "Tabbatar da dokokin dare da ƙarshen mako a challenge da funded.",
+      "Fahimci ko drawdown tsayayye ne, EOD ko mai bin ma'auni.",
+      "Karanta ƙuntatawa game da tazarar farashi da labarai.",
+      "Kwatanta lokacin biya da matsakaicin tsawon lokacin trades ɗinka."
+    ],
+    "faq": [
+      {
+        "question": "Shin duk prop firm suna ba da damar swing trading?",
+        "answer": "A'a. Wasu suna ƙuntata trading da dare, ƙarshen mako ko lokacin labarai. Dole a sake karanta ainihin shirin."
+      },
+      {
+        "question": "Wane drawdown ya fi dacewa da swing trading?",
+        "answer": "Drawdown tsayayye ko EOD sau da yawa ya fi sauƙin fahimta fiye da drawdown mai bin ma'auni cikin rana mai tsanani."
+      }
+    ]
+  },
+  "prop-firm-ea-algo": {
+    "title": "Prop firm masu izinin EA: bot, algo da copy trading",
+    "metaDescription": "Nemo prop firm masu izinin EA, bot da algorithmic trading, sannan kwatanta ƙuntatawar VPS, copy trading, arbitrage, labarai da biyan kuɗi kafin saye.",
+    "eyebrow": "EA / Algo",
+    "h1": "Prop firm masu izinin EA: izini, ƙuntatawa da haɗarin biyan kuɗi",
+    "answer": "Kamfanin da ya dace da EA dole ya ba da izinin bot a fili. Amma bincike na gaskiya shi ne copy trading, arbitrage, latency, martingale, amfani da VPS, sarrafa asusu da yawa da tabbatar da biyan kuɗi.",
+    "checks": [
+      "Tabbatar da izinin EA a challenge da funded.",
+      "Karanta ƙuntatawar arbitrage, latency, grid, martingale da copy trading.",
+      "Gwada dandali kafin sayen babban asusu.",
+      "Kula da sharuɗɗan biyan kuɗi da suka shafi halayen dabara."
+    ],
+    "faq": [
+      {
+        "question": "Shin za ka iya amfani da bot a prop firm?",
+        "answer": "Eh a wasu kamfanoni, amma akwai ƙuntatawa. Dole a tabbatar da izinin a dokokin hukuma."
+      },
+      {
+        "question": "Shin copy trading kullum an yarda da shi?",
+        "answer": "A'a. Kamfanoni da yawa suna ƙuntata shi sosai, musamman tsakanin asusun mutane daban-daban."
+      }
+    ]
+  },
+  "prop-firm-fiable-trustpilot": {
+    "title": "Prop firm abin dogaro: bita, biyan kuɗi da hujja",
+    "metaDescription": "Yadda ake gane prop firm abin dogaro: Trustpilot, Reddit, hujjar biya, majiyoyin hukuma, labaran jaridu, gargadin hukumomi da rikicin muradu.",
+    "eyebrow": "Amincewa",
+    "h1": "Prop firm abin dogaro: kada a rikita babban ƙima da hujja mai ƙarfi",
+    "answer": "Prop firm abin dogaro yana haɗa dokoki bayyanannu, majiyoyin hukuma, tarihin biyan kuɗi, ra'ayoyin al'umma masu jituwa, binciken jaridu masu zaman kansu da hukumomi, da bayyana rikicin muradu na kasuwanci.",
+    "checks": [
+      "Kwatanta Trustpilot da Reddit da matsalolin biyan kuɗi.",
+      "Tabbatar ana iya samun majiyoyin hukuma.",
+      "Nemo ainihin sunan alama a jaridun kuɗi masu zaman kansu da shafukan gargadin hukumomi.",
+      "Rashin labari a jaridu game da ƙananan kamfanoni ko masu suna gama-gari yana rage tabbaci; ba hujjar aminci ba ne.",
+      "Duba yawan bita da yanayinsu.",
+      "Gano hanyoyin haɗin gwiwa da rikicin muradu."
+    ],
+    "faq": [
+      {
+        "question": "Shin Trustpilot ya isa a tantance prop firm?",
+        "answer": "A'a. Trustpilot yana da amfani, amma dole a kwatanta shi da dokoki, Reddit, majiyoyin hukuma da biyan kuɗi."
+      },
+      {
+        "question": "Shin ya kamata a yi watsi da duk kamfani mai haɗari?",
+        "answer": "A'a, amma a duba shi a matsayin kamfanin da ake sa ido. Zai iya kasancewa yana aiki, amma ba zaɓin saye na fili ba ne."
+      }
+    ]
+  },
+  "ftmo-vs-the5ers": {
+    "title": "FTMO da The5ers: dokoki, farashi da biyan kuɗi",
+    "metaDescription": "Kwatanta shirye-shiryen FTMO da The5ers na yanzu, farashi, drawdown, dokokin biya, dandali, alamun Trustpilot da sharuɗɗan hukuma kafin zaɓi.",
+    "eyebrow": "Kwatancen kamfanoni",
+    "h1": "FTMO da The5ers: kamfanoni biyu masu ƙarfi amma buƙatu daban",
+    "answer": "FTMO da The5ers manyan sunaye ne, amma ba sa warware matsala iri ɗaya. FTMO ya fi zama abin kwatance; The5ers na iya zama mai taka-tsantsan bisa shirin. Ainihin tayin ya fi sunan kamfani muhimmanci.",
+    "checks": [
+      "Kwatanta mafi ƙarancin farashi da girman asusun da ake nema.",
+      "Karanta dokokin labarai, EA, drawdown da burin riba.",
+      "Gano kupon, hanyoyin haɗin gwiwa da muradun kasuwanci.",
+      "Zaɓi bisa salon trading, ba shahara kaɗai ba."
+    ],
+    "faq": [
+      {
+        "question": "Shin FTMO ya fi The5ers?",
+        "answer": "Ba ga kowa ba. FTMO sananne ne sosai, yayin da The5ers zai iya fi dacewa da wasu traders. Ainihin shirin ya fi suna muhimmanci."
+      },
+      {
+        "question": "Shin hanyar haɗin gwiwa tana sauya kwatancen?",
+        "answer": "A'a. PropRadar yana ware maki, haɗari da alaƙar kasuwanci."
+      }
+    ]
+  },
+  "topstep-vs-apex": {
+    "title": "Topstep da Apex 2026: dokoki, biyan kuɗi da farashi",
+    "metaDescription": "Kwatanta Topstep da Apex Trader Funding a 2026: hanyoyin daidaito, dokokin biya, drawdown na EOD ko cikin rana, kuɗaɗe da haɗarin sigar asusu.",
+    "eyebrow": "Kwatancen futures",
+    "h1": "Topstep da Apex: kwatanta dokokin biyan kuɗi kafin rangwame",
+    "answer": "Topstep yana da tsarin futures da ya daɗe kuma ya fi sauƙin kwatantawa; Apex yakan yi gasa da babban rangwame da zaɓuɓɓukan asusu. Kwatanta drawdown, cancantar biya, kuɗaɗen maimaituwa da kunnawa, dandali da korafe-korafen baya-bayan nan kafin farashi.",
+    "checks": [
+      "Kwatanta rangwame da jimillar kuɗi bayan funded.",
+      "Tabbatar da drawdown EOD ko mai bin ma'auni da dokokin daidaito.",
+      "Karanta alamun al'umma da matsalolin baya-bayan nan.",
+      "Zaɓi bisa dandali da salon trading cikin rana."
+    ],
+    "faq": [
+      {
+        "question": "Topstep ko Apex ya fi?",
+        "answer": "Topstep zai iya dacewa da masu son tsarin da ya daɗe da dokoki masu sauƙin kwatantawa. Apex zai iya dacewa da masu son tantancewa mai rangwame da zaɓuɓɓukan asusu. Cancantar biya, drawdown da jimillar kuɗaɗen funded su yanke hukunci."
+      },
+      {
+        "question": "Shin Apex ya fi Topstep arha?",
+        "answer": "Apex yakan tallata rangwame mafi girma, amma farashin saye ba jimillar kuɗi ba ne. Kwatanta kuɗin biyan kuɗi na wata-wata, reset, kunnawa ko funded, da yawan yunƙurin da dabararka ke buƙata."
+      },
+      {
+        "question": "Yaya dokokin biyan kuɗin Topstep da Apex suka bambanta?",
+        "answer": "Dukkansu suna da sharuɗɗan cancanta na musamman ga kowane shiri. Kwatanta mafi ƙarancin kwanakin trading, daidaito ko mafi kyawun rana, iyakar biya, matakan ma'aunin asusu da ainihin asusun funded kafin saye."
+      }
+    ]
+  },
+  "funderpro-vs-the5ers": {
+    "title": "FunderPro da The5ers: labarai, EA, swing da biyan kuɗi",
+    "metaDescription": "Kwatanta FunderPro da The5ers ta farashi, dokokin labarai da EA, swing, sharuɗɗan biya, tarihin aiki da alamun haɗari na yanzu.",
+    "eyebrow": "Kwatancen CFD",
+    "h1": "FunderPro da The5ers: sassauci da kamfanin da ya fi daɗewa",
+    "answer": "FunderPro zai iya jan hankalin traders masu son sassaucin labarai, EA da swing. The5ers yana da tarihin da ya fi tsawo kuma yana iya zama mai taka-tsantsan bisa shirin.",
+    "checks": [
+      "Gwada lambar rangwame lokacin saye ba tare da sayen fiye da buƙata ba.",
+      "Tabbatar da dokokin labarai, EA da riƙe positions da dare a ainihin shirin.",
+      "Kwatanta lokacin biya da sharuɗɗan cire kuɗi.",
+      "Karanta dokokin hukuma kafin zaɓi."
+    ],
+    "faq": [
+      {
+        "question": "Shin FunderPro ya dace da trading lokacin labarai?",
+        "answer": "Shafin hukuma ya nuna an yarda da trading lokacin labarai, amma dole a tabbatar da cikakkun sharuɗɗan shirin."
+      },
+      {
+        "question": "Shin The5ers ya fi taka-tsantsan?",
+        "answer": "The5ers yana da dogon tarihi. Hakan bai kawar da buƙatar karanta dokokin kowane shiri ba."
+      }
+    ]
+  },
+  "prop-firm-instant-funding": {
+    "title": "Prop firm na instant funding: dokoki, kuɗaɗe da haɗari",
+    "metaDescription": "Kwatanta instant funding ta farashi, drawdown, biya, rabon riba, trading lokacin labarai, haɗarin ɓoyayyun dokoki da madadin challenge.",
+    "eyebrow": "Instant funding",
+    "h1": "Prop firm na instant funding: sauri ba yana nufin sauƙi ba",
+    "answer": "Instant funding zai iya amfani idan kana son shiga asusu da sauri, amma kwatanta jimillar kuɗi, drawdown, mafi ƙarancin biya, iyakar lot, ƙuntatawar labarai da sharuɗɗan cire kuɗi kafin biya.",
+    "checks": [
+      "Kwatanta farashin instant da challenge na al'ada mai kama da shi.",
+      "Tabbatar ko asusun yana da ainihin tallafi ko samfurin simulation ne mai dokoki na musamman.",
+      "Karanta asarar rana, iyakar asara, mafi ƙarancin biya, girman lot da ƙuntatawar dabaru.",
+      "Guji ƙarin kuɗi kawai don tsallake mataki idan tsarinka zai iya jure challenge na al'ada."
+    ],
+    "faq": [
+      {
+        "question": "Shin instant funding ya fi challenge?",
+        "answer": "Ba kullum ba. Yana rage lokaci amma zai iya fi tsada kuma yana da dokoki masu tsauri. Zaɓi ya danganta da jari, salo da ladabinka."
+      },
+      {
+        "question": "Wane prop firm na instant funding ya kamata ka fara dubawa?",
+        "answer": "Fara da kamfanonin da dokokin cire kuɗi, drawdown da kuɗaɗensu suke bayyanannu. Farashi kaɗai bai isa ba."
+      }
+    ]
+  },
+  "prop-firm-pour-debutant": {
+    "title": "Mafi kyawun prop firm ga masu farawa: dokoki bayyanannu farko",
+    "metaDescription": "Kwatanta FTMO, The5ers, Topstep, FundedNext da sauran shirye-shiryen masu farawa ta dokoki, kuɗaɗe, drawdown da haɗarin biya.",
+    "eyebrow": "Jagorar masu farawa",
+    "h1": "Prop firm ga masu farawa: zaɓi dokar da ta fi bayyani, ba asusun da ya fi girma ba",
+    "answer": "Ga mai farawa, mafi kyawun zaɓin farko ba kasafai babban asusu ba ne. Ƙaramin asusu mai drawdown da ake fahimta, kuɗi masu ma'ana da dokokin da za ka iya bi ya fi dacewa da koyo, amincewa da ci gaba na dogon lokaci.",
+    "checks": [
+      "Fara da mafi ƙarancin asusun da zai ba ka damar gwada dokokin da gaske.",
+      "Tabbatar drawdown ya dace kuma yana kare ka bisa ƙwarewarka ta yanzu.",
+      "Guji rangwamen da ke tura ka zuwa asusun da ya yi girma.",
+      "Kwatanta jimillar kuɗi na watanni 2 zuwa 3, ciki har da reset ko maimaita yunƙuri.",
+      "Karanta duk dokoki kafin saye, musamman labarai, riƙe positions, drawdown da biya.",
+      "Zaɓi dokoki bayyanannu, masu kwanan wata da sauƙin samu kafin rabon riba ko girman asusu."
+    ],
+    "faq": [
+      {
+        "question": "Wane prop firm ne mafi kyau ga masu farawa?",
+        "answer": "Yawanci kamfanin da ke da dokoki bayyanannu, girman asusun farko mai ma'ana, drawdown da ake fahimta da isasshen tarihin biyan kuɗi na jama'a. Babban asusu ba kasafai yake zama matakin farko mafi aminci ba."
+      },
+      {
+        "question": "Shin masu farawa su fara da babban asusu?",
+        "answer": "Yawanci a'a. Ƙaramin asusu yana taimakawa wajen koyon bin doka da ƙarancin matsin lamba. Bayan tsarinka ya jure challenge na farko, ƙara girma ya fi samun hujja."
+      },
+      {
+        "question": "Shin prop firm mafi arha ya fi dacewa ga mai farawa?",
+        "answer": "Sai idan dokoki suna da sauƙin fahimta kuma sharuɗɗan biya a bayyane suke. Challenge mai arha da tsauraran ɓoyayyun dokoki zai iya fi tsada fiye da shiri mai tsada kaɗan amma bayyananne."
+      }
+    ]
+  },
+  "meilleure-prop-firm-forex": {
+    "title": "Mafi kyawun prop firm na forex: MT5, cTrader, biya da dokoki",
+    "metaDescription": "Kwatanta prop firm na forex: FTMO, The5ers, FundingPips, FunderPro, GOAT Funded Trader, spread, labarai, EA, biya da dandali.",
+    "eyebrow": "Forex",
+    "h1": "Mafi kyawun prop firm na forex: dandali, spread da biya kafin rangwame",
+    "answer": "Traders na forex su kwatanta dandali, spread, nau'ikan kayan trading, dokokin labarai, izinin EA da amincin biya kafin girman asusu ko rangwame.",
+    "checks": [
+      "Kwatanta MT5, cTrader da kayan trading da ake da su.",
+      "Tabbatar da spread, kwamishan da dokokin aiwatar da oda.",
+      "Karanta ƙuntatawar labarai da EA.",
+      "Duba haɗarin biya da ƙarfin hujja."
+    ],
+    "faq": [
+      {
+        "question": "Wane prop firm na forex ya kamata ka fara dubawa?",
+        "answer": "Fara da kamfanoni masu dokoki bayyanannu, dandali da ya dace da salonka, ƙaramin ko matsakaicin haɗarin biya da majiyoyin hukuma bayyanannu."
+      },
+      {
+        "question": "Shin MT5 ya isa don zaɓen prop firm?",
+        "answer": "A'a. MT5 yana da sauƙin amfani, amma dole ka tabbatar da spread, labarai, EA, drawdown da sharuɗɗan cire kuɗi."
+      }
+    ]
+  },
+  "leveraged-prop-firm-avis": {
+    "title": "Binciken Get Leveraged: gargadin CySEC da haɗarin biyan kuɗi",
+    "metaDescription": "Binciken Get Leveraged: yanayin kamfani, gargadin CySEC da aka ruwaito, dokar daidaito 20%, hujjar biya, gargadin Trustpilot da abubuwan dubawa kafin saye.",
+    "eyebrow": "Binciken kamfani",
+    "h1": "Binciken Get Leveraged: tayin bayyane, amma a yi taka-tsantsan sosai kafin saye",
+    "answer": "Get Leveraged yana da talla sosai, tallar ƙaramin kuɗin shiga, shirye-shiryen irin portfolio da rabon riba 80% da aka tallata. Hukunci ba game da babban tayin ba ne; game da gargadin CySEC da aka ruwaito ne, ra'ayoyin tsauraran dokokin daidaito, rashin ƙimar Trustpilot da hujjar biya ta baya-bayan nan sosai.",
+    "checks": [
+      "Tabbatar ko shirin da ka zaɓa Jr, Sr, Executive, Turbo ko Sprint ne, sannan ka karanta ainihin shafin dokokinsa.",
+      "Tabbatar da matsayin doka na yanzu a shafin CySEC kafin biya.",
+      "Nemo hujjar biyan kuɗin kwanaki 30 da suka gabata a Discord da Reddit da kalmomin \"Leveraged payout\" ko \"GetLeveraged withdrawal\".",
+      "Gwada dabararka a simulation tare da bin dokar daidaito 20% kamar ana aiwatar da ita sosai.",
+      "Kwatanta ainihin kuɗin \"pay after you pass\", wanda galibi ake tallatawa kusan $8.88, da haɗarin ƙin biya."
+    ],
+    "faq": [
+      {
+        "question": "Shin sayen Get Leveraged lafiya ne?",
+        "answer": "PropRadar ba ya ɗaukar sa a matsayin saye mai aminci kai tsaye. Kamfanin sabo ne, ƙimar Trustpilot ba ta samuwa, ra'ayin jama'a ya ambaci tsauraran dokokin daidaito, kuma dole a tabbatar da gargadin hukuma da aka ruwaito kafin saye."
+      },
+      {
+        "question": "Mene ne babban haɗarin dokar Get Leveraged?",
+        "answer": "Muhimmin abin dubawa shi ne dokar daidaito 20%: kada rana ɗaya ta wuce 20% na jimillar riba. Idan ana aiwatar da ita sosai, za ta iya hana biya ko bayan an kai burin riba."
+      },
+      {
+        "question": "Wace hujja zan nema kafin saye?",
+        "answer": "Nemo hujjar cire kuɗi ta kwanan nan daga traders masu zaman kansu, ba hotunan talla kaɗai ba. Mafi kyawun hujja tana da kwanan wata, tana da alaƙa da takamaiman shiri kuma ta dace da dokokin hukuma."
+      }
+    ]
+  },
+  "alternatives-ftmo": {
+    "title": "Mafi kyawun madadin FTMO: dokoki, kuɗi da biyan kuɗi",
+    "metaDescription": "Kwatanta madadin FTMO ta farashi, sassaucin dokoki, labarai, EA, dandali, lokacin biya, scaling da bambance-bambancen gaske kafin sauyawa.",
+    "eyebrow": "Madadin FTMO",
+    "h1": "Madadin FTMO: mai arha, mai sassauci ko wanda ya fi dacewa da kai?",
+    "answer": "Barin FTMO yana da ma'ana ne kawai idan madadin ya warware ainihin matsala: ƙaramin kuɗin shiga, dokoki masu sassauci, dandali mafi dacewa, lokacin biya daban ko shiri mafi dacewa da salon trading ɗinka.",
+    "checks": [
+      "Kwatanta dalilin neman madadin FTMO: farashi, sassauci, dandali, lokacin biya ko scaling.",
+      "Tabbatar da dokokin drawdown, trading lokacin labarai, EA da riƙe positions ƙarshen mako.",
+      "Karanta majiyoyin hukuma da alamun al'umma na kwanan nan, ba tayi kaɗai ba.",
+      "Kada ka bar kamfani abin dogaro saboda wani tayin yana da rangwame kawai.",
+      "Kwatanta ainihin kuɗin watanni 3 zuwa 6, ciki har da reset ko maimaita yunƙuri."
+    ],
+    "faq": [
+      {
+        "question": "Mene ne mafi kyawun madadin FTMO?",
+        "answer": "Babu amsa ga kowa. The5ers zai iya dacewa da scaling na taka-tsantsan, Funding Pips ga masu kwatanta dokokin zamani, FunderPro na iya jan hankali da farashi da girman asusu, E8 Markets kuma wani abin kwatance ne na challenge na zamani."
+      },
+      {
+        "question": "Yaushe ya kamata in ci gaba da FTMO?",
+        "answer": "Ci gaba da FTMO idan babban fifikonka shi ne dokoki bayyanannu, dogon tarihin jama'a, suna mai ƙarfi na biya da tsarin matakai biyu mai bayyana. Rangwame kaɗai bai isa dalilin sauyawa ba."
+      },
+      {
+        "question": "Yaya zan kwatanta madadin FTMO?",
+        "answer": "Fara da matsalar da kake son warwarewa: farashi, labarai, EA, dandali, lokacin biya ko scaling. Sai ka kwatanta ainihin dokokin shiri da ra'ayin biya na kwanan nan kafin rangwamen lokacin saye."
+      }
+    ]
+  },
+  "prop-firm-avis-reddit-trustpilot": {
+    "title": "Bitar prop firm: alamun Reddit da Trustpilot",
+    "metaDescription": "Koyi yadda ake karanta bitar Trustpilot, Reddit, Discord da X kafin zaɓen prop firm: korafin biya, haɗarin bitar ƙarya, lokacin rangwame da ingancin hujja.",
+    "eyebrow": "Alamun bita",
+    "h1": "Bitar Reddit da Trustpilot game da prop firm: kyakkyawan maki bai isa ba",
+    "answer": "Trustpilot da Reddit majiyoyi ne masu amfani, amma ba idan an karanta su kaɗai ba. Babban maki na jama'a zai iya ɓoye matsalolin biya, dokoki marasa bayyani ko manyan kamfen na rangwame da ke ƙara bitar yabo.",
+    "checks": [
+      "Ware ɗanyen maki daga amincin da aka tace: kwanan wata, bitar da aka cire da lokacin tayi suna da muhimmanci.",
+      "Nemo korafe-korafen biya masu maimaituwa, ba fushin mutum ɗaya kawai ba.",
+      "Kwatanta lokacin bitar yabo da manyan kamfen na rangwame.",
+      "Duba ko Discord, X da Reddit suna bayyana irin labarin Trustpilot.",
+      "Nemo hujjar biya ta kwanan nan mai kwanan wata maimakon shaidar yabo ta gama-gari."
+    ],
+    "faq": [
+      {
+        "question": "Shin maki 4.8/5 a Trustpilot ya isa hujja?",
+        "answer": "A'a. Babban maki yana da amfani idan lokacin bita, hujjar biya, tattaunawar Reddit da dokokin hukuma sun dace. Har yanzu babban maki zai iya ɓoye matsalolin cire kuɗi masu alaƙa da dokoki."
+      },
+      {
+        "question": "Wace bita ce ta fi amfani?",
+        "answer": "Mafi kyawun bita tana ambaton ainihin shiri, girman asusu, ranar biya, dokar da ta shafa da ko trader ya riga ya cire kuɗi. Yabo na gama-gari hujja ce mai rauni sosai."
+      },
+      {
+        "question": "Yaya zan yi amfani da Reddit da Discord?",
+        "answer": "Yi amfani da su don gano abubuwan da ke maimaituwa: jinkirin biya, ƙin cire kuɗi, ruɗani game da dokoki, matsin lambar support ko sauyin ra'ayi kwatsam bayan tayi."
+      }
+    ]
+  },
+  "prop-firm-payout-proof": {
+    "title": "Hujjar biyan kuɗin prop firm: yadda ake tabbatar da cire kuɗi",
+    "metaDescription": "Jagorar hujjar biya: gano hujja mai kwanan wata, wadda za a iya bi diddigi kuma ta dace kafin amincewa da tallace-tallace.",
+    "eyebrow": "Hujjar biya",
+    "h1": "Hujjar biyan kuɗin prop firm dole ta kasance mai kwanan wata, mai bin diddigi kuma mai jituwa",
+    "answer": "Hoton biyan kuɗi kaɗai bai isa ba. Hujja mai kyau ta kasance mai kwanan wata, tana da alaƙa da ainihin shiri, ta dace da dokoki kuma fiye da alama ɗaya ta jama'a ta goyi bayanta.",
+    "checks": [
+      "Duba ranar biya, shiri da nau'in asusu.",
+      "Tabbatar ko hujjar ta fito daga kamfani ko masu amfani masu zaman kansu.",
+      "Kwatanta hujja da dokoki, mafi ƙarancin cire kuɗi da iyaka.",
+      "Nemo ƙin biya ko jinkirin cire kuɗi masu maimaituwa."
+    ],
+    "faq": [
+      {
+        "question": "Shin hoton biyan kuɗi ya isa?",
+        "answer": "A'a. Yana amfani ne kawai idan yana da kwanan wata, yana da alaƙa da asusu ko shaida abin dogaro kuma ya dace da dokokin kamfani."
+      },
+      {
+        "question": "Me ya sa kamfani zai ƙi biya?",
+        "answer": "Dalilai na yau da kullum sun haɗa da karya doka, haramtaccen trading lokacin labarai, copy trading ba tare da izini ba, girman lot da ya wuce kima, arbitrage ko rashin daidaiton dabara."
+      }
+    ]
+  },
+  "prop-firm-legal-check": {
+    "title": "Binciken doka na prop firm: kamfanoni, sharuɗɗa da alamun haɗari",
+    "metaDescription": "Tabbatar da kamfanin doka, sharuɗɗan asusun simulation, matsayin hukuma, sharuɗɗan biya da haɗarin rigimar biya kafin saye.",
+    "eyebrow": "Binciken doka",
+    "h1": "Binciken doka na prop firm: tabbatar da kamfanin kafin tayin",
+    "answer": "Prop firm na iya zama halastacce don bincike amma ba broker ko kamfanin saka jari da hukuma ke sa ido ba. Binciken doka mai amfani yana farawa da kamfanin da ke kwangila, ikon shari'a, bayanin simulation, matsayin hukuma, sharuɗɗan biya da na rigimar cire kuɗi.",
+    "checks": [
+      "Gano ainihin sunan kamfani, lambar rajista, adireshi da ikon shari'a kafin saye.",
+      "Ware sa ido kan broker daga ayyukan challenge, asusun simulation da kuɗaɗen kama-da-wane.",
+      "Karanta ko kamfanin ya ce ba broker ba ne, ba mai ba da shawarar saka jari ba ne kuma ba cibiyar karɓar ajiya ba ce.",
+      "Duba sasanci, watsi da ƙarar gama-gari, mayar da kuɗi, chargeback da sharuɗɗan rasa haƙƙin biya.",
+      "Tabbatar da ƙasashen da aka hana da ko samfurin yana samuwa a yankin shari'arka.",
+      "Nemo ainihin sunan kamfani a jaridun kuɗi masu zaman kansu kuma rubuta idan babu labari abin dogaro.",
+      "Yi amfani da gargadin hukumomi da rajistar jama'a a matsayin alamun haɗari, ba ikirarin talla ba."
+    ],
+    "faq": [
+      {
+        "question": "Shin kamfani mai rajista yana sa prop firm ya zama lafiya?",
+        "answer": "A'a. Rajista tana inganta bin diddigi, amma ba ta nufin ana kula da samfurin kamar broker, mai ba da shawarar saka jari ko futures commission merchant kai tsaye."
+      },
+      {
+        "question": "Mene ne muhimmin alamar haɗarin doka?",
+        "answer": "Rashin bayyanannun bayanan kamfanin kwangila, sai gargadin hukumomi, haƙƙin biya marasa bayyani, tsauraran sharuɗɗan rasa haƙƙi da talla mai kama da bayar da jari na gaske alhali kwangilar ta ce asusun simulation ne."
+      },
+      {
+        "question": "Me ya sa simulation yake da muhimmanci a doka?",
+        "answer": "Yawanci trader ba ya samun asusun broker na al'ada ko kariyar kuɗin abokan ciniki. Lada tana dogara da dokokin kwangila, nazari da cancanta maimakon haƙƙin cire kuɗi na al'ada."
+      }
+    ]
+  },
+  "prop-firm-sans-consistency-rule": {
+    "title": "Dokar daidaiton prop firm: dabara, kalkuleta da kamfanoni marasa dokar",
+    "metaDescription": "Mene ne dokar daidaito? Duba dabara, misalin 40%, tasirin biya da yadda ake kwatanta kamfanonin da ba su da dokar.",
+    "eyebrow": "Binciken dokoki",
+    "h1": "Mene ne dokar daidaito a prop firm?",
+    "answer": "Dokar daidaito tana iyakance kaso na jimillar ribarka da zai fito daga rana ɗaya ko trade ɗaya. Prop firm marar dokar yana cire wannan iyaka, amma zai iya ci gaba da amfani da tsauraran drawdown, mafi ƙarancin biya, iyakar lot ko sharuɗɗan funded.",
+    "checks": [
+      "Tabbatar da dokar a tantancewa da funded.",
+      "Kwatanta mafi ƙarancin biya da kwanakin trading da ake buƙata.",
+      "Duba drawdown mai bin ma'auni da asarar rana.",
+      "Kada ka ɗauki rashin dokar daidaito a matsayin cikakken izini."
+    ],
+    "faq": [
+      {
+        "question": "Mene ne dokar daidaito a prop firm?",
+        "answer": "Yawanci tana iyakance kason jimillar riba da zai fito daga mafi kyawun rana ko babban trade. Misali, dokar mafi kyawun rana na iya buƙatar rana ɗaya ta kasance ƙasa da wani kaso na riba kafin biya. Dabaran ta bambanta da kamfani da shiri."
+      },
+      {
+        "question": "Me rashin dokar daidaito yake nufi?",
+        "answer": "Shirin ba ya amfani da wannan iyakar rarraba riba. Bai cire dokokin asarar rana, drawdown, biya, labarai, girman lot ko haramtattun dabaru ba."
+      },
+      {
+        "question": "Waɗanne prop firm ba su da dokar daidaito?",
+        "answer": "Amsar tana sauyawa bisa shiri da matakin funded. Yi amfani da jadawalin nan a matsayin gajeren jerin zaɓuɓɓuka, sannan tabbatar da ainihin dokokin yanzu; kamfani ɗaya na iya bayar da samfuran da suke da dokar da waɗanda ba su da ita."
+      }
+    ],
+    "article": {
+      "intro": "Dokar daidaito tana iyakance **kason jimillar ribarka da zai fito daga rana ɗaya**. Dalilinta shi ne rana ɗaya ta sa'a, position mai girma fiye da kima ko tashin farashi saboda labarai na iya samar da biya ba tare da nuna ikon trading a dogon lokaci ba. Fahimtar dabaran daidai ta fi neman kamfanin da ke cewa ba shi da dokar muhimmanci.",
+      "keyPoints": [
+        "Dabara: **ribar mafi kyawun rana ÷ jimillar riba × 100**, a kwatanta da iyakar kamfani (sau da yawa 40 zuwa 55%).",
+        "Idan ka wuce iyaka **ba ka rasa komai**: ka ci gaba da trading har sai jimillar riba ta isa.",
+        "**Inda** ake amfani da ita yana da muhimmanci: a tantancewa tana jinkirta wucewa, a biya tana iya hana cire kuɗi.",
+        "Rashin dokar daidaito **ba yana nufin sauƙi ba**: ana sarrafa haɗari ta wata hanya."
+      ],
+      "sections": [
+        {
+          "heading": "Yadda ake lissafin dokar",
+          "paragraphs": [
+            "Yawancin kamfanoni suna amfani da dabara ɗaya: **ribar mafi kyawun rana a raba da jimillar riba**, a matsayin kaso. Idan sakamakon ya wuce iyakar kamfani, har yanzu ba ka cancanci wuce tantancewa ko neman biya ba, bisa matakin da dokar ta shafa.",
+            "Misali da iyakar 50%: ka samu $1,200 ranar Litinin, $300 Talata da $500 Laraba, jimilla $2,000. Mafi kyawun ranarka ita ce **60% na jimillar**: sama da iyaka. Ba sai ka rasa komai ba; kana buƙatar ƙarin jimillar riba, a nan **aƙalla $2,400**, don $1,200 ya zama 50% ko ƙasa.",
+            "Wasu kamfanoni suna amfani da dokar daban. **Topstep yana ɗaga burin riba** a Trading Combine maimakon sa ka fadi: idan mafi kyawun rana ta wuce 55% na burin, sabon buri shi ne ribar ranar a raba da 0.55 (cibiyar taimakon Topstep, shafin 17 Satumba 2026)."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Lissafi mai sauri: **jimillar ribar da ake buƙata = mafi kyawun rana ÷ iyaka**. A nan: $1,200 ÷ 0.50 = **$2,400**."
+          }
+        },
+        {
+          "heading": "Inda dokar ke aiki: tantancewa, biya ko duka",
+          "paragraphs": [
+            "Kaso ɗaya na iya nufin abubuwa daban. Dokar daidaito a tantancewa **tana jinkirta wucewa kawai**. Dokar biya **tana iya hana cire kuɗi** bayan ka samu riba a asusun funded. Wasu kamfanoni suna amfani da iyaka daban a kowane mataki: Topstep yana amfani da **55% a Combine** da **40% a hanyar biyan Consistency** ta Express Funded Account.",
+            "FTMO ya sauya dokarsa **12 Oktoba 2026**: sabbin odar 1-Step Challenge suna amfani da Consistency da ke kwatanta mafi kyawun rana da jimillar riba, **kwanakin asara suna ciki**, yayin da tsoffin oda suke riƙe Best Day Rule da ke lissafa kwanakin riba kawai. FTMO ya ce idan ba ka cika sharadin ba, ka ci gaba da trading har sai ka cika (sabunta trading na FTMO, 8 Oktoba 2026). PropRadar bai gano dokar kaso ta mafi kyawun rana a The5ers High Stakes ba."
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Kullum tabbatar da **mataki, samfur da ranar odarka**: kamfani ɗaya zai iya amfani da sigogi biyu na doka."
+          }
+        },
+        {
+          "heading": "Shin kamfani marar dokar daidaito ya fi kyau?",
+          "paragraphs": [
+            "Ba lallai ba. Kamfanonin da ke cire dokar yawanci suna sarrafa haɗari ta wata hanya. Tallar “no consistency rule” na iya ɓoye asusun funded da **ya fi wahalar riƙewa**. Duba abin da ya maye gurbinta:"
+          ],
+          "bullets": [
+            "**Ƙaramin iyakar asarar rana mai tsauri**",
+            "**Drawdown mai bin ma'auni**",
+            "**Iyakar biyan kuɗi na farko**",
+            "**Mafi ƙarancin kwanakin trading**",
+            "**Iyakar girman position**"
+          ],
+          "callout": {
+            "kind": "example",
+            "text": "Dokar tana fi shafar **sakamako masu tsalle-tsalle**: traders na labarai, swing traders da ke rufe babban position guda ko wanda ke ƙara girma bayan jerin asara. Idan sakamakon kwanakin yana daidaita, iyakar 40 zuwa 50% ba ta takura sau da yawa."
+          }
+        },
+        {
+          "heading": "Yadda ake trading cikin sauƙi ƙarƙashin dokar daidaito",
+          "paragraphs": [
+            "Halaye huɗu suna rage cikas daga dokar:"
+          ],
+          "steps": [
+            {
+              "title": "Bi diddigin kaso",
+              "text": "Lissafa **mafi kyawun rana ÷ jimillar riba** bayan kowane zaman trading."
+            },
+            {
+              "title": "San iyakar yau",
+              "text": "Kafin trading, san **nawa za ka iya samu** ba tare da wuce iyakar kaso ba."
+            },
+            {
+              "title": "Rarraba bayan babbar rana",
+              "text": "Shirya **ƙananan kwanaki da yawa masu riba** maimakon ƙoƙarin maimaita ranar."
+            },
+            {
+              "title": "Kada ka ƙara girma a ƙarshe",
+              "text": "Rana ɗaya mai babbar riba fiye da kima na iya **jinkirta wucewa** kamar ranar asara."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "prop-firm-drawdown": {
+    "title": "Drawdown na prop firm: trailing, static da EOD",
+    "metaDescription": "Mene ne drawdown a prop firm? Bayanin static, trailing da ƙarshen rana tare da misalai, iyakar asarar rana, matakin kullewa da yadda ake zaɓi.",
+    "eyebrow": "Bayanin dokoki",
+    "h1": "Drawdown na prop firm: trailing, static da ƙarshen rana",
+    "answer": "Drawdown shi ne iyakar abin da asusunka zai iya rasa daga wurin ma'auni. Static drawdown yana tsayawa ƙasa da ma'aunin farko. Intraday trailing yana bin equity mafi girma kai tsaye, har da ribar da ba a rufe ba. EOD trailing yana motsi ne kawai a ƙarshen rana. Static ya fi sassauci, intraday trailing ya fi tsauri.",
+    "checks": [
+      "Gano wurin ma'auni: ma'aunin farko, equity mafi girma ko ma'aunin ƙarshen rana.",
+      "Duba ko ana auna karya doka bisa ma'auni ko equity.",
+      "Nemo matakin kullewa inda trailing ya daina motsi.",
+      "Tsara girman positions bisa sararin da ya rage, ba girman asusu ba."
+    ],
+    "faq": [
+      {
+        "question": "Mene ne bambancin trailing da static drawdown?",
+        "answer": "Static yana nan a tsayayyen mataki ƙasa da ma'aunin farko. Trailing yana tashi idan asusu ya kai sabon matsayi mafi girma, don haka sarari yana raguwa bayan kowace riba har sai an kulle shi."
+      },
+      {
+        "question": "Shin EOD drawdown ya fi trailing?",
+        "answer": "Yawanci eh. EOD trailing ba ya bin sauyin ribar da ba a rufe ba cikin rana; yana motsi ne a ƙarshen rana. Intraday trailing na iya tashi a trade da daga baya ka rufe ba tare da riba ko asara ba."
+      },
+      {
+        "question": "Shin iyakar asarar rana tana rufe asusuna?",
+        "answer": "Ya danganta da kamfani. Yawancin forex/CFD suna rufe asusun saboda karya doka; wasu futures suna dakatar da trading na sauran zaman kawai. Karanta sharuɗɗan ainihin shirinka."
+      }
+    ],
+    "article": {
+      "intro": "Drawdown ita ce **dokar da ke kawo ƙarshen mafi yawan asusun prop firm**. Ita ce iyakar abin da asusunka zai iya rasa daga wurin ma'auni. Kamfanoni biyu za su iya tallata drawdown $3,000 a asusun $50,000 amma su ba ka **sarari daban ƙwarai** don trading saboda wurin ma'auni yana motsi ta hanyoyi daban.",
+      "keyPoints": [
+        "Iyaka biyu suna aiki lokaci guda: **asarar rana** (tana sake farawa kowace rana) da **mafi girman drawdown** (duk asusu).",
+        "**Static** ya fi sassauci, **intraday trailing** ya fi tsauri, **EOD** yana tsakani.",
+        "Yawancin trailing suna **kullewa** a ma'aunin farko: ranakun farko sun fi haɗari.",
+        "Tsara girman positions bisa **sararin da ya rage zuwa iyaka**, ba girman asusu ba."
+      ],
+      "sections": [
+        {
+          "heading": "Iyakar asarar rana da mafi girman drawdown",
+          "paragraphs": [
+            "Yawancin kamfanoni suna amfani da **iyaka biyu lokaci guda**. **Iyakar asarar rana** tana ƙayyade abin da za ka iya rasa a rana ɗaya, yawanci daga ma'aunin ko equity na farkon rana. **Mafi girman drawdown** yana iyakance jimillar asarar tsawon rayuwar asusu. Karya ko wanne yawanci yana kawo ƙarshen asusu, sai dai wasu futures suna dakatar da trading na sauran zaman kawai idan an kai iyakar rana."
+          ]
+        },
+        {
+          "heading": "Static drawdown",
+          "paragraphs": [
+            "Static drawdown **tsayayye ne ƙasa da ma'aunin farko kuma ba ya motsi**. A asusun $100,000 mai iyakar static 10%, ƙasan iyaka ita ce $90,000 har abada. Idan ka kai $108,000, kana da **sararin $18,000**. Wannan shi ne tsarin da ya fi sassauci, wanda aka saba da shi a challenge na matakai biyu na forex/CFD."
+          ]
+        },
+        {
+          "heading": "Trailing drawdown cikin rana",
+          "paragraphs": [
+            "Intraday trailing **yana bin equity mafi girma kai tsaye, har da ribar da ba a rufe ba**. Misali a asusun $50,000 da trailing $2,500: iyaka tana farawa a $47,500. Trade ya kai +$1,500 na ribar da ba a rufe ba, don haka iyaka ta koma $49,000, **ko da ka rufe trade ba riba ba asara**. Yanzu kana da sararin $1,000 maimakon $2,500 ba tare da ka kulle riba ko sisi ba. Wannan shi ne mafi tsauri, wanda aka saba a futures da instant funding."
+          ]
+        },
+        {
+          "heading": "Trailing drawdown na ƙarshen rana (EOD)",
+          "paragraphs": [
+            "EOD trailing **yana motsi ne kawai lokacin rufe ranar trading**, bisa ma'aunin ƙarshe. Sauyin ribar positions da ba a rufe ba cikin rana ba ya ɗaga iyaka, don haka ya fi sauƙin sarrafawa fiye da intraday trailing."
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Iyakar tana motsi lokacin rufewa kawai, amma **ana yawan duba karya doka kai tsaye**. Misali, Topstep yana bin Maximum Loss Limit daga ma'aunin ƙarshen rana yayin dubawa kai tsaye, har da asarar da ba a rufe ba."
+          }
+        },
+        {
+          "heading": "Lokacin da trailing ya tsaya: kullewa",
+          "paragraphs": [
+            "Yawancin tsarin trailing suna **daina bin ma'auni** a wani mataki, yawanci idan iyakar ta kai ma'aunin farko (ko ma'aunin farko da ɗan ƙarin buffer). Daga nan tana aiki kamar static."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Ranakun farko na asusun trailing sun fi haɗari: **gina buffer har zuwa matakin kullewa** kafin manyan positions."
+          }
+        },
+        {
+          "heading": "Iyakokin ma'auni da na equity",
+          "paragraphs": [
+            "Iyakar **ma'auni** tana ƙirga trades da aka rufe kawai. Iyakar **equity** tana ƙirga positions da suke buɗe ma, don haka asarar da ba a rufe ba tana iya karya doka ko da daga baya za ka rufe trade da riba. Yawancin kamfanoni na zamani suna auna karya doka ta equity. **Karanta ma'anar a sharuɗɗa**, ba jadawalin taƙaitawa kawai ba."
+          ]
+        },
+        {
+          "heading": "Yadda ake zaɓi",
+          "paragraphs": [
+            "Daidaita tsarin drawdown da **yadda trades ɗinka suke**:"
+          ],
+          "compare": {
+            "columns": [
+              "Fi so"
+            ],
+            "rows": [
+              {
+                "label": "Trades da ke samun babbar riba sannan su dawo",
+                "values": [
+                  "**Static** ko **EOD**; guji intraday trailing"
+                ]
+              },
+              {
+                "label": "Ƙananan scalps akai-akai da ƙananan stop",
+                "values": [
+                  "**Trailing** zai iya aiki idan ana kulle iyaka da wuri"
+                ]
+              },
+              {
+                "label": "Swing trades da faɗaɗɗun stop",
+                "values": [
+                  "**Static**, mai sarari fiye da asarar buɗe da aka saba"
+                ]
+              }
+            ]
+          },
+          "callout": {
+            "kind": "tip",
+            "text": "Kullum tsara girman positions bisa **sararin da ya rage zuwa iyaka**, ba girman asusun talla ba."
+          }
+        }
+      ]
+    }
+  },
+  "meilleure-prop-firm-2026": {
+    "title": "Mafi kyawun prop firm a yanzu: jerin 2026 mai fifita haɗari",
+    "metaDescription": "Waɗanne prop firm ne mafi kyau yanzu? Kwatanta manyan kamfanoni ta amincin biya, bayyanannun dokoki, hujjar doka, drawdown da alamun al'umma.",
+    "eyebrow": "Babban jerin matsayi",
+    "h1": "Mafi kyawun prop firm yanzu: jerin 2026 mai fifita haɗari",
+    "answer": "Mafi kyawun prop firm a yanzu suna haɗa biyan kuɗi abin dogaro, dokoki masu sauƙin fahimta, bayyanannun bayanan doka da isasshen hujjar jama'a ta kwanan nan. PropRadar yana tsara bayanan yanzu bisa haɗari kafin girman asusu ko rangwame.",
+    "checks": [
+      "Kwatanta amincin biya kafin girman asusu.",
+      "Tabbatar da ainihin dokokin shiri, ba sunan kamfani kaɗai ba.",
+      "Kwatanta Trustpilot, Reddit, X da Discord domin kowace majiya tana da son kai daban.",
+      "Duba nau'in drawdown da dokar labarai, musamman salon intraday ko SMC/ICT.",
+      "Tabbatar ko akwai dokar daidaito ko iyakar ribar rana.",
+      "Duba mafi ƙarancin biya idan dabararka tana samar da ƙananan riba da yawa.",
+      "Karanta sharuɗɗan scaling da cire kuɗi bayan funded."
+    ],
+    "faq": [
+      {
+        "question": "Me ya sa prop firm yake da kyau a 2026?",
+        "answer": "Yana haɗa biyan kuɗi abin dogaro, dokoki bayyanannu, tabbatattun sharuɗɗa, isasshen ra'ayin jama'a da shirin da ya dace da salonka. Babban asusu ba ya rama rashin bayyanannun dokokin cire kuɗi."
+      },
+      {
+        "question": "Shin in zaɓi kamfani mai rangwame mafi girma?",
+        "answer": "A'a. Rangwame yana da amfani ne idan dokoki, drawdown, tsarin biya da sharuɗɗan funded sun dace da dabararka."
+      },
+      {
+        "question": "Waɗanne prop firm ne mafi kyau yanzu?",
+        "answer": "PropRadar a yanzu yana sanya kamfanonin da suka daɗe kuma suna da kyawawan majiyoyi kamar FTMO, The5ers da Topstep kusa da farko. Jerin da ya dace har yanzu ya dogara da kasuwa, drawdown, dandali, lokacin biya da ainihin dokokin shiri."
+      }
+    ],
+    "article": {
+      "intro": "Babu prop firm guda ɗaya da ya fi kowa. Akwai kamfani mafi kyau **ga kasuwarka, salon trading ɗinka** da irin haɗarin da ka yarda da shi daga mai gudanarwa. Wannan jerin ya fara daga wannan batu: kafin rabon riba da rangwame, yana duba ko kamfanin zai **ci gaba da kasancewa kuma ya biya** lokacin da kake buƙata.",
+      "keyPoints": [
+        "Tace bisa wannan tsari: **kasuwa → dokoki → ainihin kuɗi → lambobin rangwame**.",
+        "Maki suna la'akari da **bayyanannun dokoki, hujjar biya, bayyanannun bayanan doka, bitar jama'a da tarihi**.",
+        "Hanyoyin haɗin gwiwa **ba sa sauya maki**.",
+        "Maki suna sauyawa idan hujja ta sauya; kowace sauyi **tana da kwanan wata** a shafin kamfani."
+      ],
+      "sections": [
+        {
+          "heading": "Yadda aka gina wannan jerin",
+          "paragraphs": [
+            "Kowane kamfani a PropRadar yana samun **maki cikin 100** bisa bayyanannun dokoki, hujjar biya, bayanan doka, alamun bitar jama'a da tarihin aiki. Ana bayyana hanyoyin haɗin gwiwa a kowane shafi kuma **ba sa sauya maki**. Ana nuna raunin kamfanin abokin hulɗa; wanda ba abokin hulɗa ba zai iya zama na farko.",
+            "A sabuntawar labarin 12 Nuwamba 2026, mafi girman maki na kamfanonin da suka daɗe ne: **FTMO (91/100), The5ers (85/100) da Topstep (84/100)**. Ba su ne mafi arha ba. Su ne masu dogon tarihin jama'a, sharuɗɗan da suka fi sauƙin fahimta da ƙarancin alamun matsalolin biya da ba a warware ba a fayilolin PropRadar."
+          ]
+        },
+        {
+          "heading": "Fara da kasuwarka",
+          "paragraphs": [
+            "Traders na forex/CFD da na futures ba sa saye a kasuwa ɗaya. **Kyakkyawan kamfanin futures ba ya amfani ga trader na forex**, don haka fara tacewa bisa kasuwa."
+          ],
+          "compare": {
+            "columns": [
+              "Forex / CFD",
+              "Futures"
+            ],
+            "rows": [
+              {
+                "label": "Dandali",
+                "values": [
+                  "MT5, cTrader",
+                  "Dandalin futures"
+                ]
+              },
+              {
+                "label": "Iyaka",
+                "values": [
+                  "**% na asusu**",
+                  "**Adadin dala**"
+                ]
+              },
+              {
+                "label": "Drawdown",
+                "values": [
+                  "Yawanci static a challenge na matakai biyu",
+                  "Yawanci **trailing**"
+                ]
+              },
+              {
+                "label": "Misalai",
+                "values": [
+                  "FTMO, The5ers",
+                  "Topstep"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "heading": "Sai ka daidaita dokoki da salonka",
+          "paragraphs": [
+            "Dokokin da ke kawo ƙarshen mafi yawan asusu **ba burin riba ba ne**. Su ne nau'in drawdown, iyakar asarar rana, daidaito, ƙuntatawar labarai da riƙe positions. Scalper yana buƙatar aiwatarwa da sauri ba tare da mafi ƙarancin lokacin trade ba. Swing trader yana buƙatar riƙewa da dare da ƙarshen mako. Mai trading labarai yana buƙatar kamfanin da ke yarda da shi **a asusun funded**, ba a tantancewa kaɗai ba."
+          ],
+          "bullets": [
+            "**Drawdown:** static ya fi sauƙin sarrafawa fiye da trailing.",
+            "**Daidaito:** duba ko ya shafi tantancewa, biya ko duka.",
+            "**Labarai da riƙewa:** tabbatar da dokokin funded, waɗanda galibi suka fi tsauri.",
+            "**Biya:** yawan lokuta, mafi ƙarancin adadi, iyakar biya na farko da kuɗin sarrafawa."
+          ]
+        },
+        {
+          "heading": "A ƙarshe, kwatanta ainihin kuɗi",
+          "paragraphs": [
+            "Ainihin kuɗin prop firm shi ne **abin da ka kashe kafin biyanka na farko**: kuɗin challenge, reset, kunnawa da maye gurbin asusu, bayan an cire duk abin da aka mayar. Challenge mai arha da tsauraran drawdown zai iya fi tsada fiye da mai tsada da za ka iya wucewa."
+          ]
+        },
+        {
+          "heading": "Me zai saukar da kamfani a jerin?",
+          "paragraphs": [
+            "Maki suna sauyawa idan hujja ta sauya. Kowace sauyi **tana da kwanan wata a tarihin kamfanin** don ka ga dalili da lokaci. Abubuwan rage maki:"
+          ],
+          "bullets": [
+            "**Gargadin hukuma**",
+            "**Jinkirin biya mai maimaituwa**",
+            "**Sauya doka a kan asusun da suke akwai**",
+            "Domain da **ya daina hidimar kamfanin**",
+            "Raguwar bayyanannun bayanan **kamfanin doka**"
+          ]
+        }
+      ]
+    }
+  },
+  "prop-firm-sans-challenge": {
+    "title": "Yadda ake farawa da prop firm ba tare da challenge ba (2026)",
+    "metaDescription": "Farawa ba tare da challenge ba: zaɓi shiri, tabbatar da cancanta, kwatanta kuɗaɗe da drawdown, gwada dokoki da fahimtar biya na farko.",
+    "eyebrow": "Babu challenge",
+    "h1": "Yadda ake farawa da prop firm ba tare da challenge ba",
+    "answer": "Zaɓi kasuwa da ainihin shirin instant funding, duba ƙasa da sharuɗɗan tantance shaida, karanta dokokin funded, lissafa duk kuɗaɗe da gwada dabararka bisa iyakar asara. Kammala saitin bayan fahimtar hanyar biya na farko: tsallake tantancewa ba ya cire burin riba, daidaito ko iyakar cire kuɗi.",
+    "checks": [
+      "Kwatanta ainihin kuɗin watanni 3 zuwa 6, ciki har da shiga, sabuntawa, reset ko scaling.",
+      "Tabbatar da dokokin funded: drawdown, labarai, lot, daidaito, scaling da biya.",
+      "Duba mafi ƙarancin biya da yawan lokutan cire kuɗi, musamman idan dabararka tana samar da ƙananan riba da yawa.",
+      "Tabbatar da nau'in drawdown: static, trailing, EOD ko smart drawdown.",
+      "Karanta dokokin scaling da sharuɗɗan komawa manyan asusu.",
+      "Guji wannan tsarin idan dabararka ba ta daidaita ba tsawon watanni da yawa."
+    ],
+    "faq": [
+      {
+        "question": "Yaya zan fara da prop firm ba tare da challenge ba?",
+        "answer": "Zaɓi kasuwa da shiri, duba cancanta da kamfanin kwangila, adana dokokin funded, lissafa duk kuɗaɗe, gwada iyakar asara da kammala tantance shaida. Bi diddigin asarar rana, jimillar drawdown da cancantar biya daga zaman farko."
+      },
+      {
+        "question": "Babu challenge yana nufin zan iya cire kuɗi nan take?",
+        "answer": "A'a. Hyro Instant yana da kwanakin cancanta don biya na farko, yayin da Tradeify Lightning Funded yana da burin riba, daidaito da iyakar buƙata. Karanta ainihin dokokin funded; samun asusu, cancantar biya da karɓar kuɗi matakai ne daban."
+      },
+      {
+        "question": "Shin funding ba tare da challenge ba ya fi challenge na al'ada sauƙi?",
+        "answer": "Ba lallai ba. Yana cire tantancewa amma zai iya sa funded ya fi tsauri. Gwaji na gaskiya shi ne dokokin biya, juriyar drawdown, mafi ƙarancin cire kuɗi da ko trading ɗinka zai jure ƙuntatawar asusu kai tsaye."
+      },
+      {
+        "question": "Wa ya kamata ya yi la'akari da prop firm ba tare da challenge ba?",
+        "answer": "Ya fi dacewa da traders da suka san matsakaicin haɗarinsu, tsarin asarar rana da lokacin biya. Idan har yanzu kana gwada ladabi, ƙaramin challenge na al'ada zai iya zama mai arha kuma mafi aminci."
+      },
+      {
+        "question": "Mene ne prop firm ba tare da challenge ba?",
+        "answer": "Shiri ne da ke tsallake burin tantancewa na al'ada ya ba da damar shiga asusun simulation irin funded nan take. Har yanzu dole trader ya bi drawdown, biya, daidaito da dokokin dabarun da aka hana."
+      },
+      {
+        "question": "Shin funded trading ba tare da challenge ba ya fi sauƙi?",
+        "answer": "Ya fi sauri, ba lallai ya fi sauƙi ba. Asusu kai tsaye na iya samun tsauraran drawdown, mafi ƙarancin biya, iyakar scaling ko daidaito, don haka funded ya zama ainihin tantancewa."
+      }
+    ],
+    "article": {
+      "intro": "Don farawa da prop firm ba tare da challenge ba, zaɓi kasuwa da ainihin shiri, duba cancanta, karanta dokokin funded, lissafa duk kuɗaɗe da gwada dabararka da iyakar asara. **Tsallake tantancewa ba ya cire sharuɗɗan biya.** Asusu na iya zama simulation, kuma cire kuɗi na farko na iya buƙatar kwanakin cancanta, burin riba ko daidaito.",
+      "keyPoints": [
+        "**Babu challenge yana nufin babu tantancewa kafin funded.** Har yanzu ana iya buƙatar burin riba don biya.",
+        "Duba **ainihin shiri**, duk kuɗaɗensa da ko asusun simulation ne.",
+        "Kwatanta **jimillar kuɗin kaiwa biya na farko**, ba farashin talla ba.",
+        "Ya dace da dabara **tabbatacciya mai ƙaramin drawdown**, ba wadda har yanzu ake gwadawa ba."
+      ],
+      "sections": [
+        {
+          "heading": "Yadda ake farawa da prop firm ba tare da challenge ba",
+          "paragraphs": [
+            "Fara da zaɓen kasuwarka da ainihin shirin instant funding. Asusun da babu challenge yana tsallake tantancewa kafin funded. Har yanzu yana iya zama simulation, kuma biya na iya buƙatar burin riba, kwanakin cancanta, daidaito da nazari. Sayen asusu da cancantar cire kuɗi matakai ne daban.",
+            "Yi amfani da wannan jerin kafin saye. Babban ma'aunin asusu da aka tallata ba ya ba ka wannan adadin kuɗi don rasa: iyakar asarar rana da jimilla su ne ke ƙayyade sararin da ake da shi."
+          ],
+          "steps": [
+            {
+              "title": "Zaɓi kasuwa da duba cancanta",
+              "text": "Daidaita kayan trading da aka yarda, dandali da lokuta da dabararka. Duba ƙuntatawar ƙasa, tantance shaida da sunan kamfanin kwangila."
+            },
+            {
+              "title": "Karanta ainihin dokokin asusun funded",
+              "text": "Adana sunan shiri, girman asusu, ranar saye da shafukan dokokin hukuma. Tabbatar da lokacin reset na rana, mafi girman iyakar asara, lissafin drawdown da dabarun da aka hana."
+            },
+            {
+              "title": "Rubuta hanyar biya na farko",
+              "text": "Rubuta kwanakin cancanta, burin riba, daidaito, mafi ƙarancin buƙata, iyakar biya da rabon riba. Asusun da babu tantancewa na iya buƙatar riba mai yawa kafin cire kuɗi."
+            },
+            {
+              "title": "Lissafa duk kuɗaɗen da za ka iya rasa",
+              "text": "Haɗa kuɗin shiga, kunnawa, maimaituwa, dandali da bayanai idan sun shafa. Karanta sharuɗɗan mayar da kuɗi da maye gurbi, ka yanke iyakar kuɗaɗen da ka yarda ka rasa."
+            },
+            {
+              "title": "Gwada trading ɗinka na al'ada bisa iyakokin",
+              "text": "Yi amfani da gwaji ko littafin trading don duba asarar buɗe, kwamishan, jerin asara da positions na dare. Gwajin ya yi amfani da ainihin iyakokin shiri, ba ma'aunin asusun talla ba."
+            },
+            {
+              "title": "Kammala saitin da sa ido kan iyakokin biyu",
+              "text": "Bayan biya da tantancewar da ake buƙata, tabbatar dashboard ya dace da kwangila. Rubuta iyakar rana ta yanzu, jimillar iyaka da cancantar biya kafin kowane zama."
+            }
+          ]
+        },
+        {
+          "heading": "Me ya sa instant funding yawanci ya fi tsada?",
+          "paragraphs": [
+            "Kamfanoni suna sanya farashin tantancewa a matsayin matattara: yawancin masu sayen challenge ba sa kaiwa biya, kuma kuɗaɗensu suna tallafa wa waɗanda suka kai. Idan ka tsallake matattarar, kamfanin yana saka wannan haɗari cikin farashin asusun. Saboda haka asusu kai tsaye yawanci yana da **farashi sau da yawa** na challenge mai girma iri ɗaya, da **ƙananan girma** kuma sau da yawa **tsauraran drawdown**.",
+            "Kwatanta **jimillar kuɗin kaiwa biya na farko**. Misalin adadi masu sauƙi: challenge $100 da damar wucewa ɗaya cikin uku yana kashe matsakaicin **$300** don funded. Instant account $350 mai tsauraran trailing drawdown ya fi haka da zarar ka rasa asusu ɗaya kafin biya na farko."
+          ]
+        },
+        {
+          "heading": "Dokokin da ke tantance ko asusu kai tsaye ya dace",
+          "paragraphs": [
+            "Karanta dokokin funded, ba shafin talla ba. Waɗannan abubuwa shida sukan fi sauya kuɗi da amfanin shiri:"
+          ],
+          "bullets": [
+            "**Nau'in drawdown:** trailing mai bin equity mafi girma ya fi wahalar jurewa fiye da static a ma'aunin farko.",
+            "**Daidaito:** shirye-shiryen instant da yawa suna iyakance riba daga mafi kyawun rana kafin biya.",
+            "**Sharuɗɗan biya na farko:** mafi ƙarancin kwanaki, riba da iyakar cire kuɗi ɗaya ko biyu na farko.",
+            "**Rabon riba na farko:** wasu suna fara ƙasa da challenge sannan su ƙara daga baya.",
+            "**Kuɗin maye gurbi:** farashin sabon asusu bayan karya doka da ko akwai rangwame.",
+            "**Dabarun da aka ƙuntata:** lokutan labarai, lokacin riƙewa, copy trading da mafi ƙarancin lokacin trade."
+          ]
+        },
+        {
+          "heading": "Wa ya kamata ya yi la'akari da prop firm ba tare da challenge ba?",
+          "paragraphs": [
+            "Funding kai tsaye yana musanya **kuɗi da lokaci**. Matsi na burin riba yana koma matsi na drawdown da ake lura da shi kai tsaye a asusun da ya fi tsada."
+          ],
+          "fit": {
+            "yes": [
+              "Dabara **tabbatacciya mai ƙaramin drawdown**",
+              "Tarihin **bin iyakar rana**",
+              "Kana fifita **lokaci bisa kuɗi**"
+            ],
+            "no": [
+              "Dabarar da **har yanzu kake gwadawa**",
+              "Salon **mai saurin sauyawa** da ke buƙatar sarari",
+              "Saye musamman don **guje wa burin riba**"
+            ]
+          },
+          "callout": {
+            "kind": "tip",
+            "text": "Ba ka da tabbaci? **Challenge mai arha na mataki ɗaya** yakan fi dacewa don gwada ko dabararka ta dace da dokoki kafin sayen asusu kai tsaye."
+          }
+        },
+        {
+          "heading": "Alamun haɗarin instant funding",
+          "paragraphs": [
+            "Shirye-shiryen instant suna jan sababbin kamfanoni da masu talla sosai domin suna da sauƙin sayarwa. Yi taka-tsantsan da:"
+          ],
+          "bullets": [
+            "**Manyan asusu sosai da ƙaramin farashi sosai.**",
+            "Alkawarin biya ba tare da **dokar biya da aka wallafa** ba.",
+            "Dokokin da **suka bambanta tsakanin shafin farko da kwangila**.",
+            "Sharuɗɗan da ke barin kamfani ya ƙi biya **bisa ikonsa kaɗai** ba tare da dalili da aka bayyana ba."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Kafin saye, buɗe shafin PropRadar na kamfanin: **kamfanin doka, alamun biya, domain da gargadin hukumomi** suna a shafi ɗaya."
+          }
+        },
+        {
+          "heading": "Misalai biyu na yanzu: shiga nan take ba cire kuɗi nan take ba ne",
+          "paragraphs": [
+            "Shafukan hukuma da aka duba 15 Nuwamba 2026 sun nuna muhimmancin ainihin shiri. **Hyro Instant** yana tsallake tantancewa amma yana buƙatar kwanaki uku na cancanta don biya na farko, aƙalla $25 riba bayan rabo da iyakar ribar da ake ƙirga a kowane biya.",
+            "**Tradeify Lightning Funded** ma yana tsallake tantancewa. Shirinsa da aka wallafa na $50,000 yana buƙatar riba $3,000 don buɗe buƙata ta farko, wadda aka iyakance zuwa $2,000 kafin rabon trader na 90%. Daidaito ma yana aiki. Burin riba ba adadin cire kuɗi ba ne.",
+            "Misalan suna bayyana dokokin da aka wallafa, ba biyan abokan ciniki da aka tabbatar da kansa ba. Yi amfani da kwangilar yanzu da hanyoyin majiya da ke ƙasa don tabbatar da sharuɗɗan sabon saye."
+          ]
+        }
+      ]
+    }
+  },
+  "topstep-review": {
+    "title": "Bitar Topstep 2026: Shin halastacce ne? Dokoki da biyan kuɗi",
+    "metaDescription": "Bitar Topstep 2026: Trading Combine, burin daidaito 55%, Maximum Loss Limit mai hawa, rabon 90%, hanyoyin biya da Trustpilot.",
+    "eyebrow": "Bitar kamfani",
+    "h1": "Bitar Topstep 2026: shin Topstep halastacce ne?",
+    "answer": "Topstep kamfanin futures ne na Amurka da ya daɗe tun 2012. Trading Combine ba shi da iyakar lokaci, yana da burin daidaito 55% da Maximum Loss Limit mai bin ma'aunin ƙarshen rana amma ana sa ido kai tsaye. Sabbin traders suna riƙe 90% na biya. Matsaloli su ne futures kawai, babu riƙewa da dare da yawan sauyin dokoki tun ƙarshen 2025.",
+    "checks": [
+      "Tabbatar da farashin Combine na yanzu da kuɗin kunna asusu.",
+      "Ƙayyade girman matsayi bisa Maximum Loss Limit mai bin ma'aunin ƙarshen rana.",
+      "Zaɓi hanyar biyan Express Funded Account da hankali: zaɓin na dindindin ne.",
+      "Ka tuna MLL ya koma $0 bayan biya na farko."
+    ],
+    "faq": [
+      {
+        "question": "Shin Topstep halastacce ne?",
+        "answer": "I. Yana aiki a Chicago tun 2012, yana wallafa cikakkun dokoki, ya ƙaddamar da introducing broker mai alaƙa a 2026. A 12 Nuwamba 2026 PropRadar ya ba shi 84/100 ba tare da gargadin hukuma da aka rubuta ba. Tantancewa da funded na kwaikwayo ne."
+      },
+      {
+        "question": "Menene dokar daidaiton Topstep?",
+        "answer": "A Combine ranar da ta fi riba ba ta wuce 55% na burin riba; in ta wuce, burin ya zama ribar ranar ÷ 0.55. A hanyar Consistency na XFA, ranar da ta fi riba ta zama 40% ko ƙasa da ribar net don neman biya."
+      },
+      {
+        "question": "Wane rabo Topstep ke biya?",
+        "answer": "Waɗanda suka shiga daga 12 Janairu 2026 suna samun 90% na biya da aka amince. Na baya suna samun 100% na $10,000 na farko, sannan 90%. Mafi ƙarancin buƙata $125."
+      },
+      {
+        "question": "Zan iya riƙe matsayi da dare?",
+        "answer": "A'a. A rufe duk matsayi kafin ƙarshen zaman kasuwa; ba a yarda da dare ko ƙarshen mako ba."
+      }
+    ],
+    "article": {
+      "intro": "Topstep shi ne tsohon suna a prop trading na futures: Michael Patak ya kafa shi a **2012 a Chicago**, Trading Combine ya gabaci sabbin kamfanoni. Tarihi shi ne ƙarfinsa. Rauninsa: **futures kawai**, **yawan sauyin dokoki** tun ƙarshen 2025, da **iyakar asara mai hawa** da ke buƙatar ladabi.",
+      "keyPoints": [
+        "Kamfanin Amurka tun **2012**, futures kawai, babu gargadin hukuma a bayanan PropRadar.",
+        "Combine ba shi da **iyakar lokaci**; a **rufe duk matsayi ƙarshen zama**.",
+        "Sabbin traders suna riƙe **90%**; mafi ƙarancin buƙata **$125**.",
+        "Bayan biya na farko, iyakar asara ta koma **$0**: babu kariya."
+      ],
+      "sections": [
+        {
+          "heading": "Shin Topstep halastacce ne?",
+          "paragraphs": [
+            "Topstep **kamfani ne da ya kafu a Amurka**, yana da dogon tarihin jama'a, cibiyar taimako da introducing broker mai alaƙa Topstep Brokerage, wanda aka ƙaddamar farkon 2026. A 12 Nuwamba 2026 PropRadar ya ba shi **84/100** ba tare da gargadin hukuma da aka rubuta ba. Tantancewa da Express Funded Account **na kwaikwayo ne**: biya lada ce daga Topstep, ba ribar asusun broker ba.",
+            "Trustpilot ya nuna **3.7** daga **bita 14,955**, tare da sanarwar cewa kamfanin na iya da alaƙa da zuba jari mai babban haɗari (23 Oktoba 2026). Korafe-korafen ƙarshen 2025 sun shafi **katsewar TopstepX** da stop orders da suka gaza."
+          ],
+          "stats": [
+            {
+              "value": "2012",
+              "label": "an kafa a Chicago"
+            },
+            {
+              "value": "84/100",
+              "label": "maki a 12 Nuwamba 2026"
+            },
+            {
+              "value": "3.7",
+              "label": "Trustpilot, bita 14,955 (23 Oktoba 2026)"
+            }
+          ]
+        },
+        {
+          "heading": "Yadda Trading Combine ke aiki",
+          "paragraphs": [
+            "Trading Combine tantancewar Topstep ce. **Babu iyakar lokaci ko mafi ƙarancin ranakun ciniki.** A rufe duk matsayi ƙarshen zama; babu riƙewa da dare ko ƙarshen mako.",
+            "**Maximum Loss Limit (MLL)** yana hawa idan ma'aunin ƙarshen rana ya ƙaru, ba ya sauka; ana **sa ido kai tsaye** kan karya iyaka, har da asarar buɗe. A Combine yana daina hawa idan ya kai ma'aunin farko (cibiyar taimako, 18 Satumba 2026).",
+            "Burin daidaito **55%** ne: ranar da ta fi riba ba ta wuce 55% na burin riba. Idan ta wuce, ba a fitar da kai ba; **burin ya ƙaru** zuwa ribar ranar ÷ 0.55 (17 Satumba 2026). Iyakar asarar rana na zaɓi $1,000, $2,000 ko $3,000 tana dakatar da ciniki a zaman ba tare da rufe asusu ba."
+          ],
+          "compare": {
+            "columns": [
+              "50K",
+              "100K",
+              "150K"
+            ],
+            "rows": [
+              {
+                "label": "Burin riba",
+                "values": [
+                  "$3,000",
+                  "$6,000",
+                  "$9,000"
+                ]
+              },
+              {
+                "label": "Maximum Loss Limit",
+                "values": [
+                  "$2,000",
+                  "$3,000",
+                  "$4,500"
+                ]
+              }
+            ],
+            "note": "Cibiyar taimakon Topstep, Satumba 2026."
+          },
+          "callout": {
+            "kind": "example",
+            "text": "Combine 50K, ranar da ta fi riba **$2,000**: ta wuce 55% na $3,000 ($1,650), don haka buri ya zama $2,000 ÷ 0.55 ≈ **$3,636**."
+          }
+        },
+        {
+          "heading": "Express Funded Account da biya",
+          "paragraphs": [
+            "Bayan ka ci, ka yi ciniki a **Express Funded Account (XFA)** na kwaikwayo, inda biya ke farawa. XFA yana fara da $0 da kariyar MLL iri ɗaya a ƙasa. Tun Fabrairu 2026 ana zaɓar hanyoyi biyu na biya, **zaɓin na dindindin ne**.",
+            "Waɗanda suka shiga daga 12 Janairu 2026 suna samun **90%** na biya da aka amince; na baya suna riƙe 100% na $10,000 na farko sannan 90%. Mafi ƙarancin buƙata **$125**. Za a iya gayyatar masu ƙwarewa zuwa **Live Funded Account** da jari na gaske, iyakar asarar rana ta wajibi da ajiyar da ake saki mataki-mataki."
+          ],
+          "compare": {
+            "columns": [
+              "Hanyar Standard",
+              "Hanyar Consistency"
+            ],
+            "rows": [
+              {
+                "label": "Kafin kowane biya",
+                "values": [
+                  "**Ranakun riba 5** na aƙalla $150",
+                  "**Ranakun ciniki 3**, ranar mafi girma **40% ko ƙasa** na ribar net"
+                ]
+              }
+            ],
+            "note": "Zaɓin hanyar biyu na dindindin ne."
+          },
+          "callout": {
+            "kind": "warning",
+            "text": "Bayan biya na farko MLL ya zama **$0**. Kariyar ta gushe: **rana mara kyau bayan cire kuɗi na iya kawo ƙarshen asusu.**"
+          }
+        },
+        {
+          "heading": "Fa'idodi da rashin fa'idodi",
+          "paragraphs": [
+            "Abubuwan da suka fito daga karatun dokoki:"
+          ],
+          "prosCons": {
+            "pros": [
+              "**Tarihi mafi tsawo** a prop trading na futures da cikakkun bayanan taimako.",
+              "**Babu iyakar lokaci** ko ranaku na ƙasa; daidaito yana ƙara buri maimakon fitar da kai.",
+              "**Rabon 90%** daga dala ta farko ga sababbi; mafi ƙarancin biya **$125**."
+            ],
+            "cons": [
+              "**Futures kawai**, duk matsayi a rufe ƙarshen zama.",
+              "MLL ya koma **$0 bayan biya na farko**.",
+              "Dokoki **sun sauya sau da yawa** daga Nuwamba 2025 zuwa Afrilu 2026: sake karanta kafin saye."
+            ]
+          }
+        },
+        {
+          "heading": "Wa Topstep ya dace da shi?",
+          "paragraphs": [
+            "Kuɗin biyan kuɗi kowane wata yana sa **tantancewa mai jinkiri** ta fi tsada fiye da masu kuɗin sau ɗaya. Idan kana kwatanta Apex, karanta jagorar Topstep vs Apex, wadda ke kwatanta sigar asusu doka-doka."
+          ],
+          "fit": {
+            "yes": [
+              "Traders na **futures cikin rana**",
+              "Masu son **kamfani da ya kafu**",
+              "Masu iya bin **iyaka mai hawa da ake sa ido kai tsaye**"
+            ],
+            "no": [
+              "Traders na **forex ko CFD**",
+              "**Swing traders** masu riƙewa da dare",
+              "Masu zaɓi **musamman bisa farashi**"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "goat-funded-trader-avis": {
+    "title": "Bitar GOAT Funded Trader 2026: shin halastacce ne?",
+    "metaDescription": "Bitar GOAT Funded Trader 2026: masu gudanarwa a Hong Kong da Saint Lucia, dokokin funded, iyakar biya, maki na Trustpilot da aka ɓoye da wanda ya dace da shi.",
+    "eyebrow": "Bitar kamfani",
+    "h1": "Bitar GOAT Funded Trader 2026: shin halastacce ne?",
+    "answer": "GOAT Funded Trader kamfani ne na gaske da aka kafa a 2023, daga Hong Kong da Saint Lucia, babu mai kula da harkokin kuɗi. Yana biyan traders amma dokokin funded a wannan bita suna da tsauri (asarar buɗe 2%, dokar minti biyu, iyakar biya na farko), kuma Trustpilot ya ɓoye makinsa saboda karya ƙa'ida. Karanta dokoki kafin rangwame.",
+    "checks": [
+      "Karanta dokokin funded: Goat Guard, minti biyu da iyakar labarai bayan cin challenge.",
+      "Duba iyakar biya biyu na farko da kuɗin 3%.",
+      "Tabbatar da samfur: an cire 3-Step Agusta 2026, an daina sayar da 2-Step Pro Yuni 2026.",
+      "Karanta ra'ayoyin biya na kwanaki 30–60, ba taurari kawai ba.",
+      "Kwatanta lambobin rangwame bayan zaɓin samfurin da ya dace."
+    ],
+    "faq": [
+      {
+        "question": "Shin GOAT Funded Trader halastacce ne?",
+        "answer": "Kamfani ne na gaske mai biyan traders, amma babu hukuma ta kuɗi da ke sa ido kuma yana da ikon yanke hukunci mai faɗi kan biya. A bitar 12 Nuwamba 2026 yana cikin jerin sa ido da 58/100. Trustpilot ya ɓoye makinsa saboda karya ƙa'ida (23 Oktoba 2026)."
+      },
+      {
+        "question": "Me ya sa babu maki a Trustpilot?",
+        "answer": "Trustpilot ya ce babu maki saboda karya ƙa'ida, ya cire wasu bita na ƙarya. Akwai bita 4,352, 46% taurari biyar da 40% tauraro ɗaya (23 Oktoba 2026)."
+      },
+      {
+        "question": "Menene Goat Guard?",
+        "answer": "A asusun funded na 1-Step da 2-Step, asarar buɗe 2% na ma'aunin farko tana kunna Goat Guard: na farko rabo ya koma 50%, na biyu ya karya asusu, bisa bita na wasu."
+      },
+      {
+        "question": "FIRSTGFT ko BOGO40 suna da amfani?",
+        "answer": "Sai bayan zaɓar samfurin da dokokinsa suka dace da salonka. Rangwame ba ya kawar da dokoki masu hana salonka. Tabbatar da tayin lokacin biya."
+      }
+    ],
+    "article": {
+      "intro": "GOAT Funded Trader yana cikin prop firms da aka fi gani a shekaru biyu da suka wuce: manyan rangwame, samfura da yawa da kasancewa a kafafen sada zumunta. **Shahara ba daidai take da amana ba.** Bitar ta ware takardu da talla, ta fara da **dokokin asusun funded**, domin a nan traders ke rasa biya.",
+      "keyPoints": [
+        "An ƙaddamar **Mayu 2023**; sunan kasuwanci na Hong Kong, mai bayarwa na Saint Lucia, **babu mai kula da kuɗi**.",
+        "23 Oktoba 2026 Trustpilot **bai nuna maki ba** saboda karya ƙa'ida.",
+        "Ana rasa biya a **dokokin funded**: Goat Guard, minti biyu, iyakar labarai da ta rana.",
+        "PropRadar yana da **alaƙar affiliate**; ba ta sauya maki."
+      ],
+      "sections": [
+        {
+          "heading": "Wa ke gudanar da GOAT Funded Trader?",
+          "paragraphs": [
+            "An ƙaddamar da GOAT Funded Trader a **Mayu 2023**. Sunan kasuwanci ne na **Wishes Tower International Limited** na Hong Kong, kuma **Goat Funded LTD na Saint Lucia** ke bayar da ciniki na kwaikwayo. **Babu mai kula da harkokin kuɗi** da ke sa ido kan sabis. Sharuɗɗa suna bayyana asusun kwaikwayo, saye ba tare da mayar da kuɗi ba da babban ikon yanke hukunci kan biya; abu ne da aka saba amma ya kamata ka sani.",
+            "A bitar 12 Nuwamba 2026 PropRadar ya ba shi **58/100**, ƙasa da iyakar 64 da ake amfani da ita a lokacin da Trustpilot ya ɓoye maki, ya sanya shi cikin jerin sa ido. Kamfanin yana aiki yana rahoton biya, amma iyakoki, cire riba da hukuncin ƙungiyar haɗari suna haifar da ƙuntatawa. Alaƙar affiliate ba ta sauya maki ko bita."
+          ]
+        },
+        {
+          "heading": "Halin Trustpilot",
+          "paragraphs": [
+            "23 Oktoba 2026 Trustpilot **bai nuna TrustScore ba**. Shafin ya ce babu maki saboda karya ƙa'ida kuma an cire wasu bita na ƙarya. Har yanzu akwai bita 4,352 masu bambanci sosai:",
+            "Bita masu rarrabuwar ra'ayi galibi suna nuna **ƙwarewa biyu masu bambanci**: waɗanda aka biya da sauri da waɗanda aka ƙi biya bisa dokokin da ba su karanta sosai ba."
+          ],
+          "stats": [
+            {
+              "value": "4,352",
+              "label": "bita da aka jera"
+            },
+            {
+              "value": "46%",
+              "label": "taurari biyar"
+            },
+            {
+              "value": "40%",
+              "label": "tauraro ɗaya"
+            }
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Ka ɗauki ikirarin maki kusa da cikakke a shafin farko **da taka tsantsan** muddin sanarwar Trustpilot tana nan."
+          }
+        },
+        {
+          "heading": "Muhimman dokokin asusun funded",
+          "paragraphs": [
+            "Tsarin challenge na yau da kullum ne. **An cire 3-Step Agusta 2026.** Adadin nan daga bitar wani ne da aka duba 5 Oktoba 2026; tabbatar lokacin saye.",
+            "Dokokin da ke yanke biya suna farawa **bayan ka ci challenge**:"
+          ],
+          "compare": {
+            "columns": [
+              "Burin riba",
+              "Asarar rana",
+              "Asara mafi girma"
+            ],
+            "rows": [
+              {
+                "label": "2-Step GOAT",
+                "values": [
+                  "8% sannan 6%",
+                  "4%",
+                  "10% static"
+                ]
+              },
+              {
+                "label": "2-Step Standard",
+                "values": [
+                  "10% sannan 5%",
+                  "5%",
+                  "10%"
+                ]
+              },
+              {
+                "label": "1-Step",
+                "values": [
+                  "10%",
+                  "3%",
+                  "6% static"
+                ]
+              }
+            ]
+          },
+          "bullets": [
+            "**Goat Guard:** a funded 1-Step da 2-Step, asarar buɗe 2% na ma'aunin farko tana rage rabo zuwa 50%; na biyu yana karya asusu.",
+            "**Dokar minti biyu:** ana cire ribar trades da aka riƙe ƙasa da minti biyu lokacin biya, amma asararsu tana nan.",
+            "**Lokacin labarai:** ribar kusa da labarai masu tasiri tana da iyakar 1% na ma'aunin farko.",
+            "**Iyakar ribar rana:** asusun funded zai iya tara $3,000 kacal a rana.",
+            "**Samfuran Instant:** trailing drawdown; ana rufe asusu da asarar buɗe 1% ko 2% bisa samfur."
+          ]
+        },
+        {
+          "heading": "Biyan kuɗi",
+          "paragraphs": [
+            "Rabon asali **80%** ne, tare da ƙarin kuɗi don samun 100% lokacin saye da scaling da zai iya kaiwa 90–95%. Yawancin samfura suna biya **kowane kwanaki 14**, mafi ƙaranci **$100**, kuɗin sarrafawa **3%**. Biya biyu na farko suna da iyakar ƙaramin adadi tsakanin 6% na ma'aunin farko da $10,000. Hanyoyi sun haɗa Rise, banki, Skrill da crypto, kowacce da iyakarta.",
+            "Wasu ikirarin jama'a sun saɓa da cibiyar taimako, kamar saurin biya (awa 24 ko kwanakin aiki biyu) da girman asusu mafi girma."
+          ],
+          "stats": [
+            {
+              "value": "80%",
+              "label": "rabon riba na asali"
+            },
+            {
+              "value": "Kwanaki 14",
+              "label": "zagaye na biya a yawancin samfura"
+            },
+            {
+              "value": "$100",
+              "label": "mafi ƙarancin biya"
+            },
+            {
+              "value": "3%",
+              "label": "kuɗin sarrafawa"
+            }
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Idan talla da sharuɗɗa sun saɓa, **sharuɗɗa ne za a yi amfani da su** wajen biyanka."
+          }
+        },
+        {
+          "heading": "Wa GOAT Funded Trader ya dace da shi?",
+          "paragraphs": [
+            "Dokokin funded suna nufin takamaiman halaye. Idan bayyanannun dokoki sun fi farashi muhimmanci, fara kwatantawa da **kamfanoni masu maki mafi girma** a jerinmu."
+          ],
+          "fit": {
+            "yes": [
+              "Asarar buɗe **ƙarama mai sarrafawa**",
+              "Trades da ake riƙewa **fiye da minti biyu**",
+              "Rashin dogaro da **tashin farashi saboda labarai**",
+              "Neman **farashin shiga mai rahusa**"
+            ],
+            "no": [
+              "**Scalpers**",
+              "**Traders na labarai**",
+              "Trades masu buƙatar **babban drawdown cikin rana**"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "hyrotrader-vs-tradeify": {
+    "title": "HyroTrader vs Tradeify: dokokin drawdown da sarrafa haɗari",
+    "metaDescription": "HyroTrader vs Tradeify: kwatanta crypto da futures, iyakar asarar rana, EOD drawdown, daidaito da dokokin biya na farko a Instant.",
+    "eyebrow": "Crypto da futures",
+    "h1": "HyroTrader vs Tradeify: kwatancin drawdown da sarrafa haɗari",
+    "answer": "HyroTrader na traders na crypto ne; Tradeify na futures da ake ciniki a kasuwa. HyroTrader yana wallafa iyakar asarar rana bisa equity na farkon rana da ma'aunin asali. Tradeify yana amfani da EOD trailing drawdown da ake aiwatarwa cikin rana. Kwatanta samfur da tsarin biya kafin kuɗi ko girman asusun talla.",
+    "checks": [
+      "Zaɓi kasuwa farko: crypto perpetuals da futures na kasuwa kayan ciniki ne daban.",
+      "Ware iyakar asarar rana daga jimillar drawdown.",
+      "Bambanta daidaiton tantancewa da daidaiton biya a funded.",
+      "Karanta ainihin burin biya na Instant, iyaka da rabo.",
+      "Daidaita dokoki da sigar asusunka da ranar saye."
+    ],
+    "faq": [
+      {
+        "question": "HyroTrader ko Tradeify ya fi kyau?",
+        "answer": "Kasuwa ce farko. HyroTrader prop firm na crypto ne; Tradeify na futures. Kwatanta iyakar asara, lokutan ciniki da sharuɗɗan biya na samfur. Wannan jagora ba ta zaɓar wanda ya fi duka ko tabbatar da biya ga abokan ciniki ba."
+      },
+      {
+        "question": "EOD drawdown na Tradeify yana yarda da karya iyaka cikin rana?",
+        "answer": "A'a. Ana sake ƙididdige iyaka ƙarshen rana amma ana aiwatar da ita kai tsaye bisa net liquidation value. Taɓa ta zai iya fitar da asusu kafin ƙarshen zama."
+      },
+      {
+        "question": "Zan fara ba tare da challenge ba a kamfanonin?",
+        "answer": "Shafukan hukuma da aka duba 15 Nuwamba 2026 sun bayyana Hyro Instant da Tradeify Lightning Funded. Dukansu sun tsallake tantancewa; iyakar rana, cancantar biya da iyakokin cire kuɗi sun bambanta."
+      },
+      {
+        "question": "Babu tantancewa yana nufin babu burin riba don biya?",
+        "answer": "A'a. Lightning yana ware ribar da ake buƙata don buɗe buƙata daga abin da za a cire. Hyro Instant yana da ranakun cancanta, ƙaramar riba bayan rabo da iyakar ribar da ake ƙirgawa."
+      },
+      {
+        "question": "HyroTrader da Tradeify nau'in tallafin crypto ɗaya ne?",
+        "answer": "A'a. HyroTrader yana amfani da cinikin crypto na kwaikwayo bisa bayanan kasuwa. Tradeify an gina shi kan futures na kasuwa. Duba jerin kayan ciniki maimakon ɗauka cewa kowane futures crypto perpetual ne."
+      }
+    ],
+    "article": {
+      "intro": "HyroTrader vs Tradeify da farko **zaɓi ne tsakanin crypto da futures**. Kwatancin da ya dace shi ne yadda samfur ke auna asara, ƙirga riba da buɗe biya. An yi amfani da dokokin hukuma da aka samu 15 Nuwamba 2026; ikirarin talla game da biya ba hujjar tura kuɗi mai zaman kanta ba ne.",
+      "keyPoints": [
+        "**Zaɓi kayan ciniki farko:** crypto perpetuals da futures na kasuwa suna da sharuɗɗan aiwatarwa da lokuta daban.",
+        "**Asarar rana da jimilla iyakoki ne daban.** Asarar rana da aka yarda na iya karya jimillar iyaka.",
+        "**EOD lokacin sabunta iyaka ne.** Ba ya jinkirta aiwatarwa har ƙarshen zama.",
+        "**Samun asusu nan take yana da sharuɗɗan biya:** ranakun cancanta, burin riba, iyaka da rabo sun danganta da samfur."
+      ],
+      "sections": [
+        {
+          "heading": "Wace kasuwa kake son yin ciniki?",
+          "paragraphs": [
+            "HyroTrader yana bayyana asusun crypto na kwaikwayo, har da samun dama ta dandamali masu goyon baya. Hanyoyin tantancewa da Hyro Instant ba ajiya ga broker ba ne ko alƙawarin jari na gaske. Growth, SELECT da Lightning na Tradeify an gina su kan futures; Lightning yana farawa da kuɗin kwaikwayo.",
+            "Kwatanta asusu da kayan ciniki da lokacin da dabararka ke amfani da su. Dabarar crypto perpetual ba ta komawa futures kai tsaye. Tabbatar da dandamali, jerin kayan ciniki da dokokin zama kafin kwatanta ma'aunin talla $50,000 ko rangwame."
+          ]
+        },
+        {
+          "heading": "Drawdown na rana na HyroTrader: equity na reset yana da muhimmanci",
+          "paragraphs": [
+            "Iyakar rana ta HyroTrader tana farawa daga equity 00:00 UTC, sannan ta rage ƙayyadadden kashi na ma'aunin farko. FAQ ya jera **3% ga Hyro Core da Hyro Instant, 4% ga One-Step, 5% ga Two-Step**. Ribar buɗe da asara da kuɗaɗe suna cikin equity.",
+            "Misali: Hyro Instant $10,000 ya fara ranar UTC da equity $10,300. Asarar da aka yarda $300 ce, iyakar ƙasa $10,000. Idan equity ya hau $10,800 a ranar, iyakar ba ta bin sabon kololuwa. Ranar UTC ta gaba tana kafa sabon farawa.",
+            "Jimillar iyakar asara gwaji ne dabam. Hyro Instant ya wallafa 5% na asara mafi girma da dokar trade guda: wuce 2% na ma'aunin farko a trade da aka rufe gaba ɗaya, har da kuɗi, yana haifar da gargadi; karo na biyu yana kawo ƙarshen asusu. Iyakar rana ba ta kawar da waɗannan ba."
+          ]
+        },
+        {
+          "heading": "EOD drawdown na Tradeify: sabuntawa ƙarshen rana, aiwatarwa yanzu",
+          "paragraphs": [
+            "Shafin dokokin Tradeify ya ce Growth, SELECT da Lightning suna amfani da **end-of-day trailing drawdown**. Sabon ma'aunin rufe rana mafi girma zai ɗaga iyaka. Ranar asara daga baya ba ta rage ta. Ana aiwatar da iyakar yanzu a kowane lokaci bisa ma'auni da riba da asarar buɗe.",
+            "Misalin asusu $50,000 da drawdown $2,000: iyakar farko $48,000. Ma'aunin rufewa mafi girma $51,000 yana ɗaga ta zuwa $49,000. Ranar gaba, taɓa $49,000 a net liquidation value zai iya fitar da asusu nan take. Farfaɗowa kafin rufewa ba ta soke karya doka.",
+            "A asusun funded na kwaikwayo, tsarin kullewa da aka wallafa zai iya kulle iyaka $100 sama da ma'aunin farko idan an kai matakin ko an nemi biya. Asusu na tantancewa ba su da wannan tsarin. Karanta adadin samfurinka."
+          ]
+        },
+        {
+          "heading": "Dokokin daidaito suna amfani da matakai da lissafi daban",
+          "paragraphs": [
+            "Tantancewar HyroTrader Core, One-Step da Two-Step tana iyakance ribar ranar da ake ƙirgawa zuwa **40% na burin riba**. Ribar da ta wuce tana nan amma ba a ƙirga ta ga buri ba; ana ƙirga asara. FAQ ya ce dokar ba ta shafi Hyro Instant ba.",
+            "Tradeify SELECT tana amfani da **40% na jimillar riba daga rana mafi kyau a tantancewa**, Growth ba ta da kashi na daidaito a tantancewa. Lissafi ne daban: rabon buri ba rabon ribar da aka tara ba ne.",
+            "Matakin funded yana da dokokinsa. Tradeify ya jera 35% ga biya na Growth na kwaikwayo, babu kashin daidaito ga SELECT funded, da **20%, sannan 25%, sannan 30%** ga sababbin asusun Lightning. Tsofaffin asusu na iya riƙe 20% a kowane biya. Duba ranar saye da mataki tare."
+          ]
+        },
+        {
+          "heading": "Hyro Instant vs Lightning Funded: kwatanta biya na farko",
+          "paragraphs": [
+            "Hyro Instant ba shi da burin tantancewa. Buƙatar farko tana buƙatar **ranakun ciniki uku na UTC masu cancanta** da aƙalla $25 bayan rabo. Ranar cancanta tana da ma'anar girman trade da motsin farashi; ƙaramin trade kawai bai isa ba. FAQ ya iyakance ribar da ake ƙirga a kowane biya zuwa 5% na ma'aunin farko; abin da ya wuce ba a biya ba. Rabo yana farawa 80%, ana iya ƙara shi bisa hukunci.",
+            "Tradeify Lightning ma yana tsallake tantancewa amma yana buƙatar burin riba da daidaito. A misalin $50,000, burin farko **$3,000**, iyakar buƙatar farko **$2,000**. Tradeify ya ce traders suna karɓar 90% na buƙata. Buri, iyaka da kuɗin da aka karɓa adadi uku ne daban.",
+            "Burin Lightning na gaba yana buƙatar sabuwar ribar ciniki; ragowar riba daga zagayen da ya gabata ba ta cika shi. Buƙata kuma tana kulle drawdown bisa dokar funded, don haka duba sararin asarar da ya rage bayan biya. Cancanta ba garantin amincewa ba ne."
+          ],
+          "callout": {
+            "kind": "example",
+            "text": "Misalin Lightning: kai burin $3,000 ba yana nufin za a cire $3,000 ba. Buƙatar $2,000 da rabo 90% tana ba trader $1,800, ƙarƙashin sauran sharuɗɗa."
+          }
+        },
+        {
+          "heading": "Jerin binciken haɗari kafin biya",
+          "paragraphs": [
+            "Sake gwada tsarin cinikinka na yau da kullum bisa ainihin dokokin asusu. Yi amfani da sakamakon net bayan kuɗi, asarar buɗe da ainihin lokacin reset. Dabara na iya bin stop loss a kowane trade amma ta karya jimillar iyaka a matsayi da yawa."
+          ],
+          "bullets": [
+            "**Rubuta iyakoki biyu:** asarar rana da max drawdown, da ko taɓawa ko ƙetarewa karya doka ne.",
+            "**Bi mataki:** tantancewa, funded na kwaikwayo da canjin live na iya da sharuɗɗa daban.",
+            "**Yi samfurin cire kuɗi:** buri, lissafin rana mafi kyau, iyaka, rabo da sararin asara bayan biya.",
+            "**Duba dama da kuɗi:** ƙasa, dandamali, rufe zama, kuɗin shiga, kunnawa, sabuntawa da bayanai idan sun shafi asusu.",
+            "**Ajiye sigar:** kwangila da dokokin hukuma na ranar saye. Sabon asusu na iya bambanta da tsoho."
+          ]
+        },
+        {
+          "heading": "Yadda za a zaɓi tsakanin samfuran biyu",
+          "paragraphs": [
+            "Fara da dokokin HyroTrader idan dabararka tana buƙatar kayan crypto da yake goyon baya. Fara da Tradeify idan an gina dabararka kan futures nasa. Sai ka kwatanta adadin asarar da aka yarda da cikakkiyar hanyar cire kuɗi na farko.",
+            "Wannan kwatancin bai tabbatar da ƙarfin biyan bashin kamfani ko yiwuwar trader samun biya ba. Yana bayyana sharuɗɗan da aka wallafa a takamaiman rana. Yi amfani da bayanan kamfanoni da aka haɗa kuma duba yarjejeniya ta yanzu kafin saye."
+          ]
+        }
+      ]
+    }
+  },
+  "prop-firm-hidden-rules": {
+    "title": "Dokokin prop firm masu sauƙin kuɓucewa 2026: abubuwa 9 kafin saye",
+    "metaDescription": "Waɗanne prop firms ke ƙuntata VPN ko VPS? Kwatanta dokokin da ke da majiyoyi na GFT, FundingPips, Topstep da wasu 8, da labarai da ƙasashe, 2026.",
+    "eyebrow": "Bincike mai zaman kansa na dokoki",
+    "h1": "Ɓoyayyun dokokin prop firm: abin da shafin tallace-tallace ba ya bayyana",
+    "answer": "Doka ba lallai ta zama sirri ba domin tana da wahalar samu. Kafin saye, kwatanta cikakkun dokokin funded, cancantar lada, lokutan labarai, daidaito, ƙuntatawar yanki da kayan da aka hana. PropRadar yana haɗa sharuɗɗan da aka wallafa kai tsaye, har da na abokan hulɗarsa.",
+    "checks": [
+      "Ajiye ainihin doka, samfur da kwanan wata kafin biya; taƙaitacciyar talla ba kwangila ba ce.",
+      "Duba tantancewa da funded, musamman labarai, riƙewa, daidaito da iyakar biya.",
+      "Tabbatar da mazauni, ɗan ƙasa, dandamali, KYC da samuwar mai ba da sabis na biya.",
+      "Nemo sharuɗɗan ƙin lada bisa iko, rufe asusu, rashin ciniki da dabarun da aka hana."
+    ],
+    "faq": [
+      {
+        "question": "Shin waɗannan dokokin da gaske an ɓoye su?",
+        "answer": "Yawancin misalai an wallafa su a FAQ ko kwangiloli na hukuma. Matsalar ita ce shafin tallace-tallace na iya barinsu ko samfura daban suna da dokoki daban. Muna kiran su masu sauƙin kuɓucewa, ba hujjar ɓoye su da gangan ba."
+      },
+      {
+        "question": "Akwai prop firm ba tare da ɓoyayyun dokoki ba?",
+        "answer": "Babu kwatancin jama'a da zai iya ba da wannan garanti. Fifita kamfanin da ke da cikakkiyar kwangila mai kwanan wata da ake iya bincika, amsoshin taimako masu daidaito da bayyanannun ma'aunin biya."
+      },
+      {
+        "question": "Waɗanne prop firms ke hana VPN ko VPS?",
+        "answer": "16 Nuwamba 2026 GOAT Funded Trader da FundingPips sun hana duka don shiga ciniki. Topstep ya hana VPN da aika oda ta VPS. FundedNext, Alpha Capital Group da Tradeify suna da sharuɗɗa; FTMO CFD da Blue Guardian 1-Step Standard yawanci sun yarda ƙarƙashin ƙuntatawa da aka ambata. Kowane shafi yana da hanyar haɗi a jadawali."
+      },
+      {
+        "question": "Ana iya yarda da labarai a tantancewa amma a ƙuntata bayan funded?",
+        "answer": "I. E8 Classic, BrightFunded CFD, Blue Guardian 1-Step Standard da wasu shirye-shiryen FundingPips suna sauya yadda ake ɗaukar ribar lokacin labarai bayan funded. Duba shiri da mataki, ba taken talla na alama ba."
+      },
+      {
+        "question": "PropRadar yana sukar abokan affiliate nasa?",
+        "answer": "I. Alaƙar kasuwanci ba ta sauya maki ko cire ƙuntatawar kwangila da aka rubuta."
+      }
+    ],
+    "article": {
+      "intro": "Prop firm na iya tallata babban rabon riba da challenge mai sauƙi, alhali kwangilar tana ɗauke da sharuɗɗan da ke sauya lokacin da za ka iya cire kuɗi. Waɗannan **dokoki ne masu sauƙin kuɓuce wa hankali**, ba wai lallai an ɓoye su da gangan ba: misalan nan sun fito daga takardun jama'a na kamfanonin kansu. **Mun haɗa abokan hulɗar affiliate na PropRadar.** Babu matsayi a jerin ko kwamishan da zai sayi kariya daga bincike.",
+      "keyPoints": [
+        "**Dokokin tantancewa ba lallai su zama dokokin funded ba.** Labarai, lokutan ciniki da daidaito na iya sauyawa bayan nasara.",
+        "**Ribar dashboard ba lada ce da za a biya kai tsaye ba.** Wasu shirye-shirye suna cire riba ko suna da wasu sharuɗɗan cancanta.",
+        "**Mazauni, ɗan ƙasa, wuri da mai ba da sabis na biya na iya bambanta.** Nasarar saye ba ta tabbatar da cancantar biya daga baya ba.",
+        "**Kowane misali mai suna a nan yana da hanyar haɗi zuwa ainihin dokar kamfanin** da aka duba 16 Nuwamba 2026."
+      ],
+      "sections": [
+        {
+          "heading": "1. Ana yarda da labarai a tantancewa, amma ana cire riba bayan funded",
+          "paragraphs": [
+            "E8 Markets ya ce babu ƙuntatawar cinikin labarai a **tantancewar E8 Classic**. Amma a Classic SimFi Performance Account, **40% kacal na ribar da aka samu a lokacin labarai ne ke cancanta**. E8 One ya hana wasu ayyuka a lokacin labarai a asusun performance; E8 Pro kuwa yana yarda da cinikin labarai. Dokoki uku ne na alama ɗaya.",
+            "FundingPips ma yana ware tantancewa daga matakin Master. A wasu samfuran Master, ribar buɗewa ko rufe matsayi cikin lokacin labarai mai tasiri da aka kayyade **ana iya cire ta**, sai matsayi da aka buɗe aƙalla awa biyar kafin labarin. FundingPips Zero yana da ƙarin tsauraran sharuɗɗa. Kada ka ɗauki tallar tantancewa a matsayin izinin funded."
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Dandalin ya bari ka danna Buy ko Sell **ba yana nufin kwangilar ta amince da cinikin ba**. Tabbatar da samfur, kalandar abubuwa da lokacin su kafin ciniki."
+          }
+        },
+        {
+          "heading": "Rajistar dokokin labarai: tantancewa da funded (majiyoyin hukuma)",
+          "paragraphs": [
+            "Waɗannan su ne **rukunan shirye-shirye goma da muka bincika**, ba jerin haramci ga duk kamfanoni ba. Izinin riƙe matsayi lokacin sanarwa ba daidai yake da izinin buɗe ciniki don cin moriyar tsallen farashi ba. Sharuɗɗan sun shafi **samfur da matakin da aka ambata**, ba duk kayayyakin kamfanin ba."
+          ],
+          "compare": {
+            "columns": [
+              "Matakin tantancewa",
+              "Matakin qualified / funded"
+            ],
+            "rows": [
+              {
+                "label": "E8 Classic",
+                "values": [
+                  "Babu ƙuntatawar labarai",
+                  "**40% na ribar lokacin labarai ce kawai ta cancanta**"
+                ],
+                "sourceUrl": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news"
+              },
+              {
+                "label": "E8 One",
+                "values": [
+                  "Babu ƙuntatawar labarai",
+                  "**Babu ciniki ±minti 5 na labarai masu tasiri**; ana iya cire riba"
+                ],
+                "sourceUrl": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news"
+              },
+              {
+                "label": "E8 Pro",
+                "values": [
+                  "Babu ƙuntatawa",
+                  "Babu ƙuntatawa ƙarƙashin dokokin haɗari na gama gari"
+                ],
+                "sourceUrl": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news"
+              },
+              {
+                "label": "FundingPips Flex / Standard / Pro",
+                "values": [
+                  "An yarda da riƙewa; an hana cinikin tsallen labarai da gangan",
+                  "**Ana cire ribar Master da abin ya shafa**; keɓancewar swing ta awa 5"
+                ],
+                "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+              },
+              {
+                "label": "FundingPips Zero",
+                "values": [
+                  "Tabbatar da ainihin kwangila",
+                  "**Babu buɗewa, rufewa ko riƙewa a lokacin labaran da aka hana**; tagogin minti 10 a Master"
+                ],
+                "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+              },
+              {
+                "label": "Blue Guardian CFD 1-Step Standard",
+                "values": [
+                  "An yarda da labarai",
+                  "**Babu buɗewa ko rufewa ±minti 5** na labarai masu tasiri"
+                ],
+                "sourceUrl": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+              },
+              {
+                "label": "BrightFunded CFD Phase 1 / 2",
+                "values": [
+                  "Babu ƙuntatawar labarai",
+                  "**Ana cire ribar aiwatarwa ±minti 5**; Instant na da ƙuntatawa tun rana ta farko"
+                ],
+                "sourceUrl": "https://help.brightfunded.com/en/articles/9241694-can-i-trade-news"
+              },
+              {
+                "label": "Alpha Futures Standard / Zero / Direct",
+                "values": [
+                  "Standard / Zero: babu ƙuntatawa; Direct ya tsallake tantancewa",
+                  "**Babu oda ±minti 2** a takamaiman shirye-shiryen Qualified; Advanced Qualified ya bambanta"
+                ],
+                "sourceUrl": "https://help.alpha-futures.com/en/articles/9492063-news-trading-policy"
+              },
+              {
+                "label": "Alpha Capital Pro / One / Three / Direct",
+                "values": [
+                  "Babu ƙuntatawar tantancewa; Direct ba shi da tantancewa",
+                  "**Babu aiwatarwa ±minti 5** na labaran da aka jera; ko cikar TP na iya soke riba"
+                ],
+                "sourceUrl": "https://help.alphacapitalgroup.uk/en/articles/9293522-can-i-trade-news"
+              },
+              {
+                "label": "Tradeify Futures",
+                "values": [
+                  "An yarda da labarai",
+                  "An yarda da labarai ƙarƙashin FAQ na gama gari"
+                ],
+                "sourceUrl": "https://help.tradeify.co/en/articles/12268494-common-faqs"
+              }
+            ],
+            "note": "An duba 16 Nuwamba 2026. Danna ↗ kusa da kamfani don karanta ainihin dokarsa. Waɗannan manufofin kamfani ne, ba hujja mai zaman kanta ta yadda ake warware kowace takaddamar trader ba."
+          }
+        },
+        {
+          "heading": "2. VPN ko VPS na iya soke cinikin da ya yi riba",
+          "paragraphs": [
+            "GOAT Funded Trader ya ce daga **6 Oktoba 2026**, an hana ciniki ta VPN, VPS, proxy ko muhallin hosting. Cibiyar taimako ta ce irin cinikin na iya sa asusu ya karya doka nan take, kuma ladar da abin ya shafa ba ta cancanci biya ba. Ta bayyana ƙaramin keɓancewa don shiga uwar garke na farko da wani keɓancewa na copier na dashboard nata.",
+            "Wannan ƙuntatawa ce da aka wallafa a kwangila, **ba hujjar cewa kamfanin yana hana ladan halal ba bisa ka'ida ba**. Amma tana da muhimmanci ga masu algorithmic trading da matafiya masu amfani da sabis na karkatar da haɗin intanet."
+          ]
+        },
+        {
+          "heading": "Jerin sa ido na VPN / VPS: waɗanne kamfanoni ke da ƙuntatawa?",
+          "paragraphs": [
+            "**VPN (rufe hanyar haɗi) da VPS (uwar garken ciniki ta nesa) kayan aiki ne daban.** Wasu sun hana duka, wasu sun yarda da VPN amma sun hana aika oda daga uwar garke, wasu kuma sun hana ɓoye mazauni kawai. Waɗannan su ne **kamfanoni 11 da muka samu takamaiman dokokinsu da majiyoyi**, har da abokan affiliate. “Da sharadi” ba yana nufin “an hana ko'ina” ba."
+          ],
+          "compare": {
+            "columns": [
+              "VPN",
+              "VPS / aiwatarwa ta nesa"
+            ],
+            "rows": [
+              {
+                "label": "GOAT Funded Trader",
+                "values": [
+                  "**An hana** don ciniki (daga 6 Oktoba 2026)",
+                  "**An hana**; ƙaramin keɓancewa ga kayan aikin kamfanin"
+                ],
+                "sourceUrl": "https://help.goatfundedtrader.com/en/articles/17362726-can-i-use-a-vpn-vps-proxy-or-any-other-hosting-service-while-trading"
+              },
+              {
+                "label": "FundingPips",
+                "values": [
+                  "**An hana** lokacin shiga asusun ciniki",
+                  "**An hana** lokacin shiga asusun ciniki"
+                ],
+                "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards"
+              },
+              {
+                "label": "Topstep / TopstepX",
+                "values": [
+                  "**An hana** (har da proxy da TOR)",
+                  "**Babu aika oda** ta uwar garken nesa ko API; an yarda da nazarin karatu kawai"
+                ],
+                "sourceUrl": "https://help.topstep.com/en/articles/11187768-topstepx-api-access"
+              },
+              {
+                "label": "FundedNext CFD",
+                "values": [
+                  "**An yarda** sai IP na ƙasashen da aka ware",
+                  "**An hana ≥$50k**; ƙasa da $50k ƙarin kuɗi, EA mai cancanta kawai; babu oda da hannu"
+                ],
+                "sourceUrl": "https://help.fundednext.com/en/articles/8223809-can-i-use-a-vpn-or-vps"
+              },
+              {
+                "label": "Alpha Capital Group",
+                "values": [
+                  "**Da sharadi:** IP static na musamman + sanarwa kafin amfani",
+                  "**Da sharadi:** IP static na musamman + sanarwa kafin amfani"
+                ],
+                "sourceUrl": "https://help.alphacapitalgroup.uk/en/articles/8420522-what-is-the-ip-rule-are-vpns-and-vpss-allowed"
+              },
+              {
+                "label": "Tradeify Futures",
+                "values": [
+                  "**Babu VPN lokacin shiga**",
+                  "An yarda **bayan shiga na yau da kullum**, a haɗarin trader"
+                ],
+                "sourceUrl": "https://help.tradeify.co/en/articles/12268494-common-faqs"
+              },
+              {
+                "label": "FTMO CFD",
+                "values": [
+                  "**Yawanci an yarda**; guji wurin Amurka ga dandamalin da aka ambata",
+                  "**Yawanci an yarda**; keɓancewar dandamali/wurin Amurka"
+                ],
+                "sourceUrl": "https://ftmo.com/en/faq/can-i-travel-or-use-vpn-vps/"
+              },
+              {
+                "label": "Blue Guardian CFD 1-Step Standard",
+                "values": [
+                  "**An yarda**; kada a kauce wa dokokin copy/group trading",
+                  "**An yarda** ƙarƙashin sharadin nan"
+                ],
+                "sourceUrl": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+              },
+              {
+                "label": "Apex Trader Funding",
+                "values": [
+                  "An hana **idan ana ɓoye ainihi/wuri ko kauce wa doka**",
+                  "Sharadin hana kauce wa doka iri ɗaya; babu haramci na gaba ɗaya da aka wallafa"
+                ],
+                "sourceUrl": "https://apextraderfunding.com/help-center/uncategorized/prohibited-activities/"
+              },
+              {
+                "label": "The5ers",
+                "values": [
+                  "**Babu kauce wa ƙuntatawar ƙasa**; ba a tabbatar da haramci na gaba ɗaya ba",
+                  "Ba a tabbatar da dokar VPS ta gaba ɗaya a sharuɗɗan da aka ambata ba"
+                ],
+                "sourceUrl": "https://the5ers.com/terms-and-conditions/"
+              },
+              {
+                "label": "HyroTrader (crypto)",
+                "values": [
+                  "**Babu kauce wa** ƙuntatawar wurin exchange/dandamali",
+                  "Ya danganta da dandamali da sharuɗɗansa; ba a tabbatar da haramci na gaba ɗaya ba"
+                ],
+                "sourceUrl": "https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/"
+              }
+            ],
+            "note": "Rajista da hanyoyin majiyoyi, ba zargin rashin biya ba. An sabunta 16 Nuwamba 2026. Dokoki na iya bambanta bisa samfur, girman asusu, dandamali da ƙasa. Sauran kamfanoni ba a duba su kan wannan batu ba tukuna."
+          },
+          "callout": {
+            "kind": "warning",
+            "text": "Gudanar da robot a VPS **ba a yarda da shi kai tsaye saboda an yarda da EA ba**. Duba dokokin uwar garke, IP, girman asusu da aika oda daban."
+          }
+        },
+        {
+          "heading": "3. “An yarda da scalping” na iya samun iyakar lokaci da margin",
+          "paragraphs": [
+            "Blue Guardian ya yarda da scalping a shirin Futures amma ya ce **ƙasa da rabin jimillar riba ne zai fito daga cinikin da aka riƙe ƙasa da daƙiƙa 10**. Ya kuma bayyana **iyakar amfani da margin 80%** a matsayin dokar caca ta “all or nothing” a asusun CFD; sakamakon na iya zama cire riba ko ƙin biya.",
+            "Lakabi kamar “an yarda da scalping” ko “an yarda da EA” ya yi faɗi sosai don yanke shawarar saye. Nemo iyakar lokacin trade, ƙuntatawar automation da yadda ake tafiyar da asusu da yawa."
+          ]
+        },
+        {
+          "heading": "4. Daidaito na iya jinkirta biya bayan challenge",
+          "paragraphs": [
+            "Dokar daidaito tana auna rabon jimillar ribar da ya fito daga rana mafi kyau. A Topstep, dokar da kashinta **sun danganta da Trading Combine ko hanyar biya ta funded**. Kada a gauraya matakan.",
+            "Misali: iyakar rana mafi kyau 50%, ranar da aka samu $1,200 tana buƙatar aƙalla **jimillar riba $2,400** kafin rabon ya sauka zuwa 50%. Hanyar rage rabon da ya wuce iyaka yawanci ita ce ƙarin riba mai cancanta, ba yin asara da gangan ba."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Karanta jagorarmu ta **prop firms ba tare da dokar daidaito ba**. “Babu daidaito” yana cire ƙuntatawa ɗaya kawai; ba ya cire drawdown, labarai ko sharuɗɗan biya."
+          }
+        },
+        {
+          "heading": "5. Ƙasar mazauni ba daidai take da cancantar cire kuɗi ba",
+          "paragraphs": [
+            "GOAT Funded Trader ya ambaci **Singapore** a fili cikin ƙasashen da ba ya karɓa. Apex Trader Funding ya ambaci **China** cikin ƙasashen da aka ware don sabon asusu ko ƙarin asusu. Hakan yana da muhimmanci ga baƙin PropRadar domin ƙasashen biyu suna cikin masu karatunmu na duniya.",
+            "Samfura daban na kamfani ɗaya na iya amfani da jerin yankuna daban. FTMO CFD da FTMO Futures suna haka; E8 Classic da E8 Futures ma. Nasarar biyan kuɗi, tafiya ƙasashen waje ko ganin kamfani a ƙasarka **ba ya sauya** KYC, tantance ɗan ƙasa, damar dandamali da hanyoyin biya da ake da su."
+          ],
+          "compare": {
+            "columns": [
+              "India",
+              "Babban yankin China",
+              "Singapore"
+            ],
+            "rows": [
+              {
+                "label": "FTMO CFD",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://ftmo.com/en/faq/who-can-join-ftmo/"
+              },
+              {
+                "label": "Topstep Futures",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "**Ana buƙatar tantance mutum ɗaya**",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.topstep.com/en/articles/8284116-am-i-eligible-to-trade-with-topstep"
+              },
+              {
+                "label": "My Funded Futures",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "**Bai cancanta ba**",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.myfundedfutures.com/en/articles/8229993-restricted-countries-policy"
+              },
+              {
+                "label": "Apex Trader Funding",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "**Bai cancanta ba**",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://apextraderfunding.com/help-center/getting-started/restricted-countries/"
+              },
+              {
+                "label": "GOAT Funded Trader",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "**Bai cancanta ba**"
+                ],
+                "sourceUrl": "https://help.goatfundedtrader.com/en/articles/10742187-which-countries-are-restricted-at-goat-funded-trader"
+              },
+              {
+                "label": "FundedNext CFD",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.fundednext.com/en/articles/8020080-are-any-countries-restricted-on-fundednext-cfds"
+              },
+              {
+                "label": "Fintokei",
+                "values": [
+                  "**Bai cancanta ba**",
+                  "**Ba ya cancanta na ɗan lokaci**",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://support.fintokei.com/en/articles/6538820-who-can-join-fintokei"
+              },
+              {
+                "label": "Alpha Futures",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "**Bai cancanta ba**",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.alpha-futures.com/en/articles/9523389-countries-with-limitations"
+              },
+              {
+                "label": "Alpha Capital Group",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.alphacapitalgroup.uk/en/articles/8775575-countries-with-limitations"
+              },
+              {
+                "label": "Lucid Trading",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://support.lucidtrading.com/en/articles/11404636-restricted-countries"
+              },
+              {
+                "label": "PipFarm",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.pipfarm.com/en/articles/4318163-prohibited-country-list"
+              },
+              {
+                "label": "HyroTrader (Hyro platform)",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/"
+              },
+              {
+                "label": "BrightFunded CFD",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.brightfunded.com/en/articles/9286630-what-countries-are-restricted-at-brightfunded"
+              },
+              {
+                "label": "Upcomers",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.upcomers.com/en/articles/8703655-are-there-any-prohibited-countries"
+              }
+            ],
+            "note": "Cancanta bisa manufofin gama gari da aka wallafa, an duba 16 Nuwamba 2026 — ba lasisin doka, amincewar KYC ko alƙawarin biya ba. Kwayoyin kore sun fito daga manufofin kamfanoni na duniya sai wuraren da aka ware, ba sayayyar gwaji ba. Wani challenge ko dandamalin ɓangare na uku na iya sauya amsar."
+          },
+          "callout": {
+            "kind": "warning",
+            "text": "Tacewar ƙasa ta PropRadar tana nuna **sharuɗɗan cancanta da aka wallafa**, ba izinin doka, lasisin hukuma ko garantin biya ba. Idan ba a tabbatar da samfur ba, muna cewa **Ba a tabbatar ba** maimakon zato."
+          }
+        },
+        {
+          "heading": "6. Ziyartar ƙasar da aka hana na iya zama karya doka ko da kana zaune a wani wuri",
+          "paragraphs": [
+            "Take Profit Trader ya ce ko sau ɗaya na ciniki ko samun bayanan kasuwa daga yankin da aka hana na iya haifar da takura asusu. Ya ambaci VPN da haɗin nesa da ke karkatar da dama ta ƙasar a fili. Mazaunin yankin da aka yarda ya duba **dokokin tafiya da IP** kafin ɗaukar kwamfuta ƙasashen waje.",
+            "Ba kowane kamfani ke da wannan doka ba: Tradeify ya ce ƙuntatawar yankinsa ta gama gari ta dogara da **mazauni na dindindin, ba tafiya ta ɗan lokaci ba**. Kamfanoni biyu na iya ɗaukar tafiya ɗaya ta hanyoyi daban."
+          ]
+        },
+        {
+          "heading": "7. Biya na iya dogara da amincewa bisa ikon kwangila",
+          "paragraphs": [
+            "Risk Disclosure na Apex Trader Funding ya ce ladar Performance Account ana bayarwa ne **bisa ikonsa**, kuma hukuncin biya ko ƙin lada na ƙarshe ne. Muhimmin sharadi ne da za a karanta tare da User Agreement da ma'aunin biya da aka wallafa.",
+            "Sharadin ikon zaɓi **ba hujja ba ce cewa kamfani yana ƙin ladan halal a kai a kai**. Amma trader ya kamata ya ajiye shaidar bin doka kuma ya fahimci hanyoyin takaddama da ɗaukaka ƙara kafin kashe kuɗi."
+          ]
+        },
+        {
+          "heading": "8. Matakan funded da live ba lallai su maye gurbin juna ba",
+          "paragraphs": [
+            "Tradeify ya ce traders da aka ƙi shigar da su Live Account ba za su iya komawa kawai matakin kwaikwayo ba. FTMO Futures ma yana ware ƙwarewar Sim-Funded daga cancantar komawa Live Funded Account, wanda ke da ƙuntatawa a ƙarin ƙasashe.",
+            "Tambayi ko kamfanin yana alƙawarin matakin funded, asusun broker na gaske ko tsarin lada na kwaikwayo kawai. Kalmar talla **“funded” ba ta bayyana tsarin kwangila iri ɗaya a ko'ina ba**."
+          ]
+        },
+        {
+          "heading": "9. Yadda ake samun prop firm ba tare da dokokin ba-zata ba",
+          "paragraphs": [
+            "Babu shafin bincike mai zaman kansa da zai tabbatar da kamfani yana da *sifili* ɓoyayyun dokoki: sharuɗɗa na iya sauyawa, KYC na mutum ne kuma hukuncin taimako wani lokaci na zaɓi ne. Za ka iya rage yiwuwar sayen shirin da bai dace ba."
+          ],
+          "steps": [
+            {
+              "title": "Gano ainihin samfur",
+              "text": "Rubuta **kamfani, sunan asusu, girma da matakin tantancewa/funded**. Taƙaitaccen bayanin alama bai isa ba."
+            },
+            {
+              "title": "Ajiye kwangila da kwanan wata",
+              "text": "Karanta **cikakkun sharuɗɗa, labarin taimako, dokar biya da jerin ƙasashen da aka hana**; ajiye kwafi mai kwanan wata."
+            },
+            {
+              "title": "Gwada salonka na gaske",
+              "text": "Daidaita **lokutan labarai, copy trading, VPN/VPS, riƙewa, yawan contracts mafi girma, daidaito da rashin ciniki** da dabararka."
+            },
+            {
+              "title": "Ƙididdige ainihin biya na farko",
+              "text": "Haɗa **burin riba, mafi ƙarancin ranaku, iyakar cire kuɗi na farko, kuɗin kunnawa, kuɗin biya da sharuɗɗan mai ba da sabis**."
+            },
+            {
+              "title": "Tambayi a rubuce kafin biya",
+              "text": "Idan wani abu bai bayyana ba, nemi amsar taimako da ta ambaci **ainihin doka da sigarta**, sannan ajiye amsar."
+            }
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Idan ka ga dokar da ba ta cikin kwatancinmu, aika wa PropRadar hanyar hukuma da hoton allo ta hanyar **miƙa majiya**. Muna binciken abokan hulɗa da waɗanda ba abokan hulɗa ba bisa ma'aunin edita ɗaya."
+          }
+        }
+      ]
+    }
+  }
+};
+
+export default ha;
