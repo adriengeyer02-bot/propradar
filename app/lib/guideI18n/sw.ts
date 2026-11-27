@@ -473,6 +473,108 @@ const sw: GuideTranslations = {
         "answer": "Kwa kawaida trader hapokei akaunti ya kawaida ya broker wala ulinzi wa fedha za wateja. Zawadi hutegemea masharti ya mkataba, ukaguzi na ustahiki badala ya haki za kawaida za kutoa fedha."
       }
     ]
+  },
+  "prop-firm-sans-consistency-rule": {
+    "title": "Sharti la uthabiti la prop firm: fomula, kikokotoo na kampuni zisizo nalo",
+    "metaDescription": "Sharti la uthabiti ni nini? Angalia fomula, mfano wa 40%, athari kwa malipo na jinsi ya kulinganisha kampuni zisizo na sharti hilo.",
+    "eyebrow": "Utafiti wa masharti",
+    "h1": "Sharti la uthabiti katika prop firm ni nini?",
+    "answer": "Sharti la uthabiti huweka kikomo cha sehemu ya faida yako yote inayoweza kutoka siku moja au trade moja. Prop firm isiyo na sharti hilo huondoa kikomo hicho, lakini bado inaweza kuwa na drawdown kali, kiwango cha chini cha malipo, ukomo wa lot au masharti ya ufadhili.",
+    "checks": [
+      "Thibitisha sharti katika tathmini na hatua ya ufadhili.",
+      "Linganisha kiwango cha chini cha malipo na siku zinazohitajika.",
+      "Chunguza drawdown inayofuatilia salio na hasara ya kila siku.",
+      "Usichukulie kutokuwepo kwa sharti la uthabiti kama ruhusa ya kila kitu."
+    ],
+    "faq": [
+      {
+        "question": "Sharti la uthabiti katika prop firm ni nini?",
+        "answer": "Kwa kawaida huweka kikomo cha asilimia ya faida yote inayotoka siku bora au trade kubwa zaidi. Kwa mfano, siku bora inaweza kuhitajika kuwa chini ya sehemu fulani ya faida yote kabla ya malipo. Fomula hutegemea kampuni na programu."
+      },
+      {
+        "question": "Kutokuwa na sharti la uthabiti kunamaanisha nini?",
+        "answer": "Programu haitumii kikomo hicho cha mgawanyo wa faida. Hakuondoi masharti ya hasara ya siku, drawdown ya juu, malipo, habari, lot au mikakati iliyokatazwa."
+      },
+      {
+        "question": "Prop firm zipi hazina sharti la uthabiti?",
+        "answer": "Jibu hubadilika kulingana na programu na hatua ya ufadhili. Tumia jedwali kama orodha fupi, kisha thibitisha masharti ya sasa; kampuni moja inaweza kuwa na bidhaa zenye sharti na zisizo nalo."
+      }
+    ],
+    "article": {
+      "intro": "Sharti la uthabiti huweka kikomo cha **sehemu ya faida yako yote inayotoka siku moja**. Lipo kwa sababu siku moja ya bahati, position kubwa kupita kiasi au ongezeko la bei kutokana na habari linaweza kutoa malipo bila kuonyesha uwezo wa kufanya trading kwa muda mrefu. Kuelewa fomula halisi ni muhimu zaidi kuliko kutafuta kampuni inayodai kutokuwa na sharti hilo.",
+      "keyPoints": [
+        "Fomula: **faida ya siku bora ÷ faida yote × 100**, ikilinganishwa na kikomo cha kampuni (mara nyingi 40 hadi 55%).",
+        "Ukizidi kikomo **hupotezi chochote**: unaendelea kufanya trading hadi faida yote itoshe.",
+        "**Hatua** inayotumia sharti ni muhimu: katika tathmini huchelewesha kupita, katika malipo linaweza kuzuia kutoa fedha.",
+        "Kutokuwepo kwa sharti **hakumaanishi urahisi zaidi**: hatari inadhibitiwa kwa njia nyingine."
+      ],
+      "sections": [
+        {
+          "heading": "Jinsi sharti linavyohesabiwa",
+          "paragraphs": [
+            "Kampuni nyingi hutumia fomula ileile: **faida ya siku bora ikigawanywa kwa faida yote**, kama asilimia. Ikiwa matokeo yanazidi kikomo, bado hustahiki kupita tathmini au kuomba malipo, kutegemea hatua inayotumia sharti.",
+            "Mfano wa kikomo cha 50%: unapata $1,200 Jumatatu, $300 Jumanne na $500 Jumatano, jumla $2,000. Siku yako bora ni **60% ya jumla**: zaidi ya kikomo. Huhitaji kupoteza chochote; unahitaji faida zaidi, hapa **angalau $2,400**, ili $1,200 iwe 50% au chini.",
+            "Baadhi ya kampuni hutumia sharti tofauti. **Topstep huongeza lengo la faida** katika Trading Combine badala ya kukuangusha: ikiwa siku bora inazidi 55% ya lengo, lengo linakuwa faida ya siku bora ikigawanywa kwa 0.55 (kituo cha msaada cha Topstep, ukurasa wa 17 Septemba 2026)."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Ukaguzi wa haraka: **faida yote inayohitajika = siku bora ÷ kikomo**. Hapa: $1,200 ÷ 0.50 = **$2,400**."
+          }
+        },
+        {
+          "heading": "Sharti linatumika wapi: tathmini, malipo au vyote?",
+          "paragraphs": [
+            "Asilimia ileile inaweza kuwa na maana tofauti sana. Sharti katika tathmini **huchelewesha kupita pekee**. Sharti la malipo **linaweza kuzuia kutoa fedha** baada ya kupata faida katika akaunti iliyofadhiliwa. Baadhi ya kampuni pia hutumia vikomo tofauti: Topstep hutumia **55% katika Combine** na **40% katika njia ya malipo ya Consistency** ya Express Funded Account.",
+            "FTMO ilibadilisha sharti lake **12 Oktoba 2026**: oda mpya za 1-Step Challenge zina sharti la Consistency linalolinganisha siku bora na faida yote, **siku za hasara zikijumuishwa**, huku oda za zamani zikibaki na Best Day Rule iliyohesabu siku zenye faida pekee. FTMO inasema usipotimiza sharti unaendelea kufanya trading hadi ulitimize (taarifa ya FTMO ya 8 Oktoba 2026). PropRadar haijapata sharti la asilimia ya siku bora kwenye The5ers High Stakes."
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Thibitisha kila wakati **hatua, bidhaa na tarehe ya oda yako**: kampuni moja inaweza kutumia matoleo mawili ya sharti."
+          }
+        },
+        {
+          "heading": "Je, kampuni isiyo na sharti la uthabiti ni bora?",
+          "paragraphs": [
+            "Si lazima. Kampuni zinazoondoa sharti hilo kwa kawaida hudhibiti hatari kwa njia nyingine. Kauli ya “no consistency rule” inaweza kuficha akaunti iliyofadhiliwa ambayo ni **ngumu zaidi kuitunza**. Chunguza kinachochukua nafasi yake:"
+          ],
+          "bullets": [
+            "**Kikomo kikali zaidi cha hasara ya siku**",
+            "**Drawdown inayofuatilia salio**",
+            "**Ukomo wa malipo ya kwanza**",
+            "**Siku za chini za trading**",
+            "**Ukomo wa ukubwa wa position**"
+          ],
+          "callout": {
+            "kind": "example",
+            "text": "Sharti huathiri hasa **matokeo yenye mabadiliko makubwa**: trader wa habari, swing trader wanaofunga position moja kubwa au wanaoongeza ukubwa baada ya hasara mfululizo. Siku zako zikiwa na matokeo yanayofanana, kikomo cha 40 hadi 50% hakikusumbui mara nyingi."
+          }
+        },
+        {
+          "heading": "Jinsi ya kufanya trading kwa utulivu chini ya sharti la uthabiti",
+          "paragraphs": [
+            "Tabia nne husaidia kuepuka kizuizi hiki:"
+          ],
+          "steps": [
+            {
+              "title": "Fuatilia uwiano",
+              "text": "Hesabu **siku bora ÷ faida yote** kila baada ya kipindi cha trading."
+            },
+            {
+              "title": "Jua kikomo cha leo",
+              "text": "Kabla ya trading, jua **kiasi unachoweza kupata** bila kuzidisha uwiano."
+            },
+            {
+              "title": "Sambaza faida baada ya siku kubwa",
+              "text": "Panga **siku kadhaa ndogo zenye faida** badala ya kujaribu kuirudia."
+            },
+            {
+              "title": "Usiongeze ukubwa mwishoni",
+              "text": "Siku moja yenye faida kubwa kupita kiasi inaweza **kuchelewesha kupita** kama siku ya hasara."
+            }
+          ]
+        }
+      ]
+    }
   }
 };
 
