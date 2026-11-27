@@ -54,6 +54,63 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
       funded:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/',reason:'3% daily pause disables the account for the rest of the day without termination; profit target and loss rules stay the same at each Pro stage; accounts inactive for more than 30 consecutive days expire.'}
     },preset:{drawdown:'static',lossPercent:6,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/'}}
   },
+  'blue-guardian':(()=>{
+    const u='https://blueguardian.com/faq/articles/';
+    const one=u+'18426782-1-step-standard-rules', two=u+'18426783-2-step-standard-rules', n1=u+'18426784-1-step-nano-rules', n2=u+'18426785-2-step-nano-rules', ist=u+'18426779-instant-standard-account-rules', isr=u+'18426780-instant-starter-account-rules', bnpl=u+'18426786-buy-now-pay-later-bnpl-rules';
+    const newsFunded=(src:string):Assessment=>({points:0.5,source:src,reason:'Funded: no opening or closing within 5 minutes of high-impact news on affected instruments. Overnight, weekend and own EAs allowed. Further funded rules on some plans (2-minute minimum hold, more than 80% margin treated as all-or-nothing).'});
+    const shield=(src:string,pct:string):Assessment=>({points:0,source:src,reason:'Guardian Shield closes all open trades at a combined '+pct+' floating loss; the first trigger permanently cuts the split to 50%, the second permanently breaches the account.'});
+    const trailing=(src:string,pct:string):Assessment=>({points:0,source:src,reason:pct+' trailing below the highest closed balance, locking at the starting balance once reached.'});
+    const scope='Help article updated 23 November 2026; funded stage; no add-ons.', scopeFr='Article du centre d’aide mis à jour le 23 novembre 2026 ; phase financée ; sans option.';
+    return {
+      'bg-one-standard-current':{checkedOn:'2026-11-27',scope:'1 Step Standard (CFD). '+scope,scopeFr:'1 Step Standard (CFD). '+scopeFr,assessments:{
+        drawdown:trailing(one,'6%'),
+        payout:{points:0.5,source:one,reason:'Every 14 days (7 with add-on); 3 trading days with at least 0.5% profit required in every payout cycle; after the lock, 1% of the starting balance must stay in profit.'},
+        consistency:{points:1,source:one,reason:'No best-day consistency rule on the funded account; the profitable-days condition is counted under payouts.'},
+        trading:newsFunded(one), funded:shield(one,'2%')
+      },preset:{drawdown:'intraday',lossPercent:6,profitSplit:85,source:one}},
+      'bg-two-standard-current':{checkedOn:'2026-11-27',scope:'2 Step Standard (CFD). '+scope,scopeFr:'2 Step Standard (CFD). '+scopeFr,assessments:{
+        drawdown:{points:1,source:two,reason:'Equity can never fall more than 8% below the starting balance; it does not trail.'},
+        payout:{points:0.5,source:two,reason:'Every 14 days (7 with add-on); 3 trading days with at least 0.5% profit required in every payout cycle.'},
+        consistency:{points:1,source:two,reason:'No best-day consistency rule on the funded account; the profitable-days condition is counted under payouts.'},
+        trading:newsFunded(two), funded:shield(two,'2%')
+      },preset:{drawdown:'static',lossPercent:8,profitSplit:85,source:two}},
+      'bg-one-nano-current':{checkedOn:'2026-11-27',scope:'1 Step Nano (CFD). '+scope,scopeFr:'1 Step Nano (CFD). '+scopeFr,assessments:{
+        drawdown:trailing(n1,'6%'),
+        payout:{points:0.5,source:n1,reason:'Every 7 days, after 5 trading days with at least 0.5% profit.'},
+        consistency:{points:0.5,source:n1,reason:'Best day below 50% of total profit, in evaluation and funded; not met means the payout stays unavailable, no breach.'},
+        trading:newsFunded(n1),
+        funded:{points:1,source:n1,reason:'No Guardian Shield on Nano accounts and no other funded condition beyond those counted above.'}
+      },preset:{drawdown:'intraday',lossPercent:6,consistency:50,consistencyBasis:'net',profitSplit:85,source:n1}},
+      'bg-two-nano-current':{checkedOn:'2026-11-27',scope:'2 Step Nano (CFD). '+scope,scopeFr:'2 Step Nano (CFD). '+scopeFr,assessments:{
+        drawdown:{points:1,source:n2,reason:'Static: equity can never fall more than 10% below the starting balance.'},
+        payout:{points:0,source:n2,reason:'Every 14 days, capped at 2% of the starting balance per cycle (one fifth of the 10% loss budget); profit above stays in the account.'},
+        consistency:{points:0.5,source:n2,reason:'Funded best day below 50% of profit per payout period; not met means no payout yet, no breach.'},
+        trading:newsFunded(n2),
+        funded:{points:1,source:n2,reason:'"There’s no Guardian Shield"; no minimum days; no other funded condition beyond those counted above.'}
+      },preset:{drawdown:'static',lossPercent:10,consistency:50,consistencyBasis:'net',profitSplit:80,source:n2}},
+      'bg-instant-standard-current':{checkedOn:'2026-11-27',scope:'Instant Standard (CFD), $5K–$100K. '+scope,scopeFr:'Instant Standard (CFD), 5K à 100K. '+scopeFr,assessments:{
+        drawdown:trailing(ist,'6%'),
+        payout:{points:0.5,source:ist,reason:'On demand after 5 trading days with at least 0.5% profit; 1% buffer after the drawdown lock; first two payouts capped at $10,000 on $200K+.'},
+        consistency:{points:0,source:ist,reason:'Best day below 20% of profit per payout period (15% on $300K/$400K).'},
+        trading:{points:0.5,source:ist,reason:'No opening or closing within 5 minutes of high-impact news on affected instruments; overnight, weekend and own EAs allowed.'},
+        funded:shield(ist,'1%')
+      },preset:{drawdown:'intraday',lossPercent:6,consistency:20,consistencyBasis:'net',profitSplit:80,source:ist}},
+      'bg-instant-starter-current':{checkedOn:'2026-11-27',scope:'Instant Starter (CFD), one-time $5K. '+scope,scopeFr:'Instant Starter (CFD), 5K unique. '+scopeFr,assessments:{
+        drawdown:trailing(isr,'5%'),
+        payout:{points:0,source:isr,reason:'One crypto payout only, at most $250 requestable; the account is then permanently closed.'},
+        consistency:{points:0,source:isr,reason:'Best day below 15% of total profit.'},
+        trading:{points:1,source:isr,reason:'News trading, overnight, weekend and own EAs allowed.'},
+        funded:shield(isr,'1%')
+      },preset:{drawdown:'intraday',lossPercent:5,consistency:15,consistencyBasis:'net',profitSplit:90,source:isr}},
+      'bg-bnpl-current':{checkedOn:'2026-11-27',scope:'Buy Now Pay Later (CFD). '+scope,scopeFr:'Buy Now Pay Later (CFD). '+scopeFr,assessments:{
+        drawdown:trailing(bnpl,'8%'),
+        payout:{points:0.5,source:bnpl,reason:'On demand after 5 trading days with at least 0.5% profit; no cap stated.'},
+        consistency:{points:0,source:bnpl,reason:'Funded best day below 20% of profit in the payout period.'},
+        trading:{points:0.5,source:bnpl,reason:'Funded: no opening or closing within 5 minutes of high-impact news on affected instruments; overnight, weekend and own EAs allowed.'},
+        funded:shield(bnpl,'1%')
+      },preset:{drawdown:'intraday',lossPercent:8,consistency:20,consistencyBasis:'net',profitSplit:80,source:bnpl}}
+    };
+  })(),
   'e8-markets':{
     'e8-classic-v2-current':{checkedOn:'2026-11-27',scope:'E8 Classic v2, Forex/CFD, default 2% daily drawdown configuration; the variant without daily drawdown has the same rating. Help article read 27 November 2026.',scopeFr:'E8 Classic v2, Forex/CFD, configuration par défaut avec perte journalière de 2 % ; la variante sans perte journalière a la même note. Article du centre d’aide lu le 27 novembre 2026.',assessments:{
       drawdown:{points:1,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2',reason:'4% static maximum loss from the initial balance: a fixed limit that never trails or moves, in the challenge and in the Performance stage.'},

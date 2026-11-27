@@ -2475,6 +2475,95 @@
           ]
         }
       ]
+    },
+    "blue-guardian": {
+      "checkedOn": "2026-11-27",
+      "programs": [
+        {
+          "name": "Instant Standard (CFD)",
+          "productId": "bg-instant-standard-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://www.blueguardian.com/",
+          "note": "Regular prices shown on the official home page under the default Instant plan (read 27 November 2026); the code BLACK discount is excluded. The official 6 October 2026 blog confirms $72 (5K), $623 (100K) and $2,200 (400K).",
+          "rows": [
+            {
+              "size": 5000,
+              "price": 72
+            },
+            {
+              "size": 10000,
+              "price": 100
+            },
+            {
+              "size": 25000,
+              "price": 208
+            },
+            {
+              "size": 50000,
+              "price": 324
+            },
+            {
+              "size": 100000,
+              "price": 623
+            },
+            {
+              "size": 200000,
+              "price": 954
+            },
+            {
+              "size": 400000,
+              "price": 2200
+            }
+          ]
+        },
+        {
+          "name": "Buy Now Pay Later (CFD) — total if passed",
+          "productId": "bg-bnpl-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://blueguardian.com/faq/articles/18426786-buy-now-pay-later-bnpl-rules",
+          "note": "$10 to start the evaluation, then a one-time activation fee due only after passing (help article updated 23 November 2026). The total shown assumes the $10 start applies to every size, as the article states it generally.",
+          "rows": [
+            {
+              "size": 5000,
+              "price": 62,
+              "upfrontPrice": 10,
+              "completionFee": 52
+            },
+            {
+              "size": 10000,
+              "price": 108,
+              "upfrontPrice": 10,
+              "completionFee": 98
+            },
+            {
+              "size": 25000,
+              "price": 212,
+              "upfrontPrice": 10,
+              "completionFee": 202
+            },
+            {
+              "size": 50000,
+              "price": 362,
+              "upfrontPrice": 10,
+              "completionFee": 352
+            },
+            {
+              "size": 100000,
+              "price": 696,
+              "upfrontPrice": 10,
+              "completionFee": 686
+            },
+            {
+              "size": 200000,
+              "price": 1043,
+              "upfrontPrice": 10,
+              "completionFee": 1033
+            }
+          ]
+        }
+      ]
     }
   }
 }

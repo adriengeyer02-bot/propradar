@@ -69,8 +69,15 @@ assert.equal(programmeFlexibility(getProgrammeEvidence('the5ers','the5ers-hyper-
 assert.equal(programmeFlexibility(getProgrammeEvidence('e8-markets','e8-classic-v2-current')).stars,4.5);
 assert.equal(programmeFlexibility(getProgrammeEvidence('e8-markets','e8-pro-current')).verified,4);
 assert.equal(programmeFlexibility(getProgrammeEvidence('e8-markets','e8-pro-current')).stars,null);
+assert.equal(programmeFlexibility(getProgrammeEvidence('blue-guardian','bg-one-standard-current')).stars,2);
+assert.equal(programmeFlexibility(getProgrammeEvidence('blue-guardian','bg-two-standard-current')).stars,3);
+assert.equal(programmeFlexibility(getProgrammeEvidence('blue-guardian','bg-one-nano-current')).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('blue-guardian','bg-two-nano-current')).stars,3);
+assert.equal(programmeFlexibility(getProgrammeEvidence('blue-guardian','bg-instant-standard-current')).stars,1);
+assert.equal(programmeFlexibility(getProgrammeEvidence('blue-guardian','bg-instant-starter-current')).stars,1);
+assert.equal(programmeFlexibility(getProgrammeEvidence('blue-guardian','bg-bnpl-current')).stars,1);
 const a={points:0.5,source:'https://example.com',reason:'documented test fixture'};
 const complete={checkedOn:'2026-11-27',scope:'test',assessments:{drawdown:a,payout:a,consistency:a,trading:a,funded:a}};
 assert.equal(programmeFlexibility(complete).stars,2.5);
 assert.equal(programmeFlexibility({...complete,assessments:{...complete.assessments,payout:{...a,source:''}}}).stars,null);
-console.log('Constraint simulators and evidence gating: 59 checks OK');
+console.log('Constraint simulators and evidence gating: 66 checks OK');
