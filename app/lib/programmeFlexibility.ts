@@ -47,7 +47,120 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
       funded:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-bootcamp-program-work/',reason:'3% daily pause on Pro only and account closure after 30 days inactivity; next day trading resumes after pause.'},
       payout:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-bootcamp-program-work/',reason:'First reward after 14 days; cycle restarts each scaling event. Additional payout caps and exact contract version to confirm.'}
     },preset:{drawdown:'static',lossPercent:4,source:'https://www.the5ers.com/bootcamp/'}}
+  },
+  fundednext: {
+  "fundednext-stellar-one-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "Current CFD baseline, purchased/reset after 12 January 2026; no add-ons.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://fundednext.com/cfds/stellar-1-step",
+        "reason": "Static 6% maximum loss from initial account balance."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://help.fundednext.com/en/articles/10701585-how-often-will-i-receive-my-performance-reward",
+        "reason": "5 business days; fee refund at third reward."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://fundednext.com/cfds/stellar-1-step",
+        "reason": "Standard funded reward conditions and consistency explicitly listed as N/A. Not applicable to optional on-demand payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext",
+        "reason": "Funded high-impact news execution counts only 40% of winning profit in the affected window; losses remain in full. Other restrictions and add-ons apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/17252927-stellar-1-step-account",
+        "reason": "3% maximum aggregate risk at any time on funded account; no funded profit target or minimum days."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://fundednext.com/cfds/stellar-1-step"
+    }
+  },
+  "fundednext-stellar-two-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "Current CFD Standard payout option only; 3-day and on-demand options differ.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://fundednext.com/cfds/stellar-2-step",
+        "reason": "Static 10% maximum loss from initial account balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/10701585-how-often-will-i-receive-my-performance-reward",
+        "reason": "First reward after 21 days, then every 14 days; standard option. Optional faster plans have extra conditions."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://fundednext.com/cfds/stellar-2-step",
+        "reason": "Standard funded reward conditions and consistency explicitly listed as N/A. Not applicable to optional on-demand payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext",
+        "reason": "Funded high-impact news execution counts only 40% of winning profit in the affected window; losses remain in full. Other restrictions and add-ons apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge",
+        "reason": "3% maximum aggregate risk at any time on funded account; no funded profit target or minimum days."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "profitSplit": 80,
+      "source": "https://fundednext.com/cfds/stellar-2-step"
+    }
+  },
+  "fundednext-stellar-lite-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "Current CFD Standard payout option, purchased/reset on or after 12 October 2026; no add-ons.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://fundednext.com/cfds/stellar-lite",
+        "reason": "Static 8% maximum loss from initial account balance."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://help.fundednext.com/en/articles/10701585-how-often-will-i-receive-my-performance-reward",
+        "reason": "First and subsequent rewards every 10 business days; standard option, fee refund at third reward."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://fundednext.com/cfds/stellar-lite",
+        "reason": "Standard funded reward conditions and consistency explicitly listed as N/A. Not applicable to optional on-demand payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext",
+        "reason": "Funded high-impact news execution counts only 40% of winning profit in the affected window; losses remain in full. Other restrictions and add-ons apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/17253939-stellar-lite-account",
+        "reason": "3% maximum aggregate risk at any time on funded account; no funded profit target or minimum days."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "profitSplit": 80,
+      "source": "https://fundednext.com/cfds/stellar-lite"
+    }
   }
+}
 };
 export const CRITERIA:Criterion[]=['drawdown','payout','consistency','trading','funded'];
 export function getProgrammeEvidence(slug:string,id:string){return evidence[slug]?.[id]}
