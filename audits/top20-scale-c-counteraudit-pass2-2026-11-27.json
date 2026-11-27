@@ -1,0 +1,285 @@
+{
+  "date": "2026-11-27",
+  "status": "PARTIAL_NOT_PUBLICATION_READY",
+  "scope": "22 firms at original top-20 cutoff including ties",
+  "baseline": "Scale C published scores, ceilings and Trustpilot held fixed pending Claude evidence review",
+  "note": "Each scenario is not a revised official score. OPEN means no new quantified deduction established, not cleared. PROPOSED means documentary support found, still needs independent validation and full document/plan coverage. CONDITIONAL means not ready to apply. No old penalties removed. No generic legal language or evidence absence penalized.",
+  "firms": [
+    {
+      "slug": "tradeify",
+      "oldScore": 80,
+      "codes": "D_PAYOUT_CAP 4; D_PAYOUT_CONDITIONS 3; D_FUNDED_TRAILING_DRAWDOWN 2",
+      "scenario": 71,
+      "status": "PROPOSED",
+      "findings": "Select Flex/Daily both capped and have EOD trailing; all simulated funded products have microscalping payout gate. Select has no funded consistency; Growth 35%, Lightning 20–30%. §4.4 withholding of approved but unpaid rewards tied to investigation, with notification and commercially reasonable completion. §6.5/6.10 style/audit sanctions do not expressly establish confiscation for vague style alone; §§6.7(h),6.11(e),7.6 specifically link forfeiture to hedging, pricing and chargebacks. Do not yet add B2. Contract §6.8 states >=50% of profits from >10s; FAQ additionally requires >50% of trades AND profits; contract incorporates FAQ so record tension, not automatic B4. §6.11 permits repricing and retrospective enforcement even after payout; not proof of B5 because trades may be restated both ways. B3 retained; specific cohort protections noted.",
+      "sources": [
+        "https://tradeify.co/funded-trader-agreement",
+        "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview",
+        "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+        "https://help.tradeify.co/en/articles/17069653-risk-compliance-guidelines-faq"
+      ]
+    },
+    {
+      "slug": "equity-edge",
+      "oldScore": 72,
+      "codes": "B2A 4",
+      "scenario": 68,
+      "status": "PROPOSED",
+      "findings": "Terms dated 6 October 2026 §6 permits decline for suspected breaches or strategy manipulation; §10 provides appeal by email, response within 10 business days, final decision. §9 chargeback without valid reason can cause forfeiture; do not code B1 for any/no reason. §14 generic change clause not B3. Existing D conditions retained provisionally.",
+      "sources": [
+        "https://equityedge.io/terms-and-conditions"
+      ]
+    },
+    {
+      "slug": "tradeday",
+      "oldScore": 77,
+      "codes": "D_FUNDED_TRAILING_DRAWDOWN 2",
+      "scenario": 75,
+      "status": "PROPOSED",
+      "findings": "Quick Pay funded sim trails on gross profit including withdrawals; Fast Pass also has trailing and more restrictive conditions. Do not add payout cap to Quick Pay merely because its profit split varies with balance. Prior scenario CONS -1 remains unconfirmed and excluded.",
+      "sources": [
+        "https://tradeday.freshdesk.com/en/support/solutions/articles/103000335937",
+        "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405229-what-is-fast-pass-",
+        "https://tradeday.freshdesk.com/en/support/solutions/articles/103000250682-funded-accounts-withdrawals-and-the-impact-of-drawdowns"
+      ]
+    },
+    {
+      "slug": "take-profit-trader",
+      "oldScore": 80,
+      "codes": "D_PAYOUT_CONDITIONS 3",
+      "scenario": 77,
+      "status": "CONDITIONAL",
+      "findings": "PRO buffer applies across Classic/Intraday/EOD; 50K $2,000 buffer; 50% buffer available on account closure. PRO+ upgrade discretionary, no buffer; not independently purchasable. Nov 23 product changes grandfather legacy accounts. Existing B3 general website amendment and B4 PRO/PRO+ contradiction require reconsideration; do not count different phases as contradiction. New daily profit limit is not a payout cap. 77 is additive scenario, could be higher if old deductions removed.",
+      "sources": [
+        "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules",
+        "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40824556669469-What-Happens-to-My-Existing-Account",
+        "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171929948829-Advantages-of-PRO",
+        "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40739474201501-Classic-vs-EOD-vs-Intraday-Which-Plan-Is-Right-for-You"
+      ]
+    },
+    {
+      "slug": "oneup-trader",
+      "oldScore": 70,
+      "codes": "D_PAYOUT_CONDITIONS 3; D_FUNDED_TRAILING_DRAWDOWN 2",
+      "scenario": 65,
+      "status": "PROPOSED",
+      "findings": "Withdrawal thresholds $1,500–$5,500, minimum $1,000, funded trailing in real time; 50% evaluation trade volume weekly, positive PnL each 15 days first 90 days. First $10k split 100% then 90%; flag D split reduction for interpretation, not added. Additional weekly requests 10% processing fee; crypto cap $3k not universal cap because bank wire alternative. Check Express contract separately before publication.",
+      "sources": [
+        "https://help.oneuptrader.com/article/372-funded-trader-rules",
+        "https://help.oneuptrader.com/article/376-profit-info",
+        "https://help.oneuptrader.com/article/388-funded-trader-trailing-drawdown"
+      ]
+    },
+    {
+      "slug": "myfundedfutures",
+      "oldScore": 72,
+      "codes": "D_PAYOUT_CONDITIONS 3; D_FUNDED_TRAILING_DRAWDOWN 2",
+      "scenario": 67,
+      "status": "CONDITIONAL",
+      "findings": "Rapid buffer $2,100 on 50K and $500 min; trailing intraday, EOD variant. Builder has cap and buffer; Pro has cap/buffer with partial buffer withdrawals and EOD trailing. New Builder variants may have static floor/anytime withdrawals; compare exact purchasable variants before selecting firm score. Pro legacy rules grandfathered; no automatic B3. Payout overview says no Rapid consistency while separate FAQ cites 30%/50%; establish stage before B4.",
+      "sources": [
+        "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+        "https://help.myfundedfutures.com/en/articles/13286542-rapid-plan-100k-a-comprehensive-look",
+        "https://myfundedfutures.com/plans/pro",
+        "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "https://help.myfundedfutures.com/en/articles/11994562-consistency-rule-at-my-fundedfutures",
+        "https://myfundedfutures.com/?account=myfundedfutures-builder-addon-50000"
+      ]
+    },
+    {
+      "slug": "funding-pips",
+      "oldScore": 75,
+      "codes": "D_PAYOUT_CONDITIONS 3 (conditional); B5 3 (open)",
+      "scenario": 72,
+      "status": "CONDITIONAL",
+      "findings": "2 Step Standard min reward 1% incl firm split, common reward methods also 1%; 1 Step Labs and new products to check. News policy deducts affected profits, partial closure flags entire order, deduction may breach loss limits; 5-hour exception. Explicit handling of loss-making news trades not found: B5 remains open; no double counting B2. Overnight/weekend restrictions with swing add-on except Labs; auto-close not automatically a sanction.",
+      "sources": [
+        "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+        "https://help.fundingpips.com/hc/en-us/articles/34504564970385-Reward-Methods",
+        "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding",
+        "https://help.fundingpips.com/hc/en-us/articles/53187088949777-1-Step-Labs"
+      ]
+    },
+    {
+      "slug": "ftmo",
+      "oldScore": 85,
+      "codes": "B7 not established",
+      "scenario": 85,
+      "status": "OPEN",
+      "findings": "Official CFD and Futures FAQ invite requesting sample of funded contract from support. No automatic B7 solely because signing occurs after pass. Obtain exact sample (both markets) and reconcile archived PDF version with scoring cited PDF; review new Instant conditions. Existing score not recertified.",
+      "sources": [
+        "https://ftmo.com/faq/what-is-the-legal-relationship-between-an-ftmo-trader-and-ftmo-after-signing-the-ftmo-account-terms-conditions/",
+        "https://ftmo.com/en/futures/faq/what-is-the-legal-relationship-between-an-ftmo-trader-and-ftmo-after-signing-the-ftmo-futures-sim-funded-account-terms-and-conditions/"
+      ]
+    },
+    {
+      "slug": "orion-funded",
+      "oldScore": 70,
+      "codes": "B7 5 candidate; B2A 4 candidate; existing B6 review",
+      "scenario": 61,
+      "status": "CONDITIONAL",
+      "findings": "Funded contract unlocked after evaluation+KYC. Public pre-purchase investor access concerns demo platform, not contract sample. Archived PDF §9.3.2 and §10.5.1 link discretion to potential cancellation of rewards by third-party; §17.3 complaint 30 days. Need funded agreement for binding remedy. §20.2 good-faith review protection; B6 must be justified separately by confidentiality consequences for lawful criticism. 61 assumes all original deductions retained; 66 if B6 removed. No final score.",
+      "sources": [
+        "https://www.orionfunded.com/faq/account/legal-relationship",
+        "https://www.orionfunded.com/faq/new-to-orion/good-to-know",
+        "https://www.orionfunded.com/docs/terms-and-conditions.pdf"
+      ]
+    },
+    {
+      "slug": "bulenox",
+      "oldScore": 67,
+      "codes": "B7 5 candidate",
+      "scenario": 62,
+      "status": "CONDITIONAL",
+      "findings": "Official Master FAQ sends Master Agreement by email after Qualification review. Funded agreement separate at later transition. Search public model/ask support before concluding withheld pre-purchase. No full Master/Funded contract reviewed.",
+      "sources": [
+        "https://bulenox.com/help-center/master",
+        "https://bulenox.com/help-center/funded"
+      ]
+    },
+    {
+      "slug": "topstep",
+      "oldScore": 73,
+      "codes": "B7 open",
+      "scenario": 73,
+      "status": "OPEN",
+      "findings": "XFA agreement reviewed during activation after passing; sample availability before purchase unknown. Do not penalize referral Reward cancellation as trading-payout cancellation. Review funded XFA Standard/Consistency and live agreement.",
+      "sources": [
+        "https://help.topstep.com/en/articles/8284217-express-funded-account-activation",
+        "https://help.topstep.com/en/articles/8284215-express-funded-account-parameters"
+      ]
+    },
+    {
+      "slug": "elite-trader-funding",
+      "oldScore": 68,
+      "codes": "E_HARSH 2",
+      "scenario": 66,
+      "status": "PROPOSED",
+      "findings": "Reward Interview provision: up to 60 minutes; refusal may deny Reward across accounts and close accounts; distinct procedural trigger. Image/voice license perpetual. B3 explicitly allows changes for existing products, already counted. B1 not established for accrued earned rewards merely from live capital allocation. No new penalty for emotional trading alone because contract expressly limits it.",
+      "sources": [
+        "https://elitetraderfunding.app/terms-of-service"
+      ]
+    },
+    {
+      "slug": "uprofit-trader",
+      "oldScore": 67,
+      "codes": "D_PAYOUT_CAP 4; D_PAYOUT_CONDITIONS 3; B2 open",
+      "scenario": 60,
+      "status": "CONDITIONAL",
+      "findings": "ONE five $150 profitable days, 50% available earnings, cap $2k and maximum 6 withdrawals; Day also advertised caps $4,500/request and $24k/account. Need exact Day Soft/Flex, Legacy and new Day 2.0 conditions for least restrictive plan. Best Practices condition and GTC §10.2(f) vague viable-strategy criterion require direct link to refusal before B2. Six withdrawals may transition to live; D account ends requires exact meaning.",
+      "sources": [
+        "https://uprofit.com/help/uprofit-one-payout-policy-49177986296468",
+        "https://uprofit.com/day-programs",
+        "https://uprofit.com/terms-and-conditions"
+      ]
+    },
+    {
+      "slug": "wsfunded",
+      "oldScore": 64,
+      "codes": "E_HARSH 2",
+      "scenario": 62,
+      "status": "PROPOSED",
+      "findings": "Official softbreach FAQ: first funded failure to set stop loss within 2 minutes cancels payout/account; separate trading-idea rule also has immediate funded consequence, same procedural penalty not duplicated. News profits removed; B5 needs proof losses retained. Check exact programme coverage before final.",
+      "sources": [
+        "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach"
+      ]
+    },
+    {
+      "slug": "alpha-capital-group",
+      "oldScore": 67,
+      "codes": "B5 3 candidate",
+      "scenario": 64,
+      "status": "CONDITIONAL",
+      "findings": "Official news FAQ explicitly says affected profits ineligible and losses not removed. Applies according to product/instrument/window; Swing has relaxed rules but still specific restrictions; need least restrictive programme scope and whether B5 is global clause in existing C coding. Do not assume B1 from general discretion in §2.2; read entitlement clause.",
+      "sources": [
+        "https://help.alphacapitalgroup.uk/en/articles/9293522-can-i-trade-news",
+        "https://alphacapitalgroup.uk/posts/alpha-capital-news-trading-and-overnight-rules-explained-2026",
+        "https://alphacapitalgroup.uk/terms-and-conditions"
+      ]
+    },
+    {
+      "slug": "blusky-trading",
+      "oldScore": 67,
+      "codes": "No extra deduction established",
+      "scenario": 67,
+      "status": "OPEN",
+      "findings": "Risk reviews any time; ethical policy forbids threats of negative reviews to obtain benefits, not inherently truthful criticism. Confidentiality consequences and actual discretion already addressed in B2; B6 requires distinct evidence. Reassess D account ends on brokerage transition vs permanent loss; different programs and reserve rules.",
+      "sources": [
+        "https://help.blusky.pro/en/articles/12069208-ethical-trading-conduct-policy-blusky-trading-company",
+        "https://help.blusky.pro/en/articles/12109372-blusky-risk-team-reviews",
+        "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account"
+      ]
+    },
+    {
+      "slug": "rebelsfunding",
+      "oldScore": 67,
+      "codes": "B7 candidate not added; B3 safeguard",
+      "scenario": 67,
+      "status": "OPEN",
+      "findings": "November 11 GTC §17.6 explicitly protects acquired rights. Separate RCF package sent following verification; sample availability remains unknown. Review §8 and current RCF contract itself before retaining B2 or adding B7.",
+      "sources": [
+        "https://www.rebelsfunding.com/terms-and-conditions/",
+        "https://eu.rebelsfunding.com/know-your-customer/"
+      ]
+    },
+    {
+      "slug": "hash-hedge",
+      "oldScore": 64,
+      "codes": "No extra deduction established",
+      "scenario": 64,
+      "status": "OPEN",
+      "findings": "Current public GTC and Commercial Terms appear newly updated relative to November 25 archive. Explicit appeal and linkage of payout consequences to confirmed misconduct; refresh snapshot and compare both contracts, including counterparty before certification. Keep B2A provisional.",
+      "sources": [
+        "https://www.hashhedge.com/terms-and-conditions",
+        "https://www.hashhedge.com/commercial-terms"
+      ]
+    },
+    {
+      "slug": "trade-the-pool",
+      "oldScore": 65,
+      "codes": "D_PAYOUT_CONDITIONS candidate",
+      "scenario": 65,
+      "status": "OPEN",
+      "findings": "FLEX requires 3 days with 0.5% buying power profit in 14 days; MAX has different consistency stage. Compare MAX, FLEX, Edge and official program terms; not enough to apply FLEX gate firm-wide.",
+      "sources": [
+        "https://tradethepool.com/the-program/",
+        "https://tradethepool.com/program-terms/"
+      ]
+    },
+    {
+      "slug": "fxify",
+      "oldScore": 69,
+      "codes": "No extra deduction established",
+      "scenario": 69,
+      "status": "OPEN",
+      "findings": "Instant Funding no Performance Protect, profits forfeited upon hard breach; explicit rule not B1/B2 by itself. Existing B2 from 2024 GTC needs current version/market/product matching; obtain current funded agreement.",
+      "sources": [
+        "https://fxify.com/agreement/",
+        "https://fxify.com/faqs/all-faqs/instant-funded-faq/what-happens-if-i-violate-the-rules/"
+      ]
+    },
+    {
+      "slug": "lux-trading-firm",
+      "oldScore": 64,
+      "codes": "No extra deduction established",
+      "scenario": 64,
+      "status": "OPEN",
+      "findings": "Existing B2 linked to risk desk discretion. Archived Instant §16.4 target and risk review before payout; do not transfer to unrelated programmes. No new source independently reopened in pass 2.",
+      "sources": [
+        "https://luxtradingfirm.com/trading-rules/"
+      ]
+    },
+    {
+      "slug": "the5ers",
+      "oldScore": 71,
+      "codes": "No extra deduction established",
+      "scenario": 71,
+      "status": "OPEN",
+      "findings": "Archived interview forfeiture, reputation and threshold changes already represented. Recheck High Stakes payout split vs weekly instalment and funded agreement; no fresh source independently reopened in pass 2.",
+      "sources": [
+        "https://the5ers.com/terms-and-conditions/"
+      ]
+    }
+  ]
+}
