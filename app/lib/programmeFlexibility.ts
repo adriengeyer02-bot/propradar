@@ -1665,6 +1665,272 @@ Object.assign(evidence, {
     }
   }
 });
+
+// Batch 7 — official funded-stage evidence, October–November cohorts.
+Object.assign(evidence, {
+  "daytraders-com": {
+    "daytraders-trailing": {
+      "checkedOn": "2026-11-27",
+      "scope": "Trail Pro simulated funded, October 2026 help rules.",
+      "scopeFr": "Trail Pro, compte financé simulé ; règles d'octobre 2026.",
+      "assessments": {
+        "drawdown": {
+          "points": 0,
+          "source": "https://daytraders.com/help/articles/17684698-trail-pro-account",
+          "reason": "Intraday equity trailing, locks at initial balance; no daily loss stop."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://daytraders.com/help/articles/17684700-trail-payouts",
+          "reason": "Eight fresh qualifying days, $500 minimum, size-specific protected balance and $1K–$5K maximum per request (depending on plan/tier)."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://daytraders.com/help/articles/17684700-trail-payouts",
+          "reason": "30% best-day share of profit in the current payout cycle."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://daytraders.com/help/articles/17704089-trading-hours-holidays-and-overnight-positions",
+          "reason": "News trading is allowed; the same article says close trades at session end but also permits overnight/weekend holding. Clarify that conflict before holding through a close."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://daytraders.com/help/articles/17697925-moving-from-pro-or-s2f-to-live",
+          "reason": "Discretionary live invitation closes sim accounts; excess simulated balances generally forfeited unless credited at risk-team discretion. For requests totaling at least $10K that day, half becomes live loss allocation."
+        }
+      },
+      "preset": {
+        "drawdown": "intraday",
+        "profitSplit": 100,
+        "source": "https://daytraders.com/help/articles/17684698-trail-pro-account"
+      }
+    },
+    "daytraders-eod": {
+      "checkedOn": "2026-11-27",
+      "scope": "EOD Pro simulated funded, October 2026 help rules.",
+      "scopeFr": "EOD Pro, compte financé simulé ; règles d'octobre 2026.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://daytraders.com/help/articles/17684736-eod-pro-account",
+          "reason": "EOD trailing, locks at initial balance; soft daily loss limit."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://daytraders.com/help/articles/17684739-eod-payouts",
+          "reason": "Eight fresh qualifying days, $500 minimum, size-specific protected balance and $1K–$5K maximum per request (depending on plan/tier)."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://daytraders.com/help/articles/17684739-eod-payouts",
+          "reason": "30% best-day share of profit in the current payout cycle."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://daytraders.com/help/articles/17704089-trading-hours-holidays-and-overnight-positions",
+          "reason": "News trading is allowed; the same article says close trades at session end but also permits overnight/weekend holding. Clarify that conflict before holding through a close."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://daytraders.com/help/articles/17697925-moving-from-pro-or-s2f-to-live",
+          "reason": "Discretionary live invitation closes sim accounts; excess simulated balances generally forfeited unless credited at risk-team discretion. For requests totaling at least $10K that day, half becomes live loss allocation."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 100,
+        "source": "https://daytraders.com/help/articles/17684736-eod-pro-account"
+      }
+    },
+    "daytraders-static": {
+      "checkedOn": "2026-11-27",
+      "scope": "Static Pro simulated funded, October 2026 help rules.",
+      "scopeFr": "Static Pro, compte financé simulé ; règles d'octobre 2026.",
+      "assessments": {
+        "drawdown": {
+          "points": 1,
+          "source": "https://daytraders.com/help/articles/17684716-static-pro-account",
+          "reason": "Fixed floor throughout, no daily loss stop."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://daytraders.com/help/articles/17684719-static-payouts",
+          "reason": "Eight fresh qualifying days, $500 minimum, size-specific protected balance and $1K–$5K maximum per request (depending on plan/tier)."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://daytraders.com/help/articles/17684719-static-payouts",
+          "reason": "30% best-day share of profit in the current payout cycle."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://daytraders.com/help/articles/17704089-trading-hours-holidays-and-overnight-positions",
+          "reason": "News trading is allowed; the same article says close trades at session end but also permits overnight/weekend holding. Clarify that conflict before holding through a close."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://daytraders.com/help/articles/17697925-moving-from-pro-or-s2f-to-live",
+          "reason": "Discretionary live invitation closes sim accounts; excess simulated balances generally forfeited unless credited at risk-team discretion. For requests totaling at least $10K that day, half becomes live loss allocation."
+        }
+      },
+      "preset": {
+        "drawdown": "static",
+        "profitSplit": 100,
+        "source": "https://daytraders.com/help/articles/17684716-static-pro-account"
+      }
+    },
+    "daytraders-s2f-current": {
+      "checkedOn": "2026-11-27",
+      "scope": "S2F Instant 25/50/150K simulated funded, no evaluation.",
+      "scopeFr": "S2F Instant 25/50/150K, compte financé simulé sans challenge.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+          "reason": "EOD trailing; daily loss stop for 50K and 150K only."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://daytraders.com/help/articles/17684752-s2f-payouts",
+          "reason": "Ten new qualifying days, fresh profit target each cycle ($2K–$10K first request), $500 minimum and $1K–$3K per-request cap."
+        },
+        "consistency": {
+          "points": 0,
+          "source": "https://daytraders.com/help/articles/17684752-s2f-payouts",
+          "reason": "20% best-day share of current cycle profit."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://daytraders.com/help/articles/17704089-trading-hours-holidays-and-overnight-positions",
+          "reason": "News trading is allowed; the same article says close trades at session end but also permits overnight/weekend holding. Clarify that conflict before holding through a close."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://daytraders.com/help/articles/17697925-moving-from-pro-or-s2f-to-live",
+          "reason": "Discretionary live invitation closes sim accounts; excess simulated balances generally forfeited unless credited at risk-team discretion. For requests totaling at least $10K that day, half becomes live loss allocation."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 100,
+        "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview"
+      }
+    },
+    "daytraders-s2l-current": {
+      "checkedOn": "2026-11-27",
+      "scope": "Straight to Live after S2L evaluation; Core/Edge/Ultra actual live accounts, not invited sim traders.",
+      "scopeFr": "Straight to Live après challenge S2L, comptes réels Core/Edge/Ultra ; hors invitations depuis la simulation.",
+      "assessments": {
+        "drawdown": {
+          "points": 0,
+          "source": "https://daytraders.com/help/articles/17697922-live-accounts",
+          "reason": "Live intraday trailing with daily loss stop; lock at starting balance."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://daytraders.com/help/articles/17697923-live-payouts",
+          "reason": "Daily uncapped withdrawals after floor locks; permanent $1K reserve, $500 minimum and 80% share."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://daytraders.com/help/articles/17697923-live-payouts",
+          "reason": "No live best-day ratio or minimum daily profit for payouts."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://daytraders.com/help/articles/17704089-trading-hours-holidays-and-overnight-positions",
+          "reason": "News trading is allowed; the same article says close trades at session end but also permits overnight/weekend holding. Clarify that conflict before holding through a close."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://daytraders.com/help/articles/17697922-live-accounts",
+          "reason": "Only one live account tradeable initially until floor locks or account fails; risk manager enables next. Cannot hold sim and live simultaneously."
+        }
+      },
+      "preset": {
+        "drawdown": "intraday",
+        "profitSplit": 80,
+        "source": "https://daytraders.com/help/articles/17697922-live-accounts"
+      }
+    }
+  },
+  "funded-futures-network": {
+    "funded-futures-network-max-standard": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current MAX Standard, 50K publicly configured example; October–November checkout snapshots differ on caps and live closure.",
+      "scopeFr": "MAX Standard actuel, exemple 50K ; les versions officielles divergent sur les plafonds et la fermeture lors de la revue.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://fundedfuturesnetwork.com/?via=CPF",
+          "reason": "EOD trailing then locks at starting balance + $100; soft daily loss limit."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://fundedfuturesnetwork.com/?via=CPF",
+          "reason": "Buffer equal to drawdown, $500 minimum, tier and sequence caps plus $10K cross-account cap. Official 50K displays $1K/$1.25K or $1.5K/$2K depending on snapshot."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://fundedfuturesnetwork.com/?via=CPF",
+          "reason": "40% funded consistency; verify denominator with current agreement."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://blog.fundedfuturesnetwork.com/faq",
+          "reason": "Funded Tier 1 news restrictions and automated trading subject to discretion; copy trading limited."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://fundedfuturesnetwork.com/?via=CPF",
+          "reason": "Mandatory live review at four payouts on one account or ten since last review; official snapshots disagree on closure of all sim accounts, so confirm before purchase."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 80,
+        "source": "https://fundedfuturesnetwork.com/?via=CPF"
+      }
+    },
+    "funded-futures-network-steady": {
+      "checkedOn": "2026-11-27",
+      "scope": "STEADY simulated funded, official programme page and indexed July help article; current net rule and live-review agreement to confirm.",
+      "scopeFr": "STEADY, phase financée simulée ; page officielle et FAQ de juillet indexée, modalités actuelles à confirmer.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://steady.fundedfuturesnetwork.com/",
+          "reason": "EOD trailing locks at starting balance + $100; no daily loss limit."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://steady.fundedfuturesnetwork.com/",
+          "reason": "Protected buffer equal to loss limit, size-dependent per-request caps and $10K across accounts; July help article specifies five winning days per cycle."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://steady.fundedfuturesnetwork.com/",
+          "reason": "52% evaluation only; official dedicated page explicitly states no funded consistency."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://steady.fundedfuturesnetwork.com/",
+          "reason": "Dedicated page permits news but general FAQ restricts funded news; automated bots/EAs not supported on STEADY. Written clarification needed."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://steady.fundedfuturesnetwork.com/",
+          "reason": "Mandatory live review after five payouts; exact treatment of other sim balances and current review terms not confirmed."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "source": "https://steady.fundedfuturesnetwork.com/"
+      }
+    }
+  }
+});
 export const CRITERIA
 :Criterion[]=['drawdown','payout','consistency','trading','funded'];
 export function getProgrammeEvidence(slug:string,id:string,variant?:string){return variant?getProgrammeVariants(slug,id).find(x=>x.id===variant)?.evidence:evidence[slug]?.[id]}
