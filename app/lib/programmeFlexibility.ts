@@ -2267,6 +2267,340 @@ Object.assign(evidence, {
     }
   }
 });
+
+// Batch 9 — preserve previously rated programmes within existing firm maps.
+evidence["traders-launch"] = {...(evidence["traders-launch"] ?? {}), ...{
+  "traders-launch-futures-standard": {
+    "checkedOn": "2026-11-27",
+    "scope": "Premium / standard 60% or 80%, payout-eligible SimFunded after Buffer.",
+    "scopeFr": "Premium / Standard 60 % ou 80 %, compte SimFunded après Buffer.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.traderslaunch.com/faq",
+        "reason": "EOD floor locks at starting balance before entry to the payout-eligible SimFunded stage; no further trailing after Buffer."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://traderslaunch.com/payout-rules",
+        "reason": "Account must first clear buffer and exceed +1%; one request per trader per 24 hours, no per-request cap; $100K cumulative review."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://traderslaunch.com/futures/rules",
+        "reason": "No numerical best-day rule once SimFunded."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://traderslaunch.com/futures/rules",
+        "reason": "Fixed contract limits, mandatory avoidance of exchange price-limit zone; no HFT or hedging, rapid trades subject to review."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.traderslaunch.com/terms",
+        "reason": "Eligibility subject to compliance review and discretionary performance awards; partner-introduced traders may be ineligible for awards."
+      }
+    }
+  },
+  "traders-launch-futures-legacy-nyc": {
+    "checkedOn": "2026-11-27",
+    "scope": "Legacy NYC 55% or 80%, payout-eligible SimFunded after Buffer; restricted NY session.",
+    "scopeFr": "Legacy NYC 55 % ou 80 %, après Buffer ; session new-yorkaise restreinte.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.traderslaunch.com/faq",
+        "reason": "EOD floor locks at starting balance before entry to the payout-eligible SimFunded stage; no further trailing after Buffer."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://traderslaunch.com/payout-rules",
+        "reason": "Account must first clear buffer and exceed +1%; one request per trader per 24 hours, no per-request cap; $100K cumulative review."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://traderslaunch.com/futures/rules",
+        "reason": "No numerical best-day rule once SimFunded."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.traderslaunch.com/",
+        "reason": "Restricted NYC hours and smaller fixed contract limits than standard; hedging, HFT and exchange price-limit restrictions also apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.traderslaunch.com/terms",
+        "reason": "Eligibility subject to compliance review and discretionary performance awards; partner-introduced traders may be ineligible for awards."
+      }
+    }
+  },
+  "traders-launch-static-25k": {
+    "checkedOn": "2026-11-27",
+    "scope": "Static 25K, only 90% profit-share option confirmed uncapped; do not extend payout assessment to 60/80% options.",
+    "scopeFr": "Static 25K, option 90 % uniquement pour l'absence de plafond ; ne pas extrapoler aux options 60/80 %.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.traderslaunch.com/",
+        "reason": "Fixed $500 maximum loss floor, does not trail."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://www.traderslaunch.com/",
+        "reason": "Daily requests and no cap expressly advertised for Static 90%; general payout eligibility above +1% and 24-hour cross-account cadence; confirm plan-specific threshold."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://traderslaunch.com/futures/rules",
+        "reason": "No numerical best-day rule once SimFunded."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://traderslaunch.com/futures/rules",
+        "reason": "Fixed contract limits, mandatory avoidance of exchange price-limit zone; no HFT or hedging, rapid trades subject to review."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.traderslaunch.com/terms",
+        "reason": "Eligibility subject to compliance review and discretionary performance awards; partner-introduced traders may be ineligible for awards."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 2,
+      "source": "https://www.traderslaunch.com/"
+    }
+  }
+}};
+evidence["ment-funding"] = {...(evidence["ment-funding"] ?? {}), ...{
+  "ment-futures": {
+    "checkedOn": "2026-11-27",
+    "scope": "Futures evaluation → funded account, current published baseline, 75% default split.",
+    "scopeFr": "Futures, phase financée standard, partage 75 % par défaut.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.mentfunding.com/",
+        "reason": "6% static loss floor, changes once to starting balance after first withdrawal; separate 3% daily hard loss limit."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://www.mentfunding.com/",
+        "reason": "First payout requires profit target and consistency, then 30-day cadence; withdrawal of all earnings places account on hard breach floor."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://www.mentfunding.com/",
+        "reason": "33% best-day limit in evaluation and before each payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.mentfunding.com/",
+        "reason": "Front-month only; news permitted; intraday Globex session with auto-close and no weekend holding."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.mentfunding.com/terms-of-service",
+        "reason": "30-day activity obligation under programme and broad termination discretion in terms; breached accounts subject to forfeiture."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "profitSplit": 75,
+      "source": "https://www.mentfunding.com/"
+    }
+  }
+}};
+evidence["e8-futures"] = {...(evidence["e8-futures"] ?? {}), ...{
+  "e8-zero-starter": {
+    "checkedOn": "2026-11-27",
+    "scope": "Zero Starter Performance, default selectable 80% or 100% split. Official table and FAQ disagree on 100K/150K cap.",
+    "scopeFr": "Zero Starter Performance, partage 80 % ou 100 %. Divergence FAQ/table sur plafonds 100K et 150K.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://e8futures.com/e8-zero",
+        "reason": "Same 3% EOD dynamic loss limit as MAX; locks at initial balance after sufficient closed profits or first payout."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://e8futures.com/e8-zero",
+        "reason": "Daily $100 minimum; caps $600/$1K/approximately $1.5–1.6K/$1.995–2K by size. Unwithdrawn cycle profits become nonwithdrawable buffer."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://e8futures.com/e8-zero",
+        "reason": "40% challenge only, explicitly no funded ratio."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://e8futures.com/e8-zero",
+        "reason": "Funded contract allocation scales with profits; detailed Starter size-specific contract limits not published separately."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://e8futures.com/e8-zero",
+        "reason": "Four withdrawals then deactivation even if balance remains, replacement challenge required."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "lossPercent": 3,
+      "source": "https://e8futures.com/e8-zero"
+    }
+  }
+}};
+evidence["top-one-futures"] = {...(evidence["top-one-futures"] ?? {}), ...{
+  "top-one-elite-evaluation": {
+    "checkedOn": "2026-11-27",
+    "scope": "Original Elite funded route; help documents remain available, new checkout availability not confirmed.",
+    "scopeFr": "Elite historique, phase financée ; FAQ disponible, commercialisation actuelle non confirmée.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/11020730-overview-of-the-elite-evaluation",
+        "reason": "EOD trailing and 2.5% daily loss pause."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/12717928-elite-sim-funded-account-payout-requirements",
+        "reason": "6%, then 5%, then 4% fresh targets on post-withdrawal balance and tier caps $1.5K–$3.5K."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/12717928-elite-sim-funded-account-payout-requirements",
+        "reason": "25% best-day limit, reset at withdrawal."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/14617600-differences-between-elite-elite-access-and-elite-daily-accounts",
+        "reason": "No news restriction or contract scaling on original Elite; ordinary futures holding and execution restrictions remain."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
+        "reason": "Risk review at three payouts; transition rules apply across simulated accounts."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 90,
+      "source": "https://help.toponefutures.com/en/articles/11020730-overview-of-the-elite-evaluation"
+    }
+  },
+  "top-one-elite-access": {
+    "checkedOn": "2026-11-27",
+    "scope": "Elite ACCESS regular EOD funded route, current rules.",
+    "scopeFr": "Elite ACCESS EOD standard, phase financée.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview",
+        "reason": "Funded EOD trailing floor locks at starting balance + $100, with soft daily loss stop; static evaluation does not carry into funding."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/14595161-elite-access-payout-requirements",
+        "reason": "Five qualifying profitable days, retained $1.5K–$4.5K buffer, $500 minimum, $1K–$2.5K cap and at least 50% fresh profit after first request."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/14595161-elite-access-payout-requirements",
+        "reason": "40% funded consistency; none in evaluation."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview",
+        "reason": "High-impact news blackout two minutes on each side including SL/TP execution; contract scaling."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview",
+        "reason": "Risk review around three payouts; highest-profit account transitions, remaining accounts close."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 90,
+      "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+    }
+  },
+  "top-one-elite-access-intraday": {
+    "checkedOn": "2026-11-27",
+    "scope": "Elite ACCESS Intraday: EOD challenge → intraday funded.",
+    "scopeFr": "Elite ACCESS Intraday : challenge EOD puis trailing intraday financé.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/17059267-elite-access-intraday-accounts-overview",
+        "reason": "EOD evaluation switches to intraday equity trailing, including unrealized gains; funded soft daily loss limit."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/17059773-elite-access-intraday-payout-requirements",
+        "reason": "Five qualifying profitable days, retained $1.5K–$4.5K buffer, $500 minimum, $1K–$2.5K cap and at least 50% fresh profit after first request."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17059773-elite-access-intraday-payout-requirements",
+        "reason": "40% funded consistency; none in evaluation."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17059267-elite-access-intraday-accounts-overview",
+        "reason": "High-impact news blackout two minutes on each side including SL/TP execution; contract scaling."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17059267-elite-access-intraday-accounts-overview",
+        "reason": "Risk review around three payouts; highest-profit account transitions, remaining accounts close."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "profitSplit": 90,
+      "source": "https://help.toponefutures.com/en/articles/17059267-elite-access-intraday-accounts-overview"
+    }
+  },
+  "top-one-elite-access-static": {
+    "checkedOn": "2026-11-27",
+    "scope": "Elite ACCESS Static: static challenge → EOD funded.",
+    "scopeFr": "Elite ACCESS Static : challenge statique puis trailing EOD financé.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17889367-elite-access-static-accounts-overview",
+        "reason": "Funded EOD trailing floor locks at starting balance + $100, with soft daily loss stop; static evaluation does not carry into funding."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/17889378-elite-access-static-payout-requirements",
+        "reason": "Five qualifying profitable days, retained $1.5K–$4.5K buffer, $500 minimum, $1K–$2.5K cap and at least 50% fresh profit after first request."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17889378-elite-access-static-payout-requirements",
+        "reason": "40% funded consistency; none in evaluation."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17889367-elite-access-static-accounts-overview",
+        "reason": "High-impact news blackout two minutes on each side including SL/TP execution; contract scaling."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17889367-elite-access-static-accounts-overview",
+        "reason": "Risk review around three payouts; highest-profit account transitions, remaining accounts close."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 90,
+      "source": "https://help.toponefutures.com/en/articles/17889367-elite-access-static-accounts-overview"
+    }
+  }
+}};
 export const CRITERIA
 :Criterion[]=['drawdown','payout','consistency','trading','funded'];
 export function getProgrammeEvidence(slug:string,id:string,variant?:string){return variant?getProgrammeVariants(slug,id).find(x=>x.id===variant)?.evidence:evidence[slug]?.[id]}
