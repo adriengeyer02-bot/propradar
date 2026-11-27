@@ -160,7 +160,431 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
       "source": "https://fundednext.com/cfds/stellar-lite"
     }
   }
-}
+},
+
+  "take-profit-trader": {
+    "tpt-intraday-2026": {
+      "checkedOn": "2026-11-27",
+      "scope": "New purchases since 23 November 2026; PRO phase (legacy accounts excluded).",
+      "scopeFr": "Achats depuis le 23 novembre 2026 ; phase PRO, anciens comptes exclus.",
+      "assessments": {
+        "drawdown": {
+          "points": 0,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+          "reason": "Intraday equity including unrealized gains; locks at initial balance."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules",
+          "reason": "Daily withdrawals above a mandatory buffer equal to maximum drawdown. No per-request cap; withdrawing half of buffer requires account closure."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40739474201501-Classic-vs-EOD-vs-Intraday-Which-Plan-Is-Right-for-You",
+          "reason": "50% best-day rule in Test only, no funded consistency."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+          "reason": "Flat positions and orders around specified releases; intraday-only futures, no opposing positions."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171978600349-PRO-Account-Upgrade-Process-Overview-and-Guidelines",
+          "reason": "Selected PRO+ transition freezes $5,000 of PRO profits; separate live balance. PRO daily profit stop $10,000."
+        }
+      },
+      "preset": {
+        "drawdown": "intraday",
+        "profitSplit": 80,
+        "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules"
+      }
+    },
+    "tpt-classic-2026": {
+      "checkedOn": "2026-11-27",
+      "scope": "New purchases since 23 November 2026; PRO phase (legacy accounts excluded).",
+      "scopeFr": "Achats depuis le 23 novembre 2026 ; phase PRO, anciens comptes exclus.",
+      "assessments": {
+        "drawdown": {
+          "points": 0,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+          "reason": "Intraday equity including unrealized gains; locks at initial balance."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules",
+          "reason": "Daily withdrawals above a mandatory buffer equal to maximum drawdown. No per-request cap; withdrawing half of buffer requires account closure."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40739474201501-Classic-vs-EOD-vs-Intraday-Which-Plan-Is-Right-for-You",
+          "reason": "50% best-day rule in Test only, no funded consistency."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+          "reason": "Flat positions and orders around specified releases; intraday-only futures, no opposing positions."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171978600349-PRO-Account-Upgrade-Process-Overview-and-Guidelines",
+          "reason": "Selected PRO+ transition freezes $5,000 of PRO profits; separate live balance. PRO daily profit stop $10,000."
+        }
+      },
+      "preset": {
+        "drawdown": "intraday",
+        "profitSplit": 80,
+        "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules"
+      }
+    },
+    "tpt-eod-2026": {
+      "checkedOn": "2026-11-27",
+      "scope": "New purchases since 23 November 2026; PRO phase (legacy accounts excluded).",
+      "scopeFr": "Achats depuis le 23 novembre 2026 ; phase PRO, anciens comptes exclus.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+          "reason": "EOD balance high, locked at initial balance."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules",
+          "reason": "Daily withdrawals above a mandatory buffer equal to maximum drawdown. No per-request cap; withdrawing half of buffer requires account closure."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40739474201501-Classic-vs-EOD-vs-Intraday-Which-Plan-Is-Right-for-You",
+          "reason": "50% best-day rule in Test only, no funded consistency."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+          "reason": "Flat positions and orders around specified releases; intraday-only futures, no opposing positions."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171978600349-PRO-Account-Upgrade-Process-Overview-and-Guidelines",
+          "reason": "Selected PRO+ transition freezes $5,000 of PRO profits; separate live balance. PRO daily profit stop $5,000; daily loss can hard-breach below initial balance."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 80,
+        "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules"
+      }
+    }
+  },
+  "alpha-futures": {
+    "alpha-futures-zero": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Qualified account; not the historical Premium programme. Live transition treatment is included.",
+      "scopeFr": "Compte Qualified actuel ; hors ancien Premium. Transition live prise en compte.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll",
+          "reason": "EOD trailing, locks at initial balance; equity monitored continuously."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.alpha-futures.com/en/articles/9492051-payout-policy",
+          "reason": "5 days with at least $200 net profit; max 50% of profit and cap $1,000–$2,500."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://help.alpha-futures.com/en/articles/9492048-consistency-rule",
+          "reason": "40% funded best day; eligibility delayed until compliant."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.alpha-futures.com/en/articles/9492063-news-trading-policy",
+          "reason": "Qualified major-news restriction; profit voided, payout denied and repeated breach can close account."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.alpha-futures.com/en/articles/10743344-path-to-live-structure",
+          "reason": "At selected live transition all Qualified accounts close; standard live route sacrifices remaining simulated profit; Prime alternative pays conditional deferred bonus rather than preserving all profit."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "consistency": 40,
+        "consistencyBasis": "net",
+        "profitSplit": 90,
+        "source": "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll"
+      }
+    },
+    "alpha-futures-standard": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Qualified account; not the historical Premium programme. Live transition treatment is included.",
+      "scopeFr": "Compte Qualified actuel ; hors ancien Premium. Transition live prise en compte.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll",
+          "reason": "EOD trailing, locks at initial balance; equity monitored continuously."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.alpha-futures.com/en/articles/9492051-payout-policy",
+          "reason": "5 days with at least $200 net profit; max 50% of profit and cap $3,000–$5,000."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://help.alpha-futures.com/en/articles/9492048-consistency-rule",
+          "reason": "40% funded best day; eligibility delayed until compliant."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.alpha-futures.com/en/articles/9492063-news-trading-policy",
+          "reason": "Qualified major-news restriction; profit voided, payout denied and repeated breach can close account."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.alpha-futures.com/en/articles/10743344-path-to-live-structure",
+          "reason": "At selected live transition all Qualified accounts close; standard live route sacrifices remaining simulated profit; Prime alternative pays conditional deferred bonus rather than preserving all profit."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "consistency": 40,
+        "consistencyBasis": "net",
+        "profitSplit": 90,
+        "source": "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll"
+      }
+    },
+    "alpha-futures-advanced": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Qualified account; not the historical Premium programme. Live transition treatment is included.",
+      "scopeFr": "Compte Qualified actuel ; hors ancien Premium. Transition live prise en compte.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll",
+          "reason": "EOD trailing, locks at initial balance; equity monitored continuously."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.alpha-futures.com/en/articles/9492051-payout-policy",
+          "reason": "5 days with at least $200 net profit; max 50% of profit and cap $15,000."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.alpha-futures.com/en/articles/9492048-consistency-rule",
+          "reason": "40% evaluation only; no Qualified consistency."
+        },
+        "trading": {
+          "points": 1,
+          "source": "https://help.alpha-futures.com/en/articles/9492063-news-trading-policy",
+          "reason": "No special Qualified news window; standard prohibited practices still apply."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.alpha-futures.com/en/articles/10743344-path-to-live-structure",
+          "reason": "At selected live transition all Qualified accounts close; standard live route sacrifices remaining simulated profit; Prime alternative pays conditional deferred bonus rather than preserving all profit."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll"
+      }
+    },
+    "alpha-futures-direct": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Qualified account; not the historical Premium programme. Live transition treatment is included.",
+      "scopeFr": "Compte Qualified actuel ; hors ancien Premium. Transition live prise en compte.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll",
+          "reason": "EOD trailing, locks at initial balance; equity monitored continuously."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://help.alpha-futures.com/en/articles/9492051-payout-policy",
+          "reason": "Fresh withdrawal profit target every cycle; unused prior-cycle gains do not count toward next target; caps $1,000–$3,000."
+        },
+        "consistency": {
+          "points": 0,
+          "source": "https://help.alpha-futures.com/en/articles/9492048-consistency-rule",
+          "reason": "20% funded best day; eligibility delayed until compliant."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.alpha-futures.com/en/articles/9492063-news-trading-policy",
+          "reason": "Qualified major-news restriction; profit voided, payout denied and repeated breach can close account."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.alpha-futures.com/en/articles/10743344-path-to-live-structure",
+          "reason": "At selected live transition all Qualified accounts close; standard live route sacrifices remaining simulated profit; Prime alternative pays conditional deferred bonus rather than preserving all profit."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "consistency": 20,
+        "consistencyBasis": "net",
+        "profitSplit": 90,
+        "source": "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll"
+      }
+    }
+  },
+  "topstep": {
+    "topstep-trading-combine-current": {
+      "checkedOn": "2026-11-27",
+      "scope": "Original trailing Trading Combine → XFA Standard, without optional DLL; XFA Consistency and static/limited products are separate.",
+      "scopeFr": "Trading Combine trailing classique → XFA Standard, sans DLL optionnelle ; autres variantes exclues.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
+          "reason": "EOD trail; XFA starts at $0, loss floor locks at $0 after first withdrawal."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+          "reason": "Five winning $150+ days; withdraw max 50% of XFA balance, capped $2,000/$3,000/$5,000. Optional DLL changes caps."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.topstep.com/en/articles/8284215-express-funded-account-parameters",
+          "reason": "XFA Standard has no best-day ratio; evaluation has consistency objective; optional XFA Consistency has 40%."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.topstep.com/en/articles/8284206-when-and-what-products-can-i-trade",
+          "reason": "Intraday-only CME futures; prescribed daily closing times and conduct restrictions."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://help.topstep.com/en/articles/8284215-express-funded-account-parameters",
+          "reason": "Position scaling in XFA; no funded profit target. Other live-stage conditions separate."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit"
+      }
+    }
+  },
+  "tradeify": {
+    "tradeify-growth-eval": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Growth Sim Funded; purchases after 12 September 2025.",
+      "scopeFr": "Growth Sim Funded actuel ; achat après le 12 septembre 2025.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns",
+          "reason": "EOD trail, lock at starting balance + $100 or at first payout request; monitored in real time."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.tradeify.co/en/articles/11083796-growth-funded-account-payout-policy",
+          "reason": "5 winning days, funded balance requirement, per-request caps $1,000–$5,000 depending on size/cycle."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://help.tradeify.co/en/articles/11083796-growth-funded-account-payout-policy",
+          "reason": "35% funded best-day ratio; none on Growth evaluation."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.tradeify.co/en/articles/10468318-guidelines-for-traders",
+          "reason": "Microscalping rule: majority of trades and profit must be held over 10 seconds; intraday closure. News trading allowed."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.tradeify.co/en/articles/12969284-tradeify-elite-program",
+          "reason": "Selected Elite Live transition closes all simulated and evaluation accounts; only accounts with an approved payout qualify, and post-last-payout progress is not carried forward."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "consistency": 35,
+        "consistencyBasis": "net",
+        "profitSplit": 90,
+        "source": "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns"
+      }
+    },
+    "tradeify-lightning": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Lightning Sim Funded; purchases after 12 September 2025.",
+      "scopeFr": "Lightning Sim Funded actuel ; achat après le 12 septembre 2025.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns",
+          "reason": "EOD trail, lock at starting balance + $100 or at first payout request; monitored in real time."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+          "reason": "Fresh profit targets each cycle and hard per-request caps $1,000–$3,500; unused previous-cycle profit does not count."
+        },
+        "consistency": {
+          "points": 0,
+          "source": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+          "reason": "20% first payout, 25% second, 30% subsequent."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.tradeify.co/en/articles/10468318-guidelines-for-traders",
+          "reason": "Microscalping rule: majority of trades and profit must be held over 10 seconds; intraday closure. News trading allowed."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.tradeify.co/en/articles/12969284-tradeify-elite-program",
+          "reason": "Selected Elite Live transition closes all simulated and evaluation accounts; only accounts with an approved payout qualify, and post-last-payout progress is not carried forward."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns"
+      }
+    },
+    "tradeify-select-eval": {
+      "checkedOn": "2026-11-27",
+      "scope": "Select Flex standard, bought after 1 September 2026; 25–150K only, no add-on. Daily option differs.",
+      "scopeFr": "Select Flex standard, achat après le 1er septembre 2026 ; 25–150K, sans option. Daily distinct.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns",
+          "reason": "EOD trail, lock at starting balance + $100 or at first payout request; monitored in real time."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+          "reason": "5 winning days, up to 50% of total profit with caps $1,250/$2,500/$3,500/$4,500; no separate minimum balance."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+          "reason": "No funded consistency in Select Flex; evaluation consistency remains."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.tradeify.co/en/articles/10468318-guidelines-for-traders",
+          "reason": "Microscalping rule: majority of trades and profit must be held over 10 seconds; intraday closure. News trading allowed."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.tradeify.co/en/articles/12969284-tradeify-elite-program",
+          "reason": "Selected Elite Live transition closes all simulated and evaluation accounts; only accounts with an approved payout qualify, and post-last-payout progress is not carried forward."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns"
+      }
+    }
+  }
 };
 export const CRITERIA:Criterion[]=['drawdown','payout','consistency','trading','funded'];
 export function getProgrammeEvidence(slug:string,id:string){return evidence[slug]?.[id]}

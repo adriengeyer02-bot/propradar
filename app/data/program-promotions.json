@@ -128,13 +128,15 @@
       "id": "tpt-nofee40-2026",
       "slug": "take-profit-trader",
       "productIds": [
-        "tpt-test"
+        "tpt-intraday-2026",
+        "tpt-classic-2026",
+        "tpt-eod-2026"
       ],
       "offer": "−40%",
       "code": "NOFEE40",
-      "terms": "40% off eligible NEW TEST subscriptions for the account's active lifetime and PRO activation fee waived, while the limited-time sign-up promotion remains available.",
-      "sourceUrl": "https://try.takeprofittrader.com/futures-traders-tab1-0725",
-      "checkedOn": "2026-11-19"
+      "terms": "Official 23 November 2026 specifications list a 40% discounted monthly Test price and $0 PRO activation with NOFEE40 across Intraday, Classic and EOD. Confirm checkout and duration; earlier accounts retain original terms.",
+      "sourceUrl": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40866438124957-Classic-Plan-Overview-Specifications",
+      "checkedOn": "2026-11-27"
     },
     {
       "id": "fundingpips-fp-2026",

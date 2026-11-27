@@ -1075,73 +1075,118 @@
       ]
     },
     "alpha-futures": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-27",
       "changelog": [
         {
           "date": "2026-11-17",
           "summary": "Full retrospective review: Alpha Futures remains active on Standard, Zero, Advanced and Direct programmes, with an identifiable UK simulated-trading provider. Finance Magnates documents the July 2026 NinjaTrader separation, closure of Premium accounts, fee refunds and cancellation of pending Premium reward requests. The disputed partner explanations are not adjudicated. PropRadar changes the score from 55 to 53, reflecting substantial historical payout-contract risk despite detailed live rules.",
           "source": "https://www.financemagnates.com/forex/ninjatrader-and-alpha-futures-breakup-turns-bitter-exposing-a-big-industry-risk/",
-          "fields": ["score", "verdict", "auditSummary", "legalReview"]
+          "fields": [
+            "score",
+            "verdict",
+            "auditSummary",
+            "legalReview"
+          ]
         },
         {
           "date": "2026-11-17",
           "summary": "The official terms identify Alpha Futures Limited, England and Wales no. 15655643, as provider of virtual simulated analyst accounts. The company retains plan-specific risk, consistency and performance-fee eligibility terms; this is not direct ownership of a real futures account.",
           "source": "https://alpha-futures.com/terms-and-conditions",
-          "fields": ["entities", "legalReview", "auditSummary"]
+          "fields": [
+            "entities",
+            "legalReview",
+            "auditSummary"
+          ]
         },
         {
           "date": "2026-11-17",
           "summary": "Exact-domain Trustpilot shows 4.3/5 on 6,304 reviews. Very recent reviews include both claimed successful rewards and unadjudicated refusals or delays, which do not by themselves establish each account's eligibility.",
           "source": "https://www.trustpilot.com/review/alpha-futures.com",
-          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl"]
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
         },
         {
           "date": "2026-10-23",
           "summary": "Corrected the official domain to alpha-futures.com. The July 8 pass had checked alphafutures.com, a parked domain this firm does not use, and wrongly classified the profile as stale. Score moved from 25 to 55 pending a full audit.",
           "source": "https://fundedtrading.com/propfirm/alpha-futures/",
-          "fields": ["website", "score", "status"]
+          "fields": [
+            "website",
+            "score",
+            "status"
+          ]
         },
         {
           "date": "2026-10-29",
           "summary": "Plans read on the official site and help center: Zero, Standard and Advanced monthly evaluations (from $89 a month) and Direct Qualified accounts, end-of-day trailing Maximum Loss Limit that stops at the starting balance, 90% split, 50% / 40% consistency on Standard, up to 4 payouts a month. Footer names ALPHA FUTURES LIMITED (England, 15655643).",
           "source": "https://alpha-futures.com/",
-          "fields": ["products", "priceFrom", "profitSplit", "drawdownType", "payoutDelay", "entities"]
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "drawdownType",
+            "payoutDelay",
+            "entities"
+          ]
         },
         {
           "date": "2026-10-29",
           "summary": "Trustpilot shows 4.3/5 from 6,212 reviews, with no notice about withheld ratings or removed fake reviews.",
           "source": "https://www.trustpilot.com/review/alpha-futures.com",
-          "fields": ["trustpilotRating", "trustpilotReviewCount"]
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         },
         {
           "date": "2026-11-14",
           "summary": "Dated incident added: Finance Magnates reported on 13 November 2026 that \"Alpha Futures closed its Premium Plan in July\" after NinjaTrader terminated the partnership, \"with accounts refunded and pending payouts beyond those already paid not honoured\"; \"The firm continues with its other plans.\"",
           "source": "https://www.financemagnates.com/forex/the-49-challenge-problem-are-futures-prop-margins-meeting-the-exit-door/",
-          "fields": ["incidents"]
+          "fields": [
+            "incidents"
+          ]
         },
         {
           "date": "2026-11-16",
           "summary": "Company-run leaderboard checked for a self-reported lifetime payout aggregate. Explicitly not bank-reconciled; the previously documented Premium Plan payout incident remains on the profile and the score does not change.",
           "source": "https://alpha-futures.com/leaderboard",
-          "fields": ["payoutProofs"]
+          "fields": [
+            "payoutProofs"
+          ]
         },
         {
           "date": "2026-11-16",
           "summary": "Independent Arbitrum transaction review: a 2025 RISEPAY transfer is visible on the public explorer and attributed to Alpha Futures by a third-party ledger tracker. Recipient identity and whether this is a trader rather than affiliate/vendor remuneration remain unverified. No rating uplift.",
           "source": "https://arbiscan.io/tx/0x24d54969903bd20d0fc280ac700d9908cb450340e3ac0c591ed339b1e3e1e7f7",
-          "fields": ["payoutProofs"]
+          "fields": [
+            "payoutProofs"
+          ]
         },
         {
           "date": "2026-11-18",
           "summary": "Restrictive-rules audit: read the official terms and conditions (Schedules 2, 4 and 5) and the official 2026 payout rules page; 8 rules across Zero, Standard, Advanced and Direct.",
           "source": "https://alpha-futures.com/posts/alpha-futures-payout-rules-2026",
-          "fields": ["restrictiveRules"]
+          "fields": [
+            "restrictiveRules"
+          ]
         },
         {
           "date": "2026-11-20",
           "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: payoutDelay.",
           "source": "https://alpha-futures.com/terms-and-conditions",
-          "fields": ["payoutDelay"]
+          "fields": [
+            "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-11-27",
+          "summary": "Added distinct Advanced and Direct products; completed current four-plan parameters from official programme overviews. No change to firm score or restrictive-rule classification.",
+          "source": "https://help.alpha-futures.com/en/articles/11634907-advanced-account-overview",
+          "fields": [
+            "products"
+          ]
         }
       ],
       "set": {
@@ -1158,9 +1203,19 @@
       },
       "setLegalReview": {
         "summary": "The official UK operator and simulation contract are identifiable, but the July 2026 closure of Premium accounts and cancellation of pending reward claims represents a material documented counterparty event. The firm continues selling other plans; contractual fault in the NinjaTrader dispute was not adjudicated for this audit.",
-        "regulatoryStatus": ["Official terms name Alpha Futures Limited, registered in England and Wales under 15655643, as provider of virtual simulated trading services.", "The separate NinjaTrader/Tradovate infrastructure relationship ended for the Premium programme in July 2026; this does not prove the remaining product lines have ceased."],
-        "complaintsAndDisputes": ["Finance Magnates documents the Premium programme closure, announced fee refunds and voided pending reward requests after the NinjaTrader breakup; the two counterparties disputed responsibility.", "Trustpilot 4.3/5 over 6,304 exact-domain reviews includes recent conflicting claims of payouts received and rejected or delayed, without independent case adjudication."],
-        "redFlags": ["Programme-specific unpaid Premium performance rewards following a material platform-provider dispute.", "Simulated performance fees depend on contract conditions and risk controls, not normal brokerage withdrawal protections.", "Company-reported aggregate payout figures and isolated blockchain movements do not reconcile every reward entitlement."],
+        "regulatoryStatus": [
+          "Official terms name Alpha Futures Limited, registered in England and Wales under 15655643, as provider of virtual simulated trading services.",
+          "The separate NinjaTrader/Tradovate infrastructure relationship ended for the Premium programme in July 2026; this does not prove the remaining product lines have ceased."
+        ],
+        "complaintsAndDisputes": [
+          "Finance Magnates documents the Premium programme closure, announced fee refunds and voided pending reward requests after the NinjaTrader breakup; the two counterparties disputed responsibility.",
+          "Trustpilot 4.3/5 over 6,304 exact-domain reviews includes recent conflicting claims of payouts received and rejected or delayed, without independent case adjudication."
+        ],
+        "redFlags": [
+          "Programme-specific unpaid Premium performance rewards following a material platform-provider dispute.",
+          "Simulated performance fees depend on contract conditions and risk controls, not normal brokerage withdrawal protections.",
+          "Company-reported aggregate payout figures and isolated blockchain movements do not reconcile every reward entitlement."
+        ],
         "sources": [
           {
             "label": "Alpha Futures live simulated-contract terms",
@@ -1183,40 +1238,107 @@
       "setProducts": [
         {
           "id": "alpha-futures-zero",
-          "name": "Zero evaluation",
+          "name": "Zero — evaluation",
           "type": "Futures evaluation",
-          "description": "Monthly evaluation: $89 (25K), $169 (50K), $279 (100K).",
+          "description": "Monthly subscription, $0 activation for current purchases. No evaluation consistency; 40% qualified; 5 profitable days $200+; max withdrawals $1,000/$1,500/$2,500. Qualified news restrictions apply except Advanced; live transition has distinct profit treatment.",
           "accountSizeMin": 25000,
           "accountSizeMax": 100000,
           "entryFeeMin": 89,
           "entryFeeMax": 279,
-          "profitTarget": "not stated on the pages read",
-          "maxDailyLoss": "not stated on the pages read",
-          "maxDrawdown": "end-of-day trailing Maximum Loss Limit, stops trailing at the starting balance",
-          "profitSplit": "not stated on the pages read",
-          "platforms": ["not stated"],
-          "tradableAssets": ["Futures"],
-          "hasConsistencyRule": false,
-          "consistencyRule": "Marketed as a no-consistency-rule evaluation (official product page title, 29 Oct 2026)."
+          "profitTarget": "$1,500 / $3,000 / $6,000",
+          "maxDailyLoss": "$500 / $1,000 / $2,000 (soft pause)",
+          "maxDrawdown": "$1,000 / $2,000 / $3,000 EOD trailing",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll",
+          "drawdownDetails": "Daily closing high; stops at initial balance, real-time equity enforcement.",
+          "profitSplit": "90% qualified",
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "No evaluation consistency; 40% qualified; 5 profitable days $200+; max withdrawals $1,000/$1,500/$2,500.",
+          "minTradingDays": "5 winning days of $200+ per payout"
         },
         {
           "id": "alpha-futures-standard",
-          "name": "Standard evaluation",
+          "name": "Standard — evaluation",
           "type": "Futures evaluation",
-          "description": "Monthly evaluation: $129 (50K), $239 (100K), $349 (150K); resets $109 to $289; no activation fee. Advanced ($209 to $489 a month) and Direct Qualified ($349 to $859 one-time) plans also exist.",
+          "description": "Monthly subscription, $0 activation for current purchases. 50% evaluation; 40% qualified; 5 profitable days $200+; max withdrawals $3,000/$4,000/$5,000. Qualified news restrictions apply except Advanced; live transition has distinct profit treatment.",
           "accountSizeMin": 50000,
           "accountSizeMax": 150000,
           "entryFeeMin": 129,
           "entryFeeMax": 349,
-          "profitTarget": "$3,000 (50K), $6,000 (100K), $9,000 (150K)",
-          "maxDailyLoss": "Daily Loss Guard $1,000 to $3,000 on qualified accounts; not on evaluations",
-          "maxDrawdown": "$2,000 to $4,500, end-of-day trailing, stops at the starting balance",
-          "profitSplit": "90% from the start",
-          "platforms": ["not stated"],
-          "tradableAssets": ["Futures"],
-          "minTradingDays": "5 winning days of $200 or more before a payout",
+          "profitTarget": "$3,000 / $6,000 / $9,000",
+          "maxDailyLoss": "None in evaluation; $1,000 / $2,000 / $3,000 qualified soft pause",
+          "maxDrawdown": "$2,000 / $3,000 / $4,500 EOD trailing",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll",
+          "drawdownDetails": "Daily closing high; stops at initial balance, real-time equity enforcement.",
+          "profitSplit": "90% qualified",
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
-          "consistencyRule": "50% on evaluations, 40% on qualified accounts (official help article, 29 Oct 2026)."
+          "consistencyRule": "50% evaluation; 40% qualified; 5 profitable days $200+; max withdrawals $3,000/$4,000/$5,000.",
+          "minTradingDays": "5 winning days of $200+ per payout"
+        },
+        {
+          "id": "alpha-futures-advanced",
+          "name": "Advanced — evaluation",
+          "type": "Futures evaluation",
+          "description": "Monthly subscription, $0 activation for current purchases. 40% evaluation only; none qualified; 5 profitable days $200+; max withdrawal $15,000 and 50% of profit. Qualified news restrictions apply except Advanced; live transition has distinct profit treatment.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 209,
+          "entryFeeMax": 489,
+          "profitTarget": "$4,000 / $8,000 / $12,000",
+          "maxDailyLoss": "None",
+          "maxDrawdown": "$1,750 / $3,500 / $5,250 EOD trailing",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll",
+          "drawdownDetails": "Daily closing high; stops at initial balance, real-time equity enforcement.",
+          "profitSplit": "90% qualified",
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "40% evaluation only; none qualified; 5 profitable days $200+; max withdrawal $15,000 and 50% of profit.",
+          "minTradingDays": "5 winning days of $200+ per payout"
+        },
+        {
+          "id": "alpha-futures-direct",
+          "name": "Direct — directly qualified",
+          "type": "Instant funding",
+          "description": "One-time fee, no evaluation. 20% qualified, fresh profit target after each withdrawal; max withdrawals $1,000/$2,000/$2,500/$3,000. Qualified news restrictions apply except Advanced; live transition has distinct profit treatment.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 349,
+          "entryFeeMax": 859,
+          "profitTarget": "No evaluation; first withdrawal profit targets $1,500 / $3,000 / $6,000 / $9,000",
+          "maxDailyLoss": "$500 / $1,000 / $2,000 / $3,000 (soft pause)",
+          "maxDrawdown": "$1,000 / $2,000 / $3,000 / $4,500 EOD trailing",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll",
+          "drawdownDetails": "Daily closing high; stops at initial balance, real-time equity enforcement.",
+          "profitSplit": "90% qualified",
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "20% qualified, fresh profit target after each withdrawal; max withdrawals $1,000/$2,000/$2,500/$3,000.",
+          "minTradingDays": "No winning-day minimum; target and 20% consistency"
         }
       ],
       "setEntities": [
@@ -1272,6 +1394,18 @@
         {
           "label": "Alpha Futures payout rules 2026 (official, 2026-11-18)",
           "url": "https://alpha-futures.com/posts/alpha-futures-payout-rules-2026"
+        },
+        {
+          "label": "Zero account overview",
+          "url": "https://help.alpha-futures.com/en/articles/11771813-zero-account-overview"
+        },
+        {
+          "label": "Advanced account overview",
+          "url": "https://help.alpha-futures.com/en/articles/11634907-advanced-account-overview"
+        },
+        {
+          "label": "Direct account overview",
+          "url": "https://help.alpha-futures.com/en/articles/15838742-direct-account-overview"
         }
       ],
       "addPayoutProofs": [
@@ -1316,7 +1450,11 @@
       "restrictiveRules": [
         {
           "program": "Zero, Standard and Direct Qualified Accounts",
-          "appliesTo": ["zero", "standard", "direct"],
+          "appliesTo": [
+            "zero",
+            "standard",
+            "direct"
+          ],
           "category": "news",
           "severity": "blocking",
           "clarity": "clear",
@@ -1326,7 +1464,11 @@
         },
         {
           "program": "Zero, Standard and Direct Qualified Accounts",
-          "appliesTo": ["zero", "standard", "direct"],
+          "appliesTo": [
+            "zero",
+            "standard",
+            "direct"
+          ],
           "category": "consistency",
           "severity": "major",
           "clarity": "clear",
@@ -1336,7 +1478,9 @@
         },
         {
           "program": "All Qualified Accounts",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "payout-cap",
           "severity": "major",
           "clarity": "clear",
@@ -1346,7 +1490,11 @@
         },
         {
           "program": "Zero, Standard and Advanced Qualified Accounts",
-          "appliesTo": ["zero", "standard", "advanced"],
+          "appliesTo": [
+            "zero",
+            "standard",
+            "advanced"
+          ],
           "category": "min-trading-days",
           "severity": "minor",
           "clarity": "clear",
@@ -1356,7 +1504,9 @@
         },
         {
           "program": "All programmes",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "min-hold-time",
           "severity": "blocking",
           "clarity": "vague",
@@ -1366,7 +1516,9 @@
         },
         {
           "program": "All programmes",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "ea-copy-hft",
           "severity": "blocking",
           "clarity": "buried",
@@ -1376,7 +1528,9 @@
         },
         {
           "program": "All programmes",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "discretionary-clause",
           "severity": "blocking",
           "clarity": "vague",
@@ -1386,7 +1540,9 @@
         },
         {
           "program": "All programmes",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "weekend-overnight",
           "severity": "minor",
           "clarity": "buried",
@@ -14311,14 +14467,15 @@
       ]
     },
     "take-profit-trader": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-27",
       "set": {
         "trustpilotRating": 4.4,
         "trustpilotReviewCount": 11175,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/takeprofittrader.com",
         "drawdownType": "Hybride",
-        "verdict": "Take Profit Trader has three importantly different futures stages: TEST evaluations trail at end of day, PRO funded accounts trail unrealized intraday equity, and invitation-based PRO+ uses an EOD model. All PRO positions must be closed around specified FOMC, NFP and CPI announcements. A PRO withdrawal buffer and PRO+ profit reserve limit early access to gains. Score remains 73/100; published restrictions are not treated as hidden terms.",
-        "auditSummary": "18 November 2026: TEST has EOD trailing drawdowns of $1,500 to $4,500 on $25K–$150K, 50% best-day evaluation consistency and three trading days. PRO applies an unrealized-equity high-water intraday trail, which can move upward before profit is closed, and requires the trader to build a buffer equal to the account drawdown before the ordinary 80% split can be withdrawn. All orders and positions must be absent during the one minute before, during and one minute after prohibited FOMC statements, NFP and CPI news. PRO+ is a separate selectively granted live path, uses EOD trailing and a 90% split, and freezes $5,000 of preceding PRO gains during PRO+ participation. The marketed ability to withdraw from day one has PRO-stage qualifications. No payout transfer independently tested; 73/100 unchanged."
+        "verdict": "Take Profit Trader introduced Intraday, Classic and EOD plans on 23 November 2026. Funded drawdown, daily loss and daily profit limits vary by plan. Daily withdrawals require a PRO buffer; specified news events require flat positions. Legacy accounts retain earlier terms.",
+        "auditSummary": "Product refresh 27 November 2026: all three current plans offer 25K, 50K and 150K sizes, monthly Test fees and $130 PRO activation before any verified waiver. Test consistency 50%, no funded consistency; PRO buffer equals maximum drawdown. Classic and Intraday use PRO intraday equity trailing, EOD uses daily closing high plus a daily loss limit. PRO daily profit ceilings are $10,000 on Classic/Intraday and $5,000 on EOD. A live PRO+ invitation freezes $5,000 of PRO gains; the loss floor depends on chosen plan. This refresh is documentary; global score inputs and existing restrictive-rule classifications have not been recalculated.",
+        "priceFrom": 110
       },
       "changelog": [
         {
@@ -14331,25 +14488,50 @@
           "date": "2026-10-26",
           "summary": "Trustpilot read: 4.4 TrustScore across 10,977 reviews (jp.trustpilot.com mirror; an ie.trustpilot.com snapshot showed 4.4 across 10,787).",
           "source": "https://jp.trustpilot.com/review/takeprofittrader.com",
-          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl"]
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
         },
         {
           "date": "2026-11-08",
           "summary": "Trustpilot refreshed: 4.4 TrustScore (unchanged) across 11,175 reviews.",
           "source": "https://www.trustpilot.com/review/takeprofittrader.com",
-          "fields": ["trustpilotReviewCount"]
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         },
         {
           "date": "2026-11-18",
           "summary": "Separated TEST end-of-day trail from PRO intraday-equity trail and PRO+ EOD trail; spelled out FOMC/NFP/CPI no-position window, funded buffer and cashout restrictions. Score stays 73 because these published rules were not found to be concealed.",
           "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
-          "fields": ["verdict", "auditSummary", "products", "restrictiveRules", "drawdownType"]
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "products",
+            "restrictiveRules",
+            "drawdownType"
+          ]
         },
         {
           "date": "2026-11-18",
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170265979165-Rule-3-Do-Not-Hit-End-Of-Day-EOD-Maximum-Trailing-Drawdown",
-          "fields": ["restrictiveRules"]
+          "fields": [
+            "restrictiveRules"
+          ]
+        },
+        {
+          "date": "2026-11-27",
+          "summary": "Current catalogue split into Intraday, Classic and EOD after 23 November launch; current subscription sizes, funded drawdown, daily limits and buffer verified; legacy rules retained in historical audit. Global scoring inputs unchanged.",
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40739474201501-Classic-vs-EOD-vs-Intraday-Which-Plan-Is-Right-for-You",
+          "fields": [
+            "products",
+            "priceFrom",
+            "verdict",
+            "auditSummary"
+          ]
         }
       ],
       "addSources": [
@@ -14372,6 +14554,18 @@
         {
           "label": "TakeProfitTrader PRO buffer and withdrawal limits",
           "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules"
+        },
+        {
+          "label": "Current three-plan comparison",
+          "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40739474201501-Classic-vs-EOD-vs-Intraday-Which-Plan-Is-Right-for-You"
+        },
+        {
+          "label": "Intraday plan",
+          "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/$10,000"
+        },
+        {
+          "label": "EOD plan",
+          "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/$5,000"
         }
       ],
       "restrictiveRules": [
@@ -14380,7 +14574,9 @@
           "rule": "End-of-day trailing maximum loss; best winning day at most 50% of evaluation profit and a three-trading-day minimum.",
           "impact": "Intraday profit does not move the end-of-day threshold until the close, but the evaluation remains subject to concentration.",
           "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170265979165-Rule-3-Do-Not-Hit-End-Of-Day-EOD-Maximum-Trailing-Drawdown",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "consistency",
           "severity": "minor",
           "clarity": "clear"
@@ -14390,7 +14586,9 @@
           "rule": "Trailing drawdown follows the highest REAL-TIME equity, including unrealized gains. Build a payout buffer equivalent to the maximum loss limit before normal cash-outs.",
           "impact": "A temporary unrealized spike raises the floor and then can cause account liquidation; profit is not all freely withdrawable.",
           "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "funded-trailing-drawdown",
           "severity": "major",
           "clarity": "clear"
@@ -14400,7 +14598,9 @@
           "rule": "All positions and orders must be flat at least one minute before, during and one minute after specified FOMC, NFP and CPI releases.",
           "impact": "Existing open positions must be closed even if the trader does not intend to place a new trade.",
           "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "news",
           "severity": "minor",
           "clarity": "clear"
@@ -14408,61 +14608,82 @@
       ],
       "setProducts": [
         {
-          "id": "tpt-test",
-          "name": "TEST — evaluation",
+          "id": "tpt-intraday-2026",
+          "name": "Intraday — Test → PRO → PRO+",
           "type": "Futures evaluation",
-          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "description": "New purchases from 23 November 2026. $25K / $50K / $150K. Monthly subscription; $130 PRO activation fee before any verified waiver. PRO daily payouts above the loss-budget buffer, no withdrawal cap; daily profit limit $10,000. PRO+ is invitation-based; $5,000 of PRO profits frozen while live account active. Earlier accounts retain legacy rules.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
-          "profitTarget": "Tier profit target",
-          "maxDailyLoss": "No daily hard cap stated on standard TEST",
-          "maxDrawdown": "$1,500–$4,500 EOD trailing",
-          "drawdownType": "EOD",
-          "drawdownSource": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170265979165-Rule-3-Do-Not-Hit-End-Of-Day-EOD-Maximum-Trailing-Drawdown",
-          "drawdownDetails": "Loss floor updates after daily settlement and locks at initial balance.",
-          "profitSplit": "N/A evaluation",
-          "platforms": ["Confirm at checkout"],
-          "tradableAssets": ["Futures"],
-          "hasConsistencyRule": true,
-          "consistencyRule": "Best trading day ≤50% of total evaluation gains.",
-          "minTradingDays": "3 days"
-        },
-        {
-          "id": "tpt-pro",
-          "name": "PRO — funded",
-          "type": "Scaling",
-          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
-          "accountSizeMin": 25000,
-          "accountSizeMax": 150000,
-          "profitTarget": "No evaluation target",
-          "maxDailyLoss": "Risk by chosen contract tier",
-          "maxDrawdown": "Real-time high-equity trailing",
+          "entryFeeMin": 110,
+          "entryFeeMax": 360,
+          "profitTarget": "$1,500 / $3,000 / $9,000 (Test)",
+          "maxDailyLoss": "No daily loss limit",
+          "maxDrawdown": "$1,000 / $2,000 / $4,500; Test / PRO / PRO+: Intraday / Intraday / Intraday",
           "drawdownType": "Trailing",
-          "drawdownSource": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
-          "drawdownDetails": "Unrealized profits immediately advance the floor; buffer equals the maximum loss amount.",
-          "profitSplit": "80%",
-          "platforms": ["Confirm at checkout"],
-          "tradableAssets": ["Futures"],
-          "hasConsistencyRule": false,
-          "minTradingDays": "At least one completed trade per week"
+          "drawdownSource": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40866422052125-Intraday-Plan-Overview-Specifications",
+          "drawdownDetails": "Funded PRO drawdown type shown; floor stops at starting balance. Intraday equity including unrealized gains.",
+          "profitSplit": "80% PRO; 90% PRO+",
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "50% best-day rule in Test only; none in PRO or PRO+.",
+          "minTradingDays": "3 Test days; PRO at least one traded day per calendar month"
         },
         {
-          "id": "tpt-proplus",
-          "name": "PRO+ — selected funded",
-          "type": "Scaling",
-          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "id": "tpt-classic-2026",
+          "name": "Classic — Test → PRO → PRO+",
+          "type": "Futures evaluation",
+          "description": "New purchases from 23 November 2026. $25K / $50K / $150K. Monthly subscription; $130 PRO activation fee before any verified waiver. PRO daily payouts above the loss-budget buffer, no withdrawal cap; daily profit limit $10,000. PRO+ is invitation-based; $5,000 of PRO profits frozen while live account active. Earlier accounts retain legacy rules.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
-          "profitTarget": "No evaluation; invite-only",
-          "maxDailyLoss": "Check funded risk tier",
-          "maxDrawdown": "EOD trailing",
+          "entryFeeMin": 150,
+          "entryFeeMax": 465,
+          "profitTarget": "$1,500 / $3,000 / $9,000 (Test)",
+          "maxDailyLoss": "No daily loss limit",
+          "maxDrawdown": "$1,000 / $2,000 / $4,500; Test / PRO / PRO+: EOD / Intraday / EOD",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40866438124957-Classic-Plan-Overview-Specifications",
+          "drawdownDetails": "Funded PRO drawdown type shown; floor stops at starting balance. Intraday equity including unrealized gains.",
+          "profitSplit": "80% PRO; 90% PRO+",
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "50% best-day rule in Test only; none in PRO or PRO+.",
+          "minTradingDays": "3 Test days; PRO at least one traded day per calendar month"
+        },
+        {
+          "id": "tpt-eod-2026",
+          "name": "EOD — Test → PRO → PRO+",
+          "type": "Futures evaluation",
+          "description": "New purchases from 23 November 2026. $25K / $50K / $150K. Monthly subscription; $130 PRO activation fee before any verified waiver. PRO daily payouts above the loss-budget buffer, no withdrawal cap; daily profit limit $5,000. PRO+ is invitation-based; $5,000 of PRO profits frozen while live account active. Earlier accounts retain legacy rules.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 160,
+          "entryFeeMax": 499,
+          "profitTarget": "$1,500 / $3,000 / $9,000 (Test)",
+          "maxDailyLoss": "$500 / $1,000 / $2,500; PRO soft or hard depending on balance",
+          "maxDrawdown": "$1,000 / $2,000 / $4,500; Test / PRO / PRO+: EOD / EOD / EOD",
           "drawdownType": "EOD",
-          "drawdownSource": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172006753821-PRO-Account-Rules",
-          "drawdownDetails": "Live route by approval, distinct from the PRO intraday trail; $5,000 preceding PRO gains held as reserve.",
-          "profitSplit": "90%",
-          "platforms": ["Confirm at checkout"],
-          "tradableAssets": ["Futures"],
-          "hasConsistencyRule": false
+          "drawdownSource": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40866438043037-EOD-Plan-Overview-Specifications",
+          "drawdownDetails": "Funded PRO drawdown type shown; floor stops at starting balance. EOD balance high; real-time breach enforcement.",
+          "profitSplit": "80% PRO; 90% PRO+",
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "50% best-day rule in Test only; none in PRO or PRO+.",
+          "minTradingDays": "3 Test days; PRO at least one traded day per calendar month"
         }
       ],
       "auditedPrograms": [
