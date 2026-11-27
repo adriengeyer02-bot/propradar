@@ -10,7 +10,15 @@ export type GuideTranslation = {
   /** Long-form sections, translated from guideArticles when the guide has one. */
   article?: {
     intro?: string;
-    sections: { heading: string; paragraphs: string[]; bullets?: string[]; steps?: { title: string; text: string }[] }[];
+    keyPoints?: string[];
+    sections: {
+      heading: string; paragraphs: string[]; bullets?: string[]; steps?: { title: string; text: string }[];
+      callout?: import('../guideArticles').GuideCallout;
+      compare?: import('../guideArticles').GuideArticleSection['compare'];
+      stats?: import('../guideArticles').GuideArticleSection['stats'];
+      fit?: import('../guideArticles').GuideArticleSection['fit'];
+      prosCons?: import('../guideArticles').GuideArticleSection['prosCons'];
+    }[];
   };
 };
 
