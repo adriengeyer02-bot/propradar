@@ -1,0 +1,1063 @@
+{
+  "date": "2026-11-27",
+  "status": "PARTIAL_NOT_PUBLICATION_READY",
+  "scope": "28 additional firms ranks 23–50 within Scale C dataset, plus candidate screening from historical proposal. Actual public top 50 not reconstructed; other firms can rank at 60 due to cap, public web cache outdated.",
+  "method": "Read archive indexes and targeted clause excerpts, not exhaustive reading; new score scenarios preserve existing ceilings/TP except stated gate and candidate corrections. No publication, no new barème. Check all remaining programs and documentary gaps.",
+  "firms": [
+    {
+      "slug": "lark-funding",
+      "score": 63,
+      "displayedScore": 63,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2",
+          "points": 8,
+          "source": "https://larkfunding.com/terms-of-use",
+          "locator": "§4.6; §4 Prohibited Uses"
+        },
+        {
+          "code": "D_PAYOUT_CAP",
+          "points": 4,
+          "source": "https://helpdesk.larkfunding.com/en/articles/8243502-prohibited-trading-strategies",
+          "locator": "main programme scored: 1step"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/lark-funding/6343e65c37ad.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§8.1 guidelines supplied on site and by email on becoming Trader, modifiable and incorporated; generic §1.4 amendment insufficient alone. Verify funded version and actual access before purchase for B7; B3 only if current account rules demonstrably modified. Existing D cap source is prohibited strategies rather than payout page: replace with exact current payout source.",
+      "candidate": "B3/B7 open",
+      "scenario": null
+    },
+    {
+      "slug": "sabiotrade",
+      "score": 63,
+      "displayedScore": 63,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "D_FUNDED_TRAILING_DRAWDOWN",
+          "points": 2,
+          "source": "https://sabiotrade.us/",
+          "locator": "main programme scored: classic"
+        },
+        {
+          "code": "TPW",
+          "points": 10,
+          "source": "",
+          "locator": ""
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/sabiotrade/upload-6133f80cd7.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "French OCR of generic agreement permits amendment and termination; no precise accrued-reward linkage established in selected excerpts. Compare English  cbf7359f38ca.txt and exact funded rules; no additional B3 merely from continued use.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "top-one-futures",
+      "score": 63,
+      "displayedScore": 63,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B6",
+          "points": 5,
+          "source": "https://toponefutures.com/terms-and-conditions/",
+          "locator": "§9 Code of Conduct"
+        },
+        {
+          "code": "D_PAYOUT_CAP",
+          "points": 4,
+          "source": "https://help.toponefutures.com/en/articles/12717928-elite-sim-funded-account-payout-requirements",
+          "locator": "main programme scored: elite"
+        },
+        {
+          "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
+          "points": 3,
+          "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
+          "locator": "main programme scored: elite"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/top-one-futures/19c041d1f908.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§4 vaguely prohibits trading harming broker relationships and reckless/oversized trading; the same paragraph explicitly provides profit forfeiture. B2 −8 candidate, independently corroborated by public official terms. §5 permits changes to withdrawal limits, but scope of current accounts still to establish for B3. Compare Elite/Access/Daily V2 funded rules and transition.",
+      "candidate": "B2 -8",
+      "scenario": 55
+    },
+    {
+      "slug": "atlas-funded",
+      "score": 62,
+      "displayedScore": 62,
+      "ceiling": 65,
+      "existingCodes": [
+        {
+          "code": "TPR",
+          "points": 3,
+          "source": "",
+          "locator": "3.9 / 2015"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/atlas-funded/upload-fbb07b47ba.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§5.2 account-by-account assessment of oversized or binary-outcome trades as gambling; §5.4 permits withholding and voids profits on serious/repeated breaches. B2 −8 candidate subject to breach linkage and any more precise rules. §5.3 deducts news profits: B5 requires explicit retention of losses. §7 expressly protects honest positive or negative reviews: no B6. Add-ons prospective; no B3 from that language.",
+      "candidate": "B2 -8 conditional",
+      "scenario": 54
+    },
+    {
+      "slug": "city-traders-imperium",
+      "score": 62,
+      "displayedScore": 62,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2",
+          "points": 8,
+          "source": "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf",
+          "locator": "§9.2.9; §10; §10.2.4; §8.11 (PDF of 12 June 2026, saved by Geyer)"
+        },
+        {
+          "code": "B6",
+          "points": 5,
+          "source": "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf",
+          "locator": "§12 (restriction of access)"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/city-traders-imperium/upload-587ef28e59.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "June 12 terms §8.11 forfeits rewards for any breach; §9.2.6 broad market/harm standard; §10 sanctions include removal of trade results from profits and/or losses, not proven asymmetric. B2 already counted; §8.12 interview sanction and funded agreement to verify. Four archived FAQ failures.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "forex-funds-flow",
+      "score": 62,
+      "displayedScore": 62,
+      "ceiling": 65,
+      "existingCodes": [
+        {
+          "code": "TPR",
+          "points": 3,
+          "source": "",
+          "locator": "3.6 / 265"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/forex-funds-flow/283f088e4d7d.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "Prohibited trading includes minimum 2 minutes even for stop-loss hits (warning), quantified margin 80%, news and copy-trade rules. Rejection of rewards possible on violations; determine if additional unquantified standard alone triggers rejection before B2. No generic reputation clause penalty without ordinary criticism and sanction linkage.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "hyrotrader",
+      "score": 62,
+      "displayedScore": 62,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2A",
+          "points": 4,
+          "source": "https://www.hyrotrader.com/terms-and-conditions/",
+          "locator": "§10.2(g),(k); §10.3(d),(h); §24.2"
+        },
+        {
+          "code": "B7",
+          "points": 5,
+          "source": "https://www.hyrotrader.com/terms-and-conditions/",
+          "locator": "§P.4; Companion Policies"
+        },
+        {
+          "code": "D_PAYOUT_CAP",
+          "points": 4,
+          "source": "https://www.hyrotrader.com/faq/orders-billing-taxes/is-there-a-maximum-withdrawal-amount-in-one-payout/",
+          "locator": "main programme scored: core"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/hyrotrader/a1c5aa6d2a5b.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§10.3, §20 pending rewards forfeiture on linked involved accounts, already covered by B2A candidate. Some safeguards protect accounts not involved and return unused deposits. Determine actual funded agreement availability and distinguish global cap from particular programs; do not stack similar punishments.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "top-one-trader",
+      "score": 61,
+      "displayedScore": 61,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "points": 4,
+          "source": "https://help.toponetrader.com/en/articles/15164961-2-step-pro-v2-when-can-i-request-a-payout",
+          "locator": "main programme scored: 2steppro"
+        },
+        {
+          "code": "TPW",
+          "points": 10,
+          "source": "",
+          "locator": ""
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/top-one-trader/b4af9153cafa.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "Anti-disparagement and conduct explicitly includes negative online reviews and profit forfeiture/termination, survives two years; B6 −5 independent of TPW. Public terms corroborated. Vague strategy rules and associated forfeiture merit B2 review, not added yet.",
+      "candidate": "B6 -5",
+      "scenario": 56
+    },
+    {
+      "slug": "tx3-funding",
+      "score": 61,
+      "displayedScore": 61,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2",
+          "points": 8,
+          "source": "https://www.tx3funding.com/en/terms",
+          "locator": "§8; §11"
+        },
+        {
+          "code": "TPR",
+          "points": 6,
+          "source": "",
+          "locator": "3 / 4311"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/tx3-funding/4af315459d1a.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§8–11 delay/deny pending investigations and forfeiture for breach, already B2. General professional conduct covers harassment/disruption; no B6 on generic anti-abuse. Compare Flex/Pro/1 Phase payout gates and any funded contract. One archive failure.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "willis-capital",
+      "score": 61,
+      "displayedScore": 61,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B6",
+          "points": 5,
+          "source": "https://www.wfunded.io/en/terms-and-conditions",
+          "locator": "§5.3 Reputational Protection & Defamation Policy"
+        },
+        {
+          "code": "D_PAYOUT_CONDITIONS",
+          "points": 3,
+          "source": "https://www.wfunded.io/en/terms-and-conditions",
+          "locator": "main programme scored: skillcheck-standard"
+        },
+        {
+          "code": "TPR",
+          "points": 6,
+          "source": "",
+          "locator": "3.4 / 294"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/willis-capital/4e772e093f76.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "Stop-loss requirement at execution with forfeiture of all previously earned profits and automatic live breach: E_HARSH −2 candidate if distinct and applicable. Existing B6 §5.3 specifically false/defamatory or coordinated malicious harm; ordinary criticism not demonstrated, possible removal +5. Verify clauses outside §5.3 and separate fund-manager scope.",
+      "candidate": "E_HARSH -2; B6 +5 conditional",
+      "scenario": 64
+    },
+    {
+      "slug": "audacity-capital",
+      "score": 60,
+      "displayedScore": 60,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B3",
+          "points": 5,
+          "source": "https://www.audacity.capital/terms-and-conditions/",
+          "locator": "Terms, changes clause"
+        },
+        {
+          "code": "TPW",
+          "points": 10,
+          "source": "",
+          "locator": ""
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/audacity-capital/5d5dc3b1096c.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "Written review for disputed payouts; current-account material amendments require notice; no retroactive application to trades opened before change. Existing B3 not automatically invalid because future trades on active accounts can change, but safeguard must be disclosed. Check full risk rules and appeal before B2A; no new points.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "brightfunded",
+      "score": 60,
+      "displayedScore": 60,
+      "ceiling": 85,
+      "existingCodes": [
+        {
+          "code": "B1",
+          "points": 15,
+          "source": "https://brightfunded.com/terms-conditions",
+          "locator": "§7.2; §7.8"
+        },
+        {
+          "code": "TPW",
+          "points": 10,
+          "source": "",
+          "locator": ""
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/brightfunded/29c468a0eb2c.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§7.2/7.8 B1 already scored; no B2 stacking. §16 general amendment insufficient alone. Compare new and legacy Instant/1 Step Daily/2 Step Bright, current funded agreement, exact news deduction and loss treatment. No extra point established.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "funderpro",
+      "score": 65,
+      "displayedScore": 60,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "TPW",
+          "points": 10,
+          "source": "",
+          "locator": ""
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/funderpro/d0e3fc227b8f.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "Instant agreement permits denial of reward for prohibited use, broad discretionary provisions, §15.7 suspicious conduct and nonpayment. Existing reading excerpts and display cap 60; only Instant terms archived, challenge funded agreement missing. No global B1/B2 from side product without scope.",
+      "candidate": "partial; display remains capped",
+      "scenario": null
+    },
+    {
+      "slug": "leeloo-trading",
+      "score": 60,
+      "displayedScore": 60,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B3",
+          "points": 5,
+          "source": "https://www.leelootrading.com/terms-conditions",
+          "locator": "§8 Subscription and payouts"
+        },
+        {
+          "code": "D_PAYOUT_CAP",
+          "points": 4,
+          "source": "https://www.leelootrading.com/",
+          "locator": "main programme scored: performance"
+        },
+        {
+          "code": "TPR",
+          "points": 6,
+          "source": "",
+          "locator": "3.1 / 608"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/leeloo-trading/f671bfcbf462.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§8 caps change at any time (B3 and D already counted); vague reckless/gambling and program spirit account closure. B2 needs explicit link to earned reward refusal. Verify whether payout cap per account/user/period and whether less restrictive main plan exists. Two blocked pages.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "aqua-funded",
+      "score": 59,
+      "displayedScore": 59,
+      "ceiling": 85,
+      "existingCodes": [
+        {
+          "code": "B2",
+          "points": 8,
+          "source": "https://www.aquafunded.com/legal/terms-and-conditions",
+          "locator": "Risk management; prohibited strategies"
+        },
+        {
+          "code": "D_PAYOUT_CAP",
+          "points": 4,
+          "source": "https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work",
+          "locator": "main programme scored: instant-standard"
+        },
+        {
+          "code": "D_FUNDED_TRAILING_DRAWDOWN",
+          "points": 2,
+          "source": "https://help.aquafunded.com/en/articles/10476448-instant-funding-standard",
+          "locator": "main programme scored: instant-standard"
+        },
+        {
+          "code": "D_SPLIT_REDUCTION",
+          "points": 2,
+          "source": "https://help.aquafunded.com/en/articles/10476448-instant-funding-standard",
+          "locator": "main programme scored: instant-standard"
+        },
+        {
+          "code": "TPW",
+          "points": 10,
+          "source": "",
+          "locator": ""
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/aqua-funded/0e60ac217136.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "Risk review and denial for inappropriate risk already B2. Review Pay After Pass, Instant Pro, Standard and Forex rules; existing D split reduction/trailing/cap from Instant Standard may not reflect least restrictive principal program. No extra penalty established.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "fintokei",
+      "score": 59,
+      "displayedScore": 59,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2",
+          "points": 8,
+          "source": "https://www.fintokei.com/",
+          "locator": "General Terms and Conditions V17 (Nov 2026, PDF saved by Geyer 25 Nov 2026): prohibited trading xvii and consequences; virtually funded phase §2"
+        },
+        {
+          "code": "B3",
+          "points": 5,
+          "source": "https://support.fintokei.com/en/articles/11315971-other-restrictions-that-may-be-part-of-consistency-rules",
+          "locator": "General Terms V17, consistency rules (consequences iii); support article"
+        },
+        {
+          "code": "D_PAYOUT_CONDITIONS",
+          "points": 3,
+          "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
+          "locator": "main programme scored: swift"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/fintokei/upload-d1d83d48f0.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "V17 Article XXIV incorporates Appendix 2 into all contracts and survives two years; Appendix 2 §2 explicitly prohibits criticism and §3 provides damages/costs/legal fees. B6 −5 candidate under C (damages qualifies), separate from B2/B3. Distinguish loyalty program discretionary features from funded rewards. OCR version to match original.",
+      "candidate": "B6 -5",
+      "scenario": 54
+    },
+    {
+      "slug": "hantec-trader",
+      "score": 59,
+      "displayedScore": 59,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2",
+          "points": 8,
+          "source": "https://rzrfunded.com/terms-conditions/",
+          "locator": "Prohibited Trading enforcement; Risk Management Group (clause 8)"
+        },
+        {
+          "code": "B3",
+          "points": 5,
+          "source": "https://rzrfunded.com/terms-conditions/",
+          "locator": "§3.6 risk controls"
+        },
+        {
+          "code": "D_PAYOUT_CONDITIONS",
+          "points": 3,
+          "source": "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/",
+          "locator": "main programme scored: challenge"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/hantec-trader/59e8fddfa441.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "RZR terms permit RMG placement on existing and future accounts, retrospective trades and payouts; B3 already coded. Enforcement reclaim attributable payouts and burden of proving legitimacy: B2 already present; B1 requires unconditional entitlement removal, not established here. Confirm RZR/Hantec migration and scope of previous accounts.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "lucid-trading",
+      "score": 59,
+      "displayedScore": 59,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2A",
+          "points": 4,
+          "source": "https://www.lucidtrading.com/terms-of-use/",
+          "locator": "Terms of Use - prohibited uses"
+        },
+        {
+          "code": "B3",
+          "points": 5,
+          "source": "https://www.lucidtrading.com/terms-of-use/",
+          "locator": "Changes to the Terms of Use"
+        },
+        {
+          "code": "D_PAYOUT_CAP",
+          "points": 4,
+          "source": "https://support.lucidtrading.com/en/articles/12890092-lucidpro-payouts",
+          "locator": "main programme scored: pro"
+        },
+        {
+          "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
+          "points": 3,
+          "source": "https://support.lucidtrading.com/en/articles/16558826-new-live-structure",
+          "locator": "main programme scored: pro"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/lucid-trading/upload-c21ddc04e5.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "OCR describes review of suspected violations and human review of automated action. B2A remains provisional. Disparagement under Reward section may be promotional rather than funded payouts, no automatic B6. Compare Pro/Flex/Direct and new live structure; five failed archive pages.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "sway-funded",
+      "score": 59,
+      "displayedScore": 59,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2",
+          "points": 8,
+          "source": "https://my.swayfunded.com/p/terms",
+          "locator": "§7.5; §7.6"
+        },
+        {
+          "code": "B3",
+          "points": 5,
+          "source": "https://my.swayfunded.com/p/terms",
+          "locator": "§4.2"
+        },
+        {
+          "code": "D_PAYOUT_CONDITIONS",
+          "points": 3,
+          "source": "https://swayfunded.kb.help/how-does-sway-funded-reward-system-work/",
+          "locator": "main programme scored: rapid"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/sway-funded/fec1532e554a.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§7.5 trading restriction already B2, §14.1 incorporated guidelines supplied when trader and modifiable. 24h processor documentation failure may revoke access; E_HARSH only if earned gain forfeiture shown. Compare product payout rules and access to funded contract.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "myfundedcapital",
+      "score": 58,
+      "displayedScore": 58,
+      "ceiling": 65,
+      "existingCodes": [
+        {
+          "code": "B7",
+          "points": 5,
+          "source": "https://myfundedcapital.com/terms-and-conditions/",
+          "locator": "Education / Guidelines / Arbitration"
+        },
+        {
+          "code": "TPR",
+          "points": 2,
+          "source": "",
+          "locator": "3.5 / 82"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/myfundedcapital/9097c99d9885.txt",
+      "status": "BLOCKED",
+      "finding": "The only archived file is a Cloudflare challenge (267 chars before header), despite status 200. No contract text reread. Existing full status and B7 not independently verifiable. Seek alternate saved document/live source; no new penalty based on missing evidence.",
+      "candidate": "BLOCKED",
+      "scenario": null
+    },
+    {
+      "slug": "tentrade",
+      "score": 58,
+      "displayedScore": 58,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2",
+          "points": 8,
+          "source": "https://tentrade.com/wp-content/uploads/2026/06/funded-trader-2026.pdf",
+          "locator": "Funded Trader terms (June 2026) §11"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/tentrade/591c1f99629d.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "June 2026 funded terms §8: profit above 10% of nominal forfeited and account reset after payout, explicitly TenEdge Instant/Live and Instant/Live stages. D cap −4 candidate if common across main programs; §11 B2 already scored. Existing published score 58 vs raw 67, preserve gate; do not subtract from held score mechanically. Verify §13 and exact product.",
+      "candidate": "D_PAYOUT_CAP -4 conditional; raw 63, published gate remains",
+      "scenario": null
+    },
+    {
+      "slug": "apex-trader-funding",
+      "score": 57,
+      "displayedScore": 57,
+      "ceiling": 95,
+      "existingCodes": [
+        {
+          "code": "B1",
+          "points": 15,
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "locator": "§12 Rewards"
+        },
+        {
+          "code": "B3",
+          "points": 5,
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "locator": "§11 Prohibited Activities; §30"
+        },
+        {
+          "code": "B6",
+          "points": 5,
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "locator": "§20 Confidentiality; §21; §11 Penalties"
+        },
+        {
+          "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
+          "points": 3,
+          "source": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+          "locator": "main programme scored: eod"
+        },
+        {
+          "code": "D_PAYOUT_CONDITIONS",
+          "points": 3,
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "locator": "main programme scored: eod"
+        },
+        {
+          "code": "A2ISO",
+          "points": 5,
+          "source": "https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid",
+          "locator": ""
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/apex-trader-funding/upload-e753a30ec1.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§12 explicitly makes rewards entirely discretionary and revocable for any/no reason, B1 −15 already; no B2 stacking. Ten failed archive pages; only user agreement retrieved via Firecrawl. Compare EOD/Intraday payout terms: cap per request not same as account end, D cap missing candidate. A2ISO article date and exact incident scope to review. Reading excerpts; apply cap and excerpt gate.",
+      "candidate": "partial",
+      "scenario": null
+    },
+    {
+      "slug": "daytraders-com",
+      "score": 57,
+      "displayedScore": 57,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2",
+          "points": 8,
+          "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+          "locator": "Terms of Use §3; Rewards"
+        },
+        {
+          "code": "B6",
+          "points": 5,
+          "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+          "locator": "Rewards"
+        },
+        {
+          "code": "B7",
+          "points": 5,
+          "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+          "locator": "§3 Services"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/daytraders-com/afff49e83bb8.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§28 Rewards defines optional prizes/incentives related to education and healthier habits; reward cancellation for disparagement may not concern actual funded profits. B6 +5 candidate for removal unless separate payout clause proves scope. §26 broad trading conduct and forfeiture already B2. Verify S2F/Pro funded contracts, B7 and D rules; new score 62 only if no additional restriction.",
+      "candidate": "remove B6 +5 conditional",
+      "scenario": 62
+    },
+    {
+      "slug": "goat-funded-trader",
+      "score": 57,
+      "displayedScore": 57,
+      "ceiling": 85,
+      "existingCodes": [
+        {
+          "code": "B2",
+          "points": 8,
+          "source": "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+          "locator": "§4.6; prohibited practices"
+        },
+        {
+          "code": "B5",
+          "points": 3,
+          "source": "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades",
+          "locator": "Minimum holding time"
+        },
+        {
+          "code": "D_PAYOUT_CAP",
+          "points": 4,
+          "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
+          "locator": "main programme scored: instant"
+        },
+        {
+          "code": "D_PAYOUT_CONDITIONS",
+          "points": 3,
+          "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
+          "locator": "main programme scored: instant"
+        },
+        {
+          "code": "TPW",
+          "points": 10,
+          "source": "",
+          "locator": ""
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/goat-funded-trader/415827eac268.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§12.2–12.7 requests response in 24h, prior statements, source code and references, noncompliance material breach and possible termination; E_HARSH only with explicit forfeiture link. §11.4 general termination not unconditional earned-payout removal. §8.1 guidelines incorporated; B3/B7 need actual active-account scope/availability. Current B5/D to recheck across Instant and evaluations.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "prop-number-one",
+      "score": 57,
+      "displayedScore": 57,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2",
+          "points": 8,
+          "source": "https://propnumberone.com/terms-and-conditions/",
+          "locator": "§11 General Conditions"
+        },
+        {
+          "code": "TPR",
+          "points": 10,
+          "source": "",
+          "locator": "2.9 / 920"
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/prop-number-one/bf77d7314e26.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§38 caps funded sim withdrawals at 15% of nominal every 21 days (100K: 15K), retains excess for subsequent cycle and reserves unilateral amendments without notice. D_PAYOUT_CAP −4 and B3 −5 candidate (current funded accounts). Official PDF confirms text; no B5 because excess retained. §39–40 50% consistency no points under C. Verify latest entity/version and program exceptions.",
+      "candidate": "B3 -5; D_PAYOUT_CAP -4",
+      "scenario": 48
+    },
+    {
+      "slug": "thinkcapital",
+      "score": 57,
+      "displayedScore": 57,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2",
+          "points": 8,
+          "source": "https://www.thinkcapital.com/terms-of-services/",
+          "locator": "§5.5.1; §5.5.4"
+        },
+        {
+          "code": "TPW",
+          "points": 10,
+          "source": "",
+          "locator": ""
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/thinkcapital/09c5f3eeeb6b.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§7.1–7.2 third-party agreement signed after pass/KYC; confirm whether template available before purchase before B7 −5. §7.4 minimum 100; other payout gates in §7.6 for Instant do not automatically apply to Dual/Nexus. No new points.",
+      "candidate": "B7 open",
+      "scenario": null
+    },
+    {
+      "slug": "the-trading-pit",
+      "score": 56,
+      "displayedScore": 56,
+      "ceiling": 75,
+      "existingCodes": [
+        {
+          "code": "B2A",
+          "points": 4,
+          "source": "https://www.thetradingpit.com/general-terms-and-conditions",
+          "locator": "§4.6; §6.5"
+        },
+        {
+          "code": "B6",
+          "points": 5,
+          "source": "https://www.thetradingpit.com/general-terms-and-conditions",
+          "locator": "§14.2.5; §16"
+        },
+        {
+          "code": "TPW",
+          "points": 10,
+          "source": "",
+          "locator": ""
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/the-trading-pit/e4c057f9357d.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "§16 sanctions for criticism require contextual reading; determined rewards remain payable, pending undetermined rewards can be withheld, termination/ban possible. Automated decision review has maximum time and lapse safeguard. Existing B2A/B6 check current exact text; no B1 from provisional holds.",
+      "candidate": "open",
+      "scenario": null
+    },
+    {
+      "slug": "fundednext",
+      "score": 55,
+      "displayedScore": 55,
+      "ceiling": 85,
+      "existingCodes": [
+        {
+          "code": "B1",
+          "points": 15,
+          "source": "https://fundednext.com/terms-of-service",
+          "locator": "§3 Définitions; §12.6; §10.3"
+        },
+        {
+          "code": "B5",
+          "points": 3,
+          "source": "https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext",
+          "locator": "thresholds; News Reward Share Rule"
+        },
+        {
+          "code": "B6",
+          "points": 5,
+          "source": "https://fundednext.com/terms-of-service",
+          "locator": "§24.1; §24.2; §24.5"
+        },
+        {
+          "code": "D_SPLIT_REDUCTION",
+          "points": 2,
+          "source": "https://help.fundednext.com/en/articles/8020351-what-are-the-restricted-prohibited-trading-strategies",
+          "locator": "main programme scored: 1step"
+        },
+        {
+          "code": "REGWARN",
+          "points": 5,
+          "source": "https://fundednext.com\"",
+          "locator": ""
+        }
+      ],
+      "archive": "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/fundednext/upload-9c57e8f763.txt",
+      "status": "TARGETED_REVIEW_PARTIAL",
+      "finding": "Current public terms confirm broad cancellation of benefits, B1 already counted, no B2 stacking. Existing REGWARN URL malformed (fundednext.com quote). RBI press release 22 Oct 2024 and list updated 19 Nov 2025 name FundedNext; cite official source and geographic scope. Same list names FTMO, absent REGWARN in FTMO score; review rule uniformly (not automatically a global finding or fraud). Verify D split reduction source and news losses.",
+      "candidate": "source correction; FTMO regulatory parity review",
+      "scenario": null
+    }
+  ],
+  "additionalCandidateScreening": [
+    {
+      "slug": "earn2trade",
+      "priorScore": 74,
+      "reading": "contrat lu en entier",
+      "screeningOnly": true
+    },
+    {
+      "slug": "blue-guardian",
+      "priorScore": 61,
+      "reading": "contrat lu en entier",
+      "screeningOnly": true
+    },
+    {
+      "slug": "e8-markets",
+      "priorScore": 72,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "instant-funding",
+      "priorScore": 72,
+      "reading": "extraction sans clause retenue",
+      "screeningOnly": true
+    },
+    {
+      "slug": "hola-prime",
+      "priorScore": 72,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "pipfarm",
+      "priorScore": 71,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "breakout-prop",
+      "priorScore": 70,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "ftuk",
+      "priorScore": 69,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "funded-trading-plus",
+      "priorScore": 68,
+      "reading": "extraction sans clause retenue",
+      "screeningOnly": true
+    },
+    {
+      "slug": "funding-traders",
+      "priorScore": 68,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "tickticktrader",
+      "priorScore": 67,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "ment-funding",
+      "priorScore": 67,
+      "reading": "extraits relus à la main",
+      "screeningOnly": true
+    },
+    {
+      "slug": "tradefundrr",
+      "priorScore": 67,
+      "reading": "extraits relus à la main",
+      "screeningOnly": true
+    },
+    {
+      "slug": "maven-trading",
+      "priorScore": 63,
+      "reading": "extraits relus à la main",
+      "screeningOnly": true
+    },
+    {
+      "slug": "miltraders",
+      "priorScore": 63,
+      "reading": "extraction sans clause retenue",
+      "screeningOnly": true
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "priorScore": 62,
+      "reading": "extraction sans clause retenue",
+      "screeningOnly": true
+    },
+    {
+      "slug": "traders-central",
+      "priorScore": 61,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "traders-launch",
+      "priorScore": 61,
+      "reading": "extraction sans clause retenue",
+      "screeningOnly": true
+    },
+    {
+      "slug": "rocket21-challenge",
+      "priorScore": 60,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "onefunded",
+      "priorScore": 60,
+      "reading": "extraction sans clause retenue",
+      "screeningOnly": true
+    },
+    {
+      "slug": "the-concept-trading",
+      "priorScore": 60,
+      "reading": "extraction sans clause retenue",
+      "screeningOnly": true
+    },
+    {
+      "slug": "ofp-funding",
+      "priorScore": 58,
+      "reading": "extraction sans clause retenue",
+      "screeningOnly": true
+    },
+    {
+      "slug": "ic-funded",
+      "priorScore": 58,
+      "reading": "extraction sans clause retenue",
+      "screeningOnly": true
+    },
+    {
+      "slug": "fxrk",
+      "priorScore": 58,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "bespoke-funding-program",
+      "priorScore": 56,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "nova-funding",
+      "priorScore": 56,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "nations-trading",
+      "priorScore": 56,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "leveled-up-society",
+      "priorScore": 56,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "aurafunded",
+      "priorScore": 56,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "alphaproptraders",
+      "priorScore": 56,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "funded-bull",
+      "priorScore": 55,
+      "reading": "extraction sans clause retenue",
+      "screeningOnly": true
+    },
+    {
+      "slug": "fx2-funding",
+      "priorScore": 55,
+      "reading": "extraits relus à la main",
+      "screeningOnly": true
+    },
+    {
+      "slug": "quant-tekel",
+      "priorScore": 55,
+      "reading": "extraits relus à la main",
+      "screeningOnly": true
+    },
+    {
+      "slug": "fundedlions",
+      "priorScore": 55,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "one-of-one-funding",
+      "priorScore": 55,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "tribe-funded",
+      "priorScore": 55,
+      "reading": "audit en cours (CGU non lues)",
+      "screeningOnly": true
+    },
+    {
+      "slug": "funded7",
+      "priorScore": 55,
+      "reading": "extraction sans clause retenue",
+      "screeningOnly": true
+    }
+  ],
+  "regulatoryCrossCheck": {
+    "source": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949",
+    "list": "https://rbi.org.in/Scripts/bs_viewcontent.aspx?Id=4235",
+    "note": "FundedNext and FTMO both listed. Review geographic scope and uniform penalty rule; no automatic score change."
+  },
+  "publicCorroboration": [
+    "https://www.toponefutures.com/terms-and-conditions",
+    "https://www.toponetrader.com/terms-and-conditions",
+    "https://propnumberone.com/wp-content/uploads/2025/04/Overview.pdf",
+    "https://fundednext.com/terms-of-service"
+  ]
+}
