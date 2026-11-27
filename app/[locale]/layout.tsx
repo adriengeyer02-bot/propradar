@@ -5,6 +5,7 @@ import '@fontsource-variable/archivo/wdth.css';
 import { archivo } from '../fonts';
 import '../site.css';
 import ActiveNavLink from '../components/ActiveNavLink';
+import { simulatorLabel } from '../lib/simulatorLabels';
 import RiskEvidenceMenu from '../components/RiskEvidenceMenu';
 import SiteSearch from '../components/SiteSearch';
 import RouteTransition from '../components/RouteTransition';
@@ -206,6 +207,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <nav className="nav nav-primary" aria-label={c.mainNav}>
                 <ActiveNavLink href="/prop-firm-radar">{c.radar}</ActiveNavLink>
                 <ActiveNavLink href="/prop-firm-comparison" activePrefixes={['/compare', '/tools', '/firm']}>{c.comparator}</ActiveNavLink>
+                <ActiveNavLink href="/simulators">{simulatorLabel(locale)}</ActiveNavLink>
                 <ActiveNavLink href="/guides" activePrefixes={['/best-prop-firms', '/articles']}>{c.guides}</ActiveNavLink>
                 <RiskEvidenceMenu labels={{ title: c.riskWatch, ...c.riskMenu }} />
                 <ActiveNavLink href="/promos">{c.deals}</ActiveNavLink>
@@ -241,6 +243,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <Link href={L('/best-prop-firms')}>{c.footer.best}</Link>
                 <Link href={L('/prop-firm-challenge')}>{c.footer.challenge}</Link>
                 <IntentLink href={L('/tools')}>{c.footer.tools}</IntentLink>
+                <IntentLink href={L('/simulators')}>{simulatorLabel(locale)}</IntentLink>
               </nav>
               <nav className="footer-nav" aria-label={c.riskWatch}>
                 <strong>{c.riskWatch}</strong>
