@@ -24,6 +24,8 @@ import { fmt, getMessages, tv } from '../../lib/messages';
 import { getAuditMessages } from '../../lib/messages/pages/audit';
 import { localizedGuidePath } from '../../lib/guideI18n';
 import { SITE_URL } from '../../lib/site';
+import { getScaleC, isFullyRead } from '../../lib/scaleC';
+import ScaleCMethodology from '../../components/ScaleCMethodology';
 
 const PATH = '/audit';
 
@@ -158,6 +160,8 @@ export default async function AuditPage({ params }: Props) {
           </ol>
         </div>
       </section>
+
+      <ScaleCMethodology locale={locale} count={propFirms.filter(firm => getScaleC(firm.slug)).length} full={propFirms.filter(firm => isFullyRead(firm.slug)).length} total={propFirms.length} />
 
       <section className="pr-stat-line" aria-label={m.coverageAria}>
         <dl>
