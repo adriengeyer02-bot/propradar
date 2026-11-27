@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import { simulatorCopy } from '../../lib/simulatorLabels';
 import OutilsClient from './OutilsClient';
 import PageStructuredData from '../../components/PageStructuredData';
 import { createPageMetadata } from '../../lib/pageMetadata';
@@ -53,6 +55,7 @@ export default async function OutilsPage({ params }: Props) {
           { name: m.schemaGuidesName, path: L('/guides'), description: m.schemaGuidesText },
         ]}
       />
+      <div className="container" style={{paddingTop:"1rem"}}><Link href={L("/simulators")} className="btn btn-primary">{simulatorCopy(locale)[0]} →</Link></div>
       <OutilsClient m={m} values={t.values} radarLabels={{ ...t.firm.relradar, values: t.values }} locale={locale} />
     </>
   );
