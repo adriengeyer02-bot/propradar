@@ -336,6 +336,143 @@ const ha: GuideTranslations = {
         "answer": "A'a. MT5 yana da sauƙin amfani, amma dole ka tabbatar da spread, labarai, EA, drawdown da sharuɗɗan cire kuɗi."
       }
     ]
+  },
+  "leveraged-prop-firm-avis": {
+    "title": "Binciken Get Leveraged: gargadin CySEC da haɗarin biyan kuɗi",
+    "metaDescription": "Binciken Get Leveraged: yanayin kamfani, gargadin CySEC da aka ruwaito, dokar daidaito 20%, hujjar biya, gargadin Trustpilot da abubuwan dubawa kafin saye.",
+    "eyebrow": "Binciken kamfani",
+    "h1": "Binciken Get Leveraged: tayin bayyane, amma a yi taka-tsantsan sosai kafin saye",
+    "answer": "Get Leveraged yana da talla sosai, tallar ƙaramin kuɗin shiga, shirye-shiryen irin portfolio da rabon riba 80% da aka tallata. Hukunci ba game da babban tayin ba ne; game da gargadin CySEC da aka ruwaito ne, ra'ayoyin tsauraran dokokin daidaito, rashin ƙimar Trustpilot da hujjar biya ta baya-bayan nan sosai.",
+    "checks": [
+      "Tabbatar ko shirin da ka zaɓa Jr, Sr, Executive, Turbo ko Sprint ne, sannan ka karanta ainihin shafin dokokinsa.",
+      "Tabbatar da matsayin doka na yanzu a shafin CySEC kafin biya.",
+      "Nemo hujjar biyan kuɗin kwanaki 30 da suka gabata a Discord da Reddit da kalmomin \"Leveraged payout\" ko \"GetLeveraged withdrawal\".",
+      "Gwada dabararka a simulation tare da bin dokar daidaito 20% kamar ana aiwatar da ita sosai.",
+      "Kwatanta ainihin kuɗin \"pay after you pass\", wanda galibi ake tallatawa kusan $8.88, da haɗarin ƙin biya."
+    ],
+    "faq": [
+      {
+        "question": "Shin sayen Get Leveraged lafiya ne?",
+        "answer": "PropRadar ba ya ɗaukar sa a matsayin saye mai aminci kai tsaye. Kamfanin sabo ne, ƙimar Trustpilot ba ta samuwa, ra'ayin jama'a ya ambaci tsauraran dokokin daidaito, kuma dole a tabbatar da gargadin hukuma da aka ruwaito kafin saye."
+      },
+      {
+        "question": "Mene ne babban haɗarin dokar Get Leveraged?",
+        "answer": "Muhimmin abin dubawa shi ne dokar daidaito 20%: kada rana ɗaya ta wuce 20% na jimillar riba. Idan ana aiwatar da ita sosai, za ta iya hana biya ko bayan an kai burin riba."
+      },
+      {
+        "question": "Wace hujja zan nema kafin saye?",
+        "answer": "Nemo hujjar cire kuɗi ta kwanan nan daga traders masu zaman kansu, ba hotunan talla kaɗai ba. Mafi kyawun hujja tana da kwanan wata, tana da alaƙa da takamaiman shiri kuma ta dace da dokokin hukuma."
+      }
+    ]
+  },
+  "alternatives-ftmo": {
+    "title": "Mafi kyawun madadin FTMO: dokoki, kuɗi da biyan kuɗi",
+    "metaDescription": "Kwatanta madadin FTMO ta farashi, sassaucin dokoki, labarai, EA, dandali, lokacin biya, scaling da bambance-bambancen gaske kafin sauyawa.",
+    "eyebrow": "Madadin FTMO",
+    "h1": "Madadin FTMO: mai arha, mai sassauci ko wanda ya fi dacewa da kai?",
+    "answer": "Barin FTMO yana da ma'ana ne kawai idan madadin ya warware ainihin matsala: ƙaramin kuɗin shiga, dokoki masu sassauci, dandali mafi dacewa, lokacin biya daban ko shiri mafi dacewa da salon trading ɗinka.",
+    "checks": [
+      "Kwatanta dalilin neman madadin FTMO: farashi, sassauci, dandali, lokacin biya ko scaling.",
+      "Tabbatar da dokokin drawdown, trading lokacin labarai, EA da riƙe positions ƙarshen mako.",
+      "Karanta majiyoyin hukuma da alamun al'umma na kwanan nan, ba tayi kaɗai ba.",
+      "Kada ka bar kamfani abin dogaro saboda wani tayin yana da rangwame kawai.",
+      "Kwatanta ainihin kuɗin watanni 3 zuwa 6, ciki har da reset ko maimaita yunƙuri."
+    ],
+    "faq": [
+      {
+        "question": "Mene ne mafi kyawun madadin FTMO?",
+        "answer": "Babu amsa ga kowa. The5ers zai iya dacewa da scaling na taka-tsantsan, Funding Pips ga masu kwatanta dokokin zamani, FunderPro na iya jan hankali da farashi da girman asusu, E8 Markets kuma wani abin kwatance ne na challenge na zamani."
+      },
+      {
+        "question": "Yaushe ya kamata in ci gaba da FTMO?",
+        "answer": "Ci gaba da FTMO idan babban fifikonka shi ne dokoki bayyanannu, dogon tarihin jama'a, suna mai ƙarfi na biya da tsarin matakai biyu mai bayyana. Rangwame kaɗai bai isa dalilin sauyawa ba."
+      },
+      {
+        "question": "Yaya zan kwatanta madadin FTMO?",
+        "answer": "Fara da matsalar da kake son warwarewa: farashi, labarai, EA, dandali, lokacin biya ko scaling. Sai ka kwatanta ainihin dokokin shiri da ra'ayin biya na kwanan nan kafin rangwamen lokacin saye."
+      }
+    ]
+  },
+  "prop-firm-avis-reddit-trustpilot": {
+    "title": "Bitar prop firm: alamun Reddit da Trustpilot",
+    "metaDescription": "Koyi yadda ake karanta bitar Trustpilot, Reddit, Discord da X kafin zaɓen prop firm: korafin biya, haɗarin bitar ƙarya, lokacin rangwame da ingancin hujja.",
+    "eyebrow": "Alamun bita",
+    "h1": "Bitar Reddit da Trustpilot game da prop firm: kyakkyawan maki bai isa ba",
+    "answer": "Trustpilot da Reddit majiyoyi ne masu amfani, amma ba idan an karanta su kaɗai ba. Babban maki na jama'a zai iya ɓoye matsalolin biya, dokoki marasa bayyani ko manyan kamfen na rangwame da ke ƙara bitar yabo.",
+    "checks": [
+      "Ware ɗanyen maki daga amincin da aka tace: kwanan wata, bitar da aka cire da lokacin tayi suna da muhimmanci.",
+      "Nemo korafe-korafen biya masu maimaituwa, ba fushin mutum ɗaya kawai ba.",
+      "Kwatanta lokacin bitar yabo da manyan kamfen na rangwame.",
+      "Duba ko Discord, X da Reddit suna bayyana irin labarin Trustpilot.",
+      "Nemo hujjar biya ta kwanan nan mai kwanan wata maimakon shaidar yabo ta gama-gari."
+    ],
+    "faq": [
+      {
+        "question": "Shin maki 4.8/5 a Trustpilot ya isa hujja?",
+        "answer": "A'a. Babban maki yana da amfani idan lokacin bita, hujjar biya, tattaunawar Reddit da dokokin hukuma sun dace. Har yanzu babban maki zai iya ɓoye matsalolin cire kuɗi masu alaƙa da dokoki."
+      },
+      {
+        "question": "Wace bita ce ta fi amfani?",
+        "answer": "Mafi kyawun bita tana ambaton ainihin shiri, girman asusu, ranar biya, dokar da ta shafa da ko trader ya riga ya cire kuɗi. Yabo na gama-gari hujja ce mai rauni sosai."
+      },
+      {
+        "question": "Yaya zan yi amfani da Reddit da Discord?",
+        "answer": "Yi amfani da su don gano abubuwan da ke maimaituwa: jinkirin biya, ƙin cire kuɗi, ruɗani game da dokoki, matsin lambar support ko sauyin ra'ayi kwatsam bayan tayi."
+      }
+    ]
+  },
+  "prop-firm-payout-proof": {
+    "title": "Hujjar biyan kuɗin prop firm: yadda ake tabbatar da cire kuɗi",
+    "metaDescription": "Jagorar hujjar biya: gano hujja mai kwanan wata, wadda za a iya bi diddigi kuma ta dace kafin amincewa da tallace-tallace.",
+    "eyebrow": "Hujjar biya",
+    "h1": "Hujjar biyan kuɗin prop firm dole ta kasance mai kwanan wata, mai bin diddigi kuma mai jituwa",
+    "answer": "Hoton biyan kuɗi kaɗai bai isa ba. Hujja mai kyau ta kasance mai kwanan wata, tana da alaƙa da ainihin shiri, ta dace da dokoki kuma fiye da alama ɗaya ta jama'a ta goyi bayanta.",
+    "checks": [
+      "Duba ranar biya, shiri da nau'in asusu.",
+      "Tabbatar ko hujjar ta fito daga kamfani ko masu amfani masu zaman kansu.",
+      "Kwatanta hujja da dokoki, mafi ƙarancin cire kuɗi da iyaka.",
+      "Nemo ƙin biya ko jinkirin cire kuɗi masu maimaituwa."
+    ],
+    "faq": [
+      {
+        "question": "Shin hoton biyan kuɗi ya isa?",
+        "answer": "A'a. Yana amfani ne kawai idan yana da kwanan wata, yana da alaƙa da asusu ko shaida abin dogaro kuma ya dace da dokokin kamfani."
+      },
+      {
+        "question": "Me ya sa kamfani zai ƙi biya?",
+        "answer": "Dalilai na yau da kullum sun haɗa da karya doka, haramtaccen trading lokacin labarai, copy trading ba tare da izini ba, girman lot da ya wuce kima, arbitrage ko rashin daidaiton dabara."
+      }
+    ]
+  },
+  "prop-firm-legal-check": {
+    "title": "Binciken doka na prop firm: kamfanoni, sharuɗɗa da alamun haɗari",
+    "metaDescription": "Tabbatar da kamfanin doka, sharuɗɗan asusun simulation, matsayin hukuma, sharuɗɗan biya da haɗarin rigimar biya kafin saye.",
+    "eyebrow": "Binciken doka",
+    "h1": "Binciken doka na prop firm: tabbatar da kamfanin kafin tayin",
+    "answer": "Prop firm na iya zama halastacce don bincike amma ba broker ko kamfanin saka jari da hukuma ke sa ido ba. Binciken doka mai amfani yana farawa da kamfanin da ke kwangila, ikon shari'a, bayanin simulation, matsayin hukuma, sharuɗɗan biya da na rigimar cire kuɗi.",
+    "checks": [
+      "Gano ainihin sunan kamfani, lambar rajista, adireshi da ikon shari'a kafin saye.",
+      "Ware sa ido kan broker daga ayyukan challenge, asusun simulation da kuɗaɗen kama-da-wane.",
+      "Karanta ko kamfanin ya ce ba broker ba ne, ba mai ba da shawarar saka jari ba ne kuma ba cibiyar karɓar ajiya ba ce.",
+      "Duba sasanci, watsi da ƙarar gama-gari, mayar da kuɗi, chargeback da sharuɗɗan rasa haƙƙin biya.",
+      "Tabbatar da ƙasashen da aka hana da ko samfurin yana samuwa a yankin shari'arka.",
+      "Nemo ainihin sunan kamfani a jaridun kuɗi masu zaman kansu kuma rubuta idan babu labari abin dogaro.",
+      "Yi amfani da gargadin hukumomi da rajistar jama'a a matsayin alamun haɗari, ba ikirarin talla ba."
+    ],
+    "faq": [
+      {
+        "question": "Shin kamfani mai rajista yana sa prop firm ya zama lafiya?",
+        "answer": "A'a. Rajista tana inganta bin diddigi, amma ba ta nufin ana kula da samfurin kamar broker, mai ba da shawarar saka jari ko futures commission merchant kai tsaye."
+      },
+      {
+        "question": "Mene ne muhimmin alamar haɗarin doka?",
+        "answer": "Rashin bayyanannun bayanan kamfanin kwangila, sai gargadin hukumomi, haƙƙin biya marasa bayyani, tsauraran sharuɗɗan rasa haƙƙi da talla mai kama da bayar da jari na gaske alhali kwangilar ta ce asusun simulation ne."
+      },
+      {
+        "question": "Me ya sa simulation yake da muhimmanci a doka?",
+        "answer": "Yawanci trader ba ya samun asusun broker na al'ada ko kariyar kuɗin abokan ciniki. Lada tana dogara da dokokin kwangila, nazari da cancanta maimakon haƙƙin cire kuɗi na al'ada."
+      }
+    ]
   }
 };
 
