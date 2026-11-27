@@ -1129,6 +1129,176 @@ const ha: GuideTranslations = {
         }
       ]
     }
+  },
+  "goat-funded-trader-avis": {
+    "title": "Bitar GOAT Funded Trader 2026: shin halastacce ne?",
+    "metaDescription": "Bitar GOAT Funded Trader 2026: masu gudanarwa a Hong Kong da Saint Lucia, dokokin funded, iyakar biya, maki na Trustpilot da aka ɓoye da wanda ya dace da shi.",
+    "eyebrow": "Bitar kamfani",
+    "h1": "Bitar GOAT Funded Trader 2026: shin halastacce ne?",
+    "answer": "GOAT Funded Trader kamfani ne na gaske da aka kafa a 2023, daga Hong Kong da Saint Lucia, babu mai kula da harkokin kuɗi. Yana biyan traders amma dokokin funded a wannan bita suna da tsauri (asarar buɗe 2%, dokar minti biyu, iyakar biya na farko), kuma Trustpilot ya ɓoye makinsa saboda karya ƙa'ida. Karanta dokoki kafin rangwame.",
+    "checks": [
+      "Karanta dokokin funded: Goat Guard, minti biyu da iyakar labarai bayan cin challenge.",
+      "Duba iyakar biya biyu na farko da kuɗin 3%.",
+      "Tabbatar da samfur: an cire 3-Step Agusta 2026, an daina sayar da 2-Step Pro Yuni 2026.",
+      "Karanta ra'ayoyin biya na kwanaki 30–60, ba taurari kawai ba.",
+      "Kwatanta lambobin rangwame bayan zaɓin samfurin da ya dace."
+    ],
+    "faq": [
+      {
+        "question": "Shin GOAT Funded Trader halastacce ne?",
+        "answer": "Kamfani ne na gaske mai biyan traders, amma babu hukuma ta kuɗi da ke sa ido kuma yana da ikon yanke hukunci mai faɗi kan biya. A bitar 12 Nuwamba 2026 yana cikin jerin sa ido da 58/100. Trustpilot ya ɓoye makinsa saboda karya ƙa'ida (23 Oktoba 2026)."
+      },
+      {
+        "question": "Me ya sa babu maki a Trustpilot?",
+        "answer": "Trustpilot ya ce babu maki saboda karya ƙa'ida, ya cire wasu bita na ƙarya. Akwai bita 4,352, 46% taurari biyar da 40% tauraro ɗaya (23 Oktoba 2026)."
+      },
+      {
+        "question": "Menene Goat Guard?",
+        "answer": "A asusun funded na 1-Step da 2-Step, asarar buɗe 2% na ma'aunin farko tana kunna Goat Guard: na farko rabo ya koma 50%, na biyu ya karya asusu, bisa bita na wasu."
+      },
+      {
+        "question": "FIRSTGFT ko BOGO40 suna da amfani?",
+        "answer": "Sai bayan zaɓar samfurin da dokokinsa suka dace da salonka. Rangwame ba ya kawar da dokoki masu hana salonka. Tabbatar da tayin lokacin biya."
+      }
+    ],
+    "article": {
+      "intro": "GOAT Funded Trader yana cikin prop firms da aka fi gani a shekaru biyu da suka wuce: manyan rangwame, samfura da yawa da kasancewa a kafafen sada zumunta. **Shahara ba daidai take da amana ba.** Bitar ta ware takardu da talla, ta fara da **dokokin asusun funded**, domin a nan traders ke rasa biya.",
+      "keyPoints": [
+        "An ƙaddamar **Mayu 2023**; sunan kasuwanci na Hong Kong, mai bayarwa na Saint Lucia, **babu mai kula da kuɗi**.",
+        "23 Oktoba 2026 Trustpilot **bai nuna maki ba** saboda karya ƙa'ida.",
+        "Ana rasa biya a **dokokin funded**: Goat Guard, minti biyu, iyakar labarai da ta rana.",
+        "PropRadar yana da **alaƙar affiliate**; ba ta sauya maki."
+      ],
+      "sections": [
+        {
+          "heading": "Wa ke gudanar da GOAT Funded Trader?",
+          "paragraphs": [
+            "An ƙaddamar da GOAT Funded Trader a **Mayu 2023**. Sunan kasuwanci ne na **Wishes Tower International Limited** na Hong Kong, kuma **Goat Funded LTD na Saint Lucia** ke bayar da ciniki na kwaikwayo. **Babu mai kula da harkokin kuɗi** da ke sa ido kan sabis. Sharuɗɗa suna bayyana asusun kwaikwayo, saye ba tare da mayar da kuɗi ba da babban ikon yanke hukunci kan biya; abu ne da aka saba amma ya kamata ka sani.",
+            "A bitar 12 Nuwamba 2026 PropRadar ya ba shi **58/100**, ƙasa da iyakar 64 da ake amfani da ita a lokacin da Trustpilot ya ɓoye maki, ya sanya shi cikin jerin sa ido. Kamfanin yana aiki yana rahoton biya, amma iyakoki, cire riba da hukuncin ƙungiyar haɗari suna haifar da ƙuntatawa. Alaƙar affiliate ba ta sauya maki ko bita."
+          ]
+        },
+        {
+          "heading": "Halin Trustpilot",
+          "paragraphs": [
+            "23 Oktoba 2026 Trustpilot **bai nuna TrustScore ba**. Shafin ya ce babu maki saboda karya ƙa'ida kuma an cire wasu bita na ƙarya. Har yanzu akwai bita 4,352 masu bambanci sosai:",
+            "Bita masu rarrabuwar ra'ayi galibi suna nuna **ƙwarewa biyu masu bambanci**: waɗanda aka biya da sauri da waɗanda aka ƙi biya bisa dokokin da ba su karanta sosai ba."
+          ],
+          "stats": [
+            {
+              "value": "4,352",
+              "label": "bita da aka jera"
+            },
+            {
+              "value": "46%",
+              "label": "taurari biyar"
+            },
+            {
+              "value": "40%",
+              "label": "tauraro ɗaya"
+            }
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Ka ɗauki ikirarin maki kusa da cikakke a shafin farko **da taka tsantsan** muddin sanarwar Trustpilot tana nan."
+          }
+        },
+        {
+          "heading": "Muhimman dokokin asusun funded",
+          "paragraphs": [
+            "Tsarin challenge na yau da kullum ne. **An cire 3-Step Agusta 2026.** Adadin nan daga bitar wani ne da aka duba 5 Oktoba 2026; tabbatar lokacin saye.",
+            "Dokokin da ke yanke biya suna farawa **bayan ka ci challenge**:"
+          ],
+          "compare": {
+            "columns": [
+              "Burin riba",
+              "Asarar rana",
+              "Asara mafi girma"
+            ],
+            "rows": [
+              {
+                "label": "2-Step GOAT",
+                "values": [
+                  "8% sannan 6%",
+                  "4%",
+                  "10% static"
+                ]
+              },
+              {
+                "label": "2-Step Standard",
+                "values": [
+                  "10% sannan 5%",
+                  "5%",
+                  "10%"
+                ]
+              },
+              {
+                "label": "1-Step",
+                "values": [
+                  "10%",
+                  "3%",
+                  "6% static"
+                ]
+              }
+            ]
+          },
+          "bullets": [
+            "**Goat Guard:** a funded 1-Step da 2-Step, asarar buɗe 2% na ma'aunin farko tana rage rabo zuwa 50%; na biyu yana karya asusu.",
+            "**Dokar minti biyu:** ana cire ribar trades da aka riƙe ƙasa da minti biyu lokacin biya, amma asararsu tana nan.",
+            "**Lokacin labarai:** ribar kusa da labarai masu tasiri tana da iyakar 1% na ma'aunin farko.",
+            "**Iyakar ribar rana:** asusun funded zai iya tara $3,000 kacal a rana.",
+            "**Samfuran Instant:** trailing drawdown; ana rufe asusu da asarar buɗe 1% ko 2% bisa samfur."
+          ]
+        },
+        {
+          "heading": "Biyan kuɗi",
+          "paragraphs": [
+            "Rabon asali **80%** ne, tare da ƙarin kuɗi don samun 100% lokacin saye da scaling da zai iya kaiwa 90–95%. Yawancin samfura suna biya **kowane kwanaki 14**, mafi ƙaranci **$100**, kuɗin sarrafawa **3%**. Biya biyu na farko suna da iyakar ƙaramin adadi tsakanin 6% na ma'aunin farko da $10,000. Hanyoyi sun haɗa Rise, banki, Skrill da crypto, kowacce da iyakarta.",
+            "Wasu ikirarin jama'a sun saɓa da cibiyar taimako, kamar saurin biya (awa 24 ko kwanakin aiki biyu) da girman asusu mafi girma."
+          ],
+          "stats": [
+            {
+              "value": "80%",
+              "label": "rabon riba na asali"
+            },
+            {
+              "value": "Kwanaki 14",
+              "label": "zagaye na biya a yawancin samfura"
+            },
+            {
+              "value": "$100",
+              "label": "mafi ƙarancin biya"
+            },
+            {
+              "value": "3%",
+              "label": "kuɗin sarrafawa"
+            }
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Idan talla da sharuɗɗa sun saɓa, **sharuɗɗa ne za a yi amfani da su** wajen biyanka."
+          }
+        },
+        {
+          "heading": "Wa GOAT Funded Trader ya dace da shi?",
+          "paragraphs": [
+            "Dokokin funded suna nufin takamaiman halaye. Idan bayyanannun dokoki sun fi farashi muhimmanci, fara kwatantawa da **kamfanoni masu maki mafi girma** a jerinmu."
+          ],
+          "fit": {
+            "yes": [
+              "Asarar buɗe **ƙarama mai sarrafawa**",
+              "Trades da ake riƙewa **fiye da minti biyu**",
+              "Rashin dogaro da **tashin farashi saboda labarai**",
+              "Neman **farashin shiga mai rahusa**"
+            ],
+            "no": [
+              "**Scalpers**",
+              "**Traders na labarai**",
+              "Trades masu buƙatar **babban drawdown cikin rana**"
+            ]
+          }
+        }
+      ]
+    }
   }
 };
 
