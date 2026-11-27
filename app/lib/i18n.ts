@@ -1,4 +1,7 @@
 const exactTranslations: Record<string, string> = {
+  // Guide FAQ synchronization without editing the open SEO branch's guide definitions.
+  "Yes. Topstep has operated since 2012 from Chicago, publishes detailed rules in its help center and launched an affiliated introducing broker in 2026. PropRadar scores it 84/100 with no regulator warning recorded. As with all prop firms, the evaluation and funded stages are simulated.": "Yes. Topstep has operated since 2012 from Chicago, publishes detailed rules in its help center and launched an affiliated introducing broker in 2026. See its PropRadar profile for the current score and breakdown. As with all prop firms, the evaluation and funded stages are simulated.",
+  "It is a real operator that pays traders, but it is not regulated by any financial authority and its terms give it wide discretion over payouts. PropRadar keeps it on the watchlist with a 58/100 score, and Trustpilot withholds its rating for a breach of its guidelines (checked October 23, 2026).": "The operator reports paying traders, but is not regulated by a financial authority and its terms give it wide discretion over payouts. See its PropRadar profile for the current score and breakdown. Trustpilot withheld its rating for a breach of its guidelines (checked October 23, 2026).",
   '\u00e0 v\u00e9rifier': 'To verify',
   '\u00e0 rev\u00e9rifier': 'To recheck',
   'variable': 'Variable',

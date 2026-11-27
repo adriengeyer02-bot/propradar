@@ -1,3 +1,4 @@
+import { guideScore } from './guideScore';
 import type { GuideArticle } from './guideArticles';
 
 /**
@@ -710,7 +711,7 @@ export const frArticles: FrArticle[] = [
     eyebrow: 'Classement 2026',
     h1: 'Meilleures prop firms 2026 : le classement par fiabilité',
     answer:
-      'Il n\'existe pas de meilleure prop firm universelle, mais certaines sont nettement plus sûres que d\'autres. En octobre 2026, les scores PropRadar les plus élevés reviennent à FTMO (91/100), The5ers (85/100) et Topstep (84/100) : les historiques publics les plus longs, les règles les plus lisibles et le moins de signaux de payout non résolus.',
+      'Trois opérateurs établis à comparer : FTMO (' + guideScore('ftmo') + '), The5ers (' + guideScore('the5ers') + ') et Topstep (' + guideScore('topstep') + '). Ce sont des exemples, pas un podium figé. Consultez le classement et le détail des notes actualisés.',
     keywords: ['meilleure prop firm', 'meilleures prop firms 2026', 'classement prop firm', 'prop firm fiable'],
     updated: '2026-11-12',
     intro:
@@ -731,20 +732,20 @@ export const frArticles: FrArticle[] = [
         callout: { kind: 'warning', text: 'Le score **n\'est pas une promesse de paiement**. C\'est un résumé des preuves disponibles à une date donnée ; chaque changement est daté dans l\'historique de la fiche.' },
       },
       {
-        heading: 'Le trio de tête en octobre 2026',
+        heading: 'Trois opérateurs établis à comparer',
         paragraphs: [
-          'Les trois scores les plus élevés reviennent à des opérateurs anciens. Ce ne sont pas les moins chers : ce sont les historiques publics les plus longs et les règles les plus lisibles.',
+          'Ces trois profils illustrent des modèles différents. Le classement en direct, et non ce tableau d’exemples, indique les positions actuelles.',
         ],
         compare: {
           columns: ['FTMO', 'The5ers', 'Topstep'],
           rows: [
-            { label: 'Score PropRadar', values: ['**91/100**', '**85/100**', '**84/100**'] },
+            { label: 'Score PropRadar', values: ['**' + guideScore('ftmo') + '**', '**' + guideScore('the5ers') + '**', '**' + guideScore('topstep') + '**'] },
             { label: 'Fondée', values: ['2015, République tchèque', '2016, Israël et Royaume-Uni', '2012, Chicago'] },
             { label: 'Marché', values: ['Forex / CFD', 'Forex / CFD', 'Futures'] },
             { label: 'Prix d\'entrée', values: ['environ 155 $', 'environ 39 $', 'abonnement mensuel'] },
             { label: 'Trustpilot', values: ['4,8 (près de 55 000 avis)', '4,7 (plus de 40 000 avis)', '3,7'] },
           ],
-          note: 'Relevé en octobre 2026. PropRadar a une relation d\'affiliation avec FTMO et The5ers, pas avec Topstep : sans effet sur les scores.',
+          note: 'Scores synchronisés avec les fiches ; prix et avis relevés en octobre 2026. PropRadar a une relation d\'affiliation avec FTMO et The5ers, pas avec Topstep : sans effet sur les scores.',
         },
         bulletStyle: 'check',
         bullets: [
@@ -794,7 +795,7 @@ export const frArticles: FrArticle[] = [
       {
         question: 'Quelle est la prop firm la plus fiable en 2026 ?',
         answer:
-          'Selon les preuves recensées par PropRadar en octobre 2026, FTMO obtient le score le plus élevé (91/100), suivie de The5ers (85/100) et Topstep (84/100). La meilleure firme dépend toutefois de votre marché et de votre style.',
+          'Trois opérateurs établis à comparer : FTMO (' + guideScore('ftmo') + '), The5ers (' + guideScore('the5ers') + ') et Topstep (' + guideScore('topstep') + '). Ce sont des exemples, pas un podium figé. Consultez le classement et le détail des notes actualisés.',
       },
       {
         question: 'Les prop firms sont-elles réglementées ?',
@@ -1193,7 +1194,7 @@ export const frArticles: FrArticle[] = [
         ],
         stats: [
           { value: '2012', label: 'fondée à Chicago' },
-          { value: '84/100', label: 'score PropRadar' },
+          { value: '' + guideScore('topstep') + '', label: 'score PropRadar' },
           { value: '3,7', label: 'Trustpilot, 14 955 avis (23 oct. 2026)' },
         ],
       },
@@ -1291,13 +1292,13 @@ export const frArticles: FrArticle[] = [
     eyebrow: 'Comparatif',
     h1: 'FTMO vs The5ers : deux profils solides, pas le même usage',
     answer:
-      'FTMO et The5ers font partie des prop firms forex les plus fiables (91/100 et 85/100 chez PropRadar). FTMO est la référence la plus documentée mais plus chère ; The5ers est moins chère à l\'entrée et utilise souvent des limites statiques. Le choix dépend surtout de votre budget et de votre façon de gérer le drawdown.',
+      'FTMO et The5ers font partie des prop firms forex les plus fiables (' + guideScore('ftmo') + ' et ' + guideScore('the5ers') + ' chez PropRadar). FTMO est la référence la plus documentée mais plus chère ; The5ers est moins chère à l\'entrée et utilise souvent des limites statiques. Le choix dépend surtout de votre budget et de votre façon de gérer le drawdown.',
     keywords: ['ftmo vs the5ers', 'ftmo ou the5ers', 'the5ers avis', 'ftmo avis'],
     updated: '2026-11-12',
     intro:
       'FTMO et The5ers reviennent dans presque tous les classements sérieux. Les deux sont **anciennes, transparentes et bien notées** sur Trustpilot. Elles ne s\'adressent pourtant **pas exactement au même trader**.',
     keyPoints: [
-      'Deux profils solides : **91/100** pour FTMO, **85/100** pour The5ers.',
+      'Deux profils solides : **' + guideScore('ftmo') + '** pour FTMO, **' + guideScore('the5ers') + '** pour The5ers.',
       'FTMO : **la plus documentée**, mais plus chère (environ 155 $).',
       'The5ers : **entrée moins chère** (environ 39 $) et limites souvent **statiques**.',
       'Les règles évoluent : **vérifiez la page officielle** avant d\'acheter.',
@@ -1311,7 +1312,7 @@ export const frArticles: FrArticle[] = [
         compare: {
           columns: ['FTMO', 'The5ers'],
           rows: [
-            { label: 'Score PropRadar', values: ['**91/100**', '**85/100**'] },
+            { label: 'Score PropRadar', values: ['**' + guideScore('ftmo') + '**', '**' + guideScore('the5ers') + '**'] },
             { label: 'Fondée', values: ['2015, République tchèque', '2016, Israël et Royaume-Uni'] },
             { label: 'Prix d\'entrée', values: ['environ 155 $', 'environ 39 $'] },
             { label: 'Trustpilot (23 oct. 2026)', values: ['4,8 sur 54 942 avis', '4,7 sur 40 309 avis'] },
@@ -1366,7 +1367,7 @@ export const frArticles: FrArticle[] = [
       {
         question: 'FTMO ou The5ers, laquelle est la plus fiable ?',
         answer:
-          'Les deux sont parmi les plus fiables du marché. FTMO obtient 91/100 et The5ers 85/100 chez PropRadar en octobre 2026, avec des notes Trustpilot de 4,8 et 4,7.',
+          'Les deux sont parmi les plus fiables du marché. FTMO obtient ' + guideScore('ftmo') + ' et The5ers ' + guideScore('the5ers') + ' chez PropRadar actuellement, avec des notes Trustpilot relevées en octobre 2026 de 4,8 et 4,7.',
       },
       {
         question: 'Laquelle est la moins chère ?',

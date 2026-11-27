@@ -1,3 +1,4 @@
+import { guideScore } from './guideScore';
 import { hyroTradeifyArticle, noChallengeGettingStarted } from './searchIntentGuides';
 
 /**
@@ -401,7 +402,7 @@ export const guideArticles: Record<string, GuideArticle> = {
         heading: 'How this ranking is built',
         paragraphs: [
           'Each firm in PropRadar gets a **score out of 100** built from rule clarity, payout evidence, legal transparency, public review signals and operating history. Affiliate links are disclosed on every profile and **never change a score**. A firm with an affiliate relationship keeps its weaknesses on display, and a firm without one can rank at the top.',
-          'At this update the highest scores belong to long-running operators: **FTMO (91/100), The5ers (85/100) and Topstep (84/100)**. They are not the cheapest. They are the profiles with the longest public track records, the most readable terms and the fewest unresolved payout signals in PropRadar\'s files.',
+          'Three established operators to compare are FTMO (' + guideScore('ftmo') + '), The5ers (' + guideScore('the5ers') + ') and Topstep (' + guideScore('topstep') + '). These are examples, not a fixed podium. Use the live ranking and each firm\'s current score breakdown for the latest order.',
         ],
       },
       {
@@ -469,7 +470,7 @@ export const guideArticles: Record<string, GuideArticle> = {
         heading: 'Who runs GOAT Funded Trader',
         paragraphs: [
           'GOAT Funded Trader launched in **May 2023**. It is a trade name of **Wishes Tower International Limited**, a Hong Kong company, and the simulated trading is provided by **Goat Funded LTD in Saint Lucia**. **No financial regulator** supervises the service. Its terms describe simulated accounts, non-refundable purchases and broad discretion over payouts, which is common in the industry but worth knowing before you buy.',
-          'PropRadar scores it **58/100**, below the 64-point maximum permitted while Trustpilot withholds its rating, and keeps it on the watchlist. The operator is active and reports paying traders, but the current payout caps, deductions and risk-team decisions create meaningful restrictions. PropRadar has an affiliate relationship with GOAT Funded Trader; it does not change this score or review.',
+          'PropRadar scores it **' + guideScore('goat-funded-trader') + '**, and keeps it on the watchlist. The operator is active and reports paying traders, but the current payout caps, deductions and risk-team decisions create meaningful restrictions. PropRadar has an affiliate relationship with GOAT Funded Trader; it does not change this score or review.',
         ],
       },
       {
@@ -555,12 +556,12 @@ export const guideArticles: Record<string, GuideArticle> = {
       {
         heading: 'Is Topstep legit?',
         paragraphs: [
-          'Topstep is an **established, US-based operator** with a long public history, a published help center and an affiliated introducing broker, Topstep Brokerage, launched in early 2026. PropRadar scores it **84/100** and has not recorded a regulator warning against it. As with every prop firm, the evaluation and the Express Funded Account are **simulated**: payouts are rewards paid by Topstep, not trading profits from a brokerage account.',
+          'Topstep is an **established, US-based operator** with a long public history, a published help center and an affiliated introducing broker, Topstep Brokerage, launched in early 2026. PropRadar scores it **' + guideScore('topstep') + '** and has not recorded a regulator warning against it. As with every prop firm, the evaluation and the Express Funded Account are **simulated**: payouts are rewards paid by Topstep, not trading profits from a brokerage account.',
           'On Trustpilot the profile shows a **3.7** TrustScore across **14,955 reviews**, with Trustpilot\'s notice that the company "may be associated with high-risk investments" (checked October 23, 2026). Late 2025 complaints centred on **TopstepX platform outages** and failed stop orders.',
         ],
         stats: [
           { value: '2012', label: 'founded, Chicago' },
-          { value: '84/100', label: 'PropRadar score' },
+          { value: '' + guideScore('topstep') + '', label: 'PropRadar score' },
           { value: '3.7', label: 'Trustpilot, 14,955 reviews (Oct 23, 2026)' },
         ],
       },
