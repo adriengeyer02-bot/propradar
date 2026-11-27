@@ -1,1 +1,21 @@
 .root{display:grid;gap:1rem;margin:1.5rem 0}.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem}.tabs button,.reset{font:inherit;color:inherit;background:transparent;border:1px solid rgba(140,150,160,.35);border-radius:10px;padding:.8rem .45rem;cursor:pointer}.tabs button.active{border-color:#40b88b;background:rgba(64,184,139,.10);font-weight:700}.panel{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(140,150,160,.35);border-radius:16px;overflow:hidden}.inputs,.results{padding:clamp(1rem,3vw,2rem);display:grid;align-content:start;gap:1rem;min-width:0}.results{background:rgba(140,150,160,.07);border-inline-start:1px solid rgba(140,150,160,.2)}.field{display:grid;gap:.4rem;font-size:.88rem}.field input,.field select{font:inherit;color:inherit;background:rgba(140,150,160,.10);border:1px solid rgba(140,150,160,.35);border-radius:8px;min-width:0;width:100%;padding:.75rem;box-sizing:border-box}.field select option{background:#20252d;color:#fff}.metric{display:grid;gap:.3rem;border-bottom:1px solid rgba(140,150,160,.2);padding-bottom:.9rem}.metric strong{font-size:clamp(1.35rem,3vw,2rem);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.metric small,.muted,.results p,.context p{font-size:.84rem;opacity:.82;line-height:1.55}.good{color:#40b88b;font-weight:700}.warn{color:#e18473;font-weight:700}.track{height:9px;background:rgba(140,150,160,.2);border-radius:20px;overflow:hidden}.track div{height:100%;border-radius:20px}.context{display:grid;gap:.5rem;border:1px solid rgba(140,150,160,.35);border-radius:12px;padding:1rem}.context strong{font-size:1.15rem}.context a{width:fit-content}.reset{font-size:.82rem}.tabs button:focus-visible,.field input:focus-visible,.field select:focus-visible,.reset:focus-visible{outline:2px solid #40b88b;outline-offset:3px}@media(max-width:650px){.panel{grid-template-columns:1fr}.results{border-inline-start:0;border-top:1px solid rgba(140,150,160,.2)}.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Slider and precise numerical entry share one state; native controls support touch and keyboard. */
+.fieldHead{display:flex;align-items:center;justify-content:space-between;gap:.8rem;min-height:44px}
+.fieldHead span{flex:1;min-width:0;line-height:1.35}
+.fieldHead input[type=number]{width:clamp(6.5rem,34%,10rem);text-align:end;font-variant-numeric:tabular-nums;padding:.55rem .65rem;font-weight:650;flex-shrink:0}
+.field input.range{appearance:none;-webkit-appearance:none;display:block;width:100%;height:28px;padding:0;border:0;border-radius:0;background:transparent;cursor:pointer;margin:0;touch-action:pan-y}
+.field input.range::-webkit-slider-runnable-track{height:6px;border-radius:999px;background:linear-gradient(to right,#40b88b 0%,#40b88b var(--range-progress),rgba(140,150,160,.24) var(--range-progress),rgba(140,150,160,.24) 100%)}
+.field input.range::-moz-range-track{height:6px;border-radius:999px;background:rgba(140,150,160,.24)}
+.field input.range::-moz-range-progress{height:6px;border-radius:999px;background:#40b88b}
+.field input.range::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:21px;height:21px;margin-top:-7.5px;border:3px solid #40b88b;border-radius:50%;background:#eef8f3;box-shadow:0 1px 5px #0005}
+.field input.range::-moz-range-thumb{width:15px;height:15px;border:3px solid #40b88b;border-radius:50%;background:#eef8f3;box-shadow:0 1px 5px #0005}
+.field input.range:active::-webkit-slider-thumb{box-shadow:0 0 0 5px #40b88b30}
+.field input.range:active::-moz-range-thumb{box-shadow:0 0 0 5px #40b88b30}
+.rangeLabels{display:flex;justify-content:space-between;gap:.5rem;font-size:.72rem;opacity:.72;font-variant-numeric:tabular-nums}
+.sliderHint{margin:0;font-size:.83rem;line-height:1.5;opacity:.82}
+.comparison{display:grid;gap:.55rem}
+.compareTrack{height:9px;border-radius:999px;position:relative;background:rgba(140,150,160,.22)}
+.compareFill{height:100%;border-radius:999px}
+.threshold{position:absolute;top:-3px;height:15px;width:2px;background:currentColor;transform:translateX(-1px)}
+@media(max-width:650px){.field input.range{height:36px}.fieldHead input[type=number]{width:7.5rem}.fieldHead{gap:.5rem}}
