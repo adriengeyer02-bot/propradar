@@ -575,6 +575,123 @@ const sw: GuideTranslations = {
         }
       ]
     }
+  },
+  "prop-firm-drawdown": {
+    "title": "Drawdown katika prop firm: trailing, static na EOD",
+    "metaDescription": "Drawdown ni nini katika prop firm? Mifano ya static, trailing na mwisho wa siku, kikomo cha hasara ya kila siku, kiwango cha kufunga kikomo na jinsi ya kuchagua.",
+    "eyebrow": "Maelezo ya masharti",
+    "h1": "Drawdown katika prop firm: trailing, static na mwisho wa siku",
+    "answer": "Drawdown ni kiwango cha juu ambacho akaunti yako inaweza kupoteza kutoka sehemu ya marejeo. Static drawdown imewekwa chini ya salio la mwanzo na haibadiliki. Trailing drawdown ya ndani ya siku hufuata equity ya juu zaidi moja kwa moja, ikijumuisha faida ya positions zilizo wazi. EOD trailing hubadilika tu siku ikifungwa. Static ni yenye nafasi zaidi; trailing ya ndani ya siku ni kali zaidi.",
+    "checks": [
+      "Tambua sehemu ya marejeo: salio la mwanzo, equity ya juu zaidi au salio la mwisho wa siku.",
+      "Chunguza kama ukiukaji hupimwa kwa salio au equity.",
+      "Tafuta kiwango ambacho trailing inakoma kusonga.",
+      "Panga ukubwa wa positions kwa nafasi iliyobaki, si ukubwa wa akaunti."
+    ],
+    "faq": [
+      {
+        "question": "Tofauti ya trailing na static drawdown ni ipi?",
+        "answer": "Static hubaki chini ya salio la mwanzo kwa kiwango kisichobadilika. Trailing hupanda akaunti inapofikia kilele kipya, hivyo nafasi yako hupungua baada ya kila faida hadi kikomo kifungwe."
+      },
+      {
+        "question": "Je, EOD drawdown ni bora kuliko trailing?",
+        "answer": "Kwa kawaida ndiyo. EOD trailing haifuatilii mabadiliko ya faida ya positions zilizo wazi ndani ya siku; husonga wakati wa kufunga siku. Trailing ya ndani ya siku inaweza kupanda hata wakati wa trade ambayo baadaye unaifunga bila faida wala hasara."
+      },
+      {
+        "question": "Je, kikomo cha hasara ya kila siku hufunga akaunti yangu?",
+        "answer": "Inategemea kampuni. Nyingi za forex/CFD hufunga akaunti kutokana na ukiukaji; baadhi ya futures huzuia trading kwa muda uliobaki wa kipindi. Soma masharti ya programu yako."
+      }
+    ],
+    "article": {
+      "intro": "Drawdown ni **sharti linalomaliza akaunti nyingi za prop firm**. Ni kiasi cha juu ambacho akaunti inaruhusiwa kupoteza, kikihesabiwa kutoka sehemu ya marejeo. Kampuni mbili zinaweza kutangaza drawdown ya $3,000 kwenye akaunti ya $50,000, lakini zikakupa **nafasi tofauti kabisa** ya kufanya trading kwa sababu sehemu ya marejeo hubadilika kwa njia tofauti.",
+      "keyPoints": [
+        "Vikomo viwili hufanya kazi pamoja: **hasara ya siku** (huanza upya kila siku) na **drawdown ya juu** (akaunti nzima).",
+        "**Static** ina nafasi zaidi, **trailing ndani ya siku** ni kali zaidi, **EOD** iko katikati.",
+        "Trailing nyingi **hufungwa** kikomo kinapofikia salio la mwanzo: siku za kwanza zina hatari zaidi.",
+        "Panga positions kwa **nafasi iliyobaki hadi kikomo**, si ukubwa wa akaunti."
+      ],
+      "sections": [
+        {
+          "heading": "Kikomo cha hasara ya siku dhidi ya drawdown ya juu",
+          "paragraphs": [
+            "Kampuni nyingi hutumia **vikomo viwili kwa wakati mmoja**. **Kikomo cha hasara ya siku** huamua kiasi unachoweza kupoteza siku moja, kwa kawaida kutoka salio au equity ya mwanzo wa siku. **Drawdown ya juu** huweka kikomo cha hasara yote katika maisha ya akaunti. Kuvunja mojawapo kwa kawaida kunakiuka masharti ya akaunti, ingawa baadhi ya kampuni za futures huzuia trading kwa kipindi kilichobaki tu unapofikia kikomo cha siku."
+          ]
+        },
+        {
+          "heading": "Static drawdown",
+          "paragraphs": [
+            "Static drawdown **imewekwa chini ya salio la mwanzo na haibadiliki**. Akaunti ya $100,000 yenye kikomo cha 10% ina kiwango cha chini cha $90,000 daima. Ukiikuza hadi $108,000, una **nafasi ya $18,000**. Huu ni muundo wenye nafasi zaidi, wa kawaida kwenye challenge za hatua mbili za forex/CFD."
+          ]
+        },
+        {
+          "heading": "Trailing drawdown ndani ya siku",
+          "paragraphs": [
+            "Trailing drawdown ya ndani ya siku **hufuata equity ya juu zaidi moja kwa moja, ikijumuisha faida ambayo bado haijafungwa**. Mfano: akaunti ya $50,000 yenye trailing ya $2,500 inaanza na kikomo cha $47,500. Trade inapofikia faida isiyofungwa ya +$1,500, kikomo kinapanda hadi $49,000, **hata ukiifunga trade bila faida wala hasara**. Sasa una nafasi ya $1,000 badala ya $2,500, bila kupata faida yoyote iliyofungwa. Huu ndio muundo mkali zaidi, wa kawaida kwenye futures na ufadhili wa papo hapo."
+          ]
+        },
+        {
+          "heading": "Trailing drawdown ya mwisho wa siku (EOD)",
+          "paragraphs": [
+            "Trailing drawdown ya EOD **husonga tu siku ya trading inapofungwa**, kulingana na salio la kufunga. Mabadiliko ya faida ya positions zilizo wazi ndani ya siku hayapandishi kikomo, hivyo ni rahisi zaidi kudhibiti kuliko trailing ya ndani ya siku."
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Kikomo husonga wakati wa kufunga pekee, lakini **ukiukaji mara nyingi huangaliwa moja kwa moja**. Kwa mfano, Topstep hufuatilia Maximum Loss Limit kutoka salio la mwisho wa siku huku ikikagua moja kwa moja, ikijumuisha hasara ambazo hazijafungwa."
+          }
+        },
+        {
+          "heading": "Trailing inapokoma: kufungwa kwa kikomo",
+          "paragraphs": [
+            "Miundo mingi ya trailing **hukoma kufuatilia** wakati fulani, kwa kawaida kikomo kinapofikia salio la mwanzo (au salio la mwanzo pamoja na akiba ndogo). Kuanzia hapo kinafanya kazi kama kikomo cha static."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Siku za kwanza za akaunti ya trailing zina hatari zaidi: **jenga akiba hadi kiwango cha kufunga kikomo** kabla ya kuchukua positions kubwa."
+          }
+        },
+        {
+          "heading": "Vikomo vinavyotegemea salio dhidi ya equity",
+          "paragraphs": [
+            "Kikomo cha **salio** huhesabu trades zilizofungwa pekee. Kikomo cha **equity** huhesabu pia positions zilizo wazi, hivyo hasara inayoelea inaweza kuvunja masharti ya akaunti hata kama baadaye ungeifunga trade kwa faida. Kampuni nyingi za kisasa hupima ukiukaji kwa equity. **Soma ufafanuzi katika masharti**, si jedwali la muhtasari."
+          ]
+        },
+        {
+          "heading": "Jinsi ya kuchagua",
+          "paragraphs": [
+            "Linganisha aina ya drawdown na **tabia ya trades zako**:"
+          ],
+          "compare": {
+            "columns": [
+              "Pendelea"
+            ],
+            "rows": [
+              {
+                "label": "Trades zinazofikia faida kubwa kisha kurudi",
+                "values": [
+                  "**Static** au **EOD**; epuka trailing ya ndani ya siku"
+                ]
+              },
+              {
+                "label": "Scalps ndogo za mara kwa mara zenye stop ndogo",
+                "values": [
+                  "**Trailing** inaweza kufaa ikiwa kikomo hufungwa haraka"
+                ]
+              },
+              {
+                "label": "Swing trades zenye stop pana",
+                "values": [
+                  "**Static**, yenye nafasi kubwa kuliko hasara yako ya kawaida inayoelea"
+                ]
+              }
+            ]
+          },
+          "callout": {
+            "kind": "tip",
+            "text": "Daima panga ukubwa wa positions kwa **nafasi iliyobaki hadi kikomo**, si ukubwa wa akaunti unaotangazwa."
+          }
+        }
+      ]
+    }
   }
 };
 
