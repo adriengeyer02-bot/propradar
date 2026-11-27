@@ -12792,6 +12792,31 @@
           "minTradingDays": "2 evaluation days; one-day add-on has different profit goal",
           "hasConsistencyRule": true,
           "consistencyRule": "50% evaluation only; One-Day add-on none; funded none."
+        },
+        {
+          "id": "mffu-signature-current",
+          "name": "Signature — static",
+          "type": "Futures evaluation",
+          "description": "Former Studio range, now permanent Signature 5K/10K/20K. One-time payment, no activation fee. Payouts anytime after closing positions, no buffer or minimum trading days. Funded daily net profit cap $2,500/$5,000/$10,000; live eligibility after five approved payouts or $5,000 total requested.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 20000,
+          "entryFeeMin": 75,
+          "entryFeeMax": 280,
+          "profitTarget": "$500/$1,000/$2,000",
+          "maxDailyLoss": "None",
+          "maxDrawdown": "$250/$500/$1,000 static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+          "drawdownDetails": "Fixed floor in evaluation and simulated funded stages; no trailing.",
+          "profitSplit": "80% Sim Funded; 90% Live",
+          "platforms": [
+            "Hyperprop"
+          ],
+          "tradableAssets": [
+            "Futures (micros only)"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "None"
         }
       ],
       "set": {
@@ -12866,6 +12891,14 @@
           "fields": [
             "products"
           ]
+        },
+        {
+          "date": "2026-11-27",
+          "summary": "Added permanent Signature 5K/10K/20K, formerly Studio, with static loss floor, current published fees and live transition terms.",
+          "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+          "fields": [
+            "products"
+          ]
         }
       ],
       "addSources": [
@@ -12896,6 +12929,10 @@
         {
           "label": "Official programme documentation",
           "url": "https://help.myfundedfutures.com/en/articles/13134718-understanding-rapid-live"
+        },
+        {
+          "label": "Signature plan specifications",
+          "url": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide"
         }
       ],
       "setEntities": [
