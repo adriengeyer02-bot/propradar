@@ -575,6 +575,123 @@ const ha: GuideTranslations = {
         }
       ]
     }
+  },
+  "prop-firm-drawdown": {
+    "title": "Drawdown na prop firm: trailing, static da EOD",
+    "metaDescription": "Mene ne drawdown a prop firm? Bayanin static, trailing da ƙarshen rana tare da misalai, iyakar asarar rana, matakin kullewa da yadda ake zaɓi.",
+    "eyebrow": "Bayanin dokoki",
+    "h1": "Drawdown na prop firm: trailing, static da ƙarshen rana",
+    "answer": "Drawdown shi ne iyakar abin da asusunka zai iya rasa daga wurin ma'auni. Static drawdown yana tsayawa ƙasa da ma'aunin farko. Intraday trailing yana bin equity mafi girma kai tsaye, har da ribar da ba a rufe ba. EOD trailing yana motsi ne kawai a ƙarshen rana. Static ya fi sassauci, intraday trailing ya fi tsauri.",
+    "checks": [
+      "Gano wurin ma'auni: ma'aunin farko, equity mafi girma ko ma'aunin ƙarshen rana.",
+      "Duba ko ana auna karya doka bisa ma'auni ko equity.",
+      "Nemo matakin kullewa inda trailing ya daina motsi.",
+      "Tsara girman positions bisa sararin da ya rage, ba girman asusu ba."
+    ],
+    "faq": [
+      {
+        "question": "Mene ne bambancin trailing da static drawdown?",
+        "answer": "Static yana nan a tsayayyen mataki ƙasa da ma'aunin farko. Trailing yana tashi idan asusu ya kai sabon matsayi mafi girma, don haka sarari yana raguwa bayan kowace riba har sai an kulle shi."
+      },
+      {
+        "question": "Shin EOD drawdown ya fi trailing?",
+        "answer": "Yawanci eh. EOD trailing ba ya bin sauyin ribar da ba a rufe ba cikin rana; yana motsi ne a ƙarshen rana. Intraday trailing na iya tashi a trade da daga baya ka rufe ba tare da riba ko asara ba."
+      },
+      {
+        "question": "Shin iyakar asarar rana tana rufe asusuna?",
+        "answer": "Ya danganta da kamfani. Yawancin forex/CFD suna rufe asusun saboda karya doka; wasu futures suna dakatar da trading na sauran zaman kawai. Karanta sharuɗɗan ainihin shirinka."
+      }
+    ],
+    "article": {
+      "intro": "Drawdown ita ce **dokar da ke kawo ƙarshen mafi yawan asusun prop firm**. Ita ce iyakar abin da asusunka zai iya rasa daga wurin ma'auni. Kamfanoni biyu za su iya tallata drawdown $3,000 a asusun $50,000 amma su ba ka **sarari daban ƙwarai** don trading saboda wurin ma'auni yana motsi ta hanyoyi daban.",
+      "keyPoints": [
+        "Iyaka biyu suna aiki lokaci guda: **asarar rana** (tana sake farawa kowace rana) da **mafi girman drawdown** (duk asusu).",
+        "**Static** ya fi sassauci, **intraday trailing** ya fi tsauri, **EOD** yana tsakani.",
+        "Yawancin trailing suna **kullewa** a ma'aunin farko: ranakun farko sun fi haɗari.",
+        "Tsara girman positions bisa **sararin da ya rage zuwa iyaka**, ba girman asusu ba."
+      ],
+      "sections": [
+        {
+          "heading": "Iyakar asarar rana da mafi girman drawdown",
+          "paragraphs": [
+            "Yawancin kamfanoni suna amfani da **iyaka biyu lokaci guda**. **Iyakar asarar rana** tana ƙayyade abin da za ka iya rasa a rana ɗaya, yawanci daga ma'aunin ko equity na farkon rana. **Mafi girman drawdown** yana iyakance jimillar asarar tsawon rayuwar asusu. Karya ko wanne yawanci yana kawo ƙarshen asusu, sai dai wasu futures suna dakatar da trading na sauran zaman kawai idan an kai iyakar rana."
+          ]
+        },
+        {
+          "heading": "Static drawdown",
+          "paragraphs": [
+            "Static drawdown **tsayayye ne ƙasa da ma'aunin farko kuma ba ya motsi**. A asusun $100,000 mai iyakar static 10%, ƙasan iyaka ita ce $90,000 har abada. Idan ka kai $108,000, kana da **sararin $18,000**. Wannan shi ne tsarin da ya fi sassauci, wanda aka saba da shi a challenge na matakai biyu na forex/CFD."
+          ]
+        },
+        {
+          "heading": "Trailing drawdown cikin rana",
+          "paragraphs": [
+            "Intraday trailing **yana bin equity mafi girma kai tsaye, har da ribar da ba a rufe ba**. Misali a asusun $50,000 da trailing $2,500: iyaka tana farawa a $47,500. Trade ya kai +$1,500 na ribar da ba a rufe ba, don haka iyaka ta koma $49,000, **ko da ka rufe trade ba riba ba asara**. Yanzu kana da sararin $1,000 maimakon $2,500 ba tare da ka kulle riba ko sisi ba. Wannan shi ne mafi tsauri, wanda aka saba a futures da instant funding."
+          ]
+        },
+        {
+          "heading": "Trailing drawdown na ƙarshen rana (EOD)",
+          "paragraphs": [
+            "EOD trailing **yana motsi ne kawai lokacin rufe ranar trading**, bisa ma'aunin ƙarshe. Sauyin ribar positions da ba a rufe ba cikin rana ba ya ɗaga iyaka, don haka ya fi sauƙin sarrafawa fiye da intraday trailing."
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Iyakar tana motsi lokacin rufewa kawai, amma **ana yawan duba karya doka kai tsaye**. Misali, Topstep yana bin Maximum Loss Limit daga ma'aunin ƙarshen rana yayin dubawa kai tsaye, har da asarar da ba a rufe ba."
+          }
+        },
+        {
+          "heading": "Lokacin da trailing ya tsaya: kullewa",
+          "paragraphs": [
+            "Yawancin tsarin trailing suna **daina bin ma'auni** a wani mataki, yawanci idan iyakar ta kai ma'aunin farko (ko ma'aunin farko da ɗan ƙarin buffer). Daga nan tana aiki kamar static."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Ranakun farko na asusun trailing sun fi haɗari: **gina buffer har zuwa matakin kullewa** kafin manyan positions."
+          }
+        },
+        {
+          "heading": "Iyakokin ma'auni da na equity",
+          "paragraphs": [
+            "Iyakar **ma'auni** tana ƙirga trades da aka rufe kawai. Iyakar **equity** tana ƙirga positions da suke buɗe ma, don haka asarar da ba a rufe ba tana iya karya doka ko da daga baya za ka rufe trade da riba. Yawancin kamfanoni na zamani suna auna karya doka ta equity. **Karanta ma'anar a sharuɗɗa**, ba jadawalin taƙaitawa kawai ba."
+          ]
+        },
+        {
+          "heading": "Yadda ake zaɓi",
+          "paragraphs": [
+            "Daidaita tsarin drawdown da **yadda trades ɗinka suke**:"
+          ],
+          "compare": {
+            "columns": [
+              "Fi so"
+            ],
+            "rows": [
+              {
+                "label": "Trades da ke samun babbar riba sannan su dawo",
+                "values": [
+                  "**Static** ko **EOD**; guji intraday trailing"
+                ]
+              },
+              {
+                "label": "Ƙananan scalps akai-akai da ƙananan stop",
+                "values": [
+                  "**Trailing** zai iya aiki idan ana kulle iyaka da wuri"
+                ]
+              },
+              {
+                "label": "Swing trades da faɗaɗɗun stop",
+                "values": [
+                  "**Static**, mai sarari fiye da asarar buɗe da aka saba"
+                ]
+              }
+            ]
+          },
+          "callout": {
+            "kind": "tip",
+            "text": "Kullum tsara girman positions bisa **sararin da ya rage zuwa iyaka**, ba girman asusun talla ba."
+          }
+        }
+      ]
+    }
   }
 };
 
