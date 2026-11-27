@@ -1,4 +1,5 @@
 import en, { type Messages } from './en';
+import guideUi from '../guideI18n/ui/tr';
 
 /**
  * Turkish editorial interface. Source quotations, firm reports and undelivered
@@ -675,6 +676,8 @@ const tr: Messages = {
     rulesPenaltyNote: "Kısıtlayıcı kural kesintisi: −{penalty} puan (kurallardan önceki editoryal puan: {before}).",
     rulesUi: {"restrictionsShort": "Kısıtlamalar", "risksShort": "Sözleşme riskleri", "nav": "Kurallar ve kısıtlar", "title": "Kurallar ve kısıtlar", "intro": "Her program için bir menü. Özel kısıtlamalar yayımlanmış ve sayısal kurallardır; sözleşme riskleri yoruma veya ödeme reddine yer bırakan belirsiz, takdire bağlı ya da çelişkili maddelerdir. Drawdown, kâr hedefi ve asgari işlem günleri teklif özelliklerinde kalır.", "all": "Tüm programlar", "restrictions": "Bilinmesi gereken özel kısıtlamalar", "restrictionsHint": "Yayımlanmış ve sayısal: puana etkisi düşük.", "risks": "Sözleşme riskleri", "risksHint": "Belirsiz veya takdire bağlı ifade, ödemelere olası etki: puanda en çok bunlar ağırlık taşır.", "strong": "Özellikle kısıtlayıcı", "classicTitle": "Şartlarda okunan klasik kurallar", "classicNote": "Asgari işlem günleri ve fonlanmış aşama drawdown kuralları, kaynaklarıyla. Bunlar teklifin mekanizmasıdır, kısıt değildir ve puanı düşürmez."},
   },
+  // Guide pages, guide library and guide diagrams (app/lib/guideI18n/ui).
+  ...guideUi,
 };
 
 export default tr;
