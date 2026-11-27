@@ -91,6 +91,8 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
     delta: 0,
   };
   const steps: ScoreStep[] = [editorial, rules];
+  const listedDeductions = view.scaleC?.items.reduce((sum, item) => sum + item.points, 0) ?? 0;
+  const publicationGap = Math.max(0, (view.scaleC?.lostTotal ?? 0) - listedDeductions);
   const adjustments = view.steps.filter((step) => step.kind !== 'editorial' && step.kind !== 'rules');
 
   return (
@@ -168,6 +170,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                       </ul>
                     </div>
                   ) : <p>{view.scaleC.copy.none}</p>}
+                  {publicationGap > 0 ? <p className="psb-note">{fill(copy.scaleCHoldAdjustment, { calculated: view.score + publicationGap, gap: publicationGap, score: view.score })}</p> : null}
                   {view.scaleC.notes.map((note) => <p key={note} className="psb-note">{note}</p>)}
                 </li>
                 <li className="psb-step psb-step-final prg-hud-reveal" style={delay(4)}>

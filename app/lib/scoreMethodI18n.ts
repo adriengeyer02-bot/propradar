@@ -5,6 +5,7 @@ import type { Locale } from './locales';
  * in braces are filled with shared numbers, never translated differently.
  */
 export type ScoreMethodCopy = {
+  scaleCHoldAdjustment: string;
   hint: string;
   open: string;
   eyebrow: string;
@@ -47,6 +48,7 @@ export type ScoreMethodCopy = {
 };
 
 const en: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "The listed deductions give {calculated}/100 before a publication adjustment of −{gap}. The displayed score stays at {score}/100 while the applicable audit or historical-review safeguard remains in place. This is not a new contractual penalty.",
   hint: 'How this score is built',
   open: 'Open the score breakdown for {name}',
   eyebrow: 'Score file',
@@ -96,6 +98,7 @@ const en: ScoreMethodCopy = {
 };
 
 const fr: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "Les malus détaillés donnent {calculated}/100 avant un écart de publication de −{gap}. La note affichée reste à {score}/100 tant que le garde-fou d’audit ou de revue historique applicable est maintenu. Ce n’est pas une nouvelle pénalité contractuelle.",
   hint: 'Comment cette note est calculée',
   open: 'Ouvrir le détail de la note de {name}',
   eyebrow: 'Dossier de note',
@@ -145,6 +148,7 @@ const fr: ScoreMethodCopy = {
 };
 
 const de: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "Die aufgeführten Abzüge ergeben {calculated}/100 vor einer Veröffentlichungsanpassung von −{gap}. Die angezeigte Bewertung bleibt bei {score}/100, solange die Prüf- oder Historien-Schutzregel gilt. Dies ist keine neue Vertragsstrafe.",
   hint: 'So entsteht diese Wertung',
   open: 'Wertungsdetails für {name} öffnen',
   eyebrow: 'Wertungsakte',
@@ -194,6 +198,7 @@ const de: ScoreMethodCopy = {
 };
 
 const it: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "Le penalità danno {calculated}/100 prima di un adeguamento di pubblicazione di −{gap}. Il punteggio mostrato resta {score}/100 finché vale la salvaguardia di audit o revisione storica. Non è una nuova penalità contrattuale.",
   hint: 'Come si calcola questo punteggio',
   open: 'Apri il dettaglio del punteggio di {name}',
   eyebrow: 'Scheda punteggio',
@@ -243,6 +248,7 @@ const it: ScoreMethodCopy = {
 };
 
 const es: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "Las penalizaciones dan {calculated}/100 antes de un ajuste de publicación de −{gap}. La nota mostrada sigue en {score}/100 mientras se mantenga la salvaguarda de auditoría o revisión histórica. No es una nueva penalización contractual.",
   hint: 'Cómo se calcula esta puntuación',
   open: 'Abrir el detalle de la puntuación de {name}',
   eyebrow: 'Ficha de puntuación',
@@ -292,6 +298,7 @@ const es: ScoreMethodCopy = {
 };
 
 const pt: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "As penalidades resultam em {calculated}/100 antes de um ajuste de publicação de −{gap}. A nota exibida permanece em {score}/100 enquanto vigorar a salvaguarda de auditoria ou revisão histórica. Não é uma nova penalidade contratual.",
   hint: 'Como esta pontuação é calculada',
   open: 'Abrir o detalhe da pontuação de {name}',
   eyebrow: 'Ficha da pontuação',
@@ -341,6 +348,7 @@ const pt: ScoreMethodCopy = {
 };
 
 const zh: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "列出的扣分计算为 {calculated}/100，另有 −{gap} 分的发布调整。在适用的审计或历史复核保障措施解除前，显示评分仍为 {score}/100。该差额不是新增合同扣分。",
   hint: '评分如何得出',
   open: '打开 {name} 的评分明细',
   eyebrow: '评分档案',
@@ -390,6 +398,7 @@ const zh: ScoreMethodCopy = {
 };
 
 const ja: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "記載された減点による計算値は {calculated}/100 で、公開調整は −{gap} 点です。監査または過去の事案の再確認に関する保護措置が適用される間、表示スコアは {score}/100 のままです。新たな契約上の減点ではありません。",
   hint: 'このスコアの算出方法',
   open: '{name} のスコア内訳を開く',
   eyebrow: 'スコア記録',
@@ -439,6 +448,7 @@ const ja: ScoreMethodCopy = {
 };
 
 const hi: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "सूचीबद्ध कटौतियों से {calculated}/100 बनते हैं, प्रकाशन समायोजन −{gap} है। लागू ऑडिट या ऐतिहासिक समीक्षा सुरक्षा रहने तक प्रदर्शित स्कोर {score}/100 है। यह कोई नई अनुबंधीय पेनल्टी नहीं है।",
   hint: 'यह स्कोर कैसे बनता है',
   open: '{name} के स्कोर का विवरण खोलें',
   eyebrow: 'स्कोर फ़ाइल',
@@ -488,6 +498,7 @@ const hi: ScoreMethodCopy = {
 };
 
 const tr: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "Listelenen kesintiler {calculated}/100 sonucunu verir; yayın ayarlaması −{gap} puandır. Geçerli denetim veya geçmiş inceleme güvencesi sürdükçe gösterilen puan {score}/100 kalır. Bu yeni bir sözleşme cezası değildir.",
   hint: 'Bu puan nasıl hesaplanır',
   open: '{name} puan ayrıntısını aç',
   eyebrow: 'Puan dosyası',
@@ -537,6 +548,7 @@ const tr: ScoreMethodCopy = {
 };
 
 const ar: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "تعطي الخصومات المدرجة {calculated}/100 قبل تعديل النشر البالغ −{gap}. تظل الدرجة المعروضة {score}/100 ما دام ضابط التدقيق أو مراجعة السجل السابق ساريًا. هذا الفرق ليس عقوبة تعاقدية جديدة.",
   hint: 'كيف يُحسب هذا التقييم',
   open: 'فتح تفاصيل تقييم {name}',
   eyebrow: 'ملف التقييم',
@@ -586,6 +598,7 @@ const ar: ScoreMethodCopy = {
 };
 
 const ko: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "표시된 감점의 계산 결과는 {calculated}/100이며 게시 조정은 −{gap}점입니다. 해당 감사 또는 과거 기록 검토 보호 조치가 유지되는 동안 표시 점수는 {score}/100입니다. 새로운 계약 감점이 아닙니다.",
   hint: '이 점수의 산정 방식',
   open: '{name} 점수 세부 내역 열기',
   eyebrow: '점수 기록',
@@ -635,6 +648,7 @@ const ko: ScoreMethodCopy = {
 };
 
 const sw: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "Makato yaliyoorodheshwa yanatoa {calculated}/100 kabla ya marekebisho ya uchapishaji ya −{gap}. Alama inayoonyeshwa inabaki {score}/100 wakati kinga ya ukaguzi au mapitio ya historia inatumika. Hili si adhabu mpya ya mkataba.",
   hint: 'Jinsi alama hii inavyopatikana',
   open: 'Fungua maelezo ya alama ya {name}',
   eyebrow: 'Faili ya alama',
@@ -684,6 +698,7 @@ const sw: ScoreMethodCopy = {
 };
 
 const ha: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "Ragin maki da aka lissafa ya ba da {calculated}/100 kafin gyaran wallafawa na −{gap}. Makin da ake nunawa ya tsaya a {score}/100 muddin dokar kariya ta bincike ko bitar tarihi tana aiki. Wannan ba sabon hukuncin kwangila ba ne.",
   hint: 'Yadda ake samun wannan maki',
   open: 'Buɗe bayanin makin {name}',
   eyebrow: 'Fayil ɗin maki',
@@ -733,6 +748,7 @@ const ha: ScoreMethodCopy = {
 };
 
 const am: ScoreMethodCopy = {
+  scaleCHoldAdjustment: "የተዘረዘሩት ቅናሾች {calculated}/100 ይሰጣሉ፣ የህትመት ማስተካከያው −{gap} ነው። የኦዲት ወይም የታሪክ ግምገማ ጥበቃ እስካለ ድረስ የሚታየው ውጤት {score}/100 ሆኖ ይቆያል። ይህ አዲስ የውል ቅጣት አይደለም።",
   hint: 'ይህ ውጤት እንዴት እንደሚሰላ',
   open: 'የ{name} ውጤት ዝርዝር ይክፈቱ',
   eyebrow: 'የውጤት ፋይል',

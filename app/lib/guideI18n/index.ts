@@ -1,3 +1,4 @@
+import { syncGuideScoreCopy } from './scoreSync';
 import { HTML_LANG, LOCALES, localePath, type Locale } from '../locales';
 import { getFrArticleByEnPath } from '../frArticles';
 import { getSeoGuidePath, type SeoGuide } from '../seoGuides';
@@ -53,7 +54,7 @@ export function getGuideTranslation(locale: Locale, slug: string): GuideTranslat
   const summary = ALL[locale]?.[slug];
   if (!summary) return undefined;
   const article = ARTICLES[locale]?.[slug];
-  const translation = article ? { ...summary, article } : summary;
+  const translation = syncGuideScoreCopy(locale, slug, article ? { ...summary, article } : summary);
   return slug === 'prop-firm-sans-challenge' ? updateNoChallengeTranslation(locale, translation) : translation;
 }
 
