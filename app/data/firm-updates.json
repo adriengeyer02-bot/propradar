@@ -3114,17 +3114,125 @@
           "id": "blusky-launch",
           "name": "Launch plans",
           "type": "Futures evaluation",
-          "description": "Evaluation billed every 30 days (amount not stated in the help article), plus a one-time launch fee charged only after passing: $99 (50K), $149 (100K), $179 (200K). A Buffer Zone phase follows Phase 1. Propel and Static Growth plans also exist.",
+          "description": "Three phases: monthly evaluation, then one-time launch fee ($99/$149/$179 on 50K/100K/200K), then Buffer Zone. Sim Funded uses a static minimum balance and no best-day ratio; at least $500 new profit between withdrawal requests, rolling seven-day caps. Evaluation subscription stops on passing.",
           "accountSizeMin": 50000,
           "accountSizeMax": 200000,
           "profitTarget": "$3,000 (50K), $6,000 (100K and 200K) in Phase 1",
           "maxDailyLoss": "none in Phase 1 or the Buffer Zone",
-          "maxDrawdown": "$2,000 / $2,500 end-of-day trailing (50K, 100K); $2,000 static (200K)",
-          "profitSplit": "not stated in the help article",
-          "platforms": ["not stated"],
-          "tradableAssets": ["Futures"],
+          "maxDrawdown": "Evaluation/Buffer: $2,000/$2,500 EOD trailing (50/100K), $2,000 static (200K). Funded after Buffer: static minimum balance.",
+          "profitSplit": "90% standard simulated funded",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
-          "consistencyRule": "Largest profitable day at most 50% of total profitable days in Phase 1, 34% in the Buffer Zone (official help article, 29 Oct 2026)."
+          "consistencyRule": "Evaluation plan article: 50%; general overview: 55% (official conflict); Buffer 34%; none in Sim Funded.",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.blusky.pro/en/articles/12434469-sim-funded-accounts-processing",
+          "drawdownDetails": "Evaluation and Buffer 50K/100K EOD trailing, 200K static. Sim Funded after Buffer uses a static minimum balance; confirm dashboard balance convention."
+        },
+        {
+          "id": "blusky-propel-current",
+          "name": "Propel plans",
+          "type": "Futures evaluation",
+          "description": "Monthly evaluation and Buffer Zone; no launch fee. Buffer profit above its target is not transferred. Sim Funded has a static floor; $500 fresh profit between payouts and rolling caps.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 300000,
+          "profitTarget": "$1,500/$3,000/$6,000/$3,000/$6,000/$20,000 (25/50/100/150/200/300K evaluation)",
+          "maxDailyLoss": "None in evaluation or Buffer; account-specific funded controls possible",
+          "maxDrawdown": "Evaluation $1,200/$2,000/$2,500 EOD (25/50/100K); $1,000/$2,000/$5,000 static (150/200/300K). Sim Funded static minimum balance.",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.blusky.pro/en/articles/12434469-sim-funded-accounts-processing",
+          "drawdownDetails": "Funded uses fixed minimum balance; evaluation model differs by size.",
+          "profitSplit": "90% standard simulated funded",
+          "platforms": [
+            "Tradovate",
+            "Rithmic",
+            "Volumetrica (availability varies)"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "55% evaluation; 34% Buffer (21% for 300K); none in Sim Funded."
+        },
+        {
+          "id": "blusky-orbit-current",
+          "name": "Orbit plans",
+          "type": "Futures evaluation",
+          "description": "Two phases: evaluation then Sim Funded, no Buffer phase. Payout every three trading days above tier-specific threshold, $500 minimum, rolling caps; brokerage review at tier-specific profit ceiling.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 200000,
+          "profitTarget": "Tier-specific evaluation target",
+          "maxDailyLoss": "Account-specific risk controls possible",
+          "maxDrawdown": "Funded EOD trailing $2,000/$3,000/$4,500/$3,000 (50/100/150/200K); locks at starting balance",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts",
+          "drawdownDetails": "Follows closed daily profit, locks once loss distance is earned back.",
+          "profitSplit": "90% standard simulated funded",
+          "platforms": [
+            "Tradovate",
+            "Rithmic",
+            "Volumetrica (availability varies)"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "No evaluation ratio; 40% of net total profit in Sim Funded.",
+          "minTradingDays": "Evaluation can pass in one day; funded requests every three trading days"
+        },
+        {
+          "id": "blusky-instant-sim-current",
+          "name": "Instant Sim Funded",
+          "type": "Futures instant funding",
+          "description": "50K, one-time purchase, no evaluation or reset. $53K withdrawal threshold, rolling $2,500 cap; separate brokerage review.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 50000,
+          "profitTarget": "No evaluation",
+          "maxDailyLoss": "$1,000",
+          "maxDrawdown": "$2,000 intraday trailing, locks at $51K after balance exceeds $53K",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+          "drawdownDetails": "Intraday highest balance; locks $1,000 above initial capital.",
+          "profitSplit": "80%",
+          "platforms": [
+            "Tradovate",
+            "Rithmic",
+            "Volumetrica (availability varies)"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "21% net profit best-day ratio at withdrawal; exceeding delays payout."
+        },
+        {
+          "id": "blusky-direct-funded-current",
+          "name": "Direct to Funded",
+          "type": "Futures instant funding",
+          "description": "One-time purchase; no evaluation or reset. Fourth negative traded day within rolling ten traded days closes account. Withdrawal above $3,500, weekly $3,000 cap.",
+          "accountSizeMin": 3500,
+          "accountSizeMax": 3500,
+          "profitTarget": "No evaluation",
+          "maxDailyLoss": "$2,000",
+          "maxDrawdown": "$2,500 static; minimum balance $1,000",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+          "drawdownDetails": "Fixed floor; negative-day rule separate.",
+          "profitSplit": "50% first 30 trading days; 80% thereafter",
+          "platforms": [
+            "Tradovate",
+            "Rithmic",
+            "Volumetrica (availability varies)"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "21% net profit best-day ratio at withdrawal; separate rolling losing-day limit."
         }
       ],
       "addSources": [
@@ -13480,8 +13588,12 @@
           "drawdownSource": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation",
           "drawdownDetails": "Intraday account equity may touch trailing maximum even when profit is unrealized.",
           "profitSplit": "100% first $10K then 90%",
-          "platforms": ["Confirm at checkout"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
           "consistencyRule": "Three next-best days combined ≥80% of single best day.",
           "minTradingDays": "10 days"
@@ -13500,8 +13612,12 @@
           "drawdownSource": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation",
           "drawdownDetails": "Funded threshold follows intraday high and eventually locks at starting balance.",
           "profitSplit": "Depends on account and payout option",
-          "platforms": ["Confirm at checkout"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
           "consistencyRule": "Three next-best days combined ≥80% of single best day.",
           "minTradingDays": "5 days"
@@ -13510,19 +13626,24 @@
           "id": "oneup-express-return",
           "name": "Express requalification — previous funded only",
           "type": "Futures evaluation",
-          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "description": "Requalification only for former funded traders whose account was terminated within the preceding 24 hours; same size as previous account, one Express account at a time. Three minimum evaluation trading days.",
           "accountSizeMin": 25000,
           "accountSizeMax": 250000,
           "profitTarget": "Requalification after termination",
           "maxDailyLoss": "By legacy account",
           "maxDrawdown": "Trailing per requalification policy",
-          "drawdownSource": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation",
+          "drawdownSource": "https://help.oneuptrader.com/article/488-express-funding-how-does-it-work",
           "drawdownDetails": "Not a new customer instant account; special eligibility after funded termination.",
           "profitSplit": "Depends on account and payout option",
-          "platforms": ["Confirm at checkout"],
-          "tradableAssets": ["Futures"],
-          "hasConsistencyRule": false,
-          "minTradingDays": "3 days, restricted to eligible former funded accounts"
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "minTradingDays": "3 days, restricted to eligible former funded accounts",
+          "consistencyRule": "Evaluation: three other best days combined at least 80% of single best day; no percentage best-day rule listed in published funded rules."
         }
       ],
       "addSources": [
@@ -18053,20 +18174,28 @@
           "id": "tradeday-quick-pay",
           "name": "Quick Pay evaluation",
           "type": "Futures evaluation",
-          "description": "One-time non-refundable evaluation fee from $99 list price for 25K Intraday (site temporarily shows $39 promotional). Quick Pay offers both intraday and EOD evaluation loss-floor variants; EOD evaluation may change to intraday once funded. No subscription or paid resets for new purchases from 12 Nov 2026.",
+          "description": "One-time non-refundable evaluation purchase; intraday or EOD evaluation variants. All Quick Pay Funded Sim accounts use intraday trailing regardless of evaluation variant. No subscription or paid resets on new purchases from 12 Nov 2026.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
           "entryFeeMin": 99,
           "entryFeeMax": 440,
           "profitTarget": "$1,500 (25K) to $9,000 (150K)",
           "maxDailyLoss": "not stated",
-          "maxDrawdown": "$1,000 (25K) to $4,500 (150K), trailing intraday or end-of-day depending on the account",
+          "maxDrawdown": "Evaluation: $1,000–$4,500 EOD or intraday by size/variant. Funded Sim: intraday trailing on every variant.",
           "profitSplit": "50% below $4,000 net profit, 80% above, 90% in Funded Live",
-          "platforms": ["Tradovate", "Rithmic"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradovate",
+            "Rithmic"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "5 days in the evaluation; minimum 1 day to the first payout",
           "hasConsistencyRule": true,
-          "consistencyRule": "30% consistency rule in the evaluation; none on the funded account (official page, 29 Oct 2026)."
+          "consistencyRule": "30% consistency rule in the evaluation; none on the funded account (official page, 29 Oct 2026).",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889",
+          "drawdownDetails": "Even EOD evaluation paths have intraday funded drawdown."
         },
         {
           "id": "tradeday-fast-pass",
@@ -18080,11 +18209,19 @@
           "maxDailyLoss": "not stated",
           "maxDrawdown": "$1,000 (25K) to $4,500 (150K), end-of-day trailing",
           "profitSplit": "80% on Funded Sim, 90% on Funded Live",
-          "platforms": ["Tradovate", "Rithmic"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradovate",
+            "Rithmic"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "Conflicting official pages: current account card says 3 evaluation days; How It Works says no formal minimum. Five profitable days before a payout.",
           "hasConsistencyRule": true,
-          "consistencyRule": "45% consistency rule in the evaluation and on the funded account (official page, 29 Oct 2026)."
+          "consistencyRule": "45% evaluation and funded accounts opened on/after 26 July 2026; funded denominator is lifetime gross profit (current profit + payouts). Earlier Funded Sim cohort has no percentage consistency.",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy",
+          "drawdownDetails": "First payout locks floor at initial account balance if not reached earlier."
         }
       ],
       "addPayoutProofs": [
