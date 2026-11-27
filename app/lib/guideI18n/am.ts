@@ -1409,6 +1409,490 @@ const am: GuideTranslations = {
         }
       ]
     }
+  },
+  "prop-firm-hidden-rules": {
+    "title": "በቀላሉ የሚያመልጡ የprop firm ደንቦች 2026፦ ከግዢ በፊት 9 ነጥቦች",
+    "metaDescription": "የትኞቹ prop firms VPN ወይም VPS ይገድባሉ? የGFT፣ FundingPips፣ Topstep እና 8 ሌሎች ምንጭ ያላቸውን ፖሊሲዎች፣ ዜናና አገር ገደቦች ያነጻጽሩ፣ 2026።",
+    "eyebrow": "ገለልተኛ የደንብ ምርመራ",
+    "h1": "የተደበቁ የprop firm ደንቦች፦ የሽያጭ ገጹ የማይገልጸው",
+    "answer": "ደንብ ለማግኘት አስቸጋሪ መሆኑ ሆን ተብሎ ተደብቋል ማለት አይደለም። ከግዢ በፊት ሙሉ የfunded ውሎችን፣ የሽልማት ብቁነትን፣ የዜና መስኮቶችን፣ ወጥነትን፣ የቦታ ገደቦችንና የተከለከሉ መሣሪያዎችን ያነጻጽሩ። PropRadar የአጋሮቹንም ጨምሮ የታተሙ ውሎችን በቀጥታ ያገናኛል።",
+    "checks": [
+      "ከመክፈል በፊት ትክክለኛ ደንብ፣ ሞዴልና ቀን ያስቀምጡ፤ የማስታወቂያ ማጠቃለያ ውል አይደለም።",
+      "ግምገማን ከfunded ጋር ያነጻጽሩ፤ በተለይ ዜና፣ ቦታ ማቆየት፣ ወጥነትና የክፍያ ገደቦች።",
+      "መኖሪያ፣ ዜግነት፣ መድረክ፣ KYC እና የክፍያ አቅራቢ መገኘትን ያረጋግጡ።",
+      "ሽልማትን በውሳኔ መከልከል፣ ሂሳብ መዝጋት፣ እንቅስቃሴ አለመኖርና የተከለከሉ ስልቶች ድንጋጌዎችን ይፈልጉ።"
+    ],
+    "faq": [
+      {
+        "question": "እነዚህ ደንቦች በእውነት ተደብቀዋል?",
+        "answer": "አብዛኞቹ ምሳሌዎች በኦፊሴላዊ FAQ ወይም ውሎች የታተሙ ናቸው። ችግሩ የሽያጭ ገጹ ሊተዋቸው መቻሉ ወይም በምርት የተለያዩ ደንቦች መኖራቸው ነው። በቀላሉ የሚያመልጡ እንላቸዋለን፣ ሆን ተብሎ የመደበቅ ማስረጃ አይደሉም።"
+      },
+      {
+        "question": "የተደበቁ ደንቦች የሌሉት prop firm አለ?",
+        "answer": "የሕዝብ ንጽጽር ይህንን ሊያረጋግጥ አይችልም። ሙሉ፣ ቀን ያለውና ሊፈለግ የሚችል ውል፣ ተመሳሳይ የድጋፍ መልሶችና ግልጽ የክፍያ መስፈርቶች ያለውን ድርጅት ይምረጡ።"
+      },
+      {
+        "question": "የትኞቹ prop firms VPN ወይም VPS ይከለክላሉ?",
+        "answer": "16 ኖቬምበር 2026 GOAT Funded Trader እና FundingPips ለግብይት መዳረሻ ሁለቱንም ከልክለዋል። Topstep VPNንና በVPS ትዕዛዝ መላክን ይከለክላል። FundedNext፣ Alpha Capital Group እና Tradeify ሁኔታዎች አሏቸው፤ FTMO CFD እና Blue Guardian 1-Step Standard በተጠቀሱ ገደቦች ሥር በአጠቃላይ ይፈቅዳሉ። እያንዳንዱ ፖሊሲ በሰንጠረዡ ተያይዟል።"
+      },
+      {
+        "question": "ዜና በግምገማ ሊፈቀድ እና ከfunded በኋላ ሊገደብ ይችላል?",
+        "answer": "አዎ። E8 Classic፣ BrightFunded CFD፣ Blue Guardian 1-Step Standard እና አንዳንድ FundingPips ፕሮግራሞች ከfunded በኋላ የዜና ጊዜ ትርፍ አያያዝን ይቀይራሉ። የብራንድ መፈክርን ሳይሆን ምርቱንና ደረጃውን ይመልከቱ።"
+      },
+      {
+        "question": "PropRadar የaffiliate አጋሮቹን ይተቻል?",
+        "answer": "አዎ። የንግድ ግንኙነት ውጤቱን አይቀይርም፣ በሰነድ የተደገፉ የውል ገደቦችንም አያስወግድም።"
+      }
+    ],
+    "article": {
+      "intro": "Prop firm ከፍተኛ የትርፍ ድርሻና ቀላል challenge ሊያስተዋውቅ ይችላል፤ አስገዳጁ ውል ግን ገንዘብ የሚያወጡበትን ጊዜ በእጅጉ የሚቀይሩ ደንቦችን ሊይዝ ይችላል። እነዚህ **በቀላሉ ሊያመልጡ የሚችሉ ደንቦች** ናቸው፣ ሆን ተብለው ተደብቀዋል ማለት አይደለም፤ ምሳሌዎቹ ከድርጅቶቹ የሕዝብ ሰነዶች የተወሰዱ ናቸው። **የPropRadar affiliate አጋሮችንም እንጨምራለን።** ማንኛውም ደረጃ ወይም ኮሚሽን ከምርመራ ነፃ መሆንን አይገዛም።",
+      "keyPoints": [
+        "**የግምገማ ደንቦች የfunded ደንቦች ላይሆኑ ይችላሉ።** ዜና፣ የግብይት ሰዓትና ወጥነት ካለፉ በኋላ ሊቀየሩ ይችላሉ።",
+        "**በdashboard ላይ ያለ ትርፍ በራሱ የሚከፈል ሽልማት አይደለም።** አንዳንድ ፕሮግራሞች ትርፍን ያስወግዳሉ ወይም ተጨማሪ የብቁነት ውሎች አላቸው።",
+        "**መኖሪያ፣ ዜግነት፣ የአሁኑ ቦታና የክፍያ አቅራቢ ሊለያዩ ይችላሉ።** ግዢ ስኬታማ መሆኑ የክፍያ ብቁነትን አያረጋግጥም።",
+        "**በስም የተጠቀሰ እያንዳንዱ ምሳሌ የድርጅቱን ኦፊሴላዊ ፖሊሲ አገናኝ ይዟል**፤ 16 ኖቬምበር 2026 ተፈትሿል።"
+      ],
+      "sections": [
+        {
+          "heading": "1. በግምገማ ዜና ይፈቀዳል፣ ከfunded በኋላ ግን ትርፍ ሊቀነስ ይችላል",
+          "paragraphs": [
+            "E8 Markets በ**E8 Classic ግምገማ** የዜና ግብይት ገደብ እንደሌለ ይገልጻል። በClassic SimFi Performance Account ግን በዜና ጊዜ ከተገኘው ትርፍ **40% ብቻ ብቁ ነው**። E8 One በperformance ሂሳቦች የተወሰኑ የዜና ድርጊቶችን ይከለክላል፣ E8 Pro ግን ይፈቅዳል። በአንድ ብራንድ ሦስት ደንቦች ናቸው።",
+            "FundingPips ግምገማን ከMaster ደረጃ ይለያል። በብዙ Master ሞዴሎች በተገለጹ ከፍተኛ ተጽዕኖ ያላቸው ዜናዎች ጊዜ ቦታ ከመክፈት ወይም ከመዝጋት የተገኘ ትርፍ **ሊወገድ ይችላል**፤ ከዜናው ቢያንስ አምስት ሰዓት በፊት የተከፈቱ ቦታዎች የተለዩ ናቸው። FundingPips Zero የበለጠ ጥብቅ ገደቦች አሉት። የግምገማ ማስታወቂያን እንደ funded ፈቃድ አይቁጠሩ።"
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "መድረኩ Buy ወይም Sell እንዲጫኑ መፍቀዱ **ውሉ ግብይቱን ፈቅዷል ማለት አይደለም**። ከግብይት በፊት ሞዴሉን፣ የዜና ቀን መቁጠሪያንና ሰዓቱን ያረጋግጡ።"
+          }
+        },
+        {
+          "heading": "የዜና ደንብ መዝገብ፦ ግምገማና funded (ኦፊሴላዊ ምንጮች)",
+          "paragraphs": [
+            "እነዚህ **የመረመርናቸው አሥር የፕሮግራም ቡድኖች** ናቸው፣ ሁሉንም ድርጅቶች የሚመለከት የክልከላ ዝርዝር አይደሉም። በዜና ጊዜ ቦታ ማቆየት መፈቀዱ የዋጋ ዝላይን ለመጠቀም ግብይት መክፈት ከመፈቀዱ የተለየ ነው። ደንቦቹ **ለተጠቀሱት ሞዴሎችና ደረጃዎች** እንጂ ለሁሉም ምርቶች አይደሉም።"
+          ],
+          "compare": {
+            "columns": [
+              "የግምገማ ደረጃ",
+              "Qualified / funded ደረጃ"
+            ],
+            "rows": [
+              {
+                "label": "E8 Classic",
+                "values": [
+                  "የዜና ገደብ የለም",
+                  "**የዜና ጊዜ ትርፍ 40% ብቻ ብቁ ነው**"
+                ],
+                "sourceUrl": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news"
+              },
+              {
+                "label": "E8 One",
+                "values": [
+                  "የዜና ገደብ የለም",
+                  "**ከፍተኛ ተጽዕኖ ያለው ዜና ±5 ደቂቃ ግብይት የለም**፤ ትርፍ ሊወገድ ይችላል"
+                ],
+                "sourceUrl": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news"
+              },
+              {
+                "label": "E8 Pro",
+                "values": [
+                  "ገደብ የለም",
+                  "በአጠቃላይ የአደጋ ደንቦች ሥር ገደብ የለም"
+                ],
+                "sourceUrl": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news"
+              },
+              {
+                "label": "FundingPips Flex / Standard / Pro",
+                "values": [
+                  "ቦታ ማቆየት ይፈቀዳል፤ የዜና ዝላይን ሆን ብሎ መጠቀም ተከልክሏል",
+                  "**የተጎዳ Master ትርፍ ይቀነሳል**፤ 5 ሰዓት swing ልዩ ፈቃድ"
+                ],
+                "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+              },
+              {
+                "label": "FundingPips Zero",
+                "values": [
+                  "ትክክለኛውን ውል ይፈትሹ",
+                  "**በተከለከለ ዜና መክፈት፣ መዝጋት ወይም ማቆየት አይፈቀድም**፤ የMaster 10 ደቂቃ መስኮት"
+                ],
+                "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+              },
+              {
+                "label": "Blue Guardian CFD 1-Step Standard",
+                "values": [
+                  "ዜና ይፈቀዳል",
+                  "**በከፍተኛ ተጽዕኖ ዜና ±5 ደቂቃ መክፈት ወይም መዝጋት የለም**"
+                ],
+                "sourceUrl": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+              },
+              {
+                "label": "BrightFunded CFD Phase 1 / 2",
+                "values": [
+                  "የዜና ገደብ የለም",
+                  "**በ±5 ደቂቃ አፈጻጸም ትርፍ ይወገዳል**፤ Instant ከመጀመሪያው ቀን ገደብ አለው"
+                ],
+                "sourceUrl": "https://help.brightfunded.com/en/articles/9241694-can-i-trade-news"
+              },
+              {
+                "label": "Alpha Futures Standard / Zero / Direct",
+                "values": [
+                  "Standard / Zero፦ ገደብ የለም፤ Direct ግምገማን ይዘላል",
+                  "**በተወሰኑ Qualified ዕቅዶች ±2 ደቂቃ ትዕዛዝ የለም**፤ Advanced Qualified የተለየ ነው"
+                ],
+                "sourceUrl": "https://help.alpha-futures.com/en/articles/9492063-news-trading-policy"
+              },
+              {
+                "label": "Alpha Capital Pro / One / Three / Direct",
+                "values": [
+                  "ግምገማ ገደብ የለም፤ Direct ግምገማ የለውም",
+                  "**በተዘረዘረ ዜና ±5 ደቂቃ አፈጻጸም የለም**፤ TP መፈጸምም ትርፍን ሊያስወግድ ይችላል"
+                ],
+                "sourceUrl": "https://help.alphacapitalgroup.uk/en/articles/9293522-can-i-trade-news"
+              },
+              {
+                "label": "Tradeify Futures",
+                "values": [
+                  "ዜና ይፈቀዳል",
+                  "በአጠቃላይ FAQ ዜና ይፈቀዳል"
+                ],
+                "sourceUrl": "https://help.tradeify.co/en/articles/12268494-common-faqs"
+              }
+            ],
+            "note": "16 ኖቬምበር 2026 ተፈትሿል። የድርጅቱን ደንብ ለማንበብ ከስሙ አጠገብ ↗ ይጫኑ። እነዚህ የድርጅት ፖሊሲዎች እንጂ እያንዳንዱ ክርክር እንዴት እንደተፈታ ገለልተኛ ማስረጃ አይደሉም።"
+          }
+        },
+        {
+          "heading": "2. VPN ወይም VPS ትርፋማ ግብይቶችን ሊሰርዝ ይችላል",
+          "paragraphs": [
+            "GOAT Funded Trader ከ**6 ኦክቶበር 2026** ጀምሮ በVPN፣ VPS፣ proxy ወይም hosting አካባቢ ግብይት እንደተከለከለ ይገልጻል። የእርዳታ ማዕከሉ እንዲህ ያለ ግብይት ሂሳቡን ወዲያውኑ ሊያስጥስና የተያያዘውን ሽልማት ብቁ ሊያሳጣ እንደሚችል ይገልጻል። ለመጀመሪያ የሰርቨር መግቢያ ጠባብ ልዩ ፈቃድና ለራሱ dashboard copier ሌላ ልዩ ፈቃድ ይገልጻል።",
+            "ይህ በውል የታተመ ገደብ እንጂ **ድርጅቱ ተገቢ ክፍያዎችን በሕገወጥ መንገድ እንደሚከለክል ማስረጃ አይደለም**። ይሁን እንጂ የalgorithmic trading ተጠቃሚዎችና ጉዞ ላይ የኢንተርኔት መስመርን የሚቀይሩ ሰዎች ማወቅ አለባቸው።"
+          ]
+        },
+        {
+          "heading": "የVPN / VPS ክትትል ዝርዝር፦ የትኞቹ ድርጅቶች ገደብ አላቸው?",
+          "paragraphs": [
+            "**VPN (ግንኙነትን መሸፈን) እና VPS (የርቀት ግብይት ሰርቨር) የተለያዩ መሣሪያዎች ናቸው።** አንዳንዶቹ ሁለቱንም ይከለክላሉ፣ ሌሎቹ VPN ይፈቅዳሉ ግን ከሰርቨር ትዕዛዝ መፈጸምን ይከለክላሉ፣ ሌሎቹም መኖሪያን መደበቅ ብቻ ይከለክላሉ። ከናሙናችን **11 ድርጅቶች የተወሰኑ ፖሊሲዎችና ምንጮች** አግኝተናል፣ affiliate አጋሮችንም ጨምሮ። “በሁኔታ” ማለት “በሁሉም ቦታ ተከልክሏል” አይደለም።"
+          ],
+          "compare": {
+            "columns": [
+              "VPN",
+              "VPS / የርቀት አፈጻጸም"
+            ],
+            "rows": [
+              {
+                "label": "GOAT Funded Trader",
+                "values": [
+                  "ለግብይት **ተከልክሏል** (ከ6 ኦክቶበር 2026)",
+                  "**ተከልክሏል**፤ የድርጅቱ መሣሪያ ጠባብ ልዩ ፈቃድ"
+                ],
+                "sourceUrl": "https://help.goatfundedtrader.com/en/articles/17362726-can-i-use-a-vpn-vps-proxy-or-any-other-hosting-service-while-trading"
+              },
+              {
+                "label": "FundingPips",
+                "values": [
+                  "የግብይት ሂሳብ ሲደርሱ **ተከልክሏል**",
+                  "የግብይት ሂሳብ ሲደርሱ **ተከልክሏል**"
+                ],
+                "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards"
+              },
+              {
+                "label": "Topstep / TopstepX",
+                "values": [
+                  "**ተከልክሏል** (proxy እና TOR ጨምሮ)",
+                  "በርቀት ሰርቨር ወይም API **ትዕዛዝ መላክ የለም**፤ ንባብ-ብቻ ትንታኔ ይፈቀዳል"
+                ],
+                "sourceUrl": "https://help.topstep.com/en/articles/11187768-topstepx-api-access"
+              },
+              {
+                "label": "FundedNext CFD",
+                "values": [
+                  "ከተገለሉ አገሮች IP በስተቀር **ይፈቀዳል**",
+                  "**≥$50k ተከልክሏል**፤ ከ$50k በታች ተከፋይ ማሻሻያ፣ ብቁ EA ብቻ፣ በእጅ ትዕዛዝ የለም"
+                ],
+                "sourceUrl": "https://help.fundednext.com/en/articles/8223809-can-i-use-a-vpn-or-vps"
+              },
+              {
+                "label": "Alpha Capital Group",
+                "values": [
+                  "**በሁኔታ፦** ልዩ ቋሚ IP + ቅድመ ማሳወቂያ",
+                  "**በሁኔታ፦** ልዩ ቋሚ IP + ቅድመ ማሳወቂያ"
+                ],
+                "sourceUrl": "https://help.alphacapitalgroup.uk/en/articles/8420522-what-is-the-ip-rule-are-vpns-and-vpss-allowed"
+              },
+              {
+                "label": "Tradeify Futures",
+                "values": [
+                  "**በመግቢያ ጊዜ VPN የለም**",
+                  "**ከመደበኛ መግቢያ በኋላ** በtrader አደጋ ይፈቀዳል"
+                ],
+                "sourceUrl": "https://help.tradeify.co/en/articles/12268494-common-faqs"
+              },
+              {
+                "label": "FTMO CFD",
+                "values": [
+                  "**በአጠቃላይ ይፈቀዳል**፤ ለተጠቀሱት መድረኮች የUS ቦታን ያስወግዱ",
+                  "**በአጠቃላይ ይፈቀዳል**፤ የመድረክ/US ቦታ ልዩ ሁኔታ"
+                ],
+                "sourceUrl": "https://ftmo.com/en/faq/can-i-travel-or-use-vpn-vps/"
+              },
+              {
+                "label": "Blue Guardian CFD 1-Step Standard",
+                "values": [
+                  "**ይፈቀዳል**፤ copy/group trading ደንቦችን መሸሽ የለም",
+                  "በተመሳሳይ ሁኔታ **ይፈቀዳል**"
+                ],
+                "sourceUrl": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+              },
+              {
+                "label": "Apex Trader Funding",
+                "values": [
+                  "**ማንነት/ቦታን ለመደበቅ ወይም ደንብን ለማለፍ** ከሆነ ተከልክሏል",
+                  "ተመሳሳይ የማለፍ ክልከላ፤ አጠቃላይ ክልከላ አልታተመም"
+                ],
+                "sourceUrl": "https://apextraderfunding.com/help-center/uncategorized/prohibited-activities/"
+              },
+              {
+                "label": "The5ers",
+                "values": [
+                  "**የአገር ገደብን መሸሽ የለም**፤ አጠቃላይ ክልከላ አልተረጋገጠም",
+                  "በተጠቀሱት ውሎች አጠቃላይ VPS ደንብ አልተረጋገጠም"
+                ],
+                "sourceUrl": "https://the5ers.com/terms-and-conditions/"
+              },
+              {
+                "label": "HyroTrader (crypto)",
+                "values": [
+                  "የexchange/መድረክ የቦታ ገደብን **መሸሽ የለም**",
+                  "በመድረኩና ውሉ ይወሰናል፤ አጠቃላይ ክልከላ አልተረጋገጠም"
+                ],
+                "sourceUrl": "https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/"
+              }
+            ],
+            "note": "የምንጭ አገናኝ ያለው መዝገብ እንጂ ያልተከፈለ ክፍያ ክስ አይደለም። 16 ኖቬምበር 2026 ዘምኗል። ደንቦች በምርት፣ የሂሳብ መጠን፣ መድረክና አገር ሊለያዩ ይችላሉ። ሌሎች ድርጅቶች በዚህ ጉዳይ ገና አልተመረመሩም።"
+          },
+          "callout": {
+            "kind": "warning",
+            "text": "EA ስለተፈቀደ **በVPS ሮቦት ማስኬድ በራሱ አይፈቀድም**። የሰርቨር፣ IP፣ የሂሳብ መጠንና የትዕዛዝ አፈጻጸም ደንቦችን ለየብቻ ይፈትሹ።"
+          }
+        },
+        {
+          "heading": "3. “Scalping ይፈቀዳል” የጊዜና margin ገደቦችን አያስወግድም",
+          "paragraphs": [
+            "Blue Guardian በFutures ፕሮግራሙ scalping ይፈቅዳል፤ ግን **ከጠቅላላ ትርፍ ግማሽ በታች ብቻ ከ10 ሰከንድ በታች ከቆዩ ግብይቶች ሊመጣ ይችላል** ይላል። በCFD ሂሳቦች **80% የmargin አጠቃቀም ገደብ** እንደ “all or nothing” የቁማር ደንብ ይገልጻል፤ ውጤቱ ትርፍ ማስወገድ ወይም ክፍያ መከልከል ሊሆን ይችላል።",
+            "“Scalping ይፈቀዳል” ወይም “EA ይፈቀዳል” የሚሉ መለያዎች ለግዢ ውሳኔ በጣም ሰፊ ናቸው። የግብይት ቆይታ፣ የautomation ገደብና ብዙ ሂሳቦችን እንዴት እንደሚያስተናግዱ ይፈልጉ።"
+          ]
+        },
+        {
+          "heading": "4. ወጥነት ከchallenge በኋላ ክፍያን ሊያዘገይ ይችላል",
+          "paragraphs": [
+            "የወጥነት ደንብ ከምርጥ ቀን የመጣውን የጠቅላላ ትርፍ ድርሻ ይለካል። በTopstep ደንቡና መቶኛው **በTrading Combine ወይም funded የክፍያ መንገድ ላይ መሆንዎ ይወስነዋል**። ሁለቱን ደረጃዎች አያደባልቁ።",
+            "ምሳሌ፦ የምርጥ ቀን ገደብ 50% ከሆነ፣ $1,200 ትርፍ ያለው ቀን ድርሻው ወደ 50% ለመውረድ ቢያንስ **$2,400 ጠቅላላ ትርፍ** ይፈልጋል። ገደቡን ያለፈውን ድርሻ ለማሳነስ በተለምዶ ተጨማሪ ብቁ ትርፍ ያስፈልጋል፣ ሆን ብሎ ኪሳራ መፍጠር አይደለም።"
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "የ**ወጥነት ደንብ የሌላቸው prop firms** መመሪያችንን ያንብቡ። “ወጥነት የለም” አንድ ገደብን ብቻ ያስወግዳል፤ drawdown፣ ዜናና የክፍያ ውሎችን አያስወግድም።"
+          }
+        },
+        {
+          "heading": "5. የመኖሪያ አገር ከክፍያ ብቁነት ጋር አንድ አይደለም",
+          "paragraphs": [
+            "GOAT Funded Trader **ሲንጋፖርን** ከማይቀበላቸው አገሮች ውስጥ በግልጽ ይጠቅሳል። Apex Trader Funding **ቻይናን** ለአዲስና ተጨማሪ ሂሳቦች ከተገለሉት ውስጥ ይጠቅሳል። ሁለቱም አገሮች የPropRadar ዓለም አቀፍ አንባቢዎች አካል ስለሆኑ ይህ ወሳኝ ነው።",
+            "በአንድ ድርጅት የተለያዩ ምርቶች የተለያዩ የቦታ ዝርዝሮች ሊኖራቸው ይችላል። FTMO CFD እና FTMO Futures፣ E8 Classic እና E8 Futures ምሳሌዎች ናቸው። ስኬታማ ግዢ፣ ወደ ውጭ ጉዞ ወይም ድርጅቱን በአገርዎ ማየት **KYCን፣ የዜግነት ምርመራን፣ የመድረክ መዳረሻንና የክፍያ መንገዶችን አይለውጥም**።"
+          ],
+          "compare": {
+            "columns": [
+              "ሕንድ",
+              "ዋናው የቻይና ግዛት",
+              "ሲንጋፖር"
+            ],
+            "rows": [
+              {
+                "label": "FTMO CFD",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://ftmo.com/en/faq/who-can-join-ftmo/"
+              },
+              {
+                "label": "Topstep Futures",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "**የግለሰብ ማረጋገጫ ያስፈልጋል**",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://help.topstep.com/en/articles/8284116-am-i-eligible-to-trade-with-topstep"
+              },
+              {
+                "label": "My Funded Futures",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "**ብቁ አይደለም**",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://help.myfundedfutures.com/en/articles/8229993-restricted-countries-policy"
+              },
+              {
+                "label": "Apex Trader Funding",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "**ብቁ አይደለም**",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://apextraderfunding.com/help-center/getting-started/restricted-countries/"
+              },
+              {
+                "label": "GOAT Funded Trader",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "**ብቁ አይደለም**"
+                ],
+                "sourceUrl": "https://help.goatfundedtrader.com/en/articles/10742187-which-countries-are-restricted-at-goat-funded-trader"
+              },
+              {
+                "label": "FundedNext CFD",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://help.fundednext.com/en/articles/8020080-are-any-countries-restricted-on-fundednext-cfds"
+              },
+              {
+                "label": "Fintokei",
+                "values": [
+                  "**ብቁ አይደለም**",
+                  "**ለጊዜው ብቁ አይደለም**",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://support.fintokei.com/en/articles/6538820-who-can-join-fintokei"
+              },
+              {
+                "label": "Alpha Futures",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "**ብቁ አይደለም**",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://help.alpha-futures.com/en/articles/9523389-countries-with-limitations"
+              },
+              {
+                "label": "Alpha Capital Group",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://help.alphacapitalgroup.uk/en/articles/8775575-countries-with-limitations"
+              },
+              {
+                "label": "Lucid Trading",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://support.lucidtrading.com/en/articles/11404636-restricted-countries"
+              },
+              {
+                "label": "PipFarm",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://help.pipfarm.com/en/articles/4318163-prohibited-country-list"
+              },
+              {
+                "label": "HyroTrader (Hyro platform)",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/"
+              },
+              {
+                "label": "BrightFunded CFD",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://help.brightfunded.com/en/articles/9286630-what-countries-are-restricted-at-brightfunded"
+              },
+              {
+                "label": "Upcomers",
+                "values": [
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል",
+                  "ብቁ እንደሆነ ተገልጿል"
+                ],
+                "sourceUrl": "https://help.upcomers.com/en/articles/8703655-are-there-any-prohibited-countries"
+              }
+            ],
+            "note": "በ16 ኖቬምበር 2026 በተፈተሸው የታተመ አጠቃላይ ፖሊሲ መሠረት ብቁነት — ሕጋዊ ፈቃድ፣ KYC ማጽደቅ ወይም የክፍያ ቃል ኪዳን አይደለም። አረንጓዴ ሕዋሳት ከተገለሉ ቦታዎች በስተቀር ዓለም አቀፍ ፈቃድ ከሚሰጡ ፖሊሲዎች የተወሰዱ ናቸው፣ ከሙከራ ግዢ አይደሉም። ሌላ challenge ወይም የሦስተኛ ወገን መድረክ መልሱን ሊለውጥ ይችላል።"
+          },
+          "callout": {
+            "kind": "warning",
+            "text": "የPropRadar የአገር ማጣሪያ **የታተሙ የብቁነት ውሎችን** እንጂ ሕጋዊ ፈቃድ፣ የተቆጣጣሪ ፈቃድ ወይም የተረጋገጠ ክፍያ አያሳይም። ምርትን ማረጋገጥ ካልቻልን ከመገመት ይልቅ **አልተረጋገጠም** እንላለን።"
+          }
+        },
+        {
+          "heading": "6. በሌላ ቦታ ቢኖሩም የተከለከለ አገር መጎብኘት ደንብ ሊጥስ ይችላል",
+          "paragraphs": [
+            "Take Profit Trader ከተከለከለ አካባቢ አንድ ጊዜ ግብይት ወይም የገበያ መረጃ መዳረስ እንኳ የሂሳብ ገደብ ሊያመጣ እንደሚችል ይገልጻል። በዚያ አገር የሚያልፍ VPN እና የርቀት ግንኙነትን በግልጽ ይጠቅሳል። በተፈቀደ ቦታ ነዋሪ ሰው ኮምፒውተሩን ወደ ውጭ ከመውሰዱ በፊት **የጉዞና IP ደንቦችን** ይፈትሽ።",
+            "ሁሉም ድርጅቶች ይህንን ደንብ አይጠቀሙም፤ Tradeify አጠቃላይ የቦታ ገደቡ በ**ቋሚ መኖሪያ እንጂ በአጭር ጉዞ ላይ እንደማይመሠረት** ይገልጻል። ሁለት ድርጅቶች አንድ ጉዞን በተለያየ መንገድ ሊመለከቱት ይችላሉ።"
+          ]
+        },
+        {
+          "heading": "7. ክፍያ በውል የውሳኔ ሥልጣን ላይ ሊመሠረት ይችላል",
+          "paragraphs": [
+            "የApex Trader Funding Risk Disclosure የPerformance Account ሽልማቶች **በራሱ ውሳኔ** እንደሚሰጡና የመክፈል ወይም የመከልከል ውሳኔዎች የመጨረሻ እንደሆኑ ይገልጻል። ከUser Agreement እና የታተሙ የክፍያ መስፈርቶች ጋር ማንበብ ያለበት ወሳኝ ድንጋጌ ነው።",
+            "የውሳኔ ሥልጣን ድንጋጌ **ድርጅቱ ተገቢ ሽልማትን በመደበኛነት እንደሚከለክል ማስረጃ አይደለም**። Trader ግን የደንብ ማክበር ሰነዶችን ማስቀመጥና ከግዢ በፊት የክርክርና ይግባኝ መንገዶችን መረዳት አለበት።"
+          ]
+        },
+        {
+          "heading": "8. Funded እና live ደረጃዎች የሚተካኩ አይደሉም",
+          "paragraphs": [
+            "Tradeify ወደ Live Account መግባት ያልተፈቀደላቸው traders በቀላሉ ወደ ማስመሰያ ደረጃ መመለስ እንደማይችሉ ይገልጻል። FTMO Futures የSim-Funded ተሞክሮን ወደ Live Funded Account ከመሸጋገር ብቁነት ይለያል፤ የlive ደረጃ በተጨማሪ አገሮች ገደቦች አሉት።",
+            "ድርጅቱ funded ደረጃ፣ እውነተኛ broker ሂሳብ ወይም የማስመሰያ ሽልማት ሥርዓት ብቻ እንደሚሰጥ ይጠይቁ። የማስታወቂያው **“funded” ቃል በሁሉም ቦታ አንድ የውል ሥርዓትን አይገልጽም**።"
+          ]
+        },
+        {
+          "heading": "9. ያልተጠበቁ ደንቦች የሌሉትን prop firm እንዴት መፈለግ ይቻላል?",
+          "paragraphs": [
+            "አንድም ገለልተኛ ድረ ገጽ ድርጅቱ *ዜሮ* የተደበቁ ደንቦች እንዳሉት ዋስትና መስጠት አይችልም፤ ደንቦች ሊለወጡ ይችላሉ፣ KYC የግለሰብ ነው፣ የድጋፍ ውሳኔዎችም አንዳንዴ በራሳቸው ውሳኔ ናቸው። ተስማሚ ያልሆነ ፕሮግራም የመግዛት እድልን ማሳነስ ይችላሉ።"
+          ],
+          "steps": [
+            {
+              "title": "ትክክለኛውን ምርት ይለዩ",
+              "text": "**ድርጅት፣ የሂሳብ ስም፣ መጠንና የግምገማ/funded ደረጃ** ይጻፉ። የብራንድ ማጠቃለያ በቂ አይደለም።"
+            },
+            {
+              "title": "ውሉንና ቀኑን ያስቀምጡ",
+              "text": "**ሙሉ ውሎችን፣ የእርዳታ ጽሑፎችን፣ የክፍያ ፖሊሲንና የተከለከሉ አገሮች ዝርዝርን** ያንብቡ፤ ቀን ያለው ቅጂ ያስቀምጡ።"
+            },
+            {
+              "title": "የራስዎን ትክክለኛ ስልት ይፈትሹ",
+              "text": "**የዜና መስኮቶች፣ copy trading፣ VPN/VPS፣ ቦታ ማቆየት፣ ከፍተኛ የcontracts ብዛት፣ ወጥነትና እንቅስቃሴ አለመኖር** ከስልትዎ ጋር ያነጻጽሩ።"
+            },
+            {
+              "title": "የመጀመሪያውን እውነተኛ ክፍያ ይስሉ",
+              "text": "**የትርፍ ግብ፣ ዝቅተኛ ቀናት፣ የመጀመሪያ ማውጫ ገደቦች፣ ማስጀመሪያ ክፍያ፣ የክፍያ ወጪና የአቅራቢ መስፈርቶችን** ያካትቱ።"
+            },
+            {
+              "title": "ከመክፈል በፊት በጽሑፍ ይጠይቁ",
+              "text": "ግልጽ ያልሆነ ነገር ካለ **ትክክለኛውን ደንብና ስሪት** የሚጠቅስ የድጋፍ መልስ ይጠይቁ፣ መልሱንም ያስቀምጡ።"
+            }
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "በንጽጽራችን ያልተካተተ ደንብ ካገኙ፣ ኦፊሴላዊ አገናኝና የማያ ገጽ ምስል በ**ምንጭ ማቅረቢያ** ለPropRadar ይላኩ። አጋሮችንና አጋር ያልሆኑትን በተመሳሳይ የኤዲቶሪያል መስፈርት እንመረምራለን።"
+          }
+        }
+      ]
+    }
   }
 };
 
