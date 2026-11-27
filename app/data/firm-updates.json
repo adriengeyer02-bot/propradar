@@ -1943,7 +1943,7 @@
           "id": "apex-legacy-promotional-current",
           "name": "Legacy FULL — limited-time return",
           "type": "Futures evaluation",
-          "description": "Official homepage offers old-format FULL evaluations temporarily across six sizes and multiple platforms. Monthly subscription; $99 lifetime PA activation on listed Tradovate and WealthCharts plans. Post-March promotional Legacy terms may differ from original legacy accounts; verify current checkout and agreement.",
+          "description": "Temporary return of Legacy FULL evaluations, six sizes and multiple platforms. Published historical Legacy PA payout rules: eight trading days, five days of $50+, 30% best-day rule until sixth payout or live transition; safety net for first three payouts. Exact promotional cohort agreement and PA activation fee not confirmed; historical terms are not assumed to apply.",
           "accountSizeMin": 25000,
           "accountSizeMax": 300000,
           "profitTarget": "$1.5K/$3K/$6K/$9K/$15K/$20K",
@@ -1962,13 +1962,13 @@
             "Futures"
           ],
           "hasConsistencyRule": true,
-          "consistencyRule": "Legacy PA rules differ from new-product PA rules; confirm exact promotional cohort."
+          "consistencyRule": "Historical Legacy: 30% until sixth payout or live transition; promotional cohort not confirmed."
         },
         {
           "id": "apex-instant-50k-limited",
           "name": "Instant Sim Funding 50K — limited-time offer",
           "type": "Instant funding",
-          "description": "Official homepage announces temporary direct simulated funding without evaluation. Product terms, actual checkout price, drawdown and payout eligibility not verified; do not infer them from ordinary PA rules.",
+          "description": "Official Thanksgiving status update mentions dashboard tracking for a limited-time $50K Instant Funding account. Offer-specific funded drawdown, payout eligibility, checkout price and agreement not confirmed; no stars assigned.",
           "accountSizeMin": 50000,
           "accountSizeMax": 50000,
           "profitTarget": "No evaluation",
@@ -4553,8 +4553,14 @@
           "drawdownSource": "https://e8futures.com/e8-signature-futures",
           "drawdownDetails": "End-of-day dynamic drawdown from the highest end-of-day balance, locking at the starting balance ($3,000 on the $100K account). A buffer equal to the drawdown must stay in the account at each payout.",
           "profitSplit": "80%",
-          "platforms": ["Tradelocker", "cTrader", "Match Trade"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradelocker",
+            "cTrader",
+            "Match Trade"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "pass in as little as 1 day; first payout after 3 days; then 5 profitable days (0.3%+ realized) between payouts",
           "hasConsistencyRule": true,
           "consistencyRule": "35% best-day rule: no single day may exceed 35% of total generated profits."
@@ -4575,8 +4581,14 @@
           "drawdownSource": "https://e8futures.com/e8-zero",
           "drawdownDetails": "Based on the highest end-of-day balance; locks at the starting balance, and at breakeven after the first payout.",
           "profitSplit": "80% or 100% (chosen at purchase)",
-          "platforms": ["Tradelocker", "cTrader", "Match Trade"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradelocker",
+            "cTrader",
+            "Match Trade"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "none stated",
           "hasConsistencyRule": true,
           "consistencyRule": "Challenge only: no single day may exceed 40% of total generated profits; no consistency rule on the Performance account."
@@ -4585,17 +4597,27 @@
           "id": "e8-zero-starter",
           "name": "E8 Zero Starter",
           "type": "Futures evaluation",
-          "description": "Lower-cap variant of E8 Zero: 'No consistency in performance · Daily payouts · Up to 100% payout'. Payout cap per cycle $600 / $1,000 / $1,600 / $1,995 (25K / 50K / 100K / 150K), up to 4 payouts per account. Prices, target and drawdown are not shown separately for Starter.",
+          "description": "Same E8 Zero rules as MAX, lower per-cycle payout caps, 80% or 100% split option. Four withdrawals then account deactivation and free new challenge. Profit not withdrawn in each cycle becomes permanently nonwithdrawable buffer. Official table and FAQ disagree on 100K/150K caps; confirm checkout agreement.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
-          "profitTarget": "not stated",
-          "maxDailyLoss": "not stated",
-          "maxDrawdown": "not stated",
-          "profitSplit": "up to 100%",
-          "platforms": ["Tradelocker", "cTrader", "Match Trade"],
-          "tradableAssets": ["Futures"],
+          "profitTarget": "Same as MAX; 6% headline, check size-specific target",
+          "maxDailyLoss": "None",
+          "maxDrawdown": "3% EOD dynamic",
+          "profitSplit": "80% or 100%",
+          "platforms": [
+            "Tradelocker",
+            "cTrader",
+            "Match Trade"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
-          "consistencyRule": "Challenge: 40% best-day rule (E8 Zero page); no consistency rule on the Performance account."
+          "consistencyRule": "40% challenge only; none in Performance.",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://e8futures.com/e8-zero",
+          "drawdownDetails": "3% EOD dynamic, locks at initial balance after sufficient closed profits or first payout.",
+          "minTradingDays": "No minimum profitable days in Performance"
         }
       ],
       "auditedPrograms": [
@@ -12198,8 +12220,15 @@
           "maxDailyLoss": "5% from the prior-day balance",
           "maxDrawdown": "6%, static; locks at the starting balance after the first payout",
           "profitSplit": "75% (90% as a checkout add-on)",
-          "platforms": ["not stated"],
-          "tradableAssets": ["Forex", "Indices", "Metals", "Crypto"],
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
           "hasConsistencyRule": false,
           "consistencyRule": "None on $25K to $1M accounts; 35% on funded accounts above $1M (official page, 29 Oct 2026)."
         },
@@ -12207,17 +12236,24 @@
           "id": "ment-futures",
           "name": "Futures evaluation",
           "type": "Futures evaluation",
-          "description": "Prices not stated on the homepage. 90-day evaluation window.",
+          "description": "One-phase evaluation, 90-day window (365-day add-on on 400K); no time limit once funded. First withdrawal after profit target and consistency, then every 30 days. Full withdrawal reaches hard breach floor after first payout.",
           "accountSizeMin": 25000,
           "accountSizeMax": 400000,
           "profitTarget": "10%",
-          "maxDailyLoss": "3%",
+          "maxDailyLoss": "3% of previous closing balance, hard breach",
           "maxDrawdown": "6%, static; locks at the starting balance after the first withdrawal",
           "profitSplit": "75% (90% as a checkout add-on)",
-          "platforms": ["not stated"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
-          "consistencyRule": "33%, in the evaluation and before each payout (official page, 29 Oct 2026)."
+          "consistencyRule": "33% in evaluation and before each funded payout.",
+          "drawdownType": "Static",
+          "drawdownSource": "https://www.mentfunding.com/",
+          "drawdownDetails": "6% fixed below starting balance until first withdrawal; then locks at starting balance. A full withdrawal forfeits the account."
         },
         {
           "id": "ment-equities",
@@ -12230,8 +12266,12 @@
           "maxDailyLoss": "4%",
           "maxDrawdown": "6%: static, or trailing on the closed balance until 6% is made, then locked",
           "profitSplit": "80% (90% as a checkout add-on)",
-          "platforms": ["not stated"],
-          "tradableAssets": ["Stocks"],
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Stocks"
+          ],
           "minTradingDays": "3 profitable days of 0.5% or more before a payout",
           "hasConsistencyRule": true,
           "consistencyRule": "33% (evaluation and funded on Static; evaluation only on Trailing), official page, 29 Oct 2026."
@@ -16481,17 +16521,26 @@
           "id": "top-one-elite-evaluation",
           "name": "Elite Evaluation",
           "type": "Futures evaluation",
-          "description": "Purchase price not stated in the help article and the programme is not on the homepage price grid read on 19 Nov 2026; one-time $149 activation fee after passing; resets $29 (25K) to $119 (150K).",
+          "description": "Original Elite route, official help still available but sale availability not confirmed. $149 activation; funded new targets of 6%, 5%, then 4% from post-payout balance, capped withdrawals $1,500–$3,500.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
           "profitTarget": "6%: $1,500 (25K) to $9,000 (150K)",
           "maxDailyLoss": "2.5% of the end-of-day balance; trading pauses for the day",
           "maxDrawdown": "$1,000 (25K) to $4,500 (150K), trailing on the end-of-day balance, locks at the drawdown limit plus $100",
           "profitSplit": "90%",
-          "platforms": ["Tradovate", "NinjaTrader", "TradingView", "BlackArrow"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradovate",
+            "NinjaTrader",
+            "TradingView",
+            "BlackArrow"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
-          "consistencyRule": "None in the evaluation; on Sim Funded accounts no single day may exceed 25% of total profits."
+          "consistencyRule": "None in evaluation; funded 25% resets after withdrawal.",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.toponefutures.com/en/articles/11020730-overview-of-the-elite-evaluation"
         },
         {
           "id": "top-one-elite-daily",
@@ -16509,17 +16558,24 @@
           "drawdownSource": "https://help.toponefutures.com/en/articles/15056075-elite-daily-v2-overview",
           "drawdownDetails": "Trails the highest closed balance at end of day; equity checked in real time.",
           "profitSplit": "90%",
-          "platforms": ["Tradovate", "NinjaTrader", "TradingView", "BlackArrow"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradovate",
+            "NinjaTrader",
+            "TradingView",
+            "BlackArrow"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "not stated for the evaluation; 1 on the funded account",
           "hasConsistencyRule": true,
           "consistencyRule": "40% best-day rule during the evaluation only; on the funded account at least 50% of each payout must come from profit since the previous payout."
         },
         {
           "id": "top-one-elite-access",
-          "name": "Elite ACCESS",
+          "name": "Elite ACCESS EOD",
           "type": "Futures evaluation",
-          "description": "One-phase evaluation (1-day minimum, 30 days to pass). The help centre states a $39 one-time evaluation fee and a $139 to $359 activation fee after passing; the homepage shows $139 to $359 crossed out with $39. Funded: 5 profitable days per payout, $500 minimum, $1,000 to $2,500 maximum per request, buffer $1,500 to $4,500.",
+          "description": "One-phase $39 evaluation; 1 day minimum, 30 days to pass. EOD trailing in both phases. Activation $139–$359. Funded: five profitable days, protected buffer $1,500–$4,500, $500 minimum, $1,000–$2,500 caps and 50% fresh profit after first payout.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
           "profitTarget": "6%: $1,500 (25K) to $9,000 (150K)",
@@ -16529,8 +16585,15 @@
           "drawdownSource": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview",
           "drawdownDetails": "End-of-day trailing; breach level checked in real time.",
           "profitSplit": "90%",
-          "platforms": ["Tradovate", "NinjaTrader", "TradingView", "BlackArrow"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradovate",
+            "NinjaTrader",
+            "TradingView",
+            "BlackArrow"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "1 (evaluation); 5 profitable days per payout (funded)",
           "hasConsistencyRule": true,
           "consistencyRule": "None in evaluation; 40% best-day rule on the funded account; from the second payout at least 50% of each request must come from new profit."
@@ -16551,8 +16614,15 @@
           "drawdownSource": "https://help.toponefutures.com/en/articles/11020805-overview-of-the-instant-sim-funded-program",
           "drawdownDetails": "Trails the highest closed balance, never moves down; equity at or below the level at any moment closes the account; locks once profit reaches the drawdown plus $100 or after the first payout.",
           "profitSplit": "90%",
-          "platforms": ["Tradovate", "NinjaTrader", "TradingView", "BlackArrow"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradovate",
+            "NinjaTrader",
+            "TradingView",
+            "BlackArrow"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "not stated",
           "hasConsistencyRule": true,
           "consistencyRule": "No single day may exceed 20% of total profit; resets after each payout."
@@ -16573,11 +16643,74 @@
           "drawdownSource": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview",
           "drawdownDetails": "End-of-day trailing on the closing balance, real-time equity check; locks once profit reaches the drawdown plus $100 or after the first payout.",
           "profitSplit": "90%",
-          "platforms": ["Tradovate", "NinjaTrader", "TradingView", "BlackArrow"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradovate",
+            "NinjaTrader",
+            "TradingView",
+            "BlackArrow"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "none",
           "hasConsistencyRule": true,
           "consistencyRule": "Best day may not exceed 15% of total profit at payout request."
+        },
+        {
+          "id": "top-one-elite-access-intraday",
+          "name": "Elite ACCESS Intraday",
+          "type": "Futures evaluation",
+          "description": "$39 EOD evaluation; switches to intraday equity trailing when funded. Activation $90–$233. Same funded 40% consistency, buffer, five profitable days, payout cap and 50% fresh-profit rules as ACCESS EOD.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "6%: $1,500 (25K) to $9,000 (150K)",
+          "maxDailyLoss": "None in evaluation; funded soft breach $500 (25K) to $1,750 (150K)",
+          "maxDrawdown": "Evaluation $1K/$2K/$3K/$4K; funded $1K/$2K/$3K/$3.5K",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.toponefutures.com/en/articles/17059267-elite-access-intraday-accounts-overview",
+          "drawdownDetails": "EOD trailing in evaluation; intraday equity peaks, including unrealized profits, move funded floor.",
+          "profitSplit": "90%",
+          "platforms": [
+            "Tradovate",
+            "NinjaTrader",
+            "TradingView",
+            "BlackArrow"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "1 (evaluation); 5 profitable days per payout (funded)",
+          "hasConsistencyRule": true,
+          "consistencyRule": "None in evaluation; 40% best-day rule on the funded account; from the second payout at least 50% of each request must come from new profit.",
+          "entryFeeMin": 39
+        },
+        {
+          "id": "top-one-elite-access-static",
+          "name": "Elite ACCESS Static",
+          "type": "Futures evaluation",
+          "description": "$39 static evaluation; switches to EOD trailing when funded. Activation $139–$359. Same funded 40% consistency, buffer, five profitable days, payout cap and 50% fresh-profit rules as ACCESS EOD.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "6%: $1,500 (25K) to $9,000 (150K)",
+          "maxDailyLoss": "None in evaluation; funded soft breach $500 (25K) to $1,750 (150K)",
+          "maxDrawdown": "Evaluation $1K/$2K/$3K/$4K; funded $1K/$2K/$3K/$3.5K",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.toponefutures.com/en/articles/17889367-elite-access-static-accounts-overview",
+          "drawdownDetails": "Fixed drawdown in evaluation; funded floor follows EOD closing balance and locks at starting balance + $100.",
+          "profitSplit": "90%",
+          "platforms": [
+            "Tradovate",
+            "NinjaTrader",
+            "TradingView",
+            "BlackArrow"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "1 (evaluation); 5 profitable days per payout (funded)",
+          "hasConsistencyRule": true,
+          "consistencyRule": "None in evaluation; 40% best-day rule on the funded account; from the second payout at least 50% of each request must come from new profit.",
+          "entryFeeMin": 39
         }
       ],
       "auditedPrograms": [
@@ -23751,7 +23884,7 @@
           "id": "traders-launch-futures-standard",
           "name": "Futures evaluation (standard)",
           "type": "Futures evaluation",
-          "description": "One-time fee $159 (100K), $299 (200K), $599 (300K). No activation fee.",
+          "description": "Premium standard full-session; 60% or 80% share. One-time evaluation fee; separate buffer stage before payout-eligible SimFunded. Daily uncapped requests above +1% with review after $100K cumulative payouts.",
           "accountSizeMin": 100000,
           "accountSizeMax": 300000,
           "entryFeeMin": 159,
@@ -23759,17 +23892,26 @@
           "profitTarget": "$2,000 / $4,000 / $6,000",
           "maxDailyLoss": "not stated",
           "maxDrawdown": "$1,000 / $2,000 / $3,000, end-of-day, locks at the starting balance",
-          "profitSplit": "80%",
-          "platforms": ["TradingView", "Volumetrica", "Quantower"],
-          "tradableAssets": ["Futures"],
-          "hasConsistencyRule": false,
-          "consistencyRule": "No consistency rules once funded (payout rules page, 30 Oct 2026)."
+          "profitSplit": "60% or 80%",
+          "platforms": [
+            "TradingView",
+            "Volumetrica",
+            "Quantower"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "40% of evaluation target per session (soft pause); no funded consistency.",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://www.traderslaunch.com/faq",
+          "drawdownDetails": "EOD trailing during evaluation and buffer; fixed at starting balance upon entering payout-eligible SimFunded."
         },
         {
           "id": "traders-launch-futures-legacy-nyc",
           "name": "Futures Legacy NYC (9:30am to 4:00pm ET)",
           "type": "Futures evaluation",
-          "description": "One-time fee $99 (100K), $149 (200K), $279 (300K).",
+          "description": "Legacy NYC restricted session; 55% or 80% share. One-time evaluation fee; separate buffer stage before payout-eligible SimFunded. Daily uncapped requests above +1% with review after $100K cumulative payouts.",
           "accountSizeMin": 100000,
           "accountSizeMax": 300000,
           "entryFeeMin": 99,
@@ -23777,17 +23919,26 @@
           "profitTarget": "$2,000 / $3,000 / $5,000",
           "maxDailyLoss": "not stated",
           "maxDrawdown": "$1,000 / $1,000 / $2,000, end-of-day",
-          "profitSplit": "80% (55% also listed on the page)",
-          "platforms": ["TradingView", "Volumetrica", "Quantower"],
-          "tradableAssets": ["Futures"],
-          "hasConsistencyRule": false,
-          "consistencyRule": "No consistency rules once funded (payout rules page, 30 Oct 2026)."
+          "profitSplit": "55% or 80%",
+          "platforms": [
+            "TradingView",
+            "Volumetrica",
+            "Quantower"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "40% of evaluation target per session (soft pause); no funded consistency.",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://www.traderslaunch.com/faq",
+          "drawdownDetails": "EOD trailing during evaluation and buffer; fixed at starting balance upon entering payout-eligible SimFunded."
         },
         {
           "id": "traders-launch-static-25k",
           "name": "Static 25K",
           "type": "Futures evaluation",
-          "description": "From $119, one-time.",
+          "description": "Static $25K fixed loss floor; 60%, 80% or 90% share options. Uncapped payout claim confirmed for 90% option only; other options require exact checkout rules.",
           "accountSizeMin": 25000,
           "accountSizeMax": 25000,
           "entryFeeMin": 119,
@@ -23795,10 +23946,17 @@
           "maxDailyLoss": "not stated",
           "maxDrawdown": "$500, static",
           "profitSplit": "60%, 80% or 90%",
-          "platforms": ["not stated"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": false,
-          "consistencyRule": "No consistency rules once funded (payout rules page, 30 Oct 2026)."
+          "consistencyRule": "50% session-profit cap in evaluation only; none in funded.",
+          "drawdownType": "Static",
+          "drawdownSource": "https://www.traderslaunch.com/",
+          "drawdownDetails": "$500 fixed loss floor; confirm plan-specific payout threshold."
         }
       ],
       "addSources": [
