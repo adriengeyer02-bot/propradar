@@ -1299,6 +1299,116 @@ const sw: GuideTranslations = {
         }
       ]
     }
+  },
+  "hyrotrader-vs-tradeify": {
+    "title": "HyroTrader dhidi ya Tradeify: sheria za drawdown na usimamizi wa hatari",
+    "metaDescription": "HyroTrader dhidi ya Tradeify: linganisha crypto na futures, hasara ya siku, EOD drawdown, uthabiti na masharti ya malipo ya kwanza ya akaunti Instant.",
+    "eyebrow": "Crypto dhidi ya futures",
+    "h1": "HyroTrader dhidi ya Tradeify: ulinganisho wa drawdown na usimamizi wa hatari",
+    "answer": "HyroTrader inahudumia wafanyabiashara wa crypto; Tradeify inahudumia futures zinazouzwa kwenye soko rasmi. HyroTrader huchapisha vikomo vya hasara ya siku kulingana na equity ya mwanzo wa siku na salio la awali. Tradeify ina EOD trailing drawdown inayotekelezwa wakati halisi. Linganisha modeli na sera ya malipo kabla ya ada au ukubwa unaotangazwa.",
+    "checks": [
+      "Chagua soko kwanza: crypto perpetuals na futures za soko rasmi ni vyombo tofauti.",
+      "Tenganisha kiwango cha chini cha equity cha siku na kikomo cha drawdown jumla.",
+      "Tofautisha uthabiti wa tathmini na uthabiti wa malipo ya hatua ya ufadhili.",
+      "Soma lengo, kikomo na mgawanyo wa malipo ya akaunti Instant.",
+      "Linganisha sheria na toleo la akaunti na tarehe ya ununuzi."
+    ],
+    "faq": [
+      {
+        "question": "HyroTrader au Tradeify ni bora?",
+        "answer": "Soko ndilo la kwanza. HyroTrader ni prop firm ya crypto; Tradeify ni ya futures. Linganisha vikomo vya hasara, saa na masharti ya malipo ya modeli husika. Mwongozo huu hauchagui mshindi wa jumla wala kuthibitisha malipo kwa wateja."
+      },
+      {
+        "question": "Je, EOD drawdown ya Tradeify inaruhusu ukiukaji ndani ya siku?",
+        "answer": "Hapana. Kikomo kinahesabiwa upya mwisho wa siku lakini hutekelezwa kila wakati dhidi ya net liquidation value. Kukigusa kunaweza kumaliza akaunti kabla ya kufungwa kwa kipindi."
+      },
+      {
+        "question": "Je, ninaweza kuanza bila challenge katika kampuni hizi?",
+        "answer": "Kurasa rasmi zilizokaguliwa 15 Novemba 2026 zinaeleza Hyro Instant na Tradeify Lightning Funded. Zote zinaruka tathmini, lakini vikomo vya siku, masharti ya malipo na vikomo vya kutoa pesa vinatofautiana."
+      },
+      {
+        "question": "Je, hakuna tathmini kunamaanisha hakuna lengo la faida la malipo?",
+        "answer": "Hapana. Tradeify Lightning hutenganisha faida inayohitajika kufungua ombi na kiasi kinachoweza kutolewa. Hyro Instant ina siku zinazostahili kwa malipo ya kwanza, faida ya chini baada ya mgawanyo na kikomo cha faida inayohesabiwa kwa malipo."
+      },
+      {
+        "question": "HyroTrader na Tradeify ni aina moja ya ufadhili wa crypto?",
+        "answer": "Hapana. HyroTrader hutumia biashara ya crypto ya kuiga kwa data za soko. Tradeify imejengwa kwa futures za soko rasmi. Angalia orodha ya vyombo badala ya kudhani futures zote ni crypto perpetuals."
+      }
+    ],
+    "article": {
+      "intro": "HyroTrader dhidi ya Tradeify ni kwanza **uamuzi kati ya crypto na futures**. Linganisha jinsi kila modeli inavyopima hasara, kuhesabu faida na kufungua malipo. Mapitio haya yanatumia sheria rasmi zilizopatikana 15 Novemba 2026; madai ya malipo ya matangazo si uthibitisho huru wa uhamisho.",
+      "keyPoints": [
+        "**Chagua chombo kwanza:** crypto perpetuals na futures za soko rasmi zina masharti tofauti ya utekelezaji na vipindi.",
+        "**Hasara ya siku na jumla ni vikomo tofauti.** Hasara inayoruhusiwa kwa siku bado inaweza kukiuka kikomo cha jumla.",
+        "**EOD inaeleza wakati kikomo kinabadilishwa.** Haiahirishi utekelezaji hadi kipindi kifungwe.",
+        "**Ufikiaji wa haraka bado una masharti ya malipo:** siku zinazostahili, malengo, vikomo na mgawanyo hutegemea modeli."
+      ],
+      "sections": [
+        {
+          "heading": "Unataka kufanya biashara katika soko gani?",
+          "paragraphs": [
+            "HyroTrader inaeleza akaunti za crypto za kuiga, pamoja na ufikiaji kupitia majukwaa yanayoungwa mkono. Tathmini zake na Hyro Instant si amana kwa broker wala ahadi ya mtaji halisi. Growth, SELECT na Lightning za Tradeify zimeundwa kwa futures; Lightning huanza na fedha za kuiga.",
+            "Linganisha akaunti na vyombo na kipindi ambacho mkakati wako unatumia. Mkakati wa crypto perpetual hauhamishiki moja kwa moja kwa futures. Thibitisha jukwaa, orodha ya bidhaa na saa kabla ya kulinganisha salio la $50,000 au punguzo."
+          ]
+        },
+        {
+          "heading": "Drawdown ya siku ya HyroTrader: equity ya kuweka upya ni muhimu",
+          "paragraphs": [
+            "Kikomo cha siku cha HyroTrader huanzia equity saa 00:00 UTC, kisha hupunguza asilimia isiyobadilika ya salio la awali. FAQ ina **3% kwa Hyro Core na Hyro Instant, 4% kwa One-Step na 5% kwa Two-Step**. Faida na hasara zilizo wazi na ada huhesabiwa katika equity.",
+            "Mfano: akaunti ya Hyro Instant ya $10,000 huanza siku ya UTC na equity $10,300. Kiasi kinachoruhusiwa kupotezwa ni $300, hivyo kikomo ni $10,000. Equity ikipanda hadi $10,800 siku hiyo, kikomo hakifuati kilele kipya. Siku inayofuata ya UTC huweka mwanzo mpya.",
+            "Kikomo cha hasara jumla ni ukaguzi tofauti. Hyro Instant ina hasara ya juu ya 5%, pamoja na sheria ya hasara ya biashara moja: kuzidi 2% ya salio la awali kwenye biashara iliyofungwa kabisa, ada zikijumuishwa, huleta onyo; biashara ya pili kama hiyo humaliza akaunti. Kikomo cha siku hakifuti masharti hayo."
+          ]
+        },
+        {
+          "heading": "EOD drawdown ya Tradeify: inabadilishwa mwisho wa siku, inatekelezwa sasa",
+          "paragraphs": [
+            "Sheria za Tradeify zinasema Growth, SELECT na Lightning zina **end-of-day trailing drawdown**. Salio jipya la juu la mwisho wa siku linaweza kuinua kikomo. Salio la chini baadaye halikishushi. Hata hivyo, kikomo kinatumika kila wakati dhidi ya salio pamoja na faida na hasara zilizo wazi.",
+            "Mfano wa akaunti $50,000 yenye drawdown $2,000: kikomo cha kwanza ni $48,000. Salio la juu la mwisho wa siku la $51,000 hukipandisha hadi $49,000. Siku inayofuata, net liquidation value ikigusa $49,000, akaunti inaweza kushindwa mara moja. Kupona kabla ya kufungwa hakufuti ukiukaji.",
+            "Kwa akaunti zilizofadhiliwa za kuiga, utaratibu uliochapishwa unaweza kufunga kikomo $100 juu ya salio la awali, kizingiti kikifikiwa au malipo yakiombwa. Akaunti za tathmini hazina sheria hiyo. Soma kiasi cha bidhaa yako."
+          ]
+        },
+        {
+          "heading": "Sheria za uthabiti zina hatua na misingi tofauti ya hesabu",
+          "paragraphs": [
+            "Tathmini za HyroTrader Core, One-Step na Two-Step zina kikomo cha mchango wa faida wa siku cha **40% ya lengo la faida**. Faida ya ziada inabaki kwenye akaunti lakini haihesabiwi kwa lengo; hasara bado huhesabiwa. FAQ inasema sheria hii haitumiki kwa Hyro Instant.",
+            "Tradeify SELECT ina **40% ya faida jumla kwa siku bora wakati wa tathmini**, huku Growth haina asilimia ya uthabiti wa tathmini. Hizi ni hesabu tofauti: sehemu ya lengo si sehemu ya faida iliyokusanywa.",
+            "Hatua ya ufadhili ina sheria zake. Tradeify ina 35% kwa malipo ya Growth ya kuiga, hakuna asilimia kwa SELECT iliyofadhiliwa na mfuatano wa **20%, kisha 25%, kisha 30%** kwa akaunti mpya za Lightning. Akaunti za zamani zinaweza kubaki 20% kwa kila malipo. Angalia tarehe ya ununuzi na hatua."
+          ]
+        },
+        {
+          "heading": "Hyro Instant dhidi ya Lightning Funded: malipo ya kwanza",
+          "paragraphs": [
+            "Hyro Instant haina lengo la tathmini. Ombi la kwanza linahitaji **siku tatu zinazostahili za biashara za UTC** na angalau $25 ya faida baada ya mgawanyo. Siku inayostahili ina ufafanuzi wa ukubwa wa biashara na mabadiliko ya bei; biashara ndogo yoyote haitoshi. FAQ ina kikomo cha faida inayohesabiwa cha 5% ya salio la awali kwa malipo; ziada hailipwi. Mgawanyo huanza 80%, na ongezeko linaweza kuamuliwa na kampuni.",
+            "Tradeify Lightning pia inaruka tathmini lakini inahitaji lengo la faida na uthabiti. Katika mfano wa $50,000, lengo la kwanza ni **$3,000**, ilhali ombi la kwanza lina kikomo cha **$2,000**. Tradeify inasema traders hupokea 90% ya ombi. Lengo, kikomo na kiasi kinachopokelewa ni tofauti.",
+            "Lengo linalofuata la Lightning linahitaji faida mpya; faida iliyobaki kutoka mzunguko uliopita haitoshi. Ombi pia hufunga kikomo cha drawdown kwa sheria ya akaunti iliyofadhiliwa, hivyo angalia nafasi ya hasara iliyobaki baada ya malipo. Kustahili si dhamana ya kuidhinishwa."
+          ],
+          "callout": {
+            "kind": "example",
+            "text": "Mfano wa kinadharia wa Lightning: kufikia $3,000 hakumaanishi kutoa $3,000. Ombi la $2,000 kwa mgawanyo wa 90% hutoa $1,800, chini ya masharti mengine yote."
+          }
+        },
+        {
+          "heading": "Orodha ya usimamizi wa hatari kabla ya kulipa",
+          "paragraphs": [
+            "Rudia mchakato wako wa kawaida wa biashara dhidi ya sheria halisi. Tumia matokeo halisi baada ya ada, hasara zilizo wazi na saa halisi ya kuweka upya. Mkakati unaweza kuheshimu stop loss kila biashara lakini ukakiuka kikomo cha jumla kupitia nafasi kadhaa."
+          ],
+          "bullets": [
+            "**Rekodi vikomo vyote:** hasara ya siku na drawdown jumla, na ikiwa kugusa au kuvuka mpaka ni ukiukaji.",
+            "**Fuatilia hatua:** tathmini, ufadhili wa kuiga na mpito wa baadaye kwa mtaji halisi vinaweza kuwa na masharti tofauti.",
+            "**Mfano wa kutoa pesa:** lengo, hesabu ya siku bora, kikomo, mgawanyo na nafasi ya hasara baada ya malipo.",
+            "**Angalia ufikiaji na gharama:** nchi, jukwaa, saa za kufunga, ada ya kuingia, kuwezesha, kusasisha na data inapohitajika.",
+            "**Hifadhi toleo:** mkataba na sheria rasmi zinazotumika tarehe ya ununuzi. Akaunti mpya zinaweza kutofautiana na za zamani."
+          ]
+        },
+        {
+          "heading": "Jinsi ya kuchagua kati ya modeli hizo",
+          "paragraphs": [
+            "Anza na sheria za HyroTrader ikiwa mkakati unahitaji crypto zake. Anza na Tradeify ikiwa mkakati umejengwa kwa futures zake. Kisha linganisha kiwango cha hasara na njia kamili ya malipo ya kwanza.",
+            "Ulinganisho huu hauthibitishi uwezo wa kampuni kulipa madeni wala uwezekano wa trader kupokea malipo. Unaeleza masharti yaliyochapishwa kwa tarehe maalumu. Soma wasifu wenye nyaraka na mkataba wa sasa kabla ya kununua."
+          ]
+        }
+      ]
+    }
   }
 };
 
