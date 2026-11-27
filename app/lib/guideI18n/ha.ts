@@ -813,6 +813,158 @@ const ha: GuideTranslations = {
         }
       ]
     }
+  },
+  "prop-firm-sans-challenge": {
+    "title": "Yadda ake farawa da prop firm ba tare da challenge ba (2026)",
+    "metaDescription": "Farawa ba tare da challenge ba: zaɓi shiri, tabbatar da cancanta, kwatanta kuɗaɗe da drawdown, gwada dokoki da fahimtar biya na farko.",
+    "eyebrow": "Babu challenge",
+    "h1": "Yadda ake farawa da prop firm ba tare da challenge ba",
+    "answer": "Zaɓi kasuwa da ainihin shirin instant funding, duba ƙasa da sharuɗɗan tantance shaida, karanta dokokin funded, lissafa duk kuɗaɗe da gwada dabararka bisa iyakar asara. Kammala saitin bayan fahimtar hanyar biya na farko: tsallake tantancewa ba ya cire burin riba, daidaito ko iyakar cire kuɗi.",
+    "checks": [
+      "Kwatanta ainihin kuɗin watanni 3 zuwa 6, ciki har da shiga, sabuntawa, reset ko scaling.",
+      "Tabbatar da dokokin funded: drawdown, labarai, lot, daidaito, scaling da biya.",
+      "Duba mafi ƙarancin biya da yawan lokutan cire kuɗi, musamman idan dabararka tana samar da ƙananan riba da yawa.",
+      "Tabbatar da nau'in drawdown: static, trailing, EOD ko smart drawdown.",
+      "Karanta dokokin scaling da sharuɗɗan komawa manyan asusu.",
+      "Guji wannan tsarin idan dabararka ba ta daidaita ba tsawon watanni da yawa."
+    ],
+    "faq": [
+      {
+        "question": "Yaya zan fara da prop firm ba tare da challenge ba?",
+        "answer": "Zaɓi kasuwa da shiri, duba cancanta da kamfanin kwangila, adana dokokin funded, lissafa duk kuɗaɗe, gwada iyakar asara da kammala tantance shaida. Bi diddigin asarar rana, jimillar drawdown da cancantar biya daga zaman farko."
+      },
+      {
+        "question": "Babu challenge yana nufin zan iya cire kuɗi nan take?",
+        "answer": "A'a. Hyro Instant yana da kwanakin cancanta don biya na farko, yayin da Tradeify Lightning Funded yana da burin riba, daidaito da iyakar buƙata. Karanta ainihin dokokin funded; samun asusu, cancantar biya da karɓar kuɗi matakai ne daban."
+      },
+      {
+        "question": "Shin funding ba tare da challenge ba ya fi challenge na al'ada sauƙi?",
+        "answer": "Ba lallai ba. Yana cire tantancewa amma zai iya sa funded ya fi tsauri. Gwaji na gaskiya shi ne dokokin biya, juriyar drawdown, mafi ƙarancin cire kuɗi da ko trading ɗinka zai jure ƙuntatawar asusu kai tsaye."
+      },
+      {
+        "question": "Wa ya kamata ya yi la'akari da prop firm ba tare da challenge ba?",
+        "answer": "Ya fi dacewa da traders da suka san matsakaicin haɗarinsu, tsarin asarar rana da lokacin biya. Idan har yanzu kana gwada ladabi, ƙaramin challenge na al'ada zai iya zama mai arha kuma mafi aminci."
+      },
+      {
+        "question": "Mene ne prop firm ba tare da challenge ba?",
+        "answer": "Shiri ne da ke tsallake burin tantancewa na al'ada ya ba da damar shiga asusun simulation irin funded nan take. Har yanzu dole trader ya bi drawdown, biya, daidaito da dokokin dabarun da aka hana."
+      },
+      {
+        "question": "Shin funded trading ba tare da challenge ba ya fi sauƙi?",
+        "answer": "Ya fi sauri, ba lallai ya fi sauƙi ba. Asusu kai tsaye na iya samun tsauraran drawdown, mafi ƙarancin biya, iyakar scaling ko daidaito, don haka funded ya zama ainihin tantancewa."
+      }
+    ],
+    "article": {
+      "intro": "Don farawa da prop firm ba tare da challenge ba, zaɓi kasuwa da ainihin shiri, duba cancanta, karanta dokokin funded, lissafa duk kuɗaɗe da gwada dabararka da iyakar asara. **Tsallake tantancewa ba ya cire sharuɗɗan biya.** Asusu na iya zama simulation, kuma cire kuɗi na farko na iya buƙatar kwanakin cancanta, burin riba ko daidaito.",
+      "keyPoints": [
+        "**Babu challenge yana nufin babu tantancewa kafin funded.** Har yanzu ana iya buƙatar burin riba don biya.",
+        "Duba **ainihin shiri**, duk kuɗaɗensa da ko asusun simulation ne.",
+        "Kwatanta **jimillar kuɗin kaiwa biya na farko**, ba farashin talla ba.",
+        "Ya dace da dabara **tabbatacciya mai ƙaramin drawdown**, ba wadda har yanzu ake gwadawa ba."
+      ],
+      "sections": [
+        {
+          "heading": "Yadda ake farawa da prop firm ba tare da challenge ba",
+          "paragraphs": [
+            "Fara da zaɓen kasuwarka da ainihin shirin instant funding. Asusun da babu challenge yana tsallake tantancewa kafin funded. Har yanzu yana iya zama simulation, kuma biya na iya buƙatar burin riba, kwanakin cancanta, daidaito da nazari. Sayen asusu da cancantar cire kuɗi matakai ne daban.",
+            "Yi amfani da wannan jerin kafin saye. Babban ma'aunin asusu da aka tallata ba ya ba ka wannan adadin kuɗi don rasa: iyakar asarar rana da jimilla su ne ke ƙayyade sararin da ake da shi."
+          ],
+          "steps": [
+            {
+              "title": "Zaɓi kasuwa da duba cancanta",
+              "text": "Daidaita kayan trading da aka yarda, dandali da lokuta da dabararka. Duba ƙuntatawar ƙasa, tantance shaida da sunan kamfanin kwangila."
+            },
+            {
+              "title": "Karanta ainihin dokokin asusun funded",
+              "text": "Adana sunan shiri, girman asusu, ranar saye da shafukan dokokin hukuma. Tabbatar da lokacin reset na rana, mafi girman iyakar asara, lissafin drawdown da dabarun da aka hana."
+            },
+            {
+              "title": "Rubuta hanyar biya na farko",
+              "text": "Rubuta kwanakin cancanta, burin riba, daidaito, mafi ƙarancin buƙata, iyakar biya da rabon riba. Asusun da babu tantancewa na iya buƙatar riba mai yawa kafin cire kuɗi."
+            },
+            {
+              "title": "Lissafa duk kuɗaɗen da za ka iya rasa",
+              "text": "Haɗa kuɗin shiga, kunnawa, maimaituwa, dandali da bayanai idan sun shafa. Karanta sharuɗɗan mayar da kuɗi da maye gurbi, ka yanke iyakar kuɗaɗen da ka yarda ka rasa."
+            },
+            {
+              "title": "Gwada trading ɗinka na al'ada bisa iyakokin",
+              "text": "Yi amfani da gwaji ko littafin trading don duba asarar buɗe, kwamishan, jerin asara da positions na dare. Gwajin ya yi amfani da ainihin iyakokin shiri, ba ma'aunin asusun talla ba."
+            },
+            {
+              "title": "Kammala saitin da sa ido kan iyakokin biyu",
+              "text": "Bayan biya da tantancewar da ake buƙata, tabbatar dashboard ya dace da kwangila. Rubuta iyakar rana ta yanzu, jimillar iyaka da cancantar biya kafin kowane zama."
+            }
+          ]
+        },
+        {
+          "heading": "Me ya sa instant funding yawanci ya fi tsada?",
+          "paragraphs": [
+            "Kamfanoni suna sanya farashin tantancewa a matsayin matattara: yawancin masu sayen challenge ba sa kaiwa biya, kuma kuɗaɗensu suna tallafa wa waɗanda suka kai. Idan ka tsallake matattarar, kamfanin yana saka wannan haɗari cikin farashin asusun. Saboda haka asusu kai tsaye yawanci yana da **farashi sau da yawa** na challenge mai girma iri ɗaya, da **ƙananan girma** kuma sau da yawa **tsauraran drawdown**.",
+            "Kwatanta **jimillar kuɗin kaiwa biya na farko**. Misalin adadi masu sauƙi: challenge $100 da damar wucewa ɗaya cikin uku yana kashe matsakaicin **$300** don funded. Instant account $350 mai tsauraran trailing drawdown ya fi haka da zarar ka rasa asusu ɗaya kafin biya na farko."
+          ]
+        },
+        {
+          "heading": "Dokokin da ke tantance ko asusu kai tsaye ya dace",
+          "paragraphs": [
+            "Karanta dokokin funded, ba shafin talla ba. Waɗannan abubuwa shida sukan fi sauya kuɗi da amfanin shiri:"
+          ],
+          "bullets": [
+            "**Nau'in drawdown:** trailing mai bin equity mafi girma ya fi wahalar jurewa fiye da static a ma'aunin farko.",
+            "**Daidaito:** shirye-shiryen instant da yawa suna iyakance riba daga mafi kyawun rana kafin biya.",
+            "**Sharuɗɗan biya na farko:** mafi ƙarancin kwanaki, riba da iyakar cire kuɗi ɗaya ko biyu na farko.",
+            "**Rabon riba na farko:** wasu suna fara ƙasa da challenge sannan su ƙara daga baya.",
+            "**Kuɗin maye gurbi:** farashin sabon asusu bayan karya doka da ko akwai rangwame.",
+            "**Dabarun da aka ƙuntata:** lokutan labarai, lokacin riƙewa, copy trading da mafi ƙarancin lokacin trade."
+          ]
+        },
+        {
+          "heading": "Wa ya kamata ya yi la'akari da prop firm ba tare da challenge ba?",
+          "paragraphs": [
+            "Funding kai tsaye yana musanya **kuɗi da lokaci**. Matsi na burin riba yana koma matsi na drawdown da ake lura da shi kai tsaye a asusun da ya fi tsada."
+          ],
+          "fit": {
+            "yes": [
+              "Dabara **tabbatacciya mai ƙaramin drawdown**",
+              "Tarihin **bin iyakar rana**",
+              "Kana fifita **lokaci bisa kuɗi**"
+            ],
+            "no": [
+              "Dabarar da **har yanzu kake gwadawa**",
+              "Salon **mai saurin sauyawa** da ke buƙatar sarari",
+              "Saye musamman don **guje wa burin riba**"
+            ]
+          },
+          "callout": {
+            "kind": "tip",
+            "text": "Ba ka da tabbaci? **Challenge mai arha na mataki ɗaya** yakan fi dacewa don gwada ko dabararka ta dace da dokoki kafin sayen asusu kai tsaye."
+          }
+        },
+        {
+          "heading": "Alamun haɗarin instant funding",
+          "paragraphs": [
+            "Shirye-shiryen instant suna jan sababbin kamfanoni da masu talla sosai domin suna da sauƙin sayarwa. Yi taka-tsantsan da:"
+          ],
+          "bullets": [
+            "**Manyan asusu sosai da ƙaramin farashi sosai.**",
+            "Alkawarin biya ba tare da **dokar biya da aka wallafa** ba.",
+            "Dokokin da **suka bambanta tsakanin shafin farko da kwangila**.",
+            "Sharuɗɗan da ke barin kamfani ya ƙi biya **bisa ikonsa kaɗai** ba tare da dalili da aka bayyana ba."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Kafin saye, buɗe shafin PropRadar na kamfanin: **kamfanin doka, alamun biya, domain da gargadin hukumomi** suna a shafi ɗaya."
+          }
+        },
+        {
+          "heading": "Misalai biyu na yanzu: shiga nan take ba cire kuɗi nan take ba ne",
+          "paragraphs": [
+            "Shafukan hukuma da aka duba 15 Nuwamba 2026 sun nuna muhimmancin ainihin shiri. **Hyro Instant** yana tsallake tantancewa amma yana buƙatar kwanaki uku na cancanta don biya na farko, aƙalla $25 riba bayan rabo da iyakar ribar da ake ƙirga a kowane biya.",
+            "**Tradeify Lightning Funded** ma yana tsallake tantancewa. Shirinsa da aka wallafa na $50,000 yana buƙatar riba $3,000 don buɗe buƙata ta farko, wadda aka iyakance zuwa $2,000 kafin rabon trader na 90%. Daidaito ma yana aiki. Burin riba ba adadin cire kuɗi ba ne.",
+            "Misalan suna bayyana dokokin da aka wallafa, ba biyan abokan ciniki da aka tabbatar da kansa ba. Yi amfani da kwangilar yanzu da hanyoyin majiya da ke ƙasa don tabbatar da sharuɗɗan sabon saye."
+          ]
+        }
+      ]
+    }
   }
 };
 
