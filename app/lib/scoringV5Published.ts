@@ -8,6 +8,7 @@ import file from '../data/scoring-v5-published.json';
 import c01 from '../data/scoring-v5-proposals-c01.json';
 import n01 from '../data/scoring-v5-proposals-n01.json';
 import type { PropFirm } from './propFirms';
+import { trustpilotPoints } from './trustpilotScoring';
 import { computeV5Scorecard, type V5Scorecard } from './scoringV5';
 
 const cards = new Map<string, V5Scorecard>();
@@ -35,11 +36,15 @@ export function isPublishedV5(slug: string, latestScoreReview?: string): boolean
 export function getPublishedV5Score(firm: PropFirm, latestScoreReview?: string) {
   if (!isPublishedV5(firm.slug, latestScoreReview)) return undefined;
   const card = cards.get(firm.slug)!;
-  return { ...computeV5Scorecard({
+  const historic = computeV5Scorecard({
     ...card,
     closed: firm.status === 'Fermée',
     trustpilotActiveNotice: Boolean(firm.reviewSignals.trustpilotRatingWithheld),
-  }), checkedOn: card.checkedOn, ruleDeductions: card.ruleDeductions ?? [],
+  });
+  const trustpilotPenalty = firm.status === 'Fermée' ? 0 : trustpilotPoints(firm.trustpilotRating, firm.reviewSignals.trustpilotReviewCount, Boolean(firm.reviewSignals.trustpilotRatingWithheld));
+  const adjusted = Math.max(0, historic.afterRules - trustpilotPenalty);
+  const final = firm.status === 'Fermée' ? null : historic.safetyCap === null ? adjusted : Math.min(adjusted, historic.safetyCap);
+  return { ...historic, trustpilotPenalty, adjusted, final, checkedOn: card.checkedOn, ruleDeductions: card.ruleDeductions ?? [],
     contractProtection: { points: card.criteria.B1.points, reason: card.criteria.B1.reason, source: card.criteria.B1.sources[0] },
     contractingEntityVerified: card.criteria.C1.points >= 7,
     positivePayoutEvidence: card.criteria.A3.points >= 3 ? {

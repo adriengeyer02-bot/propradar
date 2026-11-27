@@ -16,6 +16,7 @@ import batch7Published from '../data/scoring-v4-batch-7-published.json';
 import batch8Published from '../data/scoring-v4-batch-8-published.json';
 import batch9Published from '../data/scoring-v4-batch-9-published.json';
 import type { PropFirm } from './propFirms';
+import { trustpilotPoints } from './trustpilotScoring';
 import { computeV4Scorecard, V4_BLOCKS, type V4Scorecard, type V4Criterion, type V4Assessment } from './scoringV4';
 
 type CompactReview = {
@@ -123,7 +124,7 @@ export function isPublishedV4(slug: string, latestScoreReview?: string): boolean
   return approved.has(slug) && (!latestScoreReview || latestScoreReview <= '2026-11-20');
 }
 
-export type PublishedV4Score = ReturnType<typeof computeV4Scorecard> & { checkedOn: string };
+export type PublishedV4Score = Omit<ReturnType<typeof computeV4Scorecard>, 'trustpilotPenalty'> & { checkedOn: string; trustpilotPenalty: number };
 
 /** Compute a published V4 card independently of the historical score pipeline. */
 export function getPublishedV4Score(firm: PropFirm, latestScoreReview?: string): PublishedV4Score | undefined {
@@ -134,5 +135,7 @@ export function getPublishedV4Score(firm: PropFirm, latestScoreReview?: string):
   const card: V4Scorecard = 'criteria' in row
     ? { ...row, status: 'approuvee', trustpilotActiveNotice: Boolean(firm.reviewSignals.trustpilotRatingWithheld), closed: false } as V4Scorecard
     : compactCard(firm, row, checkedOn);
-  return { ...computeV4Scorecard(card), checkedOn };
+  const historic = computeV4Scorecard(card);
+  const trustpilotPenalty = trustpilotPoints(firm.trustpilotRating, firm.reviewSignals.trustpilotReviewCount, Boolean(firm.reviewSignals.trustpilotRatingWithheld));
+  return { ...historic, trustpilotPenalty, operationalScore: Math.max(0, historic.editorial - trustpilotPenalty), checkedOn };
 }

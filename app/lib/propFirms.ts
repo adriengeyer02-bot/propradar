@@ -1,5 +1,7 @@
 import { applyFirmUpdates, getFirmUpdate } from './firmUpdates';
 import { getScaleC, isFullyRead, UNAUDITED_SCORE_CAP } from './scaleC';
+import { trustpilotPoints, HISTORICAL_INCLUDED_NOTICE_PENALTY } from './trustpilotScoring';
+export { TRUSTPILOT_NOTICE_PENALTY } from './trustpilotScoring';
 import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
 import { computeRulesPenalty, RULES_PENALTY_ENABLED } from './restrictiveRules';
 import { narrativeOriginals, stripScoreClaims } from './scoreClaims';
@@ -140,7 +142,7 @@ export type PropFirm = {
   scoreCap?: { before: number; cap: number; reason: 'trustpilot-withheld' };
   /** Restrictive-rules penalty (SCORING.md section 2), set when it lowered the score. */
   rulesPenalty?: { before: number; penalty: number };
-  /** Trustpilot −6 (SCORING.md 1): applied, or already included in a dated editorial score. */
+  /** Trustpilot operational deduction (SCORING.md 1); a historical embedded deduction is normalized before scoring. */
   trustpilotPenalty?: { before: number; penalty: number; included: boolean };
   /** V5 legal safety cap, after ordinary scoring and Trustpilot. */
   v5SafetyCap?: { before: number; cap: 55 };
@@ -12950,22 +12952,23 @@ function applyRulesPenaltyRule(firm: PropFirm): PropFirm {
   return { ...firm, score: Math.max(0, firm.score - result.penalty), rulesPenalty: { before: firm.score, penalty: result.penalty } };
 }
 
-/**
- * Trustpilot rule (Geyer, 2026-11-19; replaces the 64 cap of 2026-11-07 and
- * the −8 proposal): a current, documented Trustpilot guideline-breach /
- * fake-review-removal notice costs exactly 6 points, once, with no ceiling.
- * A dated editorial review may state that its score already includes them
- * (`set.trustpilotPenaltyIncluded`); then nothing more is deducted.
- * Applies to affiliates the same way. Closed firms keep their own cap.
+/** Restore only the explicitly documented historical six-point notice deduction.
+ * Do not infer any embedded penalty from a low editorial score.
+ * Scale C already contains its own complete Trustpilot calculation.
  */
-export const TRUSTPILOT_NOTICE_PENALTY = 6;
+function restoreIncludedTrustpilotPenalty(firm: PropFirm): PropFirm {
+  const set = getFirmUpdate(firm.slug)?.set;
+  if (firm.status === 'Fermée' || getScaleC(firm.slug) || !set?.trustpilotPenaltyIncluded || typeof set.score !== 'number' || set.score !== firm.score) return firm;
+  return { ...firm, score: Math.min(100, firm.score + HISTORICAL_INCLUDED_NOTICE_PENALTY) };
+}
 
+/** One uniform grid for all non-C operational scores, after restrictive rules. */
 function applyTrustpilotPenaltyRule(firm: PropFirm): PropFirm {
-  if (firm.status === 'Fermée' || !firm.reviewSignals.trustpilotRatingWithheld) return firm;
-  if (getFirmUpdate(firm.slug)?.set?.trustpilotPenaltyIncluded) {
-    return { ...firm, trustpilotPenalty: { before: firm.score, penalty: 0, included: true } };
-  }
-  return { ...firm, score: Math.max(0, firm.score - TRUSTPILOT_NOTICE_PENALTY), trustpilotPenalty: { before: firm.score, penalty: TRUSTPILOT_NOTICE_PENALTY, included: false } };
+  if (firm.status === 'Fermée' || getScaleC(firm.slug)) return firm;
+  const signals = firm.reviewSignals;
+  const penalty = trustpilotPoints(firm.trustpilotRating, signals.trustpilotReviewCount, Boolean(signals.trustpilotRatingWithheld));
+  if (!penalty) return firm;
+  return { ...firm, score: Math.max(0, firm.score - penalty), trustpilotPenalty: { before: firm.score, penalty, included: false } };
 }
 
 function applyV5SafetyCapRule(firm: PropFirm): PropFirm {
@@ -13021,7 +13024,7 @@ function applyNarrativeScoreRule(firm: PropFirm): PropFirm {
 /**
  * Scale C (Geyer, 2026-11-25; SCORING.md "Scale C"): for a firm whose contract
  * was read by hand, the displayed score is the scale C score. It already
- * includes the Trustpilot notice (−6) and the contract clauses, so it replaces
+ * includes the Trustpilot grid and the contract clauses, so it replaces
  * the earlier steps instead of stacking on them. Closed firms are never listed.
  */
 function applyScaleCRule(firm: PropFirm): PropFirm {
@@ -13035,7 +13038,7 @@ function applyUnauditedCapRule(firm: PropFirm): PropFirm {
   return { ...firm, score: UNAUDITED_SCORE_CAP, unauditedCap: { before: firm.score, cap: UNAUDITED_SCORE_CAP } };
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV5SafetyCapRule).map(applyScaleCRule).map(applyUnauditedCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(restoreIncludedTrustpilotPenalty).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV5SafetyCapRule).map(applyScaleCRule).map(applyUnauditedCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');

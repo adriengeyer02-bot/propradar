@@ -669,13 +669,17 @@ export default async function FirmPage({ params }: Props) {
       note: rules && rules.penalty && !applied ? scoreCopy.rulesNotApplied : undefined,
     });
   }
-  if (breakdown.trustpilot) scoreSteps.push({
-    kind: 'trustpilot',
-    label: scoreCopy.trustpilotCap,
-    detail: breakdown.trustpilot.included ? scoreCopy.trustpilotIncluded : fmt(scoreCopy.trustpilotCapDetail, { penalty: breakdown.trustpilot.penalty }),
-    value: breakdown.trustpilot.before - breakdown.trustpilot.penalty,
-    delta: breakdown.trustpilot.penalty,
-  });
+  if (breakdown.trustpilot) {
+    const cc = scaleCCopy(locale);
+    const withheld = Boolean(firm.reviewSignals.trustpilotRatingWithheld);
+    scoreSteps.push({
+      kind: 'trustpilot',
+      label: withheld ? cc.codes.TPW : cc.codes.TPR,
+      detail: withheld ? cc.tpwText : fmt(cc.tpmidText, { detail: `${firm.trustpilotRating} / ${firm.reviewSignals.trustpilotReviewCount}` }),
+      value: Math.max(0, breakdown.trustpilot.before - breakdown.trustpilot.penalty),
+      delta: Math.min(breakdown.trustpilot.before, breakdown.trustpilot.penalty),
+    });
+  }
   if (breakdown.safetyCap) {
     const safety = scoreV5LegalCapCopy(locale, breakdown.safetyCap.cap);
     scoreSteps.push({ kind: 'safety', label: safety.label, detail: safety.detail,
@@ -1081,7 +1085,7 @@ export default async function FirmPage({ params }: Props) {
               {isClosedOrParked ? <ClosedFirmArchiveLabel locale={locale} /> : null}
               <strong className={`pr-firm-decision pr-tone-${decisionTone(firmDecision)}`}>{f.decision[firmDecision]}</strong>
               {firm.rulesPenalty ? <p className="pr-score-cap"><a href="#rules">{fmt(f.rulesPenaltyNote, { penalty: firm.rulesPenalty.penalty, before: firm.rulesPenalty.before })}</a></p> : null}
-              {firm.trustpilotPenalty?.penalty ? <p className="pr-score-cap">{fmt(scoreCopy.trustpilotNote, { penalty: firm.trustpilotPenalty.penalty, before: firm.trustpilotPenalty.before })}</p> : null}
+              {firm.trustpilotPenalty?.penalty ? <p className="pr-score-cap">{firm.reviewSignals.trustpilotRatingWithheld ? scaleCCopy(locale).codes.TPW : scaleCCopy(locale).codes.TPR}: −{firm.trustpilotPenalty.penalty} {scoreCopy.points}</p> : null}
               <div className="pr-scorecard-pips">
                 <RiskPip label={f.payout} value={v(toEnglishText(firm.reviewSignals.payoutRisk))} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
                 <RiskPip label={f.legal} value={v(regulatoryAudit.riskLevel)} tone={legalTone(regulatoryAudit.riskLevel)} />
