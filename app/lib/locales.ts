@@ -85,10 +85,17 @@ const TRANSLATED = [
 // until their complete editorial copy has been localized.
 const NEW_LANGUAGE_PATHS = [/^\/$/, /^\/prop-firm-radar$/, /^\/prop-firm-comparison$/, /^\/firm\/[^/]+$/, /^\/options-prop-firms(?:\/[^/]+)?$/, /^\/tools$/];
 
+// The Turkish, Arabic and Korean guide library is fully localized.
+// Keep the standalone EN/FR instrument explainer and other new languages out of this rollout.
+const NEW_LANGUAGE_GUIDE_PATHS = [/^\/guides$/, /^\/guides\/(?!futures-cfd-options$)[^/]+$/, /^\/best-prop-firms$/];
+
 export function isTranslatedPath(path: string, locale: Locale = 'en') {
   const clean = path.replace(/\/+$/, '') || '/';
   if (clean === '/prop-firms-fermees') return locale === 'fr';
-  if (locale === 'tr' || locale === 'ar' || locale === 'ko' || locale === 'sw' || locale === 'ha' || locale === 'am') {
+  if (locale === 'tr' || locale === 'ar' || locale === 'ko') {
+    return [...NEW_LANGUAGE_PATHS, ...NEW_LANGUAGE_GUIDE_PATHS].some((pattern) => pattern.test(clean));
+  }
+  if (locale === 'sw' || locale === 'ha' || locale === 'am') {
     return NEW_LANGUAGE_PATHS.some((pattern) => pattern.test(clean));
   }
   return TRANSLATED.some((pattern) => pattern.test(clean));
