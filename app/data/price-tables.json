@@ -1336,6 +1336,32 @@
               "price": 798.99
             }
           ]
+        },
+        {
+          "name": "Stellar Instant",
+          "productId": "fundednext-stellar-instant-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+          "note": "Prices published in the help-center account article dated 2 October 2026 (archived 25 November 2026), which labels them 'approx.' and says promotions and add-ons can change the checkout price. No refundable fee; reset costs 10% less than the purchase price. Not re-read on the checkout page.",
+          "rows": [
+            {
+              "size": 2000,
+              "price": 59.99
+            },
+            {
+              "size": 5000,
+              "price": 149.99
+            },
+            {
+              "size": 10000,
+              "price": 299.99
+            },
+            {
+              "size": 20000,
+              "price": 599.99
+            }
+          ]
         }
       ]
     },

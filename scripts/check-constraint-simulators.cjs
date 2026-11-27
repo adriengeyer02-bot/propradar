@@ -62,8 +62,12 @@ assert.equal(programmeFlexibility(getProgrammeEvidence('tradeify','tradeify-sele
 assert.equal(programmeFlexibility(getProgrammeEvidence('tradeify','tradeify-select-300k-current', 'daily')).stars,2.5);
 assert.equal(getProgrammeVariants('tradeify','tradeify-select-eval').length,1);
 assert.equal(getProgrammeEvidence('tradeify','tradeify-select-eval','unknown'),undefined);
+assert.equal(programmeFlexibility(getProgrammeEvidence('fundednext','fundednext-stellar-instant-current')).stars,2.5);
+assert.equal(getProgrammeEvidence('fundednext','fundednext-stellar-instant-current').preset.drawdown,'intraday');
+assert.equal(programmeFlexibility(getProgrammeEvidence('the5ers','the5ers-hyper-growth-current')).verified,4);
+assert.equal(programmeFlexibility(getProgrammeEvidence('the5ers','the5ers-hyper-growth-current')).stars,null);
 const a={points:0.5,source:'https://example.com',reason:'documented test fixture'};
 const complete={checkedOn:'2026-11-27',scope:'test',assessments:{drawdown:a,payout:a,consistency:a,trading:a,funded:a}};
 assert.equal(programmeFlexibility(complete).stars,2.5);
 assert.equal(programmeFlexibility({...complete,assessments:{...complete.assessments,payout:{...a,source:''}}}).stars,null);
-console.log('Constraint simulators and evidence gating: 52 checks OK');
+console.log('Constraint simulators and evidence gating: 56 checks OK');

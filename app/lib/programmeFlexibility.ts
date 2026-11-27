@@ -36,7 +36,7 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
     },preset:{consistency:30,consistencyBasis:'net',drawdown:'intraday',lossPercent:10,profitSplit:90,source:objectives}}
   },
   the5ers:{
-    'the5ers-high-stakes-current':{checkedOn:'2026-11-27',scope:'High Stakes, general FAQ updated 3 November and loss FAQ updated 16 November; precise tier/cohort mapping still required.',assessments:{
+    'the5ers-high-stakes-current':{checkedOn:'2026-11-27',scope:'High Stakes, general FAQ updated 3 November and loss FAQ updated 16 November. Two current versions (New: 10%/5% targets; Classic: 8%/5%) and a 2-Step FAQ of 2 November listing a 50% Pro consistency rule and a $2,000 cap that the 24 November payout FAQ does not mention; unrated until reconciled.',scopeFr:'High Stakes : deux versions actuelles (New : objectifs 10 %/5 % ; Classic : 8 %/5 %). La FAQ 2-Step du 2 novembre mentionne une consistency de 50 % en Pro et un plafond de 2 000 $, absents de la FAQ retraits du 24 novembre ; non noté tant que ce n’est pas résolu.',assessments:{
       drawdown:{points:1,source:'https://the5ers.com/faqs/what-is-the-drawdown-rule-for-high-stakes/',reason:'Absolute maximum loss 8–10%; daily loss 3–5% depending on plan. Exact tier required.'},
       payout:{points:0.5,source:'https://the5ers.com/faqs/payout-policy-and-hub-credit-in-the-high-stakes-program/',reason:'14-day cycle; November 24 FAQ confirms caps of $3,000 on $50K and $4,000 on $100K, minimum P&L $300/$500. Other variants still to verify.'},
       trading:{points:0.5,source:'https://www.the5ers.com/faqs/is-news-trading-allowed-in-the-high-stakes-program2024/',reason:'Opening around high-impact releases is a soft breach; profits removed while losses retained.'}
@@ -46,7 +46,13 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
       trading:{points:1,source:'https://the5ers.com/faqs/how-does-the-bootcamp-program-work/',reason:'News, overnight and weekend holding allowed except news bracketing; different strategies per active account.'},
       funded:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-bootcamp-program-work/',reason:'3% daily pause on Pro only and account closure after 30 days inactivity; next day trading resumes after pause.'},
       payout:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-bootcamp-program-work/',reason:'First reward after 14 days; cycle restarts each scaling event. Additional payout caps and exact contract version to confirm.'}
-    },preset:{lossPercent:4,source:'https://www.the5ers.com/bootcamp/'}}
+    },preset:{lossPercent:4,source:'https://www.the5ers.com/bootcamp/'}},
+    'the5ers-hyper-growth-current':{checkedOn:'2026-11-27',scope:'Hyper Growth (1-Step), programme FAQ updated 2 November 2026. Consistency not assessed: the official specification list neither states nor excludes a rule, so no rating is published.',scopeFr:'Hyper Growth (1 étape), FAQ du programme mise à jour le 2 novembre 2026. Consistency non évaluée : la liste officielle ne mentionne ni n’exclut de règle ; aucune note publiée.',assessments:{
+      drawdown:{points:1,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/',reason:'Programme FAQ: accounts that hit the stop-out level are terminated; it is 6% below the initial account size. Some education articles call it trailing; the programme rules govern.'},
+      payout:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/',reason:'First payout 14 days after receiving the Pro account, then every 2 weeks; the 14-day cycle restarts each time the account is scaled. Same treatment as Bootcamp.'},
+      trading:{points:1,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/',reason:'News trading allowed except bracketing strategies and practices listed in the T&C; weekend holding allowed (indices carry high swaps); leverage 1:30.'},
+      funded:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/',reason:'3% daily pause disables the account for the rest of the day without termination; profit target and loss rules stay the same at each Pro stage; accounts inactive for more than 30 consecutive days expire.'}
+    },preset:{drawdown:'static',lossPercent:6,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/'}}
   },
   fundednext: {
   "fundednext-stellar-one-current": {
@@ -158,6 +164,44 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
       "lossPercent": 8,
       "profitSplit": 80,
       "source": "https://fundednext.com/cfds/stellar-lite"
+    }
+  },
+  "fundednext-stellar-instant-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "Stellar Instant, help-center version dated 2 October 2026 (archived 25 November 2026); no add-ons. Tier 1–2 split.",
+    "scopeFr": "Stellar Instant, article du centre d'aide daté du 2 octobre 2026 (archivé le 25 novembre 2026), sans option ; partage des paliers 1 et 2.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "6% trailing maximum loss on the highest recorded balance, breached when equity falls below it at any time; it stops rising once it reaches the initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "On demand at 5% growth (checked at end of day, disabled once a new trade is placed that day) or every 14 days with at least 1% growth. The loss limit is never reset after a withdrawal, so each reward reduces the remaining buffer; unlike an uncapped trailing floor, profit above the initial balance stays withdrawable."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "Account rules table: 'None. No consistency rules apply.' Quick Strike is assessed under trading, not here."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "Overnight and weekend allowed; only 40% of profits from trades within 5 minutes of high-impact news count, losses count in full; Quick Strike rule on trades closed within 30 seconds; copy trading only between the trader's own accounts."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "3% maximum risk at any time (stop-loss exposure and floating losses against the initial balance), as on the other Stellar accounts; no daily loss limit, target or minimum days."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "profitSplit": 70,
+      "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account"
     }
   }
 },

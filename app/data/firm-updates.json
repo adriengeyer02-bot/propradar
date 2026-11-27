@@ -15073,6 +15073,12 @@
           "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 9 new classified restrictive rules.",
           "source": "https://the5ers.com/terms-and-conditions/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-27",
+          "summary": "Programme catalogue pass: Hyper Growth reclassified as a one-level challenge with a static stop-out 6% below the initial account size (programme FAQ, 2 November 2026). High Stakes now lists the New and Classic versions, sizes from $2.5K and the 2-Step FAQ consistency note.",
+          "source": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+          "fields": ["products"]
         }
       ],
       "addSources": [
@@ -15249,10 +15255,10 @@
           "id": "the5ers-high-stakes-current",
           "name": "High Stakes (two-step)",
           "type": "Challenge",
-          "description": "Current High Stakes examples include $50K and $100K with separate funded payout caps.",
-          "accountSizeMin": 50000,
+          "description": "Two current versions, New and Classic, from $2.5K to $100K; funded payout caps of $3,000 on $50K and $4,000 on $100K.",
+          "accountSizeMin": 2500,
           "accountSizeMax": 100000,
-          "profitTarget": "Two-stage plan; targets depend on tier",
+          "profitTarget": "New: 10% Phase 1, 5% Phase 2; Classic: 8% Phase 1, 5% Phase 2",
           "maxDailyLoss": "3%-5% daily from higher prior closing balance/equity",
           "maxDrawdown": "8%-10% fixed from initial capital",
           "drawdownType": "Static",
@@ -15262,7 +15268,7 @@
           "platforms": ["not verified for this specific tier"],
           "tradableAssets": ["Forex", "CFD"],
           "hasConsistencyRule": true,
-          "consistencyRule": "Funded-stage 50% best-day consistency noted in firm educational guide."
+          "consistencyRule": "2-Step FAQ (2 Nov 2026): 50% consistency on the Pro account, formula not stated; the 24 Nov payout FAQ does not mention it."
         },
         {
           "id": "the5ers-bootcamp-current",
@@ -15285,15 +15291,17 @@
         {
           "id": "the5ers-hyper-growth-current",
           "name": "Hyper Growth",
-          "type": "Scaling",
-          "description": "Direct scale-up route; daily pause allows trading again next session if maximum loss is not breached.",
+          "type": "Challenge",
+          "description": "One-level challenge, then Pro stages that double the account on each target; nonrefundable fee; daily pause allows trading again the next day.",
           "accountSizeMin": 10000,
           "accountSizeMax": 20000,
-          "profitTarget": "10% growth target for stage progression",
+          "profitTarget": "10% to complete Level 1; same target at each Pro stage",
           "maxDailyLoss": "3% daily pause (not immediate account termination)",
-          "maxDrawdown": "6% max-loss allowance; mechanics contested",
+          "maxDrawdown": "6% below the initial account size (stop-out)",
+          "drawdownType": "Static",
           "drawdownSource": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
-          "drawdownDetails": "Current education articles call it trailing but the official example describes a fixed initial floor; type unresolved.",
+          "drawdownDetails": "Programme FAQ (2 Nov 2026): accounts that hit the stop-out level, 6% below the initial account size, are terminated; target, maximum loss and daily pause stay the same at each Pro stage. Some education articles call it trailing; the programme rules govern.",
+          "minTradingDays": "No minimum trades or days for Level 1",
           "profitSplit": "50% initial and rises with scale-up",
           "platforms": ["not verified for this specific tier"],
           "tradableAssets": ["Forex", "CFD"],
