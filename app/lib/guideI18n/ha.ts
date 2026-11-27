@@ -1409,6 +1409,490 @@ const ha: GuideTranslations = {
         }
       ]
     }
+  },
+  "prop-firm-hidden-rules": {
+    "title": "Dokokin prop firm masu sauƙin kuɓucewa 2026: abubuwa 9 kafin saye",
+    "metaDescription": "Waɗanne prop firms ke ƙuntata VPN ko VPS? Kwatanta dokokin da ke da majiyoyi na GFT, FundingPips, Topstep da wasu 8, da labarai da ƙasashe, 2026.",
+    "eyebrow": "Bincike mai zaman kansa na dokoki",
+    "h1": "Ɓoyayyun dokokin prop firm: abin da shafin tallace-tallace ba ya bayyana",
+    "answer": "Doka ba lallai ta zama sirri ba domin tana da wahalar samu. Kafin saye, kwatanta cikakkun dokokin funded, cancantar lada, lokutan labarai, daidaito, ƙuntatawar yanki da kayan da aka hana. PropRadar yana haɗa sharuɗɗan da aka wallafa kai tsaye, har da na abokan hulɗarsa.",
+    "checks": [
+      "Ajiye ainihin doka, samfur da kwanan wata kafin biya; taƙaitacciyar talla ba kwangila ba ce.",
+      "Duba tantancewa da funded, musamman labarai, riƙewa, daidaito da iyakar biya.",
+      "Tabbatar da mazauni, ɗan ƙasa, dandamali, KYC da samuwar mai ba da sabis na biya.",
+      "Nemo sharuɗɗan ƙin lada bisa iko, rufe asusu, rashin ciniki da dabarun da aka hana."
+    ],
+    "faq": [
+      {
+        "question": "Shin waɗannan dokokin da gaske an ɓoye su?",
+        "answer": "Yawancin misalai an wallafa su a FAQ ko kwangiloli na hukuma. Matsalar ita ce shafin tallace-tallace na iya barinsu ko samfura daban suna da dokoki daban. Muna kiran su masu sauƙin kuɓucewa, ba hujjar ɓoye su da gangan ba."
+      },
+      {
+        "question": "Akwai prop firm ba tare da ɓoyayyun dokoki ba?",
+        "answer": "Babu kwatancin jama'a da zai iya ba da wannan garanti. Fifita kamfanin da ke da cikakkiyar kwangila mai kwanan wata da ake iya bincika, amsoshin taimako masu daidaito da bayyanannun ma'aunin biya."
+      },
+      {
+        "question": "Waɗanne prop firms ke hana VPN ko VPS?",
+        "answer": "16 Nuwamba 2026 GOAT Funded Trader da FundingPips sun hana duka don shiga ciniki. Topstep ya hana VPN da aika oda ta VPS. FundedNext, Alpha Capital Group da Tradeify suna da sharuɗɗa; FTMO CFD da Blue Guardian 1-Step Standard yawanci sun yarda ƙarƙashin ƙuntatawa da aka ambata. Kowane shafi yana da hanyar haɗi a jadawali."
+      },
+      {
+        "question": "Ana iya yarda da labarai a tantancewa amma a ƙuntata bayan funded?",
+        "answer": "I. E8 Classic, BrightFunded CFD, Blue Guardian 1-Step Standard da wasu shirye-shiryen FundingPips suna sauya yadda ake ɗaukar ribar lokacin labarai bayan funded. Duba shiri da mataki, ba taken talla na alama ba."
+      },
+      {
+        "question": "PropRadar yana sukar abokan affiliate nasa?",
+        "answer": "I. Alaƙar kasuwanci ba ta sauya maki ko cire ƙuntatawar kwangila da aka rubuta."
+      }
+    ],
+    "article": {
+      "intro": "Prop firm na iya tallata babban rabon riba da challenge mai sauƙi, alhali kwangilar tana ɗauke da sharuɗɗan da ke sauya lokacin da za ka iya cire kuɗi. Waɗannan **dokoki ne masu sauƙin kuɓuce wa hankali**, ba wai lallai an ɓoye su da gangan ba: misalan nan sun fito daga takardun jama'a na kamfanonin kansu. **Mun haɗa abokan hulɗar affiliate na PropRadar.** Babu matsayi a jerin ko kwamishan da zai sayi kariya daga bincike.",
+      "keyPoints": [
+        "**Dokokin tantancewa ba lallai su zama dokokin funded ba.** Labarai, lokutan ciniki da daidaito na iya sauyawa bayan nasara.",
+        "**Ribar dashboard ba lada ce da za a biya kai tsaye ba.** Wasu shirye-shirye suna cire riba ko suna da wasu sharuɗɗan cancanta.",
+        "**Mazauni, ɗan ƙasa, wuri da mai ba da sabis na biya na iya bambanta.** Nasarar saye ba ta tabbatar da cancantar biya daga baya ba.",
+        "**Kowane misali mai suna a nan yana da hanyar haɗi zuwa ainihin dokar kamfanin** da aka duba 16 Nuwamba 2026."
+      ],
+      "sections": [
+        {
+          "heading": "1. Ana yarda da labarai a tantancewa, amma ana cire riba bayan funded",
+          "paragraphs": [
+            "E8 Markets ya ce babu ƙuntatawar cinikin labarai a **tantancewar E8 Classic**. Amma a Classic SimFi Performance Account, **40% kacal na ribar da aka samu a lokacin labarai ne ke cancanta**. E8 One ya hana wasu ayyuka a lokacin labarai a asusun performance; E8 Pro kuwa yana yarda da cinikin labarai. Dokoki uku ne na alama ɗaya.",
+            "FundingPips ma yana ware tantancewa daga matakin Master. A wasu samfuran Master, ribar buɗewa ko rufe matsayi cikin lokacin labarai mai tasiri da aka kayyade **ana iya cire ta**, sai matsayi da aka buɗe aƙalla awa biyar kafin labarin. FundingPips Zero yana da ƙarin tsauraran sharuɗɗa. Kada ka ɗauki tallar tantancewa a matsayin izinin funded."
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Dandalin ya bari ka danna Buy ko Sell **ba yana nufin kwangilar ta amince da cinikin ba**. Tabbatar da samfur, kalandar abubuwa da lokacin su kafin ciniki."
+          }
+        },
+        {
+          "heading": "Rajistar dokokin labarai: tantancewa da funded (majiyoyin hukuma)",
+          "paragraphs": [
+            "Waɗannan su ne **rukunan shirye-shirye goma da muka bincika**, ba jerin haramci ga duk kamfanoni ba. Izinin riƙe matsayi lokacin sanarwa ba daidai yake da izinin buɗe ciniki don cin moriyar tsallen farashi ba. Sharuɗɗan sun shafi **samfur da matakin da aka ambata**, ba duk kayayyakin kamfanin ba."
+          ],
+          "compare": {
+            "columns": [
+              "Matakin tantancewa",
+              "Matakin qualified / funded"
+            ],
+            "rows": [
+              {
+                "label": "E8 Classic",
+                "values": [
+                  "Babu ƙuntatawar labarai",
+                  "**40% na ribar lokacin labarai ce kawai ta cancanta**"
+                ],
+                "sourceUrl": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news"
+              },
+              {
+                "label": "E8 One",
+                "values": [
+                  "Babu ƙuntatawar labarai",
+                  "**Babu ciniki ±minti 5 na labarai masu tasiri**; ana iya cire riba"
+                ],
+                "sourceUrl": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news"
+              },
+              {
+                "label": "E8 Pro",
+                "values": [
+                  "Babu ƙuntatawa",
+                  "Babu ƙuntatawa ƙarƙashin dokokin haɗari na gama gari"
+                ],
+                "sourceUrl": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news"
+              },
+              {
+                "label": "FundingPips Flex / Standard / Pro",
+                "values": [
+                  "An yarda da riƙewa; an hana cinikin tsallen labarai da gangan",
+                  "**Ana cire ribar Master da abin ya shafa**; keɓancewar swing ta awa 5"
+                ],
+                "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+              },
+              {
+                "label": "FundingPips Zero",
+                "values": [
+                  "Tabbatar da ainihin kwangila",
+                  "**Babu buɗewa, rufewa ko riƙewa a lokacin labaran da aka hana**; tagogin minti 10 a Master"
+                ],
+                "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+              },
+              {
+                "label": "Blue Guardian CFD 1-Step Standard",
+                "values": [
+                  "An yarda da labarai",
+                  "**Babu buɗewa ko rufewa ±minti 5** na labarai masu tasiri"
+                ],
+                "sourceUrl": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+              },
+              {
+                "label": "BrightFunded CFD Phase 1 / 2",
+                "values": [
+                  "Babu ƙuntatawar labarai",
+                  "**Ana cire ribar aiwatarwa ±minti 5**; Instant na da ƙuntatawa tun rana ta farko"
+                ],
+                "sourceUrl": "https://help.brightfunded.com/en/articles/9241694-can-i-trade-news"
+              },
+              {
+                "label": "Alpha Futures Standard / Zero / Direct",
+                "values": [
+                  "Standard / Zero: babu ƙuntatawa; Direct ya tsallake tantancewa",
+                  "**Babu oda ±minti 2** a takamaiman shirye-shiryen Qualified; Advanced Qualified ya bambanta"
+                ],
+                "sourceUrl": "https://help.alpha-futures.com/en/articles/9492063-news-trading-policy"
+              },
+              {
+                "label": "Alpha Capital Pro / One / Three / Direct",
+                "values": [
+                  "Babu ƙuntatawar tantancewa; Direct ba shi da tantancewa",
+                  "**Babu aiwatarwa ±minti 5** na labaran da aka jera; ko cikar TP na iya soke riba"
+                ],
+                "sourceUrl": "https://help.alphacapitalgroup.uk/en/articles/9293522-can-i-trade-news"
+              },
+              {
+                "label": "Tradeify Futures",
+                "values": [
+                  "An yarda da labarai",
+                  "An yarda da labarai ƙarƙashin FAQ na gama gari"
+                ],
+                "sourceUrl": "https://help.tradeify.co/en/articles/12268494-common-faqs"
+              }
+            ],
+            "note": "An duba 16 Nuwamba 2026. Danna ↗ kusa da kamfani don karanta ainihin dokarsa. Waɗannan manufofin kamfani ne, ba hujja mai zaman kanta ta yadda ake warware kowace takaddamar trader ba."
+          }
+        },
+        {
+          "heading": "2. VPN ko VPS na iya soke cinikin da ya yi riba",
+          "paragraphs": [
+            "GOAT Funded Trader ya ce daga **6 Oktoba 2026**, an hana ciniki ta VPN, VPS, proxy ko muhallin hosting. Cibiyar taimako ta ce irin cinikin na iya sa asusu ya karya doka nan take, kuma ladar da abin ya shafa ba ta cancanci biya ba. Ta bayyana ƙaramin keɓancewa don shiga uwar garke na farko da wani keɓancewa na copier na dashboard nata.",
+            "Wannan ƙuntatawa ce da aka wallafa a kwangila, **ba hujjar cewa kamfanin yana hana ladan halal ba bisa ka'ida ba**. Amma tana da muhimmanci ga masu algorithmic trading da matafiya masu amfani da sabis na karkatar da haɗin intanet."
+          ]
+        },
+        {
+          "heading": "Jerin sa ido na VPN / VPS: waɗanne kamfanoni ke da ƙuntatawa?",
+          "paragraphs": [
+            "**VPN (rufe hanyar haɗi) da VPS (uwar garken ciniki ta nesa) kayan aiki ne daban.** Wasu sun hana duka, wasu sun yarda da VPN amma sun hana aika oda daga uwar garke, wasu kuma sun hana ɓoye mazauni kawai. Waɗannan su ne **kamfanoni 11 da muka samu takamaiman dokokinsu da majiyoyi**, har da abokan affiliate. “Da sharadi” ba yana nufin “an hana ko'ina” ba."
+          ],
+          "compare": {
+            "columns": [
+              "VPN",
+              "VPS / aiwatarwa ta nesa"
+            ],
+            "rows": [
+              {
+                "label": "GOAT Funded Trader",
+                "values": [
+                  "**An hana** don ciniki (daga 6 Oktoba 2026)",
+                  "**An hana**; ƙaramin keɓancewa ga kayan aikin kamfanin"
+                ],
+                "sourceUrl": "https://help.goatfundedtrader.com/en/articles/17362726-can-i-use-a-vpn-vps-proxy-or-any-other-hosting-service-while-trading"
+              },
+              {
+                "label": "FundingPips",
+                "values": [
+                  "**An hana** lokacin shiga asusun ciniki",
+                  "**An hana** lokacin shiga asusun ciniki"
+                ],
+                "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards"
+              },
+              {
+                "label": "Topstep / TopstepX",
+                "values": [
+                  "**An hana** (har da proxy da TOR)",
+                  "**Babu aika oda** ta uwar garken nesa ko API; an yarda da nazarin karatu kawai"
+                ],
+                "sourceUrl": "https://help.topstep.com/en/articles/11187768-topstepx-api-access"
+              },
+              {
+                "label": "FundedNext CFD",
+                "values": [
+                  "**An yarda** sai IP na ƙasashen da aka ware",
+                  "**An hana ≥$50k**; ƙasa da $50k ƙarin kuɗi, EA mai cancanta kawai; babu oda da hannu"
+                ],
+                "sourceUrl": "https://help.fundednext.com/en/articles/8223809-can-i-use-a-vpn-or-vps"
+              },
+              {
+                "label": "Alpha Capital Group",
+                "values": [
+                  "**Da sharadi:** IP static na musamman + sanarwa kafin amfani",
+                  "**Da sharadi:** IP static na musamman + sanarwa kafin amfani"
+                ],
+                "sourceUrl": "https://help.alphacapitalgroup.uk/en/articles/8420522-what-is-the-ip-rule-are-vpns-and-vpss-allowed"
+              },
+              {
+                "label": "Tradeify Futures",
+                "values": [
+                  "**Babu VPN lokacin shiga**",
+                  "An yarda **bayan shiga na yau da kullum**, a haɗarin trader"
+                ],
+                "sourceUrl": "https://help.tradeify.co/en/articles/12268494-common-faqs"
+              },
+              {
+                "label": "FTMO CFD",
+                "values": [
+                  "**Yawanci an yarda**; guji wurin Amurka ga dandamalin da aka ambata",
+                  "**Yawanci an yarda**; keɓancewar dandamali/wurin Amurka"
+                ],
+                "sourceUrl": "https://ftmo.com/en/faq/can-i-travel-or-use-vpn-vps/"
+              },
+              {
+                "label": "Blue Guardian CFD 1-Step Standard",
+                "values": [
+                  "**An yarda**; kada a kauce wa dokokin copy/group trading",
+                  "**An yarda** ƙarƙashin sharadin nan"
+                ],
+                "sourceUrl": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+              },
+              {
+                "label": "Apex Trader Funding",
+                "values": [
+                  "An hana **idan ana ɓoye ainihi/wuri ko kauce wa doka**",
+                  "Sharadin hana kauce wa doka iri ɗaya; babu haramci na gaba ɗaya da aka wallafa"
+                ],
+                "sourceUrl": "https://apextraderfunding.com/help-center/uncategorized/prohibited-activities/"
+              },
+              {
+                "label": "The5ers",
+                "values": [
+                  "**Babu kauce wa ƙuntatawar ƙasa**; ba a tabbatar da haramci na gaba ɗaya ba",
+                  "Ba a tabbatar da dokar VPS ta gaba ɗaya a sharuɗɗan da aka ambata ba"
+                ],
+                "sourceUrl": "https://the5ers.com/terms-and-conditions/"
+              },
+              {
+                "label": "HyroTrader (crypto)",
+                "values": [
+                  "**Babu kauce wa** ƙuntatawar wurin exchange/dandamali",
+                  "Ya danganta da dandamali da sharuɗɗansa; ba a tabbatar da haramci na gaba ɗaya ba"
+                ],
+                "sourceUrl": "https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/"
+              }
+            ],
+            "note": "Rajista da hanyoyin majiyoyi, ba zargin rashin biya ba. An sabunta 16 Nuwamba 2026. Dokoki na iya bambanta bisa samfur, girman asusu, dandamali da ƙasa. Sauran kamfanoni ba a duba su kan wannan batu ba tukuna."
+          },
+          "callout": {
+            "kind": "warning",
+            "text": "Gudanar da robot a VPS **ba a yarda da shi kai tsaye saboda an yarda da EA ba**. Duba dokokin uwar garke, IP, girman asusu da aika oda daban."
+          }
+        },
+        {
+          "heading": "3. “An yarda da scalping” na iya samun iyakar lokaci da margin",
+          "paragraphs": [
+            "Blue Guardian ya yarda da scalping a shirin Futures amma ya ce **ƙasa da rabin jimillar riba ne zai fito daga cinikin da aka riƙe ƙasa da daƙiƙa 10**. Ya kuma bayyana **iyakar amfani da margin 80%** a matsayin dokar caca ta “all or nothing” a asusun CFD; sakamakon na iya zama cire riba ko ƙin biya.",
+            "Lakabi kamar “an yarda da scalping” ko “an yarda da EA” ya yi faɗi sosai don yanke shawarar saye. Nemo iyakar lokacin trade, ƙuntatawar automation da yadda ake tafiyar da asusu da yawa."
+          ]
+        },
+        {
+          "heading": "4. Daidaito na iya jinkirta biya bayan challenge",
+          "paragraphs": [
+            "Dokar daidaito tana auna rabon jimillar ribar da ya fito daga rana mafi kyau. A Topstep, dokar da kashinta **sun danganta da Trading Combine ko hanyar biya ta funded**. Kada a gauraya matakan.",
+            "Misali: iyakar rana mafi kyau 50%, ranar da aka samu $1,200 tana buƙatar aƙalla **jimillar riba $2,400** kafin rabon ya sauka zuwa 50%. Hanyar rage rabon da ya wuce iyaka yawanci ita ce ƙarin riba mai cancanta, ba yin asara da gangan ba."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Karanta jagorarmu ta **prop firms ba tare da dokar daidaito ba**. “Babu daidaito” yana cire ƙuntatawa ɗaya kawai; ba ya cire drawdown, labarai ko sharuɗɗan biya."
+          }
+        },
+        {
+          "heading": "5. Ƙasar mazauni ba daidai take da cancantar cire kuɗi ba",
+          "paragraphs": [
+            "GOAT Funded Trader ya ambaci **Singapore** a fili cikin ƙasashen da ba ya karɓa. Apex Trader Funding ya ambaci **China** cikin ƙasashen da aka ware don sabon asusu ko ƙarin asusu. Hakan yana da muhimmanci ga baƙin PropRadar domin ƙasashen biyu suna cikin masu karatunmu na duniya.",
+            "Samfura daban na kamfani ɗaya na iya amfani da jerin yankuna daban. FTMO CFD da FTMO Futures suna haka; E8 Classic da E8 Futures ma. Nasarar biyan kuɗi, tafiya ƙasashen waje ko ganin kamfani a ƙasarka **ba ya sauya** KYC, tantance ɗan ƙasa, damar dandamali da hanyoyin biya da ake da su."
+          ],
+          "compare": {
+            "columns": [
+              "India",
+              "Babban yankin China",
+              "Singapore"
+            ],
+            "rows": [
+              {
+                "label": "FTMO CFD",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://ftmo.com/en/faq/who-can-join-ftmo/"
+              },
+              {
+                "label": "Topstep Futures",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "**Ana buƙatar tantance mutum ɗaya**",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.topstep.com/en/articles/8284116-am-i-eligible-to-trade-with-topstep"
+              },
+              {
+                "label": "My Funded Futures",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "**Bai cancanta ba**",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.myfundedfutures.com/en/articles/8229993-restricted-countries-policy"
+              },
+              {
+                "label": "Apex Trader Funding",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "**Bai cancanta ba**",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://apextraderfunding.com/help-center/getting-started/restricted-countries/"
+              },
+              {
+                "label": "GOAT Funded Trader",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "**Bai cancanta ba**"
+                ],
+                "sourceUrl": "https://help.goatfundedtrader.com/en/articles/10742187-which-countries-are-restricted-at-goat-funded-trader"
+              },
+              {
+                "label": "FundedNext CFD",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.fundednext.com/en/articles/8020080-are-any-countries-restricted-on-fundednext-cfds"
+              },
+              {
+                "label": "Fintokei",
+                "values": [
+                  "**Bai cancanta ba**",
+                  "**Ba ya cancanta na ɗan lokaci**",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://support.fintokei.com/en/articles/6538820-who-can-join-fintokei"
+              },
+              {
+                "label": "Alpha Futures",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "**Bai cancanta ba**",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.alpha-futures.com/en/articles/9523389-countries-with-limitations"
+              },
+              {
+                "label": "Alpha Capital Group",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.alphacapitalgroup.uk/en/articles/8775575-countries-with-limitations"
+              },
+              {
+                "label": "Lucid Trading",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://support.lucidtrading.com/en/articles/11404636-restricted-countries"
+              },
+              {
+                "label": "PipFarm",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.pipfarm.com/en/articles/4318163-prohibited-country-list"
+              },
+              {
+                "label": "HyroTrader (Hyro platform)",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/"
+              },
+              {
+                "label": "BrightFunded CFD",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.brightfunded.com/en/articles/9286630-what-countries-are-restricted-at-brightfunded"
+              },
+              {
+                "label": "Upcomers",
+                "values": [
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta",
+                  "An bayyana cewa ya cancanta"
+                ],
+                "sourceUrl": "https://help.upcomers.com/en/articles/8703655-are-there-any-prohibited-countries"
+              }
+            ],
+            "note": "Cancanta bisa manufofin gama gari da aka wallafa, an duba 16 Nuwamba 2026 — ba lasisin doka, amincewar KYC ko alƙawarin biya ba. Kwayoyin kore sun fito daga manufofin kamfanoni na duniya sai wuraren da aka ware, ba sayayyar gwaji ba. Wani challenge ko dandamalin ɓangare na uku na iya sauya amsar."
+          },
+          "callout": {
+            "kind": "warning",
+            "text": "Tacewar ƙasa ta PropRadar tana nuna **sharuɗɗan cancanta da aka wallafa**, ba izinin doka, lasisin hukuma ko garantin biya ba. Idan ba a tabbatar da samfur ba, muna cewa **Ba a tabbatar ba** maimakon zato."
+          }
+        },
+        {
+          "heading": "6. Ziyartar ƙasar da aka hana na iya zama karya doka ko da kana zaune a wani wuri",
+          "paragraphs": [
+            "Take Profit Trader ya ce ko sau ɗaya na ciniki ko samun bayanan kasuwa daga yankin da aka hana na iya haifar da takura asusu. Ya ambaci VPN da haɗin nesa da ke karkatar da dama ta ƙasar a fili. Mazaunin yankin da aka yarda ya duba **dokokin tafiya da IP** kafin ɗaukar kwamfuta ƙasashen waje.",
+            "Ba kowane kamfani ke da wannan doka ba: Tradeify ya ce ƙuntatawar yankinsa ta gama gari ta dogara da **mazauni na dindindin, ba tafiya ta ɗan lokaci ba**. Kamfanoni biyu na iya ɗaukar tafiya ɗaya ta hanyoyi daban."
+          ]
+        },
+        {
+          "heading": "7. Biya na iya dogara da amincewa bisa ikon kwangila",
+          "paragraphs": [
+            "Risk Disclosure na Apex Trader Funding ya ce ladar Performance Account ana bayarwa ne **bisa ikonsa**, kuma hukuncin biya ko ƙin lada na ƙarshe ne. Muhimmin sharadi ne da za a karanta tare da User Agreement da ma'aunin biya da aka wallafa.",
+            "Sharadin ikon zaɓi **ba hujja ba ce cewa kamfani yana ƙin ladan halal a kai a kai**. Amma trader ya kamata ya ajiye shaidar bin doka kuma ya fahimci hanyoyin takaddama da ɗaukaka ƙara kafin kashe kuɗi."
+          ]
+        },
+        {
+          "heading": "8. Matakan funded da live ba lallai su maye gurbin juna ba",
+          "paragraphs": [
+            "Tradeify ya ce traders da aka ƙi shigar da su Live Account ba za su iya komawa kawai matakin kwaikwayo ba. FTMO Futures ma yana ware ƙwarewar Sim-Funded daga cancantar komawa Live Funded Account, wanda ke da ƙuntatawa a ƙarin ƙasashe.",
+            "Tambayi ko kamfanin yana alƙawarin matakin funded, asusun broker na gaske ko tsarin lada na kwaikwayo kawai. Kalmar talla **“funded” ba ta bayyana tsarin kwangila iri ɗaya a ko'ina ba**."
+          ]
+        },
+        {
+          "heading": "9. Yadda ake samun prop firm ba tare da dokokin ba-zata ba",
+          "paragraphs": [
+            "Babu shafin bincike mai zaman kansa da zai tabbatar da kamfani yana da *sifili* ɓoyayyun dokoki: sharuɗɗa na iya sauyawa, KYC na mutum ne kuma hukuncin taimako wani lokaci na zaɓi ne. Za ka iya rage yiwuwar sayen shirin da bai dace ba."
+          ],
+          "steps": [
+            {
+              "title": "Gano ainihin samfur",
+              "text": "Rubuta **kamfani, sunan asusu, girma da matakin tantancewa/funded**. Taƙaitaccen bayanin alama bai isa ba."
+            },
+            {
+              "title": "Ajiye kwangila da kwanan wata",
+              "text": "Karanta **cikakkun sharuɗɗa, labarin taimako, dokar biya da jerin ƙasashen da aka hana**; ajiye kwafi mai kwanan wata."
+            },
+            {
+              "title": "Gwada salonka na gaske",
+              "text": "Daidaita **lokutan labarai, copy trading, VPN/VPS, riƙewa, yawan contracts mafi girma, daidaito da rashin ciniki** da dabararka."
+            },
+            {
+              "title": "Ƙididdige ainihin biya na farko",
+              "text": "Haɗa **burin riba, mafi ƙarancin ranaku, iyakar cire kuɗi na farko, kuɗin kunnawa, kuɗin biya da sharuɗɗan mai ba da sabis**."
+            },
+            {
+              "title": "Tambayi a rubuce kafin biya",
+              "text": "Idan wani abu bai bayyana ba, nemi amsar taimako da ta ambaci **ainihin doka da sigarta**, sannan ajiye amsar."
+            }
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Idan ka ga dokar da ba ta cikin kwatancinmu, aika wa PropRadar hanyar hukuma da hoton allo ta hanyar **miƙa majiya**. Muna binciken abokan hulɗa da waɗanda ba abokan hulɗa ba bisa ma'aunin edita ɗaya."
+          }
+        }
+      ]
+    }
   }
 };
 
