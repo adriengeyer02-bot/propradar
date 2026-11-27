@@ -1553,55 +1553,86 @@
       ]
     },
     "apex-trader-funding": {
-      "reviewedAt": "2026-11-20",
+      "reviewedAt": "2026-11-27",
       "changelog": [
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 4.2 TrustScore across 21,428 reviews on a profile Trustpilot says was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
           "source": "https://www.trustpilot.com/review/apextraderfunding.com",
-          "fields": ["trustpilotRating", "trustpilotReviewCount"]
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         },
         {
           "date": "2026-10-28",
           "summary": "Payout risk corroborated with a dated Finance Magnates report (29 August 2024: alleged payout delays and two-day video-proof requests before payout), added as a sourced incident. Approved by the site owner, who asked for every payout-risk level to be backed by sources.",
           "source": "https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid",
-          "fields": ["incidents"]
+          "fields": [
+            "incidents"
+          ]
         },
         {
           "date": "2026-11-08",
           "summary": "Trustpilot refreshed: 4.2 TrustScore (unchanged) across 21,625 reviews.",
           "source": "https://www.trustpilot.com/review/apextraderfunding.com",
-          "fields": ["trustpilotReviewCount"]
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         },
         {
           "date": "2026-11-08",
           "summary": "Pending lawsuit added as a dated incident: McCrudden v. Apex Trader Funding, Inc. et al., M.D. Fla. 3:26-cv-01073, filed 2026-04-30. Allegations only, pleading stage on the docket read. No score or status change.",
           "source": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938",
-          "fields": ["incidents"]
+          "fields": [
+            "incidents"
+          ]
         },
         {
           "date": "2026-11-16",
           "summary": "Existing McCrudden legal note corrected: a direct docket is already on file. Recorded the accessible snapshot cutoff and discovery/arbitration procedural steps without treating allegations as findings or claiming a current complete court record. No new incident or risk-level change.",
           "source": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938",
-          "fields": ["legalReview"]
+          "fields": [
+            "legalReview"
+          ]
         },
         {
           "date": "2026-11-18",
           "summary": "Distinguished current EOD and live Intraday Trailing evaluation models; verified no evaluation consistency/minimum days, but funded payout has five qualifying days, 50% consistency, safety net and six-payout lifetime closure. Score 66 to 63 for restrictive earned-account payout structure, no new legal allegations.",
           "source": "https://apextraderfunding.com/help-center/eod-accounts/eod-evaluations/",
-          "fields": ["products", "restrictiveRules", "drawdownType", "verdict", "auditSummary", "score"]
+          "fields": [
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "verdict",
+            "auditSummary",
+            "score"
+          ]
         },
         {
           "date": "2026-11-18",
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed. Editorial score restored from 63 to 66: the earlier manual deduction (\"Score 66 to 63 for restrictive earned-account payout structure, no new legal allegations.\") is replaced by the computed restrictive-rules penalty, so it is not counted twice.",
           "source": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
-          "fields": ["restrictiveRules", "score"]
+          "fields": [
+            "restrictiveRules",
+            "score"
+          ]
         },
         {
           "date": "2026-11-20",
           "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 12 new classified restrictive rules.",
           "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
-          "fields": ["restrictiveRules"]
+          "fields": [
+            "restrictiveRules"
+          ]
+        },
+        {
+          "date": "2026-11-27",
+          "summary": "Updated new PA payout restrictions and added temporarily advertised Legacy FULL and Instant 50K records. Instant and promotional Legacy precise terms remain unverified.",
+          "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+          "fields": [
+            "products"
+          ]
         }
       ],
       "set": {
@@ -1641,12 +1672,37 @@
         {
           "label": "Terms & conditions read in full (2026-11-20)",
           "url": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        },
+        {
+          "label": "Official programme documentation",
+          "url": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/"
+        },
+        {
+          "label": "Official programme documentation",
+          "url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/"
+        },
+        {
+          "label": "Official programme documentation",
+          "url": "https://apextraderfunding.com/legacy-products/"
+        },
+        {
+          "label": "Official programme documentation",
+          "url": "https://apextraderfunding.com/?picker_balance=50k&picker_fee=instant&picker_type=intraday-trail"
         }
       ],
       "setLegalReview": {
         "summary": "Legal file clarified on 16 November 2026 using the already-listed McCrudden court docket. The accessible snapshot ends on 19 October 2026 and records a discovery stay pending an arbitration motion, not a decision on the underlying allegations. The existing risk level is unchanged; this pass did not reverify company registrations or conduct comprehensive regulatory clearance.",
-        "complaintsAndDisputes": ["Public complaints often focus on payout eligibility, consistency rules, trailing threshold interpretation and rule changes.", "McCrudden v. Apex Trader Funding, Inc. et al., M.D. Fla. 3:26-cv-01073, filed 30 April 2026: the public docket snapshot was last retrieved 19 October 2026. The 7 October entry stays discovery pending resolution of the arbitration motion; the 19 October entries include the plaintiff’s objection. These are procedural entries, not findings on the allegations.", "Regulator-warning searches were not refreshed in this scoped court-docket check."],
-        "redFlags": ["Explicitly non-regulated financial status for a futures-related prop-firm product.", "US futures prop-firm model sits in a grey zone between education, simulation, payouts and trading evaluation.", "Large discount campaigns can make traders under-read payout and consistency constraints.", "The linked McCrudden docket is a bounded procedural record; later developments and the underlying allegations require separate verification."],
+        "complaintsAndDisputes": [
+          "Public complaints often focus on payout eligibility, consistency rules, trailing threshold interpretation and rule changes.",
+          "McCrudden v. Apex Trader Funding, Inc. et al., M.D. Fla. 3:26-cv-01073, filed 30 April 2026: the public docket snapshot was last retrieved 19 October 2026. The 7 October entry stays discovery pending resolution of the arbitration motion; the 19 October entries include the plaintiff’s objection. These are procedural entries, not findings on the allegations.",
+          "Regulator-warning searches were not refreshed in this scoped court-docket check."
+        ],
+        "redFlags": [
+          "Explicitly non-regulated financial status for a futures-related prop-firm product.",
+          "US futures prop-firm model sits in a grey zone between education, simulation, payouts and trading evaluation.",
+          "Large discount campaigns can make traders under-read payout and consistency constraints.",
+          "The linked McCrudden docket is a bounded procedural record; later developments and the underlying allegations require separate verification."
+        ],
         "sources": [
           {
             "label": "McCrudden v. Apex — public docket snapshot through 19 October 2026",
@@ -1666,7 +1722,9 @@
           "rule": "Five separate days must reach a size-dependent minimum profit; no single day may reach 50% of all profit since the last approved payout. Keep a Safety Net equal to drawdown plus $100 and request at least $500.",
           "impact": "A profitable PA may be unable to withdraw until multiple daily-profit, concentration and protected-balance criteria all hold.",
           "source": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
-          "appliesTo": ["eod"],
+          "appliesTo": [
+            "eod"
+          ],
           "category": "consistency",
           "severity": "major",
           "clarity": "clear"
@@ -1676,14 +1734,18 @@
           "rule": "Each PA receives at most six sequential payouts, each capped according to size and payment sequence; after the sixth approved payout the PA is closed.",
           "impact": "Apex funded sim status is not indefinite; future withdrawals require a newly qualified account.",
           "source": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "account-ends-after-payouts",
           "severity": "blocking",
           "clarity": "clear"
         },
         {
           "program": "Apex Performance Accounts — Rewards (User Agreement §11, §12, §30)",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "discretionary-clause",
           "severity": "blocking",
           "clarity": "vague",
@@ -1693,7 +1755,9 @@
         },
         {
           "program": "Apex Performance Accounts — graduation and professional-proficiency termination (User Agreement §14-§15)",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "discretionary-clause",
           "severity": "blocking",
           "clarity": "vague",
@@ -1703,7 +1767,9 @@
         },
         {
           "program": "Apex Performance Accounts — dormant account policy (User Agreement §16)",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "inactivity",
           "severity": "blocking",
           "clarity": "buried",
@@ -1713,7 +1779,9 @@
         },
         {
           "program": "Apex Evaluation and Performance Accounts — account and resource sharing",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "vpn-ip-device",
           "severity": "blocking",
           "clarity": "buried",
@@ -1723,7 +1791,9 @@
         },
         {
           "program": "Apex Evaluation and Performance Accounts — positions closed by 4:59 PM ET",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "weekend-overnight",
           "severity": "blocking",
           "clarity": "buried",
@@ -1733,7 +1803,9 @@
         },
         {
           "program": "Apex Evaluation and Performance Accounts — no automation (User Agreement)",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "ea-copy-hft",
           "severity": "blocking",
           "clarity": "buried",
@@ -1743,7 +1815,9 @@
         },
         {
           "program": "Apex Evaluation and Performance Accounts — risk-management standards",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "lot-risk-limit",
           "severity": "major",
           "clarity": "vague",
@@ -1753,7 +1827,9 @@
         },
         {
           "program": "Apex Evaluation and Performance Accounts — news and hedging",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "news",
           "severity": "minor",
           "clarity": "vague",
@@ -1763,7 +1839,9 @@
         },
         {
           "program": "Apex Performance Accounts — payment method in own name",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "country-kyc",
           "severity": "blocking",
           "clarity": "buried",
@@ -1773,7 +1851,9 @@
         },
         {
           "program": "Apex Performance Accounts — verification and audits (User Agreement §13)",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "country-kyc",
           "severity": "blocking",
           "clarity": "vague",
@@ -1783,7 +1863,9 @@
         },
         {
           "program": "Apex Performance Accounts — chargebacks and refunds",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "payout-conditions",
           "severity": "blocking",
           "clarity": "buried",
@@ -1793,7 +1875,9 @@
         },
         {
           "program": "Apex Performance Accounts — household account limit",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "other",
           "severity": "minor",
           "clarity": "buried",
@@ -1807,39 +1891,98 @@
           "id": "apex-eod-current",
           "name": "EOD Trailing Evaluation",
           "type": "Futures evaluation",
-          "description": "Current 25K–150K futures model; evaluation has no consistency and no minimum days, funded PA does.",
+          "description": "New-generation 30-day evaluation, one-time purchase, Standard or No Activation Fee checkout path. PA requires activation within 7 days, five qualifying days per payout, lifetime safety net of maximum loss + $100, size-specific caps, closure after six approved payouts.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
           "profitTarget": "$1,500 / $3K / $6K / $9K",
-          "maxDailyLoss": "Daily loss $500–$2,000, size dependent",
-          "maxDrawdown": "EOD trailing $1K–$4K",
+          "maxDailyLoss": "$500/$1K/$1.5K/$2K in evaluation; PA tier-based soft DLL",
+          "maxDrawdown": "$1K/$2K/$3K/$4K EOD trailing (25K/50K/100K/150K)",
           "drawdownType": "EOD",
           "drawdownSource": "https://apextraderfunding.com/help-center/eod-accounts/eod-evaluations/",
           "drawdownDetails": "Floor recalculated at market close from EOD balance; next session monitors touches in real time.",
           "profitSplit": "100% PA (subject to withdrawal caps)",
-          "platforms": ["not verified for this specific tier"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradovate",
+            "Rithmic",
+            "WealthCharts"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
-          "consistencyRule": "PA only: best day <50%, five qualified profit days, safety net and max six payouts."
+          "consistencyRule": "No evaluation ratio; PA best profitable day strictly below 50% since last approved payout.",
+          "minTradingDays": "1 evaluation day; 5 qualified days for each PA payout"
         },
         {
           "id": "apex-intraday-current",
           "name": "Intraday Trailing Evaluation",
           "type": "Futures evaluation",
-          "description": "Separate 25K–150K real-time trailing futures evaluation; funded PA payout gates differ from challenge.",
+          "description": "New-generation 30-day evaluation, one-time purchase, Standard or No Activation Fee checkout path. PA requires activation within 7 days, five qualifying days per payout, lifetime safety net of maximum loss + $100, size-specific caps, closure after six approved payouts.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
           "profitTarget": "$1,500 / $3K / $6K / $9K",
-          "maxDailyLoss": "No separate DLL stated in this model guide",
-          "maxDrawdown": "Intraday trailing on realtime equity peak",
+          "maxDailyLoss": "No evaluation DLL; funded PA tier-based soft DLL",
+          "maxDrawdown": "$1K/$2K/$3K/$4K intraday trailing (25K/50K/100K/150K)",
           "drawdownType": "Trailing",
           "drawdownSource": "https://apextraderfunding.com/help-center/evaluation-accounts/ea/intraday-trailing-drawdown-evaluations/",
           "drawdownDetails": "Floor can tighten immediately from an unrealized profit peak during the current trading session.",
           "profitSplit": "100% PA (subject to withdrawal caps)",
-          "platforms": ["not verified for this specific tier"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradovate",
+            "Rithmic",
+            "WealthCharts"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
-          "consistencyRule": "PA payout rules apply; no evaluation consistency."
+          "consistencyRule": "No evaluation ratio; PA best profitable day strictly below 50% since last approved payout.",
+          "minTradingDays": "1 evaluation day; 5 qualified days for each PA payout"
+        },
+        {
+          "id": "apex-legacy-promotional-current",
+          "name": "Legacy FULL — limited-time return",
+          "type": "Futures evaluation",
+          "description": "Official homepage offers old-format FULL evaluations temporarily across six sizes and multiple platforms. Monthly subscription; $99 lifetime PA activation on listed Tradovate and WealthCharts plans. Post-March promotional Legacy terms may differ from original legacy accounts; verify current checkout and agreement.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 300000,
+          "profitTarget": "$1.5K/$3K/$6K/$9K/$15K/$20K",
+          "maxDailyLoss": "None in listed evaluations",
+          "maxDrawdown": "$1.5K/$2.5K/$3K/$5K/$6.5K/$7.5K trailing",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://apextraderfunding.com/legacy-products/",
+          "drawdownDetails": "Legacy evaluation trailing; PA cohort terms require separate verification.",
+          "profitSplit": "Verify promotional Legacy agreement",
+          "platforms": [
+            "Tradovate",
+            "WealthCharts",
+            "Rithmic"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Legacy PA rules differ from new-product PA rules; confirm exact promotional cohort."
+        },
+        {
+          "id": "apex-instant-50k-limited",
+          "name": "Instant Sim Funding 50K — limited-time offer",
+          "type": "Instant funding",
+          "description": "Official homepage announces temporary direct simulated funding without evaluation. Product terms, actual checkout price, drawdown and payout eligibility not verified; do not infer them from ordinary PA rules.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 50000,
+          "profitTarget": "No evaluation",
+          "maxDailyLoss": "Not verified",
+          "maxDrawdown": "Not verified",
+          "profitSplit": "Not verified",
+          "platforms": [
+            "Verify at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Not verified for this offer."
         }
       ],
       "auditedPrograms": [
@@ -4710,19 +4853,24 @@
       ]
     },
     "earn2trade": {
-      "reviewedAt": "2026-11-19",
+      "reviewedAt": "2026-11-27",
       "changelog": [
         {
           "date": "2026-10-27",
           "summary": "Trustpilot refreshed: 4.5 TrustScore across 5,046 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
           "source": "https://www.trustpilot.com/review/www.earn2trade.com",
-          "fields": ["trustpilotRating", "trustpilotReviewCount"]
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         },
         {
           "date": "2026-11-08",
           "summary": "Trustpilot refreshed: 4.5 TrustScore (unchanged) across 5,079 reviews.",
           "source": "https://www.trustpilot.com/review/www.earn2trade.com",
-          "fields": ["trustpilotReviewCount"]
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         },
         {
           "date": "2026-11-11",
@@ -4733,7 +4881,9 @@
           "date": "2026-11-11",
           "summary": "Payout terms updated from the same official post: before each withdrawal request, funded traders must complete five profitable trading days (minimum daily profit $100 on 25K up to $350 on 200K), on LiveSim and Live accounts.",
           "source": "https://www.earn2trade.com/blog/earn2trade-rule-updates-november-2026/",
-          "fields": ["payoutDelay"]
+          "fields": [
+            "payoutDelay"
+          ]
         },
         {
           "date": "2026-11-17",
@@ -4744,19 +4894,37 @@
           "date": "2026-11-18",
           "summary": "Separated Trader Career Path and Gauntlet Mini evaluations from LiveSim and Live funded mechanics; recorded the post-2-Nov-2026 five-positive-days-before-each-payout requirement and size-dependent thresholds. Kept 78 points: the rule was already noted in the prior review.",
           "source": "https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules",
-          "fields": ["verdict", "auditSummary", "products", "restrictiveRules", "drawdownType"]
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "products",
+            "restrictiveRules",
+            "drawdownType"
+          ]
         },
         {
           "date": "2026-11-18",
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules",
-          "fields": ["restrictiveRules"]
+          "fields": [
+            "restrictiveRules"
+          ]
         },
         {
           "date": "2026-11-19",
           "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 6 new classified restrictive rules.",
           "source": "https://www.earn2trade.com/terms-and-conditions",
-          "fields": ["restrictiveRules"]
+          "fields": [
+            "restrictiveRules"
+          ]
+        },
+        {
+          "date": "2026-11-27",
+          "summary": "Current withdrawal policy, 50/80% split, five fresh qualifying days, fixed contract cohort and funded stages clarified.",
+          "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+          "fields": [
+            "products"
+          ]
         }
       ],
       "set": {
@@ -4792,6 +4960,14 @@
         {
           "label": "Terms & conditions read in full (2026-11-19)",
           "url": "https://www.earn2trade.com/terms-and-conditions"
+        },
+        {
+          "label": "Official programme documentation",
+          "url": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy"
+        },
+        {
+          "label": "Official programme documentation",
+          "url": "https://help.earn2trade.com/en/articles/2090521-what-platforms-can-i-use-for-the-gauntlet-mini-trader-career-path"
         }
       ],
       "restrictiveRules": [
@@ -4800,7 +4976,9 @@
           "rule": "Maximum loss trails end-of-day balance; the highest profitable day may not exceed 30% of the total evaluation profits. A daily maximum loss limit also applies by size.",
           "impact": "A single dominant profit day can defer passing; floating losses can reach the previously calculated floor.",
           "source": "https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "consistency",
           "severity": "minor",
           "clarity": "clear"
@@ -4810,14 +4988,18 @@
           "rule": "Five days with a minimum positive profit, from $100 to $350 according to size, are required before EACH withdrawal; the count restarts following payment. LiveSim drawdown is EOD and Live can trail in real time, except funded $200K/$400K Trader Career Path accounts use fixed drawdown.",
           "impact": "Passing the challenge is not sufficient for a first or subsequent reward; daily profit minima differ by purchased account.",
           "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "min-trading-days",
           "severity": "minor",
           "clarity": "clear"
         },
         {
           "program": "Trader Career Path / Gauntlet Mini — funded LiveSim",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "payout-cap",
           "severity": "major",
           "clarity": "clear",
@@ -4827,7 +5009,9 @@
         },
         {
           "program": "Trader Career Path / Gauntlet Mini — funded withdrawals",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "split-reduction",
           "severity": "major",
           "clarity": "clear",
@@ -4837,7 +5021,9 @@
         },
         {
           "program": "All Earn2Trade programmes — trade copiers",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "ea-copy-hft",
           "severity": "blocking",
           "clarity": "vague",
@@ -4848,7 +5034,9 @@
         },
         {
           "program": "All Earn2Trade programmes — prohibited conduct",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "discretionary-clause",
           "severity": "blocking",
           "clarity": "vague",
@@ -4858,7 +5046,9 @@
         },
         {
           "program": "All Earn2Trade programmes — countries and payout provider",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "country-kyc",
           "severity": "major",
           "clarity": "buried",
@@ -4868,7 +5058,9 @@
         },
         {
           "program": "All Earn2Trade programmes — dormant accounts",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "inactivity",
           "severity": "minor",
           "clarity": "buried",
@@ -4882,7 +5074,7 @@
           "id": "e2t-tcp",
           "name": "Trader Career Path — evaluation",
           "type": "Futures evaluation",
-          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "description": "Current subscription cohort after 2 November 2026: fixed contract count instead of progression ladder. 30% best-day evaluation only; funded LiveSim EOD or Live intraday trailing. Five new qualifying profit days before each weekly withdrawal; variable profit split and funded activation/data fees.",
           "accountSizeMin": 25000,
           "accountSizeMax": 100000,
           "profitTarget": "Stage profit goals vary",
@@ -4891,17 +5083,27 @@
           "drawdownType": "EOD",
           "drawdownSource": "https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules",
           "drawdownDetails": "End-of-day peak moves the allowable loss floor; limit checked against account equity.",
-          "profitSplit": "Depends on account and payout option",
-          "platforms": ["Confirm at checkout"],
-          "tradableAssets": ["Futures"],
+          "profitSplit": "50% or 80% by individual withdrawal threshold",
+          "platforms": [
+            "NinjaTrader",
+            "Tradovate",
+            "TradingView",
+            "Rithmic",
+            "Quantower",
+            "ATAS"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
-          "consistencyRule": "Best day ≤30% of total evaluation profits."
+          "consistencyRule": "30% evaluation only; no funded consistency.",
+          "minTradingDays": "No formal evaluation minimum; 30% ratio implies at least 4 profitable days"
         },
         {
           "id": "e2t-gauntlet",
           "name": "Gauntlet Mini — evaluation",
           "type": "Futures evaluation",
-          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "description": "Current subscription cohort after 2 November 2026: fixed contract count instead of progression ladder. 30% best-day evaluation only; funded LiveSim EOD or Live intraday trailing. Five new qualifying profit days before each weekly withdrawal; variable profit split and funded activation/data fees.",
           "accountSizeMin": 50000,
           "accountSizeMax": 200000,
           "profitTarget": "Profit goal varies by tier",
@@ -4910,17 +5112,27 @@
           "drawdownType": "EOD",
           "drawdownSource": "https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules",
           "drawdownDetails": "Threshold follows end-of-day closed-balance high.",
-          "profitSplit": "Depends on account and payout option",
-          "platforms": ["Confirm at checkout"],
-          "tradableAssets": ["Futures"],
+          "profitSplit": "50% or 80% by individual withdrawal threshold",
+          "platforms": [
+            "NinjaTrader",
+            "Tradovate",
+            "TradingView",
+            "Rithmic",
+            "Quantower",
+            "ATAS"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
-          "consistencyRule": "Best day ≤30% of total evaluation profits."
+          "consistencyRule": "30% evaluation only; no funded consistency.",
+          "minTradingDays": "No formal evaluation minimum; 30% ratio implies at least 4 profitable days"
         },
         {
           "id": "e2t-livesim",
           "name": "Earn2Trade funded LiveSim",
           "type": "Scaling",
-          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "description": "Earned funded stage, not a separately purchased product. $139 LiveSim activation deducted from first payout for non-professional CME status; professional data fees separate.",
           "accountSizeMin": 25000,
           "accountSizeMax": 100000,
           "profitTarget": "No new challenge profit target",
@@ -4929,9 +5141,18 @@
           "drawdownType": "EOD",
           "drawdownSource": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
           "drawdownDetails": "Simulated funded balance follows EOD floor; for post-2-Nov orders five qualifying profitable days are needed per withdrawal.",
-          "profitSplit": "Depends on account and payout option",
-          "platforms": ["Confirm at checkout"],
-          "tradableAssets": ["Futures"],
+          "profitSplit": "50% or 80% by withdrawal size",
+          "platforms": [
+            "NinjaTrader",
+            "Tradovate",
+            "TradingView",
+            "Rithmic",
+            "Quantower",
+            "ATAS"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": false,
           "minTradingDays": "5 qualifying positive days between each withdrawal for eligible new purchases"
         },
@@ -4939,7 +5160,7 @@
           "id": "e2t-tcp-large-fixed",
           "name": "Trader Career Path 200K / 400K — funded fixed loss",
           "type": "Scaling",
-          "description": "Funded TCP $200K and $400K are documented exceptions to the otherwise EOD/real-time funded trailing rule.",
+          "description": "Earned live progression stage, not a standalone purchase. Fixed loss floor; confirm qualifying-day threshold for larger stages.",
           "accountSizeMin": 200000,
           "accountSizeMax": 400000,
           "profitTarget": "No further evaluation; funded programme",
@@ -4948,9 +5169,18 @@
           "drawdownType": "Static",
           "drawdownSource": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
           "drawdownDetails": "Earn2Trade explicitly carves out $200K/$400K funded TCP as fixed, unlike other funded EOD LiveSim and real-time Live accounts.",
-          "profitSplit": "Depends on funded size and reward threshold",
-          "platforms": ["Confirm at funded onboarding"],
-          "tradableAssets": ["Futures"],
+          "profitSplit": "TCP200 50% below $5K / 80% from $5K; TCP400 60/40",
+          "platforms": [
+            "NinjaTrader",
+            "Tradovate",
+            "TradingView",
+            "Rithmic",
+            "Quantower",
+            "ATAS"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": false,
           "minTradingDays": "Five qualifying profitable days between payouts for recent subscriptions"
         }
@@ -12424,14 +12654,16 @@
       ]
     },
     "myfundedfutures": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-27",
       "restrictiveRules": [
         {
           "program": "Builder — evaluation versus simulated-funded stage",
           "rule": "Builder evaluation has an EOD trailing loss floor and no consistency ceiling; simulated funded rewards require 50% best-day consistency, a profit buffer and are capped at $1,000 for 25K or $2,000 for 50K, with a maximum-loss adjustment after payout.",
           "impact": "An unrestricted evaluation day does not imply an unrestricted funded withdrawal; profit concentration and payout buffers must be planned separately.",
           "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
-          "appliesTo": ["builder"],
+          "appliesTo": [
+            "builder"
+          ],
           "category": "consistency",
           "severity": "major",
           "clarity": "clear"
@@ -12441,7 +12673,10 @@
           "rule": "Rapid Intraday evaluations impose 50% daily-profit consistency and at least two trading days; Rapid EOD evaluations impose 30% and at least four trading days, with the EOD plan also listing seven-day inactivity.",
           "impact": "The fastest-pass and trailing-risk mechanics differ even inside the Rapid brand; do not apply one plan's conditions to the other.",
           "source": "https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified",
-          "appliesTo": ["rapid-intraday", "rapid-eod"],
+          "appliesTo": [
+            "rapid-intraday",
+            "rapid-eod"
+          ],
           "category": "consistency",
           "severity": "minor",
           "clarity": "clear"
@@ -12451,7 +12686,11 @@
           "rule": "Rapid funded payout eligibility begins after 24 hours but requires a size-based profit buffer and at least $500 request; Pro requests are on fourteen-calendar-day cycles with a larger buffer and at least $1,000 per request.",
           "impact": "Advertised daily or fortnightly payouts are conditional; a trader can be profitable but still below the withdrawable buffer.",
           "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
-          "appliesTo": ["pro", "rapid-intraday", "rapid-eod"],
+          "appliesTo": [
+            "pro",
+            "rapid-intraday",
+            "rapid-eod"
+          ],
           "category": "payout-conditions",
           "severity": "major",
           "clarity": "clear"
@@ -12462,37 +12701,46 @@
           "id": "mffu-builder",
           "name": "Builder — evaluation",
           "type": "Futures evaluation",
-          "description": "Builder 25K, 50K, 100K and 150K evaluated under EOD trailing limits, with one minimum day; funded stage has capped payouts and a 50% best-day rule absent from the evaluation.",
+          "description": "Builder 25K–150K; no evaluation consistency, funded 50% consistency, tier-specific cap and buffer. Current 50K standard $2K loss budget or cheaper $1.5K alternative; soft DLL and no activation fee.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
           "profitTarget": "$1,500 (25K), $3,000 (50K), $6,000 (100K), $9,000 (150K)",
           "maxDailyLoss": "$600–$2,500 soft pause by account size",
           "maxDrawdown": "$1,000–$4,500 EOD trailing, by size",
           "drawdownType": "EOD",
-          "drawdownSource": "https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified",
+          "drawdownSource": "https://help.myfundedfutures.com/en/articles/14290805-builder-plan-50k-a-comprehensive-guide",
           "drawdownDetails": "Evaluation maximum-loss line follows end-of-day balance highs and is enforced during trading; funded terms must be read independently.",
           "profitSplit": "80% Builder simulated-funded",
-          "platforms": ["Verify platform at purchase"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "1 evaluation day",
-          "hasConsistencyRule": false
+          "hasConsistencyRule": true,
+          "consistencyRule": "None in evaluation; funded best day ≤50% of net cycle profit."
         },
         {
           "id": "mffu-rapid-intraday",
           "name": "Rapid Intraday — evaluation",
           "type": "Futures evaluation",
-          "description": "Rapid Intraday evaluation 25K–150K, 50% evaluation consistency and at least two days; Rapid funded rewards use a separate buffer and daily eligibility policy.",
+          "description": "25K–150K. EOD evaluation; funded intraday equity trail with $100 lock. Daily payout after buffer; no funded consistency; top-tier news restricted. Live transition at $10K day forfeits excess profit.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
           "profitTarget": "$1,500–$9,000 by size",
           "maxDailyLoss": "No evaluation daily loss limit stated in the programme table",
-          "maxDrawdown": "$1,000–$4,500 EOD maximum-loss measurement during evaluation",
-          "drawdownType": "EOD",
-          "drawdownSource": "https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified",
-          "drawdownDetails": "Official consolidated evaluation table states EOD maximum loss; the Intraday product name must not be mistaken for an EOD funded loss method.",
+          "maxDrawdown": "$1K–$4.5K evaluation EOD / funded intraday",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.myfundedfutures.com/en/articles/13134709-rapid-plan-50k-a-comprehensive-look",
+          "drawdownDetails": "Evaluation EOD; funded intraday equity high-water trail, locks $100 above $0 starting balance.",
           "profitSplit": "90% Rapid simulated-funded",
-          "platforms": ["Verify platform at purchase"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "2 evaluation days",
           "hasConsistencyRule": true,
           "consistencyRule": "Best day ≤50% of total evaluation profits; not the funded payout rule."
@@ -12501,41 +12749,49 @@
           "id": "mffu-rapid-eod",
           "name": "Rapid EOD — evaluation",
           "type": "Futures evaluation",
-          "description": "Distinct Rapid EOD evaluation with seven-day inactivity rule and a 30% best-day concentration threshold.",
+          "description": "25K/50K; default no DLL or selectable soft daily stop ($500/$1,000). Same funded EOD trail and daily payout rules; checkout choice cannot be changed later.",
           "accountSizeMin": 25000,
           "accountSizeMax": 50000,
           "profitTarget": "$1,500 (25K), $3,000 (50K)",
-          "maxDailyLoss": "None in standard published evaluation table",
+          "maxDailyLoss": "Default none; optional $500/$1,000 soft pause in evaluation and funded",
           "maxDrawdown": "$1,000 (25K) or $2,000 (50K) EOD trailing",
           "drawdownType": "EOD",
-          "drawdownSource": "https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified",
+          "drawdownSource": "https://help.myfundedfutures.com/en/articles/18337038-rapid-eod-with-dll-a-detailed-look",
           "drawdownDetails": "Loss line updates from end-of-day balance, while floating equity can breach the established floor within the session.",
           "profitSplit": "90% Rapid simulated-funded",
-          "platforms": ["Verify platform at purchase"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "4 evaluation days",
           "hasConsistencyRule": true,
-          "consistencyRule": "Best day ≤30% of total evaluation profits."
+          "consistencyRule": "30% evaluation only; no funded consistency."
         },
         {
           "id": "mffu-pro",
           "name": "Pro — evaluation",
           "type": "Futures evaluation",
-          "description": "Pro 50K–150K with two-day minimum (one-day add-on changes the 50K target); funded withdrawals normally follow fourteen-day cycles and buffer requirements.",
+          "description": "Redesigned Pro purchases after 23 November 2026; 50K/100K/150K, optional One-Day evaluation. One active sim funded Pro per size; top-tier news prohibited in funded phase.",
           "accountSizeMin": 50000,
           "accountSizeMax": 150000,
           "profitTarget": "$3,000 (50K), $6,000 (100K), $9,000 (150K); 50K One-Day Add-On: $4,000",
           "maxDailyLoss": "None listed for Pro evaluation",
           "maxDrawdown": "$2,000–$4,500 EOD maximum loss by size",
           "drawdownType": "EOD",
-          "drawdownSource": "https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified",
+          "drawdownSource": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
           "drawdownDetails": "The consolidated Pro evaluation table specifies an EOD maximum-loss calculation, distinct from subsequent funded payout conditions.",
           "profitSplit": "80% Pro simulated-funded",
-          "platforms": ["Verify platform at purchase"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "2 evaluation days; one-day add-on has different profit goal",
           "hasConsistencyRule": true,
-          "consistencyRule": "Best day ≤50% of total evaluation profits."
+          "consistencyRule": "50% evaluation only; One-Day add-on none; funded none."
         }
       ],
       "set": {
@@ -12549,43 +12805,67 @@
           "date": "2026-11-18",
           "summary": "Separated Builder, Rapid Intraday, Rapid EOD and Pro evaluations, their EOD loss floors, profit consistency thresholds and funded payment buffers; no score change.",
           "source": "https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified",
-          "fields": ["products", "restrictiveRules"]
+          "fields": [
+            "products",
+            "restrictiveRules"
+          ]
         },
         {
           "date": "2026-10-27",
           "summary": "Trustpilot refreshed: 4.9 TrustScore across 22,576 reviews, with Trustpilot's high-risk investment notice. Rapid plan profit split 90/10 with daily payouts confirmed on the official plan page; stored price left unchanged.",
           "source": "https://www.trustpilot.com/review/myfundedfutures.com",
-          "fields": ["trustpilotRating", "trustpilotReviewCount"]
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         },
         {
           "date": "2026-11-08",
           "summary": "Trustpilot refreshed: 4.9 TrustScore (unchanged) across 22,813 reviews.",
           "source": "https://www.trustpilot.com/review/myfundedfutures.com",
-          "fields": ["trustpilotReviewCount"]
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         },
         {
           "date": "2026-11-11",
           "summary": "Help center (24 Sep 2026): evaluations standardised across Builder, Rapid, Rapid EOD and Pro; every plan lists a \"Maximum Loss Limit (EOD)\" and Builder states \"EOD Trailing\". Drawdown type set to EOD.",
           "source": "https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified",
-          "fields": ["drawdownType"]
+          "fields": [
+            "drawdownType"
+          ]
         },
         {
           "date": "2026-11-14",
           "summary": "Official terms re-read: the \"Company\" is MyFunded Futures, LLC; Texas law governs, with courts in Collin County, Texas. The footer adds that \"MyFunded Perpetuals is offered by Funding Perpetuals Holdings, Inc., a company separate from MyFunded Futures, LLC.\"",
           "source": "https://myfundedfutures.com/terms",
-          "fields": ["entities"]
+          "fields": [
+            "entities"
+          ]
         },
         {
           "date": "2026-11-14",
           "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
           "source": "https://myfundedfutures.com/",
-          "fields": ["payoutProofs"]
+          "fields": [
+            "payoutProofs"
+          ]
         },
         {
           "date": "2026-11-18",
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
-          "fields": ["restrictiveRules"]
+          "fields": [
+            "restrictiveRules"
+          ]
+        },
+        {
+          "date": "2026-11-27",
+          "summary": "Clarified funded Rapid intraday vs evaluation EOD, added DLL checkout choice, Builder funded consistency and redesigned Pro cohort.",
+          "source": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+          "fields": [
+            "products"
+          ]
         }
       ],
       "addSources": [
@@ -12596,6 +12876,26 @@
         {
           "label": "MyFundedFutures terms",
           "url": "https://myfundedfutures.com/terms"
+        },
+        {
+          "label": "Official programme documentation",
+          "url": "https://help.myfundedfutures.com/en/articles/14290805-builder-plan-50k-a-comprehensive-guide"
+        },
+        {
+          "label": "Official programme documentation",
+          "url": "https://help.myfundedfutures.com/en/articles/13134709-rapid-plan-50k-a-comprehensive-look"
+        },
+        {
+          "label": "Official programme documentation",
+          "url": "https://help.myfundedfutures.com/en/articles/18337038-rapid-eod-with-dll-a-detailed-look"
+        },
+        {
+          "label": "Official programme documentation",
+          "url": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan"
+        },
+        {
+          "label": "Official programme documentation",
+          "url": "https://help.myfundedfutures.com/en/articles/13134718-understanding-rapid-live"
         }
       ],
       "setEntities": [
