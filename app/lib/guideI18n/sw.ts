@@ -188,6 +188,154 @@ const sw: GuideTranslations = {
         "answer": "Hapana, lakini ichunguzwe kama kampuni inayohitaji ufuatiliaji. Inaweza kuwa hai, bila kuwa chaguo la wazi la kununua."
       }
     ]
+  },
+  "ftmo-vs-the5ers": {
+    "title": "FTMO dhidi ya The5ers: masharti, bei na malipo",
+    "metaDescription": "Linganisha programu za sasa za FTMO na The5ers, bei, drawdown, masharti ya malipo, majukwaa, ishara za Trustpilot na masharti rasmi kabla ya kuchagua.",
+    "eyebrow": "Ulinganisho wa chapa",
+    "h1": "FTMO dhidi ya The5ers: kampuni mbili imara kwa mahitaji tofauti",
+    "answer": "FTMO na The5ers ni majina yanayochukuliwa kwa uzito, lakini hayatatui tatizo lilelile. FTMO ni kigezo kinachotumiwa sana; The5ers inaweza kuwa ya tahadhari zaidi kulingana na programu. Ofa husika ni muhimu kuliko jina la chapa.",
+    "checks": [
+      "Linganisha bei ya chini na ukubwa wa akaunti unaolenga.",
+      "Soma masharti ya habari, EA, drawdown na lengo la faida.",
+      "Tambua kuponi, viungo vya ushirika na maslahi ya kibiashara.",
+      "Chagua kwa mtindo wa trading, si umaarufu pekee."
+    ],
+    "faq": [
+      {
+        "question": "Je, FTMO ni bora kuliko The5ers?",
+        "answer": "Si kwa kila mtu. FTMO inajulikana sana, huku The5ers ikiweza kufaa zaidi baadhi ya trader. Programu husika ni muhimu kuliko jina."
+      },
+      {
+        "question": "Je, kiungo cha ushirika kinabadilisha ulinganisho huu?",
+        "answer": "Hapana. PropRadar hutenganisha alama, hatari na mahusiano ya kibiashara."
+      }
+    ]
+  },
+  "topstep-vs-apex": {
+    "title": "Topstep dhidi ya Apex 2026: masharti, malipo na gharama",
+    "metaDescription": "Linganisha Topstep na Apex Trader Funding mwaka 2026: uthabiti, malipo, drawdown ya EOD au ndani ya siku, ada na hatari zinazotegemea toleo la akaunti.",
+    "eyebrow": "Ulinganisho wa futures",
+    "h1": "Topstep dhidi ya Apex: linganisha masharti ya malipo kabla ya punguzo",
+    "answer": "Topstep ina njia ya futures iliyodumu zaidi na rahisi kulinganisha, huku Apex ikishindana kwa punguzo kubwa na chaguo za akaunti. Linganisha drawdown, ustahiki wa malipo, ada za mara kwa mara na za uanzishaji, majukwaa na malalamiko ya karibuni kabla ya bei.",
+    "checks": [
+      "Linganisha punguzo na gharama yote baada ya kufadhiliwa.",
+      "Thibitisha drawdown ya EOD au inayofuatilia salio na masharti ya uthabiti.",
+      "Soma ishara za jumuiya na matukio ya karibuni.",
+      "Chagua kwa jukwaa na mtindo wa ndani ya siku."
+    ],
+    "faq": [
+      {
+        "question": "Topstep au Apex ni bora?",
+        "answer": "Topstep inaweza kufaa trader wanaotaka mfumo uliodumu zaidi na masharti rahisi kupima. Apex inaweza kufaa wanaotaka tathmini za bei nafuu na chaguo zaidi za akaunti. Ustahiki wa malipo, drawdown na gharama yote ya ufadhili viamue."
+      },
+      {
+        "question": "Je, Apex ni nafuu kuliko Topstep?",
+        "answer": "Apex mara nyingi hutangaza punguzo kubwa, lakini bei ya ununuzi si gharama yote. Linganisha usajili, reset, uanzishaji au ada za ufadhili na idadi ya majaribio ambayo mkakati wako unaweza kuhitaji."
+      },
+      {
+        "question": "Masharti ya malipo ya Topstep na Apex yanatofautianaje?",
+        "answer": "Kampuni zote zina masharti ya ustahiki kwa kila programu. Linganisha siku za chini za trading, uthabiti au siku bora, ukomo wa malipo, viwango vya salio na akaunti halisi ya funded kabla ya kununua."
+      }
+    ]
+  },
+  "funderpro-vs-the5ers": {
+    "title": "FunderPro dhidi ya The5ers: habari, EA, swing na malipo",
+    "metaDescription": "Linganisha FunderPro na The5ers kwa bei, masharti ya habari na EA, swing, malipo, historia ya uendeshaji na ishara za hatari za sasa.",
+    "eyebrow": "Ulinganisho wa CFD",
+    "h1": "FunderPro dhidi ya The5ers: unyumbufu dhidi ya kampuni iliyodumu zaidi",
+    "answer": "FunderPro inaweza kuvutia trader wanaotaka unyumbufu wa habari, EA na swing. The5ers ina historia ndefu zaidi na inaweza kuwa ya tahadhari zaidi kulingana na programu.",
+    "checks": [
+      "Jaribu msimbo wa punguzo wakati wa kulipa bila kununua kupita kiasi.",
+      "Thibitisha habari, EA na kushikilia positions usiku kwenye programu husika.",
+      "Linganisha muda wa malipo na masharti ya kutoa fedha.",
+      "Soma masharti rasmi kabla ya kuchagua."
+    ],
+    "faq": [
+      {
+        "question": "Je, FunderPro inafaa kwa trading wakati wa habari?",
+        "answer": "Ukurasa rasmi unaonyesha trading wakati wa habari inaruhusiwa, lakini masharti ya programu yanapaswa kuthibitishwa."
+      },
+      {
+        "question": "Je, The5ers ina tahadhari zaidi?",
+        "answer": "The5ers ina historia ndefu zaidi. Hilo haliondoi haja ya kusoma masharti ya kila programu."
+      }
+    ]
+  },
+  "prop-firm-instant-funding": {
+    "title": "Prop firm za ufadhili wa papo hapo: masharti, gharama na hatari",
+    "metaDescription": "Linganisha ufadhili wa papo hapo kwa bei, drawdown, malipo, mgawo wa faida, habari, hatari za masharti yaliyofichika na mbadala wa challenge.",
+    "eyebrow": "Ufadhili wa papo hapo",
+    "h1": "Prop firm ya ufadhili wa papo hapo: haraka haimaanishi rahisi",
+    "answer": "Ufadhili wa papo hapo unaweza kufaa unapotaka kufikia akaunti haraka, lakini linganisha gharama yote, drawdown, malipo ya chini, ukomo wa lot, vizuizi vya habari na vifungu vya kutoa fedha kabla ya kulipa.",
+    "checks": [
+      "Linganisha bei ya papo hapo na challenge ya kawaida inayolingana.",
+      "Thibitisha kama akaunti inafadhiliwa kweli au ni bidhaa ya simulation yenye masharti maalumu.",
+      "Soma hasara ya siku, hasara ya juu, malipo ya chini, ukubwa wa lot na vizuizi vya mikakati.",
+      "Epuka kulipa zaidi ili kuruka hatua ikiwa mfumo wako unaweza kuvumilia challenge ya kawaida."
+    ],
+    "faq": [
+      {
+        "question": "Je, ufadhili wa papo hapo ni bora kuliko challenge?",
+        "answer": "Si kila wakati. Huokoa muda, lakini unaweza kugharimu zaidi na kuwa na masharti makali. Chaguo hutegemea mtaji, mtindo na nidhamu yako."
+      },
+      {
+        "question": "Ni prop firm gani ya papo hapo uchunguze kwanza?",
+        "answer": "Anza na kampuni zenye masharti yanayoeleweka ya kutoa fedha, drawdown na ada. Bei pekee haitoshi."
+      }
+    ]
+  },
+  "prop-firm-pour-debutant": {
+    "title": "Prop firm bora kwa wanaoanza: masharti wazi kwanza",
+    "metaDescription": "Linganisha FTMO, The5ers, Topstep, FundedNext na programu nyingine zinazofaa wanaoanza kwa masharti, gharama, drawdown na hatari ya malipo.",
+    "eyebrow": "Mwongozo wa wanaoanza",
+    "h1": "Prop firm kwa wanaoanza: chagua masharti yaliyo wazi zaidi, si akaunti kubwa zaidi",
+    "answer": "Kwa anayeanza, chaguo bora la kwanza si akaunti kubwa zaidi kwa kawaida. Akaunti ndogo yenye drawdown inayoeleweka, gharama ya wastani na masharti unayoweza kufuata hufaa zaidi kwa kujifunza, kujiamini na maendeleo ya muda mrefu.",
+    "checks": [
+      "Anza na akaunti ndogo zaidi inayokuruhusu kujaribu masharti kwa umakini.",
+      "Thibitisha kuwa drawdown ni halisi na inalinda kiwango chako cha sasa cha ujuzi.",
+      "Epuka punguzo linalokusukuma kununua akaunti kubwa mno.",
+      "Linganisha gharama halisi kwa miezi 2 hadi 3, ikiwemo reset au majaribio ya kurudia.",
+      "Soma masharti yote kabla ya kununua, hasa habari, kushikilia positions, drawdown na malipo.",
+      "Chagua masharti wazi, yenye tarehe na rahisi kupata kabla ya mgawo au ukubwa wa akaunti."
+    ],
+    "faq": [
+      {
+        "question": "Prop firm bora kwa anayeanza ni ipi?",
+        "answer": "Kwa kawaida ni kampuni yenye masharti wazi, ukubwa wa kwanza unaofaa, drawdown inayoeleweka na historia ya malipo ya umma inayotosha. Akaunti kubwa zaidi si hatua salama zaidi kwa kawaida."
+      },
+      {
+        "question": "Je, wanaoanza waanze na akaunti kubwa?",
+        "answer": "Kwa kawaida hapana. Akaunti ndogo husaidia kujifunza nidhamu ya masharti kwa shinikizo dogo. Baada ya mfumo wako kustahimili challenge ya kwanza, kuongeza ukubwa kuna msingi zaidi."
+      },
+      {
+        "question": "Je, prop firm ya bei nafuu zaidi ndiyo bora kwa anayeanza?",
+        "answer": "Ni ikiwa masharti yanaeleweka na malipo yako wazi. Challenge nafuu yenye masharti makali yaliyofichika inaweza kugharimu zaidi kuliko programu iliyo wazi yenye bei kubwa kidogo."
+      }
+    ]
+  },
+  "meilleure-prop-firm-forex": {
+    "title": "Prop firm bora za forex: MT5, cTrader, malipo na masharti",
+    "metaDescription": "Linganisha prop firm za forex: FTMO, The5ers, FundingPips, FunderPro, GOAT Funded Trader, spread, habari, EA, malipo na majukwaa.",
+    "eyebrow": "Forex",
+    "h1": "Prop firm bora za forex: jukwaa, spread na malipo kabla ya punguzo",
+    "answer": "Trader wa forex wanapaswa kulinganisha jukwaa, spread, vifaa vinavyopatikana, masharti ya habari, ruhusa za EA na uaminifu wa malipo kabla ya ukubwa wa akaunti au punguzo.",
+    "checks": [
+      "Linganisha MT5, cTrader na vifaa vinavyopatikana.",
+      "Thibitisha spread, kamisheni na masharti ya utekelezaji.",
+      "Soma vizuizi vya habari na EA.",
+      "Chunguza hatari ya malipo na kiwango cha ushahidi."
+    ],
+    "faq": [
+      {
+        "question": "Prop firm gani ya forex uchunguze kwanza?",
+        "answer": "Anza na kampuni zenye masharti yanayoeleweka, jukwaa linalofaa mtindo wako, hatari ndogo au ya wastani ya malipo na vyanzo rasmi vilivyo wazi."
+      },
+      {
+        "question": "Je, MT5 inatosha kuchagua prop firm?",
+        "answer": "Hapana. MT5 ni rahisi kutumia, lakini lazima pia uthibitishe spread, habari, EA, drawdown na masharti ya kutoa fedha."
+      }
+    ]
   }
 };
 
