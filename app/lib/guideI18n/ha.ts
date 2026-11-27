@@ -692,6 +692,127 @@ const ha: GuideTranslations = {
         }
       ]
     }
+  },
+  "meilleure-prop-firm-2026": {
+    "title": "Mafi kyawun prop firm a yanzu: jerin 2026 mai fifita haɗari",
+    "metaDescription": "Waɗanne prop firm ne mafi kyau yanzu? Kwatanta manyan kamfanoni ta amincin biya, bayyanannun dokoki, hujjar doka, drawdown da alamun al'umma.",
+    "eyebrow": "Babban jerin matsayi",
+    "h1": "Mafi kyawun prop firm yanzu: jerin 2026 mai fifita haɗari",
+    "answer": "Mafi kyawun prop firm a yanzu suna haɗa biyan kuɗi abin dogaro, dokoki masu sauƙin fahimta, bayyanannun bayanan doka da isasshen hujjar jama'a ta kwanan nan. PropRadar yana tsara bayanan yanzu bisa haɗari kafin girman asusu ko rangwame.",
+    "checks": [
+      "Kwatanta amincin biya kafin girman asusu.",
+      "Tabbatar da ainihin dokokin shiri, ba sunan kamfani kaɗai ba.",
+      "Kwatanta Trustpilot, Reddit, X da Discord domin kowace majiya tana da son kai daban.",
+      "Duba nau'in drawdown da dokar labarai, musamman salon intraday ko SMC/ICT.",
+      "Tabbatar ko akwai dokar daidaito ko iyakar ribar rana.",
+      "Duba mafi ƙarancin biya idan dabararka tana samar da ƙananan riba da yawa.",
+      "Karanta sharuɗɗan scaling da cire kuɗi bayan funded."
+    ],
+    "faq": [
+      {
+        "question": "Me ya sa prop firm yake da kyau a 2026?",
+        "answer": "Yana haɗa biyan kuɗi abin dogaro, dokoki bayyanannu, tabbatattun sharuɗɗa, isasshen ra'ayin jama'a da shirin da ya dace da salonka. Babban asusu ba ya rama rashin bayyanannun dokokin cire kuɗi."
+      },
+      {
+        "question": "Shin in zaɓi kamfani mai rangwame mafi girma?",
+        "answer": "A'a. Rangwame yana da amfani ne idan dokoki, drawdown, tsarin biya da sharuɗɗan funded sun dace da dabararka."
+      },
+      {
+        "question": "Waɗanne prop firm ne mafi kyau yanzu?",
+        "answer": "PropRadar a yanzu yana sanya kamfanonin da suka daɗe kuma suna da kyawawan majiyoyi kamar FTMO, The5ers da Topstep kusa da farko. Jerin da ya dace har yanzu ya dogara da kasuwa, drawdown, dandali, lokacin biya da ainihin dokokin shiri."
+      }
+    ],
+    "article": {
+      "intro": "Babu prop firm guda ɗaya da ya fi kowa. Akwai kamfani mafi kyau **ga kasuwarka, salon trading ɗinka** da irin haɗarin da ka yarda da shi daga mai gudanarwa. Wannan jerin ya fara daga wannan batu: kafin rabon riba da rangwame, yana duba ko kamfanin zai **ci gaba da kasancewa kuma ya biya** lokacin da kake buƙata.",
+      "keyPoints": [
+        "Tace bisa wannan tsari: **kasuwa → dokoki → ainihin kuɗi → lambobin rangwame**.",
+        "Maki suna la'akari da **bayyanannun dokoki, hujjar biya, bayyanannun bayanan doka, bitar jama'a da tarihi**.",
+        "Hanyoyin haɗin gwiwa **ba sa sauya maki**.",
+        "Maki suna sauyawa idan hujja ta sauya; kowace sauyi **tana da kwanan wata** a shafin kamfani."
+      ],
+      "sections": [
+        {
+          "heading": "Yadda aka gina wannan jerin",
+          "paragraphs": [
+            "Kowane kamfani a PropRadar yana samun **maki cikin 100** bisa bayyanannun dokoki, hujjar biya, bayanan doka, alamun bitar jama'a da tarihin aiki. Ana bayyana hanyoyin haɗin gwiwa a kowane shafi kuma **ba sa sauya maki**. Ana nuna raunin kamfanin abokin hulɗa; wanda ba abokin hulɗa ba zai iya zama na farko.",
+            "A sabuntawar labarin 12 Nuwamba 2026, mafi girman maki na kamfanonin da suka daɗe ne: **FTMO (91/100), The5ers (85/100) da Topstep (84/100)**. Ba su ne mafi arha ba. Su ne masu dogon tarihin jama'a, sharuɗɗan da suka fi sauƙin fahimta da ƙarancin alamun matsalolin biya da ba a warware ba a fayilolin PropRadar."
+          ]
+        },
+        {
+          "heading": "Fara da kasuwarka",
+          "paragraphs": [
+            "Traders na forex/CFD da na futures ba sa saye a kasuwa ɗaya. **Kyakkyawan kamfanin futures ba ya amfani ga trader na forex**, don haka fara tacewa bisa kasuwa."
+          ],
+          "compare": {
+            "columns": [
+              "Forex / CFD",
+              "Futures"
+            ],
+            "rows": [
+              {
+                "label": "Dandali",
+                "values": [
+                  "MT5, cTrader",
+                  "Dandalin futures"
+                ]
+              },
+              {
+                "label": "Iyaka",
+                "values": [
+                  "**% na asusu**",
+                  "**Adadin dala**"
+                ]
+              },
+              {
+                "label": "Drawdown",
+                "values": [
+                  "Yawanci static a challenge na matakai biyu",
+                  "Yawanci **trailing**"
+                ]
+              },
+              {
+                "label": "Misalai",
+                "values": [
+                  "FTMO, The5ers",
+                  "Topstep"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "heading": "Sai ka daidaita dokoki da salonka",
+          "paragraphs": [
+            "Dokokin da ke kawo ƙarshen mafi yawan asusu **ba burin riba ba ne**. Su ne nau'in drawdown, iyakar asarar rana, daidaito, ƙuntatawar labarai da riƙe positions. Scalper yana buƙatar aiwatarwa da sauri ba tare da mafi ƙarancin lokacin trade ba. Swing trader yana buƙatar riƙewa da dare da ƙarshen mako. Mai trading labarai yana buƙatar kamfanin da ke yarda da shi **a asusun funded**, ba a tantancewa kaɗai ba."
+          ],
+          "bullets": [
+            "**Drawdown:** static ya fi sauƙin sarrafawa fiye da trailing.",
+            "**Daidaito:** duba ko ya shafi tantancewa, biya ko duka.",
+            "**Labarai da riƙewa:** tabbatar da dokokin funded, waɗanda galibi suka fi tsauri.",
+            "**Biya:** yawan lokuta, mafi ƙarancin adadi, iyakar biya na farko da kuɗin sarrafawa."
+          ]
+        },
+        {
+          "heading": "A ƙarshe, kwatanta ainihin kuɗi",
+          "paragraphs": [
+            "Ainihin kuɗin prop firm shi ne **abin da ka kashe kafin biyanka na farko**: kuɗin challenge, reset, kunnawa da maye gurbin asusu, bayan an cire duk abin da aka mayar. Challenge mai arha da tsauraran drawdown zai iya fi tsada fiye da mai tsada da za ka iya wucewa."
+          ]
+        },
+        {
+          "heading": "Me zai saukar da kamfani a jerin?",
+          "paragraphs": [
+            "Maki suna sauyawa idan hujja ta sauya. Kowace sauyi **tana da kwanan wata a tarihin kamfanin** don ka ga dalili da lokaci. Abubuwan rage maki:"
+          ],
+          "bullets": [
+            "**Gargadin hukuma**",
+            "**Jinkirin biya mai maimaituwa**",
+            "**Sauya doka a kan asusun da suke akwai**",
+            "Domain da **ya daina hidimar kamfanin**",
+            "Raguwar bayyanannun bayanan **kamfanin doka**"
+          ]
+        }
+      ]
+    }
   }
 };
 
