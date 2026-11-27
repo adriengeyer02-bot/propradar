@@ -36,7 +36,7 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
     },preset:{consistency:30,consistencyBasis:'net',drawdown:'intraday',lossPercent:10,profitSplit:90,source:objectives}}
   },
   the5ers:{
-    'the5ers-high-stakes-current':{checkedOn:'2026-11-27',scope:'High Stakes, general FAQ updated 3 November and loss FAQ updated 16 November; precise tier/cohort mapping still required.',assessments:{
+    'the5ers-high-stakes-current':{checkedOn:'2026-11-27',scope:'High Stakes, general FAQ updated 3 November and loss FAQ updated 16 November. Two current versions (New: 10%/5% targets; Classic: 8%/5%) and a 2-Step FAQ of 2 November listing a 50% Pro consistency rule and a $2,000 cap that the 24 November payout FAQ does not mention; unrated until reconciled.',scopeFr:'High Stakes : deux versions actuelles (New : objectifs 10 %/5 % ; Classic : 8 %/5 %). La FAQ 2-Step du 2 novembre mentionne une consistency de 50 % en Pro et un plafond de 2 000 $, absents de la FAQ retraits du 24 novembre ; non noté tant que ce n’est pas résolu.',assessments:{
       drawdown:{points:1,source:'https://the5ers.com/faqs/what-is-the-drawdown-rule-for-high-stakes/',reason:'Absolute maximum loss 8–10%; daily loss 3–5% depending on plan. Exact tier required.'},
       payout:{points:0.5,source:'https://the5ers.com/faqs/payout-policy-and-hub-credit-in-the-high-stakes-program/',reason:'14-day cycle; November 24 FAQ confirms caps of $3,000 on $50K and $4,000 on $100K, minimum P&L $300/$500. Other variants still to verify.'},
       trading:{points:0.5,source:'https://www.the5ers.com/faqs/is-news-trading-allowed-in-the-high-stakes-program2024/',reason:'Opening around high-impact releases is a soft breach; profits removed while losses retained.'}
@@ -46,7 +46,143 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
       trading:{points:1,source:'https://the5ers.com/faqs/how-does-the-bootcamp-program-work/',reason:'News, overnight and weekend holding allowed except news bracketing; different strategies per active account.'},
       funded:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-bootcamp-program-work/',reason:'3% daily pause on Pro only and account closure after 30 days inactivity; next day trading resumes after pause.'},
       payout:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-bootcamp-program-work/',reason:'First reward after 14 days; cycle restarts each scaling event. Additional payout caps and exact contract version to confirm.'}
-    },preset:{lossPercent:4,source:'https://www.the5ers.com/bootcamp/'}}
+    },preset:{lossPercent:4,source:'https://www.the5ers.com/bootcamp/'}},
+    'the5ers-hyper-growth-current':{checkedOn:'2026-11-27',scope:'Hyper Growth (1-Step), programme FAQ updated 2 November 2026. Consistency not assessed: the official specification list neither states nor excludes a rule, so no rating is published.',scopeFr:'Hyper Growth (1 étape), FAQ du programme mise à jour le 2 novembre 2026. Consistency non évaluée : la liste officielle ne mentionne ni n’exclut de règle ; aucune note publiée.',assessments:{
+      drawdown:{points:1,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/',reason:'Programme FAQ: accounts that hit the stop-out level are terminated; it is 6% below the initial account size. Some education articles call it trailing; the programme rules govern.'},
+      payout:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/',reason:'First payout 14 days after receiving the Pro account, then every 2 weeks; the 14-day cycle restarts each time the account is scaled. Same treatment as Bootcamp.'},
+      trading:{points:1,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/',reason:'News trading allowed except bracketing strategies and practices listed in the T&C; weekend holding allowed (indices carry high swaps); leverage 1:30.'},
+      funded:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/',reason:'3% daily pause disables the account for the rest of the day without termination; profit target and loss rules stay the same at each Pro stage; accounts inactive for more than 30 consecutive days expire.'}
+    },preset:{drawdown:'static',lossPercent:6,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/'}}
+  },
+  'blue-guardian':(()=>{
+    const u='https://blueguardian.com/faq/articles/';
+    const one=u+'18426782-1-step-standard-rules', two=u+'18426783-2-step-standard-rules', n1=u+'18426784-1-step-nano-rules', n2=u+'18426785-2-step-nano-rules', ist=u+'18426779-instant-standard-account-rules', isr=u+'18426780-instant-starter-account-rules', bnpl=u+'18426786-buy-now-pay-later-bnpl-rules';
+    const newsFunded=(src:string):Assessment=>({points:0.5,source:src,reason:'Funded: no opening or closing within 5 minutes of high-impact news on affected instruments. Overnight, weekend and own EAs allowed. Further funded rules on some plans (2-minute minimum hold, more than 80% margin treated as all-or-nothing).'});
+    const shield=(src:string,pct:string):Assessment=>({points:0,source:src,reason:'Guardian Shield closes all open trades at a combined '+pct+' floating loss; the first trigger permanently cuts the split to 50%, the second permanently breaches the account.'});
+    const trailing=(src:string,pct:string):Assessment=>({points:0,source:src,reason:pct+' trailing below the highest closed balance, locking at the starting balance once reached.'});
+    const scope='Help article updated 23 November 2026; funded stage; no add-ons.', scopeFr='Article du centre d’aide mis à jour le 23 novembre 2026 ; phase financée ; sans option.';
+    return {
+      'bg-one-standard-current':{checkedOn:'2026-11-27',scope:'1 Step Standard (CFD). '+scope,scopeFr:'1 Step Standard (CFD). '+scopeFr,assessments:{
+        drawdown:trailing(one,'6%'),
+        payout:{points:0.5,source:one,reason:'Every 14 days (7 with add-on); 3 trading days with at least 0.5% profit required in every payout cycle; after the lock, 1% of the starting balance must stay in profit.'},
+        consistency:{points:1,source:one,reason:'No best-day consistency rule on the funded account; the profitable-days condition is counted under payouts.'},
+        trading:newsFunded(one), funded:shield(one,'2%')
+      },preset:{drawdown:'intraday',lossPercent:6,profitSplit:85,source:one}},
+      'bg-two-standard-current':{checkedOn:'2026-11-27',scope:'2 Step Standard (CFD). '+scope,scopeFr:'2 Step Standard (CFD). '+scopeFr,assessments:{
+        drawdown:{points:1,source:two,reason:'Equity can never fall more than 8% below the starting balance; it does not trail.'},
+        payout:{points:0.5,source:two,reason:'Every 14 days (7 with add-on); 3 trading days with at least 0.5% profit required in every payout cycle.'},
+        consistency:{points:1,source:two,reason:'No best-day consistency rule on the funded account; the profitable-days condition is counted under payouts.'},
+        trading:newsFunded(two), funded:shield(two,'2%')
+      },preset:{drawdown:'static',lossPercent:8,profitSplit:85,source:two}},
+      'bg-one-nano-current':{checkedOn:'2026-11-27',scope:'1 Step Nano (CFD). '+scope,scopeFr:'1 Step Nano (CFD). '+scopeFr,assessments:{
+        drawdown:trailing(n1,'6%'),
+        payout:{points:0.5,source:n1,reason:'Every 7 days, after 5 trading days with at least 0.5% profit.'},
+        consistency:{points:0.5,source:n1,reason:'Best day below 50% of total profit, in evaluation and funded; not met means the payout stays unavailable, no breach.'},
+        trading:newsFunded(n1),
+        funded:{points:1,source:n1,reason:'No Guardian Shield on Nano accounts and no other funded condition beyond those counted above.'}
+      },preset:{drawdown:'intraday',lossPercent:6,consistency:50,consistencyBasis:'net',profitSplit:85,source:n1}},
+      'bg-two-nano-current':{checkedOn:'2026-11-27',scope:'2 Step Nano (CFD). '+scope,scopeFr:'2 Step Nano (CFD). '+scopeFr,assessments:{
+        drawdown:{points:1,source:n2,reason:'Static: equity can never fall more than 10% below the starting balance.'},
+        payout:{points:0,source:n2,reason:'Every 14 days, capped at 2% of the starting balance per cycle (one fifth of the 10% loss budget); profit above stays in the account.'},
+        consistency:{points:0.5,source:n2,reason:'Funded best day below 50% of profit per payout period; not met means no payout yet, no breach.'},
+        trading:newsFunded(n2),
+        funded:{points:1,source:n2,reason:'"There’s no Guardian Shield"; no minimum days; no other funded condition beyond those counted above.'}
+      },preset:{drawdown:'static',lossPercent:10,consistency:50,consistencyBasis:'net',profitSplit:80,source:n2}},
+      'bg-instant-standard-current':{checkedOn:'2026-11-27',scope:'Instant Standard (CFD), $5K–$100K. '+scope,scopeFr:'Instant Standard (CFD), 5K à 100K. '+scopeFr,assessments:{
+        drawdown:trailing(ist,'6%'),
+        payout:{points:0.5,source:ist,reason:'On demand after 5 trading days with at least 0.5% profit; 1% buffer after the drawdown lock; first two payouts capped at $10,000 on $200K+.'},
+        consistency:{points:0,source:ist,reason:'Best day below 20% of profit per payout period (15% on $300K/$400K).'},
+        trading:{points:0.5,source:ist,reason:'No opening or closing within 5 minutes of high-impact news on affected instruments; overnight, weekend and own EAs allowed.'},
+        funded:shield(ist,'1%')
+      },preset:{drawdown:'intraday',lossPercent:6,consistency:20,consistencyBasis:'net',profitSplit:80,source:ist}},
+      'bg-instant-starter-current':{checkedOn:'2026-11-27',scope:'Instant Starter (CFD), one-time $5K. '+scope,scopeFr:'Instant Starter (CFD), 5K unique. '+scopeFr,assessments:{
+        drawdown:trailing(isr,'5%'),
+        payout:{points:0,source:isr,reason:'One crypto payout only, at most $250 requestable; the account is then permanently closed.'},
+        consistency:{points:0,source:isr,reason:'Best day below 15% of total profit.'},
+        trading:{points:1,source:isr,reason:'News trading, overnight, weekend and own EAs allowed.'},
+        funded:shield(isr,'1%')
+      },preset:{drawdown:'intraday',lossPercent:5,consistency:15,consistencyBasis:'net',profitSplit:90,source:isr}},
+      'bg-bnpl-current':{checkedOn:'2026-11-27',scope:'Buy Now Pay Later (CFD). '+scope,scopeFr:'Buy Now Pay Later (CFD). '+scopeFr,assessments:{
+        drawdown:trailing(bnpl,'8%'),
+        payout:{points:0.5,source:bnpl,reason:'On demand after 5 trading days with at least 0.5% profit; no cap stated.'},
+        consistency:{points:0,source:bnpl,reason:'Funded best day below 20% of profit in the payout period.'},
+        trading:{points:0.5,source:bnpl,reason:'Funded: no opening or closing within 5 minutes of high-impact news on affected instruments; overnight, weekend and own EAs allowed.'},
+        funded:shield(bnpl,'1%')
+      },preset:{drawdown:'intraday',lossPercent:8,consistency:20,consistencyBasis:'net',profitSplit:80,source:bnpl}}
+    };
+  })(),
+  'funding-pips':(()=>{
+    const u='https://help.fundingpips.com/hc/en-us/articles/';
+    const std=u+'34501809112081-2-Step-Standard', flex1=u+'34501697434385-1-Step-Flex', pro=u+'34502027344017-2-Step-Pro-Model', flex2=u+'47835196271249-2-Step-Flex', lite1=u+'53459210586769-1-Step-Lite', lite2=u+'53459248360721-2-Step-Lite', labs=u+'53187088949777-1-Step-Labs', zero=u+'34502157694865-FundingPips-Zero';
+    const master=(src:string):Assessment=>({points:0.5,source:src,reason:'Master: profit from trades opened or closed within 5 minutes of high-impact news or speeches is deducted (trades opened 5+ hours before are exempt); overnight and weekend positions are closed automatically unless the Swing add-on was bought at purchase.'});
+    const ordinary=(src:string):Assessment=>({points:1,source:src,reason:'Master onboarding (KYC, responsible-trading review, agreement) and a 30-day inactivity breach; no funded profit target. Loss limits are counted under drawdown.'});
+    const scope='Help article read 27 November 2026; Master stage; default reward cycle; no add-on.', scopeFr='Article du centre d’aide lu le 27 novembre 2026 ; compte Master ; cycle de récompense par défaut ; sans option.';
+    return {
+      'pips-two-step-standard':{checkedOn:'2026-11-27',scope:'2-Step Standard, Bi-Weekly 80% cycle (Weekly 60% has the same conditions). '+scope,scopeFr:'2-Step Standard, cycle Bi-Weekly 80 % (Weekly 60 % : mêmes conditions). '+scopeFr,assessments:{
+        drawdown:{points:1,source:std,reason:'10% static floor below the starting account size; it never moves.'},
+        payout:{points:1,source:std,reason:'Reward every 14 calendar days after the first Master trade, minimum 1% of account size, no cap stated.'},
+        consistency:{points:1,source:std,reason:'The page states that Weekly and Bi-Weekly cycles are not subject to the 35% rule.'},
+        trading:master(std), funded:ordinary(std)
+      },preset:{drawdown:'static',lossPercent:10,profitSplit:80,source:std}},
+      'pips-one-step-flex':{checkedOn:'2026-11-27',scope:'1-Step Flex, Bi-Weekly 80% cycle. '+scope,scopeFr:'1-Step Flex, cycle Bi-Weekly 80 %. '+scopeFr,assessments:{
+        drawdown:{points:1,source:flex1,reason:'12% static floor below the starting account size.'},
+        payout:{points:1,source:flex1,reason:'Reward every two weeks once profit reaches 1% of account size; no cap stated.'},
+        consistency:{points:1,source:flex1,reason:'The 35% consistency score is listed only for the On Demand cycle.'},
+        trading:master(flex1), funded:ordinary(flex1)
+      },preset:{drawdown:'static',lossPercent:12,profitSplit:80,source:flex1}},
+      'pips-two-step-pro':{checkedOn:'2026-11-27',scope:'2-Step Pro, Weekly 80% cycle. '+scope,scopeFr:'2-Step Pro, cycle Weekly 80 %. '+scopeFr,assessments:{
+        drawdown:{points:1,source:pro,reason:'6% static floor below the starting account size.'},
+        payout:{points:1,source:pro,reason:'Weekly reward at 80%, minimum 1% of account size; no cap stated.'},
+        consistency:{points:1,source:pro,reason:'The 35% consistency score applies to the On Demand cycle only.'},
+        trading:master(pro), funded:ordinary(pro)
+      },preset:{drawdown:'static',lossPercent:6,profitSplit:80,source:pro}},
+      'pips-two-step-flex':{checkedOn:'2026-11-27',scope:'2-Step Flex, Bi-Weekly 80% split chosen at purchase (the 95% split, also chosen at purchase, needs 3 profitable days per cycle). '+scope,scopeFr:'2-Step Flex, part Bi-Weekly 80 % choisie à l’achat (la part de 95 %, aussi choisie à l’achat, exige 3 jours gagnants par cycle). '+scopeFr,assessments:{
+        drawdown:{points:1,source:flex2,reason:'12% static floor below the starting account size.'},
+        payout:{points:1,source:flex2,reason:'Bi-weekly reward at 80%, minimum 1% of account size; no cap stated.'},
+        consistency:{points:1,source:flex2,reason:'The 35% consistency score applies to the On Demand cycle only.'},
+        trading:master(flex2), funded:ordinary(flex2)
+      },preset:{drawdown:'static',lossPercent:12,profitSplit:80,source:flex2}},
+      'pips-one-step-lite':{checkedOn:'2026-11-27',scope:'1-Step Lite. '+scope,scopeFr:'1-Step Lite. '+scopeFr,assessments:{
+        drawdown:{points:1,source:lite1,reason:'2% static floor below the starting account size (narrow, but static).'},
+        payout:{points:1,source:lite1,reason:'Daily 80% rewards, as many requests a day as wanted once profit reaches 1%; no cap stated.'},
+        consistency:{points:1,source:lite1,reason:'The page says the model has only two rules: daily loss and maximum loss.'},
+        trading:master(lite1), funded:ordinary(lite1)
+      },preset:{drawdown:'static',lossPercent:2,profitSplit:80,source:lite1}},
+      'pips-two-step-lite':{checkedOn:'2026-11-27',scope:'2-Step Lite. '+scope,scopeFr:'2-Step Lite. '+scopeFr,assessments:{
+        drawdown:{points:1,source:lite2,reason:'2% static floor below the starting account size (narrow, but static).'},
+        payout:{points:1,source:lite2,reason:'Daily 80% rewards, as many requests a day as wanted once profit reaches 1%; no cap stated.'},
+        consistency:{points:1,source:lite2,reason:'The page says the model has only two rules: daily loss and maximum loss.'},
+        trading:master(lite2), funded:ordinary(lite2)
+      },preset:{drawdown:'static',lossPercent:2,profitSplit:80,source:lite2}},
+      'pips-one-step-labs':{checkedOn:'2026-11-27',scope:'1 Step Labs, purchases from 19 November 2026. Consistency not assessed: the page neither states nor excludes a rule, so no rating is published.',scopeFr:'1 Step Labs, achats à partir du 19 novembre 2026. Consistency non évaluée : la page ne mentionne ni n’exclut de règle, donc aucune note n’est publiée.',assessments:{
+        drawdown:{points:0.5,source:labs,reason:'3% maximum loss trailing the higher end-of-day balance or equity, locking at the starting balance.'},
+        payout:{points:0.5,source:labs,reason:'Daily requests, but the account must be 3% in profit each time, the day must be up at least $200 and each request is capped at $1,000.'},
+        trading:{points:0,source:labs,reason:'Master: overnight and weekend holding not allowed and no add-on can enable it; news-window profits deducted.'},
+        funded:ordinary(labs)
+      },preset:{drawdown:'eod',lossPercent:3,profitSplit:85,source:labs}},
+      'pips-zero-direct':{checkedOn:'2026-11-27',scope:'FundingPips Zero (direct Master). Help article read 27 November 2026.',scopeFr:'FundingPips Zero (Master direct). Article du centre d’aide lu le 27 novembre 2026.',assessments:{
+        drawdown:{points:0,source:zero,reason:'5% trailing on the highest equity, locking at the initial balance once 5% is reached.'},
+        payout:{points:0,source:zero,reason:'Bi-weekly, but the first 3% of profit is not withdrawable, 7 profitable days of at least 0.25% are needed per rolling 30 days and the biggest loss must not exceed the biggest win.'},
+        consistency:{points:0,source:zero,reason:'15% consistency rule, below the 30% threshold of the rubric.'},
+        trading:{points:0,source:zero,reason:'Trading within 10 minutes of high-impact news and holding over the weekend are hard breaches.'},
+        funded:{points:0,source:zero,reason:'A 1% maximum open risk is a hard breach that closes the account.'}
+      },preset:{drawdown:'intraday',lossPercent:5,consistency:15,consistencyBasis:'net',profitSplit:95,source:zero}}
+    };
+  })(),
+  'e8-markets':{
+    'e8-classic-v2-current':{checkedOn:'2026-11-27',scope:'E8 Classic v2, Forex/CFD, default 2% daily drawdown configuration; the variant without daily drawdown has the same rating. Help article read 27 November 2026.',scopeFr:'E8 Classic v2, Forex/CFD, configuration par défaut avec perte journalière de 2 % ; la variante sans perte journalière a la même note. Article du centre d’aide lu le 27 novembre 2026.',assessments:{
+      drawdown:{points:1,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2',reason:'4% static maximum loss from the initial balance: a fixed limit that never trails or moves, in the challenge and in the Performance stage.'},
+      payout:{points:1,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2',reason:'Payout requests can be submitted daily once the $100 minimum profit is reached; no buffer or cap described; 80% or 90% share.'},
+      consistency:{points:1,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2',reason:'The article states zero consistency rules.'},
+      trading:{points:0.5,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2',reason:'In the Performance stage only 40% of profits made in the news window are eligible; copy trading only across the trader’s own accounts; EAs allowed if not shared between users (trading policies). Weekend holding not stated; it would not change the score.'},
+      funded:{points:1,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2',reason:'Same drawdown limits in the Performance stage and no time limit; the article says the payout minimum is the only requirement. One closed trade every 60 days is ordinary activity.'}
+    },preset:{drawdown:'static',lossPercent:4,profitSplit:80,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2'}},
+    'e8-pro-current':{checkedOn:'2026-11-27',scope:'E8 Pro v2, Forex, 8% static preset. Trading axis not assessed: weekend holding is not stated on the official pages read, so no rating is published.',scopeFr:'E8 Pro v2, Forex, préréglage 8 % statique. Liberté de trading non évaluée : les pages officielles lues ne disent rien du week-end ; aucune note publiée.',assessments:{
+      drawdown:{points:0.5,source:'https://intercom.help/e8/en/articles/13653031-static-drawdown',reason:'8% static from the initial balance until the first payout; at the first payout the loss level moves permanently to the initial balance, so the remaining room is only the profit left in the account.'},
+      payout:{points:0.5,source:'https://intercom.help/e8/en/articles/15274219-e8-pro-forex',reason:'Daily requests once profit reaches 1% of the initial balance, but only 50% of total profits is requestable; the other half stays as a drawdown buffer.'},
+      consistency:{points:0,source:'https://intercom.help/e8/en/articles/15274219-e8-pro-forex',reason:'No best-day rule, but only 2% of the initial balance per day counts toward target and payout, and the excess is forfeited at market rollover.'},
+      funded:{points:1,source:'https://intercom.help/e8/en/articles/15274219-e8-pro-forex',reason:'The Performance stage keeps the same daily cap and drawdown rules (counted above); no minimum trading days, one closed trade every 60 days.'}
+    },preset:{drawdown:'static',lossPercent:8,profitSplit:80,source:'https://intercom.help/e8/en/articles/13653031-static-drawdown'}}
   },
   fundednext: {
   "fundednext-stellar-one-current": {
@@ -158,6 +294,44 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
       "lossPercent": 8,
       "profitSplit": 80,
       "source": "https://fundednext.com/cfds/stellar-lite"
+    }
+  },
+  "fundednext-stellar-instant-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "Stellar Instant, help-center version dated 2 October 2026 (archived 25 November 2026); no add-ons. Tier 1–2 split.",
+    "scopeFr": "Stellar Instant, article du centre d'aide daté du 2 octobre 2026 (archivé le 25 novembre 2026), sans option ; partage des paliers 1 et 2.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "6% trailing maximum loss on the highest recorded balance, breached when equity falls below it at any time; it stops rising once it reaches the initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "On demand at 5% growth (checked at end of day, disabled once a new trade is placed that day) or every 14 days with at least 1% growth. The loss limit is never reset after a withdrawal, so each reward reduces the remaining buffer; unlike an uncapped trailing floor, profit above the initial balance stays withdrawable."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "Account rules table: 'None. No consistency rules apply.' Quick Strike is assessed under trading, not here."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "Overnight and weekend allowed; only 40% of profits from trades within 5 minutes of high-impact news count, losses count in full; Quick Strike rule on trades closed within 30 seconds; copy trading only between the trader's own accounts."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "3% maximum risk at any time (stop-loss exposure and floating losses against the initial balance), as on the other Stellar accounts; no daily loss limit, target or minimum days."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "profitSplit": 70,
+      "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account"
     }
   }
 },
@@ -726,6 +900,15 @@ addVariant('tradeify','tradeify-select-300k-current','daily','Select 300K Daily'
   payout:{points:.5,source:"https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan",reason:'Daily above $6,100 buffer, cap $4,000, at least half the withdrawal from new profit.'},
   funded:{points:0,source:"https://help.tradeify.co/en/articles/12969284-tradeify-elite-program",reason:'Same live-transition restrictions; mandatory $3K daily loss limit and funded scaling.'}
 },{drawdown:'eod',profitSplit:90,source:"https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan"});
+const pipsOnDemand=(id:string,src:string,label:string)=>addVariant('funding-pips',id,'on-demand',label+' On Demand 100%',label+' On Demand 100 %','On Demand 100% cycle selected at Master: 35% consistency score, 7 profitable days of at least 0.5% and the Striking System.','Cycle On Demand 100 % choisi au compte Master : score de consistency de 35 %, 7 jours gagnants d’au moins 0,5 % et Striking System.',{
+  payout:{points:.5,source:src,reason:'On demand, but only after 7 profitable days of at least 0.5% of account size; both conditions reset after each reward.'},
+  consistency:{points:.5,source:src,reason:'No day may exceed 35% of total profit; reward requests are blocked until the score comes back down.'},
+  funded:{points:0,source:src,reason:'Striking System: a trade idea losing 1% of account size gets a warning; the 2nd halves the split, the 3rd cuts it to 20%, the 4th breaches the account. Warnings do not reset between cycles.'}
+},{...evidence['funding-pips'][id].preset!,consistency:35,consistencyBasis:'net',profitSplit:100});
+pipsOnDemand('pips-two-step-standard',"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",'2-Step Standard');
+pipsOnDemand('pips-one-step-flex',"https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex",'1-Step Flex');
+pipsOnDemand('pips-two-step-pro',"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model",'2-Step Pro');
+pipsOnDemand('pips-two-step-flex',"https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex",'2-Step Flex');
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA

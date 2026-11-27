@@ -282,6 +282,66 @@
               "price": 1998
             }
           ]
+        },
+        {
+          "name": "E8 Classic v2 — 2% daily drawdown",
+          "productId": "e8-classic-v2-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://intercom.help/e8/en/articles/18310577-e8-classic-v-2",
+          "note": "Pricing table published in the official E8 Classic v2 help article (read 27 November 2026, 'updated over a week ago'); the article points to a separate full pricing page. Payout share (80% or 90%) and other checkout options can change the price; promotions excluded.",
+          "rows": [
+            {
+              "size": 2000,
+              "price": 29
+            },
+            {
+              "size": 5000,
+              "price": 59
+            },
+            {
+              "size": 10000,
+              "price": 119
+            },
+            {
+              "size": 25000,
+              "price": 229
+            },
+            {
+              "size": 50000,
+              "price": 449
+            }
+          ]
+        },
+        {
+          "name": "E8 Classic v2 — without daily drawdown",
+          "productId": "e8-classic-v2-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://intercom.help/e8/en/articles/18310577-e8-classic-v-2",
+          "note": "Same help-article table, variant without a daily drawdown limit (4% static maximum loss unchanged).",
+          "rows": [
+            {
+              "size": 2000,
+              "price": 36
+            },
+            {
+              "size": 5000,
+              "price": 69
+            },
+            {
+              "size": 10000,
+              "price": 129
+            },
+            {
+              "size": 25000,
+              "price": 319
+            },
+            {
+              "size": 50000,
+              "price": 629
+            }
+          ]
         }
       ]
     },
@@ -1336,6 +1396,32 @@
               "price": 798.99
             }
           ]
+        },
+        {
+          "name": "Stellar Instant",
+          "productId": "fundednext-stellar-instant-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+          "note": "Prices published in the help-center account article dated 2 October 2026 (archived 25 November 2026), which labels them 'approx.' and says promotions and add-ons can change the checkout price. No refundable fee; reset costs 10% less than the purchase price. Not re-read on the checkout page.",
+          "rows": [
+            {
+              "size": 2000,
+              "price": 59.99
+            },
+            {
+              "size": 5000,
+              "price": 149.99
+            },
+            {
+              "size": 10000,
+              "price": 299.99
+            },
+            {
+              "size": 20000,
+              "price": 599.99
+            }
+          ]
         }
       ]
     },
@@ -2385,6 +2471,95 @@
             {
               "size": 100000,
               "price": 599
+            }
+          ]
+        }
+      ]
+    },
+    "blue-guardian": {
+      "checkedOn": "2026-11-27",
+      "programs": [
+        {
+          "name": "Instant Standard (CFD)",
+          "productId": "bg-instant-standard-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://www.blueguardian.com/",
+          "note": "Regular prices shown on the official home page under the default Instant plan (read 27 November 2026); the code BLACK discount is excluded. The official 6 October 2026 blog confirms $72 (5K), $623 (100K) and $2,200 (400K).",
+          "rows": [
+            {
+              "size": 5000,
+              "price": 72
+            },
+            {
+              "size": 10000,
+              "price": 100
+            },
+            {
+              "size": 25000,
+              "price": 208
+            },
+            {
+              "size": 50000,
+              "price": 324
+            },
+            {
+              "size": 100000,
+              "price": 623
+            },
+            {
+              "size": 200000,
+              "price": 954
+            },
+            {
+              "size": 400000,
+              "price": 2200
+            }
+          ]
+        },
+        {
+          "name": "Buy Now Pay Later (CFD) — total if passed",
+          "productId": "bg-bnpl-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://blueguardian.com/faq/articles/18426786-buy-now-pay-later-bnpl-rules",
+          "note": "$10 to start the evaluation, then a one-time activation fee due only after passing (help article updated 23 November 2026). The total shown assumes the $10 start applies to every size, as the article states it generally.",
+          "rows": [
+            {
+              "size": 5000,
+              "price": 62,
+              "upfrontPrice": 10,
+              "completionFee": 52
+            },
+            {
+              "size": 10000,
+              "price": 108,
+              "upfrontPrice": 10,
+              "completionFee": 98
+            },
+            {
+              "size": 25000,
+              "price": 212,
+              "upfrontPrice": 10,
+              "completionFee": 202
+            },
+            {
+              "size": 50000,
+              "price": 362,
+              "upfrontPrice": 10,
+              "completionFee": 352
+            },
+            {
+              "size": 100000,
+              "price": 696,
+              "upfrontPrice": 10,
+              "completionFee": 686
+            },
+            {
+              "size": 200000,
+              "price": 1043,
+              "upfrontPrice": 10,
+              "completionFee": 1033
             }
           ]
         }
