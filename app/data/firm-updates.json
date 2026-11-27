@@ -3119,7 +3119,7 @@
           "accountSizeMax": 200000,
           "profitTarget": "$3,000 (50K), $6,000 (100K and 200K) in Phase 1",
           "maxDailyLoss": "none in Phase 1 or the Buffer Zone",
-          "maxDrawdown": "$2,000 / $2,500 end-of-day trailing (50K, 100K); $2,000 static (200K)",
+          "maxDrawdown": "Evaluation/Buffer: $2,000/$2,500 EOD trailing (50/100K), $2,000 static (200K). Funded after Buffer: static minimum balance.",
           "profitSplit": "90% standard simulated funded",
           "platforms": [
             "not stated"
@@ -13588,8 +13588,12 @@
           "drawdownSource": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation",
           "drawdownDetails": "Intraday account equity may touch trailing maximum even when profit is unrealized.",
           "profitSplit": "100% first $10K then 90%",
-          "platforms": ["Confirm at checkout"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
           "consistencyRule": "Three next-best days combined ≥80% of single best day.",
           "minTradingDays": "10 days"
@@ -13608,8 +13612,12 @@
           "drawdownSource": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation",
           "drawdownDetails": "Funded threshold follows intraday high and eventually locks at starting balance.",
           "profitSplit": "Depends on account and payout option",
-          "platforms": ["Confirm at checkout"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
           "consistencyRule": "Three next-best days combined ≥80% of single best day.",
           "minTradingDays": "5 days"
@@ -13618,19 +13626,24 @@
           "id": "oneup-express-return",
           "name": "Express requalification — previous funded only",
           "type": "Futures evaluation",
-          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "description": "Requalification only for former funded traders whose account was terminated within the preceding 24 hours; same size as previous account, one Express account at a time. Three minimum evaluation trading days.",
           "accountSizeMin": 25000,
           "accountSizeMax": 250000,
           "profitTarget": "Requalification after termination",
           "maxDailyLoss": "By legacy account",
           "maxDrawdown": "Trailing per requalification policy",
-          "drawdownSource": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation",
+          "drawdownSource": "https://help.oneuptrader.com/article/488-express-funding-how-does-it-work",
           "drawdownDetails": "Not a new customer instant account; special eligibility after funded termination.",
           "profitSplit": "Depends on account and payout option",
-          "platforms": ["Confirm at checkout"],
-          "tradableAssets": ["Futures"],
-          "hasConsistencyRule": false,
-          "minTradingDays": "3 days, restricted to eligible former funded accounts"
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "minTradingDays": "3 days, restricted to eligible former funded accounts",
+          "consistencyRule": "Evaluation: three other best days combined at least 80% of single best day; no percentage best-day rule listed in published funded rules."
         }
       ],
       "addSources": [
@@ -18161,20 +18174,28 @@
           "id": "tradeday-quick-pay",
           "name": "Quick Pay evaluation",
           "type": "Futures evaluation",
-          "description": "One-time non-refundable evaluation fee from $99 list price for 25K Intraday (site temporarily shows $39 promotional). Quick Pay offers both intraday and EOD evaluation loss-floor variants; EOD evaluation may change to intraday once funded. No subscription or paid resets for new purchases from 12 Nov 2026.",
+          "description": "One-time non-refundable evaluation purchase; intraday or EOD evaluation variants. All Quick Pay Funded Sim accounts use intraday trailing regardless of evaluation variant. No subscription or paid resets on new purchases from 12 Nov 2026.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
           "entryFeeMin": 99,
           "entryFeeMax": 440,
           "profitTarget": "$1,500 (25K) to $9,000 (150K)",
           "maxDailyLoss": "not stated",
-          "maxDrawdown": "$1,000 (25K) to $4,500 (150K), trailing intraday or end-of-day depending on the account",
+          "maxDrawdown": "Evaluation: $1,000–$4,500 EOD or intraday by size/variant. Funded Sim: intraday trailing on every variant.",
           "profitSplit": "50% below $4,000 net profit, 80% above, 90% in Funded Live",
-          "platforms": ["Tradovate", "Rithmic"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradovate",
+            "Rithmic"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "5 days in the evaluation; minimum 1 day to the first payout",
           "hasConsistencyRule": true,
-          "consistencyRule": "30% consistency rule in the evaluation; none on the funded account (official page, 29 Oct 2026)."
+          "consistencyRule": "30% consistency rule in the evaluation; none on the funded account (official page, 29 Oct 2026).",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889",
+          "drawdownDetails": "Even EOD evaluation paths have intraday funded drawdown."
         },
         {
           "id": "tradeday-fast-pass",
@@ -18188,11 +18209,19 @@
           "maxDailyLoss": "not stated",
           "maxDrawdown": "$1,000 (25K) to $4,500 (150K), end-of-day trailing",
           "profitSplit": "80% on Funded Sim, 90% on Funded Live",
-          "platforms": ["Tradovate", "Rithmic"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Tradovate",
+            "Rithmic"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "Conflicting official pages: current account card says 3 evaluation days; How It Works says no formal minimum. Five profitable days before a payout.",
           "hasConsistencyRule": true,
-          "consistencyRule": "45% consistency rule in the evaluation and on the funded account (official page, 29 Oct 2026)."
+          "consistencyRule": "45% evaluation and funded accounts opened on/after 26 July 2026; funded denominator is lifetime gross profit (current profit + payouts). Earlier Funded Sim cohort has no percentage consistency.",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy",
+          "drawdownDetails": "First payout locks floor at initial account balance if not reached earlier."
         }
       ],
       "addPayoutProofs": [
