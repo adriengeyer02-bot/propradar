@@ -10,6 +10,9 @@ import pt from './pt';
 import zh from './zh';
 import ja from './ja';
 import hi from './hi';
+import tr from './tr';
+import ar from './ar';
+import ko from './ko';
 import frArticles from './articles/fr';
 import deArticles from './articles/de';
 import itArticles from './articles/it';
@@ -18,11 +21,14 @@ import ptArticles from './articles/pt';
 import zhArticles from './articles/zh';
 import jaArticles from './articles/ja';
 import hiArticles from './articles/hi';
+import trArticles from './articles/tr';
+import arArticles from './articles/ar';
+import koArticles from './articles/ko';
 import { updateNoChallengeTranslation } from './noChallenge';
 
 export type { GuideTranslation };
 
-const ALL: Partial<Record<Locale, GuideTranslations>> = { fr, de, it, es, pt, zh, ja, hi };
+const ALL: Partial<Record<Locale, GuideTranslations>> = { fr, de, it, es, pt, zh, ja, hi, tr, ar, ko };
 /** Long article bodies, kept apart from the summaries (only the guides that have an English article). */
 const ARTICLES: Partial<Record<Locale, GuideArticleTranslations>> = {
   fr: frArticles,
@@ -33,6 +39,9 @@ const ARTICLES: Partial<Record<Locale, GuideArticleTranslations>> = {
   zh: zhArticles,
   ja: jaArticles,
   hi: hiArticles,
+  tr: trArticles,
+  ar: arArticles,
+  ko: koArticles,
 };
 
 /** Translated summary of a guide (internal slug), or undefined in English / when missing. */

@@ -1,4 +1,5 @@
 import en, { type Messages } from './en';
+import guideUi from '../guideI18n/ui/ar';
 
 /**
  * Modern Standard Arabic for the primary decision pages. Regulatory quotes,
@@ -685,6 +686,8 @@ const ar: Messages = {
     rulesPenaltyNote: "خصم القواعد التقييدية: −{penalty} نقاط (التقييم التحريري قبل القواعد: {before}).",
     rulesUi: {"restrictionsShort": "القيود", "risksShort": "المخاطر التعاقدية", "nav": "القواعد والقيود", "title": "القواعد والقيود", "intro": "قائمة لكل برنامج. القيود المحددة قواعد منشورة ومحددة بالأرقام؛ أما المخاطر التعاقدية فبنود غامضة أو تقديرية أو متناقضة تترك مجالًا للتأويل أو لرفض الدفع. يبقى السحب الأقصى وهدف الربح والحد الأدنى لأيام التداول ضمن خصائص العرض.", "all": "جميع البرامج", "restrictions": "قيود محددة يجب معرفتها", "restrictionsHint": "منشورة ومحددة بالأرقام: وزنها في التقييم ضعيف.", "risks": "مخاطر تعاقدية", "risksHint": "صياغة غامضة أو تقديرية مع أثر محتمل على المدفوعات: هي الأثقل وزنًا في التقييم.", "strong": "مقيِّد بشكل خاص", "classicTitle": "قواعد تقليدية مقروءة في الشروط", "classicNote": "الحد الأدنى لأيام التداول وقواعد السحب في المرحلة الممولة، مع مصدرها. هي آليات العرض وليست قيودًا، ولا تخفض التقييم."},
   },
+  // Guide pages, guide library and guide diagrams (app/lib/guideI18n/ui).
+  ...guideUi,
 };
 
 export default ar;
