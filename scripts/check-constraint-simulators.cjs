@@ -76,8 +76,13 @@ assert.equal(programmeFlexibility(getProgrammeEvidence('blue-guardian','bg-two-n
 assert.equal(programmeFlexibility(getProgrammeEvidence('blue-guardian','bg-instant-standard-current')).stars,1);
 assert.equal(programmeFlexibility(getProgrammeEvidence('blue-guardian','bg-instant-starter-current')).stars,1);
 assert.equal(programmeFlexibility(getProgrammeEvidence('blue-guardian','bg-bnpl-current')).stars,1);
+for (const id of ['pips-two-step-standard','pips-one-step-flex','pips-two-step-pro','pips-two-step-flex','pips-one-step-lite','pips-two-step-lite']) assert.equal(programmeFlexibility(getProgrammeEvidence('funding-pips',id)).stars,4.5);
+for (const id of ['pips-two-step-standard','pips-one-step-flex','pips-two-step-pro','pips-two-step-flex']) assert.equal(programmeFlexibility(getProgrammeEvidence('funding-pips',id,'on-demand')).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('funding-pips','pips-one-step-labs')).verified,4);
+assert.equal(programmeFlexibility(getProgrammeEvidence('funding-pips','pips-one-step-labs')).stars,null);
+assert.equal(programmeFlexibility(getProgrammeEvidence('funding-pips','pips-zero-direct')).stars,0);
 const a={points:0.5,source:'https://example.com',reason:'documented test fixture'};
 const complete={checkedOn:'2026-11-27',scope:'test',assessments:{drawdown:a,payout:a,consistency:a,trading:a,funded:a}};
 assert.equal(programmeFlexibility(complete).stars,2.5);
 assert.equal(programmeFlexibility({...complete,assessments:{...complete.assessments,payout:{...a,source:''}}}).stars,null);
-console.log('Constraint simulators and evidence gating: 66 checks OK');
+console.log('Constraint simulators and evidence gating: 79 checks OK');

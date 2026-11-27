@@ -7913,7 +7913,7 @@
       ]
     },
     "funding-pips": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-27",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -7950,6 +7950,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-27",
+          "summary": "Programmes re-read on the official help centre (Compare Account Models and each model page). Added 2-Step Flex, 1-Step Lite, 2-Step Lite and 1 Step Labs; corrected 1-Step Flex (2% or 3% daily, 80% bi-weekly or 100% on demand; the 60% single-idea trigger no longer appears on the current page), 2-Step Standard daily loss (3% or 5%) and minimum days, and Zero daily loss (3%, plus 1% maximum open risk). No score, status or restrictive-rule change.",
+          "source": "https://help.fundingpips.com/hc/en-us/articles/48368490585105-Compare-Account-Models",
+          "fields": ["products"]
         }
       ],
       "set": {
@@ -8025,20 +8031,20 @@
           "id": "pips-one-step-flex",
           "name": "1-Step Flex",
           "type": "Challenge",
-          "description": "Single-stage 5K–100K; one trade idea over 60% of target adds funded payout conditions.",
+          "description": "Single-stage 5K–100K, 12% target, no minimum trading days; Master overnight/weekend holding requires the Swing add-on.",
           "accountSizeMin": 5000,
           "accountSizeMax": 100000,
           "profitTarget": "12% single evaluation",
-          "maxDailyLoss": "3% daily from higher opening balance/equity",
+          "maxDailyLoss": "2% or 3% daily (configuration chosen at purchase), from the higher opening balance/equity",
           "maxDrawdown": "12% static from starting capital",
           "drawdownType": "Static",
           "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex",
           "drawdownDetails": "Initial-size 12% floor stays fixed; floating losses also count.",
-          "profitSplit": "85% biweekly; 100% monthly subject to gates",
+          "profitSplit": "80% bi-weekly or 100% on demand (cycle chosen at Master)",
           "platforms": ["not verified for this specific tier"],
           "tradableAssets": ["Forex", "CFD"],
           "hasConsistencyRule": true,
-          "consistencyRule": "Monthly reward: best day ≤35%, 7 qualifying profit days; 60% single-idea evaluation trigger adds 4 days."
+          "consistencyRule": "On Demand cycle only: best day ≤35% of total profit, 7 profitable days ≥0.5% and the Striking System; Bi-Weekly has none."
         },
         {
           "id": "pips-two-step-standard",
@@ -8048,7 +8054,7 @@
           "accountSizeMin": 5000,
           "accountSizeMax": 100000,
           "profitTarget": "8% Phase 1; 5% Phase 2",
-          "maxDailyLoss": "5% daily by standard tier; verify add-on",
+          "maxDailyLoss": "3% or 5% daily (configuration chosen at purchase)",
           "maxDrawdown": "10% static maximum loss",
           "drawdownType": "Static",
           "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
@@ -8057,8 +8063,8 @@
           "platforms": ["not verified for this specific tier"],
           "tradableAssets": ["Forex", "CFD"],
           "hasConsistencyRule": true,
-          "consistencyRule": "On-demand rewards: best day ≤35%, 7 profitable days ≥0.5%.",
-          "minTradingDays": "3 evaluation days in Phase 1 (standard model)"
+          "consistencyRule": "On Demand cycle only: best day ≤35%, 7 profitable days ≥0.5% and the Striking System; Weekly and Bi-Weekly have none.",
+          "minTradingDays": "3 days in each phase; none with the 3% daily loss add-on"
         },
         {
           "id": "pips-two-step-pro",
@@ -8087,7 +8093,7 @@
           "accountSizeMin": 5000,
           "accountSizeMax": 200000,
           "profitTarget": "No evaluation; 7 qualified days per 30 days for reward",
-          "maxDailyLoss": "Combined floating loss limit of 1% on losing open positions",
+          "maxDailyLoss": "3% daily; separate 1% maximum open risk (hard breach)",
           "maxDrawdown": "5% trailing maximum loss",
           "drawdownType": "Trailing",
           "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
@@ -8098,6 +8104,82 @@
           "hasConsistencyRule": true,
           "consistencyRule": "Direct payout qualified-day and profit concentration rules vary by tier.",
           "minTradingDays": "7 profitable days ≥0.25% in rolling 30-day period"
+        },
+        {
+          "id": "pips-two-step-flex",
+          "name": "2-Step Flex",
+          "type": "Challenge",
+          "description": "Two-phase 5K–100K, 10% then 8% target; the 80% or 95% bi-weekly split is chosen at purchase and locked.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "profitTarget": "10% Phase 1; 8% Phase 2",
+          "maxDailyLoss": "4% daily",
+          "maxDrawdown": "12% static from starting capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex",
+          "drawdownDetails": "Fixed floor 12% below the starting account size.",
+          "profitSplit": "80% bi-weekly, 95% bi-weekly (3 profitable days per cycle) or 100% on demand",
+          "platforms": ["not verified for this specific tier"],
+          "tradableAssets": ["Forex", "CFD"],
+          "hasConsistencyRule": true,
+          "consistencyRule": "On Demand cycle only: best day ≤35%, 7 profitable days ≥0.5% and the Striking System."
+        },
+        {
+          "id": "pips-one-step-lite",
+          "name": "1-Step Lite",
+          "type": "Challenge",
+          "description": "Single-stage 25K–100K with only daily and maximum loss rules; daily 80% rewards once profit reaches 1%.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 100000,
+          "profitTarget": "6% single evaluation",
+          "maxDailyLoss": "1% daily from the higher opening balance/equity",
+          "maxDrawdown": "2% static from starting capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/53459210586769-1-Step-Lite",
+          "drawdownDetails": "Fixed floor 2% below the starting account size; floating losses count.",
+          "profitSplit": "80% daily (as often as wanted, 1% minimum)",
+          "platforms": ["MT5", "Match-Trader", "cTrader (+$20)"],
+          "tradableAssets": ["Forex", "Metals", "Indices", "Energies", "Crypto"],
+          "hasConsistencyRule": false,
+          "minTradingDays": "none"
+        },
+        {
+          "id": "pips-two-step-lite",
+          "name": "2-Step Lite",
+          "type": "Challenge",
+          "description": "Two-phase 25K–100K with only daily and maximum loss rules; daily 80% rewards once profit reaches 1%.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 100000,
+          "profitTarget": "6% Phase 1; 3% Phase 2",
+          "maxDailyLoss": "1% daily from the higher opening balance/equity",
+          "maxDrawdown": "2% static from starting capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/53459248360721-2-Step-Lite",
+          "drawdownDetails": "Fixed floor 2% below the starting account size; floating losses count.",
+          "profitSplit": "80% daily (as often as wanted, 1% minimum)",
+          "platforms": ["MT5", "Match-Trader", "cTrader (+$20)"],
+          "tradableAssets": ["Forex", "Metals", "Indices", "Energies", "Crypto"],
+          "hasConsistencyRule": false,
+          "minTradingDays": "none"
+        },
+        {
+          "id": "pips-one-step-labs",
+          "name": "1 Step Labs",
+          "type": "Challenge",
+          "description": "Single-stage, rules stated for the 100K account (purchases from 19 November 2026); up to 5 accounts outside the usual allocation.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "profitTarget": "5% single evaluation",
+          "maxDailyLoss": "1% daily from the higher opening balance/equity",
+          "maxDrawdown": "3% end-of-day trailing, locks at the starting balance",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/53187088949777-1-Step-Labs",
+          "drawdownDetails": "Trails the higher end-of-day balance or equity until it reaches the starting balance, then stays there.",
+          "profitSplit": "85% daily; account must be 3% in profit, $1,000 maximum per request",
+          "platforms": ["MT5", "Match-Trader", "cTrader"],
+          "tradableAssets": ["Forex", "Metals", "Indices", "Energies", "Crypto"],
+          "hasConsistencyRule": false,
+          "minTradingDays": "none"
         }
       ],
       "auditedPrograms": [

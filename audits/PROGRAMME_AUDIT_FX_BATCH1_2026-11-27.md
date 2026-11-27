@@ -4,7 +4,7 @@ Scope: The5ers, FTMO (CFD), FundedNext (CFD), Funding Pips, E8 Markets.
 Rubric: the existing five-axis programme rubric (`audits/PROGRAMME_FLEXIBILITY_HANDOFF_2026-11-27.md`, batch 1–3 reports), unchanged.
 The /5 rating stays separate from the company /100; no company score, scoring formula, affiliate link, promotion or Futures record was touched.
 
-**Status: partial batch.** Official pages could be read only through the `agent/terms-archive` captures (25 November) and a first set of page reads. Page fetching was then blocked: permission requests went unanswered, and the scraping credits are exhausted until 18:28 UTC. Page reading was restored at 14:15, and E8 was then read on its official help centre. Funding Pips still blocks automated reading of its help centre (even when access is allowed), and the The5ers/E8 price tables are loaded dynamically; both need a connected browser or saved PDFs. No data was taken from third-party sites.
+**Status: partial batch.** Official pages could be read only through the `agent/terms-archive` captures (25 November) and a first set of page reads. Page fetching was then blocked: permission requests went unanswered, and the scraping credits are exhausted until 18:28 UTC. Page reading was restored at 14:15, and E8 was then read on its official help centre. At 18:40 UTC the Funding Pips help centre was read through the scraping service (see its section). Still, the The5ers/E8 price tables are loaded dynamically; both need a connected browser or saved PDFs. No data was taken from third-party sites.
 
 ## Results
 
@@ -13,7 +13,7 @@ The /5 rating stays separate from the company /100; no company score, scoring fo
 | The5ers | 3 CFD (High Stakes, Bootcamp, Hyper Growth) + Futures (out of scope) | Hyper Growth corrected; High Stakes corrected | 0 (Hyper Growth 4/5 axes) | 0 |
 | FTMO (CFD) | 3 (2-Step, 1-Step, Instant), complete | — | already 3 | 0 |
 | FundedNext (CFD) | 4 (Stellar 1-Step, 2-Step, Lite, Instant) | Stellar Instant evidence | **1 new: Stellar Instant 2.5/5** | 4 rows |
-| Funding Pips | 5 per third-party news (1-Step Flex, 2-Step Standard, 2-Step Flex, 2-Step Pro, Zero); 4 on file | — (official pages unreadable) | 0 | 0 |
+| Funding Pips | 8 (2-Step Standard, 1-Step Flex, 2-Step Pro, 2-Step Flex, 1-Step Lite, 2-Step Lite, 1 Step Labs, Zero) — official catalogue | 4 added (2-Step Flex, 1-Step Lite, 2-Step Lite, 1 Step Labs); 3 corrected | **7 rated + 4 On Demand variants** (Labs 4/5 axes) | 0 |
 | E8 Markets (CFD) | E8 One, E8 Pro, **E8 Classic v2** (added) | Classic v2 added; Pro description corrected | **1 new: E8 Classic v2 4.5/5** (E8 Pro 4/5 axes) | 10 rows |
 
 ### New rating — FundedNext Stellar Instant: 2.5/5
@@ -57,14 +57,26 @@ Price table (help center, "approx."): $2K $59.99 · $5K $149.99 · $10K $299.99 
 - The CFD catalogue is complete with Stellar Instant.
 - The existing **promotion check fails on main, before this branch**: `fundednext / fundednext-novins-stellar-instant-2026: missing public end date` (`scripts/check-program-promotions.cjs`). It is not modified here.
 
-### Funding Pips — not rated
+### Funding Pips (update 18:45 UTC — official help centre read)
 
-- Product pages and the help center (help.fundingpips.com) are blocked in the archive (268-character captures), and they could not be read live.
-- Third-party coverage reports:
-  - a 2-Step Flex launch (June 2026);
-  - a line-up overhaul for new purchases (28 September 2026);
-  - lower $100K prices.
-- Missing on file: 2-Step Flex (product and prices); prices for all four existing products; the current reward cycles and their conditions. These need the official help center.
+Source: help.fundingpips.com, "Compare Account Models" and each model page, read on 27 November 2026. Rated on the Master account with the default reward cycle and no add-on.
+
+| Programme | Drawdown | Payout | Consistency | Trading | Funded | Stars |
+|---|---|---|---|---|---|---|
+| 2-Step Standard (Bi-Weekly 80%) | 1 (10% static) | 1 (every 14 days, 1% min.) | 1 (35% rule only on On Demand) | 0.5 | 1 | **4.5** |
+| 1-Step Flex (Bi-Weekly 80%) | 1 (12% static) | 1 | 1 | 0.5 | 1 | **4.5** |
+| 2-Step Pro (Weekly 80%) | 1 (6% static) | 1 | 1 | 0.5 | 1 | **4.5** |
+| 2-Step Flex (Bi-Weekly 80%) | 1 (12% static) | 1 | 1 | 0.5 | 1 | **4.5** |
+| 1-Step Lite / 2-Step Lite | 1 (2% static) | 1 (daily, 1% min.) | 1 ("only two rules") | 0.5 | 1 | **4.5** each |
+| On Demand 100% variant (four models above) | = | 0.5 (7 profitable days ≥0.5%) | 0.5 (35%) | = | 0 (Striking System: split halved, then 20%, then breach) | **2.5** |
+| 1 Step Labs | 0.5 (3% EOD trailing) | 0.5 (3% profit buffer, $1,000 per request, $200 day) | not stated | 0 (no overnight/weekend, no add-on) | 1 | not rated (4/5) |
+| Zero | 0 (5% trailing) | 0 (first 3% locked, 7 days/30) | 0 (15%) | 0 (news ±10 min and weekend = hard breach) | 0 (1% open risk = hard breach) | **0** |
+
+- Trading 0.5 on every Master: profit from trades opened or closed within 5 minutes of high-impact news is deducted; overnight and weekend positions are closed automatically unless the Swing add-on was bought (same treatment as FTMO Standard).
+- Products corrected: 1-Step Flex (daily 2% or 3%; split 80% bi-weekly or 100% on demand instead of "85% biweekly / 100% monthly"); 2-Step Standard (daily 3% or 5%; 3 minimum days per phase, none with the 3% daily add-on); Zero (daily 3% plus a 1% maximum open risk).
+- **For Geyer / ChatGPT:** the restrictive rule "single trade idea above 60% of the evaluation target adds four profitable days" (1-Step Flex, 18 November) no longer appears on the current page. It was not changed, because restrictive rules feed the /100 score. The 1-Step Flex description was rewritten, so its translations fall back to English until updated.
+- Prices: not recorded. The home page shows only one figure ($529 for a 100K account), without the daily-loss configuration or whether a discount applies.
+- Variant not added: the 95% 2-Step Flex split is chosen at purchase, not after passing; it is mentioned in the 2-Step Flex scope.
 
 ### E8 Markets (update 14:30 — page reading restored)
 
@@ -86,9 +98,9 @@ Third-party catalogues list two versions with distinct prices: Classic, $545 for
 
 ## Tests
 
-- `node scripts/check-constraint-simulators.cjs`: 59 checks OK (7 assertions added).
-- `node scripts/check-price-tables.cjs`: 28 firms, 88 schedules, 362 rows.
-- `npx tsx scripts/validate-firm-updates.ts --base <main>`: valid; only `the5ers` and `e8-markets` are changed (products + changelog). The SENSITIVE list printed by the validator concerns wording in other firms that is already on main.
+- `node scripts/check-constraint-simulators.cjs`: 79 checks OK on the branch (13 Funding Pips assertions added).
+- `node scripts/check-price-tables.cjs`: 29 firms, 90 schedules, 375 rows (branch total, Blue Guardian included).
+- `npx tsx scripts/validate-firm-updates.ts --base <main>`: valid; only `the5ers`, `e8-markets`, `blue-guardian` and `funding-pips` are changed (products + changelog). The SENSITIVE list printed by the validator concerns wording in other firms that is already on main.
 - `npx tsc --noEmit -p .` and `npx next build`: pass.
 
 ## What is needed to finish the batch
