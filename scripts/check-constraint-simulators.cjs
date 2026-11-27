@@ -74,8 +74,13 @@ assert.equal(programmeFlexibility(getProgrammeEvidence('myfundedfutures','mffu-p
 assert.equal(programmeFlexibility(getProgrammeEvidence('myfundedfutures','mffu-signature-current')).stars,4);
 assert.equal(programmeFlexibility(getProgrammeEvidence('myfundedfutures','mffu-rapid-eod','dll')).stars,2.5);
 assert.equal(programmeFlexibility(getProgrammeEvidence('apex-trader-funding','apex-instant-50k-limited')).stars,null);
+assert.equal(programmeFlexibility(getProgrammeEvidence('e8-futures','e8-signature-futures')).stars,2);
+assert.equal(programmeFlexibility(getProgrammeEvidence('e8-futures','e8-zero-max')).stars,2);
+assert.equal(programmeFlexibility(getProgrammeEvidence('top-one-futures','top-one-elite-daily')).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('top-one-futures','top-one-instant-sim-funded')).stars,1.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('top-one-futures','top-one-ignite')).stars,1.5);
 const a={points:0.5,source:'https://example.com',reason:'documented test fixture'};
 const complete={checkedOn:'2026-11-27',scope:'test',assessments:{drawdown:a,payout:a,consistency:a,trading:a,funded:a}};
 assert.equal(programmeFlexibility(complete).stars,2.5);
 assert.equal(programmeFlexibility({...complete,assessments:{...complete.assessments,payout:{...a,source:''}}}).stars,null);
-console.log('Constraint simulators and evidence gating: 64 checks OK');
+console.log('Constraint simulators and evidence gating: 69 checks OK');
