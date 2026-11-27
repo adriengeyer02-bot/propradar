@@ -728,6 +728,348 @@ addVariant('tradeify','tradeify-select-300k-current','daily','Select 300K Daily'
 },{drawdown:'eod',profitSplit:90,source:"https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan"});
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
+// Batch 4: independent exact-product records, source-checked on 27 November.
+Object.assign(evidence, {
+  "apex-trader-funding": {
+    "apex-eod-current": {
+      "checkedOn": "2026-11-27",
+      "scope": "New-product PA, not Legacy or limited Instant funding. Purchases under March 2026 rules.",
+      "scopeFr": "PA nouvelle génération, hors Legacy et Instant promotionnel. Règles depuis mars 2026.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/",
+          "reason": "EOD balance high sets next session threshold; real-time breach enforcement."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+          "reason": "Five qualifying profitable days, permanent drawdown+$100 reserve, size/cycle caps, maximum six approved payouts followed by closure."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+          "reason": "Largest positive day must be strictly below 50% of profit since previous approved payout; noncompliance delays request."
+        },
+        "trading": {
+          "points": 0,
+          "source": "https://apextraderfunding.com/help-center/uncategorized/prohibited-activities/",
+          "reason": "Automation forbidden; discretionary strategy and risk-management limits, no hedging, daily close; ordinary directional news trading allowed."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://apextraderfunding.com/help-center/billing/inactivity-policy-on-performance-accounts-pa/",
+          "reason": "Two days of at least $50 net profit every rolling 30 days or closure; tier-based position limits and soft daily loss stop. Six-payout closure counted under payout."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 100,
+        "source": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/"
+      }
+    },
+    "apex-intraday-current": {
+      "checkedOn": "2026-11-27",
+      "scope": "New-product PA, not Legacy or limited Instant funding. Purchases under March 2026 rules.",
+      "scopeFr": "PA nouvelle génération, hors Legacy et Instant promotionnel. Règles depuis mars 2026.",
+      "assessments": {
+        "drawdown": {
+          "points": 0,
+          "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-performance-accounts-pa/",
+          "reason": "Trailing high-water equity includes open profit; touching floor closes PA."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+          "reason": "Five qualifying profitable days, permanent drawdown+$100 reserve, size/cycle caps, maximum six approved payouts followed by closure."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+          "reason": "Largest positive day must be strictly below 50% of profit since previous approved payout; noncompliance delays request."
+        },
+        "trading": {
+          "points": 0,
+          "source": "https://apextraderfunding.com/help-center/uncategorized/prohibited-activities/",
+          "reason": "Automation forbidden; discretionary strategy and risk-management limits, no hedging, daily close; ordinary directional news trading allowed."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://apextraderfunding.com/help-center/billing/inactivity-policy-on-performance-accounts-pa/",
+          "reason": "Two days of at least $50 net profit every rolling 30 days or closure; tier-based position limits and soft daily loss stop. Six-payout closure counted under payout."
+        }
+      },
+      "preset": {
+        "drawdown": "intraday",
+        "profitSplit": 100,
+        "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-performance-accounts-pa/"
+      }
+    }
+  },
+  "earn2trade": {
+    "e2t-tcp": {
+      "checkedOn": "2026-11-27",
+      "scope": "TCP 25/50/100K, first LiveSim stage; subscriptions after 2 November 2026.",
+      "scopeFr": "TCP 25/50/100K, première phase LiveSim ; souscriptions après le 2 novembre 2026.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.earn2trade.com/en/articles/8117088-drawdown-types",
+          "reason": "LiveSim EOD; ordinary live accounts use real-time trailing instead; larger TCP fixed-floor stages are separate."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+          "reason": "Five new qualifying days per withdrawal, weekly processing, reduced 50% share below size-dependent thresholds; LiveSim cumulative limit triggers live transition."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.earn2trade.com/en/articles/3849975-what-is-the-maintain-consistency-rule",
+          "reason": "30% best-day threshold only in evaluation, absent from LiveSim and Live."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+          "reason": "Trade copying forbidden, prescribed close times and prohibited instruments including BTC and ETH futures."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+          "reason": "Hard daily loss limit and fixed contract count for current cohort; later progression to live. Withdrawal share and transition thresholds assessed under payouts."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "source": "https://help.earn2trade.com/en/articles/8117088-drawdown-types"
+      }
+    },
+    "e2t-gauntlet": {
+      "checkedOn": "2026-11-27",
+      "scope": "Gauntlet Mini 50–200K, initial LiveSim path; subscriptions after 2 November 2026.",
+      "scopeFr": "Gauntlet Mini 50–200K, première phase LiveSim ; souscriptions après le 2 novembre 2026.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.earn2trade.com/en/articles/8117088-drawdown-types",
+          "reason": "LiveSim EOD; ordinary live accounts use real-time trailing instead; larger TCP fixed-floor stages are separate."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+          "reason": "Five new qualifying days per withdrawal, weekly processing, reduced 50% share below size-dependent thresholds; LiveSim cumulative limit triggers live transition."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.earn2trade.com/en/articles/3849975-what-is-the-maintain-consistency-rule",
+          "reason": "30% best-day threshold only in evaluation, absent from LiveSim and Live."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+          "reason": "Trade copying forbidden, prescribed close times and prohibited instruments including BTC and ETH futures."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+          "reason": "Hard daily loss limit and fixed contract count for current cohort; later progression to live. Withdrawal share and transition thresholds assessed under payouts."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "source": "https://help.earn2trade.com/en/articles/8117088-drawdown-types"
+      }
+    },
+    "e2t-tcp-large-fixed": {
+      "checkedOn": "2026-11-27",
+      "scope": "Earned TCP 200K/400K live progression stage, not a separately purchasable evaluation; current policy.",
+      "scopeFr": "Phase live TCP 200K/400K obtenue par progression, pas un challenge achetable séparément.",
+      "assessments": {
+        "drawdown": {
+          "points": 1,
+          "source": "https://help.earn2trade.com/en/articles/8117088-drawdown-types",
+          "reason": "Fixed loss floor exclusive to TCP 200K/400K funded stages."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+          "reason": "Five new qualifying days per withdrawal; TCP200 share 50% below $5K, 80% above; TCP400 fixed 60/40."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.earn2trade.com/en/articles/3849975-what-is-the-maintain-consistency-rule",
+          "reason": "No funded best-day percentage."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+          "reason": "No trade copying; close-time and instrument restrictions."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+          "reason": "Hard daily loss limit and one live account maximum."
+        }
+      },
+      "preset": {
+        "drawdown": "static",
+        "source": "https://help.earn2trade.com/en/articles/8117088-drawdown-types"
+      }
+    }
+  },
+  "myfundedfutures": {
+    "mffu-builder": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Builder 50K default loss budget ($2K); other sizes and checkout alternatives require exact mapping.",
+      "scopeFr": "Builder 50K standard (perte max 2 000 $) ; autres tailles et options à distinguer.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/14290805-builder-plan-50k-a-comprehensive-guide",
+          "reason": "EOD high-water floor; locks $100 above starting balance."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/14290805-builder-plan-50k-a-comprehensive-guide",
+          "reason": "Buffer $2,100, min $500 additional net profit; max $2K per cycle; five sim payouts lead to live."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/14290805-builder-plan-50k-a-comprehensive-guide",
+          "reason": "50% of cycle net profits in funded stage; resets on approved payout; no evaluation rule."
+        },
+        "trading": {
+          "points": 1,
+          "source": "https://help.myfundedfutures.com/en/articles/14290805-builder-plan-50k-a-comprehensive-guide",
+          "reason": "News unrestricted; session closing required, ordinary futures market conduct rules."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/14290805-builder-plan-50k-a-comprehensive-guide",
+          "reason": "Soft daily loss pause, seven-day inactivity closure, 21-day cooldown on live breach; only one active Builder 50K sim account."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "consistency": 50,
+        "consistencyBasis": "net",
+        "profitSplit": 80,
+        "source": "https://help.myfundedfutures.com/en/articles/14290805-builder-plan-50k-a-comprehensive-guide"
+      }
+    },
+    "mffu-rapid-intraday": {
+      "checkedOn": "2026-11-27",
+      "scope": "Rapid Intraday 50K baseline, funded phase.",
+      "scopeFr": "Rapid Intraday 50K standard, phase financée.",
+      "assessments": {
+        "drawdown": {
+          "points": 0,
+          "source": "https://help.myfundedfutures.com/en/articles/13134709-rapid-plan-50k-a-comprehensive-look",
+          "reason": "Funded intraday equity high-water trail, $100 lock; evaluation is EOD."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/13134709-rapid-plan-50k-a-comprehensive-look",
+          "reason": "Initial buffer (50K $2,100), daily withdrawal cycle, minimum net profit required; no normal per-request cap on Rapid EOD."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.myfundedfutures.com/en/articles/11994562-consistency-rule-at-my-fundedfutures",
+          "reason": "Percentage consistency is evaluation-only, no funded best-day restriction."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/13134709-rapid-plan-50k-a-comprehensive-look",
+          "reason": "Top-tier economic releases restricted in simulated funded stage."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.myfundedfutures.com/en/articles/13134718-understanding-rapid-live",
+          "reason": "Automatic live transition on $10K single-day net profit, excess that day forfeited; up to $5K reserved, other sim accounts/purchases suspended."
+        }
+      },
+      "preset": {
+        "drawdown": "intraday",
+        "profitSplit": 90,
+        "source": "https://help.myfundedfutures.com/en/articles/13134709-rapid-plan-50k-a-comprehensive-look"
+      }
+    },
+    "mffu-rapid-eod": {
+      "checkedOn": "2026-11-27",
+      "scope": "Rapid EOD 25K/50K, default no DLL; add-on is separate.",
+      "scopeFr": "Rapid EOD 25K/50K, standard sans DLL ; option distincte.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/18337038-rapid-eod-with-dll-a-detailed-look",
+          "reason": "Funded EOD trailing, $100 lock."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/18337038-rapid-eod-with-dll-a-detailed-look",
+          "reason": "Initial buffer (50K $2,100), daily withdrawal cycle, minimum net profit required; no normal per-request cap on Rapid EOD."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.myfundedfutures.com/en/articles/11994562-consistency-rule-at-my-fundedfutures",
+          "reason": "Percentage consistency is evaluation-only, no funded best-day restriction."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/18337038-rapid-eod-with-dll-a-detailed-look",
+          "reason": "Top-tier economic releases restricted in simulated funded stage."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.myfundedfutures.com/en/articles/13134718-understanding-rapid-live",
+          "reason": "Automatic live transition on $10K single-day net profit, excess that day forfeited; up to $5K reserved, other sim accounts/purchases suspended."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://help.myfundedfutures.com/en/articles/18337038-rapid-eod-with-dll-a-detailed-look"
+      }
+    },
+    "mffu-pro": {
+      "checkedOn": "2026-11-27",
+      "scope": "Redesigned Pro, purchases after 23 November 2026; standard 50/100/150K. One-day evaluation option shares funded rules.",
+      "scopeFr": "Pro remanié, achats après le 23 novembre 2026 ; 50/100/150K standard.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+          "reason": "Funded EOD drawdown by size, no DLL."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+          "reason": "14-day cycle, buffer and $1K minimum; cap $100K per user in simulated stage."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+          "reason": "No funded best-day restriction; 50% evaluation only except One-Day option."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+          "reason": "Top-tier news prohibited in simulated funded stage."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+          "reason": "One active funded Pro per size for new cohort; live review after qualifying performance, separate reserve terms."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 80,
+        "source": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan"
+      }
+    }
+  }
+});
+addVariant('myfundedfutures','mffu-rapid-eod','dll','Rapid EOD — DLL','Rapid EOD — DLL','Current 25K/50K with optional soft daily loss stop.','25K/50K actuels avec pause journalière optionnelle.',{funded:{points:0,source:'https://help.myfundedfutures.com/en/articles/13134718-understanding-rapid-live',reason:'Same forfeiture and reserve at live transition; additional soft daily pause of $500/$1,000, not account termination.'},drawdown:{points:.5,source:'https://help.myfundedfutures.com/en/articles/18337038-rapid-eod-with-dll-a-detailed-look',reason:'EOD trailing and soft daily loss pause selected at checkout; funded loss distance unchanged.'}});
 export const CRITERIA
 :Criterion[]=['drawdown','payout','consistency','trading','funded'];
 export function getProgrammeEvidence(slug:string,id:string,variant?:string){return variant?getProgrammeVariants(slug,id).find(x=>x.id===variant)?.evidence:evidence[slug]?.[id]}
