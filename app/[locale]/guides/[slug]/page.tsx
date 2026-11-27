@@ -52,6 +52,7 @@ import {
   selectGuideFirms,
 } from '../../../lib/seoGuides';
 import IntentLink from '../../../components/IntentLink';
+import { brandedTitle } from '../../../lib/seoTitle';
 
 export const revalidate = 86400;
 
@@ -96,7 +97,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const guideVisual = getGuideVisual(guide.slug);
 
   return {
-    title: displayGuide.title,
+    title: brandedTitle(displayGuide.title),
     description: displayGuide.metaDescription,
     keywords: [...displayGuide.primaryKeywords, ...displayGuide.secondaryKeywords],
     authors: [{ name: 'PropRadar Research', url: '/audit' }],

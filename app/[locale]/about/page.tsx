@@ -8,6 +8,7 @@ import { getFirmChangelog } from '../../lib/firmUpdates';
 import { FOUNDER, SITE_NAME, SITE_URL } from '../../lib/site';
 import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, untranslatedRobots, type Locale } from '../../lib/locales';
 import { fmt, getMessages, numberLocale } from '../../lib/messages';
+import { brandedTitle } from '../../lib/seoTitle';
 
 const PATH = '/about';
 const AFFILIATES = ['FTMO', 'The5ers', 'FunderPro', 'GOAT Funded Trader', 'Blue Guardian'];
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const a = getMessages(locale).about;
   const description = fmt(a.metaDescription, { handle: FOUNDER.handle });
   return {
-    title: a.metaTitle,
+    title: brandedTitle(a.metaTitle),
     description,
     alternates: localeAlternates(locale, PATH),
     robots: untranslatedRobots(locale, PATH),

@@ -31,6 +31,7 @@ import { isLocale, localeAlternates, localePath, type Locale } from '../lib/loca
 import { fmt, formatDateLong, getMessages, tv } from '../lib/messages';
 import IntentLink from '../components/IntentLink';
 import { DISCORD_URL, communityCopy } from '../lib/community';
+import { localizedPagePath } from '../lib/articlePaths';
 
 export const revalidate = 3600;
 
@@ -161,7 +162,7 @@ export default async function HomePage({ params }: Props) {
             <div className="eyebrow">{h.reviewsEyebrow}</div>
             <h2 id="home-reviews-title">{h.reviewsTitle}</h2>
           </div>
-          <Link href={L('/best-prop-firms')} className="home-v2-heading-link">{h.fullRanking}</Link>
+          <Link href={localizedPagePath(locale, '/best-prop-firms')} className="home-v2-heading-link">{h.fullRanking}</Link>
         </div>
         <div className="pr-firm-table" role="table" aria-label={h.rankingAria}>
           <FirmTableHead ui={t} />

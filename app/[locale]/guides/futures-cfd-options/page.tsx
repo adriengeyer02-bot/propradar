@@ -24,7 +24,7 @@ const copy = {
     relatedHeading: 'Keep researching',
     related: [
       { label: 'Compare prop firms by market and rules', href: '/prop-firm-comparison' },
-      { label: 'Explore futures prop firms', href: '/guides/meilleure-prop-firm-futures' },
+      { label: 'Explore futures prop firms', href: '/guides/best-futures-prop-firms' },
       { label: 'Listed-options prop programmes', href: '/options-prop-firms' },
     ],
     switchLabel: 'Lire cet article en français',
@@ -44,7 +44,7 @@ const copy = {
     relatedHeading: 'Pour aller plus loin',
     related: [
       { label: 'Comparer les prop firms et leurs règles', href: '/fr/prop-firm-comparison' },
-      { label: 'Comparer les firmes futures', href: '/guides/meilleure-prop-firm-futures' },
+      { label: 'Comparer les firmes futures', href: '/fr/guides/best-futures-prop-firms' },
       { label: 'Prop firms spécialisées en options', href: '/fr/options-prop-firms' },
     ],
     switchLabel: 'Read this article in English',

@@ -29,6 +29,7 @@ import { HTML_LANG, OG_LOCALE, countryLabel, isLocale, localeAlternates, localeP
 import { fmt, formatDateLong, getMessages, numberLocale } from '../../lib/messages';
 import { rich } from '../../lib/rich';
 import IntentLink from '../../components/IntentLink';
+import { brandedTitle } from '../../lib/seoTitle';
 
 const PATH = '/prop-firm-statistics';
 const TITLE = 'Prop Firm Statistics 2026: Closures, Fees, Countries & Reviews';
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const st = getMessages(locale).stats;
   const description = fmt(st.metaDescription, { count: TOTAL });
   return {
-    title: st.metaTitle,
+    title: brandedTitle(st.metaTitle),
     description,
     ...(locale === 'en'
       ? { keywords: ['prop firm statistics', 'prop firm industry data', 'prop firms that closed', 'prop firm closures 2024', 'prop firm challenge fees', 'where are prop firms registered'] }

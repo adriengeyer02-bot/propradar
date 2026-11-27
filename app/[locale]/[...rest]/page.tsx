@@ -10,6 +10,7 @@ import { isLocale, localePath } from '../../lib/locales';
 import { guideLanguageAlternates } from '../../lib/guideI18n';
 import { getSeoGuidePath, seoGuides } from '../../lib/seoGuides';
 import LanguageLink from '../../components/LanguageLink';
+import { brandedTitle } from '../../lib/seoTitle';
 
 type Props = {
   params: Promise<{ locale: string; rest: string[] }>;
@@ -56,14 +57,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const path = `/fr/${article.slug}`;
   const guide = seoGuides.find((item) => getSeoGuidePath(item) === article.enPath);
   return {
-    title: article.title,
+    title: brandedTitle(article.title),
     description: article.metaDescription,
     keywords: article.keywords,
     alternates: {
       canonical: path,
       languages: guide ? guideLanguageAlternates(guide) : {
         fr: path,
-        ...(article.enPath ? { en: article.enPath, 'x-default': article.enPath } : {}),
+        ...(article.enPath ? { en: article.enPath, 'x-default': article.enPath } : { 'x-default': path }),
       },
     },
     openGraph: {

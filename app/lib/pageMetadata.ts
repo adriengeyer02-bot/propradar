@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SITE_NAME, SITE_URL } from './site';
+import { brandedTitle } from './seoTitle';
 
 type PageMetadataOptions = {
   title: string;
@@ -19,7 +20,7 @@ export function createPageMetadata({
   const url = `${SITE_URL}${path}`;
 
   return {
-    title,
+    title: brandedTitle(title),
     description,
     keywords,
     authors: [{ name: 'PropRadar Research', url: '/audit' }],

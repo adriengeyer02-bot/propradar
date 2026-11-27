@@ -240,7 +240,7 @@ export const seoGuides: SeoGuide[] = [
     ],
     internalLinks: [
       { label: 'Independent prop firm comparison', href: '/prop-firm-comparison' },
-      { label: 'No-consistency-rule guide', href: '/guides/prop-firm-sans-consistency-rule' },
+      { label: 'No-consistency-rule guide', href: '/guides/prop-firm-no-consistency-rule' },
       { label: 'Payout risk monitor', href: '/prop-firm-payout-risk' },
       { label: 'How PropRadar audits firms', href: '/audit' },
     ],
@@ -2392,6 +2392,9 @@ export function getFirmRelatedGuides(firm: PropFirm, limit = 4) {
       let score = 0;
 
       if (guide.focusFirmSlugs?.includes(firm.slug)) score += 80;
+      // Guides written about this firm (review, "X vs Y", "X alternatives") come first.
+      if (guide.title.toLowerCase().includes(firm.name.toLowerCase())
+        || ((guide.focusFirmSlugs?.length ?? 0) <= 2 && guide.focusFirmSlugs?.includes(firm.slug))) score += 100;
       if (selectGuideFirms(guide, 20).some((selectedFirm) => selectedFirm.slug === firm.slug)) score += 45;
       if (guide.primaryKeywords.some((keyword) => firmText.includes(keyword.toLowerCase()))) score += 16;
       if (guide.secondaryKeywords.some((keyword) => firmText.includes(keyword.toLowerCase()))) score += 10;

@@ -26,6 +26,7 @@ import GuideCover, { type CoverLabels } from '../../components/guide-visuals/Gui
 import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, untranslatedRobots, type Locale } from '../../lib/locales';
 import { fmt, formatDateLong, getMessages } from '../../lib/messages';
 import { getGuideTranslation, guideCardText, guideLocales, localizedGuidePath } from '../../lib/guideI18n';
+import { brandedTitle } from '../../lib/seoTitle';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (locale === 'en') return EN_METADATA;
   const h = getMessages(locale).guide.hub;
   return {
-    title: h.metaTitle,
+    title: brandedTitle(h.metaTitle),
     description: h.metaDescription,
     alternates: localeAlternates(locale, '/guides'),
     robots: untranslatedRobots(locale, '/guides'),
