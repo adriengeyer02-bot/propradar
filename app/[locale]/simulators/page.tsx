@@ -5,8 +5,8 @@ import { getFirmBySlug } from '../../lib/propFirms';
 import { getPriceTable } from '../../lib/priceTables';
 import { isLocale, localePath } from '../../lib/locales';
 import { simulatorLabel } from '../../lib/simulatorLabels';
-import { getProgrammeEvidence } from '../../lib/programmeFlexibility';
-type Props={params:Promise<{locale:string}>;searchParams:Promise<{firm?:string|string[];program?:string|string[]}>};
+import { getProgrammeEvidence, getProgrammeVariants } from '../../lib/programmeFlexibility';
+type Props={params:Promise<{locale:string}>;searchParams:Promise<{firm?:string|string[];program?:string|string[];variant?:string|string[]}>};
 export async function generateMetadata({params}:Props):Promise<Metadata>{
   const {locale}=await params;
   return {title:locale==='fr'?'Simulateurs de contraintes | PropRadar':'Trading constraint simulators | PropRadar',description:locale==='fr'?'Simulez les règles de consistency, de drawdown et de retrait ainsi que le coût réel de votre challenge.':'Simulate consistency, drawdown, payout constraints and actual challenge costs.',robots:{index:false,follow:true}};
@@ -24,8 +24,9 @@ export default async function SimulatorsPage({params,searchParams}:Props){
       const separate=r.upfrontPrice!=null&&r.completionFee!=null;
       return {label:p.name+(p.billing==='monthly'?' / month':''),size:r.size,fee:p.billing==='monthly'?0:separate?r.upfrontPrice!:r.price,monthly:p.billing==='monthly'?r.price:0,activation:separate&&p.billing!=='monthly'?r.completionFee!:null,currency:p.currency,source:p.sourceUrl};
     }));
-    const audit=getProgrammeEvidence(firm.slug,product.id);
-    context={firm:firm.name,program:product.name,prices,preset:audit?.preset?{...audit.preset,scope:audit.scope}:undefined,source:programs.length&&programs.every(p=>p.sourceUrl===programs[0].sourceUrl)?programs[0].sourceUrl:undefined,checkedOn:table?.checkedOn};
+    const variant=typeof query.variant==='string'?getProgrammeVariants(firm.slug,product.id).find(x=>x.id===query.variant):undefined;
+    const audit=getProgrammeEvidence(firm.slug,product.id,variant?.id);
+    context={firm:firm.name,program:product.name+(variant?' — '+(french?variant.labelFr:variant.label):''),prices,preset:audit?.preset?{...audit.preset,scope:french?audit.scopeFr??audit.scope:audit.scope}:undefined,source:programs.length&&programs.every(p=>p.sourceUrl===programs[0].sourceUrl)?programs[0].sourceUrl:undefined,checkedOn:table?.checkedOn};
   }
   return <main className="container">
     <section className="section">
@@ -34,7 +35,7 @@ export default async function SimulatorsPage({params,searchParams}:Props){
       <p className="lead">{french?'Comprenez le fonctionnement de votre challenge avant de l’acheter.':'Understand how your challenge works before you buy it.'}</p>
       {locale!=='fr'&&locale!=='en'?<p lang="en">This tool is currently available in English and French.</p>:null}
       <div className="actions"><Link className="btn" href={localePath(locale,firm&&product?'/firm/'+firm.slug:'/prop-firm-comparison')}>{french?'Retour au comparateur / à la fiche':'Back to comparison / firm profile'}</Link></div>
-      <ConstraintSimulators french={french} context={context}/>
+      <ConstraintSimulators key={context?.firm+'|'+context?.program} french={french} context={context}/>
     </section>
   </main>;
 }

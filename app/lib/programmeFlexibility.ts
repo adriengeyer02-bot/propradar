@@ -38,15 +38,15 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
   the5ers:{
     'the5ers-high-stakes-current':{checkedOn:'2026-11-27',scope:'High Stakes, general FAQ updated 3 November and loss FAQ updated 16 November; precise tier/cohort mapping still required.',assessments:{
       drawdown:{points:1,source:'https://the5ers.com/faqs/what-is-the-drawdown-rule-for-high-stakes/',reason:'Absolute maximum loss 8–10%; daily loss 3–5% depending on plan. Exact tier required.'},
-      payout:{points:0.5,source:'https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/',reason:'14-day cycle; published caps of $3,000 on $50K and $4,000 on $100K, minimum P&L $300/$500. Other variants still to verify.'},
+      payout:{points:0.5,source:'https://the5ers.com/faqs/payout-policy-and-hub-credit-in-the-high-stakes-program/',reason:'14-day cycle; November 24 FAQ confirms caps of $3,000 on $50K and $4,000 on $100K, minimum P&L $300/$500. Other variants still to verify.'},
       trading:{points:0.5,source:'https://www.the5ers.com/faqs/is-news-trading-allowed-in-the-high-stakes-program2024/',reason:'Opening around high-impact releases is a soft breach; profits removed while losses retained.'}
     },preset:{drawdown:'static',source:'https://the5ers.com/faqs/what-is-the-drawdown-rule-for-high-stakes/'}},
-    'the5ers-bootcamp-current':{checkedOn:'2026-11-27',scope:'Three-phase Bootcamp, Pro account. No numerical consistency assumption until confirmed against agreement.',assessments:{
-      drawdown:{points:1,source:'https://the5ers.com/faqs/what-is-drawdown-and-how-is-it-calculated/',reason:'Absolute drawdown from initial balance. Programme schedule specifies 5% evaluation and 4% Pro.'},
+    'the5ers-bootcamp-current':{checkedOn:'2026-11-27',scope:'Three-phase Bootcamp, Pro account. Official sources conflict about static vs trailing loss floor; no drawdown preset until resolved.',scopeFr:'Bootcamp trois phases, compte Pro. Sources officielles contradictoires sur le seuil de perte ; mécanisme à confirmer.',assessments:{
+      consistency:{points:1,source:'https://www.the5ers.com/fixed-vs-dynamic-profit-targets/',reason:'Official educational guide explicitly says Bootcamp has no published percentage-based consistency rule; other risk rules remain.'},
       trading:{points:1,source:'https://the5ers.com/faqs/how-does-the-bootcamp-program-work/',reason:'News, overnight and weekend holding allowed except news bracketing; different strategies per active account.'},
       funded:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-bootcamp-program-work/',reason:'3% daily pause on Pro only and account closure after 30 days inactivity; next day trading resumes after pause.'},
       payout:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-bootcamp-program-work/',reason:'First reward after 14 days; cycle restarts each scaling event. Additional payout caps and exact contract version to confirm.'}
-    },preset:{drawdown:'static',lossPercent:4,source:'https://www.the5ers.com/bootcamp/'}}
+    },preset:{lossPercent:4,source:'https://www.the5ers.com/bootcamp/'}}
   },
   fundednext: {
   "fundednext-stellar-one-current": {
@@ -586,8 +586,151 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
     }
   }
 };
-export const CRITERIA:Criterion[]=['drawdown','payout','consistency','trading','funded'];
-export function getProgrammeEvidence(slug:string,id:string){return evidence[slug]?.[id]}
+// New catalogue entries, verified against current official plan documentation.
+evidence.topstep['topstep-static-combine-current'] = {
+  "checkedOn": "2026-11-27",
+  "scope": "Permanent Static Combine, 25K–150K; XFA Standard route.",
+  "scopeFr": "Static Combine permanent, 25K–150K ; retrait XFA Standard.",
+  "assessments": {
+    "drawdown": {
+      "points": 1,
+      "source": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+      "reason": "Fixed floor throughout evaluation and XFA until first withdrawal; then sets to zero. No trailing."
+    },
+    "payout": {
+      "points": 0.5,
+      "source": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+      "reason": "Standard requires five winning days; caps by tier $4K/$8K/$10K/$12K. Loss floor changes after first withdrawal."
+    },
+    "consistency": {
+      "points": 1,
+      "source": "https://help.topstep.com/en/articles/8284215-express-funded-account-parameters",
+      "reason": "No funded best-day objective on Standard; 55% evaluation objective is separate."
+    },
+    "trading": {
+      "points": 0.5,
+      "source": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+      "reason": "Product-specific contract limits and high-volatility risk restrictions."
+    },
+    "funded": {
+      "points": 0.5,
+      "source": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+      "reason": "Mandatory daily loss limit and tier-specific scaling; no Back2Funded."
+    }
+  },
+  "preset": {
+    "drawdown": "static",
+    "profitSplit": 90,
+    "source": "https://help.topstep.com/en/articles/15520357-topstep-labs"
+  }
+};
+evidence.topstep['topstep-freedom-250k-current'] = {
+  "checkedOn": "2026-11-27",
+  "scope": "Permanent 250K Freedom Combine; XFA Standard only.",
+  "scopeFr": "Freedom Combine 250K permanent ; XFA Standard uniquement.",
+  "assessments": {
+    "drawdown": {
+      "points": 0.5,
+      "source": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+      "reason": "Structured like the standard EOD Combine; $10K MLL, sets to zero after first withdrawal."
+    },
+    "payout": {
+      "points": 0.5,
+      "source": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+      "reason": "Standard route, $25K cap and standard winning-day conditions."
+    },
+    "consistency": {
+      "points": 1,
+      "source": "https://help.topstep.com/en/articles/8284215-express-funded-account-parameters",
+      "reason": "No funded best-day objective; 55% evaluation target remains."
+    },
+    "trading": {
+      "points": 0.5,
+      "source": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+      "reason": "Product-specific contract limits and daily session restrictions."
+    },
+    "funded": {
+      "points": 0.5,
+      "source": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+      "reason": "Funded contract scaling, mandatory DLL in evaluation/live and no Back2Funded."
+    }
+  },
+  "preset": {
+    "drawdown": "eod",
+    "profitSplit": 90,
+    "source": "https://help.topstep.com/en/articles/15520357-topstep-labs"
+  }
+};
+evidence.tradeify['tradeify-select-300k-current'] = {
+  "checkedOn": "2026-11-27",
+  "scope": "Permanent Select 300K, V2, Flex payout route.",
+  "scopeFr": "Select 300K permanent, V2, retrait Flex.",
+  "assessments": {
+    "drawdown": {
+      "points": 0.5,
+      "source": "https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan",
+      "reason": "EOD trailing, $8K maximum drawdown, locks at $300,100."
+    },
+    "payout": {
+      "points": 0.5,
+      "source": "https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan",
+      "reason": "5 winning days of $750+, up to 50% of profit capped at $10K."
+    },
+    "consistency": {
+      "points": 1,
+      "source": "https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan",
+      "reason": "No funded percentage consistency; evaluation 40%."
+    },
+    "trading": {
+      "points": 0.5,
+      "source": "https://help.tradeify.co/en/articles/10468318-guidelines-for-traders",
+      "reason": "Microscalping restrictions and intraday closure; major news allowed."
+    },
+    "funded": {
+      "points": 0,
+      "source": "https://help.tradeify.co/en/articles/12969284-tradeify-elite-program",
+      "reason": "Live transition may discard progress since last approved payout; $4K daily loss limit and scaling in Flex 300K."
+    }
+  },
+  "preset": {
+    "drawdown": "eod",
+    "profitSplit": 90,
+    "source": "https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan"
+  }
+};
+
+// Funded route variants are not separate purchases. Preserve the parent product ID for pricing.
+export type ProgrammeVariant = { id:string; label:string; labelFr:string; evidence:ProgrammeEvidence };
+const variants:Record<string,Record<string,ProgrammeVariant[]>> = {};
+function addVariant(slug:string,productId:string,id:string,label:string,labelFr:string,scope:string,scopeFr:string,overrides:Partial<Record<Criterion,Assessment>>,preset?:ProgrammeEvidence['preset']){
+  const parent=evidence[slug]?.[productId];
+  if(!parent) throw new Error('Unknown parent programme '+productId);
+  const items=(variants[slug]??={})[productId]??=[];
+  items.push({id,label,labelFr,evidence:{...parent,scope,scopeFr,assessments:{...parent.assessments,...overrides},preset:preset??parent.preset}});
+}
+addVariant('topstep','topstep-trading-combine-current','xfa-consistency','XFA Consistency','XFA Consistency','Original trailing Combine, XFA Consistency, without optional DLL.','Combine trailing classique, XFA Consistency, sans DLL optionnelle.',{
+  payout:{points:.5,source:"https://help.topstep.com/en/articles/8284233-topstep-payout-policy",reason:'Three traded days and 40% consistency; up to 50% of balance, tier caps $3K/$4K/$6K without DLL.'},
+  consistency:{points:.5,source:"https://help.topstep.com/en/articles/8284215-express-funded-account-parameters",reason:'40% of net profit per cycle; reset after payout.'}
+},{drawdown:'eod',consistency:40,consistencyBasis:'net',profitSplit:90,source:"https://help.topstep.com/en/articles/8284215-express-funded-account-parameters"});
+addVariant('topstep','topstep-static-combine-current','xfa-consistency','XFA Consistency','XFA Consistency','Permanent Static Combine, XFA Consistency.','Static Combine permanent, XFA Consistency.',{
+  payout:{points:.5,source:"https://help.topstep.com/en/articles/15520357-topstep-labs",reason:'Three traded days and 40% consistency; tier caps $4K/$8K/$10K/$12K.'},
+  consistency:{points:.5,source:"https://help.topstep.com/en/articles/8284215-express-funded-account-parameters",reason:'40% of net profit per cycle; reset after payout.'}
+},{drawdown:'static',consistency:40,consistencyBasis:'net',profitSplit:90,source:"https://help.topstep.com/en/articles/8284215-express-funded-account-parameters"});
+addVariant('tradeify','tradeify-select-eval','daily','Select Daily','Select Daily','25K–150K, purchased on or after 1 September 2026; Daily funded route.','25K–150K, achat à partir du 1er septembre 2026 ; retrait Daily.',{
+  drawdown:{points:.5,source:"https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",reason:'EOD trailing, $1K/$2K/$2.5K/$3.5K maximum loss; narrower than Flex.'},
+  payout:{points:.5,source:"https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",reason:'Daily withdrawals above $1.1K/$2.1K/$2.6K/$3.6K buffer, max twice cycle profit and $600/$1,250/$1,750/$2,500 cap.'},
+  funded:{points:0,source:"https://help.tradeify.co/en/articles/12969284-tradeify-elite-program",reason:'Same live-transition restrictions as Flex; mandatory funded daily loss limit $500/$1K/$1.25K/$1.75K.'}
+},{drawdown:'eod',profitSplit:90,source:"https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"});
+addVariant('tradeify','tradeify-select-300k-current','daily','Select 300K Daily','Select 300K Daily','Permanent 300K V2, Daily funded route.','300K permanent V2, retrait Daily.',{
+  drawdown:{points:.5,source:"https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan",reason:'EOD trailing, $6K maximum loss; lock at $300,100.'},
+  payout:{points:.5,source:"https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan",reason:'Daily above $6,100 buffer, cap $4,000, at least half the withdrawal from new profit.'},
+  funded:{points:0,source:"https://help.tradeify.co/en/articles/12969284-tradeify-elite-program",reason:'Same live-transition restrictions; mandatory $3K daily loss limit and funded scaling.'}
+},{drawdown:'eod',profitSplit:90,source:"https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan"});
+export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
+
+export const CRITERIA
+:Criterion[]=['drawdown','payout','consistency','trading','funded'];
+export function getProgrammeEvidence(slug:string,id:string,variant?:string){return variant?getProgrammeVariants(slug,id).find(x=>x.id===variant)?.evidence:evidence[slug]?.[id]}
 export function programmeFlexibility(item:ProgrammeEvidence|undefined){
   const valid=CRITERIA.flatMap(key=>{const a=item?.assessments[key];return a&&[0,.5,1].includes(a.points)&&a.reason.trim()&&a.source.startsWith('https://')?[a]:[]});
   return {verified:valid.length,stars:valid.length===5?valid.reduce((sum,a)=>sum+a.points,0):null};

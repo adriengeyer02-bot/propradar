@@ -11,7 +11,7 @@ function load(relative){
  return module.exports;
 }
 const {consistency,drawdown,payout,realCost}=load('app/lib/constraintSimulator.ts');
-const {getProgrammeEvidence,programmeFlexibility}=load('app/lib/programmeFlexibility.ts');
+const {getProgrammeEvidence,getProgrammeVariants,programmeFlexibility}=load('app/lib/programmeFlexibility.ts');
 assert.equal(consistency(3000,1800,40).required,4500);
 assert.equal(consistency(3000,1800,40).extra,1500);
 assert.equal(consistency(4500,1800,40).eligible,true);
@@ -53,8 +53,17 @@ assert.equal(programmeFlexibility(getProgrammeEvidence('topstep','topstep-tradin
 assert.equal(programmeFlexibility(getProgrammeEvidence('tradeify','tradeify-growth-eval')).stars,2);
 assert.equal(programmeFlexibility(getProgrammeEvidence('tradeify','tradeify-lightning')).stars,1);
 assert.equal(programmeFlexibility(getProgrammeEvidence('tradeify','tradeify-select-eval')).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('topstep','topstep-static-combine-current')).stars,3.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('topstep','topstep-freedom-250k-current')).stars,3);
+assert.equal(programmeFlexibility(getProgrammeEvidence('tradeify','tradeify-select-300k-current')).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('topstep','topstep-trading-combine-current', 'xfa-consistency')).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('topstep','topstep-static-combine-current', 'xfa-consistency')).stars,3);
+assert.equal(programmeFlexibility(getProgrammeEvidence('tradeify','tradeify-select-eval', 'daily')).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('tradeify','tradeify-select-300k-current', 'daily')).stars,2.5);
+assert.equal(getProgrammeVariants('tradeify','tradeify-select-eval').length,1);
+assert.equal(getProgrammeEvidence('tradeify','tradeify-select-eval','unknown'),undefined);
 const a={points:0.5,source:'https://example.com',reason:'documented test fixture'};
 const complete={checkedOn:'2026-11-27',scope:'test',assessments:{drawdown:a,payout:a,consistency:a,trading:a,funded:a}};
 assert.equal(programmeFlexibility(complete).stars,2.5);
 assert.equal(programmeFlexibility({...complete,assessments:{...complete.assessments,payout:{...a,source:''}}}).stars,null);
-console.log('Constraint simulators and evidence gating: 43 checks OK');
+console.log('Constraint simulators and evidence gating: 52 checks OK');

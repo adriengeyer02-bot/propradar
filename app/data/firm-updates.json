@@ -17021,7 +17021,7 @@
       ]
     },
     "topstep": {
-      "reviewedAt": "2026-11-19",
+      "reviewedAt": "2026-11-27",
       "set": {
         "trustpilotRating": 3.7,
         "trustpilotReviewCount": 15052,
@@ -17055,6 +17055,14 @@
         {
           "label": "Terms & conditions read in full (2026-11-19)",
           "url": "https://www.topstep.com/terms-of-use"
+        },
+        {
+          "label": "Current permanent Labs programmes",
+          "url": "https://help.topstep.com/en/articles/15520357-topstep-labs"
+        },
+        {
+          "label": "Express Funded Account options",
+          "url": "https://help.topstep.com/en/articles/8284215-express-funded-account-parameters"
         }
       ],
       "changelog": [
@@ -17062,25 +17070,34 @@
           "date": "2026-10-23",
           "summary": "Trustpilot refreshed: 3.7 TrustScore across 14,955 reviews, with Trustpilot's high-risk investment notice.",
           "source": "https://www.trustpilot.com/review/topstep.com",
-          "fields": ["trustpilotRating", "trustpilotReviewCount"]
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         },
         {
           "date": "2026-10-23",
           "summary": "Trading Combine consistency target corrected to 55% (was recorded as 50%); Express Funded Account Consistency path uses 40%.",
           "source": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
-          "fields": ["products"]
+          "fields": [
+            "products"
+          ]
         },
         {
           "date": "2026-11-07",
           "summary": "Trustpilot refreshed: 3.7 TrustScore (unchanged) across 15,050 reviews, same figures on uk.trustpilot.com. No Trustpilot warning.",
           "source": "https://www.trustpilot.com/review/topstep.com",
-          "fields": ["trustpilotReviewCount"]
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         },
         {
           "date": "2026-11-08",
           "summary": "Trustpilot refreshed: 3.7 TrustScore (unchanged) across 15,052 reviews.",
           "source": "https://www.trustpilot.com/review/topstep.com",
-          "fields": ["trustpilotReviewCount"]
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         },
         {
           "date": "2026-11-11",
@@ -17091,40 +17108,68 @@
           "date": "2026-11-08",
           "summary": "Pending lawsuit added as a dated incident: McCrudden v. Topstepfunded LLC et al., M.D. Fla. 3:26-cv-00816, filed 2026-04-09 by a self-represented plaintiff. Allegations only; no merits ruling on the docket read. No score or status change.",
           "source": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513",
-          "fields": ["incidents"]
+          "fields": [
+            "incidents"
+          ]
         },
         {
           "date": "2026-11-14",
           "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
           "source": "https://www.topstep.com/paid-lp",
-          "fields": ["payoutProofs"]
+          "fields": [
+            "payoutProofs"
+          ]
         },
         {
           "date": "2026-11-16",
           "summary": "Existing McCrudden legal note corrected: a direct docket is already on file. Recorded the accessible snapshot cutoff and discovery/arbitration procedural steps without treating allegations as findings or claiming a current complete court record. No new incident or risk-level change.",
           "source": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513",
-          "fields": ["legalReview"]
+          "fields": [
+            "legalReview"
+          ]
         },
         {
           "date": "2026-11-18",
           "summary": "Separated Trading Combine EOD trailing maximum-loss from Express Funded account starting at zero; identified 55% Combine consistency, optional 40% XFA payout route, trading-day requirements and irreversible zero-floor after first payout. Score 84 to 82 for funded gating, not alleged nonpayment.",
           "source": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
-          "fields": ["products", "restrictiveRules", "drawdownType", "verdict", "auditSummary", "score"]
+          "fields": [
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "verdict",
+            "auditSummary",
+            "score"
+          ]
         },
         {
           "date": "2026-11-18",
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed. Editorial score restored from 82 to 84: the earlier manual deduction (\"Score 84 to 82 for funded gating, not alleged nonpayment.\") is replaced by the computed restrictive-rules penalty, so it is not counted twice.",
           "source": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
-          "fields": ["restrictiveRules", "score"]
+          "fields": [
+            "restrictiveRules",
+            "score"
+          ]
         },
         {
           "date": "2026-11-19",
           "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 8 new classified restrictive rules.",
           "source": "https://www.topstep.com/terms-of-use",
-          "fields": ["restrictiveRules"]
+          "fields": [
+            "restrictiveRules"
+          ]
+        },
+        {
+          "date": "2026-11-27",
+          "summary": "Added permanently available Static Trading Combine (25K–150K) and Freedom 250K, differentiated XFA Standard and Consistency, corrected XFA split. Fixed-prize Challenges are a separate category, not ordinary funding. No firm score input changed.",
+          "source": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+          "fields": [
+            "products"
+          ]
         }
       ],
-      "addIncidents": ["Court filing: on 2026-04-09 Vincent McCrudden, representing himself, filed a complaint against Topstepfunded LLC, Topstep LLC, TopstepTrader LLC and five individuals in the US District Court for the Middle District of Florida (case 3:26-cv-00816). These are allegations; the docket read showed no ruling on the merits, and the defendants had said they would move to compel arbitration (https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513)."],
+      "addIncidents": [
+        "Court filing: on 2026-04-09 Vincent McCrudden, representing himself, filed a complaint against Topstepfunded LLC, Topstep LLC, TopstepTrader LLC and five individuals in the US District Court for the Middle District of Florida (case 3:26-cv-00816). These are allegations; the docket read showed no ruling on the merits, and the defendants had said they would move to compel arbitration (https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513)."
+      ],
       "addPayoutProofs": [
         {
           "date": "2026-11-14",
@@ -17137,8 +17182,18 @@
       ],
       "setLegalReview": {
         "summary": "Legal file clarified on 16 November 2026 using the already-listed McCrudden court docket. The accessible snapshot ends on 4 September 2026 and documents procedural steps, not a merits ruling. Topstep’s brokerage affiliate remains separate from its evaluation product. Company registrations, current regulator status and the previously reported data-breach signal were not reverified in this pass.",
-        "complaintsAndDisputes": ["Public complaints include rules, payout eligibility, account restrictions and live-account conditions.", "McCrudden v. Topstepfunded LLC et al., M.D. Fla. 3:26-cv-00816, filed 9 April 2026: the public docket snapshot was last retrieved 4 September 2026. The 10 August entry stays discovery pending the arbitration motion; the 4 September entry records mediator selection. These are procedural entries, not findings on the allegations.", "A reported September 2025 data-breach signal involving personal data, including names and Social Security numbers, should be treated as a serious watch point until a direct breach-notice source is attached.", "Regulator-warning searches were not refreshed in this scoped court-docket check."],
-        "redFlags": ["Historic brand, but still a futures prop-firm model with simulated evaluation rules and payout constraints.", "The linked McCrudden docket is a bounded procedural record; later developments and the underlying allegations require separate verification.", "Reported data-breach signal needs an official breach notice or attorney-general filing before being treated as fully sourced.", "Users must distinguish Topstep Prop, Topstep Brokerage and any FCM/brokerage partner before assuming regulatory protection."],
+        "complaintsAndDisputes": [
+          "Public complaints include rules, payout eligibility, account restrictions and live-account conditions.",
+          "McCrudden v. Topstepfunded LLC et al., M.D. Fla. 3:26-cv-00816, filed 9 April 2026: the public docket snapshot was last retrieved 4 September 2026. The 10 August entry stays discovery pending the arbitration motion; the 4 September entry records mediator selection. These are procedural entries, not findings on the allegations.",
+          "A reported September 2025 data-breach signal involving personal data, including names and Social Security numbers, should be treated as a serious watch point until a direct breach-notice source is attached.",
+          "Regulator-warning searches were not refreshed in this scoped court-docket check."
+        ],
+        "redFlags": [
+          "Historic brand, but still a futures prop-firm model with simulated evaluation rules and payout constraints.",
+          "The linked McCrudden docket is a bounded procedural record; later developments and the underlying allegations require separate verification.",
+          "Reported data-breach signal needs an official breach notice or attorney-general filing before being treated as fully sourced.",
+          "Users must distinguish Topstep Prop, Topstep Brokerage and any FCM/brokerage partner before assuming regulatory protection."
+        ],
         "sources": [
           {
             "label": "McCrudden v. Topstep — public docket snapshot through 4 September 2026",
@@ -17152,7 +17207,9 @@
           "rule": "MLL trails end-of-day balance and is recalculated at daily close, but an intraday unrealized equity touch triggers liquidation. Standard Combine profit-day concentration is limited to 55% of its target.",
           "impact": "Profitable open positions that reverse can breach a threshold set at the previous EOD; a single oversized winning day delays passing.",
           "source": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "consistency",
           "severity": "minor",
           "clarity": "clear"
@@ -17162,7 +17219,9 @@
           "rule": "Despite a nominal $50K–$150K buying-power label, the XFA starts at $0. MLL rises from a negative floor, locks at $0 and is set to $0 after first payout; on the optional Consistency payout path, best day ≤40% and at least 3 trading days.",
           "impact": "A payout can reduce remaining loss cushion, and payout eligibility differs between Standard and Consistency paths.",
           "source": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "funded-trailing-drawdown",
           "severity": "major",
           "clarity": "clear"
@@ -17175,7 +17234,9 @@
         },
         {
           "program": "Express Funded Account — payout size",
-          "appliesTo": ["combine"],
+          "appliesTo": [
+            "combine"
+          ],
           "category": "payout-cap",
           "severity": "major",
           "clarity": "clear",
@@ -17185,7 +17246,9 @@
         },
         {
           "program": "Express Funded Account — Standard payout path",
-          "appliesTo": ["combine"],
+          "appliesTo": [
+            "combine"
+          ],
           "category": "min-trading-days",
           "severity": "minor",
           "clarity": "clear",
@@ -17195,7 +17258,9 @@
         },
         {
           "program": "Trading Combine, Express Funded and Live — prohibited conduct",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "discretionary-clause",
           "severity": "blocking",
           "clarity": "vague",
@@ -17205,7 +17270,9 @@
         },
         {
           "program": "All accounts — VPN, proxy and remote access",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "vpn-ip-device",
           "severity": "blocking",
           "clarity": "buried",
@@ -17215,7 +17282,9 @@
         },
         {
           "program": "All accounts — coordinated trading and cross-account hedging",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "ea-copy-hft",
           "severity": "blocking",
           "clarity": "buried",
@@ -17225,7 +17294,9 @@
         },
         {
           "program": "Express Funded Account — live restricted jurisdictions",
-          "appliesTo": ["combine"],
+          "appliesTo": [
+            "combine"
+          ],
           "category": "country-kyc",
           "severity": "minor",
           "clarity": "buried",
@@ -17235,7 +17306,9 @@
         },
         {
           "program": "Trading Combine — activation deadline",
-          "appliesTo": ["combine"],
+          "appliesTo": [
+            "combine"
+          ],
           "category": "inactivity",
           "severity": "minor",
           "clarity": "buried",
@@ -17245,7 +17318,9 @@
         },
         {
           "program": "All accounts — changes to rules",
-          "appliesTo": ["*"],
+          "appliesTo": [
+            "*"
+          ],
           "category": "discretionary-clause",
           "severity": "major",
           "clarity": "vague",
@@ -17259,7 +17334,7 @@
           "id": "topstep-trading-combine-current",
           "name": "Trading Combine + earned Express Funded",
           "type": "Futures evaluation",
-          "description": "Futures combine; funded stage is earned after passing, not an instantly purchased $50K cash balance.",
+          "description": "Recurring evaluation with Standard or No Activation Fee purchase paths; after passing choose XFA Standard or XFA Consistency. Funded account starts at $0; buying power is not cash.",
           "accountSizeMin": 50000,
           "accountSizeMax": 150000,
           "profitTarget": "$3K / $6K / $9K for 50K / 100K / 150K",
@@ -17268,11 +17343,65 @@
           "drawdownType": "EOD",
           "drawdownSource": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
           "drawdownDetails": "Trailing floor updates after daily close; all realtime P/L counts for breach. Earned XFA uses a zero-balance start and $0 lock.",
-          "profitSplit": "up to 100% by payout route; verify eligibility",
-          "platforms": ["not verified for this specific tier"],
-          "tradableAssets": ["Futures"],
+          "profitSplit": "90% XFA; live payout policy separate",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
-          "consistencyRule": "Combine 55% of target; optional XFA Consistency payout route 40% of net profit and 3 days."
+          "consistencyRule": "55% evaluation target; funded Standard has no ratio, funded Consistency path 40% of net profit per cycle and 3 trading days."
+        },
+        {
+          "id": "topstep-static-combine-current",
+          "name": "Static Drawdown Trading Combine",
+          "type": "Futures evaluation",
+          "description": "Permanent Labs offer, one-time fee and 90-day evaluation expiry; no reset, free XFA activation. Funded Standard or Consistency paths; caps $4K/$8K/$10K/$12K. No Back2Funded.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "$2K / $4K / $8K / $12K (25K / 50K / 100K / 150K)",
+          "maxDailyLoss": "Mandatory $500 / $1,000 / $2,000 / $3,000",
+          "maxDrawdown": "$1K / $2K / $4K / $6K static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+          "drawdownDetails": "Fixed floor during evaluation and XFA until first withdrawal; XFA then locks at $0. XFA starts at $0.",
+          "profitSplit": "90% XFA; live payout policy separate",
+          "platforms": [
+            "TopstepX"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "55% evaluation target; funded Standard has no ratio, funded Consistency path 40% of net profit per cycle and 3 trading days.",
+          "entryFeeMin": 75,
+          "entryFeeMax": 279
+        },
+        {
+          "id": "topstep-freedom-250k-current",
+          "name": "Freedom Trading Combine 250K",
+          "type": "Futures evaluation",
+          "description": "Permanent Labs offer; $499 one-time, no resets, free XFA activation. Evaluation expires after 90 days. XFA Standard only, payout cap $25K, no Back2Funded.",
+          "accountSizeMin": 250000,
+          "accountSizeMax": 250000,
+          "profitTarget": "$15,000",
+          "maxDailyLoss": "Mandatory $5,000 evaluation; live $5,000",
+          "maxDrawdown": "$10,000",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+          "drawdownDetails": "Structured like standard Trading Combine; XFA loss floor locks at $0 on first payout.",
+          "profitSplit": "90% XFA; live payout policy separate",
+          "platforms": [
+            "TopstepX"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "55% evaluation target; no funded ratio on Standard path.",
+          "entryFeeMin": 499,
+          "entryFeeMax": 499
         }
       ],
       "auditedPrograms": [
@@ -17849,14 +17978,16 @@
       ]
     },
     "tradeify": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-27",
       "restrictiveRules": [
         {
           "program": "Select Evaluation — evaluation stage",
           "rule": "An EOD trailing floor and 40% best-day consistency ceiling apply, with at least three days to pass; the funded trader then permanently selects either the Flex five-winning-day path or a Daily path with a required buffer.",
           "impact": "No evaluation daily-loss limit does not mean no trailing loss floor, and a payout choice made after passing cannot be changed for that account.",
           "source": "https://help.tradeify.co/en/articles/12853921-select-evaluation-accounts",
-          "appliesTo": ["select"],
+          "appliesTo": [
+            "select"
+          ],
           "category": "consistency",
           "severity": "minor",
           "clarity": "clear"
@@ -17866,7 +17997,9 @@
           "rule": "Growth evaluation has a daily loss limit but no consistency test; its funded stage uses a separate 35% consistency rule and a fixed payout policy.",
           "impact": "Passing a Growth test quickly does not waive funded payout concentration checks or daily-loss restrictions.",
           "source": "https://help.tradeify.co/en/articles/10468320-rules-consistency-rule",
-          "appliesTo": ["growth"],
+          "appliesTo": [
+            "growth"
+          ],
           "category": "consistency",
           "severity": "major",
           "clarity": "clear"
@@ -17876,7 +18009,9 @@
           "rule": "No evaluation is required, but payout eligibility follows size-based profit goals, per-request caps and an escalating best-day consistency ceiling of 20% for the first payout, 25% second and 30% later.",
           "impact": "The profit objective is not the amount withdrawable; meeting a nominal goal can still leave a trader below the separate payout eligibility conditions.",
           "source": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
-          "appliesTo": ["lightning"],
+          "appliesTo": [
+            "lightning"
+          ],
           "category": "consistency",
           "severity": "major",
           "clarity": "clear"
@@ -17887,21 +18022,27 @@
           "id": "tradeify-select-eval",
           "name": "Select — evaluation",
           "type": "Futures evaluation",
-          "description": "Select $25K–$300K one-time evaluation with no daily loss limit; after passing, permanently choose Select Flex (five winning days) or Select Daily (buffer plus lower caps). 300K carries additional KYC and purchase limits.",
+          "description": "Select $25K–$150K one-time evaluation; 30%, 40% or 50% consistency purchase options. After passing, permanently choose Flex or Daily. Flex has no daily loss limit; Daily has narrower loss limits and a withdrawal buffer.",
           "accountSizeMin": 25000,
-          "accountSizeMax": 300000,
-          "profitTarget": "$1,500–$14,000 by size",
+          "accountSizeMax": 150000,
+          "profitTarget": "$1,500–$9,000 by size",
           "maxDailyLoss": "None during evaluation; funded Daily option adds a limit",
           "maxDrawdown": "End-of-day trailing by account size",
           "drawdownType": "EOD",
           "drawdownSource": "https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you",
           "drawdownDetails": "Loss floor updates from end-of-day high but is enforced intra-session against available equity; funded Flex and Daily terms diverge.",
           "profitSplit": "90% simulated-funded; 80% Elite Live",
-          "platforms": ["Verify platform at purchase"],
-          "tradableAssets": ["Futures"],
-          "minTradingDays": "3 days (or 2 with 50% consistency add-on)",
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "4 days (30%), 3 days (40%), 2 days (50%)",
           "hasConsistencyRule": true,
-          "consistencyRule": "40% best-day ceiling in evaluation only; optional 50% add-on."
+          "consistencyRule": "30%, 40% or 50% best-day ceiling in evaluation only; neither funded payout option has a percentage consistency rule.",
+          "entryFeeMin": 99,
+          "entryFeeMax": 459
         },
         {
           "id": "tradeify-growth-eval",
@@ -17917,8 +18058,12 @@
           "drawdownSource": "https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you",
           "drawdownDetails": "Trailing loss floor updates at end of day; daily soft-limit intervention is separate and can interrupt the session.",
           "profitSplit": "90% simulated-funded; 80% Elite Live",
-          "platforms": ["Verify platform at purchase"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "As few as 1 day",
           "hasConsistencyRule": false
         },
@@ -17936,10 +18081,43 @@
           "drawdownSource": "https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you",
           "drawdownDetails": "EOD trailing floor; funded profit goal and capped withdrawal are separate figures and depend on purchase date.",
           "profitSplit": "90% simulated-funded; 80% Elite Live",
-          "platforms": ["Verify platform at purchase"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Verify platform at purchase"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
           "consistencyRule": "20% first payout, 25% second, 30% subsequent, for new eligible accounts."
+        },
+        {
+          "id": "tradeify-select-300k-current",
+          "name": "Select 300K — permanent plan",
+          "type": "Futures evaluation",
+          "description": "$570 one-time evaluation with mandatory pre-purchase identity check, no resets or activation fee. Maximum five purchases per rolling 30 days, three funded 300K accounts. Choose Flex or Daily permanently after passing.",
+          "accountSizeMin": 300000,
+          "accountSizeMax": 300000,
+          "profitTarget": "$14,000",
+          "maxDailyLoss": "$4,000 evaluation/Flex; $3,000 funded Daily",
+          "maxDrawdown": "$8,000 evaluation/Flex; $6,000 funded Daily (EOD)",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan",
+          "drawdownDetails": "EOD floor enforced continuously, locks at $300,100 on reaching $308,100 Flex or $306,100 Daily.",
+          "profitSplit": "90% simulated-funded; 80% Elite Live",
+          "platforms": [
+            "Tradovate",
+            "Rithmic",
+            "WealthCharts",
+            "TradingView"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "3 evaluation; funded Flex 5 winning days ($750+), Daily no winning-day count",
+          "hasConsistencyRule": true,
+          "consistencyRule": "40% evaluation only; no funded consistency. Daily: at least half the withdrawal from new profit.",
+          "entryFeeMin": 570,
+          "entryFeeMax": 570
         }
       ],
       "set": {
@@ -17953,7 +18131,10 @@
           "date": "2026-11-18",
           "summary": "Split Select, Growth and Lightning risk and payout conditions with distinct evaluation consistency and funded withdrawal criteria; published restrictions are not hidden, score unchanged.",
           "source": "https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you",
-          "fields": ["products", "restrictiveRules"]
+          "fields": [
+            "products",
+            "restrictiveRules"
+          ]
         },
         {
           "date": "2026-10-26",
@@ -17965,37 +18146,60 @@
           "date": "2026-10-26",
           "summary": "Trustpilot read on www.trustpilot.com: 4.5 TrustScore across 5,469 reviews (an older ca.trustpilot.com snapshot showed 4.4 across 5,069; the higher count is the more recent reading).",
           "source": "https://www.trustpilot.com/review/tradeify.co",
-          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl"]
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
         },
         {
           "date": "2026-11-08",
           "summary": "Trustpilot refreshed: 4.6 TrustScore (previously 4.5) across 6,894 reviews.",
           "source": "https://www.trustpilot.com/review/tradeify.co",
-          "fields": ["trustpilotReviewCount", "trustpilotRating"]
+          "fields": [
+            "trustpilotReviewCount",
+            "trustpilotRating"
+          ]
         },
         {
           "date": "2026-11-14",
           "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
           "source": "https://tradeify.co/",
-          "fields": ["payoutProofs"]
+          "fields": [
+            "payoutProofs"
+          ]
         },
         {
           "date": "2026-11-16",
           "summary": "Homepage payout claim rechecked: the previously recorded $400 million figure remains displayed. It stays company-reported; no duplicate proof, independent verification claim, score or payout-risk change.",
           "source": "https://tradeify.co/",
-          "fields": ["payoutReview"]
+          "fields": [
+            "payoutReview"
+          ]
         },
         {
           "date": "2026-11-16",
           "summary": "Lightning Funded policy clarified: profit target and withdrawal cap are different. Its 150K example requires $9,000 earned to unlock the first request, capped at $3,000 before the 90% trader share. Post-12 September 2025 accounts have 20%, 25%, then 30% consistency thresholds. Select daily-payment rules are separate.",
           "source": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
-          "fields": ["payoutDelay"]
+          "fields": [
+            "payoutDelay"
+          ]
         },
         {
           "date": "2026-11-18",
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://help.tradeify.co/en/articles/12853921-select-evaluation-accounts",
-          "fields": ["restrictiveRules"]
+          "fields": [
+            "restrictiveRules"
+          ]
+        },
+        {
+          "date": "2026-11-27",
+          "summary": "Separated permanent 300K Select with its own daily loss limit, price and funded conditions; corrected 25K–150K 30/40/50% purchase options and documented both funded routes.",
+          "source": "https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan",
+          "fields": [
+            "products"
+          ]
         }
       ],
       "addSources": [
@@ -18006,6 +18210,18 @@
         {
           "label": "Tradeify — Lightning Funded payout requirements and withdrawal caps",
           "url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy"
+        },
+        {
+          "label": "Permanent 300K rules",
+          "url": "https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan"
+        },
+        {
+          "label": "Select evaluation choices",
+          "url": "https://help.tradeify.co/en/articles/12853921-select-evaluation-accounts"
+        },
+        {
+          "label": "Select funded payout choices",
+          "url": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
         }
       ],
       "addPayoutProofs": [
