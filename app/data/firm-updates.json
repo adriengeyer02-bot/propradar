@@ -22166,9 +22166,132 @@
         }
       ],
       "setProducts": [
-        {"id": "daytraders-trailing", "name": "Trailing evaluation", "type": "Futures evaluation", "description": "Single-phase evaluation, 25K to 300K. Intraday trailing drawdown (e.g. $2,500 on 50K). Profit target $1,500 on 25K up to $15,000 on 300K. Consistency: no day above 50% of profits in evaluation.", "accountSizeMin": 25000, "accountSizeMax": 300000, "profitTarget": "$1,500 (25K) to $15,000 (300K)", "maxDailyLoss": "not stated", "maxDrawdown": "intraday trailing (e.g. $2,500 on 50K)", "profitSplit": "100% on sim-funded (Pro) accounts", "platforms": ["ArcTrader", "Rithmic"], "tradableAssets": ["Futures"], "hasConsistencyRule": true, "consistencyRule": "50% in evaluation, 30% on Pro"},
-        {"id": "daytraders-eod", "name": "EOD evaluation", "type": "Futures evaluation", "description": "25K to 300K. From $75 per account (25K EOD), plus a flat $5 activation fee. 25K: $1,500 target, $1,000 drawdown, $800 daily loss.", "accountSizeMin": 25000, "accountSizeMax": 300000, "entryFeeMin": 75, "profitTarget": "$1,500 on 25K", "maxDailyLoss": "$800 on 25K", "maxDrawdown": "$1,000 on 25K, end-of-day trailing", "profitSplit": "100% on sim-funded (Pro) accounts", "platforms": ["ArcTrader", "Rithmic"], "tradableAssets": ["Futures"], "hasConsistencyRule": true, "consistencyRule": "50% in evaluation, 30% on Pro"},
-        {"id": "daytraders-static", "name": "Static evaluation", "type": "Futures evaluation", "description": "25K to 150K. Fixed drawdown floor that never moves.", "accountSizeMin": 25000, "accountSizeMax": 150000, "profitTarget": "proportional to account size", "maxDailyLoss": "not stated", "maxDrawdown": "static (fixed floor)", "profitSplit": "100% on sim-funded (Pro) accounts", "platforms": ["ArcTrader", "Rithmic"], "tradableAssets": ["Futures"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
+        {
+          "id": "daytraders-trailing",
+          "name": "Trail evaluation → Pro",
+          "type": "Futures evaluation",
+          "description": "25K/50K/150K/300K evaluation; $5 activation within 10 days. Funded Pro uses intraday trailing, no DLL, eight qualifying days per withdrawal, $500 minimum and size-dependent cap. Live invitation may close sim accounts and forfeit excess simulated balances.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 300000,
+          "profitTarget": "$1,500 (25K) to $15,000 (300K)",
+          "maxDailyLoss": "None",
+          "maxDrawdown": "$1,500/$2,500/$4,500/$7,000 intraday trailing",
+          "profitSplit": "100% on sim-funded (Pro) accounts",
+          "platforms": [
+            "ArcTrader",
+            "Rithmic"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "50% evaluation; 30% best-day share of each payout cycle in simulated funded Pro.",
+          "minTradingDays": "2 qualifying days in evaluation; 8 new qualifying days per payout",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://daytraders.com/help/articles/17684698-trail-pro-account",
+          "drawdownDetails": "Trails peak equity, locks at starting balance."
+        },
+        {
+          "id": "daytraders-eod",
+          "name": "EOD evaluation → Pro",
+          "type": "Futures evaluation",
+          "description": "25K/50K/150K/300K; $5 activation within 10 days. Funded Pro keeps EOD trailing and daily loss pause; eight qualifying days per payout, $500 minimum, size-based cap and protected balance.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 300000,
+          "entryFeeMin": 75,
+          "profitTarget": "$1,500 on 25K",
+          "maxDailyLoss": "$800/$1,250/$2,000/$3,250 (soft pause)",
+          "maxDrawdown": "$1,000/$2,000/$4,000/$6,500 EOD trailing",
+          "profitSplit": "100% on sim-funded (Pro) accounts",
+          "platforms": [
+            "ArcTrader",
+            "Rithmic"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "50% evaluation; 30% best-day share of each payout cycle in simulated funded Pro.",
+          "minTradingDays": "2 qualifying days in evaluation; 8 new qualifying days per payout",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://daytraders.com/help/articles/17684736-eod-pro-account",
+          "drawdownDetails": "End-of-day trailing, locks at starting balance."
+        },
+        {
+          "id": "daytraders-static",
+          "name": "Static evaluation → Pro",
+          "type": "Futures evaluation",
+          "description": "25K/50K/100K/150K; fixed loss floor, $5 activation within 10 days; eight qualifying days between withdrawals, 30% funded consistency, size-dependent caps and retained balance.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "proportional to account size",
+          "maxDailyLoss": "None",
+          "maxDrawdown": "$750/$1,000/$1,500/$1,750 static",
+          "profitSplit": "100% on sim-funded (Pro) accounts",
+          "platforms": [
+            "ArcTrader",
+            "Rithmic"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "50% evaluation; 30% best-day share of each payout cycle in simulated funded Pro.",
+          "minTradingDays": "2 qualifying days in evaluation; 8 new qualifying days per payout",
+          "drawdownType": "Static",
+          "drawdownSource": "https://daytraders.com/help/articles/17684716-static-pro-account",
+          "drawdownDetails": "Fixed floor throughout evaluation and Pro."
+        },
+        {
+          "id": "daytraders-s2f-current",
+          "name": "S2F — Instant Sim Funded",
+          "type": "Futures instant funding",
+          "description": "No evaluation. Ten qualifying days per payout cycle; first profit target $2K/$3.5K/$10K, later targets decrease. Caps $1K/$2K/$3K on 25K/50K/150K; $500 minimum. Sim balances may be forfeited on live invitation.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "Per payout cycle, first $2,000/$3,500/$10,000",
+          "maxDailyLoss": "None for 25K; applies to 50K/150K",
+          "maxDrawdown": "EOD trailing; verify exact tier at checkout",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+          "drawdownDetails": "End-of-day trailing.",
+          "profitSplit": "100% simulated",
+          "platforms": [
+            "ArcTrader",
+            "Rithmic"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "20% best-day share per payout cycle.",
+          "minTradingDays": "No evaluation; 10 qualifying days per payout"
+        },
+        {
+          "id": "daytraders-s2l-current",
+          "name": "S2L — Straight to Live",
+          "type": "Futures evaluation",
+          "description": "Sim evaluation then real-market funding, Core 50K / Edge 150K / Ultra 300K. Eight qualifying evaluation days, 25% evaluation consistency. Live: no consistency, withdrawals above $1K buffer after loss floor locks, $500 minimum. One live account initially tradeable; other accounts enabled sequentially.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 300000,
+          "profitTarget": "Tier-specific evaluation target",
+          "maxDailyLoss": "$1,000/$1,750/$3,250 on live",
+          "maxDrawdown": "$2,000/$4,500/$7,000 intraday trailing on live",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://daytraders.com/help/articles/17697913-s2l-drawdown",
+          "drawdownDetails": "Live floor starts at initial balance minus loss distance, trails peak equity and locks at initial balance.",
+          "profitSplit": "80% live",
+          "platforms": [
+            "Onyx",
+            "Quantower"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "25% evaluation; none in live.",
+          "minTradingDays": "8 qualifying evaluation days; no live minimum payout days"
+        }
       ],
       "changelog": [
         {
@@ -27298,7 +27421,7 @@
           "id": "funded-futures-network-max-standard",
           "name": "MAX Standard",
           "type": "Futures evaluation",
-          "description": "One-time fee $148 (25K) to $658 (250K) list price; promotional codes not applied. Full rules shown only for 50K: $3,000 target, $1,250 daily loss limit, $2,000 EOD drawdown locking at starting balance + $100, 5 trading days of $150+, $100 reset fee, no activation fee; funded 80% split, $500 minimum payout, payouts capped at $1,000 (payouts 1-3) then $1,250, $625 one-time funded reset before any payout, live review after 4 payouts on one account or 10 since the last live review (all sim accounts close).",
+          "description": "One-time list prices shown on recent official checkout snapshots; older official snapshots show monthly billing. 50K: $3,000 target, $2,000 EOD loss floor locking at initial + $100, $1,250 soft daily stop, five $150+ evaluation days. Funded 80% share; buffer, 40% consistency, $500 minimum, sequence caps. Official snapshots conflict on 50K caps ($1,000/$1,250 vs $1,500/$2,000) and closure at mandatory live review after four payouts on one account or ten since last review. Confirm exact cohort at purchase.",
           "accountSizeMin": 25000,
           "accountSizeMax": 250000,
           "entryFeeMin": 148,
@@ -27310,8 +27433,15 @@
           "drawdownSource": "https://fundedfuturesnetwork.com/accounts",
           "drawdownDetails": "End-of-day drawdown in evaluation and funded stages; locks at starting balance + $100 (50K).",
           "profitSplit": "80%",
-          "platforms": ["Onyx", "Quantower (FundX)", "EdgeProX", "MotiveWave Mobile"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "Onyx",
+            "Quantower (FundX)",
+            "EdgeProX",
+            "MotiveWave Mobile"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "5 ($150+ each, 50K)",
           "hasConsistencyRule": true,
           "consistencyRule": "40% in evaluation and funded (50K specification on the official accounts page)."
@@ -27320,7 +27450,7 @@
           "id": "funded-futures-network-steady",
           "name": "STEADY",
           "type": "Futures evaluation",
-          "description": "One-time fee $149 (25K) to $750 (250K) list price; no activation or monthly fee. Pass in as few as 2 winning days, no daily loss limit, no time limit, no exhibition phase; EOD trailing drawdown locking at starting balance + $100. Funded accounts first build a buffer equal to the drawdown; per-payout caps $1,000-$3,000 by size rising from the 4th payout; live review after 5 payouts; up to 90/10 split in a live funded account.",
+          "description": "Two winning days in evaluation, no daily stop, EOD trailing and buffer equal to loss limit. Funded no percentage consistency; indexed July rules specify five winning days per withdrawal cycle, tier/sequence caps and $10K aggregate per request. Review after five withdrawals. Dedicated landing page permits news but general funded FAQ restricts it; confirm programme-specific terms.",
           "accountSizeMin": 25000,
           "accountSizeMax": 250000,
           "entryFeeMin": 149,
@@ -27330,10 +27460,17 @@
           "maxDrawdown": "$1,200 (25K), $2,000 (50K), $3,200 (100K), $4,700 (150K), $5,500 (250K), end-of-day trailing",
           "drawdownType": "EOD",
           "drawdownSource": "https://steady.fundedfuturesnetwork.com/",
-          "drawdownDetails": "End-of-day trailing drawdown that locks at starting balance + $100; whether it is kept on the funded stage is not stated.",
+          "drawdownDetails": "EOD trailing locks at initial balance + $100 per dedicated page and indexed programme help; current funded agreement to confirm.",
           "profitSplit": "Up to 90% in a live funded account; sim funded split not stated",
-          "platforms": ["FundX", "EdgeProX", "ONYX", "Rithmic-compatible platforms (Quantower, Sierra Chart, Jigsaw)"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "FundX",
+            "EdgeProX",
+            "ONYX",
+            "Rithmic-compatible platforms (Quantower, Sierra Chart, Jigsaw)"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "2 winning days ($100-$350 minimum winning day by size)",
           "hasConsistencyRule": true,
           "consistencyRule": "Evaluation only: no single day above 52% of total profit; no consistency rule once funded."

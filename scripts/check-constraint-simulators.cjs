@@ -89,8 +89,15 @@ assert.equal(programmeFlexibility(getProgrammeEvidence('blusky-trading','blusky-
 assert.equal(programmeFlexibility(getProgrammeEvidence('blusky-trading','blusky-orbit-current')).stars,1.5);
 assert.equal(programmeFlexibility(getProgrammeEvidence('blusky-trading','blusky-instant-sim-current')).stars,0.5);
 assert.equal(programmeFlexibility(getProgrammeEvidence('blusky-trading','blusky-direct-funded-current')).stars,1.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('daytraders-com','daytraders-trailing')).stars,1);
+assert.equal(programmeFlexibility(getProgrammeEvidence('daytraders-com','daytraders-eod')).stars,1.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('daytraders-com','daytraders-static')).stars,2);
+assert.equal(programmeFlexibility(getProgrammeEvidence('daytraders-com','daytraders-s2f-current')).stars,1);
+assert.equal(programmeFlexibility(getProgrammeEvidence('daytraders-com','daytraders-s2l-current')).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('funded-futures-network','funded-futures-network-max-standard')).stars,1.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('funded-futures-network','funded-futures-network-steady')).stars,2.5);
 const a={points:0.5,source:'https://example.com',reason:'documented test fixture'};
 const complete={checkedOn:'2026-11-27',scope:'test',assessments:{drawdown:a,payout:a,consistency:a,trading:a,funded:a}};
 assert.equal(programmeFlexibility(complete).stars,2.5);
 assert.equal(programmeFlexibility({...complete,assessments:{...complete.assessments,payout:{...a,source:''}}}).stars,null);
-console.log('Constraint simulators and evidence gating: 79 checks OK');
+console.log('Constraint simulators and evidence gating: 86 checks OK');
