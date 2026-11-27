@@ -2,7 +2,7 @@
 export type Criterion = 'drawdown'|'payout'|'consistency'|'trading'|'funded';
 export type Assessment = {points:0|0.5|1;source:string;reason:string};
 export type ProgrammeEvidence = {
-  checkedOn:string; scope:string; assessments:Partial<Record<Criterion,Assessment>>;
+  checkedOn:string; scope:string; scopeFr?:string; assessments:Partial<Record<Criterion,Assessment>>;
   /** Only explicitly verified facts. No assumption that a missing rule is absent. */
   preset?:{consistency?:number; consistencyBasis?:'net'; drawdown?:'static'|'eod'|'intraday'; lossPercent?:number; profitSplit?:number; source:string};
 };
@@ -13,21 +13,21 @@ const news='https://ftmo.com/faq/can-i-trade-news/';
 const swing='https://ftmo.com/en/faq/what-is-the-swing-account-type-and-how-does-it-work/';
 const evidence:Record<string,Record<string,ProgrammeEvidence>>={
   ftmo:{
-    'ftmo-one-step-current':{checkedOn:'2026-11-27',scope:'CFD Standard, orders created on or after 2026-10-12; funded-stage rules',assessments:{
+    'ftmo-one-step-current':{checkedOn:'2026-11-27',scope:'CFD Standard, orders created on or after 2026-10-12; funded-stage rules',scopeFr:'CFD Standard, commandes à partir du 12 octobre 2026 ; phase financée.',assessments:{
       drawdown:{points:0.5,source:objectives,reason:'10% end-of-day trailing loss limit; reset on reward/new account.'},
       consistency:{points:0.5,source:objectives,reason:'50% best closed day divided by total closed net trading profit; post-12 October cohort. Exceeding it delays eligibility, not termination.'},
       payout:{points:1,source:rewards,reason:'Reward request from day 14; ordinary transaction minimums and 90% split.'},
       trading:{points:0.5,source:news,reason:'Funded Standard restricts order execution around selected news, including stop and target execution; Swing not offered.'},
       funded:{points:1,source:objectives,reason:'Funded-stage objectives, ordinary verification and no new profit target; drawdown and consistency already counted separately.'}
     },preset:{consistency:50,consistencyBasis:'net',drawdown:'eod',lossPercent:10,profitSplit:90,source:objectives}},
-    'ftmo-two-step-current':{checkedOn:'2026-11-27',scope:'CFD 2-Step Standard baseline; Swing removes news and holding restrictions and merits +0.5 stars on the trading axis if chosen. Other axes unchanged.',assessments:{
+    'ftmo-two-step-current':{checkedOn:'2026-11-27',scope:'CFD 2-Step Standard baseline; Swing removes news and holding restrictions and merits +0.5 stars on the trading axis if chosen. Other axes unchanged.',scopeFr:'CFD 2-Step Standard. La variante Swing permet les annonces et les positions de nuit/week-end : +0,5 étoile sur la liberté de trading.',assessments:{
       drawdown:{points:1,source:comparison,reason:'Static maximum loss 10%.'},
       consistency:{points:1,source:comparison,reason:'No percentage consistency rule on the 2-Step comparison table.'},
       payout:{points:1,source:rewards,reason:'Reward request from day 14, ordinary minimums, 80% default split and optional rollover.'},
       trading:{points:0.5,source:swing,reason:'Standard funded accounts restrict selected news and longer market closures. Swing permits both; rating uses Standard as baseline.'},
       funded:{points:1,source:objectives,reason:'No funded profit target or minimum trading days. Ordinary drawdown and verification requirements are not counted twice.'}
     },preset:{drawdown:'static',lossPercent:10,profitSplit:80,source:comparison}},
-    'ftmo-instant-current':{checkedOn:'2026-11-27',scope:'CFD Instant, Standard; current offer',assessments:{
+    'ftmo-instant-current':{checkedOn:'2026-11-27',scope:'CFD Instant, Standard; current offer',scopeFr:'CFD Instant Standard, offre actuelle.',assessments:{
       drawdown:{points:0,source:objectives,reason:'10% intraday trailing on highest closed-position balance; equity enforced. Withdrawal effect is assessed separately under payout.'},
       consistency:{points:0.5,source:comparison,reason:'30% best closed day / total net closed P&L. Exceeding it delays reward eligibility; denominator resets after reward.'},
       payout:{points:0,source:rewards,reason:'Maximum loss floor does not reset at withdrawal. Official objectives warn that once balance exceeds 110% of initial capital, a withdrawal would breach the limit; material access restriction beyond ordinary timing.'},
@@ -51,7 +51,7 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
   fundednext: {
   "fundednext-stellar-one-current": {
     "checkedOn": "2026-11-27",
-    "scope": "Current CFD baseline, purchased/reset after 12 January 2026; no add-ons.",
+    "scope": "Current CFD baseline, purchased/reset after 12 January 2026; no add-ons.","scopeFr": "CFD standard, achat ou reset à partir du 12 janvier 2026, sans option.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -88,7 +88,7 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
   },
   "fundednext-stellar-two-current": {
     "checkedOn": "2026-11-27",
-    "scope": "Current CFD Standard payout option only; 3-day and on-demand options differ.",
+    "scope": "Current CFD Standard payout option only; 3-day and on-demand options differ.","scopeFr": "CFD, retrait Standard uniquement ; les options 3 jours et à la demande diffèrent.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -125,7 +125,7 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
   },
   "fundednext-stellar-lite-current": {
     "checkedOn": "2026-11-27",
-    "scope": "Current CFD Standard payout option, purchased/reset on or after 12 October 2026; no add-ons.",
+    "scope": "Current CFD Standard payout option, purchased/reset on or after 12 October 2026; no add-ons.","scopeFr": "CFD, retrait Standard, achat ou reset à partir du 12 octobre 2026, sans option.",
     "assessments": {
       "drawdown": {
         "points": 1,
