@@ -1,0 +1,2185 @@
+{
+  "date": "2026-11-27",
+  "status": "partial expanded inventory, not full audit of all 197",
+  "scope": {
+    "catalogue": 197,
+    "historicalProposal": 157,
+    "publishedScaleC": 64,
+    "archiveSourceEntries": 159
+  },
+  "changes": [
+    {
+      "slug": "tradeify",
+      "before": 80,
+      "after": 71,
+      "delta": -9,
+      "codes": [
+        [
+          "D_PAYOUT_CAP",
+          4
+        ],
+        [
+          "D_PAYOUT_CONDITIONS",
+          3
+        ],
+        [
+          "D_FUNDED_TRAILING_DRAWDOWN",
+          2
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "slug": "tradeday",
+      "before": 77,
+      "after": 75,
+      "delta": -2,
+      "codes": [
+        [
+          "D_FUNDED_TRAILING_DRAWDOWN",
+          2
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "slug": "equity-edge",
+      "before": 72,
+      "after": 68,
+      "delta": -4,
+      "codes": [
+        [
+          "B2A",
+          4
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "slug": "oneup-trader",
+      "before": 70,
+      "after": 65,
+      "delta": -5,
+      "codes": [
+        [
+          "D_PAYOUT_CONDITIONS",
+          3
+        ],
+        [
+          "D_FUNDED_TRAILING_DRAWDOWN",
+          2
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "slug": "elite-trader-funding",
+      "before": 68,
+      "after": 66,
+      "delta": -2,
+      "codes": [
+        [
+          "E_HARSH",
+          2
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "slug": "wsfunded",
+      "before": 64,
+      "after": 62,
+      "delta": -2,
+      "codes": [
+        [
+          "E_HARSH",
+          2
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "slug": "top-one-futures",
+      "before": 63,
+      "after": 55,
+      "delta": -8,
+      "codes": [
+        [
+          "B2",
+          8
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "slug": "top-one-trader",
+      "before": 61,
+      "after": 56,
+      "delta": -5,
+      "codes": [
+        [
+          "B6",
+          5
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "slug": "atlas-funded",
+      "before": 62,
+      "after": 58,
+      "delta": -4,
+      "codes": [
+        [
+          "B2A",
+          4
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "slug": "fintokei",
+      "before": 59,
+      "after": 54,
+      "delta": -5,
+      "codes": [
+        [
+          "B6",
+          5
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "slug": "prop-number-one",
+      "before": 57,
+      "after": 48,
+      "delta": -9,
+      "codes": [
+        [
+          "B3",
+          5
+        ],
+        [
+          "D_PAYOUT_CAP",
+          4
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "slug": "for-traders",
+      "before": 52,
+      "after": 45,
+      "delta": -7,
+      "codes": [
+        [
+          "B1",
+          15
+        ]
+      ],
+      "removed": [
+        "B2"
+      ]
+    },
+    {
+      "slug": "ftmo",
+      "before": 85,
+      "after": 80,
+      "delta": -5,
+      "codes": [
+        [
+          "REGWARN",
+          5
+        ]
+      ],
+      "removed": []
+    }
+  ],
+  "coverage": [
+    {
+      "slug": "aeon-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "algo-forex-funds",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "alpha-capital-group",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 67,
+      "newCScore": 67,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "alpha-futures",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 53,
+      "newCScore": 53,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "alphaproptraders",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "alpicap",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "alpine-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "apex-trader-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": true,
+      "oldCScore": 57,
+      "newCScore": 57,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "aqua-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 59,
+      "newCScore": 59,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "astra-capital-funding",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "atfunded",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "atlas-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 62,
+      "newCScore": 58,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "atmos-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 49,
+      "newCScore": 49,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "audacity-capital",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 60,
+      "newCScore": 60,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "aurafunded",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "axe-trader-funding",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "axi-select",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 47,
+      "newCScore": 47,
+      "reviewStage": "archive-index-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "bem-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "bespoke-funding-program",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "blue-guardian",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "blueberry-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "blufx",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "blusky-trading",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 67,
+      "newCScore": 67,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "breakout-prop",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "archive-index-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "brightfunded",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 60,
+      "newCScore": 60,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "bulenox",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 67,
+      "newCScore": 67,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "bullwaves-prime",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "cash-flow-funding",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "city-traders-imperium",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 62,
+      "newCScore": 62,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "ck-capital",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 14,
+      "newCScore": 14,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "clarity-traders",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "cove-funded",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "daytraders-com",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 57,
+      "newCScore": 57,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "dei-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "directfundedtrader",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "dna-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "e8-futures",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 52,
+      "newCScore": 52,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "e8-markets",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "archive-index-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "earn2trade",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "elite-trader-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 68,
+      "newCScore": 66,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "equity-edge",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 72,
+      "newCScore": 68,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "exfunded",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "fast-track-trading",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "fidelcrest",
+      "archiveSourceListed": true,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "finotive-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 52,
+      "newCScore": 52,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "fintokei",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 59,
+      "newCScore": 54,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "firmity-funding",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "for-traders",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 52,
+      "newCScore": 45,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "forex-funds-flow",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 62,
+      "newCScore": 62,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "forexive",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "forfx",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "fortunes-funding",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "foxx-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "ftmo",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 85,
+      "newCScore": 80,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "ftuk",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "archive-index-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "funded-bull",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "funded-engineer",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "funded-futures-network",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "funded-peaks",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "funded-squad",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "funded-trader-markets",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "funded-trading-plus",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "funded-unicorn",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "funded7",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "fundedelite",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "fundedhive",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "fundedlions",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "fundednext",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 55,
+      "newCScore": 55,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "funder-trading",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "funderpro",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": true,
+      "oldCScore": 65,
+      "newCScore": 65,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "funding-frontier",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "funding-pips",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 75,
+      "newCScore": 75,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "funding-talent",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "funding-traders",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "archive-index-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "funding-your-trades",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "fundings4u",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "funds-for-traders",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "fundyourfx",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "fx-capital-funding",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "fx2-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "fxci",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "fxify",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 69,
+      "newCScore": 69,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "fxrk",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "get-leveraged",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 50,
+      "newCScore": 50,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "getcryptofunded",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "glow-node",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "goat-funded-trader",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 57,
+      "newCScore": 57,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "gry-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "guardeer-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "hantec-trader",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 59,
+      "newCScore": 59,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "hash-hedge",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 64,
+      "newCScore": 64,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "hola-prime",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "archive-index-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "hyrotrader",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 62,
+      "newCScore": 62,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "ic-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "indigo-trader-funding",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "infinity-forex-funds",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "inspire-funding",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "instant-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "karma-prop-traders",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "klein-funding-crypto",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "kortanafx",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 15,
+      "newCScore": 15,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "lark-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 63,
+      "newCScore": 63,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "leeloo-trading",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 60,
+      "newCScore": 60,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "leveled-up-society",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "levels",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "limitless-funding",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "lucid-trading",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 59,
+      "newCScore": 59,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "lux-trading-firm",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 64,
+      "newCScore": 64,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "lvlup-futures",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": true,
+      "oldCScore": 44,
+      "newCScore": 44,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "maven-trading",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "ment-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "mifunder",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "miltraders",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "moneta-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 52,
+      "newCScore": 52,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "monevis",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "my-crypto-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "my-flash-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "myforexfunds",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "myfundedcapital",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 58,
+      "newCScore": 58,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "myfundedfutures",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 72,
+      "newCScore": 72,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "myfundedfx",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "myfxcapital",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "nations-trading",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "neg-markets",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "next-level-funding",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "next-step-funded",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "nostro",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "nova-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "now-trade-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "ofp-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "one-of-one-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "onefunded",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "oneup-trader",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 70,
+      "newCScore": 65,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "onlyfunds",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "optimal-traders",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "orion-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 70,
+      "newCScore": 70,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "pipfarm",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "archive-index-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "prop-number-one",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 57,
+      "newCScore": 48,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "purdia-capital",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "quant-tekel",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "quantec-trading-capital",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "real-funds-trader",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "rebelsfunding",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 67,
+      "newCScore": 67,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "rocket21-challenge",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "ryze-trading",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "sabiotrade",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 63,
+      "newCScore": 63,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "sfx-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "skilled-funded-traders",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "smart-prop-trader",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "stocknet-institute",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "summit-strike-capital",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "superfunded",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "sure-leverage",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 44,
+      "newCScore": 44,
+      "reviewStage": "archive-index-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "surgetrader",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "sway-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 59,
+      "newCScore": 59,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "syndicate-funded",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "t4tcapital",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "take-profit-trader",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 80,
+      "newCScore": 80,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "tentrade",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 58,
+      "newCScore": 58,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "the-concept-trading",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "the-forex-funder",
+      "archiveSourceListed": true,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "the-funded-trader",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "the-prop-game",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "the-trading-pit",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 56,
+      "newCScore": 56,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "the5ers",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 71,
+      "newCScore": 71,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "thinkcapital",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 57,
+      "newCScore": 57,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "tickticktrader",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "archive-index-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "tiger-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "titan-capital-markets",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "top-one-futures",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 63,
+      "newCScore": 55,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "top-one-trader",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 61,
+      "newCScore": 56,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "topstep",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 73,
+      "newCScore": 73,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "traddoo",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "trade-amber",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "trade-the-pool",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 65,
+      "newCScore": 65,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "tradeday",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 77,
+      "newCScore": 75,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "tradefundrr",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "tradeify",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 80,
+      "newCScore": 71,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "traders-central",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "traders-launch",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "traders-with-edge",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "tradersedgefx",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "tradexprop",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "tradicave",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "trading-cult",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "tribe-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "true-forex-funds",
+      "archiveSourceListed": false,
+      "historicalProposal": null,
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "verify current status before any reopening or score"
+    },
+    {
+      "slug": "tx3-funding",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 61,
+      "newCScore": 61,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "ultimate-traders",
+      "archiveSourceListed": true,
+      "historicalProposal": "audit en cours (CGU non lues)",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "upcomers",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraction sans clause retenue",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "uprofit-trader",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 67,
+      "newCScore": 67,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "wegetfunded",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 47,
+      "newCScore": 47,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "wemastertrade",
+      "archiveSourceListed": true,
+      "historicalProposal": "extraits relus à la main",
+      "publishedC": false,
+      "oldCScore": null,
+      "newCScore": null,
+      "reviewStage": "inventory-only",
+      "nextAction": "complete current contract and funded agreement before applying C"
+    },
+    {
+      "slug": "willis-capital",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 61,
+      "newCScore": 61,
+      "reviewStage": "previous-targeted-counteraudit",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    },
+    {
+      "slug": "wsfunded",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 64,
+      "newCScore": 62,
+      "reviewStage": "targeted-source-verified-score-correction",
+      "nextAction": "retain source/version; complete full coverage separately"
+    },
+    {
+      "slug": "x-funded",
+      "archiveSourceListed": true,
+      "historicalProposal": "contrat lu en entier",
+      "publishedC": true,
+      "oldCScore": 44,
+      "newCScore": 44,
+      "reviewStage": "additional-targeted-archive-text-screen",
+      "nextAction": "check unresolved contract, programme and source gaps"
+    }
+  ],
+  "unresolved": [
+    "Claude's current evidence/ceiling review not incorporated; no ceiling change.",
+    "Take Profit Trader: buffer confirmed; prior B3 and B4 require current cohort and same-program verification, no score change in this batch.",
+    "MyFundedFutures, Funding Pips, UProfit: least-restrictive main-programme mapping still open.",
+    "Orion, Bulenox: funded agreement availability and remedies unresolved.",
+    "DayTraders: §28 educational incentives may not be trading payouts; do not remove B6/raise until full scope and incident gate checked.",
+    "Willis Capital: B6 may be overly broad for malicious/false speech; stop-loss forfeiture candidate; no rise without incident check.",
+    "MyFundedCapital: archive returned a challenge page instead of terms.",
+    "Earn2Trade and Blue Guardian remain held; 93 historical non-C dossiers retain current pipeline and cap. 40 outside historical proposal require status reconciliation.",
+    "Fintokei archived V17 PDF is readable in repository; direct PDF URL did not load during public cross-check.",
+    "RBI list includes FTMO and FundedNext; Smart Prop Trader also listed but not in historical active proposal; no reopening or status change.",
+    "No automatic penalty for failed access or empty extraction."
+  ],
+  "priorReview": "https://github.com/adriengeyer02-bot/propradar/pull/296"
+}
