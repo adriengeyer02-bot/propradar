@@ -598,7 +598,7 @@
       ]
     },
     "tradeify": {
-      "checkedOn": "2026-11-19",
+      "checkedOn": "2026-11-27",
       "programs": [
         {
           "name": "Growth Evaluation",
@@ -632,7 +632,7 @@
           "billing": "one-time",
           "currency": "USD",
           "sourceUrl": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference",
-          "note": "40% best-day consistency; 50% add-on costs more. No activation charge. Select 300K has separate KYC and purchase restrictions.",
+          "note": "40% evaluation consistency. No activation fee. Select 300K separate.",
           "rows": [
             {
               "size": 25000,
@@ -640,7 +640,7 @@
             },
             {
               "size": 50000,
-              "price": 165
+              "price": 174
             },
             {
               "size": 100000,
@@ -649,10 +649,6 @@
             {
               "size": 150000,
               "price": 369
-            },
-            {
-              "size": 300000,
-              "price": 570
             }
           ]
         },
@@ -670,7 +666,7 @@
             },
             {
               "size": 50000,
-              "price": 205
+              "price": 216
             },
             {
               "size": 100000,
@@ -705,6 +701,46 @@
             {
               "size": 150000,
               "price": 796
+            }
+          ]
+        },
+        {
+          "name": "Select Evaluation — 30% consistency",
+          "productId": "tradeify-select-eval",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference",
+          "note": "30% evaluation consistency; no activation fee. Not the 300K plan.",
+          "rows": [
+            {
+              "size": 25000,
+              "price": 99
+            },
+            {
+              "size": 50000,
+              "price": 145
+            },
+            {
+              "size": 100000,
+              "price": 229
+            },
+            {
+              "size": 150000,
+              "price": 319
+            }
+          ]
+        },
+        {
+          "name": "Select 300K — permanent plan",
+          "productId": "tradeify-select-300k-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan",
+          "note": "No reset, activation or ongoing funded fees; pre-purchase identity verification required.",
+          "rows": [
+            {
+              "size": 300000,
+              "price": 570
             }
           ]
         }
@@ -1013,7 +1049,7 @@
       ]
     },
     "topstep": {
-      "checkedOn": "2026-11-09",
+      "checkedOn": "2026-11-27",
       "programs": [
         {
           "name": "Trading Combine – Standard Path",
@@ -1056,6 +1092,46 @@
             {
               "size": 150000,
               "price": 229
+            }
+          ]
+        },
+        {
+          "name": "Static Drawdown Trading Combine",
+          "productId": "topstep-static-combine-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+          "note": "90-day evaluation; free XFA activation; no reset. Permanent Labs offer.",
+          "rows": [
+            {
+              "size": 25000,
+              "price": 75
+            },
+            {
+              "size": 50000,
+              "price": 149
+            },
+            {
+              "size": 100000,
+              "price": 199
+            },
+            {
+              "size": 150000,
+              "price": 279
+            }
+          ]
+        },
+        {
+          "name": "Freedom Trading Combine 250K",
+          "productId": "topstep-freedom-250k-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+          "note": "90-day evaluation; free XFA activation; no reset.",
+          "rows": [
+            {
+              "size": 250000,
+              "price": 499
             }
           ]
         }
