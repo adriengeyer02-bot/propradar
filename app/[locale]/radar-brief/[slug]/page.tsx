@@ -21,6 +21,7 @@ import { getSeoGuideDisplay, getSeoGuidePath, seoGuides } from '../../../lib/seo
 import { SITE_NAME, SITE_URL } from '../../../lib/site';
 import { toEnglishText } from '../../../lib/i18n';
 import IntentLink from '../../../components/IntentLink';
+import { brandedTitle } from '../../../lib/seoTitle';
 
 export const revalidate = 86400;
 
@@ -52,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const path = getEditorialBriefPath(brief);
 
   return {
-    title: brief.title,
+    title: brandedTitle(brief.title),
     description: brief.description,
     keywords: brief.keywords,
     authors: [{ name: 'PropRadar Research', url: '/audit' }],

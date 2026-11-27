@@ -36,6 +36,17 @@ export const firmMetaOverrides: Partial<Record<string, FirmMetaOverride>> = {
     description: () =>
       'GOAT Funded Trader data file: legal entities, funded-account rules, payout terms, Trustpilot status and dated updates. Full review in the PropRadar guide.',
   },
+  // Search Console 26 Aug - 25 Nov 2026: "trustpilot topstep" and its variants
+  // = 2,118 impressions at position 5-7 with 0 clicks; /firm/topstep 2,504
+  // impressions, 1 click. The guide /guides/topstep-review targets
+  // "topstep review / legit"; the profile targets the Trustpilot data itself.
+  topstep: {
+    title: (firm) => (firm.trustpilotRating
+      ? `Topstep Trustpilot Rating ${firm.trustpilotRating}/5, Score & Payout Data`
+      : `Topstep Trustpilot Status, Score ${firm.score}/100 & Payout Data`),
+    description: (firm) =>
+      `${firm.trustpilotRating ? `Topstep on Trustpilot: ${firm.trustpilotRating}/5, as read by PropRadar` : 'Topstep Trustpilot status as read by PropRadar'}, next to its ${firm.score}/100 PropRadar score, legal entity, funded-account rules and payout terms.`,
+  },
   // "brightfunded review" (pos ~20), "brightfunded review 2026" (pos ~14)
   brightfunded: {
     title: (firm) => `BrightFunded Review 2026: Payouts & Score ${firm.score}/100`,

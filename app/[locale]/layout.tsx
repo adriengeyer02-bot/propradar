@@ -19,6 +19,7 @@ import { fmt, getMessages } from '../lib/messages';
 import { propFirms } from '../lib/propFirms';
 import { FOUNDER, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '../lib/site';
 import IntentLink from '../components/IntentLink';
+import { localizedPagePath } from '../lib/articlePaths';
 import { DISCORD_URL, communityCopy } from '../lib/community';
 
 const discordBannerInitScript = `
@@ -238,7 +239,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <IntentLink href={L('/prop-firm-comparison')}>{c.comparator}</IntentLink>
                 <Link href={L('/prop-firm-radar')}>{c.footer.radar}</Link>
                 <Link href={L('/guides')}>{c.guides}</Link>
-                <Link href={L('/best-prop-firms')}>{c.footer.best}</Link>
+                <Link href={localizedPagePath(locale, '/best-prop-firms')}>{c.footer.best}</Link>
                 <Link href={L('/prop-firm-challenge')}>{c.footer.challenge}</Link>
                 <IntentLink href={L('/tools')}>{c.footer.tools}</IntentLink>
               </nav>

@@ -14,6 +14,7 @@ import { getGuideLastModified, getGuidePublishedAt, getRelatedGuides, getSeoGuid
 import { FOUNDER, SITE_NAME, SITE_URL } from '../lib/site';
 import IntentLink from './IntentLink';
 import LanguageLink from './LanguageLink';
+import { brandedTitle } from '../lib/seoTitle';
 
 const TABLE_ROWS = 25;
 
@@ -32,7 +33,7 @@ function jsonLd(data: unknown) {
 export function localizedGuideMetadata(locale: Locale, guide: SeoGuide, translation: GuideTranslation): Metadata {
   const path = localizedGuidePath(locale, guide);
   return {
-    title: translation.title,
+    title: brandedTitle(translation.title),
     description: translation.metaDescription,
     authors: [{ name: 'PropRadar Research', url: localePath(locale, '/audit') }],
     creator: 'PropRadar Research',

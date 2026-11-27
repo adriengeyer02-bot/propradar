@@ -8,6 +8,7 @@
     "check:firm-rules-fr": "node scripts/check-firm-rule-fr.cjs",
     "check:price-tables": "node scripts/check-price-tables.cjs",
     "check:program-promos": "node scripts/check-program-promotions.cjs",
+    "check:seo": "npx tsx scripts/check-seo.ts",
     "start": "next start",
     "lint": "next lint"
   },

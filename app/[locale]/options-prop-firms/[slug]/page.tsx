@@ -22,9 +22,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!firm) return { title: 'Not found', robots: { index: false } };
   const audit = optionsAuditFor(slug)!;
   const path = `/options-prop-firms/${slug}`;
+  const a = optionsAuditCopy(locale);
+  // The audit summary exists in English and French only; other languages get a
+  // description built from their translated audit labels instead of English text.
+  const stop = locale === 'zh' || locale === 'ja' ? '。' : locale === 'hi' ? '। ' : locale === 'am' ? '። ' : '. ';
+  const summary = locale === 'en' ? audit.summary : locale === 'fr' ? audit.summaryFr : `${a.explained}${stop}${a.notice.split(/(?<=[.。।።])\s*/)[0]}`;
   return {
-    title: `${firm.name} — ${audit.score}/100 | Options | PropRadar`,
-    description: `${firm.name}: ${locale === 'fr' ? audit.summaryFr : audit.summary}`,
+    // The layout template adds "| PropRadar".
+    title: `${firm.name} — ${a.initial} ${audit.score}/100 | Options`,
+    description: `${firm.name}: ${summary}`,
     alternates: localeAlternates(locale, path),
     openGraph: { title: `${firm.name} — ${audit.score}/100`, url: `${SITE_URL}${localePath(locale, path)}`, type: 'article' },
   };

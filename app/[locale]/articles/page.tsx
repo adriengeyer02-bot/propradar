@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   description:
     'Guides PropRadar en français : meilleures prop firms 2026, règle de consistance, drawdown, prop firms sans challenge, avis Topstep et FTMO vs The5ers.',
   alternates: {
+    // French-only index: /guides already pairs with /fr/guides, so no hreflang pair here.
     canonical: '/fr/articles',
-    languages: { fr: '/fr/articles', en: '/guides', 'x-default': '/guides' },
   },
   openGraph: {
     title: 'Guides prop firm en français',

@@ -5,6 +5,7 @@ import { listedFirms } from '../../lib/propFirms';
 import { eligibilityFor } from '../../lib/countryEligibility';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
 import { isLocale, type Locale } from '../../lib/locales';
+import { brandedTitle } from '../../lib/seoTitle';
 
 const PATH = '/prop-firms-india';
 const TITLE = 'Prop Firms in India (2026): RBI Rules, Alert List and Which Firms Accept Indian Traders';
@@ -54,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const raw = (await params).locale;
   const locale: Locale = isLocale(raw) ? raw : 'en';
   return {
-    title: TITLE,
+    title: brandedTitle(TITLE),
     description: DESCRIPTION,
     alternates: { canonical: PATH },
     robots: locale === 'en' ? undefined : { index: false, follow: true },

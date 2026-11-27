@@ -15,6 +15,7 @@ import { toEnglishText } from '../../lib/i18n';
 import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, type Tone } from '../../lib/riskTone';
 import { localePath, type Locale } from '../../lib/locales';
 import type { Messages } from '../../lib/messages/en';
+import { localizedPagePath } from '../../lib/articlePaths';
 
 export type ComparatorUi = Pick<Messages, 'compare' | 'table' | 'values' | 'styles'>;
 
@@ -603,7 +604,7 @@ function SignalList({
 }) {
   return (
     <article className="pr-signal-list">
-      <h3><Link href={localePath(locale, href)}>{title}</Link></h3>
+      <h3><Link href={localizedPagePath(locale, href)}>{title}</Link></h3>
       <ul>
         {firms.map((firm) => (
           <li key={firm.slug}>

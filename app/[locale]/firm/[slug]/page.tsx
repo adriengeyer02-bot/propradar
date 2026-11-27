@@ -59,7 +59,7 @@ import {
 } from '../../../lib/propFirms';
 import { SITE_NAME, SITE_URL } from '../../../lib/site';
 import { getFirmRelatedGuides, getSeoGuideDisplay, getSeoGuidePath } from '../../../lib/seoGuides';
-import { guideCardText, localizedGuidePath } from '../../../lib/guideI18n';
+import { guideCardText, guideLocales, localizedGuidePath } from '../../../lib/guideI18n';
 import { getManualCommunityReview } from '../../../lib/manualCommunityReviews';
 import { getFirmContentLastModified, getFirmSearchProfile } from '../../../lib/firmSearchProfiles';
 import { td } from '../../../lib/dataI18n';
@@ -83,6 +83,7 @@ import { promoSale, publishedPairs } from '../../../lib/promoPricing';
 import FirmAtAGlance, { GLANCE_COPY } from '../../../components/FirmAtAGlance';
 import { getContractAudit } from '../../../lib/contractAudits';
 import { contractAuditCopy } from '../../../lib/contractAuditI18n';
+import { brandedTitle } from '../../../lib/seoTitle';
 
 type FirmT = Messages['firm'];
 
@@ -480,7 +481,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   )).toISOString();
 
   return {
-    title,
+    title: brandedTitle(title),
     description,
     keywords: [
       `${firm.name} review`,
@@ -594,7 +595,12 @@ export default async function FirmPage({ params }: Props) {
   const closure = firm.status === 'Fermée' ? getClosureRecord(firm.slug) : undefined;
   const searchProfile = getFirmSearchProfile(firm.slug);
   const auditCaseFile = getAuditCaseFile(firm.slug);
-  const relatedGuides = getFirmRelatedGuides(firm, 4);
+  // Prefer guides readable in the page language, so localized pages link to localized guides.
+  const relatedGuides = getFirmRelatedGuides(firm, 8)
+    .map((guide, rank) => ({ guide, rank: rank + (guideLocales(guide).includes(locale) ? 0 : 10) }))
+    .sort((a, b) => a.rank - b.rank)
+    .slice(0, 4)
+    .map(({ guide }) => guide);
   const editorialMentions = editorialBriefs.flatMap((brief) => brief.sections
     .filter((section) => section.firmSlugs.includes(firm.slug))
     .map((section) => ({ brief, section })))

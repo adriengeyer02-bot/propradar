@@ -14,6 +14,7 @@ import { SITE_NAME, SITE_URL } from '../../lib/site';
 import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, untranslatedRobots, type Locale } from '../../lib/locales';
 import { fmt } from '../../lib/messages';
 import { getPageMessages } from '../../lib/messages/pages/radar-brief';
+import { brandedTitle } from '../../lib/seoTitle';
 
 export const revalidate = 86400;
 
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale: Locale = isLocale(raw) ? raw : 'en';
   const b = getPageMessages(locale);
   return {
-    title: b.metaTitle,
+    title: brandedTitle(b.metaTitle),
     description: b.metaDescription,
     keywords:
       locale === 'en'

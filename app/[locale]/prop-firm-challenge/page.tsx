@@ -17,6 +17,7 @@ import { localizedGuidePath } from '../../lib/guideI18n';
 import { rich } from '../../lib/rich';
 import { td } from '../../lib/dataI18n';
 import IntentLink from '../../components/IntentLink';
+import { brandedTitle } from '../../lib/seoTitle';
 
 const PATH = '/prop-firm-challenge';
 const PUBLISHED_AT = '2026-10-29';
@@ -53,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = getMessages(locale).challenge;
   const description = fmt(c.metaDescription, { count: rows.length });
   return {
-    title: c.metaTitle,
+    title: brandedTitle(c.metaTitle),
     description,
     ...(locale === 'en'
       ? { keywords: ['prop firm challenge', 'prop firm challenge rules', 'prop firm challenge cost', 'cheapest prop firm challenge', '1-step vs 2-step challenge', 'futures prop firm evaluation'] }

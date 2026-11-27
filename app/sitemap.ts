@@ -22,10 +22,12 @@ function languageAlternates(path: string) {
     return { languages: Object.fromEntries(Object.entries(relative).map(([lang, href]) => [lang, `${SITE_URL}${href}`])) };
   }
   const languages: Record<string, string> = {};
+  // The home page is listed (and canonical) without a trailing slash: keep its alternates identical.
+  const absolute = (relative: string) => (relative === '/' ? SITE_URL : `${SITE_URL}${relative}`);
   for (const locale of LOCALES) {
-    if (isTranslatedPath(path, locale)) languages[HTML_LANG[locale]] = `${SITE_URL}${localePath(locale, path)}`;
+    if (isTranslatedPath(path, locale)) languages[HTML_LANG[locale]] = absolute(localePath(locale, path));
   }
-  languages['x-default'] = `${SITE_URL}${path}`;
+  languages['x-default'] = absolute(path);
   return { languages };
 }
 
@@ -63,6 +65,7 @@ const staticRoutes = [
   { path: '/prop-firm-challenge', priority: 0.9, lastModified: '2026-10-29' },
   { path: '/prop-firm-radar', priority: 0.9, lastModified: '2026-10-30' },
   { path: '/about', priority: 0.6, lastModified: '2026-10-30' },
+  { path: '/legal', priority: 0.3, lastModified: '2026-11-09' },
   { path: '/prop-firm-statistics', priority: 0.88, lastModified: '2026-10-29' },
   { path: '/prop-firms-india', priority: 0.86, lastModified: '2026-11-09' },
   { path: '/prop-firm-payout-risk', priority: 0.88, lastModified: '2026-07-13' },
@@ -117,7 +120,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(frArticles.reduce((latest, article) => (article.updated > latest ? article.updated : latest), '2026-01-01')),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
-      alternates: { languages: { fr: `${SITE_URL}/fr/articles`, en: `${SITE_URL}/guides` } },
     },
     ...frArticles.map((article) => ({
       url: `${SITE_URL}/fr/${article.slug}`,

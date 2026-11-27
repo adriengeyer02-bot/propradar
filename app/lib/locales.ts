@@ -78,7 +78,8 @@ const TRANSLATED = [
   /^\/prop-firm-payout-risk$/,
   /^\/radar-brief$/,
   // French-only articles (app/lib/frArticles.ts) and their index: written in French.
-  /^\/(articles|meilleures-prop-firms-2026|prop-firm-sans-challenge|regle-de-consistance-prop-firm|drawdown-prop-firm|avis-topstep|ftmo-vs-the5ers)$/,
+  // Keep in step with frArticles (scripts/check-seo.ts fails otherwise).
+  /^\/(articles|meilleures-prop-firms-2026|prop-firm-sans-challenge|regle-de-consistance-prop-firm|drawdown-prop-firm|avis-topstep|ftmo-vs-the5ers|regles-cachees-prop-firm)$/,
 ];
 
 // New languages are introduced on the main decision surfaces first.
