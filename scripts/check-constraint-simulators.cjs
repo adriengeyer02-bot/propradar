@@ -37,8 +37,13 @@ assert.equal(programmeFlexibility(getProgrammeEvidence('ftmo','ftmo-one-step-cur
 assert.equal(programmeFlexibility(getProgrammeEvidence('ftmo','ftmo-one-step-current')).stars,3.5);
 assert.equal(programmeFlexibility(getProgrammeEvidence('ftmo','ftmo-two-step-current')).stars,4.5);
 assert.equal(programmeFlexibility(getProgrammeEvidence('ftmo','ftmo-instant-current')).stars,2);
+assert.equal(programmeFlexibility(getProgrammeEvidence('fundednext','fundednext-stellar-one-current')).stars,4);
+assert.equal(programmeFlexibility(getProgrammeEvidence('fundednext','fundednext-stellar-two-current')).stars,3.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('fundednext','fundednext-stellar-lite-current')).stars,4);
+assert.equal(programmeFlexibility(getProgrammeEvidence('the5ers','the5ers-bootcamp-current')).stars,null);
+assert.equal(programmeFlexibility(getProgrammeEvidence('the5ers','the5ers-high-stakes-current')).stars,null);
 const a={points:0.5,source:'https://example.com',reason:'documented test fixture'};
 const complete={checkedOn:'2026-11-27',scope:'test',assessments:{drawdown:a,payout:a,consistency:a,trading:a,funded:a}};
 assert.equal(programmeFlexibility(complete).stars,2.5);
 assert.equal(programmeFlexibility({...complete,assessments:{...complete.assessments,payout:{...a,source:''}}}).stars,null);
-console.log('Constraint simulators and evidence gating: 27 checks OK');
+console.log('Constraint simulators and evidence gating: 32 checks OK');
