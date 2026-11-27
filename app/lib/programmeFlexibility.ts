@@ -1303,6 +1303,368 @@ Object.assign(evidence, {
     }
   }
 });
+
+// Batch 6 — scoped funded-stage product evidence.
+Object.assign(evidence, {
+  "oneup-trader": {
+    "oneup-standard-current": {
+      "checkedOn": "2026-11-27",
+      "scope": "Standard Evaluation → funded account, published funding-partner rules; verify individual contract.",
+      "scopeFr": "Standard Evaluation → compte financé ; règles publiques du partenaire, contrat individuel à vérifier.",
+      "assessments": {
+        "drawdown": {
+          "points": 0,
+          "source": "https://help.oneuptrader.com/article/388-funded-trader-trailing-drawdown",
+          "reason": "Real-time trailing loss floor, stops at initial balance."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.oneuptrader.com/article/376-profit-info",
+          "reason": "Size-dependent retained threshold $1,500–$5,500; $1,000 minimum trader share, one free request per week; extra requests cost 10%."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+          "reason": "No numerical best-day ratio listed in funded rules; evaluation concentration test and funded activity requirements are separate."
+        },
+        "trading": {
+          "points": 0,
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+          "reason": "Trading around designated news requires flat positions; activity under ten seconds prohibited, with no stated protective-exit exception."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+          "reason": "Weekly executions must reach half the evaluation weekly average; positive account P&L required at 15-day intervals during 90-day probation, discretionary warnings; scaling limits."
+        }
+      }
+    },
+    "oneup-pro-current": {
+      "checkedOn": "2026-11-27",
+      "scope": "Pro Evaluation → funded account, published funding-partner rules; verify individual contract.",
+      "scopeFr": "Pro Evaluation → compte financé ; règles publiques du partenaire, contrat individuel à vérifier.",
+      "assessments": {
+        "drawdown": {
+          "points": 0,
+          "source": "https://help.oneuptrader.com/article/388-funded-trader-trailing-drawdown",
+          "reason": "Real-time trailing loss floor, stops at initial balance."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.oneuptrader.com/article/376-profit-info",
+          "reason": "Size-dependent retained threshold $1,500–$5,500; $1,000 minimum trader share, one free request per week; extra requests cost 10%."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+          "reason": "No numerical best-day ratio listed in funded rules; evaluation concentration test and funded activity requirements are separate."
+        },
+        "trading": {
+          "points": 0,
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+          "reason": "Trading around designated news requires flat positions; activity under ten seconds prohibited, with no stated protective-exit exception."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+          "reason": "Weekly executions must reach half the evaluation weekly average; positive account P&L required at 15-day intervals during 90-day probation, discretionary warnings; scaling limits."
+        }
+      }
+    },
+    "oneup-express-return": {
+      "checkedOn": "2026-11-27",
+      "scope": "Express requalification for former funded traders only, subsequent funded stage.",
+      "scopeFr": "Express réservé aux anciens traders financés éligibles ; phase financée après requalification.",
+      "assessments": {
+        "drawdown": {
+          "points": 0,
+          "source": "https://help.oneuptrader.com/article/388-funded-trader-trailing-drawdown",
+          "reason": "Real-time trailing loss floor, stops at initial balance."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://help.oneuptrader.com/article/376-profit-info",
+          "reason": "Size-dependent retained threshold $1,500–$5,500; $1,000 minimum trader share, one free request per week; extra requests cost 10%."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+          "reason": "No numerical best-day ratio listed in funded rules; evaluation concentration test and funded activity requirements are separate."
+        },
+        "trading": {
+          "points": 0,
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+          "reason": "Trading around designated news requires flat positions; activity under ten seconds prohibited, with no stated protective-exit exception."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+          "reason": "Same funded activity/probation restrictions; Express funded traders limited to one account."
+        }
+      }
+    }
+  },
+  "tradeday": {
+    "tradeday-quick-pay": {
+      "checkedOn": "2026-11-27",
+      "scope": "TradeDay 2.0 Quick Pay, all current evaluation drawdown paths; Funded Sim stage.",
+      "scopeFr": "TradeDay 2.0 Quick Pay : toutes variantes d'évaluation, phase financée simulée.",
+      "assessments": {
+        "drawdown": {
+          "points": 0,
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889",
+          "reason": "All Quick Pay funded sim accounts switch to intraday trailing, even if EOD in evaluation."
+        },
+        "payout": {
+          "points": 1,
+          "source": "https://www.tradeday.com/",
+          "reason": "Day-one eligible request, no buffer, $250 minimum and no published per-cycle cap; separate 50/50 below $4K and 80/20 above profit split."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://www.tradeday.com/",
+          "reason": "No funded sim consistency ratio; 30% evaluation rule not carried forward."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889",
+          "reason": "Price-limit proximity ban, specified product/session and tier-one news constraints; certain breach profits not payable."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000250682",
+          "reason": "Mandatory live progression based on gross profit; remaining profit transfers after split with no extra drawdown allocation, and requalification can be restricted after large withdrawals."
+        }
+      },
+      "preset": {
+        "drawdown": "intraday",
+        "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889"
+      }
+    },
+    "tradeday-fast-pass": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Fast Pass opened on or after 26 July 2026; Funded Sim stage.",
+      "scopeFr": "Fast Pass ouvert à partir du 26 juillet 2026 ; phase financée simulée.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy",
+          "reason": "EOD trailing, locks at initial balance on first withdrawal if not already there."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy",
+          "reason": "Five new qualifying days per cycle ($100–$250 each), positive profit since last payout, 50% withdrawal limit plus $750–$2,250 tier cap; trading pauses until paid."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy",
+          "reason": "45% of lifetime gross profits (current profit plus prior payouts) after 26 July; not a per-cycle net denominator."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889",
+          "reason": "Price-limit proximity and tier-one news restrictions; simulated profits not automatically returned after account loss."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000250682",
+          "reason": "Fifth payout triggers Funded Live at zero balance, same EOD loss allocation; separate requalification restrictions."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 80,
+        "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy"
+      }
+    }
+  },
+  "blusky-trading": {
+    "blusky-launch": {
+      "checkedOn": "2026-11-27",
+      "scope": "Launch 50/100/200K after Buffer, Sim Funded, October 2026 transition policy; evaluation consistency source conflict does not change funded rating.",
+      "scopeFr": "Launch 50/100/200K après Buffer, phase financée simulée ; politique d'octobre 2026.",
+      "assessments": {
+        "drawdown": {
+          "points": 1,
+          "source": "https://help.blusky.pro/en/articles/12434469-sim-funded-accounts-processing",
+          "reason": "After Buffer, Sim Funded uses fixed minimum balance; evaluation drawdown may trail."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+          "reason": "$500 minimum and $500 additional ordinary trading profit between requests, rolling seven-day caps and non-withdrawable buffer."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.blusky.pro/en/articles/14184170-evaluation-overview",
+          "reason": "No Sim Funded percentage consistency for Launch or Propel."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+          "reason": "Platform-dependent scaling, assigned contract limits, additional risk controls and restrictions may be imposed; profits outside limits may be adjusted."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account",
+          "reason": "Standard $10K aggregate profit review may pause trading and payouts; all sim accounts cease eligibility on live invitation; eligible profit enters separate Bonus Vault, live starts at zero."
+        }
+      },
+      "preset": {
+        "drawdown": "static",
+        "source": "https://help.blusky.pro/en/articles/12434469-sim-funded-accounts-processing"
+      }
+    },
+    "blusky-propel-current": {
+      "checkedOn": "2026-11-27",
+      "scope": "Propel 25–300K after Buffer, Sim Funded; excess Buffer profit not carried over.",
+      "scopeFr": "Propel 25–300K après Buffer ; l'excédent du profit Buffer n'est pas transféré.",
+      "assessments": {
+        "drawdown": {
+          "points": 1,
+          "source": "https://help.blusky.pro/en/articles/12434469-sim-funded-accounts-processing",
+          "reason": "After Buffer, Sim Funded uses fixed minimum balance; evaluation drawdown may trail."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+          "reason": "$500 minimum and $500 additional ordinary trading profit between requests, rolling seven-day caps and non-withdrawable buffer."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.blusky.pro/en/articles/14184170-evaluation-overview",
+          "reason": "No Sim Funded percentage consistency for Launch or Propel."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+          "reason": "Platform-dependent scaling, assigned contract limits, additional risk controls and restrictions may be imposed; profits outside limits may be adjusted."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account",
+          "reason": "Mandatory $10K total-profit review, risk controls and loss of sim payout eligibility on live invitation; Bonus Vault separate from live capital."
+        }
+      },
+      "preset": {
+        "drawdown": "static",
+        "source": "https://help.blusky.pro/en/articles/12434469-sim-funded-accounts-processing"
+      }
+    },
+    "blusky-orbit-current": {
+      "checkedOn": "2026-11-27",
+      "scope": "Orbit 50/100/150/200K, Sim Funded; plan-specific payout cadence and live ceilings.",
+      "scopeFr": "Orbit 50/100/150/200K, phase financée simulée ; seuils de retrait et de passage en réel par taille.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts",
+          "reason": "Funded floor follows closed daily profit until locked at initial capital."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts",
+          "reason": "Payout every three trading days above retained threshold, $500 minimum, rolling caps $2K–$3K depending on tier; general $500 fresh-profit rule also applies."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts",
+          "reason": "40% best day / net total profit; exceeding delays payout, not account failure."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+          "reason": "Platform-dependent scaling, assigned contract limits, additional risk controls and restrictions may be imposed; profits outside limits may be adjusted."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account",
+          "reason": "Orbit profit ceilings $10K/$12.5K/$15K/$12.5K; review can occur earlier, payouts held and sim accounts cease on live invitation."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts"
+      }
+    },
+    "blusky-instant-sim-current": {
+      "checkedOn": "2026-11-27",
+      "scope": "50K Instant Sim Funded; not Orbit evaluation.",
+      "scopeFr": "Instant Sim Funded 50K ; distinct du challenge Orbit.",
+      "assessments": {
+        "drawdown": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+          "reason": "$2K intraday trailing, locks at $51K after balance exceeds $53K; $1K daily loss limit."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+          "reason": "Only above $53K, rolling $2.5K cap; general fresh-profit requirement."
+        },
+        "consistency": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+          "reason": "21% best day / net total profit at payout eligibility."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+          "reason": "Platform-dependent scaling, assigned contract limits, additional risk controls and restrictions may be imposed; profits outside limits may be adjusted."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account",
+          "reason": "Standard $10K aggregate profit review may pause trading and payouts; all sim accounts cease eligibility on live invitation; eligible profit enters separate Bonus Vault, live starts at zero."
+        }
+      },
+      "preset": {
+        "drawdown": "intraday",
+        "lossPercent": 4,
+        "profitSplit": 80,
+        "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded"
+      }
+    },
+    "blusky-direct-funded-current": {
+      "checkedOn": "2026-11-27",
+      "scope": "Direct to Funded $3,500 account, not conventional nominal 50K account.",
+      "scopeFr": "Direct to Funded, capital affiché de 3 500 $, distinct du compte nominal 50K.",
+      "assessments": {
+        "drawdown": {
+          "points": 1,
+          "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+          "reason": "$2.5K static loss limit, $1K minimum balance and $2K daily loss limit."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+          "reason": "Withdraw only above $3.5K, $3K rolling weekly cap, split 50% first 30 trading days then 80%."
+        },
+        "consistency": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+          "reason": "21% net profit best-day ratio."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+          "reason": "Platform-dependent scaling, assigned contract limits, additional risk controls and restrictions may be imposed; profits outside limits may be adjusted."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+          "reason": "Fourth negative trading day in any rolling ten traded days closes account; standard brokerage review also applies."
+        }
+      },
+      "preset": {
+        "drawdown": "static",
+        "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded"
+      }
+    }
+  }
+});
 export const CRITERIA
 :Criterion[]=['drawdown','payout','consistency','trading','funded'];
 export function getProgrammeEvidence(slug:string,id:string,variant?:string){return variant?getProgrammeVariants(slug,id).find(x=>x.id===variant)?.evidence:evidence[slug]?.[id]}
