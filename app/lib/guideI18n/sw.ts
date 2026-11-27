@@ -692,6 +692,127 @@ const sw: GuideTranslations = {
         }
       ]
     }
+  },
+  "meilleure-prop-firm-2026": {
+    "title": "Prop firm bora kwa sasa: orodha ya 2026 inayotanguliza hatari",
+    "metaDescription": "Prop firm bora kwa sasa ni zipi? Linganisha kampuni zinazoongoza kwa uaminifu wa malipo, uwazi wa masharti, ushahidi wa kisheria, drawdown na ishara za jumuiya.",
+    "eyebrow": "Orodha kuu",
+    "h1": "Prop firm bora kwa sasa: orodha ya 2026 inayotanguliza hatari",
+    "answer": "Prop firm bora kwa sasa ni zile zenye malipo yanayoaminika, masharti yanayoeleweka, uwazi wa kisheria na ushahidi wa kutosha wa karibuni. PropRadar hupanga data ya sasa kwa hatari kabla ya ukubwa wa akaunti au punguzo.",
+    "checks": [
+      "Linganisha uaminifu wa malipo kabla ya ukubwa wa akaunti.",
+      "Thibitisha masharti ya programu husika, si jina la kampuni pekee.",
+      "Linganisha Trustpilot, Reddit, X na Discord kwa sababu kila chanzo kina upendeleo tofauti.",
+      "Chunguza aina ya drawdown na sera ya trading wakati wa habari, hasa kwa mtindo wa ndani ya siku au SMC/ICT.",
+      "Thibitisha kama kuna sharti la uthabiti au ukomo wa faida ya siku.",
+      "Chunguza kiwango cha chini cha malipo ikiwa mkakati wako una faida ndogo nyingi.",
+      "Soma masharti ya scaling na kutoa fedha baada ya ufadhili."
+    ],
+    "faq": [
+      {
+        "question": "Prop firm nzuri mwaka 2026 ina sifa gani?",
+        "answer": "Malipo yanayoaminika, masharti wazi na thabiti, maoni ya kutosha ya umma na programu inayolingana na mtindo wako. Akaunti kubwa hailipii masharti yasiyoeleweka ya kutoa fedha."
+      },
+      {
+        "question": "Je, nichague kampuni yenye punguzo kubwa zaidi?",
+        "answer": "Hapana. Punguzo lina manufaa tu ikiwa masharti, drawdown, utaratibu wa malipo na masharti ya ufadhili yanaendana na mkakati wako."
+      },
+      {
+        "question": "Prop firm bora kwa sasa ni zipi?",
+        "answer": "PropRadar kwa sasa huweka kampuni zilizodumu na zenye vyanzo vizuri kama FTMO, The5ers na Topstep karibu na mwanzo wa ulinganisho. Orodha inayokufaa bado hutegemea soko, drawdown, jukwaa, muda wa malipo na masharti ya programu."
+      }
+    ],
+    "article": {
+      "intro": "Hakuna prop firm moja iliyo bora kwa kila mtu. Kuna kampuni bora **kwa soko lako, mtindo wako wa trading** na kiwango cha hatari unachokubali kutoka kwa mwendeshaji. Orodha hii huanza na jambo hilo: kabla ya kulinganisha mgawo wa faida na punguzo, inachunguza kama kampuni itaendelea **kuwepo na kulipa** wakati unapohitaji.",
+      "keyPoints": [
+        "Chuja kwa mpangilio huu: **soko → masharti → gharama halisi → misimbo ya punguzo**.",
+        "Alama huzingatia **uwazi wa masharti, ushahidi wa malipo, uwazi wa kisheria, maoni ya umma na historia**.",
+        "Viungo vya ushirika **havibadilishi alama kamwe**.",
+        "Alama hubadilika ushahidi unapobadilika, na kila mabadiliko **yana tarehe** kwenye wasifu."
+      ],
+      "sections": [
+        {
+          "heading": "Jinsi orodha hii inavyoundwa",
+          "paragraphs": [
+            "Kila kampuni katika PropRadar hupata **alama kati ya 100** kutokana na uwazi wa masharti, ushahidi wa malipo, uwazi wa kisheria, ishara za maoni ya umma na historia ya uendeshaji. Viungo vya ushirika huwekwa wazi katika kila wasifu na **havibadilishi alama kamwe**. Kampuni mshirika huendelea kuonyesha udhaifu wake, na kampuni isiyo mshirika inaweza kuwa ya kwanza.",
+            "Katika sasisho la makala la 12 Novemba 2026, alama za juu zilikuwa za kampuni zilizodumu: **FTMO (91/100), The5ers (85/100) na Topstep (84/100)**. Siyo kampuni za bei nafuu zaidi. Zilikuwa na historia ndefu zaidi ya umma, masharti yanayoeleweka zaidi na ishara chache zaidi za matatizo ya malipo ambayo hayajatatuliwa kwenye faili za PropRadar."
+          ]
+        },
+        {
+          "heading": "Anza na soko lako",
+          "paragraphs": [
+            "Trader wa forex/CFD na wa futures hawatafuti bidhaa katika soko lilelile. **Kampuni bora ya futures haimsaidii trader wa forex**, kwa hiyo chuja kwa soko kwanza."
+          ],
+          "compare": {
+            "columns": [
+              "Forex / CFD",
+              "Futures"
+            ],
+            "rows": [
+              {
+                "label": "Majukwaa",
+                "values": [
+                  "MT5, cTrader",
+                  "Majukwaa ya futures"
+                ]
+              },
+              {
+                "label": "Vikomo",
+                "values": [
+                  "**% ya akaunti**",
+                  "**Kiasi cha dola**"
+                ]
+              },
+              {
+                "label": "Drawdown",
+                "values": [
+                  "Mara nyingi static kwenye challenge za hatua mbili",
+                  "Mara nyingi **trailing**"
+                ]
+              },
+              {
+                "label": "Mifano",
+                "values": [
+                  "FTMO, The5ers",
+                  "Topstep"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "heading": "Kisha linganisha masharti na mtindo wako",
+          "paragraphs": [
+            "Masharti yanayomaliza akaunti nyingi **si malengo ya faida**. Ni aina ya drawdown, kikomo cha hasara ya siku, uthabiti, vizuizi vya habari na kushikilia positions. Scalper anahitaji utekelezaji wa haraka bila muda wa chini wa trade. Swing trader anahitaji kushikilia usiku na wikendi. Trader wa habari anahitaji kampuni inayoruhusu trading wakati wa habari **kwenye akaunti iliyofadhiliwa**, si tathmini pekee."
+          ],
+          "bullets": [
+            "**Drawdown:** static ni rahisi kudhibiti kuliko trailing.",
+            "**Uthabiti:** angalia kama unatumika katika tathmini, malipo au vyote.",
+            "**Habari na kushikilia:** thibitisha masharti ya ufadhili ambayo mara nyingi ni makali zaidi.",
+            "**Malipo:** marudio, kiwango cha chini, ukomo wa malipo ya kwanza na ada za kushughulikia."
+          ]
+        },
+        {
+          "heading": "Hatimaye, linganisha gharama halisi",
+          "paragraphs": [
+            "Gharama halisi ya prop firm ni **fedha unazotumia kabla ya malipo yako ya kwanza**: ada za challenge, reset, uanzishaji na akaunti mbadala, ukiondoa marejesho yoyote. Challenge nafuu yenye drawdown kali inaweza kugharimu zaidi kuliko challenge ya bei kubwa ambayo una uwezekano wa kupita."
+          ]
+        },
+        {
+          "heading": "Ni nini kingeshusha kampuni kwenye orodha hii?",
+          "paragraphs": [
+            "Alama hubadilika ushahidi unapobadilika. Kila mabadiliko **yana tarehe katika historia ya wasifu** ili uone sababu na wakati. Yanayoshusha alama:"
+          ],
+          "bullets": [
+            "**Onyo la mdhibiti**",
+            "**Ucheleweshaji wa malipo unaojirudia**",
+            "**Mabadiliko ya masharti yanayotumika kwa akaunti zilizopo**",
+            "Domain **inayoacha kuhudumia kampuni**",
+            "Uwazi mdogo kuhusu **kampuni ya kisheria**"
+          ]
+        }
+      ]
+    }
   }
 };
 
