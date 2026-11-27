@@ -286,15 +286,37 @@
       ]
     },
     "take-profit-trader": {
-      "checkedOn": "2026-11-19",
+      "checkedOn": "2026-11-27",
       "programs": [
         {
-          "name": "TEST — standard monthly subscription",
-          "productId": "tpt-test",
+          "name": "Intraday — monthly Test",
+          "productId": "tpt-intraday-2026",
           "billing": "monthly",
           "currency": "USD",
-          "sourceUrl": "https://takeprofittrader.com/",
-          "note": "Regular monthly TEST subscription (NOT a one-time fee). Official NOFEE40 code advertises 40% off for the life of eligible new TEST subscriptions and a PRO activation-fee waiver; verify both at checkout. Resets are separate.",
+          "sourceUrl": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40866422052125-Intraday-Plan-Overview-Specifications",
+          "note": "Monthly subscription; $130 PRO activation fee is separate (waived with current eligible NOFEE40 promotion). Resets separate. Legacy purchases before 23 November 2026 keep original terms.",
+          "rows": [
+            {
+              "size": 25000,
+              "price": 110
+            },
+            {
+              "size": 50000,
+              "price": 150
+            },
+            {
+              "size": 150000,
+              "price": 360
+            }
+          ]
+        },
+        {
+          "name": "Classic — monthly Test",
+          "productId": "tpt-classic-2026",
+          "billing": "monthly",
+          "currency": "USD",
+          "sourceUrl": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40866438124957-Classic-Plan-Overview-Specifications",
+          "note": "Monthly subscription; $130 PRO activation fee is separate (waived with current eligible NOFEE40 promotion). Resets separate. Legacy purchases before 23 November 2026 keep original terms.",
           "rows": [
             {
               "size": 25000,
@@ -305,16 +327,30 @@
               "price": 170
             },
             {
-              "size": 75000,
-              "price": 245
+              "size": 150000,
+              "price": 465
+            }
+          ]
+        },
+        {
+          "name": "EOD — monthly Test",
+          "productId": "tpt-eod-2026",
+          "billing": "monthly",
+          "currency": "USD",
+          "sourceUrl": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/40866438043037-EOD-Plan-Overview-Specifications",
+          "note": "Monthly subscription; $130 PRO activation fee is separate (waived with current eligible NOFEE40 promotion). Resets separate. Legacy purchases before 23 November 2026 keep original terms.",
+          "rows": [
+            {
+              "size": 25000,
+              "price": 160
             },
             {
-              "size": 100000,
-              "price": 330
+              "size": 50000,
+              "price": 209
             },
             {
               "size": 150000,
-              "price": 360
+              "price": 499
             }
           ]
         }
@@ -1026,14 +1062,14 @@
       ]
     },
     "alpha-futures": {
-      "checkedOn": "2026-11-09",
+      "checkedOn": "2026-11-27",
       "programs": [
         {
           "name": "Zero",
           "productId": "alpha-futures-zero",
           "billing": "monthly",
           "currency": "USD",
-          "sourceUrl": "https://alpha-futures.com/",
+          "sourceUrl": "https://help.alpha-futures.com/en/articles/11771813-zero-account-overview",
           "note": "No fee once qualified.",
           "rows": [
             {
@@ -1055,7 +1091,7 @@
           "productId": "alpha-futures-standard",
           "billing": "monthly",
           "currency": "USD",
-          "sourceUrl": "https://alpha-futures.com/",
+          "sourceUrl": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview",
           "rows": [
             {
               "size": 50000,
@@ -1075,7 +1111,7 @@
           "name": "Advanced",
           "billing": "monthly",
           "currency": "USD",
-          "sourceUrl": "https://alpha-futures.com/product/advanced",
+          "sourceUrl": "https://help.alpha-futures.com/en/articles/11634907-advanced-account-overview",
           "note": "No fee once qualified.",
           "rows": [
             {
@@ -1090,13 +1126,14 @@
               "size": 150000,
               "price": 489
             }
-          ]
+          ],
+          "productId": "alpha-futures-advanced"
         },
         {
           "name": "Direct",
           "billing": "one-time",
           "currency": "USD",
-          "sourceUrl": "https://alpha-futures.com/",
+          "sourceUrl": "https://help.alpha-futures.com/en/articles/15838742-direct-account-overview",
           "rows": [
             {
               "size": 25000,
@@ -1114,7 +1151,8 @@
               "size": 150000,
               "price": 859
             }
-          ]
+          ],
+          "productId": "alpha-futures-direct"
         }
       ]
     },
