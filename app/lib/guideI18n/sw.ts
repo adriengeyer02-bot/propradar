@@ -1409,6 +1409,490 @@ const sw: GuideTranslations = {
         }
       ]
     }
+  },
+  "prop-firm-hidden-rules": {
+    "title": "Masharti ya prop firm yanayokosekana kwa urahisi 2026: vipengele 9 kabla ya kununua",
+    "metaDescription": "Prop firm zipi zina vizuizi vya VPN au VPS? Linganisha sera zenye vyanzo za GFT, FundingPips, Topstep na nyingine 8, pamoja na habari na nchi, 2026.",
+    "eyebrow": "Uchunguzi huru wa masharti",
+    "h1": "Masharti yaliyofichika ya prop firm: ambayo ukurasa wa mauzo hauelezi",
+    "answer": "Sheria si lazima iwe siri kwa sababu tu ni vigumu kuipata. Kabla ya kununua, linganisha masharti kamili ya funded, ustahiki wa tuzo, madirisha ya habari, uthabiti, vizuizi vya maeneo na zana zilizokatazwa. PropRadar inaunganisha moja kwa moja masharti yaliyochapishwa, pamoja na ya washirika wake.",
+    "checks": [
+      "Hifadhi sheria halisi, modeli na tarehe kabla ya kulipa; muhtasari wa matangazo si mkataba.",
+      "Chunguza tathmini dhidi ya funded, hasa habari, kushikilia, uthabiti na vikomo vya malipo.",
+      "Thibitisha makazi, uraia, jukwaa, KYC na upatikanaji wa mtoa huduma wa malipo.",
+      "Tafuta vifungu vya kukataa tuzo kwa hiari, kufunga akaunti, kutofanya biashara na mikakati iliyokatazwa."
+    ],
+    "faq": [
+      {
+        "question": "Je, masharti haya yamefichwa kweli?",
+        "answer": "Kwa kawaida mifano imechapishwa katika FAQ au mikataba rasmi. Tatizo ni kwamba ukurasa wa mauzo unaweza kuyaacha au mipango tofauti ina masharti tofauti. Tunayaita masharti ambayo ni rahisi kutoyatambua, si ushahidi wa kuyaficha kwa makusudi."
+      },
+      {
+        "question": "Kuna prop firm bila masharti yaliyofichwa?",
+        "answer": "Hakuna ulinganisho wa umma unaoweza kuhakikishia hivyo. Pendelea kampuni yenye mkataba kamili, wenye tarehe na unaotafutika, majibu thabiti ya support na vigezo wazi vya malipo."
+      },
+      {
+        "question": "Prop firms zipi zinakataza VPN au VPS?",
+        "answer": "16 Novemba 2026 GOAT Funded Trader na FundingPips zilikataza zote mbili kwa ufikiaji wa biashara. Topstep inakataza VPN na uelekezaji wa oda kupitia VPS. FundedNext, Alpha Capital Group na Tradeify zina masharti; FTMO CFD na Blue Guardian 1-Step Standard kwa kawaida zinaruhusu chini ya vizuizi vilivyotajwa. Kila sera ina kiungo kwenye jedwali."
+      },
+      {
+        "question": "Habari zinaweza kuruhusiwa katika tathmini lakini kuzuiwa baada ya ufadhili?",
+        "answer": "Ndiyo. E8 Classic, BrightFunded CFD, Blue Guardian 1-Step Standard na baadhi ya programu za FundingPips hubadilisha matibabu ya faida ya dirisha la habari baada ya ufadhili. Chunguza programu na hatua, si kaulimbiu ya chapa."
+      },
+      {
+        "question": "PropRadar inakosoa washirika wake wa affiliate?",
+        "answer": "Ndiyo. Uhusiano wa kibiashara haubadili alama wala kuondoa vizuizi vya mkataba vilivyoandikwa."
+      }
+    ],
+    "article": {
+      "intro": "Prop firm inaweza kutangaza mgawanyo mkubwa wa faida na challenge rahisi, huku mkataba unaofunga ukiwa na masharti yanayobadilisha sana wakati unaoweza kutoa pesa. Haya ni **masharti ambayo ni rahisi kutoyatambua**, si lazima kampuni iwe imeyaficha kwa makusudi: mifano hapa inatoka katika nyaraka za umma za kampuni zenyewe. **Tunajumuisha washirika wa affiliate wa PropRadar.** Hakuna nafasi kwenye orodha wala kamisheni inayoweza kununua msamaha wa uchunguzi.",
+      "keyPoints": [
+        "**Masharti ya tathmini si lazima yawe masharti ya akaunti iliyofadhiliwa.** Habari, saa za biashara na uthabiti vinaweza kubadilika baada ya kufaulu.",
+        "**Faida kwenye dashboard si tuzo inayolipwa moja kwa moja.** Baadhi ya programu huondoa faida au huweka masharti tofauti ya kustahili.",
+        "**Makazi, uraia, eneo na mtoa huduma wa malipo vinaweza kutofautiana.** Ununuzi uliofanikiwa hauthibitishi kustahili malipo baadaye.",
+        "**Kila mfano wenye jina hapa una kiungo cha sera halisi ya kampuni** iliyokaguliwa 16 Novemba 2026."
+      ],
+      "sections": [
+        {
+          "heading": "1. Habari zinaruhusiwa katika tathmini, lakini faida hukatwa baada ya ufadhili",
+          "paragraphs": [
+            "E8 Markets inasema biashara wakati wa habari haina vizuizi katika **tathmini ya E8 Classic**. Hata hivyo, katika akaunti ya Classic SimFi Performance, **40% tu ya faida iliyopatikana katika dirisha la habari ndiyo inayostahili**. Bidhaa tofauti ya E8 One inakataza vitendo fulani katika dirisha la habari kwenye akaunti za performance, huku E8 Pro ikiruhusu biashara wakati wa habari. Ni sheria tatu tofauti ndani ya chapa moja.",
+            "FundingPips pia hutenganisha tathmini na hatua za Master. Katika modeli kadhaa za Master, faida ya kufungua au kufunga nafasi ndani ya vipindi vilivyowekwa vya habari zenye athari kubwa inaweza **kukatwa**, isipokuwa nafasi zilizofunguliwa angalau saa tano kabla ya tukio. FundingPips Zero ina vizuizi vikali zaidi. Usichukulie tangazo la tathmini kama ruhusa ya hatua ya ufadhili."
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Jukwaa kukuruhusu kubofya Buy au Sell **hakumaanishi mkataba unaruhusu biashara hiyo**. Thibitisha modeli, kalenda ya matukio na saa kabla ya biashara."
+          }
+        },
+        {
+          "heading": "Rejesta ya masharti ya habari: tathmini dhidi ya ufadhili (vyanzo rasmi)",
+          "paragraphs": [
+            "Haya ni **makundi kumi ya programu tuliyokagua**, si orodha ya jumla ya marufuku. Ruhusa ya kushikilia nafasi wakati wa tangazo si sawa na ruhusa ya kufungua biashara ili kutumia mruko wa bei. Masharti haya yanahusu **programu na hatua zilizotajwa**, si kila bidhaa ya kampuni."
+          ],
+          "compare": {
+            "columns": [
+              "Hatua ya tathmini",
+              "Hatua iliyohitimu / iliyofadhiliwa"
+            ],
+            "rows": [
+              {
+                "label": "E8 Classic",
+                "values": [
+                  "Habari bila vizuizi",
+                  "**40% ya faida katika dirisha la habari ndiyo inayostahili**"
+                ],
+                "sourceUrl": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news"
+              },
+              {
+                "label": "E8 One",
+                "values": [
+                  "Habari bila vizuizi",
+                  "**Hakuna biashara ±dakika 5 za habari zenye athari kubwa**; faida inaweza kuondolewa"
+                ],
+                "sourceUrl": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news"
+              },
+              {
+                "label": "E8 Pro",
+                "values": [
+                  "Bila vizuizi",
+                  "Bila vizuizi, chini ya masharti ya jumla ya hatari"
+                ],
+                "sourceUrl": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news"
+              },
+              {
+                "label": "FundingPips Flex / Standard / Pro",
+                "values": [
+                  "Kushikilia kunaruhusiwa; biashara ya makusudi ya mruko wa habari imekatazwa",
+                  "**Faida zilizoathiriwa za Master hukatwa**; msamaha wa swing wa saa 5"
+                ],
+                "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+              },
+              {
+                "label": "FundingPips Zero",
+                "values": [
+                  "Thibitisha mkataba halisi",
+                  "**Hakuna kufungua, kufunga au kushikilia wakati wa habari zilizozuiwa**; madirisha ya dakika 10 kwenye Master"
+                ],
+                "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+              },
+              {
+                "label": "Blue Guardian CFD 1-Step Standard",
+                "values": [
+                  "Habari zinaruhusiwa",
+                  "**Hakuna kufungua au kufunga ±dakika 5** karibu na habari zenye athari kubwa"
+                ],
+                "sourceUrl": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+              },
+              {
+                "label": "BrightFunded CFD Phase 1 / 2",
+                "values": [
+                  "Habari bila vizuizi",
+                  "**Faida hukatwa kwa utekelezaji ±dakika 5**; Instant ina vizuizi tangu siku ya kwanza"
+                ],
+                "sourceUrl": "https://help.brightfunded.com/en/articles/9241694-can-i-trade-news"
+              },
+              {
+                "label": "Alpha Futures Standard / Zero / Direct",
+                "values": [
+                  "Standard / Zero: bila vizuizi; Direct huruka tathmini",
+                  "**Hakuna oda ±dakika 2** kwenye mipango maalumu ya Qualified; Advanced Qualified ni tofauti"
+                ],
+                "sourceUrl": "https://help.alpha-futures.com/en/articles/9492063-news-trading-policy"
+              },
+              {
+                "label": "Alpha Capital Pro / One / Three / Direct",
+                "values": [
+                  "Tathmini bila vizuizi; Direct haina tathmini",
+                  "**Hakuna utekelezaji ±dakika 5** katika habari zilizotajwa; hata TP ikitekelezwa inaweza kubatilisha faida"
+                ],
+                "sourceUrl": "https://help.alphacapitalgroup.uk/en/articles/9293522-can-i-trade-news"
+              },
+              {
+                "label": "Tradeify Futures",
+                "values": [
+                  "Habari zinaruhusiwa",
+                  "Habari zinaruhusiwa chini ya FAQ ya jumla"
+                ],
+                "sourceUrl": "https://help.tradeify.co/en/articles/12268494-common-faqs"
+              }
+            ],
+            "note": "Ilikaguliwa 16 Novemba 2026. Bofya ↗ karibu na kampuni kusoma sheria yake halisi. Hizi ni sera za kampuni, si ushahidi huru wa jinsi kila mgogoro wa trader unavyoamuliwa."
+          }
+        },
+        {
+          "heading": "2. VPN au VPS inaweza kubatilisha biashara zenye faida",
+          "paragraphs": [
+            "GOAT Funded Trader inasema kuanzia **6 Oktoba 2026**, biashara kupitia VPN, VPS, proxy au mazingira ya hosting imekatazwa. Kituo chake cha usaidizi kinasema biashara za namna hiyo zinaweza kusababisha akaunti kukiuka masharti mara moja, na tuzo husika kutostahili malipo. Kinaeleza msamaha mwembamba wa kuingia kwenye seva mara ya kwanza na msamaha tofauti kwa copier yake ya dashboard.",
+            "Hiki ni kizuizi kilichochapishwa katika mkataba, **si ushahidi kuwa kampuni inakataa malipo halali isivyofaa**. Hata hivyo, ni muhimu kwa traders wa algorithm na wageni ambao hutumia huduma za kuelekeza muunganisho wa intaneti."
+          ]
+        },
+        {
+          "heading": "Orodha ya uangalizi ya VPN / VPS: kampuni zipi zina vizuizi?",
+          "paragraphs": [
+            "**VPN (kuficha muunganisho) na VPS (seva ya mbali ya biashara) ni zana tofauti.** Baadhi hukataza zote mbili, nyingine huruhusu VPN lakini hukataza utekelezaji wa oda kwenye seva, na nyingine hukataza tu kuficha makazi. Hizi ni **kampuni 11 zenye sera zinazotambulika na vyanzo katika sampuli yetu**, pamoja na washirika wa affiliate. “Kwa masharti” si “marufuku kila mahali”."
+          ],
+          "compare": {
+            "columns": [
+              "VPN",
+              "VPS / utekelezaji wa mbali"
+            ],
+            "rows": [
+              {
+                "label": "GOAT Funded Trader",
+                "values": [
+                  "**Imekatazwa** kwa biashara (tangu 6 Oktoba 2026)",
+                  "**Imekatazwa**; msamaha mdogo wa zana ya kampuni"
+                ],
+                "sourceUrl": "https://help.goatfundedtrader.com/en/articles/17362726-can-i-use-a-vpn-vps-proxy-or-any-other-hosting-service-while-trading"
+              },
+              {
+                "label": "FundingPips",
+                "values": [
+                  "**Imekatazwa** unapofikia akaunti ya biashara",
+                  "**Imekatazwa** unapofikia akaunti ya biashara"
+                ],
+                "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards"
+              },
+              {
+                "label": "Topstep / TopstepX",
+                "values": [
+                  "**Imekatazwa** (pia proxy na TOR)",
+                  "**Hakuna kutuma oda** kupitia seva ya mbali au API; uchambuzi wa kusoma pekee unaruhusiwa"
+                ],
+                "sourceUrl": "https://help.topstep.com/en/articles/11187768-topstepx-api-access"
+              },
+              {
+                "label": "FundedNext CFD",
+                "values": [
+                  "**Inaruhusiwa** isipokuwa IP za nchi zilizotengwa",
+                  "**Marufuku ≥$50k**; chini ya $50k nyongeza ya kulipia, EA inayostahili pekee; hakuna oda za mikono"
+                ],
+                "sourceUrl": "https://help.fundednext.com/en/articles/8223809-can-i-use-a-vpn-or-vps"
+              },
+              {
+                "label": "Alpha Capital Group",
+                "values": [
+                  "**Kwa masharti:** IP tuli ya kipekee + taarifa kabla",
+                  "**Kwa masharti:** IP tuli ya kipekee + taarifa kabla"
+                ],
+                "sourceUrl": "https://help.alphacapitalgroup.uk/en/articles/8420522-what-is-the-ip-rule-are-vpns-and-vpss-allowed"
+              },
+              {
+                "label": "Tradeify Futures",
+                "values": [
+                  "**Hakuna VPN wakati wa kuingia**",
+                  "Inaruhusiwa **baada ya kuingia kawaida**, kwa hatari ya trader"
+                ],
+                "sourceUrl": "https://help.tradeify.co/en/articles/12268494-common-faqs"
+              },
+              {
+                "label": "FTMO CFD",
+                "values": [
+                  "**Kwa kawaida inaruhusiwa**; epuka eneo la Marekani kwa majukwaa yaliyotajwa",
+                  "**Kwa kawaida inaruhusiwa**; msamaha wa jukwaa/eneo la Marekani"
+                ],
+                "sourceUrl": "https://ftmo.com/en/faq/can-i-travel-or-use-vpn-vps/"
+              },
+              {
+                "label": "Blue Guardian CFD 1-Step Standard",
+                "values": [
+                  "**Inaruhusiwa**; hakuna kukwepa sheria za copy/group trading",
+                  "**Inaruhusiwa** kwa sharti hilo hilo"
+                ],
+                "sourceUrl": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+              },
+              {
+                "label": "Apex Trader Funding",
+                "values": [
+                  "Imekatazwa **ikitumiwa kuficha utambulisho/eneo au kukwepa sheria**",
+                  "Sharti lilelile dhidi ya kukwepa; hakuna marufuku ya jumla iliyochapishwa"
+                ],
+                "sourceUrl": "https://apextraderfunding.com/help-center/uncategorized/prohibited-activities/"
+              },
+              {
+                "label": "The5ers",
+                "values": [
+                  "**Hakuna kukwepa vizuizi vya nchi**; marufuku ya jumla haijathibitishwa",
+                  "Hakuna sheria ya jumla ya VPS iliyothibitishwa katika masharti yaliyotajwa"
+                ],
+                "sourceUrl": "https://the5ers.com/terms-and-conditions/"
+              },
+              {
+                "label": "HyroTrader (crypto)",
+                "values": [
+                  "**Hakuna kukwepa** vizuizi vya eneo vya exchange/jukwaa",
+                  "Inategemea jukwaa na masharti yake; hakuna marufuku ya jumla iliyothibitishwa"
+                ],
+                "sourceUrl": "https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/"
+              }
+            ],
+            "note": "Rejesta yenye viungo vya vyanzo, si tuhuma za malipo yasiyolipwa. Ilisasishwa 16 Novemba 2026. Masharti yanaweza kutofautiana kwa bidhaa, ukubwa wa akaunti, jukwaa na nchi. Kampuni nyingine bado hazijakaguliwa kwa suala hili."
+          },
+          "callout": {
+            "kind": "warning",
+            "text": "Kuendesha robot kwenye VPS **hakuruhusiwi moja kwa moja kwa sababu EA zinaruhusiwa**. Chunguza tofauti sheria za seva, IP, ukubwa wa akaunti na uelekezaji wa oda."
+          }
+        },
+        {
+          "heading": "3. “Scalping inaruhusiwa” bado inaweza kuwa na vikomo vya muda na margin",
+          "paragraphs": [
+            "Blue Guardian inaruhusu scalping katika programu yake ya Futures lakini inasema **chini ya nusu ya faida yote inaweza kutoka biashara zilizoshikiliwa chini ya sekunde 10**. Inaeleza pia **kizingiti cha matumizi ya margin cha 80%** kama sheria ya kamari ya “all or nothing” katika akaunti za CFD; matokeo yanaweza kuwa kuondoa faida au kukataa malipo.",
+            "Lebo kama “scalping inaruhusiwa” au “EA inaruhusiwa” ni pana mno kufanya uamuzi wa ununuzi. Tafuta vikomo vya muda wa biashara, vizuizi vya automation na namna akaunti nyingi zinavyoshughulikiwa."
+          ]
+        },
+        {
+          "heading": "4. Uthabiti unaweza kuchelewesha malipo baada ya challenge",
+          "paragraphs": [
+            "Sheria ya uthabiti hupima sehemu ya faida yako yote iliyotoka siku bora. Kwa Topstep, sheria na asilimia yake **hutegemea kama uko Trading Combine au katika njia ya malipo ya funded**. Hatua mbili zisichanganywe.",
+            "Mfano: kikomo cha siku bora 50%, siku yenye faida $1,200 inahitaji angalau **faida jumla $2,400** kabla uwiano ushuke hadi 50%. Njia sahihi ya kupunguza uwiano juu ya kikomo kwa kawaida ni kupata faida nyingine inayostahili, si kupoteza pesa kwa makusudi."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Soma mwongozo wetu wa **prop firms bila sheria ya uthabiti**. “Hakuna uthabiti” huondoa kizuizi kimoja tu; hauondoi drawdown, habari au masharti ya malipo."
+          }
+        },
+        {
+          "heading": "5. Nchi ya makazi si sawa na kustahili kutoa pesa",
+          "paragraphs": [
+            "GOAT Funded Trader inataja wazi **Singapore** kati ya nchi ambazo haikubali. Apex Trader Funding inataja **China** kati ya nchi zilizotengwa kwa akaunti mpya au za ziada. Hii ni muhimu kwa wageni wa PropRadar kwa sababu nchi zote mbili ni sehemu ya hadhira yetu ya kimataifa.",
+            "Bidhaa tofauti za kampuni moja zinaweza kutumia orodha tofauti za maeneo. FTMO CFD na FTMO Futures zinafanya hivyo; E8 Classic na E8 Futures pia. Kufaulu kulipa, kusafiri nje au kuona kampuni nchini mwako **hakubadilishi** KYC, uchunguzi wa uraia, ufikiaji wa jukwaa na njia za malipo zinazopatikana."
+          ],
+          "compare": {
+            "columns": [
+              "India",
+              "China bara",
+              "Singapore"
+            ],
+            "rows": [
+              {
+                "label": "FTMO CFD",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://ftmo.com/en/faq/who-can-join-ftmo/"
+              },
+              {
+                "label": "Topstep Futures",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "**Uthibitishaji wa mtu binafsi unahitajika**",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://help.topstep.com/en/articles/8284116-am-i-eligible-to-trade-with-topstep"
+              },
+              {
+                "label": "My Funded Futures",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "**Haikubaliki**",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://help.myfundedfutures.com/en/articles/8229993-restricted-countries-policy"
+              },
+              {
+                "label": "Apex Trader Funding",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "**Haikubaliki**",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://apextraderfunding.com/help-center/getting-started/restricted-countries/"
+              },
+              {
+                "label": "GOAT Funded Trader",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika",
+                  "**Haikubaliki**"
+                ],
+                "sourceUrl": "https://help.goatfundedtrader.com/en/articles/10742187-which-countries-are-restricted-at-goat-funded-trader"
+              },
+              {
+                "label": "FundedNext CFD",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://help.fundednext.com/en/articles/8020080-are-any-countries-restricted-on-fundednext-cfds"
+              },
+              {
+                "label": "Fintokei",
+                "values": [
+                  "**Haikubaliki**",
+                  "**Haikubaliki kwa muda**",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://support.fintokei.com/en/articles/6538820-who-can-join-fintokei"
+              },
+              {
+                "label": "Alpha Futures",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "**Haikubaliki**",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://help.alpha-futures.com/en/articles/9523389-countries-with-limitations"
+              },
+              {
+                "label": "Alpha Capital Group",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://help.alphacapitalgroup.uk/en/articles/8775575-countries-with-limitations"
+              },
+              {
+                "label": "Lucid Trading",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://support.lucidtrading.com/en/articles/11404636-restricted-countries"
+              },
+              {
+                "label": "PipFarm",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://help.pipfarm.com/en/articles/4318163-prohibited-country-list"
+              },
+              {
+                "label": "HyroTrader (Hyro platform)",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/"
+              },
+              {
+                "label": "BrightFunded CFD",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://help.brightfunded.com/en/articles/9286630-what-countries-are-restricted-at-brightfunded"
+              },
+              {
+                "label": "Upcomers",
+                "values": [
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika",
+                  "Imetajwa kuwa inakubalika"
+                ],
+                "sourceUrl": "https://help.upcomers.com/en/articles/8703655-are-there-any-prohibited-countries"
+              }
+            ],
+            "note": "Kukubalika kwa mujibu wa sera ya jumla iliyochapishwa, iliyokaguliwa 16 Novemba 2026 — si leseni ya kisheria, idhini ya KYC au ahadi ya malipo. Visa vya kijani vinatokana na sera wazi za kampuni za dunia nzima isipokuwa maeneo yaliyotengwa, si ununuzi halisi wa majaribio. Challenge nyingine au jukwaa la mhusika mwingine linaweza kubadilisha jibu."
+          },
+          "callout": {
+            "kind": "warning",
+            "text": "Kichujio cha nchi cha PropRadar kinaonyesha **masharti ya kukubalika yaliyochapishwa**, si ruhusa ya kisheria, leseni ya mdhibiti au malipo yaliyohakikishwa. Bidhaa isipoweza kuthibitishwa, tunasema **Haijathibitishwa** badala ya kubahatisha."
+          }
+        },
+        {
+          "heading": "6. Kutembelea nchi iliyozuiwa kunaweza kuwa ukiukaji hata ukiishi kwingine",
+          "paragraphs": [
+            "Take Profit Trader inasema hata tukio moja la biashara au kufikia data ya soko kutoka eneo lililokatazwa linaweza kusababisha kizuizi cha akaunti. Inataja wazi VPN na miunganisho ya mbali inayopitisha ufikiaji kupitia nchi hiyo. Mkazi wa eneo linaloruhusiwa anapaswa kukagua **sheria za safari na IP** kabla ya kuchukua kompyuta nje.",
+            "Si kila kampuni hutumia sheria hii: Tradeify inasema kizuizi chake cha jumla cha kijiografia kinategemea **makazi ya kudumu, si safari fupi**. Kampuni mbili zinaweza kushughulikia safari ileile tofauti."
+          ]
+        },
+        {
+          "heading": "7. Malipo yanaweza kutegemea idhini ya hiari ya mkataba",
+          "paragraphs": [
+            "Risk Disclosure ya Apex Trader Funding inasema tuzo za Performance Account hutolewa kwa **uamuzi wake** na maamuzi ya kulipa au kukataa tuzo ni ya mwisho. Ni kifungu muhimu cha kusoma pamoja na User Agreement na vigezo vya malipo vilivyochapishwa.",
+            "Kifungu cha hiari **si ushahidi kwamba kampuni inakataa malipo halali kwa utaratibu**. Hata hivyo, trader anapaswa kuweka nyaraka za kufuata masharti na kuelewa njia za mgogoro na rufaa kabla ya kutumia pesa."
+          ]
+        },
+        {
+          "heading": "8. Hatua za funded na live si lazima zibadilishane",
+          "paragraphs": [
+            "Tradeify inasema traders waliokataliwa kuingia Live Account hawawezi kurudi tu katika hatua ya simulation. FTMO Futures pia hutofautisha uzoefu wake wa Sim-Funded na kustahili kuhamia Live Funded Account, ambayo ina vizuizi katika nchi zaidi.",
+            "Uliza kama kampuni inaahidi hatua ya ufadhili, akaunti halisi ya broker au programu ya tuzo za kuiga tu. Neno la matangazo **“funded” halielezi mpangilio mmoja wa mkataba kila mahali**."
+          ]
+        },
+        {
+          "heading": "9. Jinsi ya kupata prop firm bila masharti ya kushangaza",
+          "paragraphs": [
+            "Hakuna tovuti huru inayoweza kuthibitisha kampuni ina *sifuri* masharti yaliyofichwa: masharti yanaweza kubadilika, KYC ni ya mtu binafsi na maamuzi ya usaidizi wakati mwingine ni ya hiari. Unaweza kupunguza uwezekano wa kununua programu isiyofaa."
+          ],
+          "steps": [
+            {
+              "title": "Tambua bidhaa halisi",
+              "text": "Andika **kampuni, jina la akaunti, ukubwa na hatua ya tathmini/funded**. Muhtasari wa chapa hautoshi."
+            },
+            {
+              "title": "Hifadhi mkataba na tarehe",
+              "text": "Soma **masharti kamili, makala ya usaidizi, sera ya malipo na orodha ya nchi zilizozuiwa**; hifadhi nakala yenye tarehe."
+            },
+            {
+              "title": "Jaribu mtindo wako halisi",
+              "text": "Linganisha **madirisha ya habari, copy trading, VPN/VPS, kushikilia, idadi ya juu ya contracts, uthabiti na kutofanya biashara** na mkakati wako."
+            },
+            {
+              "title": "Hesabu malipo halisi ya kwanza",
+              "text": "Jumuisha **malengo ya faida, siku za chini, vikomo vya utoaji wa kwanza, ada ya kuwezesha, ada za malipo na masharti ya mtoa huduma**."
+            },
+            {
+              "title": "Uliza kwa maandishi kabla ya kulipa",
+              "text": "Kwa jambo lisiloeleweka, omba jibu la usaidizi linalotaja **sheria na toleo halisi**, na uhifadhi jibu."
+            }
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Ukiona sheria inayokosekana katika ulinganisho, tuma PropRadar kiungo rasmi na picha kupitia mawasiliano ya **kuwasilisha chanzo**. Tunakagua washirika na wasiokuwa washirika kwa kiwango kilekile cha uhariri."
+          }
+        }
+      ]
+    }
   }
 };
 
