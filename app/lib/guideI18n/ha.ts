@@ -965,6 +965,170 @@ const ha: GuideTranslations = {
         }
       ]
     }
+  },
+  "topstep-review": {
+    "title": "Bitar Topstep 2026: Shin halastacce ne? Dokoki da biyan kuɗi",
+    "metaDescription": "Bitar Topstep 2026: Trading Combine, burin daidaito 55%, Maximum Loss Limit mai hawa, rabon 90%, hanyoyin biya da Trustpilot.",
+    "eyebrow": "Bitar kamfani",
+    "h1": "Bitar Topstep 2026: shin Topstep halastacce ne?",
+    "answer": "Topstep kamfanin futures ne na Amurka da ya daɗe tun 2012. Trading Combine ba shi da iyakar lokaci, yana da burin daidaito 55% da Maximum Loss Limit mai bin ma'aunin ƙarshen rana amma ana sa ido kai tsaye. Sabbin traders suna riƙe 90% na biya. Matsaloli su ne futures kawai, babu riƙewa da dare da yawan sauyin dokoki tun ƙarshen 2025.",
+    "checks": [
+      "Tabbatar da farashin Combine na yanzu da kuɗin kunna asusu.",
+      "Ƙayyade girman matsayi bisa Maximum Loss Limit mai bin ma'aunin ƙarshen rana.",
+      "Zaɓi hanyar biyan Express Funded Account da hankali: zaɓin na dindindin ne.",
+      "Ka tuna MLL ya koma $0 bayan biya na farko."
+    ],
+    "faq": [
+      {
+        "question": "Shin Topstep halastacce ne?",
+        "answer": "I. Yana aiki a Chicago tun 2012, yana wallafa cikakkun dokoki, ya ƙaddamar da introducing broker mai alaƙa a 2026. A 12 Nuwamba 2026 PropRadar ya ba shi 84/100 ba tare da gargadin hukuma da aka rubuta ba. Tantancewa da funded na kwaikwayo ne."
+      },
+      {
+        "question": "Menene dokar daidaiton Topstep?",
+        "answer": "A Combine ranar da ta fi riba ba ta wuce 55% na burin riba; in ta wuce, burin ya zama ribar ranar ÷ 0.55. A hanyar Consistency na XFA, ranar da ta fi riba ta zama 40% ko ƙasa da ribar net don neman biya."
+      },
+      {
+        "question": "Wane rabo Topstep ke biya?",
+        "answer": "Waɗanda suka shiga daga 12 Janairu 2026 suna samun 90% na biya da aka amince. Na baya suna samun 100% na $10,000 na farko, sannan 90%. Mafi ƙarancin buƙata $125."
+      },
+      {
+        "question": "Zan iya riƙe matsayi da dare?",
+        "answer": "A'a. A rufe duk matsayi kafin ƙarshen zaman kasuwa; ba a yarda da dare ko ƙarshen mako ba."
+      }
+    ],
+    "article": {
+      "intro": "Topstep shi ne tsohon suna a prop trading na futures: Michael Patak ya kafa shi a **2012 a Chicago**, Trading Combine ya gabaci sabbin kamfanoni. Tarihi shi ne ƙarfinsa. Rauninsa: **futures kawai**, **yawan sauyin dokoki** tun ƙarshen 2025, da **iyakar asara mai hawa** da ke buƙatar ladabi.",
+      "keyPoints": [
+        "Kamfanin Amurka tun **2012**, futures kawai, babu gargadin hukuma a bayanan PropRadar.",
+        "Combine ba shi da **iyakar lokaci**; a **rufe duk matsayi ƙarshen zama**.",
+        "Sabbin traders suna riƙe **90%**; mafi ƙarancin buƙata **$125**.",
+        "Bayan biya na farko, iyakar asara ta koma **$0**: babu kariya."
+      ],
+      "sections": [
+        {
+          "heading": "Shin Topstep halastacce ne?",
+          "paragraphs": [
+            "Topstep **kamfani ne da ya kafu a Amurka**, yana da dogon tarihin jama'a, cibiyar taimako da introducing broker mai alaƙa Topstep Brokerage, wanda aka ƙaddamar farkon 2026. A 12 Nuwamba 2026 PropRadar ya ba shi **84/100** ba tare da gargadin hukuma da aka rubuta ba. Tantancewa da Express Funded Account **na kwaikwayo ne**: biya lada ce daga Topstep, ba ribar asusun broker ba.",
+            "Trustpilot ya nuna **3.7** daga **bita 14,955**, tare da sanarwar cewa kamfanin na iya da alaƙa da zuba jari mai babban haɗari (23 Oktoba 2026). Korafe-korafen ƙarshen 2025 sun shafi **katsewar TopstepX** da stop orders da suka gaza."
+          ],
+          "stats": [
+            {
+              "value": "2012",
+              "label": "an kafa a Chicago"
+            },
+            {
+              "value": "84/100",
+              "label": "maki a 12 Nuwamba 2026"
+            },
+            {
+              "value": "3.7",
+              "label": "Trustpilot, bita 14,955 (23 Oktoba 2026)"
+            }
+          ]
+        },
+        {
+          "heading": "Yadda Trading Combine ke aiki",
+          "paragraphs": [
+            "Trading Combine tantancewar Topstep ce. **Babu iyakar lokaci ko mafi ƙarancin ranakun ciniki.** A rufe duk matsayi ƙarshen zama; babu riƙewa da dare ko ƙarshen mako.",
+            "**Maximum Loss Limit (MLL)** yana hawa idan ma'aunin ƙarshen rana ya ƙaru, ba ya sauka; ana **sa ido kai tsaye** kan karya iyaka, har da asarar buɗe. A Combine yana daina hawa idan ya kai ma'aunin farko (cibiyar taimako, 18 Satumba 2026).",
+            "Burin daidaito **55%** ne: ranar da ta fi riba ba ta wuce 55% na burin riba. Idan ta wuce, ba a fitar da kai ba; **burin ya ƙaru** zuwa ribar ranar ÷ 0.55 (17 Satumba 2026). Iyakar asarar rana na zaɓi $1,000, $2,000 ko $3,000 tana dakatar da ciniki a zaman ba tare da rufe asusu ba."
+          ],
+          "compare": {
+            "columns": [
+              "50K",
+              "100K",
+              "150K"
+            ],
+            "rows": [
+              {
+                "label": "Burin riba",
+                "values": [
+                  "$3,000",
+                  "$6,000",
+                  "$9,000"
+                ]
+              },
+              {
+                "label": "Maximum Loss Limit",
+                "values": [
+                  "$2,000",
+                  "$3,000",
+                  "$4,500"
+                ]
+              }
+            ],
+            "note": "Cibiyar taimakon Topstep, Satumba 2026."
+          },
+          "callout": {
+            "kind": "example",
+            "text": "Combine 50K, ranar da ta fi riba **$2,000**: ta wuce 55% na $3,000 ($1,650), don haka buri ya zama $2,000 ÷ 0.55 ≈ **$3,636**."
+          }
+        },
+        {
+          "heading": "Express Funded Account da biya",
+          "paragraphs": [
+            "Bayan ka ci, ka yi ciniki a **Express Funded Account (XFA)** na kwaikwayo, inda biya ke farawa. XFA yana fara da $0 da kariyar MLL iri ɗaya a ƙasa. Tun Fabrairu 2026 ana zaɓar hanyoyi biyu na biya, **zaɓin na dindindin ne**.",
+            "Waɗanda suka shiga daga 12 Janairu 2026 suna samun **90%** na biya da aka amince; na baya suna riƙe 100% na $10,000 na farko sannan 90%. Mafi ƙarancin buƙata **$125**. Za a iya gayyatar masu ƙwarewa zuwa **Live Funded Account** da jari na gaske, iyakar asarar rana ta wajibi da ajiyar da ake saki mataki-mataki."
+          ],
+          "compare": {
+            "columns": [
+              "Hanyar Standard",
+              "Hanyar Consistency"
+            ],
+            "rows": [
+              {
+                "label": "Kafin kowane biya",
+                "values": [
+                  "**Ranakun riba 5** na aƙalla $150",
+                  "**Ranakun ciniki 3**, ranar mafi girma **40% ko ƙasa** na ribar net"
+                ]
+              }
+            ],
+            "note": "Zaɓin hanyar biyu na dindindin ne."
+          },
+          "callout": {
+            "kind": "warning",
+            "text": "Bayan biya na farko MLL ya zama **$0**. Kariyar ta gushe: **rana mara kyau bayan cire kuɗi na iya kawo ƙarshen asusu.**"
+          }
+        },
+        {
+          "heading": "Fa'idodi da rashin fa'idodi",
+          "paragraphs": [
+            "Abubuwan da suka fito daga karatun dokoki:"
+          ],
+          "prosCons": {
+            "pros": [
+              "**Tarihi mafi tsawo** a prop trading na futures da cikakkun bayanan taimako.",
+              "**Babu iyakar lokaci** ko ranaku na ƙasa; daidaito yana ƙara buri maimakon fitar da kai.",
+              "**Rabon 90%** daga dala ta farko ga sababbi; mafi ƙarancin biya **$125**."
+            ],
+            "cons": [
+              "**Futures kawai**, duk matsayi a rufe ƙarshen zama.",
+              "MLL ya koma **$0 bayan biya na farko**.",
+              "Dokoki **sun sauya sau da yawa** daga Nuwamba 2025 zuwa Afrilu 2026: sake karanta kafin saye."
+            ]
+          }
+        },
+        {
+          "heading": "Wa Topstep ya dace da shi?",
+          "paragraphs": [
+            "Kuɗin biyan kuɗi kowane wata yana sa **tantancewa mai jinkiri** ta fi tsada fiye da masu kuɗin sau ɗaya. Idan kana kwatanta Apex, karanta jagorar Topstep vs Apex, wadda ke kwatanta sigar asusu doka-doka."
+          ],
+          "fit": {
+            "yes": [
+              "Traders na **futures cikin rana**",
+              "Masu son **kamfani da ya kafu**",
+              "Masu iya bin **iyaka mai hawa da ake sa ido kai tsaye**"
+            ],
+            "no": [
+              "Traders na **forex ko CFD**",
+              "**Swing traders** masu riƙewa da dare",
+              "Masu zaɓi **musamman bisa farashi**"
+            ]
+          }
+        }
+      ]
+    }
   }
 };
 
