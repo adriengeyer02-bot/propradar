@@ -813,6 +813,158 @@ const sw: GuideTranslations = {
         }
       ]
     }
+  },
+  "prop-firm-sans-challenge": {
+    "title": "Jinsi ya kuanza na prop firm bila challenge (2026)",
+    "metaDescription": "Jinsi ya kuanza bila challenge: chagua programu, thibitisha ustahiki, linganisha ada na drawdown, jaribu masharti na elewa malipo ya kwanza.",
+    "eyebrow": "Bila challenge",
+    "h1": "Jinsi ya kuanza na prop firm bila challenge",
+    "answer": "Chagua soko na programu halisi ya ufadhili wa papo hapo, chunguza masharti ya nchi na utambulisho, soma masharti ya funded, hesabu ada zote na jaribu mkakati wako kwa vikomo vya hasara. Kamilisha usanidi baada ya kuelewa njia ya malipo ya kwanza: kuruka tathmini hakufuti malengo ya faida, uthabiti au ukomo wa kutoa fedha.",
+    "checks": [
+      "Linganisha gharama halisi kwa miezi 3 hadi 6, ikiwemo ada ya kuingia, upya, reset au scaling.",
+      "Thibitisha masharti ya ufadhili: drawdown, habari, lot, uthabiti, scaling na malipo.",
+      "Chunguza kiwango cha chini na marudio ya malipo, hasa ikiwa mkakati wako una faida ndogo nyingi.",
+      "Thibitisha aina ya drawdown: static, trailing, EOD au smart drawdown.",
+      "Soma masharti ya scaling na ya kuhamia akaunti kubwa.",
+      "Epuka mfumo huu ikiwa mkakati wako haujawa thabiti kwa miezi kadhaa."
+    ],
+    "faq": [
+      {
+        "question": "Ninaanzaje na prop firm bila challenge?",
+        "answer": "Chagua soko na programu, chunguza ustahiki na kampuni ya mkataba, hifadhi masharti ya funded, hesabu ada, jaribu vikomo vya hasara na kamilisha ukaguzi wa utambulisho unaohitajika. Fuatilia hasara ya siku, drawdown yote na ustahiki wa malipo tangu kipindi cha kwanza."
+      },
+      {
+        "question": "Bila challenge inamaanisha ninaweza kutoa fedha mara moja?",
+        "answer": "Hapana. Hyro Instant ina siku zinazohitajika kwa malipo ya kwanza, huku Tradeify Lightning Funded ikiwa na malengo ya faida, uthabiti na ukomo wa ombi. Soma sera halisi ya funded; kupata akaunti, kustahiki malipo na kupokea fedha ni hatua tofauti."
+      },
+      {
+        "question": "Ufadhili bila challenge ni rahisi kuliko challenge ya kawaida?",
+        "answer": "Si lazima. Huondoa tathmini lakini unaweza kufanya hatua ya ufadhili kuwa kali zaidi. Jaribio halisi ni masharti ya malipo, uwezo wa kuvumilia drawdown, kiwango cha chini cha kutoa fedha na kama trading yako inaweza kustahimili vizuizi vya akaunti ya moja kwa moja."
+      },
+      {
+        "question": "Nani anapaswa kufikiria prop firm bila challenge?",
+        "answer": "Inafaa zaidi trader wanaojua hatari yao ya wastani, hasara za kila siku na mzunguko wa malipo. Ikiwa bado unajaribu nidhamu, challenge ndogo ya kawaida inaweza kuwa nafuu na salama zaidi."
+      },
+      {
+        "question": "Prop firm bila challenge ni nini?",
+        "answer": "Ni programu inayoruka lengo la kawaida la tathmini na kutoa ufikiaji wa haraka wa akaunti ya simulation ya aina ya funded. Trader bado lazima afuate masharti ya drawdown, malipo, uthabiti na mikakati iliyokatazwa."
+      },
+      {
+        "question": "Trading iliyofadhiliwa bila challenge ni rahisi zaidi?",
+        "answer": "Ni ya haraka zaidi, si rahisi moja kwa moja. Akaunti ya moja kwa moja inaweza kuwa na drawdown kali, kiwango cha chini cha malipo, ukomo wa scaling au uthabiti, hivyo hatua ya ufadhili inakuwa tathmini halisi."
+      }
+    ],
+    "article": {
+      "intro": "Ili kuanza na prop firm bila challenge, chagua soko na programu halisi, chunguza ustahiki, soma masharti ya ufadhili, hesabu ada zote na jaribu mkakati wako dhidi ya vikomo vya hasara. **Kuruka tathmini hakufuti masharti ya malipo.** Akaunti inaweza kuwa ya simulation, na malipo ya kwanza yanaweza kuhitaji siku zinazostahili, lengo la faida au uthabiti.",
+      "keyPoints": [
+        "**Bila challenge ni bila tathmini kabla ya ufadhili.** Lengo la faida kwa malipo bado linaweza kutumika.",
+        "Chunguza **programu halisi**, ada zote na kama akaunti ni ya simulation.",
+        "Linganisha **gharama yote hadi malipo ya kwanza**, si bei ya matangazo.",
+        "Inafaa mkakati **thabiti wenye drawdown ndogo**, si unaoendelea kujaribiwa."
+      ],
+      "sections": [
+        {
+          "heading": "Jinsi ya kuanza na prop firm bila challenge",
+          "paragraphs": [
+            "Anza kwa kuchagua soko lako na programu halisi ya ufadhili wa papo hapo. Akaunti bila challenge inaruka tathmini kabla ya hatua ya ufadhili. Bado inaweza kuwa ya simulation, na malipo yanaweza kuhitaji lengo la faida, siku zinazostahili, uthabiti na ukaguzi. Kununua akaunti na kustahiki kutoa fedha ni hatua tofauti.",
+            "Tumia orodha hii kabla ya kununua. Salio kubwa linalotangazwa halikupi kiasi sawa cha fedha cha kupoteza: vikomo vya hasara vya siku na jumla ndivyo huamua nafasi inayotumika."
+          ],
+          "steps": [
+            {
+              "title": "Chagua soko na chunguza ustahiki",
+              "text": "Linganisha vifaa vinavyoruhusiwa, majukwaa na saa za trading na mkakati wako. Chunguza vizuizi vya nchi, ukaguzi wa utambulisho na kampuni ya mkataba."
+            },
+            {
+              "title": "Soma masharti halisi ya akaunti iliyofadhiliwa",
+              "text": "Hifadhi jina la programu, ukubwa wa akaunti, tarehe ya ununuzi na kurasa rasmi za masharti. Thibitisha saa ya reset ya siku, kikomo cha hasara yote, hesabu ya drawdown na mikakati iliyokatazwa."
+            },
+            {
+              "title": "Andika njia ya malipo ya kwanza",
+              "text": "Andika siku zinazostahili, malengo ya faida, uthabiti, ombi la chini, ukomo wa malipo na mgawo wa faida. Akaunti isiyo na tathmini bado inaweza kuhitaji faida kubwa kabla ya kutoa fedha."
+            },
+            {
+              "title": "Hesabu ada zote zinazoweza kupotea",
+              "text": "Jumuisha kuingia, uanzishaji, ada za mara kwa mara, jukwaa na data inapohusika. Soma masharti ya marejesho na akaunti mbadala, kisha amua ada za juu unazokubali kupoteza."
+            },
+            {
+              "title": "Jaribu trading yako ya kawaida dhidi ya vikomo",
+              "text": "Tumia jaribio au shajara yako kuchunguza hasara zinazoelea, kamisheni, mfululizo wa hasara na positions za usiku. Jaribio litumie vikomo halisi vya programu badala ya salio la matangazo."
+            },
+            {
+              "title": "Kamilisha usanidi na fuatilia vikomo vyote",
+              "text": "Baada ya malipo na ukaguzi unaohitajika, thibitisha dashboard inalingana na mkataba. Hifadhi kikomo cha sasa cha siku, jumla na ustahiki wa malipo kabla ya kila kipindi."
+            }
+          ]
+        },
+        {
+          "heading": "Kwa nini ufadhili wa papo hapo kwa kawaida hugharimu zaidi",
+          "paragraphs": [
+            "Kampuni hutumia tathmini kama kichujio: sehemu kubwa ya wanunuzi wa challenge hawafikii malipo na ada zao hufadhili trader wanaofanikiwa. Unaporuka kichujio, kampuni hujumuisha hatari katika bei ya akaunti yenyewe. Ndiyo maana akaunti ya moja kwa moja kwa kawaida hugharimu **mara kadhaa bei** ya challenge yenye ukubwa sawa, ikiwa na **akaunti ndogo zaidi** na mara nyingi **drawdown kali zaidi**.",
+            "Linganisha **gharama yote ya kufikia malipo ya kwanza**. Mfano wa nambari rahisi: challenge ya $100 yenye nafasi moja kati ya tatu ya kupita hugharimu wastani wa **$300** ili kufadhiliwa. Akaunti ya papo hapo ya $350 yenye trailing drawdown kali hugharimu zaidi ya hapo mara tu unapopoteza akaunti moja kabla ya malipo ya kwanza."
+          ]
+        },
+        {
+          "heading": "Masharti yanayoamua kama akaunti ya moja kwa moja inafaa",
+          "paragraphs": [
+            "Soma masharti ya funded, si ukurasa wa matangazo. Mambo haya sita mara nyingi hubadilisha gharama na manufaa:"
+          ],
+          "bullets": [
+            "**Aina ya drawdown:** trailing inayofuata equity ya juu ni ngumu zaidi kuliko kikomo cha static kilichowekwa kwenye salio la mwanzo.",
+            "**Sharti la uthabiti:** programu nyingi za papo hapo huweka kikomo cha faida inayotoka siku bora kabla ya malipo.",
+            "**Masharti ya malipo ya kwanza:** siku za chini, faida ya chini na ukomo wa malipo ya kwanza au mawili.",
+            "**Mgawo wa kwanza wa faida:** baadhi huanza chini kuliko challenge na huongezeka baadaye.",
+            "**Gharama ya akaunti mbadala:** bei ya akaunti mpya baada ya ukiukaji na kama kuna punguzo.",
+            "**Mikakati iliyowekewa vizuizi:** vipindi vya habari, muda wa kushikilia, copy trading na muda wa chini wa trade."
+          ]
+        },
+        {
+          "heading": "Nani anapaswa kuzingatia prop firm bila challenge?",
+          "paragraphs": [
+            "Ufadhili wa moja kwa moja hubadilisha **fedha kwa muda**. Shinikizo la lengo la faida hubadilishwa na shinikizo la drawdown inayofuatiliwa moja kwa moja kwenye akaunti iliyogharimu zaidi."
+          ],
+          "fit": {
+            "yes": [
+              "Mkakati **thabiti wenye drawdown ndogo**",
+              "Historia ya **kuheshimu vikomo vya siku**",
+              "Unathamini **muda kuliko gharama**"
+            ],
+            "no": [
+              "Mkakati ambao **bado unajaribu**",
+              "Mtindo wenye **mabadiliko makubwa** unaohitaji nafasi",
+              "Kununua hasa ili **kukwepa lengo la faida**"
+            ]
+          },
+          "callout": {
+            "kind": "tip",
+            "text": "Huna uhakika? **Challenge nafuu ya hatua moja** mara nyingi ni jaribio bora la kuona kama mkakati wako unalingana na masharti kabla ya kununua akaunti ya moja kwa moja."
+          }
+        },
+        {
+          "heading": "Ishara za hatari katika ufadhili wa papo hapo",
+          "paragraphs": [
+            "Programu za papo hapo huvutia kampuni mpya na zenye matangazo mengi kwa sababu ni rahisi kuuza. Zingatia ishara hizi:"
+          ],
+          "bullets": [
+            "**Akaunti kubwa sana kwa bei ndogo sana.**",
+            "Ahadi za malipo bila **sera ya malipo iliyochapishwa**.",
+            "Masharti **yanayotofautiana kati ya ukurasa wa mwanzo na mkataba**.",
+            "Vifungu vinavyoruhusu kampuni kukataa malipo **kwa uamuzi wake pekee** bila sababu iliyoainishwa."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Kabla ya kununua, fungua wasifu wa kampuni katika PropRadar: **kampuni ya kisheria, ishara za malipo, domain na maonyo ya wadhibiti** yako kwenye ukurasa mmoja."
+          }
+        },
+        {
+          "heading": "Mifano miwili ya sasa: ufikiaji wa papo hapo si kutoa fedha papo hapo",
+          "paragraphs": [
+            "Kurasa rasmi zilizokaguliwa 15 Novemba 2026 zinaonyesha umuhimu wa programu halisi. **Hyro Instant** huruka tathmini lakini inahitaji siku tatu zinazostahili kwa malipo ya kwanza, faida ya angalau $25 baada ya mgawo na ukomo wa faida inayohesabiwa kwa kila malipo.",
+            "**Tradeify Lightning Funded** pia huruka tathmini. Programu iliyochapishwa ya $50,000 inahitaji faida ya $3,000 ili kufungua ombi la kwanza, lenye ukomo wa $2,000 kabla ya mgawo wa 90% wa trader. Uthabiti pia unatumika. Lengo la faida si kiasi kinachoweza kutolewa.",
+            "Mifano hii inaeleza masharti yaliyochapishwa, si malipo ya wateja yaliyothibitishwa kwa uhuru. Tumia mkataba wa sasa na viungo vya vyanzo hapa chini kuthibitisha masharti ya ununuzi mpya."
+          ]
+        }
+      ]
+    }
   }
 };
 
