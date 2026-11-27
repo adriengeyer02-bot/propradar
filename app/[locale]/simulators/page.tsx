@@ -5,6 +5,7 @@ import { getFirmBySlug } from '../../lib/propFirms';
 import { getPriceTable } from '../../lib/priceTables';
 import { isLocale, localePath } from '../../lib/locales';
 import { simulatorLabel } from '../../lib/simulatorLabels';
+import { getProgrammeEvidence } from '../../lib/programmeFlexibility';
 type Props={params:Promise<{locale:string}>;searchParams:Promise<{firm?:string|string[];program?:string|string[]}>};
 export async function generateMetadata({params}:Props):Promise<Metadata>{
   const {locale}=await params;
@@ -21,9 +22,10 @@ export default async function SimulatorsPage({params,searchParams}:Props){
     const programs=table?.programs.filter(p=>p.productId===product.id)??[];
     const prices=programs.flatMap(p=>p.rows.filter(r=>Number.isFinite(r.price)&&r.price>=0&&r.size>0).map(r=>{
       const separate=r.upfrontPrice!=null&&r.completionFee!=null;
-      return {label:p.name+(p.billing==='monthly'?' / month':''),size:r.size,fee:p.billing==='monthly'?0:separate?r.upfrontPrice!:r.price,monthly:p.billing==='monthly'?r.price:0,activation:separate&&p.billing!=='monthly'?r.completionFee!:0,currency:p.currency};
+      return {label:p.name+(p.billing==='monthly'?' / month':''),size:r.size,fee:p.billing==='monthly'?0:separate?r.upfrontPrice!:r.price,monthly:p.billing==='monthly'?r.price:0,activation:separate&&p.billing!=='monthly'?r.completionFee!:null,currency:p.currency,source:p.sourceUrl};
     }));
-    context={firm:firm.name,program:product.name,prices,source:programs.length&&programs.every(p=>p.sourceUrl===programs[0].sourceUrl)?programs[0].sourceUrl:undefined,checkedOn:table?.checkedOn};
+    const audit=getProgrammeEvidence(firm.slug,product.id);
+    context={firm:firm.name,program:product.name,prices,preset:audit?.preset?{...audit.preset,scope:audit.scope}:undefined,source:programs.length&&programs.every(p=>p.sourceUrl===programs[0].sourceUrl)?programs[0].sourceUrl:undefined,checkedOn:table?.checkedOn};
   }
   return <main className="container">
     <section className="section">
