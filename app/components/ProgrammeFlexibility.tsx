@@ -21,7 +21,7 @@ export default function ProgrammeFlexibility({locale,slug,productId}:{locale:Loc
    <small>{explanation}</small>
    {evidence?<details><summary>{locale==='fr'?'Sources et périmètre': 'Sources / scope'}</summary>{rating.stars===null?<small lang="en">{scope}</small>:null}<small> · {evidence.checkedOn}</small><ul>{CRITERIA.map((k,i)=>{const a=evidence.assessments[k];return <li key={k}><strong>{labels[i]} · {a?number(a.points)+'/1':'—'}</strong>{a?<><br/><a href={a.source} target="_blank" rel="noopener noreferrer" lang="en">{a.reason} ↗</a></>:null}</li>})}</ul></details>:null}
    {variants.length?<div className={styles.variants}>
-     <small>{locale==='fr'?'Autres options après validation':'Other funded options after passing'}</small>
+     <small>{locale==='fr'?'Autres variantes du programme':'Other programme variants'}</small>
      {variants.map(v=>{const vr=programmeFlexibility(v.evidence);return <details key={v.id} className={styles.variant}><summary><span>{locale==='fr'?v.labelFr:v.label}</span><strong>{vr.stars===null?unrated:number(vr.stars)+'/5'}</strong></summary>
        <small lang={locale==='fr'&&v.evidence.scopeFr?'fr':'en'}>{locale==='fr'&&v.evidence.scopeFr?v.evidence.scopeFr:v.evidence.scope}</small>
        <ul>{CRITERIA.map((k,i)=>{const a=v.evidence.assessments[k];return <li key={k}><strong>{labels[i]} · {a?number(a.points)+'/1':'—'}</strong>{a?<><br/><a href={a.source} target="_blank" rel="noopener noreferrer" lang="en">{a.reason} ↗</a></>:null}</li>})}</ul>
