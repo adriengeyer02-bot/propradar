@@ -1129,6 +1129,176 @@ const sw: GuideTranslations = {
         }
       ]
     }
+  },
+  "goat-funded-trader-avis": {
+    "title": "Mapitio ya GOAT Funded Trader 2026: je, ni halali?",
+    "metaDescription": "GOAT Funded Trader 2026: kampuni za Hong Kong na Saint Lucia, masharti ya akaunti zilizofadhiliwa, vikomo vya malipo, alama ya Trustpilot iliyozuiwa na aina ya trader anayefaa.",
+    "eyebrow": "Mapitio ya kampuni",
+    "h1": "GOAT Funded Trader 2026: je, ni halali?",
+    "answer": "GOAT Funded Trader ni kampuni halisi iliyoanzishwa mwaka 2023, inayoendeshwa kutoka Hong Kong na Saint Lucia bila mdhibiti wa kifedha. Inalipa traders, lakini katika mapitio haya akaunti zilizofadhiliwa zina masharti makali (hasara inayoelea ya 2%, sheria ya dakika mbili na vikomo vya malipo ya kwanza), na Trustpilot ilizuia alama kwa ukiukaji wa miongozo. Soma masharti kabla ya punguzo.",
+    "checks": [
+      "Soma masharti ya akaunti iliyofadhiliwa: Goat Guard, dakika mbili na kikomo cha habari baada ya kufaulu.",
+      "Angalia vikomo vya malipo mawili ya kwanza na ada ya 3%.",
+      "Thibitisha modeli: 3-Step iliondolewa Agosti 2026 na 2-Step Pro iliacha kuuzwa Juni 2026.",
+      "Soma maoni kuhusu malipo ya siku 30–60 zilizopita, si nyota pekee.",
+      "Linganisha misimbo ya punguzo baada ya kuchagua modeli inayofaa."
+    ],
+    "faq": [
+      {
+        "question": "Je, GOAT Funded Trader ni halali?",
+        "answer": "Ni kampuni halisi inayolipa traders, lakini haidhibitiwi na mamlaka ya kifedha na ina uamuzi mpana kuhusu malipo. Katika mapitio ya 12 Novemba 2026 ilikuwa kwenye orodha ya uangalizi na 58/100. Trustpilot ilizuia alama kwa ukiukaji wa miongozo (23 Oktoba 2026)."
+      },
+      {
+        "question": "Kwa nini alama ya Trustpilot haipatikani?",
+        "answer": "Trustpilot ilisema kuwa alama haipatikani kwa ukiukaji wa miongozo na iliondoa baadhi ya maoni bandia. Wasifu ulikuwa na maoni 4,352, 46% nyota tano na 40% nyota moja (23 Oktoba 2026)."
+      },
+      {
+        "question": "Goat Guard ni nini?",
+        "answer": "Katika akaunti za 1-Step na 2-Step zilizofadhiliwa, hasara inayoelea ya 2% ya salio la mwanzo huanzisha Goat Guard: mara ya kwanza mgawanyo hushuka hadi 50%, mara ya pili akaunti hukiuka masharti, kulingana na mapitio ya wahusika wengine."
+      },
+      {
+        "question": "FIRSTGFT au BOGO40 zinafaa?",
+        "answer": "Baada tu ya kuchagua modeli yenye masharti yanayolingana na mtindo wako. Punguzo halifuti sheria zinazokuzuia. Thibitisha ofa wakati wa kulipa."
+      }
+    ],
+    "article": {
+      "intro": "GOAT Funded Trader ni miongoni mwa prop firms zilizoonekana sana katika miaka miwili iliyopita: punguzo kubwa, modeli nyingi na uwepo wa mara kwa mara kwenye mitandao ya kijamii. **Umaarufu si sawa na kutegemewa.** Mapitio haya yanatenganisha nyaraka na matangazo, yakianza na **masharti ya akaunti zilizofadhiliwa**, kwa sababu hapo traders hupoteza malipo.",
+      "keyPoints": [
+        "Ilianzishwa **Mei 2023**; jina la biashara la Hong Kong, mtoa huduma wa Saint Lucia, **hakuna mdhibiti wa kifedha**.",
+        "23 Oktoba 2026 Trustpilot **haikuonyesha alama** kwa sababu ya ukiukaji wa miongozo.",
+        "Malipo huathiriwa na **masharti ya ufadhili**: Goat Guard, dakika mbili, kikomo cha habari na cha kila siku.",
+        "PropRadar ina **uhusiano wa ushirika** na kampuni; haubadili alama."
+      ],
+      "sections": [
+        {
+          "heading": "Nani anaendesha GOAT Funded Trader?",
+          "paragraphs": [
+            "GOAT Funded Trader ilianzishwa **Mei 2023**. Ni jina la biashara la **Wishes Tower International Limited**, kampuni ya Hong Kong, na biashara ya kuiga hutolewa na **Goat Funded LTD ya Saint Lucia**. **Hakuna mdhibiti wa kifedha** anayesimamia huduma. Masharti yanaeleza akaunti za kuiga, manunuzi yasiyorejeshewa fedha na uamuzi mpana kuhusu malipo; ni kawaida katika sekta lakini muhimu kujua kabla ya kununua.",
+            "Katika mapitio ya 12 Novemba 2026 PropRadar iliipa **58/100**, chini ya kikomo cha 64 kilichotumika wakati huo kwa alama iliyozuiwa na Trustpilot, na kuiweka kwenye orodha ya uangalizi. Kampuni inafanya kazi na inaripoti kulipa traders, lakini vikomo, makato na maamuzi ya timu ya hatari huleta vizuizi muhimu. Uhusiano wa ushirika wa PropRadar haubadili alama au mapitio."
+          ]
+        },
+        {
+          "heading": "Hali ya Trustpilot",
+          "paragraphs": [
+            "23 Oktoba 2026 Trustpilot **haikuonyesha TrustScore** ya kampuni. Wasifu ulisema alama haipatikani kutokana na ukiukaji wa miongozo na kwamba maoni kadhaa bandia yaliondolewa. Wasifu ulikuwa na maoni 4,352 yaliyogawanyika sana:",
+            "Wasifu uliogawanyika mara nyingi huashiria **uzoefu tofauti sana**: traders waliolipwa haraka na wale waliokataliwa chini ya masharti ambayo hawakusoma kwa makini."
+          ],
+          "stats": [
+            {
+              "value": "4,352",
+              "label": "maoni yaliyoorodheshwa"
+            },
+            {
+              "value": "46%",
+              "label": "nyota tano"
+            },
+            {
+              "value": "40%",
+              "label": "nyota moja"
+            }
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Chukulia madai ya alama karibu kamili kwenye ukurasa wa mwanzo **kwa tahadhari** wakati taarifa ya Trustpilot bado ipo."
+          }
+        },
+        {
+          "heading": "Masharti muhimu zaidi ya akaunti iliyofadhiliwa",
+          "paragraphs": [
+            "Modeli za challenge ni za kawaida. **3-Step iliondolewa Agosti 2026.** Takwimu hapa zinatoka kwa mapitio ya mhusika mwingine yaliyokaguliwa 5 Oktoba 2026; thibitisha wakati wa kununua.",
+            "Masharti yanayoamua malipo huanza **baada ya kufaulu**:"
+          ],
+          "compare": {
+            "columns": [
+              "Malengo ya faida",
+              "Hasara ya siku",
+              "Hasara ya juu"
+            ],
+            "rows": [
+              {
+                "label": "2-Step GOAT",
+                "values": [
+                  "8% kisha 6%",
+                  "4%",
+                  "10% tuli"
+                ]
+              },
+              {
+                "label": "2-Step Standard",
+                "values": [
+                  "10% kisha 5%",
+                  "5%",
+                  "10%"
+                ]
+              },
+              {
+                "label": "1-Step",
+                "values": [
+                  "10%",
+                  "3%",
+                  "6% tuli"
+                ]
+              }
+            ]
+          },
+          "bullets": [
+            "**Goat Guard:** kwa akaunti za 1-Step na 2-Step zilizofadhiliwa, hasara inayoelea ya 2% ya salio la mwanzo hushusha mgawanyo hadi 50%; mara ya pili akaunti hukiuka masharti.",
+            "**Sheria ya dakika mbili:** faida za biashara zilizoshikiliwa chini ya dakika mbili huondolewa wakati wa malipo, lakini hasara hubaki.",
+            "**Dirisha la habari:** faida karibu na habari zenye athari kubwa ina kikomo cha 1% ya salio la mwanzo.",
+            "**Kikomo cha faida ya siku:** akaunti inaweza kuhesabu hadi $3,000 kwa siku.",
+            "**Modeli za Instant:** drawdown inayofuata salio; akaunti hufungwa kwa hasara inayoelea ya 1% au 2% kulingana na modeli."
+          ]
+        },
+        {
+          "heading": "Malipo",
+          "paragraphs": [
+            "Mgawanyo wa kawaida ni **80%**, na nyongeza ya kulipia hadi 100% wakati wa kununua na mpango wa scaling unaoweza kuongeza hadi 90–95%. Modeli nyingi hulipa **kila siku 14**, kiwango cha chini **$100** na ada ya **3%**. Malipo mawili ya kwanza yana kikomo cha kiasi kidogo kati ya 6% ya salio la mwanzo na $10,000. Njia ni Rise, benki, Skrill na crypto, kila moja na kikomo chake.",
+            "Madai kadhaa ya umma yanapingana na kituo cha usaidizi, kama kasi ya malipo (saa 24 dhidi ya siku mbili za kazi) na ukubwa wa juu wa akaunti."
+          ],
+          "stats": [
+            {
+              "value": "80%",
+              "label": "mgawanyo wa kawaida"
+            },
+            {
+              "value": "Siku 14",
+              "label": "mzunguko wa malipo kwa modeli nyingi"
+            },
+            {
+              "value": "$100",
+              "label": "malipo ya chini"
+            },
+            {
+              "value": "3%",
+              "label": "ada ya usindikaji"
+            }
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Matangazo yakipingana na masharti, **masharti ndiyo yatakayotumika** kwa malipo yako."
+          }
+        },
+        {
+          "heading": "GOAT Funded Trader inafaa nani?",
+          "paragraphs": [
+            "Masharti ya ufadhili yanalenga tabia mahususi. Ikiwa uwazi wa sheria ni muhimu kuliko bei, linganisha kwanza na **kampuni zenye alama za juu** katika orodha yetu."
+          ],
+          "fit": {
+            "yes": [
+              "Hasara zinazoelea **ndogo na zinazodhibitiwa**",
+              "Biashara zinazoshikiliwa **zaidi ya dakika mbili**",
+              "Kutotegemea **mabadiliko ya habari**",
+              "Kutaka **bei ndogo ya kuingia**"
+            ],
+            "no": [
+              "**Scalpers**",
+              "**Traders wa habari**",
+              "Biashara zinazohitaji **drawdown kubwa ya ndani ya siku**"
+            ]
+          }
+        }
+      ]
+    }
   }
 };
 
