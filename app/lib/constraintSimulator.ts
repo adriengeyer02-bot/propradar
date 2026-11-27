@@ -6,7 +6,7 @@ export function consistency(total: number, best: number, percent: number) {
 }
 export type DrawdownMode = 'static' | 'eod' | 'intraday';
 export function drawdown(initial: number, budget: number, current: number, peak: number, eod: number, mode: DrawdownMode, lock?: number) {
-  if (![initial,budget,current,peak,eod].every(Number.isFinite) || initial <= 0 || budget <= 0 || budget > initial || peak < Math.max(initial,current,eod) || (lock !== undefined && (!Number.isFinite(lock) || lock < initial-budget))) return null;
+  if (![initial,budget,current,peak,eod].every(Number.isFinite) || initial <= 0 || budget <= 0 || budget > initial || peak < initial || eod > peak || (lock !== undefined && (!Number.isFinite(lock) || lock < initial-budget))) return null;
   const high = mode === 'static' ? initial : Math.max(initial, mode === 'eod' ? eod : peak);
   const raw = high-budget;
   const floor = mode !== 'static' && lock !== undefined ? Math.min(raw,lock) : raw;
