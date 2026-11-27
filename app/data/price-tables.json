@@ -2389,6 +2389,154 @@
           ]
         }
       ]
+    },
+    "apex-trader-funding": {
+      "checkedOn": "2026-11-27",
+      "programs": [
+        {
+          "name": "Legacy FULL — Tradovate",
+          "productId": "apex-legacy-promotional-current",
+          "billing": "monthly",
+          "currency": "USD",
+          "sourceUrl": "https://apextraderfunding.com/legacy-products/",
+          "note": "Limited-time availability. Regular published monthly subscription, excludes coupon and $99 one-time PA activation. Verify promotional cohort and checkout.",
+          "rows": [
+            {
+              "size": 25000,
+              "price": 227
+            },
+            {
+              "size": 50000,
+              "price": 247
+            },
+            {
+              "size": 100000,
+              "price": 447
+            },
+            {
+              "size": 150000,
+              "price": 647
+            },
+            {
+              "size": 250000,
+              "price": 447
+            },
+            {
+              "size": 300000,
+              "price": 447
+            }
+          ]
+        },
+        {
+          "name": "Legacy FULL — WealthCharts",
+          "productId": "apex-legacy-promotional-current",
+          "billing": "monthly",
+          "currency": "USD",
+          "sourceUrl": "https://apextraderfunding.com/legacy-products/",
+          "note": "Limited-time availability. Regular published monthly subscription, excludes coupon and $99 one-time PA activation. Verify promotional cohort and checkout.",
+          "rows": [
+            {
+              "size": 25000,
+              "price": 177
+            },
+            {
+              "size": 50000,
+              "price": 197
+            },
+            {
+              "size": 100000,
+              "price": 397
+            },
+            {
+              "size": 150000,
+              "price": 597
+            },
+            {
+              "size": 250000,
+              "price": 397
+            },
+            {
+              "size": 300000,
+              "price": 397
+            }
+          ]
+        }
+      ]
+    },
+    "myfundedfutures": {
+      "checkedOn": "2026-11-27",
+      "programs": [
+        {
+          "name": "Builder 50K — standard $2K MLL",
+          "productId": "mffu-builder",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://help.myfundedfutures.com/en/articles/14290805-builder-plan-50k-a-comprehensive-guide",
+          "note": "Published regular price for 50K only. No activation fee. Other sizes and checkout alternatives require verification.",
+          "rows": [
+            {
+              "size": 50000,
+              "price": 153
+            }
+          ]
+        },
+        {
+          "name": "Builder 50K — $1.5K MLL option",
+          "productId": "mffu-builder",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://help.myfundedfutures.com/en/articles/14290805-builder-plan-50k-a-comprehensive-guide",
+          "note": "Published regular price for 50K only. No activation fee. Other sizes and checkout alternatives require verification.",
+          "rows": [
+            {
+              "size": 50000,
+              "price": 125
+            }
+          ]
+        },
+        {
+          "name": "Rapid Intraday 50K",
+          "productId": "mffu-rapid-intraday",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://marketing.myfundedfutures.com/",
+          "note": "Published regular price for 50K only. No activation fee. Other sizes and checkout alternatives require verification.",
+          "rows": [
+            {
+              "size": 50000,
+              "price": 209
+            }
+          ]
+        },
+        {
+          "name": "Rapid EOD 50K — listed standard",
+          "productId": "mffu-rapid-eod",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://marketing.myfundedfutures.com/",
+          "note": "Published regular price for 50K only. No activation fee. Other sizes and checkout alternatives require verification.",
+          "rows": [
+            {
+              "size": 50000,
+              "price": 275
+            }
+          ]
+        },
+        {
+          "name": "Pro 50K — standard",
+          "productId": "mffu-pro",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://marketing.myfundedfutures.com/",
+          "note": "Published regular price for 50K only. No activation fee. Other sizes and checkout alternatives require verification.",
+          "rows": [
+            {
+              "size": 50000,
+              "price": 265
+            }
+          ]
+        }
+      ]
     }
   }
 }
