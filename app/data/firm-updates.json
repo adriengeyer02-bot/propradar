@@ -6750,8 +6750,17 @@
           "drawdownSource": "https://faq.ftuk.com/en/articles/14322511-flex-challenge-explained",
           "drawdownDetails": "Highest closing balance; once the floor reaches starting balance it stays fixed.",
           "profitSplit": "60% initially, scaling to 90%",
-          "platforms": ["TradeLocker", "Match-Trader", "MT5"],
-          "tradableAssets": ["Forex", "Metals", "Indices", "Crypto"],
+          "platforms": [
+            "TradeLocker",
+            "Match-Trader",
+            "MT5"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Metals",
+            "Indices",
+            "Crypto"
+          ],
           "minTradingDays": "1 evaluation day minimum",
           "hasConsistencyRule": true,
           "consistencyRule": "Funded: best winning day <20% of requested profit at Level 1; limit rises to 40% as the account scales."
@@ -6770,8 +6779,17 @@
           "drawdownSource": "https://faq.ftuk.com/en/articles/12333289-what-are-the-drawdown-limits",
           "drawdownDetails": "Relative to closed balance; not a static 6% limit until the lock is reached.",
           "profitSplit": "65% initially, scaling to 90% (official programme FAQ)",
-          "platforms": ["MT5", "Match-Trader", "TradeLocker"],
-          "tradableAssets": ["Forex", "Metals", "Indices", "Crypto"],
+          "platforms": [
+            "MT5",
+            "Match-Trader",
+            "TradeLocker"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Metals",
+            "Indices",
+            "Crypto"
+          ],
           "hasConsistencyRule": true,
           "consistencyRule": "Funded payout: 20% best-day score at Levels 1–2; increases to 30% then 40% at later levels."
         },
@@ -6779,7 +6797,7 @@
           "id": "ftuk-flex-futures",
           "name": "FLEX Futures — evaluation and funded",
           "type": "Futures evaluation",
-          "description": "Fast-track evaluation from $59; 30 days to pass and a separate activation fee after passing. The funded phase adds daily soft loss, five profitable days and payout buffers.",
+          "description": "30-day evaluation, one profitable day, activation fee $139/$189/$259/$359 (25/50/100/150K). Funded: soft DLL, five profitable days, retained buffer and caps; from second payout at least half the request must come from new profits.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
           "entryFeeMin": 59,
@@ -6790,17 +6808,21 @@
           "drawdownSource": "https://faq.ftuk.com/en/articles/17589498-flex-futures-maximum-loss-limit-eod",
           "drawdownDetails": "Trails completed end-of-day balance, not intraday unrealized gains; final floor locks at capital +$100.",
           "profitSplit": "90%",
-          "platforms": ["WealthCharts"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "WealthCharts"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "Evaluation: 1 profitable day; funded payout: 5 qualifying days",
           "hasConsistencyRule": true,
-          "consistencyRule": "Funded payout only: 40% best-day limit, minimum $500 payout and programme-specific payout buffers/caps."
+          "consistencyRule": "Funded 40% best-day limit; five qualifying days, $500 minimum gross, $1K–$2.5K caps and separate retained buffer."
         },
         {
           "id": "ftuk-instant-sim-futures",
           "name": "Instant Sim Funding (futures)",
           "type": "Instant funding",
-          "description": "Direct simulated Futures account, without evaluation or post-pass activation. A 6% profit target is for payout eligibility, not for passing a challenge.",
+          "description": "No evaluation or activation; 6% payout target each cycle, five qualifying days, retained buffer and gross caps. From second approved payout, at least 50% of request must be newly generated realized profit.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
           "profitTarget": "No evaluation; payout eligibility target 6%",
@@ -6810,8 +6832,12 @@
           "drawdownSource": "https://faq.ftuk.com/en/articles/12354215-instant-sim-funding-eod-drawdown-daily-loss-limit",
           "drawdownDetails": "Floor rises on completed EOD balances; equity touching the active floor breaches intraday.",
           "profitSplit": "90%",
-          "platforms": ["WealthCharts"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "WealthCharts"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "5 qualifying winning days before payout",
           "hasConsistencyRule": true,
           "consistencyRule": "Payout only: best day ≤20% of closed profit, non-withdrawable buffer and size-based payout cap."
@@ -15417,7 +15443,7 @@
           "id": "ttp-futures-prime",
           "name": "Futures Prime challenge",
           "type": "Futures evaluation",
-          "description": "Official listed price €99–€289 by account size; 30-day challenge with reset/extension charges. A temporary zero activation charge is advertised; prices remain in euros, not converted to USD.",
+          "description": "One-time EUR challenge fee, 30 days; official help says no activation fee for new accounts from 26 March 2026, older/reset breached cohorts differ. Funded: five $150+ profitable days, seven-day interval and 50% realized-profit cap subject to size limits.",
           "accountSizeMin": 50000,
           "accountSizeMax": 150000,
           "profitTarget": "$3,000 (50K), $6,000 (100K), $9,000 (150K)",
@@ -15427,17 +15453,21 @@
           "drawdownSource": "https://www.thetradingpit.com/futures",
           "drawdownDetails": "Floor follows completed end-of-day balance and stops at starting capital; equity reaching the active floor is a breach.",
           "profitSplit": "80%",
-          "platforms": ["not stated"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "Evaluation: 3 trading days; funded payout: 5 days with at least $150 profit",
           "hasConsistencyRule": true,
-          "consistencyRule": "Evaluation: 40% best-day consistency on the profit target (trading-rules page); funded withdrawal has separate five-day and capped amount conditions."
+          "consistencyRule": "40% challenge only under published baseline; individualized funded consistency or other risk conditions can be imposed under GTC V5.08.26."
         },
         {
           "id": "ttp-futures-instant",
           "name": "Futures Instant (no challenge)",
           "type": "Instant funding",
-          "description": "Official listed fee €499–€699, no activation fee. News trading allowed; overnight and weekend holding disallowed. Euro prices are not converted to USD.",
+          "description": "One-time EUR fee, no activation. Payout goal per cycle, five trading days, 20% best-day ratio, $500 minimum and sequence-based caps ($2K–$3K on 50K; $2.5K–$3.5K on 100K). News allowed; no overnight/weekend holding.",
           "accountSizeMin": 50000,
           "accountSizeMax": 100000,
           "profitTarget": "$3,000 (50K), $6,000 (100K) payout goal",
@@ -15447,8 +15477,18 @@
           "drawdownSource": "https://www.thetradingpit.com/futures",
           "drawdownDetails": "EOD balance trailing up to initial capital; daily pause is a separate rising risk threshold.",
           "profitSplit": "90%",
-          "platforms": ["NinjaTrader", "Tradovate", "TradingView", "ATAS", "Quantower", "DeepCharts", "R|Trader"],
-          "tradableAssets": ["Futures"],
+          "platforms": [
+            "NinjaTrader",
+            "Tradovate",
+            "TradingView",
+            "ATAS",
+            "Quantower",
+            "DeepCharts",
+            "R|Trader"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "minTradingDays": "5 trading days",
           "hasConsistencyRule": true,
           "consistencyRule": "20%: the biggest profitable day must not exceed 20% of total profit before a payout (official page, 29 Oct 2026)."
@@ -19433,45 +19473,57 @@
           "id": "uprofit-day-soft",
           "name": "DAY Soft — evaluation",
           "type": "Futures evaluation",
-          "description": "Published DAY Soft monthly subscriptions span $10K–$150K, including $49 list for 10K and $130 list for 50K before temporary discounts.",
+          "description": "Current Soft evaluation; Virtual Live has no activation fee on the verified 50K example. October 8 payout rules: three profitable days each request, protected SafetyNet, gross cap 3% of nominal size, 90% split and permanent closure after sixth payout. Not the older DAY payout policy.",
           "accountSizeMin": 10000,
           "accountSizeMax": 150000,
           "profitTarget": "$800 (10K), $3,000 (50K), $6,000 (100K), $9,000 (150K)",
-          "maxDailyLoss": "$220 (10K), $1,100 (50K), $2,200 (100K), $3,000 (150K)",
+          "maxDailyLoss": "Evaluation tier-specific; funded 50K $1,100 soft pause",
           "maxDrawdown": "$400 (10K), $2,000 (50K), $3,000 (100K), $4,500 (150K) EOD",
           "drawdownType": "EOD",
           "drawdownSource": "https://uprofit.com/day-programs",
-          "drawdownDetails": "The DAY plan uses a day-end loss measurement; daily soft risk parameters remain size-specific.",
-          "profitSplit": "Up to 90% on virtual live subject to payout policy",
-          "platforms": ["TradingView", "Tradovate"],
-          "tradableAssets": ["Futures"],
+          "drawdownDetails": "EOD trailing family; 50K funded $2,000 floor locks at $50,000. Separate non-withdrawable SafetyNet $2,500.",
+          "profitSplit": "90% on current Soft/Flex virtual live",
+          "platforms": [
+            "TradingView",
+            "Tradovate"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
-          "consistencyRule": "50% consistency on the displayed evaluation cards; published payout rules may differ after funding."
+          "consistencyRule": "Evaluation 50% on published cards; funded best day strictly below 40% of cycle profits, resets at withdrawal.",
+          "minTradingDays": "Funded: 3 profitable days per withdrawal"
         },
         {
           "id": "uprofit-day-flex",
           "name": "DAY Flex — evaluation",
           "type": "Futures evaluation",
-          "description": "Separate flexible DAY product; evaluation cards offer 50K–150K tiers, monthly subscriptions and separate soft-limit conditions; verify checkout options.",
+          "description": "Current Flex evaluation; Virtual Live has no activation fee on the verified 50K example. October 8 payout rules: three profitable days each request, protected SafetyNet, gross cap 3% of nominal size, 90% split and permanent closure after sixth payout. Not the older DAY payout policy.",
           "accountSizeMin": 50000,
           "accountSizeMax": 150000,
           "profitTarget": "$3,000 (50K), $6,000 (100K), $9,000 (150K)",
-          "maxDailyLoss": "No daily loss value on the currently displayed Flex tier cards; verify before purchase",
+          "maxDailyLoss": "50K funded: none; verify other tier at checkout",
           "maxDrawdown": "$2,000 (50K), $3,000 (100K), $4,500 (150K) EOD",
           "drawdownType": "EOD",
           "drawdownSource": "https://uprofit.com/day-programs",
-          "drawdownDetails": "DAY Flex is presented within the EOD drawdown family; a different daily-loss configuration must not be inferred from Soft.",
-          "profitSplit": "Up to 90% on virtual live subject to payout policy",
-          "platforms": ["TradingView", "Tradovate"],
-          "tradableAssets": ["Futures"],
+          "drawdownDetails": "EOD trailing family; 50K funded $2,000 floor locks at $50,000. Separate non-withdrawable SafetyNet $2,500.",
+          "profitSplit": "90% on current Soft/Flex virtual live",
+          "platforms": [
+            "TradingView",
+            "Tradovate"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
           "hasConsistencyRule": true,
-          "consistencyRule": "50% consistency on the displayed evaluation cards."
+          "consistencyRule": "Evaluation 50% on published cards; funded best day strictly below 40% of cycle profits, resets at withdrawal.",
+          "minTradingDays": "Funded: 3 profitable days per withdrawal"
         },
         {
           "id": "uprofit-one-50k",
           "name": "ONE 50K — evaluation",
           "type": "Futures evaluation",
-          "description": "One-off $120 50K evaluation, no activation fee; static floor and two trading days before simulated funded qualification.",
+          "description": "One-off 50K evaluation, no activation fee. Virtual Live starts with $1,000 static maximum loss. No SafetyNet; five $150+ winning days per request, max 50% of available profit and $2,000 gross cap, six withdrawals maximum. Payout policy states drawdown becomes $0 after first withdrawal; exact floor convention to confirm.",
           "accountSizeMin": 50000,
           "accountSizeMax": 50000,
           "entryFeeMin": 120,
@@ -19480,13 +19532,17 @@
           "maxDrawdown": "$1,000 fixed maximum loss (account floor $49,000)",
           "drawdownType": "Static",
           "drawdownSource": "https://uprofit.com/help/how-does-the-one-50k-account-work-49114317399828",
-          "drawdownDetails": "The 49,000 account floor does not trail winning balance highs; unlike DAY, this is a static loss cap.",
+          "drawdownDetails": "Static $49,000 floor initially. Payout policy states drawdown is adjusted to $0 after the first payout; confirm exact funded floor in dashboard.",
           "profitSplit": "Funded split subject to ONE payout policy",
-          "platforms": ["Verify supported ONE platform at checkout"],
-          "tradableAssets": ["Futures"],
-          "minTradingDays": "2 trading days",
+          "platforms": [
+            "Verify supported ONE platform at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "Evaluation: 2 days; funded: 5 days of $150+ profit per payout",
           "hasConsistencyRule": true,
-          "consistencyRule": "50% best-day ceiling during ONE evaluation."
+          "consistencyRule": "50% evaluation. Funded payout checklist does not specify a ratio; absence not explicitly confirmed."
         }
       ],
       "changelog": [
@@ -26576,9 +26632,14 @@
           "drawdownSource": "https://lvlupfutures.com/rules",
           "drawdownDetails": "5% EOD trailing drawdown on the highest end-of-day balance; on the funded account it locks at the starting balance once the account reaches 6% profit, and a payout does not reset it.",
           "profitSplit": "80%",
-          "platforms": ["Tickblaze", "Volumetrica"],
-          "tradableAssets": ["Futures"],
-          "minTradingDays": "5 days",
+          "platforms": [
+            "Tickblaze",
+            "Volumetrica"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "Evaluation: 5 days; funded: 14-day cycle, no 5-profitable-day requirement",
           "hasConsistencyRule": true,
           "consistencyRule": "Best day cannot exceed 40% of total accumulated profit, in evaluation and when a funded payout is requested; not an automatic breach."
         },
@@ -26598,9 +26659,14 @@
           "drawdownSource": "https://lvlupfutures.com/rules",
           "drawdownDetails": "End-of-day trailing drawdown of 3-4% depending on size; reaching it is a Hard Breach.",
           "profitSplit": "100%",
-          "platforms": ["Tickblaze", "Volumetrica"],
-          "tradableAssets": ["Futures"],
-          "minTradingDays": "5 days",
+          "platforms": [
+            "Tickblaze",
+            "Volumetrica"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "Evaluation: 5 days; funded: 5 profitable trading days per payout",
           "hasConsistencyRule": true,
           "consistencyRule": "40% best-day rule during the evaluation only; no consistency rule once funded."
         }

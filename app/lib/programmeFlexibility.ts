@@ -1931,6 +1931,342 @@ Object.assign(evidence, {
     }
   }
 });
+
+// Batch 8 — funded programme evidence, scoped current terms.
+Object.assign(evidence, {
+  "uprofit-trader": {
+    "uprofit-day-soft": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Soft virtual live, October 8 payout rules; 50K funded risk example. Not legacy DAY.",
+      "scopeFr": "Soft Virtual Live actuel, règles de retrait du 8 octobre ; exemple 50K. Hors ancien DAY.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://uprofit.com/help/uprofit-soft-live-virtual-50k-52063647938580",
+          "reason": "50K: $2,000 trailing loss floor locks at initial balance; $1,100 soft daily loss limit."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://uprofit.com/help/uprofit-soft-payout-policy-52063548100500",
+          "reason": "Three profitable days per request, permanent $2,500 safety net on 50K, gross cap of 3% of account size per request."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://uprofit.com/help/uprofit-soft-payout-policy-52063548100500",
+          "reason": "Best trading day must be strictly below 40% of cycle profits; resets on each request."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://uprofit.com/help/uprofit-soft-live-virtual-50k-52063647938580",
+          "reason": "Scaled contract allocation and no swing holding across sessions."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://uprofit.com/help/uprofit-soft-payout-policy-52063548100500",
+          "reason": "Account closes after six withdrawals."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://uprofit.com/help/uprofit-soft-live-virtual-50k-52063647938580"
+      }
+    },
+    "uprofit-day-flex": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Flex virtual live, October 8 payout rules; 50K funded risk example. Not legacy DAY.",
+      "scopeFr": "Flex Virtual Live actuel, règles de retrait du 8 octobre ; exemple 50K. Hors ancien DAY.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://uprofit.com/help/uprofit-flex-live-virtual-50k-52062598543508",
+          "reason": "50K: $2,000 trailing loss floor locks at initial balance; no daily loss limit."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://uprofit.com/help/uprofit-flex-payout-policy-52062715698580",
+          "reason": "Three profitable days per request, permanent $2,500 safety net on 50K, gross cap of 3% of account size per request."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://uprofit.com/help/uprofit-flex-payout-policy-52062715698580",
+          "reason": "Best trading day must be strictly below 40% of cycle profits; resets on each request."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://uprofit.com/help/uprofit-flex-live-virtual-50k-52062598543508",
+          "reason": "Scaled contract allocation and no swing holding across sessions."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://uprofit.com/help/uprofit-flex-payout-policy-52062715698580",
+          "reason": "Account closes after six withdrawals."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://uprofit.com/help/uprofit-flex-live-virtual-50k-52062598543508"
+      }
+    },
+    "uprofit-one-50k": {
+      "checkedOn": "2026-11-27",
+      "scope": "ONE 50K virtual live. Public payout checklist has no funded percentage ratio but absence not expressly confirmed; no final stars until confirmed. Static floor changes after first payout.",
+      "scopeFr": "ONE 50K Virtual Live. Absence de consistency chiffrée financée à confirmer ; pas de note finale. Seuil fixe modifié au premier retrait.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://uprofit.com/help/uprofit-one-payout-policy-49177986296468",
+          "reason": "Initially $1,000 static drawdown; after first payout policy says drawdown is adjusted to $0. Exact dashboard convention requires confirmation."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://uprofit.com/help/uprofit-one-payout-policy-49177986296468",
+          "reason": "Five $150+ profitable days per request; 50% of available profit and $2,000 cap; no SafetyNet, new profits required."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://uprofit.com/help/how-does-the-virtual-live-stage-of-the-one-50k-account-work-49177546289300",
+          "reason": "Two E-minis or 20 micros, no swing between sessions."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://uprofit.com/help/uprofit-one-payout-policy-49177986296468",
+          "reason": "Maximum six withdrawals per account; compliance with best-practices rules required."
+        }
+      }
+    }
+  },
+  "lvlup-futures": {
+    "lvlup-futures-lvlup": {
+      "checkedOn": "2026-11-27",
+      "scope": "Lvlup account, funded baseline; separate provider trader agreement not reviewed.",
+      "scopeFr": "Compte Lvlup, phase financée standard ; contrat distinct du partenaire non relu.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://lvlupfutures.com/rules",
+          "reason": "5% EOD trailing, locks at initial balance after 6% profit; no daily loss stop."
+        },
+        "payout": {
+          "points": 0.5,
+          "source": "https://lvlupfutures.com/rules",
+          "reason": "14-day cycle, cap 10% of initial account size; no five-profitable-day requirement; payout does not reset floor."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://lvlupfutures.com/rules",
+          "reason": "40% of accumulated profit checked at payout; failure delays eligibility."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://lvlupfutures.com/rules",
+          "reason": "News, own-account copying and no minimum trade duration allowed; no overnight/weekend holding and contract limits."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://lvlupfutures.com/rules",
+          "reason": "30-day inactivity requirement and nonnumeric strategy switching/all-in restrictions; funding and payout review."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "lossPercent": 5,
+        "profitSplit": 80,
+        "source": "https://lvlupfutures.com/rules"
+      }
+    },
+    "lvlup-futures-starter": {
+      "checkedOn": "2026-11-27",
+      "scope": "Starter account, funded baseline; separate provider trader agreement not reviewed.",
+      "scopeFr": "Compte Starter, phase financée standard ; contrat distinct du partenaire non relu.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://lvlupfutures.com/rules",
+          "reason": "EOD trailing, size-dependent distance; no daily loss stop."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://lvlupfutures.com/rules",
+          "reason": "Five profitable days per payout, up to 50% of generated profit and $1K–$3K cap."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://lvlupfutures.com/rules",
+          "reason": "40% applies only to evaluation; explicitly no funded consistency."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://lvlupfutures.com/rules",
+          "reason": "News, own-account copying and no minimum trade duration allowed; no overnight/weekend holding and contract limits."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://lvlupfutures.com/rules",
+          "reason": "Permanent closure after fifth approved payout, even if profit remains."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 100,
+        "source": "https://lvlupfutures.com/rules"
+      }
+    }
+  },
+  "ftuk": {
+    "ftuk-flex-futures": {
+      "checkedOn": "2026-11-27",
+      "scope": "FLEX Futures funded only, current October rules; not CFD Flex.",
+      "scopeFr": "FLEX Futures, phase financée ; règles actuelles d'octobre, hors CFD.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://faq.ftuk.com/en/articles/17563548-flex-futures-account-rules-overview",
+          "reason": "EOD trailing $1K–$4K and separate soft daily loss stop."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://faq.ftuk.com/en/articles/17589503-flex-futures-payout-requirements",
+          "reason": "Five qualifying days, required buffer $1.5K–$4.5K and $1K–$2.5K gross caps; from second payout 50% must be fresh profit per daily progression rule."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://faq.ftuk.com/en/articles/17563548-flex-futures-account-rules-overview",
+          "reason": "40% funded consistency."
+        },
+        "trading": {
+          "points": 0,
+          "source": "https://faq.ftuk.com/en/articles/14492295-is-there-a-minimum-trade-duration",
+          "reason": "Minimum 30 seconds per trade even when stop loss or take profit triggers earlier."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://ftuk.com/terms-of-service",
+          "reason": "Terms allow payout reduction and termination based on rule-compliance judgments; prior approval does not guarantee future eligibility. Separate from quantitative payout rules."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://faq.ftuk.com/en/articles/17563548-flex-futures-account-rules-overview"
+      }
+    },
+    "ftuk-instant-sim-futures": {
+      "checkedOn": "2026-11-27",
+      "scope": "Instant Sim Funding Futures, current October 27 rules; not forex instant.",
+      "scopeFr": "Instant Sim Funding Futures, règles du 27 octobre ; hors forex.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://faq.ftuk.com/en/articles/12354215-instant-sim-funding-eod-drawdown-daily-loss-limit",
+          "reason": "EOD trailing and separate daily soft loss stop; equity breach of active floor is permanent."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://faq.ftuk.com/en/articles/12354244-instant-sim-funding-payout-rules-caps-progression",
+          "reason": "6% target each cycle, five qualifying days, $1K–$4.5K retained buffer, gross caps $1K–$3K; from second payout 50% must be fresh realized profit."
+        },
+        "consistency": {
+          "points": 0,
+          "source": "https://faq.ftuk.com/en/articles/12354244-instant-sim-funding-payout-rules-caps-progression",
+          "reason": "20% or less of current closed profit, resets after approval."
+        },
+        "trading": {
+          "points": 0,
+          "source": "https://faq.ftuk.com/en/articles/14492295-is-there-a-minimum-trade-duration",
+          "reason": "Minimum 30 seconds per trade even when stop loss or take profit triggers earlier."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://ftuk.com/terms-of-service",
+          "reason": "Terms allow payout reduction and termination based on rule-compliance judgments; prior approval does not guarantee future eligibility. Separate from quantitative payout rules."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://faq.ftuk.com/en/articles/12354244-instant-sim-funding-payout-rules-caps-progression"
+      }
+    }
+  },
+  "the-trading-pit": {
+    "ttp-futures-prime": {
+      "checkedOn": "2026-11-27",
+      "scope": "Futures Prime standard funded reward rules; individualized conditions may apply under GTC V5.08.26.",
+      "scopeFr": "Futures Prime, règles de retrait standard en phase financée ; conditions individualisées possibles selon CG V5.08.26.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://www.thetradingpit.com/futures",
+          "reason": "EOD trailing locks at initial balance; daily pause is evaluation only."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://www.thetradingpit.com/futures",
+          "reason": "Five $150+ profitable days, seven-day interval, max 50% realized profit and $2.5K–$5K caps."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://www.thetradingpit.com/blog/futures-prime-program",
+          "reason": "40% rule documented in challenge phase; current public Prime reward checklist has no baseline percentage ratio. Individual rules may be imposed under GTC."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://www.thetradingpit.com/trading-rules",
+          "reason": "News allowed; no overnight, restrictions on copying between evaluation and earning accounts; strategy consistency requirements."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://www.thetradingpit.com/general-terms-and-conditions",
+          "reason": "Schedule A.3–A.4 allows reward rate down to zero based on compliant trading data and restrictions based on prior/cross-account trading history, with notification and complaint procedure."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 80,
+        "source": "https://www.thetradingpit.com/futures"
+      }
+    },
+    "ttp-futures-instant": {
+      "checkedOn": "2026-11-27",
+      "scope": "Futures Instant 50K/100K, standard funded rules and GTC V5.08.26.",
+      "scopeFr": "Futures Instant 50K/100K, règles financées standard et CG V5.08.26.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://www.thetradingpit.com/futures",
+          "reason": "EOD trailing locks at initial balance; separate dynamic daily pause based on best accumulated EOD profit."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://www.thetradingpit.com/futures",
+          "reason": "Five trading days per request, new profit target each cycle, $500 minimum and sequence-dependent caps $2K–$3.5K."
+        },
+        "consistency": {
+          "points": 0,
+          "source": "https://www.thetradingpit.com/futures",
+          "reason": "20% best-day limit."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://www.thetradingpit.com/futures",
+          "reason": "News permitted, own copying across two accounts allowed; overnight/weekend forbidden."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://www.thetradingpit.com/general-terms-and-conditions",
+          "reason": "Schedule A.3–A.4 allows reward rate down to zero based on compliant trading data and restrictions based on prior/cross-account trading history, with notification and complaint procedure."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://www.thetradingpit.com/futures"
+      }
+    }
+  }
+});
 export const CRITERIA
 :Criterion[]=['drawdown','payout','consistency','trading','funded'];
 export function getProgrammeEvidence(slug:string,id:string,variant?:string){return variant?getProgrammeVariants(slug,id).find(x=>x.id===variant)?.evidence:evidence[slug]?.[id]}

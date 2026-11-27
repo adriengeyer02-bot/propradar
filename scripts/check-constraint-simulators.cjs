@@ -96,8 +96,17 @@ assert.equal(programmeFlexibility(getProgrammeEvidence('daytraders-com','daytrad
 assert.equal(programmeFlexibility(getProgrammeEvidence('daytraders-com','daytraders-s2l-current')).stars,2.5);
 assert.equal(programmeFlexibility(getProgrammeEvidence('funded-futures-network','funded-futures-network-max-standard')).stars,1.5);
 assert.equal(programmeFlexibility(getProgrammeEvidence('funded-futures-network','funded-futures-network-steady')).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('uprofit-trader','uprofit-day-soft')).stars,1.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('uprofit-trader','uprofit-day-flex')).stars,1.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('uprofit-trader','uprofit-one-50k')).stars,null);
+assert.equal(programmeFlexibility(getProgrammeEvidence('lvlup-futures','lvlup-futures-lvlup')).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('lvlup-futures','lvlup-futures-starter')).stars,2);
+assert.equal(programmeFlexibility(getProgrammeEvidence('ftuk','ftuk-flex-futures')).stars,1);
+assert.equal(programmeFlexibility(getProgrammeEvidence('ftuk','ftuk-instant-sim-futures')).stars,0.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence('the-trading-pit','ttp-futures-prime')).stars,2);
+assert.equal(programmeFlexibility(getProgrammeEvidence('the-trading-pit','ttp-futures-instant')).stars,1);
 const a={points:0.5,source:'https://example.com',reason:'documented test fixture'};
 const complete={checkedOn:'2026-11-27',scope:'test',assessments:{drawdown:a,payout:a,consistency:a,trading:a,funded:a}};
 assert.equal(programmeFlexibility(complete).stars,2.5);
 assert.equal(programmeFlexibility({...complete,assessments:{...complete.assessments,payout:{...a,source:''}}}).stars,null);
-console.log('Constraint simulators and evidence gating: 86 checks OK');
+console.log('Constraint simulators and evidence gating: 95 checks OK');
