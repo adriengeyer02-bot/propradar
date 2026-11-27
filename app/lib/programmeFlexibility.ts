@@ -1108,6 +1108,201 @@ evidence.myfundedfutures['mffu-signature-current'] = {
     "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide"
   }
 };
+
+// Batch 5 — scoped Futures funded-stage product evidence.
+Object.assign(evidence, {
+  "e8-futures": {
+    "e8-signature-futures": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Signature Futures performance account.",
+      "scopeFr": "Signature Futures actuel, phase Performance.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://e8futures.com/e8-signature-futures",
+          "reason": "EOD trailing 2.66–4%, locks at initial balance."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://e8futures.com/e8-signature-futures",
+          "reason": "Permanent reserve equal to drawdown, tier and sequence caps, five new days earning at least 0.3% between withdrawals."
+        },
+        "consistency": {
+          "points": 0.5,
+          "source": "https://e8futures.com/e8-signature-futures",
+          "reason": "35% best-day limit in performance stage."
+        },
+        "trading": {
+          "points": 1,
+          "source": "https://e8futures.com/e8-signature-futures",
+          "reason": "News and own-account copying allowed; ordinary futures session and contract limits."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://e8futures.com/e8-signature-futures",
+          "reason": "Account ends after four payouts; replacement is a new challenge, not uninterrupted funding."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 80,
+        "source": "https://e8futures.com/e8-signature-futures"
+      }
+    },
+    "e8-zero-max": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Zero MAX Futures, default 80% split, performance stage. Official FAQ and cycle diagram say four payouts; one marketing line mentions a fifth.",
+      "scopeFr": "Zero MAX Futures actuel, partage standard 80 %, phase Performance. FAQ et schéma : quatre retraits ; une phrase commerciale évoque un cinquième.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://e8futures.com/e8-zero",
+          "reason": "3% EOD dynamic loss limit, locks at initial balance on first payout or sufficient closed profit."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://e8futures.com/e8-zero",
+          "reason": "Daily access but caps $1,500–$7,000; leftover profit in each cycle becomes permanently non-withdrawable buffer."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://e8futures.com/e8-zero",
+          "reason": "40% applies only to evaluation; no funded best-day requirement."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://e8futures.com/e8-zero",
+          "reason": "Futures performance contract scaling; narrower initial contract allocation than challenge."
+        },
+        "funded": {
+          "points": 0,
+          "source": "https://e8futures.com/e8-zero",
+          "reason": "FAQ says the account is deactivated after four payouts, regardless of remaining reserve; new challenge issued."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "lossPercent": 3,
+        "profitSplit": 80,
+        "source": "https://e8futures.com/e8-zero"
+      }
+    }
+  },
+  "top-one-futures": {
+    "top-one-elite-daily": {
+      "checkedOn": "2026-11-27",
+      "scope": "Elite DAILY V2 purchased from May 11, 2026; sim-funded stage.",
+      "scopeFr": "Elite DAILY V2 à partir du 11 mai 2026 ; phase financée simulée.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.toponefutures.com/en/articles/15056075-elite-daily-v2-overview",
+          "reason": "EOD trailing $1,000–$3,500 in funded stage; daily loss pause."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://help.toponefutures.com/en/articles/15056446-elite-daily-v2-daily-payout-rules",
+          "reason": "Permanent $1,500–$4,500 buffer, $750–$2,250 request caps; after first payout 50% of each request must be newly generated profits."
+        },
+        "consistency": {
+          "points": 1,
+          "source": "https://help.toponefutures.com/en/articles/15056446-elite-daily-v2-daily-payout-rules",
+          "reason": "No funded best-day rule; progression relates to new payout profits, not concentration."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.toponefutures.com/en/articles/15056075-elite-daily-v2-overview",
+          "reason": "Funded orders cannot execute or close within two minutes either side of designated news; contract scaling."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
+          "reason": "Risk review after three payouts or earlier; other sim accounts disabled during transition."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://help.toponefutures.com/en/articles/15056075-elite-daily-v2-overview"
+      }
+    },
+    "top-one-instant-sim-funded": {
+      "checkedOn": "2026-11-27",
+      "scope": "Instant Sim Funded 2.0 purchased on or after July 27, 2026.",
+      "scopeFr": "Instant Sim Funded 2.0 acheté à partir du 27 juillet 2026.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.toponefutures.com/en/articles/11020805-overview-of-the-instant-sim-funded-program",
+          "reason": "EOD trailing $1,000–$5,250, locks at initial balance plus $100; soft daily loss limit."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://help.toponefutures.com/en/articles/12718038-instant-sim-funded-account-payout-requirements",
+          "reason": "New-cycle profit targets of 6%, 5% and 4% for the first three payouts; size-specific $1,000–$3,000 caps."
+        },
+        "consistency": {
+          "points": 0,
+          "source": "https://help.toponefutures.com/en/articles/11020805-overview-of-the-instant-sim-funded-program",
+          "reason": "20% funded best-day concentration limit, resets on payout."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.toponefutures.com/en/articles/11680891-copy-trading-policy",
+          "reason": "Copy trading restricted to matching programme and account size; no contract scaling on Instant."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
+          "reason": "Risk review at three payouts or earlier; other sim accounts disabled during transition."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "profitSplit": 90,
+        "source": "https://help.toponefutures.com/en/articles/11020805-overview-of-the-instant-sim-funded-program"
+      }
+    },
+    "top-one-ignite": {
+      "checkedOn": "2026-11-27",
+      "scope": "Current Ignite instant simulated funded programme.",
+      "scopeFr": "Ignite actuel, financement simulé immédiat.",
+      "assessments": {
+        "drawdown": {
+          "points": 0.5,
+          "source": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview",
+          "reason": "EOD trailing 4% maximum loss and 2% soft daily stop."
+        },
+        "payout": {
+          "points": 0,
+          "source": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview",
+          "reason": "New 5% target every payout, $250 minimum and $500–$2,000 maximum per request."
+        },
+        "consistency": {
+          "points": 0,
+          "source": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview",
+          "reason": "15% maximum best-day concentration."
+        },
+        "trading": {
+          "points": 0.5,
+          "source": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview",
+          "reason": "No bots or overnight trading, minimum ten-second hold; copying restricted to matching Ignite sizes."
+        },
+        "funded": {
+          "points": 0.5,
+          "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
+          "reason": "Risk review after three payouts or earlier; additional sim accounts disabled during transition."
+        }
+      },
+      "preset": {
+        "drawdown": "eod",
+        "lossPercent": 4,
+        "profitSplit": 90,
+        "source": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview"
+      }
+    }
+  }
+});
 export const CRITERIA
 :Criterion[]=['drawdown','payout','consistency','trading','funded'];
 export function getProgrammeEvidence(slug:string,id:string,variant?:string){return variant?getProgrammeVariants(slug,id).find(x=>x.id===variant)?.evidence:evidence[slug]?.[id]}
