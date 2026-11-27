@@ -965,6 +965,170 @@ const sw: GuideTranslations = {
         }
       ]
     }
+  },
+  "topstep-review": {
+    "title": "Mapitio ya Topstep 2026: Je, ni halali? Sheria na malipo",
+    "metaDescription": "Mapitio ya Topstep 2026: Trading Combine, lengo la uthabiti la 55%, kikomo cha hasara kinachopanda, mgawanyo wa 90%, njia za malipo na Trustpilot.",
+    "eyebrow": "Mapitio ya kampuni",
+    "h1": "Mapitio ya Topstep 2026: je, Topstep ni halali?",
+    "answer": "Topstep ni kampuni halisi ya Marekani ya futures, iliyoanzishwa 2012. Trading Combine haina kikomo cha muda, ina lengo la uthabiti la 55% na Maximum Loss Limit inayofuata salio la mwisho wa siku lakini inayofuatiliwa wakati halisi. Wafanyabiashara wapya hupokea 90% ya malipo. Hasara kuu ni futures pekee, kutoruhusu nafasi usiku na mabadiliko ya mara kwa mara tangu mwisho wa 2025.",
+    "checks": [
+      "Thibitisha bei ya sasa ya Combine na ada ya kuwezesha akaunti.",
+      "Panga ukubwa wa nafasi kwa Maximum Loss Limit inayofuata salio la mwisho wa siku.",
+      "Chagua kwa makini njia ya malipo ya Express Funded Account: uamuzi ni wa kudumu.",
+      "Kumbuka MLL huwa $0 baada ya malipo ya kwanza."
+    ],
+    "faq": [
+      {
+        "question": "Je, Topstep ni halali?",
+        "answer": "Ndiyo. Topstep imefanya kazi Chicago tangu 2012, huchapisha sheria za kina na ilizindua broker mshirika mwaka 2026. Tarehe 12 Novemba 2026 PropRadar iliipa 84/100 bila onyo la mdhibiti lililorekodiwa. Tathmini na hatua ya ufadhili wa majaribio ni za kuiga."
+      },
+      {
+        "question": "Sheria ya uthabiti ni ipi?",
+        "answer": "Katika Trading Combine siku bora haiwezi kuzidi 55% ya lengo la faida; ikizidi, lengo huwa siku bora ÷ 0.55. Katika njia ya Consistency ya XFA, siku kubwa lazima iwe 40% au chini ya faida halisi ili kuomba malipo."
+      },
+      {
+        "question": "Topstep hulipa mgawanyo gani?",
+        "answer": "Waliojiunga kuanzia 12 Januari 2026 hupata 90% ya malipo yaliyoidhinishwa. Wa zamani hupata 100% ya $10,000 za kwanza, kisha 90%. Ombi la chini ni $125."
+      },
+      {
+        "question": "Je, ninaweza kushikilia nafasi usiku?",
+        "answer": "Hapana. Nafasi zote zifungwe mwisho wa kipindi; usiku na wikendi haziruhusiwi."
+      }
+    ],
+    "article": {
+      "intro": "Topstep ni jina la zamani zaidi katika prop trading ya futures: ilianzishwa **2012 Chicago** na Michael Patak, na Trading Combine yake ilitangulia wimbi la sasa. Historia ndiyo nguvu yake. Udhaifu ni **futures pekee**, **mabadiliko ya sheria mara kwa mara** tangu mwisho wa 2025 na **kikomo cha hasara kinachopanda** kinachohitaji nidhamu.",
+      "keyPoints": [
+        "Kampuni ya Marekani tangu **2012**, futures pekee, hakuna onyo la mdhibiti lililorekodiwa na PropRadar.",
+        "Combine haina **kikomo cha muda**; nafasi zote **zifungwe mwisho wa kipindi**.",
+        "Wapya hupata **90%** ya malipo; ombi la chini **$125**.",
+        "Baada ya malipo ya kwanza, MLL huwa **$0**: hakuna akiba."
+      ],
+      "sections": [
+        {
+          "heading": "Je, Topstep ni halali?",
+          "paragraphs": [
+            "Topstep ni **kampuni iliyoimarika Marekani**, yenye historia ndefu ya umma, kituo cha usaidizi na introducing broker mshirika Topstep Brokerage, iliyozinduliwa mapema 2026. Tarehe 12 Novemba 2026 PropRadar iliipa **84/100**, bila onyo la mdhibiti lililorekodiwa. Tathmini na Express Funded Account ni **za kuiga**: malipo ni tuzo za Topstep, si faida kutoka akaunti ya broker.",
+            "Trustpilot ilikuwa na alama **3.7** katika **maoni 14,955**, na taarifa kuwa kampuni inaweza kuhusishwa na uwekezaji wenye hatari kubwa (23 Oktoba 2026). Malalamiko ya mwisho wa 2025 yalihusu **hitilafu za TopstepX** na stop orders zilizoshindwa."
+          ],
+          "stats": [
+            {
+              "value": "2012",
+              "label": "ilianzishwa Chicago"
+            },
+            {
+              "value": "84/100",
+              "label": "Alama ya 12 Novemba 2026"
+            },
+            {
+              "value": "3.7",
+              "label": "Trustpilot, maoni 14,955 (23 Oktoba 2026)"
+            }
+          ]
+        },
+        {
+          "heading": "Jinsi Trading Combine inavyofanya kazi",
+          "paragraphs": [
+            "Trading Combine ni tathmini ya Topstep. **Hakuna kikomo cha muda wala idadi ya chini ya siku za biashara.** Nafasi zifungwe mwisho wa kipindi: hakuna kushikilia usiku au wikendi.",
+            "**Maximum Loss Limit (MLL)** hupanda salio la mwisho wa siku linapoongezeka, haishuki; ukiukaji **hufuatiliwa wakati halisi**, pamoja na hasara zisizofungwa. Katika Combine huacha kupanda ikifikia salio la mwanzo (kituo cha usaidizi, 18 Septemba 2026).",
+            "Lengo la uthabiti ni **55%**: siku bora isizidi 55% ya lengo. Ikizidi, hushindwi; **lengo hupanda** hadi siku bora ÷ 0.55 (17 Septemba 2026). Kikomo cha hiari cha hasara ya siku cha $1,000, $2,000 au $3,000 husimamisha biashara kwa kipindi bila kufunga akaunti."
+          ],
+          "compare": {
+            "columns": [
+              "50K",
+              "100K",
+              "150K"
+            ],
+            "rows": [
+              {
+                "label": "Lengo la faida",
+                "values": [
+                  "$3,000",
+                  "$6,000",
+                  "$9,000"
+                ]
+              },
+              {
+                "label": "Maximum Loss Limit",
+                "values": [
+                  "$2,000",
+                  "$3,000",
+                  "$4,500"
+                ]
+              }
+            ],
+            "note": "Kituo cha usaidizi cha Topstep, Septemba 2026."
+          },
+          "callout": {
+            "kind": "example",
+            "text": "Combine 50K, siku bora **$2,000**: zaidi ya 55% ya $3,000 ($1,650), hivyo lengo ni $2,000 ÷ 0.55 ≈ **$3,636**."
+          }
+        },
+        {
+          "heading": "Express Funded Account na malipo",
+          "paragraphs": [
+            "Baada ya kufaulu, unatumia **Express Funded Account (XFA)** ya kuiga, ambako malipo huanza. XFA huanza na salio la $0 na akiba ileile ya MLL chini yake. Tangu Februari 2026 unachagua njia mbili za malipo, na **chaguo ni la kudumu**.",
+            "Waliojiunga kuanzia 12 Januari 2026 hupata **90%** ya malipo yaliyoidhinishwa; wa zamani hupata 100% ya $10,000 za kwanza, kisha 90%. Kiwango cha chini ni **$125**. Wanaofanya vizuri wanaweza kualikwa **Live Funded Account**, yenye mtaji halisi, kikomo cha lazima cha hasara ya siku na akiba inayotolewa kwa hatua."
+          ],
+          "compare": {
+            "columns": [
+              "Njia Standard",
+              "Njia Consistency"
+            ],
+            "rows": [
+              {
+                "label": "Kabla ya kila malipo",
+                "values": [
+                  "**Siku 5 za faida** angalau $150",
+                  "**Siku 3 za biashara**, siku kubwa **40% au chini** ya faida halisi"
+                ]
+              }
+            ],
+            "note": "Chaguo kati ya njia hizo ni la kudumu."
+          },
+          "callout": {
+            "kind": "warning",
+            "text": "Baada ya malipo ya kwanza MLL huwa **$0**. Akiba huondoka: **siku moja mbaya baada ya kutoa pesa inaweza kumaliza akaunti.**"
+          }
+        },
+        {
+          "heading": "Faida na hasara",
+          "paragraphs": [
+            "Mambo yanayojitokeza baada ya kusoma sheria:"
+          ],
+          "prosCons": {
+            "pros": [
+              "**Historia ndefu zaidi** katika prop trading ya futures na usaidizi wenye nyaraka nyingi.",
+              "**Hakuna kikomo cha muda** au siku za chini; uthabiti huongeza lengo badala ya kushindwa.",
+              "**90% ya malipo** kuanzia dola ya kwanza kwa wapya; kiwango cha chini **$125**."
+            ],
+            "cons": [
+              "**Futures pekee**; nafasi zote zifungwe mwisho wa kipindi.",
+              "MLL huwa **$0 baada ya malipo ya kwanza**.",
+              "Sheria **zilibadilika mara kadhaa** Novemba 2025 hadi Aprili 2026: zisome kabla ya kila ununuzi."
+            ]
+          }
+        },
+        {
+          "heading": "Topstep inamfaa nani?",
+          "paragraphs": [
+            "Ada ya kila mwezi hufanya **tathmini ya polepole** iwe ghali kuliko ada ya mara moja. Ukilinganisha na Apex, soma mwongozo wa Topstep dhidi ya Apex, unaolinganisha kila toleo la akaunti kwa sheria."
+          ],
+          "fit": {
+            "yes": [
+              "Wafanyabiashara wa **futures za ndani ya siku**",
+              "Wanaotaka **kampuni iliyoimarika**",
+              "Wanaomudu **kikomo kinachofuatiliwa wakati halisi**"
+            ],
+            "no": [
+              "Wafanyabiashara wa **forex au CFD**",
+              "**Swing traders** wanaoshikilia usiku",
+              "Wanaochagua **hasa kwa bei**"
+            ]
+          }
+        }
+      ]
+    }
   }
 };
 
