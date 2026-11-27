@@ -473,6 +473,108 @@ const ha: GuideTranslations = {
         "answer": "Yawanci trader ba ya samun asusun broker na al'ada ko kariyar kuɗin abokan ciniki. Lada tana dogara da dokokin kwangila, nazari da cancanta maimakon haƙƙin cire kuɗi na al'ada."
       }
     ]
+  },
+  "prop-firm-sans-consistency-rule": {
+    "title": "Dokar daidaiton prop firm: dabara, kalkuleta da kamfanoni marasa dokar",
+    "metaDescription": "Mene ne dokar daidaito? Duba dabara, misalin 40%, tasirin biya da yadda ake kwatanta kamfanonin da ba su da dokar.",
+    "eyebrow": "Binciken dokoki",
+    "h1": "Mene ne dokar daidaito a prop firm?",
+    "answer": "Dokar daidaito tana iyakance kaso na jimillar ribarka da zai fito daga rana ɗaya ko trade ɗaya. Prop firm marar dokar yana cire wannan iyaka, amma zai iya ci gaba da amfani da tsauraran drawdown, mafi ƙarancin biya, iyakar lot ko sharuɗɗan funded.",
+    "checks": [
+      "Tabbatar da dokar a tantancewa da funded.",
+      "Kwatanta mafi ƙarancin biya da kwanakin trading da ake buƙata.",
+      "Duba drawdown mai bin ma'auni da asarar rana.",
+      "Kada ka ɗauki rashin dokar daidaito a matsayin cikakken izini."
+    ],
+    "faq": [
+      {
+        "question": "Mene ne dokar daidaito a prop firm?",
+        "answer": "Yawanci tana iyakance kason jimillar riba da zai fito daga mafi kyawun rana ko babban trade. Misali, dokar mafi kyawun rana na iya buƙatar rana ɗaya ta kasance ƙasa da wani kaso na riba kafin biya. Dabaran ta bambanta da kamfani da shiri."
+      },
+      {
+        "question": "Me rashin dokar daidaito yake nufi?",
+        "answer": "Shirin ba ya amfani da wannan iyakar rarraba riba. Bai cire dokokin asarar rana, drawdown, biya, labarai, girman lot ko haramtattun dabaru ba."
+      },
+      {
+        "question": "Waɗanne prop firm ba su da dokar daidaito?",
+        "answer": "Amsar tana sauyawa bisa shiri da matakin funded. Yi amfani da jadawalin nan a matsayin gajeren jerin zaɓuɓɓuka, sannan tabbatar da ainihin dokokin yanzu; kamfani ɗaya na iya bayar da samfuran da suke da dokar da waɗanda ba su da ita."
+      }
+    ],
+    "article": {
+      "intro": "Dokar daidaito tana iyakance **kason jimillar ribarka da zai fito daga rana ɗaya**. Dalilinta shi ne rana ɗaya ta sa'a, position mai girma fiye da kima ko tashin farashi saboda labarai na iya samar da biya ba tare da nuna ikon trading a dogon lokaci ba. Fahimtar dabaran daidai ta fi neman kamfanin da ke cewa ba shi da dokar muhimmanci.",
+      "keyPoints": [
+        "Dabara: **ribar mafi kyawun rana ÷ jimillar riba × 100**, a kwatanta da iyakar kamfani (sau da yawa 40 zuwa 55%).",
+        "Idan ka wuce iyaka **ba ka rasa komai**: ka ci gaba da trading har sai jimillar riba ta isa.",
+        "**Inda** ake amfani da ita yana da muhimmanci: a tantancewa tana jinkirta wucewa, a biya tana iya hana cire kuɗi.",
+        "Rashin dokar daidaito **ba yana nufin sauƙi ba**: ana sarrafa haɗari ta wata hanya."
+      ],
+      "sections": [
+        {
+          "heading": "Yadda ake lissafin dokar",
+          "paragraphs": [
+            "Yawancin kamfanoni suna amfani da dabara ɗaya: **ribar mafi kyawun rana a raba da jimillar riba**, a matsayin kaso. Idan sakamakon ya wuce iyakar kamfani, har yanzu ba ka cancanci wuce tantancewa ko neman biya ba, bisa matakin da dokar ta shafa.",
+            "Misali da iyakar 50%: ka samu $1,200 ranar Litinin, $300 Talata da $500 Laraba, jimilla $2,000. Mafi kyawun ranarka ita ce **60% na jimillar**: sama da iyaka. Ba sai ka rasa komai ba; kana buƙatar ƙarin jimillar riba, a nan **aƙalla $2,400**, don $1,200 ya zama 50% ko ƙasa.",
+            "Wasu kamfanoni suna amfani da dokar daban. **Topstep yana ɗaga burin riba** a Trading Combine maimakon sa ka fadi: idan mafi kyawun rana ta wuce 55% na burin, sabon buri shi ne ribar ranar a raba da 0.55 (cibiyar taimakon Topstep, shafin 17 Satumba 2026)."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Lissafi mai sauri: **jimillar ribar da ake buƙata = mafi kyawun rana ÷ iyaka**. A nan: $1,200 ÷ 0.50 = **$2,400**."
+          }
+        },
+        {
+          "heading": "Inda dokar ke aiki: tantancewa, biya ko duka",
+          "paragraphs": [
+            "Kaso ɗaya na iya nufin abubuwa daban. Dokar daidaito a tantancewa **tana jinkirta wucewa kawai**. Dokar biya **tana iya hana cire kuɗi** bayan ka samu riba a asusun funded. Wasu kamfanoni suna amfani da iyaka daban a kowane mataki: Topstep yana amfani da **55% a Combine** da **40% a hanyar biyan Consistency** ta Express Funded Account.",
+            "FTMO ya sauya dokarsa **12 Oktoba 2026**: sabbin odar 1-Step Challenge suna amfani da Consistency da ke kwatanta mafi kyawun rana da jimillar riba, **kwanakin asara suna ciki**, yayin da tsoffin oda suke riƙe Best Day Rule da ke lissafa kwanakin riba kawai. FTMO ya ce idan ba ka cika sharadin ba, ka ci gaba da trading har sai ka cika (sabunta trading na FTMO, 8 Oktoba 2026). PropRadar bai gano dokar kaso ta mafi kyawun rana a The5ers High Stakes ba."
+          ],
+          "callout": {
+            "kind": "warning",
+            "text": "Kullum tabbatar da **mataki, samfur da ranar odarka**: kamfani ɗaya zai iya amfani da sigogi biyu na doka."
+          }
+        },
+        {
+          "heading": "Shin kamfani marar dokar daidaito ya fi kyau?",
+          "paragraphs": [
+            "Ba lallai ba. Kamfanonin da ke cire dokar yawanci suna sarrafa haɗari ta wata hanya. Tallar “no consistency rule” na iya ɓoye asusun funded da **ya fi wahalar riƙewa**. Duba abin da ya maye gurbinta:"
+          ],
+          "bullets": [
+            "**Ƙaramin iyakar asarar rana mai tsauri**",
+            "**Drawdown mai bin ma'auni**",
+            "**Iyakar biyan kuɗi na farko**",
+            "**Mafi ƙarancin kwanakin trading**",
+            "**Iyakar girman position**"
+          ],
+          "callout": {
+            "kind": "example",
+            "text": "Dokar tana fi shafar **sakamako masu tsalle-tsalle**: traders na labarai, swing traders da ke rufe babban position guda ko wanda ke ƙara girma bayan jerin asara. Idan sakamakon kwanakin yana daidaita, iyakar 40 zuwa 50% ba ta takura sau da yawa."
+          }
+        },
+        {
+          "heading": "Yadda ake trading cikin sauƙi ƙarƙashin dokar daidaito",
+          "paragraphs": [
+            "Halaye huɗu suna rage cikas daga dokar:"
+          ],
+          "steps": [
+            {
+              "title": "Bi diddigin kaso",
+              "text": "Lissafa **mafi kyawun rana ÷ jimillar riba** bayan kowane zaman trading."
+            },
+            {
+              "title": "San iyakar yau",
+              "text": "Kafin trading, san **nawa za ka iya samu** ba tare da wuce iyakar kaso ba."
+            },
+            {
+              "title": "Rarraba bayan babbar rana",
+              "text": "Shirya **ƙananan kwanaki da yawa masu riba** maimakon ƙoƙarin maimaita ranar."
+            },
+            {
+              "title": "Kada ka ƙara girma a ƙarshe",
+              "text": "Rana ɗaya mai babbar riba fiye da kima na iya **jinkirta wucewa** kamar ranar asara."
+            }
+          ]
+        }
+      ]
+    }
   }
 };
 
