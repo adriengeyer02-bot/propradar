@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import { consistency, drawdown, payout, realCost, type DrawdownMode } from '../lib/constraintSimulator';
 import styles from './ConstraintSimulators.module.css';
 
@@ -29,7 +29,34 @@ export default function ConstraintSimulators({french,context}:Props) {
   const r=realCost(n('fee'),n('monthly'),n('months'),n('activation'),n('budget'));
   const f=(v:number)=>new Intl.NumberFormat(french?'fr-FR':'en-US',{maximumFractionDigits:2}).format(v);
   const money=(v:number)=>f(v)+' '+currency;
-  const input=(key:keyof Fields,label:string,opts:{min?:number;max?:number;step?:number;optional?:boolean}={})=><label className={styles.field} key={key}><span>{label}</span><input type="number" step={opts.step??'any'} min={opts.min} max={opts.max} value={fields[key]} placeholder={opts.optional?t.none:undefined} onChange={e=>setFields(old=>({...old,[key]:e.target.value}))}/></label>;
+  // Keep the text input authoritative: unknown values stay blank until explicitly entered.
+  // Slider limits are convenient scenario ranges, not contractual limits.
+  const input=(key:keyof Fields,label:string,opts:{min?:number;max?:number;step?:number;optional?:boolean}={})=>{
+    const account=Number.isFinite(n('initial'))&&n('initial')>0?n('initial'):50000;
+    const ranges:Record<keyof Fields,[number,number,number]> = {
+      total:[-5000,20000,100],best:[0,10000,50],limit:[1,100,1],
+      initial:[1000,250000,1000],loss:[100,Math.max(10000,account*.2),100],
+      current:[Math.max(0,account*.8),account*1.25,100],peak:[account,account*1.3,100],
+      eod:[account,account*1.3,100],lock:[Math.max(0,account*.8),account*1.3,100],
+      profit:[0,20000,100],buffer:[0,10000,100],share:[0,100,1],cap:[0,20000,100],
+      maxShare:[0,100,1],fee:[0,5000,10],monthly:[0,1000,5],months:[0,24,1],
+      activation:[0,5000,10],budget:[100,20000,100]
+    };
+    const [baseMin,baseMax,step]=ranges[key];
+    const value=n(key),known=Number.isFinite(value);
+    const min=opts.min??Math.min(baseMin,known?Math.floor(value/step)*step:baseMin);
+    const max=opts.max??Math.max(baseMax,known?Math.ceil(value/step)*step:baseMax,min+step);
+    const sliderMin=opts.min===undefined?min:Math.max(min,baseMin);
+    const position=known?Math.min(max,Math.max(sliderMin,value)):sliderMin;
+    const fill=(position-sliderMin)/Math.max(1,max-sliderMin)*100;
+    const change=(v:string)=>{setFields(old=>({...old,[key]:v}));if(['fee','monthly','activation'].includes(key))setPrice('');};
+    const sliderLabel=french?'Ajuster avec le curseur':'Adjust with slider';
+    return <div className={styles.field} key={key}>
+      <label className={styles.fieldHead}><span>{label}</span><input type="number" step={opts.step??'any'} min={opts.min} max={opts.max} value={fields[key]} placeholder={opts.optional?t.none:'—'} onChange={e=>change(e.target.value)}/></label>
+      <input className={styles.range} type="range" dir="ltr" aria-label={label+' — '+sliderLabel} aria-valuetext={known?f(value):french?'Non renseigné':'Not entered'} min={sliderMin} max={max} step={step} value={position} style={{'--range-progress':fill+'%'} as CSSProperties} onChange={e=>change(e.target.value)} />
+      <div className={styles.rangeLabels} dir="ltr"><span>{f(sliderMin)}</span><span>{!known?(french?'À renseigner':'Not entered'):''}</span><span>{f(max)}</span></div>
+    </div>;
+  };
   const metric=(label:string,value:string)=><div className={styles.metric}><small>{label}</small><strong>{value}</strong></div>;
   const invalid=<p role="status">{t.invalid}</p>;
   const reset=()=>{setExampleMode(true);setFields({...example});setCurrency('USD');setPrice('');setMode('static')};
@@ -43,6 +70,7 @@ export default function ConstraintSimulators({french,context}:Props) {
     <div className={styles.tabs} role="group" aria-label="Simulator">{(['consistency','drawdown','payout','cost'] as const).map((id,i)=><button type="button" aria-pressed={tab===id} className={tab===id?styles.active:''} key={id} onClick={()=>setTab(id)}>{t.tabs[i]}</button>)}</div>
     <div className={styles.panel}>
       <div className={styles.inputs}>
+        <p className={styles.sliderHint}>{french?'Déplacez les curseurs ou saisissez un montant exact. Les résultats se mettent à jour instantanément.':'Drag the sliders or enter an exact amount. Results update instantly.'}</p>
         <label className={styles.field}>{t.currency}<select value={currency} onChange={e=>{setCurrency(e.target.value);setPrice('');if(tab==='cost')setFields(old=>({...old,fee:'',monthly:'',months:'',activation:'',budget:''}))}}>{['USD','EUR','GBP','units'].map(x=><option key={x}>{x}</option>)}</select></label>
         {tab==='consistency'?<>{input('total',t.total)}{input('best',t.best,{min:0})}{input('limit',t.limit,{min:0.01,max:100})}</>:null}
         {tab==='drawdown'?<><label className={styles.field}>{t.mode}<select value={mode} onChange={e=>setMode(e.target.value as DrawdownMode)}><option value="static">{t.static}</option><option value="eod">{t.end}</option><option value="intraday">{t.intraday}</option></select></label>{input('initial',t.initial,{min:1})}{input('loss',t.loss,{min:1})}{input('current',t.current)}{mode==='intraday'?input('peak',t.peak):null}{mode==='eod'?input('eod',t.eod):null}{mode!=='static'?input('lock',t.lock,{optional:true}):null}</>:null}
@@ -51,9 +79,9 @@ export default function ConstraintSimulators({french,context}:Props) {
         <button type="button" className={styles.reset} onClick={reset}>{t.examples}</button>
       </div>
       <div className={styles.results} aria-live="polite">
-        {tab==='consistency'?(c?<><p className={c.eligible?styles.good:styles.warn}>{c.eligible?t.eligible:t.notEligible}</p>{metric(t.ratio,c.ratio===null?'—':f(c.ratio)+'%')}{metric(t.required,money(c.required))}{metric(t.extra,money(c.extra))}</>:invalid):null}
+        {tab==='consistency'?(c?<><p className={c.eligible?styles.good:styles.warn}>{c.eligible?t.eligible:t.notEligible}</p>{metric(t.ratio,c.ratio===null?'—':f(c.ratio)+'%')}{c.ratio!==null?<div className={styles.comparison}><div className={styles.compareTrack}><div className={styles.compareFill} style={{width:Math.min(100,c.ratio/Math.max(100,c.ratio)*100)+'%',background:c.eligible?'#40b88b':'#e18473'}}/><span className={styles.threshold} style={{left:n('limit')/Math.max(100,c.ratio)*100+'%'}}/></div><div className={styles.rangeLabels}><span>{french?'Limite':'Limit'} {f(n('limit'))}%</span><span>{f(c.ratio)}%</span></div></div>:null}{metric(t.required,money(c.required))}{metric(t.extra,money(c.extra))}</>:invalid):null}
         {tab==='drawdown'?(d?<><p className={d.breached?styles.warn:styles.good}>{d.breached?t.breach:t.safe}</p>{metric(t.floor,money(d.floor))}{metric(t.remaining,money(d.remaining))}<div className={styles.track}><div style={{width:Math.min(100,d.remaining/n('loss')*100)+'%',background:d.breached?'#d86d63':'#41b88a'}}/></div><p>{t.ddNote}</p></>:invalid):null}
-        {tab==='payout'?(p?<>{metric(t.net,money(p.net))}{metric(t.gross,money(p.gross))}{metric(t.retained,money(p.retained))}<p>{t.payoutNote}</p></>:invalid):null}
+        {tab==='payout'?(p?<>{metric(t.net,money(p.net))}<div className={styles.track}><div style={{width:n('profit')>0?Math.min(100,p.net/n('profit')*100)+'%':'0%',background:'#40b88b'}}/></div>{metric(t.gross,money(p.gross))}{metric(t.retained,money(p.retained))}<p>{t.payoutNote}</p></>:invalid):null}
         {tab==='cost'?(r?<>{metric(t.totalCost,money(r.total))}{metric(t.per,money(r.perThousand))}<p>{t.costNote}</p></>:invalid):null}
       </div>
     </div>
