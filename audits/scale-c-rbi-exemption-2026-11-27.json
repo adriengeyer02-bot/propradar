@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-27",
+  "policy": "RBI alert-list warnings: zero points, informational only. All other regulators and documented payout incidents retain existing treatment.",
+  "baseline": "3ca6fd4d7de1a6309056cadad3b4692bb9a59512",
+  "changes": [
+    {
+      "slug": "ftmo",
+      "before": 80,
+      "after": 85,
+      "removed": [
+        {
+          "code": "REGWARN",
+          "points": 5,
+          "text": "The Reserve Bank of India Alert List, updated November 19, 2025, lists FTMO at entry 13. The list concerns forex authorization or promotion of unauthorized platforms in India; it is not a finding of payout misconduct.",
+          "source": "https://rbi.org.in/scripts/Bs_viewcontent.aspx?Id=4235",
+          "locator": "RBI Alert List, entry 13, November 19, 2025"
+        }
+      ]
+    },
+    {
+      "slug": "fundednext",
+      "before": 55,
+      "after": 60,
+      "removed": [
+        {
+          "code": "REGWARN",
+          "points": 5,
+          "text": "The Reserve Bank of India added \"FundedNext | https://fundednext.com\" to its Alert List of unauthorised forex trading platforms in a press release dated 2024-10-22 (Press Release 2024-2025/1351, https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949). The RBI says the list is not exhaustive.",
+          "source": "https://www.rbi.org.in/scripts/FS_PressRelease.aspx?prid=58949",
+          "locator": "RBI press release 2024-2025/1351, October 22, 2024"
+        }
+      ]
+    }
+  ],
+  "checked": "64 live C rows; 157 historical proposal rows; 18 legacy V4/V5 scoring JSON files (no explicit RBI deductions found). Large firm-updates.json could not be fetched in full; no arbitrary legacy editorial adjustments.",
+  "retainedHistory": true
+}

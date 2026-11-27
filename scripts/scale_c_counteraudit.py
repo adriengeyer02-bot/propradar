@@ -41,7 +41,10 @@ def apply_counteraudit(firms):
         else:
             e.pop('contractCap', None)
     for fix in overlay['sourceFixes']:
-        p = next(p for p in firms[fix['slug']]['penalties'] if p['code'] == fix['code'])
+        p = next((p for p in firms[fix['slug']]['penalties'] if p['code'] == fix['code']), None)
+        # A new proposal may already omit the exempt RBI warning.
+        if p is None and fix['code'] == 'REGWARN' and 'rbi.org.in' in fix['source']:
+            continue
         if p['source'] != fix['expectedSource']:
             raise ValueError(f"{fix['slug']}: incompatible source baseline")
         p['source'], p['locator'] = fix['source'], fix['locator']

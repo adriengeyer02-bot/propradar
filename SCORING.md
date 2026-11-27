@@ -249,7 +249,7 @@ every point lost with the clause excerpt and its source.
    Retain the review-volume safeguard: fewer than 30 reviews: 0; 30–99:
    half the rating penalty, rounded up. Withholding and rating penalties never
    stack. Ceiling evidence and all other scale C rules remain unchanged.
-   Regulator warning −5; documented payout
+   Regulator warning −5, **except Reserve Bank of India (RBI) alert-list/authorization warnings: 0 points** (owner decision 2026-11-27; retain as jurisdiction-specific information, not a payout incident). Other regulators and documented payout misconduct remain scored. Documented payout
    default −40 (old and unclear −15, isolated −5); severe sanction for a
    procedural breach −2.
 3. **What could not be checked costs nothing.**

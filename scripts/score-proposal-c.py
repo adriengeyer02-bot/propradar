@@ -15,6 +15,7 @@ with its paragraph; hand-verified sheets override them.
 import glob, json, re, os, sys, glob, csv
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from scale_c_trustpilot import TP_WITHHELD, rating_penalty
+from scale_c_regulatory import is_rbi_warning
 
 A = {k: v for k, v in zip(sys.argv[1::2], sys.argv[2::2])}
 BASE = json.load(open(A['--base']))
@@ -36,7 +37,7 @@ CONS = [(40, 0), (30, 2), (20, 5), (0, 8)]
 
 # Incidents read from the firm files (sourced there), coded by hand on 2026-11-25.
 INCIDENTS = {
-    'fundednext': ['REGWARN'], 'bespoke-funding-program': ['REGWARN'], 'fxrk': ['REGWARN'], 'alpine-funded': ['REGWARN'],
+    'bespoke-funding-program': ['REGWARN'], 'fxrk': ['REGWARN'], 'alpine-funded': ['REGWARN'],
     'true-forex-funds': ['REGWARN'], 'levels': ['REGWARN'], 'the-funded-trader': ['A1_OLD_UNCLEAR'],
     'apex-trader-funding': ['A2ISO'],
 }
@@ -278,9 +279,11 @@ for f in BASE:
             lines.append((f'Trustpilot {r}', pen)); other += pen
             item('TPR', pen, {'locator': f"{r} / {n}"})
     for k in INCIDENTS.get(slug, []):
-        lines.append((k, W[k])); other += W[k]
         inc = next((i for i in f['incidents'] if re.search(r'Alert List|warning|unauthori|regulator|payout', i, re.I)), '')
         url = re.search(r'https://[^\s),]+', inc)
+        if is_rbi_warning({'code': k, 'text': inc, 'source': url.group(0) if url else ''}):
+            continue
+        lines.append((k, W[k])); other += W[k]
         item(k, W[k], {'text': inc, 'url': url.group(0) if url else ''})
     if 'E_HARSH' in codes:
         lines.append(('E_HARSH', W['E_HARSH'])); other += W['E_HARSH']; item('E_HARSH', W['E_HARSH'], codes['E_HARSH'])

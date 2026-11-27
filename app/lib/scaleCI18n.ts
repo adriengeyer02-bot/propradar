@@ -80,6 +80,7 @@ const en: ScaleCCopy = {
   unauditedCapDetail: 'Until the full terms are read by hand, a score cannot exceed 60 (it would be {before} otherwise).',
   source: 'Source',
   method: [
+    'Reserve Bank of India alert-list warnings are informational only and do not deduct points.',
     'The ceiling is earned with evidence: years of operation and payouts at scale (on-chain tracking, published statistics, a large Trustpilot sample).',
     'Points are then lost only for sourced facts: contract clauses, Trustpilot notices, regulator warnings, documented payout defaults.',
     'What we could not check costs nothing, and only a full reading of the contract can raise a score.',
@@ -139,6 +140,7 @@ const fr: ScaleCCopy = {
   unauditedCapDetail: 'Tant que les CGU ne sont pas lues en entier à la main, la note ne peut pas dépasser 60 (elle serait de {before} sinon).',
   source: 'Source',
   method: [
+    'Les avertissements de la banque centrale indienne (RBI) sont informatifs et ne retirent aucun point.',
     'Le plafond se gagne avec des preuves : années d’activité et paiements à grande échelle (suivi on-chain, statistiques publiées, large échantillon Trustpilot).',
     'Des points ne sont ensuite retirés que pour des faits sourcés : clauses du contrat, avertissements Trustpilot, mises en garde de régulateurs, défauts de paiement documentés.',
     'Ce que nous n’avons pas pu vérifier ne coûte rien, et seule une lecture complète du contrat peut faire monter une note.',
@@ -198,6 +200,7 @@ const de: ScaleCCopy = {
   unauditedCapDetail: 'Solange die AGB nicht vollständig von Hand gelesen sind, kann die Bewertung 60 nicht übersteigen (sonst wäre sie {before}).',
   source: 'Quelle',
   method: [
+    'Warnungen der indischen Zentralbank (RBI) dienen nur der Information und führen zu keinem Punktabzug.',
     'Die Obergrenze wird durch Belege erreicht: Betriebsjahre und Auszahlungen in großem Umfang (On-chain-Erfassung, veröffentlichte Statistiken, große Trustpilot-Stichprobe).',
     'Punkte werden nur für belegte Tatsachen abgezogen: Vertragsklauseln, Trustpilot-Hinweise, Behördenwarnungen, dokumentierte Zahlungsausfälle.',
     'Was wir nicht prüfen konnten, kostet nichts, und nur eine vollständige Lektüre des Vertrags kann eine Bewertung erhöhen.',
@@ -257,6 +260,7 @@ const it: ScaleCCopy = {
   unauditedCapDetail: 'Finché i termini non sono letti per intero a mano, il punteggio non può superare 60 (altrimenti sarebbe {before}).',
   source: 'Fonte',
   method: [
+    'Gli avvisi della banca centrale indiana (RBI) sono solo informativi e non comportano penalità.',
     'Il tetto si ottiene con le prove: anni di attività e pagamenti su larga scala (tracciamento on-chain, statistiche pubblicate, ampio campione Trustpilot).',
     'I punti si perdono solo per fatti documentati: clausole contrattuali, avvisi Trustpilot, avvertimenti delle autorità, mancati pagamenti documentati.',
     'Ciò che non abbiamo potuto verificare non costa nulla, e solo una lettura completa del contratto può alzare un punteggio.',
@@ -316,6 +320,7 @@ const es: ScaleCCopy = {
   unauditedCapDetail: 'Hasta que los términos se lean enteros a mano, la puntuación no puede superar 60 (si no, sería {before}).',
   source: 'Fuente',
   method: [
+    'Las advertencias del banco central de la India (RBI) son informativas y no restan puntos.',
     'El techo se obtiene con pruebas: años de actividad y pagos a gran escala (rastreo on-chain, estadísticas publicadas, gran muestra de Trustpilot).',
     'Después solo se restan puntos por hechos con fuente: cláusulas del contrato, avisos de Trustpilot, advertencias de reguladores, impagos documentados.',
     'Lo que no pudimos verificar no cuesta nada, y solo una lectura completa del contrato puede subir una puntuación.',
@@ -375,6 +380,7 @@ const pt: ScaleCCopy = {
   unauditedCapDetail: 'Enquanto os termos não forem lidos por inteiro à mão, a nota não pode passar de 60 (seria {before} caso contrário).',
   source: 'Fonte',
   method: [
+    'Os alertas do banco central da Índia (RBI) são informativos e não retiram pontos.',
     'O teto é obtido com provas: anos de atividade e pagamentos em grande escala (rastreio on-chain, estatísticas publicadas, grande amostra do Trustpilot).',
     'Depois, só se perdem pontos por fatos com fonte: cláusulas do contrato, avisos do Trustpilot, alertas de reguladores, inadimplências documentadas.',
     'O que não pudemos verificar não custa nada, e só uma leitura completa do contrato pode subir uma nota.',
@@ -434,6 +440,7 @@ const zh: ScaleCCopy = {
   unauditedCapDetail: '在人工通读条款之前，评分不能超过 60（否则为 {before}）。',
   source: '来源',
   method: [
+    '印度储备银行（RBI）的警示名单仅供参考，不扣分。',
     '上限凭证据获得：运营年限和大规模出金（链上追踪、公布的统计、大量 Trustpilot 评价）。',
     '之后仅因有来源的事实扣分：合同条款、Trustpilot 提示、监管警示、有记录的出金违约。',
     '我们无法核实的内容不扣分，只有通读合同全文才能提高评分。',
@@ -493,6 +500,7 @@ const ja: ScaleCCopy = {
   unauditedCapDetail: '規約全文を人の手で読むまで、スコアは 60 を超えません（そうでなければ {before}）。',
   source: '出典',
   method: [
+    'インド準備銀行（RBI）の警告リストは情報提供のみで、減点の対象外です。',
     '上限は証拠で得られます：運営年数と大規模な出金（オンチェーン追跡、公開統計、多数の Trustpilot レビュー）。',
     'その後は出典のある事実についてのみ減点します：契約条項、Trustpilot の通知、規制当局の警告、記録された出金不履行。',
     '確認できなかった点は減点せず、契約全文を読んだ場合にのみスコアが上がります。',
@@ -552,6 +560,7 @@ const hi: ScaleCCopy = {
   unauditedCapDetail: 'जब तक शर्तें पूरी हाथ से नहीं पढ़ी जातीं, स्कोर 60 से अधिक नहीं हो सकता (अन्यथा {before} होता)।',
   source: 'स्रोत',
   method: [
+    'भारतीय रिज़र्व बैंक (RBI) की चेतावनी सूची केवल सूचना के लिए है और इससे अंक नहीं कटते।',
     'ऊपरी सीमा प्रमाण से मिलती है: संचालन के वर्ष और बड़े पैमाने पर भुगतान (ऑन-चेन ट्रैकिंग, प्रकाशित आँकड़े, बड़ा Trustpilot नमूना)।',
     'इसके बाद केवल स्रोत वाले तथ्यों पर अंक कटते हैं: अनुबंध की शर्तें, Trustpilot सूचनाएँ, नियामक चेतावनियाँ, दस्तावेज़ित भुगतान चूक।',
     'जो हम जाँच नहीं सके उसकी कोई कटौती नहीं, और केवल पूरा अनुबंध पढ़ने पर ही स्कोर बढ़ सकता है।',
@@ -611,6 +620,7 @@ const tr: ScaleCCopy = {
   unauditedCapDetail: 'Koşullar elle tamamen okunana kadar puan 60’ı geçemez (aksi halde {before} olurdu).',
   source: 'Kaynak',
   method: [
+    'Hindistan Merkez Bankası (RBI) uyarı listesi yalnızca bilgilendirme amaçlıdır ve puan düşürmez.',
     'Tavan kanıtla kazanılır: faaliyet yılları ve büyük ölçekli ödemeler (zincir üstü izleme, yayımlanan istatistikler, geniş Trustpilot örneği).',
     'Ardından yalnızca kaynaklı olgular için puan düşülür: sözleşme maddeleri, Trustpilot uyarıları, düzenleyici uyarıları, belgelenmiş ödeme temerrütleri.',
     'Doğrulayamadığımız şeyler puan düşürmez ve yalnızca sözleşmenin tamamen okunması puanı yükseltebilir.',
@@ -670,6 +680,7 @@ const ar: ScaleCCopy = {
   unauditedCapDetail: 'إلى أن تُقرأ الشروط كاملة يدويًا، لا يمكن أن يتجاوز التقييم 60 (وإلا لكان {before}).',
   source: 'المصدر',
   method: [
+    'تحذيرات بنك الاحتياطي الهندي (RBI) للمعلومات فقط ولا تؤدي إلى خصم النقاط.',
     'يُكتسب السقف بالأدلة: سنوات النشاط والمدفوعات واسعة النطاق (تتبع على السلسلة، إحصاءات منشورة، عينة كبيرة من Trustpilot).',
     'بعد ذلك تُخصم النقاط فقط بسبب وقائع موثقة المصدر: بنود العقد، تنبيهات Trustpilot، تحذيرات الجهات الرقابية، حالات التخلف الموثقة عن الدفع.',
     'ما لم نتمكن من التحقق منه لا يكلف شيئًا، ولا يرفع التقييم إلا قراءة العقد كاملًا.',
@@ -729,6 +740,7 @@ const ko: ScaleCCopy = {
   unauditedCapDetail: '약관 전문을 직접 읽기 전까지 점수는 60을 넘을 수 없습니다(그렇지 않으면 {before}).',
   source: '출처',
   method: [
+    '인도중앙은행(RBI)의 경고 목록은 참고용이며 감점하지 않습니다.',
     '상한은 증거로 얻습니다: 운영 연수와 대규모 지급(온체인 추적, 공개 통계, 많은 Trustpilot 리뷰).',
     '그 뒤에는 출처가 있는 사실에 대해서만 감점합니다: 계약 조항, Trustpilot 공지, 규제 당국 경고, 기록된 지급 불이행.',
     '확인할 수 없었던 부분은 감점하지 않으며, 계약서 전문을 읽은 경우에만 점수가 오를 수 있습니다.',
@@ -788,6 +800,7 @@ const sw: ScaleCCopy = {
   unauditedCapDetail: 'Hadi masharti yasomwe yote kwa mkono, alama haiwezi kuzidi 60 (vinginevyo ingekuwa {before}).',
   source: 'Chanzo',
   method: [
+    'Maonyo ya benki kuu ya India (RBI) ni ya taarifa tu na hayapunguzi pointi.',
     'Kiwango cha juu hupatikana kwa ushahidi: miaka ya shughuli na malipo kwa kiwango kikubwa (ufuatiliaji on-chain, takwimu zilizochapishwa, sampuli kubwa ya Trustpilot).',
     'Kisha alama hupunguzwa tu kwa ukweli wenye chanzo: vifungu vya mkataba, matangazo ya Trustpilot, maonyo ya wadhibiti, kushindwa kulipa kulikoandikwa.',
     'Tusichoweza kuthibitisha hakigharimu chochote, na ni kusoma mkataba wote tu kunakoweza kupandisha alama.',
@@ -847,6 +860,7 @@ const ha: ScaleCCopy = {
   unauditedCapDetail: 'Har sai an karanta sharuɗɗan gaba ɗaya da hannu, maki ba zai wuce 60 ba (in ba haka ba zai zama {before}).',
   source: 'Tushe',
   method: [
+    'Gargaɗin babban bankin Indiya (RBI) na bayani ne kawai kuma ba ya rage maki.',
     'Ana samun iyakar maki da hujjoji: shekarun aiki da biyan kuɗi mai yawa (bibiya a kan sarkar, ƙididdigar da aka wallafa, babban samfurin Trustpilot).',
     'Daga nan ana rage maki ne kawai saboda gaskiyar da ke da tushe: sassan kwangila, sanarwar Trustpilot, gargaɗin hukumomi, gazawar biya da aka rubuta.',
     'Abin da ba mu iya tabbatarwa ba ba ya rage komai, kuma karanta kwangilar gaba ɗaya ne kawai zai iya ɗaga maki.',
@@ -906,6 +920,7 @@ const am: ScaleCCopy = {
   unauditedCapDetail: 'ውሉ ሙሉ በሙሉ በእጅ እስኪነበብ ድረስ ነጥቡ ከ60 ሊበልጥ አይችልም (አለበለዚያ {before} ይሆን ነበር)።',
   source: 'ምንጭ',
   method: [
+    'የሕንድ ማዕከላዊ ባንክ (RBI) ማስጠንቀቂያዎች ለመረጃ ብቻ ናቸው፤ ነጥብ አይቀንሱም።',
     'ከፍተኛው ገደብ በማስረጃ ይገኛል፡ የእንቅስቃሴ ዓመታትና በሰፊ መጠን ክፍያዎች (በብሎክቼይን ክትትል፣ የታተሙ ስታቲስቲክስ፣ ሰፊ የTrustpilot ናሙና)።',
     'ከዚያ ነጥብ የሚቀነሰው ምንጭ ላላቸው እውነታዎች ብቻ ነው፡ የውል አንቀጾች፣ የTrustpilot ማሳሰቢያዎች፣ የተቆጣጣሪ ማስጠንቀቂያዎች፣ የተመዘገቡ የክፍያ አለመፈጸሞች።',
     'ማረጋገጥ ያልቻልነው ምንም አያስቀንስም፣ ነጥብ ሊጨምር የሚችለው ውሉ ሙሉ በሙሉ ሲነበብ ብቻ ነው።',
