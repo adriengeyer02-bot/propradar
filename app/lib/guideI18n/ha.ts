@@ -1299,6 +1299,116 @@ const ha: GuideTranslations = {
         }
       ]
     }
+  },
+  "hyrotrader-vs-tradeify": {
+    "title": "HyroTrader vs Tradeify: dokokin drawdown da sarrafa haɗari",
+    "metaDescription": "HyroTrader vs Tradeify: kwatanta crypto da futures, iyakar asarar rana, EOD drawdown, daidaito da dokokin biya na farko a Instant.",
+    "eyebrow": "Crypto da futures",
+    "h1": "HyroTrader vs Tradeify: kwatancin drawdown da sarrafa haɗari",
+    "answer": "HyroTrader na traders na crypto ne; Tradeify na futures da ake ciniki a kasuwa. HyroTrader yana wallafa iyakar asarar rana bisa equity na farkon rana da ma'aunin asali. Tradeify yana amfani da EOD trailing drawdown da ake aiwatarwa cikin rana. Kwatanta samfur da tsarin biya kafin kuɗi ko girman asusun talla.",
+    "checks": [
+      "Zaɓi kasuwa farko: crypto perpetuals da futures na kasuwa kayan ciniki ne daban.",
+      "Ware iyakar asarar rana daga jimillar drawdown.",
+      "Bambanta daidaiton tantancewa da daidaiton biya a funded.",
+      "Karanta ainihin burin biya na Instant, iyaka da rabo.",
+      "Daidaita dokoki da sigar asusunka da ranar saye."
+    ],
+    "faq": [
+      {
+        "question": "HyroTrader ko Tradeify ya fi kyau?",
+        "answer": "Kasuwa ce farko. HyroTrader prop firm na crypto ne; Tradeify na futures. Kwatanta iyakar asara, lokutan ciniki da sharuɗɗan biya na samfur. Wannan jagora ba ta zaɓar wanda ya fi duka ko tabbatar da biya ga abokan ciniki ba."
+      },
+      {
+        "question": "EOD drawdown na Tradeify yana yarda da karya iyaka cikin rana?",
+        "answer": "A'a. Ana sake ƙididdige iyaka ƙarshen rana amma ana aiwatar da ita kai tsaye bisa net liquidation value. Taɓa ta zai iya fitar da asusu kafin ƙarshen zama."
+      },
+      {
+        "question": "Zan fara ba tare da challenge ba a kamfanonin?",
+        "answer": "Shafukan hukuma da aka duba 15 Nuwamba 2026 sun bayyana Hyro Instant da Tradeify Lightning Funded. Dukansu sun tsallake tantancewa; iyakar rana, cancantar biya da iyakokin cire kuɗi sun bambanta."
+      },
+      {
+        "question": "Babu tantancewa yana nufin babu burin riba don biya?",
+        "answer": "A'a. Lightning yana ware ribar da ake buƙata don buɗe buƙata daga abin da za a cire. Hyro Instant yana da ranakun cancanta, ƙaramar riba bayan rabo da iyakar ribar da ake ƙirgawa."
+      },
+      {
+        "question": "HyroTrader da Tradeify nau'in tallafin crypto ɗaya ne?",
+        "answer": "A'a. HyroTrader yana amfani da cinikin crypto na kwaikwayo bisa bayanan kasuwa. Tradeify an gina shi kan futures na kasuwa. Duba jerin kayan ciniki maimakon ɗauka cewa kowane futures crypto perpetual ne."
+      }
+    ],
+    "article": {
+      "intro": "HyroTrader vs Tradeify da farko **zaɓi ne tsakanin crypto da futures**. Kwatancin da ya dace shi ne yadda samfur ke auna asara, ƙirga riba da buɗe biya. An yi amfani da dokokin hukuma da aka samu 15 Nuwamba 2026; ikirarin talla game da biya ba hujjar tura kuɗi mai zaman kanta ba ne.",
+      "keyPoints": [
+        "**Zaɓi kayan ciniki farko:** crypto perpetuals da futures na kasuwa suna da sharuɗɗan aiwatarwa da lokuta daban.",
+        "**Asarar rana da jimilla iyakoki ne daban.** Asarar rana da aka yarda na iya karya jimillar iyaka.",
+        "**EOD lokacin sabunta iyaka ne.** Ba ya jinkirta aiwatarwa har ƙarshen zama.",
+        "**Samun asusu nan take yana da sharuɗɗan biya:** ranakun cancanta, burin riba, iyaka da rabo sun danganta da samfur."
+      ],
+      "sections": [
+        {
+          "heading": "Wace kasuwa kake son yin ciniki?",
+          "paragraphs": [
+            "HyroTrader yana bayyana asusun crypto na kwaikwayo, har da samun dama ta dandamali masu goyon baya. Hanyoyin tantancewa da Hyro Instant ba ajiya ga broker ba ne ko alƙawarin jari na gaske. Growth, SELECT da Lightning na Tradeify an gina su kan futures; Lightning yana farawa da kuɗin kwaikwayo.",
+            "Kwatanta asusu da kayan ciniki da lokacin da dabararka ke amfani da su. Dabarar crypto perpetual ba ta komawa futures kai tsaye. Tabbatar da dandamali, jerin kayan ciniki da dokokin zama kafin kwatanta ma'aunin talla $50,000 ko rangwame."
+          ]
+        },
+        {
+          "heading": "Drawdown na rana na HyroTrader: equity na reset yana da muhimmanci",
+          "paragraphs": [
+            "Iyakar rana ta HyroTrader tana farawa daga equity 00:00 UTC, sannan ta rage ƙayyadadden kashi na ma'aunin farko. FAQ ya jera **3% ga Hyro Core da Hyro Instant, 4% ga One-Step, 5% ga Two-Step**. Ribar buɗe da asara da kuɗaɗe suna cikin equity.",
+            "Misali: Hyro Instant $10,000 ya fara ranar UTC da equity $10,300. Asarar da aka yarda $300 ce, iyakar ƙasa $10,000. Idan equity ya hau $10,800 a ranar, iyakar ba ta bin sabon kololuwa. Ranar UTC ta gaba tana kafa sabon farawa.",
+            "Jimillar iyakar asara gwaji ne dabam. Hyro Instant ya wallafa 5% na asara mafi girma da dokar trade guda: wuce 2% na ma'aunin farko a trade da aka rufe gaba ɗaya, har da kuɗi, yana haifar da gargadi; karo na biyu yana kawo ƙarshen asusu. Iyakar rana ba ta kawar da waɗannan ba."
+          ]
+        },
+        {
+          "heading": "EOD drawdown na Tradeify: sabuntawa ƙarshen rana, aiwatarwa yanzu",
+          "paragraphs": [
+            "Shafin dokokin Tradeify ya ce Growth, SELECT da Lightning suna amfani da **end-of-day trailing drawdown**. Sabon ma'aunin rufe rana mafi girma zai ɗaga iyaka. Ranar asara daga baya ba ta rage ta. Ana aiwatar da iyakar yanzu a kowane lokaci bisa ma'auni da riba da asarar buɗe.",
+            "Misalin asusu $50,000 da drawdown $2,000: iyakar farko $48,000. Ma'aunin rufewa mafi girma $51,000 yana ɗaga ta zuwa $49,000. Ranar gaba, taɓa $49,000 a net liquidation value zai iya fitar da asusu nan take. Farfaɗowa kafin rufewa ba ta soke karya doka.",
+            "A asusun funded na kwaikwayo, tsarin kullewa da aka wallafa zai iya kulle iyaka $100 sama da ma'aunin farko idan an kai matakin ko an nemi biya. Asusu na tantancewa ba su da wannan tsarin. Karanta adadin samfurinka."
+          ]
+        },
+        {
+          "heading": "Dokokin daidaito suna amfani da matakai da lissafi daban",
+          "paragraphs": [
+            "Tantancewar HyroTrader Core, One-Step da Two-Step tana iyakance ribar ranar da ake ƙirgawa zuwa **40% na burin riba**. Ribar da ta wuce tana nan amma ba a ƙirga ta ga buri ba; ana ƙirga asara. FAQ ya ce dokar ba ta shafi Hyro Instant ba.",
+            "Tradeify SELECT tana amfani da **40% na jimillar riba daga rana mafi kyau a tantancewa**, Growth ba ta da kashi na daidaito a tantancewa. Lissafi ne daban: rabon buri ba rabon ribar da aka tara ba ne.",
+            "Matakin funded yana da dokokinsa. Tradeify ya jera 35% ga biya na Growth na kwaikwayo, babu kashin daidaito ga SELECT funded, da **20%, sannan 25%, sannan 30%** ga sababbin asusun Lightning. Tsofaffin asusu na iya riƙe 20% a kowane biya. Duba ranar saye da mataki tare."
+          ]
+        },
+        {
+          "heading": "Hyro Instant vs Lightning Funded: kwatanta biya na farko",
+          "paragraphs": [
+            "Hyro Instant ba shi da burin tantancewa. Buƙatar farko tana buƙatar **ranakun ciniki uku na UTC masu cancanta** da aƙalla $25 bayan rabo. Ranar cancanta tana da ma'anar girman trade da motsin farashi; ƙaramin trade kawai bai isa ba. FAQ ya iyakance ribar da ake ƙirga a kowane biya zuwa 5% na ma'aunin farko; abin da ya wuce ba a biya ba. Rabo yana farawa 80%, ana iya ƙara shi bisa hukunci.",
+            "Tradeify Lightning ma yana tsallake tantancewa amma yana buƙatar burin riba da daidaito. A misalin $50,000, burin farko **$3,000**, iyakar buƙatar farko **$2,000**. Tradeify ya ce traders suna karɓar 90% na buƙata. Buri, iyaka da kuɗin da aka karɓa adadi uku ne daban.",
+            "Burin Lightning na gaba yana buƙatar sabuwar ribar ciniki; ragowar riba daga zagayen da ya gabata ba ta cika shi. Buƙata kuma tana kulle drawdown bisa dokar funded, don haka duba sararin asarar da ya rage bayan biya. Cancanta ba garantin amincewa ba ne."
+          ],
+          "callout": {
+            "kind": "example",
+            "text": "Misalin Lightning: kai burin $3,000 ba yana nufin za a cire $3,000 ba. Buƙatar $2,000 da rabo 90% tana ba trader $1,800, ƙarƙashin sauran sharuɗɗa."
+          }
+        },
+        {
+          "heading": "Jerin binciken haɗari kafin biya",
+          "paragraphs": [
+            "Sake gwada tsarin cinikinka na yau da kullum bisa ainihin dokokin asusu. Yi amfani da sakamakon net bayan kuɗi, asarar buɗe da ainihin lokacin reset. Dabara na iya bin stop loss a kowane trade amma ta karya jimillar iyaka a matsayi da yawa."
+          ],
+          "bullets": [
+            "**Rubuta iyakoki biyu:** asarar rana da max drawdown, da ko taɓawa ko ƙetarewa karya doka ne.",
+            "**Bi mataki:** tantancewa, funded na kwaikwayo da canjin live na iya da sharuɗɗa daban.",
+            "**Yi samfurin cire kuɗi:** buri, lissafin rana mafi kyau, iyaka, rabo da sararin asara bayan biya.",
+            "**Duba dama da kuɗi:** ƙasa, dandamali, rufe zama, kuɗin shiga, kunnawa, sabuntawa da bayanai idan sun shafi asusu.",
+            "**Ajiye sigar:** kwangila da dokokin hukuma na ranar saye. Sabon asusu na iya bambanta da tsoho."
+          ]
+        },
+        {
+          "heading": "Yadda za a zaɓi tsakanin samfuran biyu",
+          "paragraphs": [
+            "Fara da dokokin HyroTrader idan dabararka tana buƙatar kayan crypto da yake goyon baya. Fara da Tradeify idan an gina dabararka kan futures nasa. Sai ka kwatanta adadin asarar da aka yarda da cikakkiyar hanyar cire kuɗi na farko.",
+            "Wannan kwatancin bai tabbatar da ƙarfin biyan bashin kamfani ko yiwuwar trader samun biya ba. Yana bayyana sharuɗɗan da aka wallafa a takamaiman rana. Yi amfani da bayanan kamfanoni da aka haɗa kuma duba yarjejeniya ta yanzu kafin saye."
+          ]
+        }
+      ]
+    }
   }
 };
 
