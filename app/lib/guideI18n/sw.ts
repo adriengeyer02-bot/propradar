@@ -336,6 +336,143 @@ const sw: GuideTranslations = {
         "answer": "Hapana. MT5 ni rahisi kutumia, lakini lazima pia uthibitishe spread, habari, EA, drawdown na masharti ya kutoa fedha."
       }
     ]
+  },
+  "leveraged-prop-firm-avis": {
+    "title": "Tathmini ya Get Leveraged: onyo la CySEC na hatari ya malipo",
+    "metaDescription": "Tathmini ya Get Leveraged: historia ya kampuni, onyo lililoripotiwa la CySEC, sharti la uthabiti la 20%, ushahidi wa malipo, onyo la Trustpilot na mambo ya kuthibitisha kabla ya kununua.",
+    "eyebrow": "Tathmini ya chapa",
+    "h1": "Get Leveraged: ofa inayoonekana wazi, lakini chukua tahadhari kubwa kabla ya kununua",
+    "answer": "Get Leveraged ina matangazo yanayoonekana, bei ya kuingia inayotangazwa kuwa ndogo, programu za aina ya portfolio na mgawo wa faida wa 80% unaotangazwa. Uamuzi hautegemei ofa kuu, bali onyo lililoripotiwa la CySEC, maoni kuhusu sharti kali la uthabiti, alama ya Trustpilot isiyopatikana na ushahidi wa karibuni sana wa malipo.",
+    "checks": [
+      "Thibitisha kama programu uliyochagua ni Jr, Sr, Executive, Turbo au Sprint, kisha soma ukurasa wake wa masharti.",
+      "Thibitisha hali ya sasa ya udhibiti kwenye tovuti ya CySEC kabla ya kulipa.",
+      "Tafuta ushahidi wa malipo wa siku 30 zilizopita kwenye Discord na Reddit kwa maneno \"Leveraged payout\" au \"GetLeveraged withdrawal\".",
+      "Jaribu mkakati wako kwa simulation huku ukiheshimu sharti la uthabiti la 20% kana kwamba linatekelezwa kwa ukali.",
+      "Linganisha gharama halisi ya \"pay after you pass\", inayotangazwa mara nyingi karibu $8.88, na hatari ya kukataliwa malipo."
+    ],
+    "faq": [
+      {
+        "question": "Je, ni salama kununua Get Leveraged?",
+        "answer": "PropRadar haichukulii kama ununuzi salama moja kwa moja. Kampuni ni mpya, alama ya Trustpilot haipatikani, maoni ya umma yanataja masharti makali ya uthabiti na onyo la mdhibiti lililoripotiwa lazima lithibitishwe kabla ya kununua."
+      },
+      {
+        "question": "Hatari kubwa ya masharti ya Get Leveraged ni ipi?",
+        "answer": "Sharti muhimu zaidi ni uthabiti wa 20%: siku moja ya trading isiwakilishe zaidi ya 20% ya faida yote. Likitekelezwa kwa ukali, linaweza kuzuia malipo hata baada ya trader kufikia lengo la faida."
+      },
+      {
+        "question": "Nitafute ushahidi gani kabla ya kununua?",
+        "answer": "Tafuta ushahidi wa karibuni wa kutoa fedha kutoka kwa trader huru, si picha za matangazo pekee. Ushahidi bora una tarehe, unahusishwa na programu husika na unaendana na masharti rasmi."
+      }
+    ]
+  },
+  "alternatives-ftmo": {
+    "title": "Mbadala bora za FTMO: masharti, gharama na malipo",
+    "metaDescription": "Linganisha mbadala za FTMO kwa bei, unyumbufu wa masharti, habari, EA, majukwaa, muda wa malipo, scaling na tofauti halisi kabla ya kubadili.",
+    "eyebrow": "Mbadala za FTMO",
+    "h1": "Mbadala za FTMO: nafuu zaidi, zenye unyumbufu zaidi au zinazokufaa zaidi?",
+    "answer": "Kuondoka FTMO kuna maana tu ikiwa mbadala unatatua kizuizi halisi: gharama ndogo ya kuingia, masharti yanayonyumbulika zaidi, jukwaa linalokufaa, muda tofauti wa malipo au programu inayolingana vizuri na mtindo wako.",
+    "checks": [
+      "Linganisha sababu ya kutaka mbadala wa FTMO: bei, unyumbufu, jukwaa, muda wa malipo au scaling.",
+      "Thibitisha masharti halisi ya drawdown, habari, EA na kushikilia positions wikendi.",
+      "Soma vyanzo rasmi na ishara za karibuni za jumuiya, si matangazo pekee.",
+      "Usiache kampuni inayoaminika kwa sababu tu ofa nyingine ina punguzo.",
+      "Linganisha gharama halisi kwa miezi 3 hadi 6, ikiwemo reset au majaribio ya kurudia."
+    ],
+    "faq": [
+      {
+        "question": "Mbadala bora wa FTMO ni upi?",
+        "answer": "Hakuna jibu kwa kila mtu. The5ers inaweza kufaa scaling ya tahadhari; Funding Pips inaweza kufaa wanaolinganisha masharti ya kisasa; FunderPro inaweza kuvutia kwa bei na ukubwa wa akaunti; E8 Markets ni kigezo kingine cha challenge ya kisasa."
+      },
+      {
+        "question": "Ni lini nibaki na FTMO?",
+        "answer": "Baki na FTMO ikiwa kipaumbele chako ni masharti wazi, historia ndefu ya umma, sifa imara ya malipo na muundo wa hatua mbili ulioainishwa vizuri. Punguzo pekee halitoshi kubadili."
+      },
+      {
+        "question": "Nilinganishe vipi mbadala za FTMO?",
+        "answer": "Anza na kizuizi unachotaka kutatua: bei, habari, EA, jukwaa, muda wa malipo au scaling. Kisha linganisha masharti halisi ya programu na maoni ya karibuni ya malipo kabla ya punguzo la ununuzi."
+      }
+    ]
+  },
+  "prop-firm-avis-reddit-trustpilot": {
+    "title": "Maoni kuhusu prop firm: ishara za Reddit dhidi ya Trustpilot",
+    "metaDescription": "Jifunze kusoma maoni ya Trustpilot, Reddit, Discord na X kabla ya kuchagua prop firm: malalamiko ya malipo, hatari ya maoni bandia, muda wa punguzo na ubora wa ushahidi.",
+    "eyebrow": "Ishara za maoni",
+    "h1": "Maoni ya Reddit na Trustpilot kuhusu prop firm: alama nzuri haitoshi",
+    "answer": "Trustpilot na Reddit ni vyanzo muhimu, lakini si vikitumika peke yake. Alama nzuri ya umma bado inaweza kuficha matatizo ya malipo, masharti yasiyoeleweka au kampeni kali za punguzo zinazoongeza maoni chanya.",
+    "checks": [
+      "Tenganisha alama ghafi na uaminifu uliochujwa: tarehe, maoni yaliyofutwa na muda wa ofa ni muhimu.",
+      "Tafuta malalamiko ya malipo yanayojirudia, si hasira ya mtu mmoja pekee.",
+      "Linganisha muda wa maoni chanya na kampeni kubwa za punguzo.",
+      "Angalia kama Discord, X na Reddit zinaeleza hali sawa na Trustpilot.",
+      "Tafuta ushahidi wa karibuni wa malipo wenye tarehe badala ya ushuhuda wa jumla."
+    ],
+    "faq": [
+      {
+        "question": "Je, alama ya 4.8/5 kwenye Trustpilot ni ushahidi wa kutosha?",
+        "answer": "Hapana. Alama nzuri ina maana ikiwa muda wa maoni, ushahidi wa malipo, majadiliano ya Reddit na masharti rasmi vinaendana. Alama ya juu bado inaweza kuficha matatizo ya kutoa fedha yanayotokana na masharti."
+      },
+      {
+        "question": "Maoni gani yanafaa zaidi?",
+        "answer": "Maoni bora hutaja programu husika, ukubwa wa akaunti, tarehe ya malipo, sharti linalohusika na ikiwa trader tayari ametoa fedha. Sifa za jumla ni ushahidi dhaifu zaidi."
+      },
+      {
+        "question": "Nitumieje Reddit na Discord?",
+        "answer": "Zitumie kutambua mifumo inayojirudia: ucheleweshaji, malipo yaliyokataliwa, mkanganyiko kuhusu masharti, shinikizo la support au mabadiliko ya ghafla ya maoni baada ya ofa."
+      }
+    ]
+  },
+  "prop-firm-payout-proof": {
+    "title": "Ushahidi wa malipo ya prop firm: jinsi ya kuthibitisha utoaji wa fedha",
+    "metaDescription": "Mwongozo wa ushahidi wa malipo: tambua ushahidi wenye tarehe, unaoweza kufuatiliwa na unaolingana kabla ya kuamini madai ya matangazo.",
+    "eyebrow": "Ushahidi wa malipo",
+    "h1": "Ushahidi wa malipo ya prop firm lazima uwe na tarehe, ufuatilike na ulingane",
+    "answer": "Picha ya malipo pekee haitoshi. Ushahidi mzuri uwe na tarehe, uhusishwe na programu halisi, ulingane na masharti na uungwe mkono na zaidi ya ishara moja ya umma.",
+    "checks": [
+      "Chunguza tarehe ya malipo, programu na aina ya akaunti.",
+      "Thibitisha kama ushahidi unatoka kwa kampuni au watumiaji huru.",
+      "Linganisha ushahidi na masharti, kiwango cha chini cha kutoa fedha na ukomo.",
+      "Tafuta malipo yanayokataliwa mara kwa mara au ucheleweshaji."
+    ],
+    "faq": [
+      {
+        "question": "Je, picha ya malipo inatosha?",
+        "answer": "Hapana. Ina manufaa ikiwa ina tarehe, inahusishwa na akaunti au ushuhuda unaoaminika na inalingana na masharti ya kampuni."
+      },
+      {
+        "question": "Kwa nini kampuni inaweza kukataa malipo?",
+        "answer": "Sababu za kawaida ni ukiukaji wa masharti, trading iliyokatazwa wakati wa habari, copy trading isiyoidhinishwa, lot kubwa kupita kiasi, arbitrage au kutolingana kwa mkakati."
+      }
+    ]
+  },
+  "prop-firm-legal-check": {
+    "title": "Ukaguzi wa kisheria wa prop firm: kampuni, masharti na ishara za hatari",
+    "metaDescription": "Thibitisha kampuni ya kisheria, masharti ya akaunti za simulation, hali ya udhibiti, vifungu vya malipo na hatari za migogoro kabla ya kununua.",
+    "eyebrow": "Uchunguzi wa kisheria",
+    "h1": "Ukaguzi wa kisheria wa prop firm: thibitisha kampuni kabla ya ofa",
+    "answer": "Prop firm inaweza kuwa halali kiasi cha kuchunguzwa lakini isiwe broker au kampuni ya uwekezaji inayodhibitiwa. Uchunguzi wenye manufaa huanza na kampuni inayofunga mkataba, mamlaka ya kisheria, taarifa ya simulation, hali ya udhibiti, masharti ya malipo na vifungu vya migogoro.",
+    "checks": [
+      "Tambua jina halisi la kampuni, nambari ya usajili, anwani na mamlaka kabla ya kununua.",
+      "Tenganisha udhibiti wa broker na huduma za challenge, akaunti za simulation na fedha pepe.",
+      "Soma kama kampuni inasema si broker, si mshauri wa uwekezaji wala taasisi inayopokea amana.",
+      "Chunguza vifungu vya usuluhishi, kuachana na madai ya pamoja, kurejeshewa fedha, chargeback na kupoteza haki ya malipo.",
+      "Thibitisha nchi zilizowekewa vizuizi na kama bidhaa inapatikana katika mamlaka yako.",
+      "Tafuta jina halisi la chapa katika vyombo huru vya habari za fedha na tambua ikiwa hakuna makala ya kuaminika.",
+      "Tumia maonyo ya wadhibiti na rejista za umma kama ishara za hatari, si madai ya matangazo."
+    ],
+    "faq": [
+      {
+        "question": "Je, kampuni iliyosajiliwa hufanya prop firm kuwa salama?",
+        "answer": "Hapana. Usajili hurahisisha kufuatilia kampuni, lakini haumaanishi moja kwa moja kwamba bidhaa inadhibitiwa kama broker, mshauri wa uwekezaji au futures commission merchant."
+      },
+      {
+        "question": "Ishara muhimu zaidi ya hatari ya kisheria ni ipi?",
+        "answer": "Taarifa zisizo wazi za kampuni inayofunga mkataba, zikifuatiwa na maonyo ya wadhibiti, haki za malipo zisizo wazi, vifungu vikali vya kupoteza haki na matangazo yanayodokeza mtaji halisi ilhali masharti yanasema akaunti za simulation."
+      },
+      {
+        "question": "Kwa nini simulation ina umuhimu wa kisheria?",
+        "answer": "Kwa kawaida trader hapokei akaunti ya kawaida ya broker wala ulinzi wa fedha za wateja. Zawadi hutegemea masharti ya mkataba, ukaguzi na ustahiki badala ya haki za kawaida za kutoa fedha."
+      }
+    ]
   }
 };
 
