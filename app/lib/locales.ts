@@ -1,3 +1,4 @@
+import publishedGuidePaths from './guideI18n/publishedGuidePaths.json';
 /**
  * Site languages. English stays at the root (no prefix, existing URLs);
  * the other languages live under their prefix (/fr, /de, ... /hi).
@@ -89,7 +90,7 @@ export function isTranslatedPath(path: string, locale: Locale = 'en') {
   const clean = path.replace(/\/+$/, '') || '/';
   if (clean === '/prop-firms-fermees') return locale === 'fr';
   if (locale === 'tr' || locale === 'ar' || locale === 'ko' || locale === 'sw' || locale === 'ha' || locale === 'am') {
-    return NEW_LANGUAGE_PATHS.some((pattern) => pattern.test(clean));
+    return (NEW_LANGUAGE_PATHS.some((pattern) => pattern.test(clean))) || ((publishedGuidePaths as Partial<Record<Locale, string[]>>)[locale]?.includes(path.replace(/\/$/, '') || '/') ?? false);
   }
   return TRANSLATED.some((pattern) => pattern.test(clean));
 }
