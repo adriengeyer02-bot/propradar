@@ -4546,6 +4546,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://help.e8markets.com/en/articles/15274219-e8-pro",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-27",
+          "summary": "Programme catalogue pass: added E8 Classic v2 (one-step, 4% static loss limit, daily payouts, no consistency rule) read on the official help centre; E8 Pro description now states the v2 daily profit counting cap and its forfeiture at rollover.",
+          "source": "https://intercom.help/e8/en/articles/18310577-e8-classic-v-2",
+          "fields": ["products"]
         }
       ],
       "reviewedAt": "2026-11-18",
@@ -4637,7 +4643,7 @@
           "id": "e8-pro-current",
           "name": "E8 Pro (classic/perpetual)",
           "type": "Challenge",
-          "description": "One-step Pro; 8% static is the preset, with 6% or 10% variants, and not all profits withdrawable.",
+          "description": "One-step Pro (E8PRO v2); 8% static is the preset, with 6% or 10% variants. Only 2% of the initial balance per day counts toward target and payout, the excess being forfeited at rollover; half of profits stays in the account.",
           "accountSizeMin": 5000,
           "accountSizeMax": 500000,
           "profitTarget": "8% preset single phase (2% profit cap per day)",
@@ -4649,6 +4655,25 @@
           "profitSplit": "80% default, applied to requestable 50% profits",
           "platforms": ["not verified for this specific tier"],
           "tradableAssets": ["Forex", "CFD"],
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "e8-classic-v2-current",
+          "name": "E8 Classic v2",
+          "type": "Challenge",
+          "description": "One-step challenge with a 4% static loss limit that never moves, daily payout requests from $100 profit and no consistency rule; a variant without daily drawdown costs more.",
+          "accountSizeMin": 2000,
+          "accountSizeMax": 50000,
+          "profitTarget": "8% single phase",
+          "maxDailyLoss": "2% of initial balance, from the higher of starting balance or equity (optional variant without daily drawdown)",
+          "maxDrawdown": "4% static from initial balance",
+          "drawdownType": "Static",
+          "drawdownSource": "https://intercom.help/e8/en/articles/18310577-e8-classic-v-2",
+          "drawdownDetails": "Official help: a fixed loss limit based on the initial balance that never trails or moves; same limits in the Performance stage.",
+          "profitSplit": "80% or 90% (chosen at checkout)",
+          "platforms": ["not verified for this specific tier"],
+          "tradableAssets": ["Forex", "CFD"],
+          "minTradingDays": "None; one closed trade every 60 days",
           "hasConsistencyRule": false
         },
         {

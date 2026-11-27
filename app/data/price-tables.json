@@ -282,6 +282,66 @@
               "price": 1998
             }
           ]
+        },
+        {
+          "name": "E8 Classic v2 — 2% daily drawdown",
+          "productId": "e8-classic-v2-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://intercom.help/e8/en/articles/18310577-e8-classic-v-2",
+          "note": "Pricing table published in the official E8 Classic v2 help article (read 27 November 2026, 'updated over a week ago'); the article points to a separate full pricing page. Payout share (80% or 90%) and other checkout options can change the price; promotions excluded.",
+          "rows": [
+            {
+              "size": 2000,
+              "price": 29
+            },
+            {
+              "size": 5000,
+              "price": 59
+            },
+            {
+              "size": 10000,
+              "price": 119
+            },
+            {
+              "size": 25000,
+              "price": 229
+            },
+            {
+              "size": 50000,
+              "price": 449
+            }
+          ]
+        },
+        {
+          "name": "E8 Classic v2 — without daily drawdown",
+          "productId": "e8-classic-v2-current",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://intercom.help/e8/en/articles/18310577-e8-classic-v-2",
+          "note": "Same help-article table, variant without a daily drawdown limit (4% static maximum loss unchanged).",
+          "rows": [
+            {
+              "size": 2000,
+              "price": 36
+            },
+            {
+              "size": 5000,
+              "price": 69
+            },
+            {
+              "size": 10000,
+              "price": 129
+            },
+            {
+              "size": 25000,
+              "price": 319
+            },
+            {
+              "size": 50000,
+              "price": 629
+            }
+          ]
         }
       ]
     },

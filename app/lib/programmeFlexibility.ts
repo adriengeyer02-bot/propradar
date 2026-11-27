@@ -54,6 +54,21 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
       funded:{points:0.5,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/',reason:'3% daily pause disables the account for the rest of the day without termination; profit target and loss rules stay the same at each Pro stage; accounts inactive for more than 30 consecutive days expire.'}
     },preset:{drawdown:'static',lossPercent:6,source:'https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/'}}
   },
+  'e8-markets':{
+    'e8-classic-v2-current':{checkedOn:'2026-11-27',scope:'E8 Classic v2, Forex/CFD, default 2% daily drawdown configuration; the variant without daily drawdown has the same rating. Help article read 27 November 2026.',scopeFr:'E8 Classic v2, Forex/CFD, configuration par défaut avec perte journalière de 2 % ; la variante sans perte journalière a la même note. Article du centre d’aide lu le 27 novembre 2026.',assessments:{
+      drawdown:{points:1,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2',reason:'4% static maximum loss from the initial balance: a fixed limit that never trails or moves, in the challenge and in the Performance stage.'},
+      payout:{points:1,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2',reason:'Payout requests can be submitted daily once the $100 minimum profit is reached; no buffer or cap described; 80% or 90% share.'},
+      consistency:{points:1,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2',reason:'The article states zero consistency rules.'},
+      trading:{points:0.5,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2',reason:'In the Performance stage only 40% of profits made in the news window are eligible; copy trading only across the trader’s own accounts; EAs allowed if not shared between users (trading policies). Weekend holding not stated; it would not change the score.'},
+      funded:{points:1,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2',reason:'Same drawdown limits in the Performance stage and no time limit; the article says the payout minimum is the only requirement. One closed trade every 60 days is ordinary activity.'}
+    },preset:{drawdown:'static',lossPercent:4,profitSplit:80,source:'https://intercom.help/e8/en/articles/18310577-e8-classic-v-2'}},
+    'e8-pro-current':{checkedOn:'2026-11-27',scope:'E8 Pro v2, Forex, 8% static preset. Trading axis not assessed: weekend holding is not stated on the official pages read, so no rating is published.',scopeFr:'E8 Pro v2, Forex, préréglage 8 % statique. Liberté de trading non évaluée : les pages officielles lues ne disent rien du week-end ; aucune note publiée.',assessments:{
+      drawdown:{points:0.5,source:'https://intercom.help/e8/en/articles/13653031-static-drawdown',reason:'8% static from the initial balance until the first payout; at the first payout the loss level moves permanently to the initial balance, so the remaining room is only the profit left in the account.'},
+      payout:{points:0.5,source:'https://intercom.help/e8/en/articles/15274219-e8-pro-forex',reason:'Daily requests once profit reaches 1% of the initial balance, but only 50% of total profits is requestable; the other half stays as a drawdown buffer.'},
+      consistency:{points:0,source:'https://intercom.help/e8/en/articles/15274219-e8-pro-forex',reason:'No best-day rule, but only 2% of the initial balance per day counts toward target and payout, and the excess is forfeited at market rollover.'},
+      funded:{points:1,source:'https://intercom.help/e8/en/articles/15274219-e8-pro-forex',reason:'The Performance stage keeps the same daily cap and drawdown rules (counted above); no minimum trading days, one closed trade every 60 days.'}
+    },preset:{drawdown:'static',lossPercent:8,profitSplit:80,source:'https://intercom.help/e8/en/articles/13653031-static-drawdown'}}
+  },
   fundednext: {
   "fundednext-stellar-one-current": {
     "checkedOn": "2026-11-27",

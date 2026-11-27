@@ -4,7 +4,7 @@ Scope: The5ers, FTMO (CFD), FundedNext (CFD), Funding Pips, E8 Markets.
 Rubric: the existing five-axis programme rubric (`audits/PROGRAMME_FLEXIBILITY_HANDOFF_2026-11-27.md`, batch 1–3 reports), unchanged.
 The /5 rating stays separate from the company /100; no company score, scoring formula, affiliate link, promotion or Futures record was touched.
 
-**Status: partial batch.** Official pages could be read only through the `agent/terms-archive` captures (25 November) and a first set of page reads. Page fetching was then blocked: permission requests went unanswered, and the scraping credits are exhausted until 18:28 UTC. Funding Pips and E8 Markets could not be read on official pages. They stay unrated, and no data was added for them from third-party sites.
+**Status: partial batch.** Official pages could be read only through the `agent/terms-archive` captures (25 November) and a first set of page reads. Page fetching was then blocked: permission requests went unanswered, and the scraping credits are exhausted until 18:28 UTC. Page reading was restored at 14:15, and E8 was then read on its official help centre. Funding Pips still blocks automated reading of its help centre (even when access is allowed), and the The5ers/E8 price tables are loaded dynamically; both need a connected browser or saved PDFs. No data was taken from third-party sites.
 
 ## Results
 
@@ -14,7 +14,7 @@ The /5 rating stays separate from the company /100; no company score, scoring fo
 | FTMO (CFD) | 3 (2-Step, 1-Step, Instant), complete | — | already 3 | 0 |
 | FundedNext (CFD) | 4 (Stellar 1-Step, 2-Step, Lite, Instant) | Stellar Instant evidence | **1 new: Stellar Instant 2.5/5** | 4 rows |
 | Funding Pips | 5 per third-party news (1-Step Flex, 2-Step Standard, 2-Step Flex, 2-Step Pro, Zero); 4 on file | — (official pages unreadable) | 0 | 0 |
-| E8 Markets (CFD) | E8 One, E8 Pro on file; **E8 Classic v2** found in the official help center | — | 0 | 0 |
+| E8 Markets (CFD) | E8 One, E8 Pro, **E8 Classic v2** (added) | Classic v2 added; Pro description corrected | **1 new: E8 Classic v2 4.5/5** (E8 Pro 4/5 axes) | 10 rows |
 
 ### New rating — FundedNext Stellar Instant: 2.5/5
 
@@ -66,20 +66,29 @@ Price table (help center, "approx."): $2K $59.99 · $5K $149.99 · $10K $299.99 
   - lower $100K prices.
 - Missing on file: 2-Step Flex (product and prices); prices for all four existing products; the current reward cycles and their conditions. These need the official help center.
 
-### E8 Markets — not rated
+### E8 Markets (update 14:30 — page reading restored)
 
-- The official help center (intercom.help/e8) confirms for **E8 Pro**:
-  - no payout cap and no consistency rule; daily requests once profit reaches 1%;
-  - 50% of profit is retained as a buffer;
-  - the static loss level moves to the initial balance at the first payout.
-- The E8 Pro **2% daily profit cap** still has to be read precisely (excess removed, or trading disabled?) before it can be classed under consistency or trading. Funded conditions and news rules are also missing.
-- **E8 Classic v2**, a new 1-Step product (static drawdown, daily payouts, no consistency rule; $2K from $29 with a 2% daily loss limit, or $36 without one), is not on file. Its full price table and rules are needed.
+- **E8 Classic v2: 4.5/5** (new product, official help article https://intercom.help/e8/en/articles/18310577-e8-classic-v-2).
+  - Axes: drawdown 1 (4% static, never moves); payouts 1 (daily from $100 profit); consistency 1 (zero consistency rules); funded conditions 1 (the payout minimum is the only requirement).
+  - Trading 0.5: in the Performance stage only 40% of news-window profits are eligible. Weekend holding is not stated, but it would not change this score (FTMO Standard precedent).
+  - Prices ($2K–$50K): with 2% daily drawdown $29 / $59 / $119 / $229 / $449; without daily drawdown $36 / $69 / $129 / $319 / $629. Taken from the help article; the full pricing page was not read.
+- **E8 Pro v2: 4/5 axes, not rated.**
+  - Drawdown 0.5: 8% static, moved permanently to the initial balance at the first payout.
+  - Payouts 0.5: daily, but only 50% of profits is requestable.
+  - Consistency 0: only 2% of the initial balance per day counts, and the excess is forfeited at rollover.
+  - Funded conditions 1.
+  - Trading is not assessed: no official page read states whether weekend holding is allowed.
+- Still missing: E8 Pro prices (dynamic page), E8 One rating.
+
+### The5ers High Stakes — probable explanation of the conflict
+
+Third-party catalogues list two versions with distinct prices: Classic, $545 for 100K, which matches the official $545 example, and New, $19 for 2.5K, which matches the product page. The official blog gives High Stakes a 5% daily loss and a 10% overall limit. The 2-Step FAQ ($149/$179, 3% daily, 50% consistency, $2,000 cap) therefore probably describes a separate 2-Step plan, not High Stakes. This is not confirmed on an official page; High Stakes stays unrated and no third-party price is recorded.
 
 ## Tests
 
-- `node scripts/check-constraint-simulators.cjs`: 56 checks OK (4 assertions added).
-- `node scripts/check-price-tables.cjs`: 28 firms, 86 schedules, 352 rows.
-- `npx tsx scripts/validate-firm-updates.ts --base <main>`: valid; only `the5ers` is changed (products + changelog). The SENSITIVE list printed by the validator concerns wording in other firms that is already on main.
+- `node scripts/check-constraint-simulators.cjs`: 59 checks OK (7 assertions added).
+- `node scripts/check-price-tables.cjs`: 28 firms, 88 schedules, 362 rows.
+- `npx tsx scripts/validate-firm-updates.ts --base <main>`: valid; only `the5ers` and `e8-markets` are changed (products + changelog). The SENSITIVE list printed by the validator concerns wording in other firms that is already on main.
 - `npx tsc --noEmit -p .` and `npx next build`: pass.
 
 ## What is needed to finish the batch
