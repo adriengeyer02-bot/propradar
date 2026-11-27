@@ -16,6 +16,7 @@ import glob, json, re, os, sys, glob, csv
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from scale_c_trustpilot import TP_WITHHELD, rating_penalty
 from scale_c_regulatory import is_rbi_warning
+from scale_c_refinement import proposal_review_pending
 
 A = {k: v for k, v in zip(sys.argv[1::2], sys.argv[2::2])}
 BASE = json.load(open(A['--base']))
@@ -301,15 +302,20 @@ for f in BASE:
     if proposed > f['score'] and real_incidents(f) and slug not in INCIDENTS and (source != 'contrat lu en entier' or slug not in APPROVED_C):
         proposed = f['score']
         flag = 'hausse bloquée : incidents du dossier à recoder'
+    # Old automatic weights are candidate estimates only. No new publication
+    # until exact programme/cohort and proportional cap evidence are reviewed.
+    policy_pending = proposal_review_pending(items)
+    if policy_pending:
+        flag = (flag + '; ' if flag else '') + 'révision C proportionnelle requise'
     publish = read
     rows.append({'slug': slug, 'name': f['name'], 'current': f['score'], 'proposed': proposed if publish else f['score'],
-                 'raw': raw, 'flag': flag, 'delta': (proposed - f['score']) if publish else 0, 'ceiling': c, 'ceilingWhy': why,
+                 'raw': raw, 'flag': flag, 'policyReviewPending': policy_pending, 'delta': (proposed - f['score']) if publish else 0, 'ceiling': c, 'ceilingWhy': why,
                  'penalties': ' · '.join(f"{k} −{p}" for k, p in lines) or 'aucune', 'confidence': source if publish else (source if source != 'non lu' else 'audit en cours (CGU non lues)'),
                  'evidence': {k: v for k, v in codes.items()}, 'items': items, 'age': age, 'ceilingEvidence': ceil_evidence,
                  'founded': f['founded']})
 
 rows.sort(key=lambda r: -r['proposed'])
-json.dump({'weights': W, 'consistency': CONS, 'rows': rows}, open(OUT + '.json', 'w'), ensure_ascii=False, indent=1)
+json.dump({'methodReview': 'proportional-constraints-pending', 'weights': W, 'consistency': CONS, 'rows': rows}, open(OUT + '.json', 'w'), ensure_ascii=False, indent=1)
 with open(OUT + '.csv', 'w', newline='') as fh:
     w = csv.writer(fh)
     w.writerow(['firm', 'current', 'proposed', 'delta', 'raw_scale_c', 'ceiling', 'ceiling_why', 'penalties', 'confidence', 'flag'])

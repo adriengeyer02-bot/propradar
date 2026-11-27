@@ -81,7 +81,7 @@ const en: ScaleCCopy = {
   source: 'Source',
   method: [
     'The ceiling is earned with evidence: years of operation and payouts at scale (on-chain tracking, published statistics, a large Trustpilot sample).',
-    'Points are then lost only for sourced facts: contract clauses, Trustpilot notices, regulator warnings, documented payout defaults. Reserve Bank of India alert-list warnings are informational only and do not deduct points.',
+    'Points are then lost only for sourced facts: contract clauses, Trustpilot notices, regulator warnings, documented payout defaults. Reserve Bank of India alert-list warnings are informational only and do not deduct points. Routine identity checks and reasonable minimum withdrawals cost zero; funded EOD trailing costs 1, intraday 2, and temporary payout caps 1–4 according to severity.',
     'What we could not check costs nothing, and only a full reading of the contract can raise a score.',
     'Affiliation never moves a score.',
   ],
@@ -140,7 +140,7 @@ const fr: ScaleCCopy = {
   source: 'Source',
   method: [
     'Le plafond se gagne avec des preuves : années d’activité et paiements à grande échelle (suivi on-chain, statistiques publiées, large échantillon Trustpilot).',
-    'Des points ne sont ensuite retirés que pour des faits sourcés : clauses du contrat, avertissements Trustpilot, mises en garde de régulateurs, défauts de paiement documentés. Les avertissements de la banque centrale indienne (RBI) sont informatifs et ne retirent aucun point.',
+    'Des points ne sont ensuite retirés que pour des faits sourcés : clauses du contrat, avertissements Trustpilot, mises en garde de régulateurs, défauts de paiement documentés. Les avertissements de la banque centrale indienne (RBI) sont informatifs et ne retirent aucun point. KYC normal et minimum de retrait raisonnable : 0 ; trailing financé EOD : −1, intraday : −2 ; plafonds de retrait temporaires : −1 à −4 selon leur sévérité.',
     'Ce que nous n’avons pas pu vérifier ne coûte rien, et seule une lecture complète du contrat peut faire monter une note.',
     'L’affiliation ne fait jamais bouger une note.',
   ],
@@ -199,7 +199,7 @@ const de: ScaleCCopy = {
   source: 'Quelle',
   method: [
     'Die Obergrenze wird durch Belege erreicht: Betriebsjahre und Auszahlungen in großem Umfang (On-chain-Erfassung, veröffentlichte Statistiken, große Trustpilot-Stichprobe).',
-    'Punkte werden nur für belegte Tatsachen abgezogen: Vertragsklauseln, Trustpilot-Hinweise, Behördenwarnungen, dokumentierte Zahlungsausfälle. Warnungen der indischen Zentralbank (RBI) dienen nur der Information und führen zu keinem Punktabzug.',
+    'Punkte werden nur für belegte Tatsachen abgezogen: Vertragsklauseln, Trustpilot-Hinweise, Behördenwarnungen, dokumentierte Zahlungsausfälle. Warnungen der indischen Zentralbank (RBI) dienen nur der Information und führen zu keinem Punktabzug. Normale Identitätsprüfung und angemessene Mindestauszahlung kosten 0; finanziertes EOD-Trailing 1, Intraday 2, temporäre Auszahlungslimits je nach Schwere 1–4.',
     'Was wir nicht prüfen konnten, kostet nichts, und nur eine vollständige Lektüre des Vertrags kann eine Bewertung erhöhen.',
     'Affiliate-Beziehungen verändern nie eine Bewertung.',
   ],
@@ -258,7 +258,7 @@ const it: ScaleCCopy = {
   source: 'Fonte',
   method: [
     'Il tetto si ottiene con le prove: anni di attività e pagamenti su larga scala (tracciamento on-chain, statistiche pubblicate, ampio campione Trustpilot).',
-    'I punti si perdono solo per fatti documentati: clausole contrattuali, avvisi Trustpilot, avvertimenti delle autorità, mancati pagamenti documentati. Gli avvisi della banca centrale indiana (RBI) sono solo informativi e non comportano penalità.',
+    'I punti si perdono solo per fatti documentati: clausole contrattuali, avvisi Trustpilot, avvertimenti delle autorità, mancati pagamenti documentati. Gli avvisi della banca centrale indiana (RBI) sono solo informativi e non comportano penalità. KYC normale e minimo di prelievo ragionevole: 0; trailing finanziato EOD: 1, intraday: 2; limiti temporanei ai prelievi: 1–4 secondo la severità.',
     'Ciò che non abbiamo potuto verificare non costa nulla, e solo una lettura completa del contratto può alzare un punteggio.',
     'L’affiliazione non modifica mai un punteggio.',
   ],
@@ -317,7 +317,7 @@ const es: ScaleCCopy = {
   source: 'Fuente',
   method: [
     'El techo se obtiene con pruebas: años de actividad y pagos a gran escala (rastreo on-chain, estadísticas publicadas, gran muestra de Trustpilot).',
-    'Después solo se restan puntos por hechos con fuente: cláusulas del contrato, avisos de Trustpilot, advertencias de reguladores, impagos documentados. Las advertencias del banco central de la India (RBI) son informativas y no restan puntos.',
+    'Después solo se restan puntos por hechos con fuente: cláusulas del contrato, avisos de Trustpilot, advertencias de reguladores, impagos documentados. Las advertencias del banco central de la India (RBI) son informativas y no restan puntos. KYC normal y mínimo de retiro razonable: 0; trailing financiado EOD: 1, intradía: 2; límites temporales de retiro: 1–4 según su severidad.',
     'Lo que no pudimos verificar no cuesta nada, y solo una lectura completa del contrato puede subir una puntuación.',
     'La afiliación nunca mueve una puntuación.',
   ],
@@ -376,7 +376,7 @@ const pt: ScaleCCopy = {
   source: 'Fonte',
   method: [
     'O teto é obtido com provas: anos de atividade e pagamentos em grande escala (rastreio on-chain, estatísticas publicadas, grande amostra do Trustpilot).',
-    'Depois, só se perdem pontos por fatos com fonte: cláusulas do contrato, avisos do Trustpilot, alertas de reguladores, inadimplências documentadas. Os alertas do banco central da Índia (RBI) são informativos e não retiram pontos.',
+    'Depois, só se perdem pontos por fatos com fonte: cláusulas do contrato, avisos do Trustpilot, alertas de reguladores, inadimplências documentadas. Os alertas do banco central da Índia (RBI) são informativos e não retiram pontos. KYC normal e saque mínimo razoável: 0; trailing financiado EOD: 1, intradiário: 2; tetos temporários de saque: 1–4 conforme a severidade.',
     'O que não pudemos verificar não custa nada, e só uma leitura completa do contrato pode subir uma nota.',
     'A afiliação nunca altera uma nota.',
   ],
@@ -435,7 +435,7 @@ const zh: ScaleCCopy = {
   source: '来源',
   method: [
     '上限凭证据获得：运营年限和大规模出金（链上追踪、公布的统计、大量 Trustpilot 评价）。',
-    '之后仅因有来源的事实扣分：合同条款、Trustpilot 提示、监管警示、有记录的出金违约。 印度储备银行（RBI）的警示名单仅供参考，不扣分。',
+    '之后仅因有来源的事实扣分：合同条款、Trustpilot 提示、监管警示、有记录的出金违约。 印度储备银行（RBI）的警示名单仅供参考，不扣分。 常规身份验证和合理最低提款额不扣分；资助阶段日终追踪回撤扣1分、盘中扣2分，临时提款上限按严格程度扣1–4分。',
     '我们无法核实的内容不扣分，只有通读合同全文才能提高评分。',
     '联盟合作从不影响评分。',
   ],
@@ -494,7 +494,7 @@ const ja: ScaleCCopy = {
   source: '出典',
   method: [
     '上限は証拠で得られます：運営年数と大規模な出金（オンチェーン追跡、公開統計、多数の Trustpilot レビュー）。',
-    'その後は出典のある事実についてのみ減点します：契約条項、Trustpilot の通知、規制当局の警告、記録された出金不履行。 インド準備銀行（RBI）の警告リストは情報提供のみで、減点の対象外です。',
+    'その後は出典のある事実についてのみ減点します：契約条項、Trustpilot の通知、規制当局の警告、記録された出金不履行。 インド準備銀行（RBI）の警告リストは情報提供のみで、減点の対象外です。 通常の本人確認と合理的な最低出金額は減点なし。資金提供段階のEODトレーリングは1点、日中は2点、一時的な出金上限は厳しさに応じて1～4点減点。',
     '確認できなかった点は減点せず、契約全文を読んだ場合にのみスコアが上がります。',
     'アフィリエイト関係がスコアを動かすことはありません。',
   ],
@@ -553,7 +553,7 @@ const hi: ScaleCCopy = {
   source: 'स्रोत',
   method: [
     'ऊपरी सीमा प्रमाण से मिलती है: संचालन के वर्ष और बड़े पैमाने पर भुगतान (ऑन-चेन ट्रैकिंग, प्रकाशित आँकड़े, बड़ा Trustpilot नमूना)।',
-    'इसके बाद केवल स्रोत वाले तथ्यों पर अंक कटते हैं: अनुबंध की शर्तें, Trustpilot सूचनाएँ, नियामक चेतावनियाँ, दस्तावेज़ित भुगतान चूक। भारतीय रिज़र्व बैंक (RBI) की चेतावनी सूची केवल सूचना के लिए है और इससे अंक नहीं कटते।',
+    'इसके बाद केवल स्रोत वाले तथ्यों पर अंक कटते हैं: अनुबंध की शर्तें, Trustpilot सूचनाएँ, नियामक चेतावनियाँ, दस्तावेज़ित भुगतान चूक। भारतीय रिज़र्व बैंक (RBI) की चेतावनी सूची केवल सूचना के लिए है और इससे अंक नहीं कटते। सामान्य KYC और उचित न्यूनतम निकासी पर शून्य अंक कटते हैं; फंडेड EOD ट्रेलिंग पर 1, इंट्राडे पर 2 और अस्थायी निकासी सीमा की गंभीरता पर 1–4 अंक कटते हैं।',
     'जो हम जाँच नहीं सके उसकी कोई कटौती नहीं, और केवल पूरा अनुबंध पढ़ने पर ही स्कोर बढ़ सकता है।',
     'एफ़िलिएशन कभी स्कोर नहीं बदलता।',
   ],
@@ -612,7 +612,7 @@ const tr: ScaleCCopy = {
   source: 'Kaynak',
   method: [
     'Tavan kanıtla kazanılır: faaliyet yılları ve büyük ölçekli ödemeler (zincir üstü izleme, yayımlanan istatistikler, geniş Trustpilot örneği).',
-    'Ardından yalnızca kaynaklı olgular için puan düşülür: sözleşme maddeleri, Trustpilot uyarıları, düzenleyici uyarıları, belgelenmiş ödeme temerrütleri. Hindistan Merkez Bankası (RBI) uyarı listesi yalnızca bilgilendirme amaçlıdır ve puan düşürmez.',
+    'Ardından yalnızca kaynaklı olgular için puan düşülür: sözleşme maddeleri, Trustpilot uyarıları, düzenleyici uyarıları, belgelenmiş ödeme temerrütleri. Hindistan Merkez Bankası (RBI) uyarı listesi yalnızca bilgilendirme amaçlıdır ve puan düşürmez. Normal KYC ve makul asgari çekim 0 puan; fonlu EOD takip eden düşüş 1, gün içi 2; geçici çekim sınırları ağırlığına göre 1–4 puan düşürür.',
     'Doğrulayamadığımız şeyler puan düşürmez ve yalnızca sözleşmenin tamamen okunması puanı yükseltebilir.',
     'Ortaklık ilişkisi puanı asla değiştirmez.',
   ],
@@ -671,7 +671,7 @@ const ar: ScaleCCopy = {
   source: 'المصدر',
   method: [
     'يُكتسب السقف بالأدلة: سنوات النشاط والمدفوعات واسعة النطاق (تتبع على السلسلة، إحصاءات منشورة، عينة كبيرة من Trustpilot).',
-    'بعد ذلك تُخصم النقاط فقط بسبب وقائع موثقة المصدر: بنود العقد، تنبيهات Trustpilot، تحذيرات الجهات الرقابية، حالات التخلف الموثقة عن الدفع. تحذيرات بنك الاحتياطي الهندي (RBI) للمعلومات فقط ولا تؤدي إلى خصم النقاط.',
+    'بعد ذلك تُخصم النقاط فقط بسبب وقائع موثقة المصدر: بنود العقد، تنبيهات Trustpilot، تحذيرات الجهات الرقابية، حالات التخلف الموثقة عن الدفع. تحذيرات بنك الاحتياطي الهندي (RBI) للمعلومات فقط ولا تؤدي إلى خصم النقاط. التحقق المعتاد من الهوية والحد الأدنى المعقول للسحب لا يخصمان نقاطًا؛ حد الخسارة المتحرك الممول بنهاية اليوم نقطة واحدة وداخل اليوم نقطتان، وسقوف السحب المؤقتة 1–4 نقاط حسب شدتها.',
     'ما لم نتمكن من التحقق منه لا يكلف شيئًا، ولا يرفع التقييم إلا قراءة العقد كاملًا.',
     'الشراكة التسويقية لا تغيّر التقييم أبدًا.',
   ],
@@ -730,7 +730,7 @@ const ko: ScaleCCopy = {
   source: '출처',
   method: [
     '상한은 증거로 얻습니다: 운영 연수와 대규모 지급(온체인 추적, 공개 통계, 많은 Trustpilot 리뷰).',
-    '그 뒤에는 출처가 있는 사실에 대해서만 감점합니다: 계약 조항, Trustpilot 공지, 규제 당국 경고, 기록된 지급 불이행. 인도중앙은행(RBI)의 경고 목록은 참고용이며 감점하지 않습니다.',
+    '그 뒤에는 출처가 있는 사실에 대해서만 감점합니다: 계약 조항, Trustpilot 공지, 규제 당국 경고, 기록된 지급 불이행. 인도중앙은행(RBI)의 경고 목록은 참고용이며 감점하지 않습니다. 일반 KYC와 합리적인 최소 출금액은 감점 0점, 펀디드 EOD 추적 드로다운은 1점, 장중은 2점, 일시적 출금 한도는 강도에 따라 1–4점 감점한다.',
     '확인할 수 없었던 부분은 감점하지 않으며, 계약서 전문을 읽은 경우에만 점수가 오를 수 있습니다.',
     '제휴 관계는 점수를 절대 바꾸지 않습니다.',
   ],
@@ -789,7 +789,7 @@ const sw: ScaleCCopy = {
   source: 'Chanzo',
   method: [
     'Kiwango cha juu hupatikana kwa ushahidi: miaka ya shughuli na malipo kwa kiwango kikubwa (ufuatiliaji on-chain, takwimu zilizochapishwa, sampuli kubwa ya Trustpilot).',
-    'Kisha alama hupunguzwa tu kwa ukweli wenye chanzo: vifungu vya mkataba, matangazo ya Trustpilot, maonyo ya wadhibiti, kushindwa kulipa kulikoandikwa. Maonyo ya benki kuu ya India (RBI) ni ya taarifa tu na hayapunguzi pointi.',
+    'Kisha alama hupunguzwa tu kwa ukweli wenye chanzo: vifungu vya mkataba, matangazo ya Trustpilot, maonyo ya wadhibiti, kushindwa kulipa kulikoandikwa. Maonyo ya benki kuu ya India (RBI) ni ya taarifa tu na hayapunguzi pointi. Uthibitishaji wa kawaida wa utambulisho na kiwango cha chini kinachofaa cha malipo havipunguzi pointi; trailing ya mwisho wa siku kwenye akaunti iliyofadhiliwa ni pointi 1, ya ndani ya siku 2, na kikomo cha muda cha malipo ni pointi 1–4 kulingana na ukali.',
     'Tusichoweza kuthibitisha hakigharimu chochote, na ni kusoma mkataba wote tu kunakoweza kupandisha alama.',
     'Ushirika wa kibiashara haubadilishi alama kamwe.',
   ],
@@ -848,7 +848,7 @@ const ha: ScaleCCopy = {
   source: 'Tushe',
   method: [
     'Ana samun iyakar maki da hujjoji: shekarun aiki da biyan kuɗi mai yawa (bibiya a kan sarkar, ƙididdigar da aka wallafa, babban samfurin Trustpilot).',
-    'Daga nan ana rage maki ne kawai saboda gaskiyar da ke da tushe: sassan kwangila, sanarwar Trustpilot, gargaɗin hukumomi, gazawar biya da aka rubuta. Gargaɗin babban bankin Indiya (RBI) na bayani ne kawai kuma ba ya rage maki.',
+    'Daga nan ana rage maki ne kawai saboda gaskiyar da ke da tushe: sassan kwangila, sanarwar Trustpilot, gargaɗin hukumomi, gazawar biya da aka rubuta. Gargaɗin babban bankin Indiya (RBI) na bayani ne kawai kuma ba ya rage maki. Tabbatar da shaida ta al\'ada da mafi ƙarancin cire kuɗi mai ma\'ana ba sa rage maki; trailing na ƙarshen rana a asusun mai jari maki 1 ne, na cikin rana 2, iyakar cire kuɗi ta wucin gadi maki 1–4 gwargwadon tsauri.',
     'Abin da ba mu iya tabbatarwa ba ba ya rage komai, kuma karanta kwangilar gaba ɗaya ne kawai zai iya ɗaga maki.',
     'Haɗin gwiwar talla ba ya taɓa canza maki.',
   ],
@@ -907,7 +907,7 @@ const am: ScaleCCopy = {
   source: 'ምንጭ',
   method: [
     'ከፍተኛው ገደብ በማስረጃ ይገኛል፡ የእንቅስቃሴ ዓመታትና በሰፊ መጠን ክፍያዎች (በብሎክቼይን ክትትል፣ የታተሙ ስታቲስቲክስ፣ ሰፊ የTrustpilot ናሙና)።',
-    'ከዚያ ነጥብ የሚቀነሰው ምንጭ ላላቸው እውነታዎች ብቻ ነው፡ የውል አንቀጾች፣ የTrustpilot ማሳሰቢያዎች፣ የተቆጣጣሪ ማስጠንቀቂያዎች፣ የተመዘገቡ የክፍያ አለመፈጸሞች። የሕንድ ማዕከላዊ ባንክ (RBI) ማስጠንቀቂያዎች ለመረጃ ብቻ ናቸው፤ ነጥብ አይቀንሱም።',
+    'ከዚያ ነጥብ የሚቀነሰው ምንጭ ላላቸው እውነታዎች ብቻ ነው፡ የውል አንቀጾች፣ የTrustpilot ማሳሰቢያዎች፣ የተቆጣጣሪ ማስጠንቀቂያዎች፣ የተመዘገቡ የክፍያ አለመፈጸሞች። የሕንድ ማዕከላዊ ባንክ (RBI) ማስጠንቀቂያዎች ለመረጃ ብቻ ናቸው፤ ነጥብ አይቀንሱም። መደበኛ የማንነት ማረጋገጫና ተመጣጣኝ ዝቅተኛ ክፍያ ነጥብ አይቀንሱም፤ የፈንድ EOD ተከታይ የኪሳራ ወሰን 1፣ የቀን ውስጥ 2፣ ጊዜያዊ የክፍያ ወሰን እንደ ጥብቅነቱ 1–4 ነጥብ ይቀንሳል።',
     'ማረጋገጥ ያልቻልነው ምንም አያስቀንስም፣ ነጥብ ሊጨምር የሚችለው ውሉ ሙሉ በሙሉ ሲነበብ ብቻ ነው።',
     'የሽርክና ግንኙነት ነጥብን ፈጽሞ አይቀይርም።',
   ],

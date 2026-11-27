@@ -1,0 +1,1651 @@
+{
+  "date": "2026-11-27",
+  "version": "C — proportional constraints revision",
+  "baseCommit": "64d647f0f7bd7df89485c8e6f1bab7c55212b45e",
+  "status": "owner-approved principles; numeric cap bands selected for reproducibility; targeted recalc of published C entries, not new full audits",
+  "policy": {
+    "capBands": [
+      {
+        "ratio": "≥1",
+        "points": 1
+      },
+      {
+        "ratio": "≥0.5 and <1",
+        "points": 2
+      },
+      {
+        "ratio": ">0.2 and <0.5",
+        "points": 3
+      },
+      {
+        "ratio": "≤0.2",
+        "points": 4
+      }
+    ],
+    "shareLimit": "If <=50% of available profit/balance, minimum 2 points.",
+    "frequency": "Add 1 if fixed interval exceeds 14 calendar days, capped at 4. No duplicate penalty for the same window already coded as D conditions.",
+    "permanent": "4 if excess earnings permanently lost or hard cumulative/lifetime cap; not a temporary deferral.",
+    "reference": "Same funded programme and current cohort; 50K where available, nearest eligible size otherwise; first capped request. Compare like denominated amounts before split. Do not infer missing denominator. Retain old amount for existing unresolved cases, and require manual review before new publication.",
+    "trailing": {
+      "static": 0,
+      "evaluation": 0,
+      "eod": 1,
+      "intraday": 2
+    },
+    "routine": "KYC, reasonable verification, ordinary minima, ordinary payout timing 0 unless material obstacle or forfeiture; sanction abusive discretion or harsh consequence once.",
+    "scope": "Do not change B1, B2/B2A, B3, B5, Trustpilot, incident penalties, ceilings, or unaudited cap. B4/B6/B7 evidence clarified; actual live transition with all accrued rewards preserved 0."
+  },
+  "decisions": [
+    {
+      "slug": "alpha-futures",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "All Qualified Accounts: Each request is limited to up to 50% of profit and a fixed cap: Zero $1,000/$1,500/$2,500 (25K/50K/100K); Standard $3,000/$4,000/$5,000 (50K/100K/150K); Advanced $15,000 on every size; Direct $1,000 to $3,000 by size. Up to 4 payouts a month.",
+      "expectedSource": "https://alpha-futures.com/posts/alpha-futures-payout-rules-2026",
+      "expectedLocator": "main programme scored: zero",
+      "points": 2,
+      "reason": "Zero 50K Qualified: initial MLL $2,000, cap $1,500, up to 4 requests/month, at most 50% of profit; remaining profit retained.",
+      "sources": [
+        "https://alpha-futures.com/posts/alpha-futures-payout-rules-2026",
+        "https://help.alpha-futures.com/en/articles/9491999-maximum-loss-limit-mll",
+        "https://help.alpha-futures.com/en/articles/9492051-payout-policy"
+      ],
+      "assessment": {
+        "kind": "cap",
+        "cap": 1500,
+        "loss": 2000,
+        "days": 7,
+        "percent": 50,
+        "permanent": false
+      }
+    },
+    {
+      "slug": "aqua-funded",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "Funded rewards — general limits: The first request normally opens 14 days after the first funded trade. For accounts of $100K or more, each of the first two reward requests is capped at $10,000; the minimum request is $100. The stated 24-business-hour guarantee starts after a payout is approved.",
+      "expectedSource": "https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work",
+      "expectedLocator": "main programme scored: instant-standard",
+      "points": 1,
+      "reason": "Instant Standard 100K: 5% maximum loss, first two payouts capped at $10,000, then uncapped. No cap documented for smaller sizes.",
+      "sources": [
+        "https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work",
+        "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/aqua-funded/57c8ea83468c.txt",
+        "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/aqua-funded/2a6dd75b9931.txt"
+      ],
+      "assessment": {
+        "kind": "cap",
+        "cap": 10000,
+        "loss": 5000,
+        "days": 14,
+        "percent": null,
+        "permanent": false
+      }
+    },
+    {
+      "slug": "blusky-trading",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "All Sim Funded accounts: 'Sim Funded payout caps operate on a rolling 7-day basis': 25K $1,500, 50K $2,500, 100K $3,000, 150K Static $1,500, 200K Static $2,500, 300K Static $3,000 (Orbit and Launch articles list their own 7-day caps; Direct to Funded has a $3,000 weekly cap).",
+      "expectedSource": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+      "expectedLocator": "main programme scored: launch",
+      "points": 2,
+      "reason": "Launch 50K funded stage: starting balance $3,000 and minimum $100; initial loss budget $2,900, rolling seven-day cap $2,500.",
+      "sources": [
+        "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+        "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/blusky-trading/dc91e7ce32a6.txt"
+      ],
+      "assessment": {
+        "kind": "cap",
+        "cap": 2500,
+        "loss": 2900,
+        "days": 7,
+        "percent": null,
+        "permanent": false
+      }
+    },
+    {
+      "slug": "ck-capital",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "All programmes — funded stage: The first five payouts are capped (before the 80/20 split): first payout 2.5% of account size (e.g. $2,500 on $100K), payouts 2-5 at 3% ($3,000 on $100K); every withdrawal, including partial ones, counts toward the five capped payouts, and 'meeting the conditions does not guarantee approval'.",
+      "expectedSource": "https://ckpropfirm.com/en/faq/are-there-any-payout-caps",
+      "expectedLocator": "main programme scored: 2step-plus",
+      "points": 3,
+      "reason": "2-Step Plus 100K: funded max loss 8%, first cap 2.5% before split. Payout cadence not established by this evidence; no frequency surcharge without proof.",
+      "sources": [
+        "https://ckpropfirm.com/en/faq/are-there-any-payout-caps",
+        "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/ck-capital/49ba8d0fe9c9.txt"
+      ],
+      "assessment": {
+        "kind": "cap",
+        "cap": 2500,
+        "loss": 8000,
+        "days": null,
+        "percent": null,
+        "permanent": false
+      }
+    },
+    {
+      "slug": "the5ers",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "The5ers High Stakes — Pro withdrawals: Published $50K / $100K Pro payout caps are $3,000 / $4,000, with minimum payout profits $300 / $500; requests are every 14 days.",
+      "expectedSource": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+      "expectedLocator": "main programme scored: high-stakes",
+      "points": 2,
+      "reason": "High Stakes Pro 50K: cap $3,000; published max loss 8–10%, using the larger $5,000 initial loss budget conservatively; ratio remains in same band at 8%.",
+      "sources": [
+        "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+        "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/the5ers/72f24e02a99f.txt"
+      ],
+      "assessment": {
+        "kind": "cap",
+        "cap": 3000,
+        "loss": 5000,
+        "days": 14,
+        "percent": null,
+        "permanent": false
+      }
+    },
+    {
+      "slug": "top-one-futures",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "Elite Evaluation (sim funded stage): Maximum per payout request: $1,500 (25K), $2,500 (50K), $3,000 (100K), $3,500 (150K); profit above the cap stays in the account.",
+      "expectedSource": "https://help.toponefutures.com/en/articles/12717928-elite-sim-funded-account-payout-requirements",
+      "expectedLocator": "main programme scored: elite",
+      "points": 1,
+      "reason": "Elite 50K sim funded: cap $2,500; funded maximum trailing loss $2,000. Excess remains on account; frequency surcharge only on documented >14 days.",
+      "sources": [
+        "https://help.toponefutures.com/en/articles/12717928-elite-sim-funded-account-payout-requirements",
+        "https://help.toponefutures.com/en/articles/10907134-understanding-the-drawdown-in-elite-accounts"
+      ],
+      "assessment": {
+        "kind": "cap",
+        "cap": 2500,
+        "loss": 2000,
+        "days": null,
+        "percent": null,
+        "permanent": false
+      }
+    },
+    {
+      "slug": "top-one-trader",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "2-Step PRO (V2) — funded stage: 'Each payout request is limited to 6% of the account size', with a $15,000 maximum per request; a request needs at least 3% profit and 'at least 3 profitable trading days' (each at least 0.5% of the starting balance).",
+      "expectedSource": "https://help.toponetrader.com/en/articles/15164961-2-step-pro-v2-when-can-i-request-a-payout",
+      "expectedLocator": "main programme scored: 2steppro",
+      "points": 2,
+      "reason": "2-Step Pro V2 50K: funded maximum loss 9%, 6% cap, biweekly payout.",
+      "sources": [
+        "https://help.toponetrader.com/en/articles/15164961-2-step-pro-v2-when-can-i-request-a-payout",
+        "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/top-one-trader/1467fb90012b.txt"
+      ],
+      "assessment": {
+        "kind": "cap",
+        "cap": 3000,
+        "loss": 4500,
+        "days": 14,
+        "percent": null,
+        "permanent": false
+      }
+    },
+    {
+      "slug": "topstep",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "Express Funded Account — payout size: Each Express Funded Account payout is limited to \"50% of your account balance up to the cap\", with caps from $2,000 to $6,000 depending on account size and payout path. \"Minimum Payout: $125.\" Live Funded Account payouts are not capped.",
+      "expectedSource": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+      "expectedLocator": "main programme scored: combine",
+      "points": 2,
+      "reason": "Standard XFA 50K: $2,000 cap and $2,000 initial MLL; maximum 50% of available balance. Five winning days (not fixed calendar days); live accounts uncapped.",
+      "sources": [
+        "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/topstep/b20dc72ae2f4.txt",
+        "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/topstep/683ab4eddb49.txt"
+      ],
+      "assessment": {
+        "kind": "cap",
+        "cap": 2000,
+        "loss": 2000,
+        "days": null,
+        "percent": 50,
+        "permanent": false
+      }
+    },
+    {
+      "slug": "tradeify",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "Select Flex withdrawals are limited to 50% of profit and a fixed per-request cap ($2,500 for a 50K account purchased after September 1, 2026). Select Daily also has a per-request cap.",
+      "expectedSource": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+      "expectedLocator": "Select Flex / Daily — Payout Caps",
+      "points": 2,
+      "reason": "Select Flex 50K (purchased after 1 Sept): $2,500 cap, initial EOD drawdown $2,000, 50% of profit, five winning days. The already selected main payout path is retained.",
+      "sources": [
+        "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns"
+      ],
+      "assessment": {
+        "kind": "cap",
+        "cap": 2500,
+        "loss": 2000,
+        "days": null,
+        "percent": 50,
+        "permanent": false
+      }
+    },
+    {
+      "slug": "wegetfunded",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "All programmes — funded (WGF) account: Each withdrawal is limited to 'up to 50% of their cumulative P&L, subject to a maximum amount'. Per-withdrawal maximums: Instant $850 / $1,500 / $3,000 (15k / 30k / 60k); 1 Step and 2 Step funded e.g. $1,800 / $2,000 / $2,250 on 50k and $3,000 / $3,500 / $4,000 on 200k for the 1st / 2nd / 3rd+ withdrawal.",
+      "expectedSource": "https://wegetfunded.com/en/faq",
+      "expectedLocator": "main programme scored: 1step",
+      "points": 2,
+      "reason": "1-Step 50K funded: 4% EOD maximum loss, first cap $1,800 and 50% profit. Requests only in second half of month; blackout separately scored under existing D conditions, no double surcharge.",
+      "sources": [
+        "https://wegetfunded.com/en/faq",
+        "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/wegetfunded/14a714c40ba1.txt"
+      ],
+      "assessment": {
+        "kind": "cap",
+        "cap": 1800,
+        "loss": 2000,
+        "days": 14,
+        "percent": 50,
+        "permanent": false
+      }
+    },
+    {
+      "slug": "prop-number-one",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "Section 38 limits funded simulated withdrawals to 15% of nominal account size per 21-day period; excess profit stays on the account for a later request.",
+      "expectedSource": "https://propnumberone.com/wp-content/uploads/2025/04/Overview_1.pdf",
+      "expectedLocator": "§38 — Maximum withdrawal limit",
+      "points": 2,
+      "reason": "2-Step 50K equivalent: cap 15% of nominal and funded drawdown 8%; one 21-day period, so +1 for long cycle. Excess remains available.",
+      "sources": [
+        "https://propnumberone.com/wp-content/uploads/2025/04/Overview_1.pdf",
+        "https://propnumberone.com/fr/2-step-challenge"
+      ],
+      "assessment": {
+        "kind": "cap",
+        "cap": 7500,
+        "loss": 4000,
+        "days": 21,
+        "percent": null,
+        "permanent": false
+      }
+    },
+    {
+      "slug": "lvlup-futures",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "Lvlup — funded: Lvlup funded payouts are capped at 10% of the original starting balance per request: $2,500 (25K), $5,000 (50K), $10,000 (100K), $15,000 (150K), every 14 days.",
+      "expectedSource": "https://lvlupfutures.com/rules",
+      "expectedLocator": "main programme scored: lvlup",
+      "points": 1,
+      "reason": "50K funded: cap 10% of starting nominal, initial maximum loss 5% in existing sourced EOD penalty. Excerpts-only publication gate retains existing displayed score.",
+      "sources": [
+        "https://lvlupfutures.com/rules"
+      ],
+      "assessment": {
+        "kind": "cap",
+        "cap": 5000,
+        "loss": 2500,
+        "days": 14,
+        "percent": null,
+        "permanent": false
+      }
+    },
+    {
+      "slug": "goat-funded-trader",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "GOAT programmes — funded reward requests: The payout guide sets a $3,000 daily profit ceiling (excess removed), model-specific caps on the first two rewards, and a 3% processing fee.",
+      "expectedSource": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
+      "expectedLocator": "main programme scored: instant",
+      "points": 4,
+      "reason": "Evidence describes permanent profit exclusion, lifetime/cumulative simulated reward ceiling or loss of excess rather than merely delayed withdrawals. Retain the existing maximum penalty pending product-specific review where applicable.",
+      "sources": [
+        "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival"
+      ],
+      "assessment": {
+        "kind": "permanent-or-cumulative-cap"
+      }
+    },
+    {
+      "slug": "hyrotrader",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "Funded accounts — profit above 5% per request: \"The profit counted in one payout request is capped at 5% of your initial balance\", and \"If a trader does not withdraw and exceeds 5% profit, any additional profit will not be paid.\" The FAQ does not limit this to one programme. Terms 11.7 add that payouts are subject to \"the per-payout and cumulative limits published in the payout information on the Platform\".",
+      "expectedSource": "https://www.hyrotrader.com/faq/orders-billing-taxes/is-there-a-maximum-withdrawal-amount-in-one-payout/",
+      "expectedLocator": "main programme scored: core",
+      "points": 4,
+      "reason": "Evidence describes permanent profit exclusion, lifetime/cumulative simulated reward ceiling or loss of excess rather than merely delayed withdrawals. Retain the existing maximum penalty pending product-specific review where applicable.",
+      "sources": [
+        "https://www.hyrotrader.com/faq/orders-billing-taxes/is-there-a-maximum-withdrawal-amount-in-one-payout/"
+      ],
+      "assessment": {
+        "kind": "permanent-or-cumulative-cap"
+      }
+    },
+    {
+      "slug": "lark-funding",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "All Lark accounts — $10,000 daily / per-trade gain limit: The prohibited-strategies article states: \"The daily and/or per-trade gain limit is set to $10,000.\" On challenge accounts \"A single violation requires a restart from Phase 1.\" On simulated funded accounts \"Trades exceeding the $10,000 limit will be excluded from account\", and three violations breach the account with no payout. The homepage says the opposite: \"Once funded, there is no cap on simulated gains\".",
+      "expectedSource": "https://helpdesk.larkfunding.com/en/articles/8243502-prohibited-trading-strategies",
+      "expectedLocator": "main programme scored: 1step",
+      "points": 4,
+      "reason": "Evidence describes permanent profit exclusion, lifetime/cumulative simulated reward ceiling or loss of excess rather than merely delayed withdrawals. Retain the existing maximum penalty pending product-specific review where applicable.",
+      "sources": [
+        "https://helpdesk.larkfunding.com/en/articles/8243502-prohibited-trading-strategies"
+      ],
+      "assessment": {
+        "kind": "permanent-or-cumulative-cap"
+      }
+    },
+    {
+      "slug": "leeloo-trading",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "Performance Account — lifetime payout ceiling: The homepage product card for the Performance Account says \"Earn back what you invest, plus 5%. Lifetime ceiling. Predictable.\" and \"Earn back up to your paid-in, plus 5%.\" Terms section 8 adds that \"Leeloo is not obligated to pay the Trader more than the maximum payout amount\".",
+      "expectedSource": "https://www.leelootrading.com/",
+      "expectedLocator": "main programme scored: performance",
+      "points": 4,
+      "reason": "Evidence describes permanent profit exclusion, lifetime/cumulative simulated reward ceiling or loss of excess rather than merely delayed withdrawals. Retain the existing maximum penalty pending product-specific review where applicable.",
+      "sources": [
+        "https://www.leelootrading.com/"
+      ],
+      "assessment": {
+        "kind": "permanent-or-cumulative-cap"
+      }
+    },
+    {
+      "slug": "sure-leverage",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "2 Step Challenge — funded stage: Maximum withdrawal is '5% of starting balance' per cycle, and excess profit is removed after the payout.",
+      "expectedSource": "https://help.sureleveragefunding.com/en/articles/12141500-2-step-challenge-faq-rules",
+      "expectedLocator": "main programme scored: 2step",
+      "points": 4,
+      "reason": "Evidence describes permanent profit exclusion, lifetime/cumulative simulated reward ceiling or loss of excess rather than merely delayed withdrawals. Retain the existing maximum penalty pending product-specific review where applicable.",
+      "sources": [
+        "https://help.sureleveragefunding.com/en/articles/12141500-2-step-challenge-faq-rules"
+      ],
+      "assessment": {
+        "kind": "permanent-or-cumulative-cap"
+      }
+    },
+    {
+      "slug": "elite-trader-funding",
+      "code": "D_PAYOUT_CAP",
+      "expectedPoints": 4,
+      "expectedText": "All plans — Elite sim-funded stage: Each payout cycle has a $100 minimum and a maximum that scales with account size and completed cycles (example on a $50K account: $1,250 in the first cycle, rising toward $2,000). Sim payouts are capped at \"$25,000 total per trader\" across all accounts, with a $150,000 lifetime sim cap across re-entries.",
+      "expectedSource": "https://elitetraderfunding.app/payouts",
+      "expectedLocator": "main programme scored: 1step",
+      "points": 4,
+      "reason": "Evidence describes permanent profit exclusion, lifetime/cumulative simulated reward ceiling or loss of excess rather than merely delayed withdrawals. Retain the existing maximum penalty pending product-specific review where applicable.",
+      "sources": [
+        "https://elitetraderfunding.app/payouts"
+      ],
+      "assessment": {
+        "kind": "permanent-or-cumulative-cap"
+      }
+    },
+    {
+      "slug": "aqua-funded",
+      "code": "D_FUNDED_TRAILING_DRAWDOWN",
+      "expectedPoints": 2,
+      "expectedText": "Instant Funding Standard — hard loss limits: The model has a 3% daily equity/balance-based loss floor, resetting at 00:00 UTC, and a 5% maximum loss floor trailing upward at daily reset. The higher balance or equity at the reset determines the reference.",
+      "expectedSource": "https://help.aquafunded.com/en/articles/10476448-instant-funding-standard",
+      "expectedLocator": "main programme scored: instant-standard",
+      "points": 1,
+      "reason": "Funded maximum loss floor updates at end of day or daily reset; intraday enforcement of that floor is not intraday trailing.",
+      "sources": [
+        "https://help.aquafunded.com/en/articles/10476448-instant-funding-standard"
+      ],
+      "assessment": {
+        "kind": "trailing",
+        "mode": "eod",
+        "stage": "funded"
+      }
+    },
+    {
+      "slug": "lvlup-futures",
+      "code": "D_FUNDED_TRAILING_DRAWDOWN",
+      "expectedPoints": 2,
+      "expectedText": "Lvlup — funded: The funded account keeps a 5% EOD trailing drawdown based on the highest end-of-day balance, locking at the original starting balance once the account reaches 6% profit; 'A payout does not reset drawdown.'",
+      "expectedSource": "https://lvlupfutures.com/rules",
+      "expectedLocator": "main programme scored: lvlup",
+      "points": 1,
+      "reason": "Funded maximum loss floor updates at end of day or daily reset; intraday enforcement of that floor is not intraday trailing.",
+      "sources": [
+        "https://lvlupfutures.com/rules"
+      ],
+      "assessment": {
+        "kind": "trailing",
+        "mode": "eod",
+        "stage": "funded"
+      }
+    },
+    {
+      "slug": "topstep",
+      "code": "D_FUNDED_TRAILING_DRAWDOWN",
+      "expectedPoints": 2,
+      "expectedText": "Topstep Express Funded Account — payout: Despite a nominal $50K–$150K buying-power label, the XFA starts at $0. MLL rises from a negative floor, locks at $0 and is set to $0 after first payout; on the optional Consistency payout path, best day ≤40% and at least 3 trading days.",
+      "expectedSource": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
+      "expectedLocator": "main programme scored: combine",
+      "points": 1,
+      "reason": "Funded maximum loss floor updates at end of day or daily reset; intraday enforcement of that floor is not intraday trailing.",
+      "sources": [
+        "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
+        "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/topstep/683ab4eddb49.txt"
+      ],
+      "assessment": {
+        "kind": "trailing",
+        "mode": "eod",
+        "stage": "funded"
+      }
+    },
+    {
+      "slug": "tradeify",
+      "code": "D_FUNDED_TRAILING_DRAWDOWN",
+      "expectedPoints": 2,
+      "expectedText": "Select Flex and Select Daily simulated funded accounts use an end-of-day trailing drawdown, which locks after reaching the specified profit threshold or requesting a payout.",
+      "expectedSource": "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns",
+      "expectedLocator": "Trailing Max Drawdowns — funded Select accounts",
+      "points": 1,
+      "reason": "Funded maximum loss floor updates at end of day or daily reset; intraday enforcement of that floor is not intraday trailing.",
+      "sources": [
+        "https://help.tradeify.co/en/articles/10495897-rules-trailing-max-drawdowns"
+      ],
+      "assessment": {
+        "kind": "trailing",
+        "mode": "eod",
+        "stage": "funded"
+      }
+    },
+    {
+      "slug": "the5ers",
+      "code": "D_PAYOUT_CONDITIONS",
+      "expectedPoints": 3,
+      "expectedText": "All programmes — verification interview: Section 3.2: if the Company requests an interview, scheduling and conducting it \"must take place within five (5) business days from the date of the request.\" Failure \"will result in the denial of any pending payouts, immediate cancellation of all associated accounts, and termination of the collaboration.\" The verification process may be conducted \"at any time on our sole discretion.\"",
+      "expectedSource": "https://the5ers.com/terms-and-conditions/",
+      "expectedLocator": "main programme scored: high-stakes",
+      "points": 0,
+      "reason": "The only D evidence is the same five-business-day verification interview already penalized under E_HARSH. Do not penalize the verification twice; retain E_HARSH because it can cancel gains and all accounts.",
+      "sources": [
+        "https://the5ers.com/terms-and-conditions/"
+      ],
+      "assessment": {
+        "kind": "ordinary-check-or-duplicate",
+        "retainedCode": "E_HARSH"
+      }
+    },
+    {
+      "slug": "fintokei",
+      "code": "D_PAYOUT_CONDITIONS",
+      "expectedPoints": 3,
+      "expectedText": "All Fintokei programmes — pre-payout review: General Terms V17 art. V.5: \"before processing any Performance reward payout, the Company may review your trading activity\", with automated detection of prohibited trading (art. V.4); penalties are retracted only if the customer \"can demonstrate otherwise beyond a reasonable doubt\". The help article \"When will I receive my payout?\" says requests are \"automatically approved within seconds\" and contrasts this with manual reviews…",
+      "expectedSource": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
+      "expectedLocator": "main programme scored: swift",
+      "points": 0,
+      "reason": "The cited review is the general pre-payment review of prohibited trading already represented by B2; no separately evidenced material eligibility gate. Keep B2 for subjective reward enforcement.",
+      "sources": [
+        "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf"
+      ],
+      "assessment": {
+        "kind": "ordinary-check-or-duplicate",
+        "retainedCode": "B2"
+      }
+    },
+    {
+      "slug": "hantec-trader",
+      "code": "D_PAYOUT_CONDITIONS",
+      "expectedPoints": 3,
+      "expectedText": "RZR Funded — standard funded accounts: The first payout is generally eligible after 14 days from the first trade; certain products offer seven days or an Instant24 variant. All positions must be closed before requesting.",
+      "expectedSource": "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/",
+      "expectedLocator": "main programme scored: challenge",
+      "points": 0,
+      "reason": "The evidence describes routine first-payout timing and closing positions before requesting; no separately documented material extra profit or eligibility requirement. Retain the other contractual deductions.",
+      "sources": [
+        "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/"
+      ],
+      "assessment": {
+        "kind": "ordinary-condition"
+      }
+    },
+    {
+      "slug": "take-profit-trader",
+      "code": "B4",
+      "expectedPoints": 3,
+      "expectedText": "Older FAQ says weekly PRO+ activity, current help says one traded day per calendar month (cohort to reconcile).",
+      "expectedSource": "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725",
+      "expectedLocator": "PRO+ FAQ vs PRO Account Rules §3",
+      "points": 0,
+      "reason": "The evidence expressly refers to an older and a current FAQ, with the cohort not reconciled. A simultaneous material contradiction is not established.",
+      "sources": [
+        "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725"
+      ],
+      "assessment": {
+        "kind": "not-established-same-cohort"
+      }
+    },
+    {
+      "slug": "daytraders-com",
+      "code": "B6",
+      "expectedPoints": 5,
+      "expectedText": "Disparaging Day Traders (or its competitors) is a ground to bar a user from a Reward.",
+      "expectedSource": "https://daytraders.com/help/articles/17704078-terms-of-use",
+      "expectedLocator": "Rewards",
+      "points": 0,
+      "reason": "Section 28 defines Reward as educational prizes/incentives. The cited negative-speech forfeiture concerns those incentives, not documented trading payouts or access to funded trading. No B6 on this evidence alone.",
+      "sources": [
+        "https://daytraders.com/help/articles/17704078-terms-of-use",
+        "https://github.com/adriengeyer02-bot/propradar/blob/agent/terms-archive/terms-archive/daytraders-com/afff49e83bb8.txt"
+      ],
+      "assessment": {
+        "kind": "promotional-reward-only"
+      }
+    }
+  ],
+  "pending": [
+    {
+      "slug": "axi-select",
+      "code": "B4",
+      "points": 3,
+      "source": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Withdrawal+Rules+EN.pdf",
+      "reason": "Reconcile contemporaneous contract/FAQ version and scope before any change."
+    },
+    {
+      "slug": "axi-select",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "source": "https://www.axi.com/int/funded-trader-program",
+      "reason": "Verify independently material payment obstacle, timing and programme scope; standard verification/minimum alone is not penalized."
+    },
+    {
+      "slug": "blusky-trading",
+      "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
+      "points": 3,
+      "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+      "reason": "Confirm that the live transition preserves all earned and pending gains, is an actual live account and does not force another paid evaluation."
+    },
+    {
+      "slug": "city-traders-imperium",
+      "code": "B6",
+      "points": 5,
+      "source": "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf",
+      "reason": "Confirm whether scope also reaches honest criticism and whether the sanction affects trading access/rewards; do not infer exemption from incomplete context."
+    },
+    {
+      "slug": "daytraders-com",
+      "code": "B7",
+      "points": 5,
+      "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+      "reason": "Separate contract or non-publication is not by itself proof of inaccessible before purchase. Obtain the actual template / written pre-purchase access evidence; keep prior score pending."
+    },
+    {
+      "slug": "e8-futures",
+      "code": "D_PAYOUT_CAP",
+      "points": 4,
+      "source": "https://e8futures.com/e8-signature-futures",
+      "reason": "Exact initial funded loss budget or same-plan/cycle linkage not established in available evidence; retain prior provisional amount, no automatic new maximum penalty."
+    },
+    {
+      "slug": "elite-trader-funding",
+      "code": "B6",
+      "points": 5,
+      "source": "https://elitetraderfunding.app/terms-of-service",
+      "reason": "Confirm whether scope also reaches honest criticism and whether the sanction affects trading access/rewards; do not infer exemption from incomplete context."
+    },
+    {
+      "slug": "elite-trader-funding",
+      "code": "D_SPLIT_REDUCTION",
+      "points": 2,
+      "source": "https://elitetraderfunding.app/elite",
+      "reason": "Confirm accrued sim profits and live transition terms; lower future split is currently accompanied by mandatory conversion/ban on refusal."
+    },
+    {
+      "slug": "for-traders",
+      "code": "B7",
+      "points": 5,
+      "source": "https://www.fortraders.com/terms-and-conditions",
+      "reason": "Separate contract or non-publication is not by itself proof of inaccessible before purchase. Obtain the actual template / written pre-purchase access evidence; keep prior score pending."
+    },
+    {
+      "slug": "fxify",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "source": "https://fxify.com/agreement/",
+      "reason": "Verify independently material payment obstacle, timing and programme scope; standard verification/minimum alone is not penalized."
+    },
+    {
+      "slug": "hash-hedge",
+      "code": "D_PAYOUT_CAP",
+      "points": 4,
+      "source": "https://www.hashhedge.com/commercial-terms",
+      "reason": "Exact initial funded loss budget or same-plan/cycle linkage not established in available evidence; retain prior provisional amount, no automatic new maximum penalty."
+    },
+    {
+      "slug": "hash-hedge",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "source": "https://www.hashhedge.com/commercial-terms",
+      "reason": "Verify independently material payment obstacle, timing and programme scope; standard verification/minimum alone is not penalized."
+    },
+    {
+      "slug": "hyrotrader",
+      "code": "B7",
+      "points": 5,
+      "source": "https://www.hyrotrader.com/terms-and-conditions/",
+      "reason": "Separate contract or non-publication is not by itself proof of inaccessible before purchase. Obtain the actual template / written pre-purchase access evidence; keep prior score pending."
+    },
+    {
+      "slug": "lucid-trading",
+      "code": "D_PAYOUT_CAP",
+      "points": 4,
+      "source": "https://support.lucidtrading.com/en/articles/12890092-lucidpro-payouts",
+      "reason": "Exact initial funded loss budget or same-plan/cycle linkage not established in available evidence; retain prior provisional amount, no automatic new maximum penalty."
+    },
+    {
+      "slug": "lucid-trading",
+      "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
+      "points": 3,
+      "source": "https://support.lucidtrading.com/en/articles/16558826-new-live-structure",
+      "reason": "Confirm that the live transition preserves all earned and pending gains, is an actual live account and does not force another paid evaluation."
+    },
+    {
+      "slug": "moneta-funded",
+      "code": "B7",
+      "points": 5,
+      "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+      "reason": "Separate contract or non-publication is not by itself proof of inaccessible before purchase. Obtain the actual template / written pre-purchase access evidence; keep prior score pending."
+    },
+    {
+      "slug": "myfundedcapital",
+      "code": "B7",
+      "points": 5,
+      "source": "https://myfundedcapital.com/terms-and-conditions/",
+      "reason": "Separate contract or non-publication is not by itself proof of inaccessible before purchase. Obtain the actual template / written pre-purchase access evidence; keep prior score pending."
+    },
+    {
+      "slug": "oneup-trader",
+      "code": "B7",
+      "points": 5,
+      "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+      "reason": "Separate contract or non-publication is not by itself proof of inaccessible before purchase. Obtain the actual template / written pre-purchase access evidence; keep prior score pending."
+    },
+    {
+      "slug": "orion-funded",
+      "code": "B6",
+      "points": 5,
+      "source": "https://www.orionfunded.com/docs/terms-and-conditions.pdf",
+      "reason": "Confirm whether scope also reaches honest criticism and whether the sanction affects trading access/rewards; do not infer exemption from incomplete context."
+    },
+    {
+      "slug": "sway-funded",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "source": "https://swayfunded.kb.help/how-does-sway-funded-reward-system-work/",
+      "reason": "Verify independently material payment obstacle, timing and programme scope; standard verification/minimum alone is not penalized."
+    },
+    {
+      "slug": "take-profit-trader",
+      "code": "B7",
+      "points": 5,
+      "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+      "reason": "Separate contract or non-publication is not by itself proof of inaccessible before purchase. Obtain the actual template / written pre-purchase access evidence; keep prior score pending."
+    },
+    {
+      "slug": "the-trading-pit",
+      "code": "B6",
+      "points": 5,
+      "source": "https://www.thetradingpit.com/general-terms-and-conditions",
+      "reason": "Confirm whether scope also reaches honest criticism and whether the sanction affects trading access/rewards; do not infer exemption from incomplete context."
+    },
+    {
+      "slug": "top-one-futures",
+      "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
+      "points": 3,
+      "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
+      "reason": "Confirm that the live transition preserves all earned and pending gains, is an actual live account and does not force another paid evaluation."
+    },
+    {
+      "slug": "trade-the-pool",
+      "code": "B6",
+      "points": 5,
+      "source": "https://tradethepool.com/terms-and-conditions/",
+      "reason": "Confirm whether scope also reaches honest criticism and whether the sanction affects trading access/rewards; do not infer exemption from incomplete context."
+    },
+    {
+      "slug": "trade-the-pool",
+      "code": "B7",
+      "points": 5,
+      "source": "https://tradethepool.com/terms-and-conditions/",
+      "reason": "Separate contract or non-publication is not by itself proof of inaccessible before purchase. Obtain the actual template / written pre-purchase access evidence; keep prior score pending."
+    },
+    {
+      "slug": "tradeday",
+      "code": "B7",
+      "points": 5,
+      "source": "https://www.tradeday.com/terms-and-conditions",
+      "reason": "Separate contract or non-publication is not by itself proof of inaccessible before purchase. Obtain the actual template / written pre-purchase access evidence; keep prior score pending."
+    },
+    {
+      "slug": "willis-capital",
+      "code": "B6",
+      "points": 5,
+      "source": "https://www.wfunded.io/en/terms-and-conditions",
+      "reason": "Confirm whether scope also reaches honest criticism and whether the sanction affects trading access/rewards; do not infer exemption from incomplete context."
+    }
+  ],
+  "confirmedKeep": [
+    {
+      "slug": "alpha-capital-group",
+      "code": "B6",
+      "points": 5,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "alpha-futures",
+      "code": "B6",
+      "points": 5,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "apex-trader-funding",
+      "code": "B6",
+      "points": 5,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "apex-trader-funding",
+      "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "apex-trader-funding",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "aqua-funded",
+      "code": "D_SPLIT_REDUCTION",
+      "points": 2,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "blusky-trading",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "ck-capital",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "e8-futures",
+      "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "e8-futures",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "equity-edge",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "fintokei",
+      "code": "B6",
+      "points": 5,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "ftmo",
+      "code": "B6",
+      "points": 5,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "fundednext",
+      "code": "B6",
+      "points": 5,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "fundednext",
+      "code": "D_SPLIT_REDUCTION",
+      "points": 2,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "goat-funded-trader",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "myfundedfutures",
+      "code": "B6",
+      "points": 5,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "oneup-trader",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "oneup-trader",
+      "code": "D_FUNDED_TRAILING_DRAWDOWN",
+      "points": 2,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "sabiotrade",
+      "code": "D_FUNDED_TRAILING_DRAWDOWN",
+      "points": 2,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "sure-leverage",
+      "code": "D_SPLIT_REDUCTION",
+      "points": 2,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "take-profit-trader",
+      "code": "D_FUNDED_TRAILING_DRAWDOWN",
+      "points": 2,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "the5ers",
+      "code": "B6",
+      "points": 5,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "top-one-futures",
+      "code": "B6",
+      "points": 5,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "top-one-trader",
+      "code": "B6",
+      "points": 5,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "tradeday",
+      "code": "D_FUNDED_TRAILING_DRAWDOWN",
+      "points": 2,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "tradeify",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "wegetfunded",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "willis-capital",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    },
+    {
+      "slug": "wsfunded",
+      "code": "D_PAYOUT_CONDITIONS",
+      "points": 3,
+      "reason": "No qualifying exemption established; existing penalty preserved."
+    }
+  ],
+  "changes": [
+    {
+      "slug": "alpha-capital-group",
+      "before": 67,
+      "after": 67,
+      "rawBefore": 67,
+      "rawAfter": 67,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "alpha-futures",
+      "before": 53,
+      "after": 55,
+      "rawBefore": 53,
+      "rawAfter": 55,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "before": 4,
+          "after": 2,
+          "reason": "Zero 50K Qualified: initial MLL $2,000, cap $1,500, up to 4 requests/month, at most 50% of profit; remaining profit retained."
+        }
+      ]
+    },
+    {
+      "slug": "apex-trader-funding",
+      "before": 57,
+      "after": 57,
+      "rawBefore": 59,
+      "rawAfter": 59,
+      "reading": "excerpts",
+      "changes": []
+    },
+    {
+      "slug": "aqua-funded",
+      "before": 59,
+      "after": 63,
+      "rawBefore": 59,
+      "rawAfter": 63,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "before": 4,
+          "after": 1,
+          "reason": "Instant Standard 100K: 5% maximum loss, first two payouts capped at $10,000, then uncapped. No cap documented for smaller sizes."
+        },
+        {
+          "code": "D_FUNDED_TRAILING_DRAWDOWN",
+          "before": 2,
+          "after": 1,
+          "reason": "Funded maximum loss floor updates at end of day or daily reset; intraday enforcement of that floor is not intraday trailing."
+        }
+      ]
+    },
+    {
+      "slug": "atlas-funded",
+      "before": 58,
+      "after": 58,
+      "rawBefore": 58,
+      "rawAfter": 58,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "atmos-funded",
+      "before": 49,
+      "after": 49,
+      "rawBefore": 49,
+      "rawAfter": 49,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "audacity-capital",
+      "before": 60,
+      "after": 60,
+      "rawBefore": 60,
+      "rawAfter": 60,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "axi-select",
+      "before": 47,
+      "after": 47,
+      "rawBefore": 47,
+      "rawAfter": 47,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "blusky-trading",
+      "before": 67,
+      "after": 69,
+      "rawBefore": 67,
+      "rawAfter": 69,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "before": 4,
+          "after": 2,
+          "reason": "Launch 50K funded stage: starting balance $3,000 and minimum $100; initial loss budget $2,900, rolling seven-day cap $2,500."
+        }
+      ]
+    },
+    {
+      "slug": "brightfunded",
+      "before": 60,
+      "after": 60,
+      "rawBefore": 60,
+      "rawAfter": 60,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "bulenox",
+      "before": 67,
+      "after": 67,
+      "rawBefore": 67,
+      "rawAfter": 67,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "city-traders-imperium",
+      "before": 62,
+      "after": 62,
+      "rawBefore": 62,
+      "rawAfter": 62,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "ck-capital",
+      "before": 14,
+      "after": 14,
+      "rawBefore": 50,
+      "rawAfter": 51,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "before": 4,
+          "after": 3,
+          "reason": "2-Step Plus 100K: funded max loss 8%, first cap 2.5% before split. Payout cadence not established by this evidence; no frequency surcharge without proof."
+        }
+      ]
+    },
+    {
+      "slug": "daytraders-com",
+      "before": 57,
+      "after": 62,
+      "rawBefore": 57,
+      "rawAfter": 62,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "B6",
+          "before": 5,
+          "after": 0,
+          "reason": "Section 28 defines Reward as educational prizes/incentives. The cited negative-speech forfeiture concerns those incentives, not documented trading payouts or access to funded trading. No B6 on this evidence alone."
+        }
+      ]
+    },
+    {
+      "slug": "e8-futures",
+      "before": 52,
+      "after": 52,
+      "rawBefore": 52,
+      "rawAfter": 52,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "elite-trader-funding",
+      "before": 66,
+      "after": 66,
+      "rawBefore": 66,
+      "rawAfter": 66,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "equity-edge",
+      "before": 68,
+      "after": 68,
+      "rawBefore": 68,
+      "rawAfter": 68,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "finotive-funding",
+      "before": 52,
+      "after": 52,
+      "rawBefore": 52,
+      "rawAfter": 52,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "fintokei",
+      "before": 54,
+      "after": 57,
+      "rawBefore": 54,
+      "rawAfter": 57,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CONDITIONS",
+          "before": 3,
+          "after": 0,
+          "reason": "The cited review is the general pre-payment review of prohibited trading already represented by B2; no separately evidenced material eligibility gate. Keep B2 for subjective reward enforcement."
+        }
+      ]
+    },
+    {
+      "slug": "for-traders",
+      "before": 45,
+      "after": 45,
+      "rawBefore": 45,
+      "rawAfter": 45,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "forex-funds-flow",
+      "before": 62,
+      "after": 62,
+      "rawBefore": 62,
+      "rawAfter": 62,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "ftmo",
+      "before": 85,
+      "after": 85,
+      "rawBefore": 85,
+      "rawAfter": 85,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "fundednext",
+      "before": 60,
+      "after": 60,
+      "rawBefore": 60,
+      "rawAfter": 60,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "funderpro",
+      "before": 65,
+      "after": 65,
+      "rawBefore": 65,
+      "rawAfter": 65,
+      "reading": "excerpts",
+      "changes": []
+    },
+    {
+      "slug": "funding-pips",
+      "before": 75,
+      "after": 75,
+      "rawBefore": 75,
+      "rawAfter": 75,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "fxify",
+      "before": 69,
+      "after": 69,
+      "rawBefore": 69,
+      "rawAfter": 69,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "get-leveraged",
+      "before": 50,
+      "after": 50,
+      "rawBefore": 50,
+      "rawAfter": 50,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "goat-funded-trader",
+      "before": 57,
+      "after": 57,
+      "rawBefore": 57,
+      "rawAfter": 57,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "hantec-trader",
+      "before": 59,
+      "after": 62,
+      "rawBefore": 59,
+      "rawAfter": 62,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CONDITIONS",
+          "before": 3,
+          "after": 0,
+          "reason": "The evidence describes routine first-payout timing and closing positions before requesting; no separately documented material extra profit or eligibility requirement. Retain the other contractual deductions."
+        }
+      ]
+    },
+    {
+      "slug": "hash-hedge",
+      "before": 64,
+      "after": 64,
+      "rawBefore": 64,
+      "rawAfter": 64,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "hyrotrader",
+      "before": 62,
+      "after": 62,
+      "rawBefore": 62,
+      "rawAfter": 62,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "kortanafx",
+      "before": 15,
+      "after": 15,
+      "rawBefore": 57,
+      "rawAfter": 57,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "lark-funding",
+      "before": 63,
+      "after": 63,
+      "rawBefore": 63,
+      "rawAfter": 63,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "leeloo-trading",
+      "before": 60,
+      "after": 60,
+      "rawBefore": 60,
+      "rawAfter": 60,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "lucid-trading",
+      "before": 59,
+      "after": 59,
+      "rawBefore": 59,
+      "rawAfter": 59,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "lux-trading-firm",
+      "before": 64,
+      "after": 64,
+      "rawBefore": 64,
+      "rawAfter": 64,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "lvlup-futures",
+      "before": 44,
+      "after": 44,
+      "rawBefore": 44,
+      "rawAfter": 48,
+      "reading": "excerpts",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "before": 4,
+          "after": 1,
+          "reason": "50K funded: cap 10% of starting nominal, initial maximum loss 5% in existing sourced EOD penalty. Excerpts-only publication gate retains existing displayed score."
+        },
+        {
+          "code": "D_FUNDED_TRAILING_DRAWDOWN",
+          "before": 2,
+          "after": 1,
+          "reason": "Funded maximum loss floor updates at end of day or daily reset; intraday enforcement of that floor is not intraday trailing."
+        }
+      ]
+    },
+    {
+      "slug": "moneta-funded",
+      "before": 52,
+      "after": 52,
+      "rawBefore": 52,
+      "rawAfter": 52,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "myfundedcapital",
+      "before": 58,
+      "after": 58,
+      "rawBefore": 58,
+      "rawAfter": 58,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "myfundedfutures",
+      "before": 72,
+      "after": 72,
+      "rawBefore": 72,
+      "rawAfter": 72,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "oneup-trader",
+      "before": 65,
+      "after": 65,
+      "rawBefore": 65,
+      "rawAfter": 65,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "orion-funded",
+      "before": 70,
+      "after": 70,
+      "rawBefore": 70,
+      "rawAfter": 70,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "prop-number-one",
+      "before": 48,
+      "after": 50,
+      "rawBefore": 48,
+      "rawAfter": 50,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "before": 4,
+          "after": 2,
+          "reason": "2-Step 50K equivalent: cap 15% of nominal and funded drawdown 8%; one 21-day period, so +1 for long cycle. Excess remains available."
+        }
+      ]
+    },
+    {
+      "slug": "rebelsfunding",
+      "before": 67,
+      "after": 67,
+      "rawBefore": 67,
+      "rawAfter": 67,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "sabiotrade",
+      "before": 63,
+      "after": 63,
+      "rawBefore": 63,
+      "rawAfter": 63,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "sure-leverage",
+      "before": 44,
+      "after": 44,
+      "rawBefore": 55,
+      "rawAfter": 55,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "sway-funded",
+      "before": 59,
+      "after": 59,
+      "rawBefore": 59,
+      "rawAfter": 59,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "take-profit-trader",
+      "before": 80,
+      "after": 83,
+      "rawBefore": 80,
+      "rawAfter": 83,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "B4",
+          "before": 3,
+          "after": 0,
+          "reason": "The evidence expressly refers to an older and a current FAQ, with the cohort not reconciled. A simultaneous material contradiction is not established."
+        }
+      ]
+    },
+    {
+      "slug": "tentrade",
+      "before": 58,
+      "after": 58,
+      "rawBefore": 67,
+      "rawAfter": 67,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "the-trading-pit",
+      "before": 56,
+      "after": 56,
+      "rawBefore": 56,
+      "rawAfter": 56,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "the5ers",
+      "before": 71,
+      "after": 76,
+      "rawBefore": 71,
+      "rawAfter": 76,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "before": 4,
+          "after": 2,
+          "reason": "High Stakes Pro 50K: cap $3,000; published max loss 8–10%, using the larger $5,000 initial loss budget conservatively; ratio remains in same band at 8%."
+        },
+        {
+          "code": "D_PAYOUT_CONDITIONS",
+          "before": 3,
+          "after": 0,
+          "reason": "The only D evidence is the same five-business-day verification interview already penalized under E_HARSH. Do not penalize the verification twice; retain E_HARSH because it can cancel gains and all accounts."
+        }
+      ]
+    },
+    {
+      "slug": "thinkcapital",
+      "before": 57,
+      "after": 57,
+      "rawBefore": 57,
+      "rawAfter": 57,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "top-one-futures",
+      "before": 55,
+      "after": 58,
+      "rawBefore": 55,
+      "rawAfter": 58,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "before": 4,
+          "after": 1,
+          "reason": "Elite 50K sim funded: cap $2,500; funded maximum trailing loss $2,000. Excess remains on account; frequency surcharge only on documented >14 days."
+        }
+      ]
+    },
+    {
+      "slug": "top-one-trader",
+      "before": 56,
+      "after": 58,
+      "rawBefore": 56,
+      "rawAfter": 58,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "before": 4,
+          "after": 2,
+          "reason": "2-Step Pro V2 50K: funded maximum loss 9%, 6% cap, biweekly payout."
+        }
+      ]
+    },
+    {
+      "slug": "topstep",
+      "before": 73,
+      "after": 76,
+      "rawBefore": 73,
+      "rawAfter": 76,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "before": 4,
+          "after": 2,
+          "reason": "Standard XFA 50K: $2,000 cap and $2,000 initial MLL; maximum 50% of available balance. Five winning days (not fixed calendar days); live accounts uncapped."
+        },
+        {
+          "code": "D_FUNDED_TRAILING_DRAWDOWN",
+          "before": 2,
+          "after": 1,
+          "reason": "Funded maximum loss floor updates at end of day or daily reset; intraday enforcement of that floor is not intraday trailing."
+        }
+      ]
+    },
+    {
+      "slug": "trade-the-pool",
+      "before": 65,
+      "after": 65,
+      "rawBefore": 65,
+      "rawAfter": 65,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "tradeday",
+      "before": 75,
+      "after": 75,
+      "rawBefore": 75,
+      "rawAfter": 75,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "tradeify",
+      "before": 71,
+      "after": 74,
+      "rawBefore": 71,
+      "rawAfter": 74,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "before": 4,
+          "after": 2,
+          "reason": "Select Flex 50K (purchased after 1 Sept): $2,500 cap, initial EOD drawdown $2,000, 50% of profit, five winning days. The already selected main payout path is retained."
+        },
+        {
+          "code": "D_FUNDED_TRAILING_DRAWDOWN",
+          "before": 2,
+          "after": 1,
+          "reason": "Funded maximum loss floor updates at end of day or daily reset; intraday enforcement of that floor is not intraday trailing."
+        }
+      ]
+    },
+    {
+      "slug": "tx3-funding",
+      "before": 61,
+      "after": 61,
+      "rawBefore": 61,
+      "rawAfter": 61,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "uprofit-trader",
+      "before": 67,
+      "after": 67,
+      "rawBefore": 67,
+      "rawAfter": 67,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "wegetfunded",
+      "before": 47,
+      "after": 49,
+      "rawBefore": 47,
+      "rawAfter": 49,
+      "reading": "full",
+      "changes": [
+        {
+          "code": "D_PAYOUT_CAP",
+          "before": 4,
+          "after": 2,
+          "reason": "1-Step 50K funded: 4% EOD maximum loss, first cap $1,800 and 50% profit. Requests only in second half of month; blackout separately scored under existing D conditions, no double surcharge."
+        }
+      ]
+    },
+    {
+      "slug": "willis-capital",
+      "before": 61,
+      "after": 61,
+      "rawBefore": 61,
+      "rawAfter": 61,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "wsfunded",
+      "before": 62,
+      "after": 62,
+      "rawBefore": 62,
+      "rawAfter": 62,
+      "reading": "full",
+      "changes": []
+    },
+    {
+      "slug": "x-funded",
+      "before": 44,
+      "after": 44,
+      "rawBefore": 57,
+      "rawAfter": 57,
+      "reading": "full",
+      "changes": []
+    }
+  ]
+}
