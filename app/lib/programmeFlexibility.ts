@@ -1070,6 +1070,44 @@ Object.assign(evidence, {
   }
 });
 addVariant('myfundedfutures','mffu-rapid-eod','dll','Rapid EOD — DLL','Rapid EOD — DLL','Current 25K/50K with optional soft daily loss stop.','25K/50K actuels avec pause journalière optionnelle.',{funded:{points:0,source:'https://help.myfundedfutures.com/en/articles/13134718-understanding-rapid-live',reason:'Same forfeiture and reserve at live transition; additional soft daily pause of $500/$1,000, not account termination.'},drawdown:{points:.5,source:'https://help.myfundedfutures.com/en/articles/18337038-rapid-eod-with-dll-a-detailed-look',reason:'EOD trailing and soft daily loss pause selected at checkout; funded loss distance unchanged.'}});
+evidence.myfundedfutures['mffu-signature-current'] = {
+  "checkedOn": "2026-11-27",
+  "scope": "Current permanent Signature 5K/10K/20K, formerly Studio; simulated funded stage.",
+  "scopeFr": "Signature permanent 5K/10K/20K, anciennement Studio ; phase financée simulée.",
+  "assessments": {
+    "drawdown": {
+      "points": 1,
+      "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+      "reason": "Static loss floor throughout evaluation and sim funded, no daily loss stop."
+    },
+    "payout": {
+      "points": 1,
+      "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+      "reason": "Anytime after positions closed; no buffer, waiting period or qualifying days, ordinary $100/$250 minimum."
+    },
+    "consistency": {
+      "points": 1,
+      "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+      "reason": "No best-day ratio in evaluation or simulated funded."
+    },
+    "trading": {
+      "points": 0.5,
+      "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+      "reason": "News allowed; micro contracts only, Hyperprop-only platform."
+    },
+    "funded": {
+      "points": 0.5,
+      "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+      "reason": "Daily profit caps $2,500/$5,000/$10,000, one account, live transition after five approved payouts or $5,000 total requested; live starts with limited allocation."
+    }
+  },
+  "preset": {
+    "drawdown": "static",
+    "lossPercent": 5,
+    "profitSplit": 80,
+    "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide"
+  }
+};
 export const CRITERIA
 :Criterion[]=['drawdown','payout','consistency','trading','funded'];
 export function getProgrammeEvidence(slug:string,id:string,variant?:string){return variant?getProgrammeVariants(slug,id).find(x=>x.id===variant)?.evidence:evidence[slug]?.[id]}
