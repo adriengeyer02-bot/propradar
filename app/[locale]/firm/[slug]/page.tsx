@@ -7,6 +7,7 @@ import FirmSectionNav from '../../../components/ui/FirmSectionNav';
 import { notFound } from 'next/navigation';
 import FirmLogo from '../../../components/FirmLogo';
 import PartnerCodeOffer from '../../../components/PartnerCodeOffer';
+import ProgrammeFlexibility from '../../../components/ProgrammeFlexibility';
 import SourceSubmission from '../../../components/SourceSubmission';
 import ClosedFirmNotice, { ClosedFirmArchiveLabel } from '../../../components/ClosedFirmNotice';
 import { firmLogoFor } from '../../../lib/firmLogos';
@@ -1176,6 +1177,7 @@ export default async function FirmPage({ params }: Props) {
                   {product.isPopular ? <span className="pr-tag">{f.popular}</span> : null}
                 </div>
                 <h3>{tx(product.name)}</h3>
+                {firm.status !== 'Fermée' ? <ProgrammeFlexibility locale={locale} slug={firm.slug} productId={product.id} /> : null}
                 {(() => {
                   const rows = (priceTable?.programs ?? []).filter((program) => program.productId === product.id).flatMap((program) => program.rows.map((row) => ({ price: row.price, size: row.size, currency: program.currency })));
                   const cheapest = rows.length ? rows.reduce((low, row) => (row.price < low.price ? row : low)) : undefined;
