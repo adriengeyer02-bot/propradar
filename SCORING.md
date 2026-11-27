@@ -237,9 +237,8 @@ every point lost with the clause excerpt and its source.
    firm's discretion −15 (absorbs B2); B2 payout refusable for unquantified
    conduct −8 (B2A with a review route −4); B3 rules changeable on accounts
    already bought −5 (a generic "we may amend these Terms" clause costs
-   nothing); B4 help centre vs contract contradiction −3; B5 profits removed,
-   losses kept −3; B6 public criticism sanctioned (termination or forfeiture)
-   −5; B7 funded-stage contract withheld until after purchase −5; contract
+   nothing); B4 material help centre vs contract contradiction −3 only for the same programme, cohort and simultaneously applicable version; B5 profits removed,
+   losses kept −3; B6 honest public criticism sanctionable (termination, trading reward forfeiture or materially equivalent penalty) −5; false or defamatory statements alone and promotional incentives do not qualify; B7 funded-stage contract genuinely unavailable before purchase −5, not simply a separate agreement; contract
    penalties capped at 30 in total. Consistency on the most lenient main
    programme: ≥ 40 %: 0; 30-39: −2; 20-29: −5; < 20: −8; doubled when the
    payout is lost, halved when the rule applies to the evaluation only.
@@ -268,11 +267,10 @@ every point lost with the clause excerpt and its source.
   not been read in full by hand (`reading: "full"` in `scale-c.json`) is
   capped at 60 (`applyUnauditedCapRule`); the score dialog states the cap and
   the score before it. An unread contract can no longer rank above a read one.
-- **D. Payout conditions**, read from the sourced restrictive rules (major or
-  blocking) on the most lenient main programme: payout capped per request −4;
-  extra payout conditions (buffer, review, minimum) −3; funded account ends
-  after a set number of payouts −3; trailing drawdown on the funded account
-  −2; profit split reduced over time −2. Consistency and D together cost at
-  most 15 points.
+- **D. Payout conditions — proportional revision (owner 2026-11-27).** Use the same current main programme, funded stage and cohort; ordinary loss targets, static/evaluation drawdown, KYC, reasonable verification interviews, standard payout timing and reasonable minimum withdrawals cost zero. A material extra profit/buffer/eligibility requirement or restrictive payment window costs 3. If verification can arbitrarily block or confiscate earned rewards, use B1/B2/B2A or E_HARSH according to the proven consequence, without counting the same trigger twice. A genuine transition to a live account with all accrued and pending gains preserved costs zero; a hard end of the account after a set number of payouts costs 3. Split reduction over time remains 2 when genuinely punitive.
+  - **Funded drawdown:** static 0; EOD trailing 1; intraday trailing 2. Real-time enforcement of an EOD floor is still EOD trailing. Evaluation-only trailing 0.
+  - **Payout caps:** temporary cap severity = cap / initial maximum funded loss budget, same currency and same programme. Prefer 50K account where offered; otherwise nearest applicable capped size. Use first capped withdrawal. Ratio >=1: 1; >=0.5 and <1: 2; >0.2 and <0.5: 3; <=0.2: 4. A limit of 50% or less of available profits/balance costs at least 2. A fixed interval above 14 calendar days adds 1 (maximum 4); do not duplicate a separately scored blackout/window. No cap: 0. Permanent excess-profit loss or hard cumulative/lifetime payout ceiling: 4. Missing severity evidence is a review item, not an automatic new 4-point deduction; existing unresolved scores temporarily retained and listed in the dated audit.
+  - Consistency and D together remain capped at 15. All severe contract/payout, Trustpilot, ceiling and incomplete-reading rules remain unchanged. The ceiling evidence review is a separate task; no change to Trustpilot eligibility for ceiling in this revision.
+  - Source-linked per-firm decisions and recalculation: `audits/scale-c-refinement-2026-11-27.json`. The current builder replays `scripts/scale_c_refinement.py` after prior dated overlays. New proposal output is research-only for affected criteria until reviewed at programme/cohort level and consolidated; never re-publish historical fixed D weights. Do not invent missing metadata.
 - Earn2Trade and Blue Guardian are held (Geyer declined the rises); they stay
   under the 60 cap until he decides.
