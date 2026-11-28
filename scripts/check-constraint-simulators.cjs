@@ -283,9 +283,9 @@ assert.equal(programmeFlexibility(getProgrammeEvidence("tx3-funding","tx3-flex")
 assert.equal(programmeFlexibility(getProgrammeEvidence("now-trade-funded","ntf-standard-two-step")).stars,null);
 assert.equal(programmeFlexibility(getProgrammeEvidence("now-trade-funded","ntf-progressive-one-step")).stars,null);
 assert.equal(programmeFlexibility(getProgrammeEvidence("now-trade-funded","ntf-1k-starter")).stars,null);
-assert.equal(programmeFlexibility(getProgrammeEvidence("directfundedtrader","directfundedtrader-evaluation")).stars,null);
+assert.equal(programmeFlexibility(getProgrammeEvidence("directfundedtrader","directfundedtrader-evaluation")).stars,2.5);
 assert.equal(programmeFlexibility(getProgrammeEvidence("directfundedtrader","directfundedtrader-turbo")).stars,null);
-assert.equal(programmeFlexibility(getProgrammeEvidence("directfundedtrader","directfundedtrader-fastfunding")).stars,null);
+assert.equal(programmeFlexibility(getProgrammeEvidence("directfundedtrader","directfundedtrader-fastfunding")).stars,2.5);
 assert.equal(programmeFlexibility(getProgrammeEvidence("tradersedgefx","tradersedgefx-2-step")).stars,null);
 assert.equal(programmeFlexibility(getProgrammeEvidence("tradersedgefx","tradersedgefx-1-step")).stars,null);
 assert.equal(programmeFlexibility(getProgrammeEvidence("tradersedgefx","tradersedgefx-hft")).stars,null);

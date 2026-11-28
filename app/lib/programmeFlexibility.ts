@@ -2259,13 +2259,13 @@ evidence["now-trade-funded"] = {
 evidence["directfundedtrader"] = {
   "directfundedtrader-evaluation": {
     "checkedOn": "2026-11-28",
-    "scope": "Current general funded FAQ; exact funded drawdown and applicable payout route need checkout contract.",
-    "scopeFr": "FAQ financée actuelle ; seuil exact et formule de retrait à confirmer au contrat.",
+    "scope": "Evaluation two-phase funded baseline, standard public rules. FAQ has a 100% typo contradicted by its 90K worked example; checkout confirms 10% maximum loss. Payout options vary.",
+    "scopeFr": "Evaluation deux phases, phase financée ; exemple de FAQ et commande confirment 10 % de perte maximale malgré une coquille dans le texte.",
     "assessments": {
       "payout": {
         "points": 0.5,
-        "source": "https://directfundedtrader.com/faq-rules",
-        "reason": "General FAQ reward minimum $100, default 80% with possible increases; product-specific frequency choices differ."
+        "source": "https://directfundedtrader.com/",
+        "reason": "Checkout lists monthly 100%, biweekly 80% and weekly 70% choices. General FAQ lists first payout after four trading weeks and later 14 days; minimum $100. Exact schedule precedence unresolved."
       },
       "consistency": {
         "points": 1,
@@ -2275,24 +2275,29 @@ evidence["directfundedtrader"] = {
       "trading": {
         "points": 0,
         "source": "https://directfundedtrader.com/faq-rules",
-        "reason": "Any trade closed in under 60 seconds disables account; funded stop loss and news closing rules."
+        "reason": "Any trade under 60 seconds immediately disables account. Funded positions must be closed before major news; weekend holding allowed on Evaluation."
       },
       "funded": {
         "points": 0,
         "source": "https://directfundedtrader.com/faq-rules",
-        "reason": "Funded stop-loss within 30 seconds and three trades per week; violations can disable account."
+        "reason": "Mandatory stop loss within 30 seconds or account disabled; three trades weekly on distinct days. No double penalty for news or holding limits."
+      },
+      "drawdown": {
+        "points": 1,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "General FAQ example: $100K account floor $90K, confirmed by the funded checkout 10% maximum loss. Static reference despite erroneous 100% wording."
       }
     }
   },
   "directfundedtrader-turbo": {
     "checkedOn": "2026-11-28",
-    "scope": "Current general funded FAQ; exact funded drawdown and applicable payout route need checkout contract.",
-    "scopeFr": "FAQ financée actuelle ; seuil exact et formule de retrait à confirmer au contrat.",
+    "scope": "Turbo pay-after-pass funded route; public checkout shows 8% maximum loss and 3% daily, but general FAQ uses 10% example and does not specify Turbo's funded floor formula. Partial pending model-specific confirmation.",
+    "scopeFr": "Turbo, paiement après réussite ; 8 % de perte globale et 3 % journalière à la commande ; formule exacte financée à confirmer.",
     "assessments": {
       "payout": {
         "points": 0.5,
-        "source": "https://directfundedtrader.com/faq-rules",
-        "reason": "General FAQ reward minimum $100, default 80% with possible increases; product-specific frequency choices differ."
+        "source": "https://directfundedtrader.com/turbo",
+        "reason": "Monthly 100%, biweekly 80%, weekly 70% payout choices; activation fee due after passing. Exact first payout eligibility not specified on Turbo page."
       },
       "consistency": {
         "points": 1,
@@ -2313,13 +2318,13 @@ evidence["directfundedtrader"] = {
   },
   "directfundedtrader-fastfunding": {
     "checkedOn": "2026-11-28",
-    "scope": "Current general funded FAQ; exact funded drawdown and applicable payout route need checkout contract.",
-    "scopeFr": "FAQ financée actuelle ; seuil exact et formule de retrait à confirmer au contrat.",
+    "scope": "Fast Funding Standard funded phase; public checkout 10% maximum loss versus older 7% description. General FAQ confirms initial-balance static method. No numerical preset because product limits conflict.",
+    "scopeFr": "Fast Funding Standard financé ; limite de 10 % à la commande contre 7 % dans une autre description. Méthode statique selon FAQ ; sans préréglage numérique.",
     "assessments": {
       "payout": {
         "points": 0.5,
-        "source": "https://directfundedtrader.com/faq-rules",
-        "reason": "General FAQ reward minimum $100, default 80% with possible increases; product-specific frequency choices differ."
+        "source": "https://directfundedtrader.com/",
+        "reason": "Checkout lists monthly 100%, biweekly 80% and weekly 70% choices. General FAQ lists first payout after four trading weeks and later 14 days; minimum $100. Exact schedule precedence unresolved."
       },
       "consistency": {
         "points": 1,
@@ -2329,12 +2334,17 @@ evidence["directfundedtrader"] = {
       "trading": {
         "points": 0,
         "source": "https://directfundedtrader.com/faq-rules",
-        "reason": "Any trade closed in under 60 seconds disables account; funded stop loss and news closing rules."
+        "reason": "Any trade under 60 seconds immediately disables account. Funded positions must be closed before major news; no weekend holding on Fast Funding Standard."
       },
       "funded": {
         "points": 0,
         "source": "https://directfundedtrader.com/faq-rules",
-        "reason": "Funded stop-loss within 30 seconds and three trades per week; violations can disable account."
+        "reason": "Mandatory stop loss within 30 seconds or account disabled; three trades weekly on distinct days. No double penalty for news or holding limits."
+      },
+      "drawdown": {
+        "points": 1,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "General rule uses an initial-balance floor throughout the trading journey; current checkout and older model descriptions differ on amount (10% versus 7%), not the stated fixed reference."
       }
     }
   }
@@ -2342,67 +2352,82 @@ evidence["directfundedtrader"] = {
 evidence["tradersedgefx"] = {
   "tradersedgefx-2-step": {
     "checkedOn": "2026-11-28",
-    "scope": "General rules verified; product-specific funded total loss type, consistency and payout conditions not fully mapped.",
-    "scopeFr": "Règlement général vérifié ; seuil total financé, consistency et retraits par offre à confirmer.",
+    "scope": "2-Step funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed.",
+    "scopeFr": "FAQ financée 2-Step et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue.",
     "assessments": {
       "payout": {
         "points": 0.5,
-        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
-        "reason": "Prior product review found early payout caps; exact timing varies by route."
+        "source": "https://tradersedgefx.com/2-Step-Simulated-TEFX-FAQs/",
+        "reason": "5 trading days, 15-day cycle, 70% share. General rules cap each request at 6% initial balance until trade-copy approval, not guaranteed after three months."
       },
       "trading": {
         "points": 0.5,
         "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
-        "reason": "No opening or closing within two minutes of NYSE open; minimum holding restrictions."
+        "reason": "Minimum 60-second holding; news and NYSE opening windows restrict execution. HFT bots forbidden even for HFT-labelled evaluation. Weekend holding permitted. Terms say news permitted, contrary to account-specific rules."
       },
       "funded": {
-        "points": 0.5,
-        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
-        "reason": "20-lot maximum in prior rules audit; inactivity notification requested."
+        "points": 0,
+        "source": "https://tradersedgefx.com/terms-of-services/",
+        "reason": "Broad discretion to block participants; general rules impose payout denial and profit removal for short trades, repeated violation closes account; inactivity breach absent advance support request."
+      },
+      "drawdown": {
+        "points": 1,
+        "source": "https://tradersedgefx.com/2-Step-Simulated-TEFX-FAQs/",
+        "reason": "Funded-specific FAQ expresses total loss as 12% of initial balance; general guidelines define the overall floor relative to initial capital, not a trailing peak."
       }
     }
   },
   "tradersedgefx-1-step": {
     "checkedOn": "2026-11-28",
-    "scope": "General rules verified; product-specific funded total loss type, consistency and payout conditions not fully mapped.",
-    "scopeFr": "Règlement général vérifié ; seuil total financé, consistency et retraits par offre à confirmer.",
+    "scope": "1-Step funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed.",
+    "scopeFr": "FAQ financée 1-Step et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue.",
     "assessments": {
       "payout": {
         "points": 0.5,
-        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
-        "reason": "Prior product review found early payout caps; exact timing varies by route."
+        "source": "https://tradersedgefx.com/1-step-simulated-tefx-faqs/",
+        "reason": "5 trading days, 15-day cycle, 70% share. General rules cap each request at 6% initial balance until trade-copy approval, not guaranteed after three months."
       },
       "trading": {
         "points": 0.5,
         "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
-        "reason": "No opening or closing within two minutes of NYSE open; minimum holding restrictions."
+        "reason": "Minimum 60-second holding; news and NYSE opening windows restrict execution. HFT bots forbidden even for HFT-labelled evaluation. Weekend holding permitted. Terms say news permitted, contrary to account-specific rules."
       },
       "funded": {
-        "points": 0.5,
-        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
-        "reason": "20-lot maximum in prior rules audit; inactivity notification requested."
+        "points": 0,
+        "source": "https://tradersedgefx.com/terms-of-services/",
+        "reason": "Broad discretion to block participants; general rules impose payout denial and profit removal for short trades, repeated violation closes account; inactivity breach absent advance support request."
+      },
+      "drawdown": {
+        "points": 1,
+        "source": "https://tradersedgefx.com/1-step-simulated-tefx-faqs/",
+        "reason": "Funded-specific FAQ expresses total loss as 12% of initial balance; general guidelines define the overall floor relative to initial capital, not a trailing peak."
       }
     }
   },
   "tradersedgefx-hft": {
     "checkedOn": "2026-11-28",
-    "scope": "General rules verified; product-specific funded total loss type, consistency and payout conditions not fully mapped.",
-    "scopeFr": "Règlement général vérifié ; seuil total financé, consistency et retraits par offre à confirmer.",
+    "scope": "HFT funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed.",
+    "scopeFr": "FAQ financée HFT et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue.",
     "assessments": {
       "payout": {
-        "points": 0.5,
-        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
-        "reason": "Prior product review found early payout caps; exact timing varies by route."
+        "points": 0,
+        "source": "https://tradersedgefx.com/HFT-Simulated-TEFX-FAQs/",
+        "reason": "10 trading days, 30-day cycle, 50% share. General rules cap each request at 6% initial balance until trade-copy approval, not guaranteed after three months."
       },
       "trading": {
-        "points": 0.5,
+        "points": 0,
         "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
-        "reason": "No opening or closing within two minutes of NYSE open; minimum holding restrictions."
+        "reason": "Minimum 60-second holding; news and NYSE opening windows restrict execution. HFT bots forbidden even for HFT-labelled evaluation. Weekend holding prohibited. Terms say news permitted, contrary to account-specific rules."
       },
       "funded": {
-        "points": 0.5,
-        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
-        "reason": "20-lot maximum in prior rules audit; inactivity notification requested."
+        "points": 0,
+        "source": "https://tradersedgefx.com/terms-of-services/",
+        "reason": "Broad discretion to block participants; general rules impose payout denial and profit removal for short trades, repeated violation closes account; inactivity breach absent advance support request."
+      },
+      "drawdown": {
+        "points": 1,
+        "source": "https://tradersedgefx.com/HFT-Simulated-TEFX-FAQs/",
+        "reason": "Funded-specific FAQ expresses total loss as 10% of initial balance; general guidelines define the overall floor relative to initial capital, not a trailing peak."
       }
     }
   }
