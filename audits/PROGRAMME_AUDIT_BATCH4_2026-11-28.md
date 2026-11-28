@@ -339,3 +339,39 @@ Five firms, 15 complete catalogue entries and variants; exact IDs verified again
 - DayTraders all three Pro routes have 30% consistency and 8 qualifying days; official live pathway generally forfeits remaining simulated balances. Session close guidance coexists with overnight/weekend permission, not an automatic liquidation.
 - Claude source review: The5ers numerical stop-out examples establish fixed floor; Bootcamp 4% Pro per scaling table, Hyper Growth 6%. High Stakes consistency stays unassessed (general FAQ does not map account types; blog says 50%). No unsupported exact tier preset. Funded Trading Plus date format MM.DD.YYYY established by 09.24.2026. Express and Instant dates are 12 August, not future. PNPL 25% consistency rated 0; payout moderate gate .5, trading 1, total 2. Classic 3% symbol hard breach assigned to funded axis (0), not double-counted under trading; minimum 1% payout .5, total 3. No net-cycle consistency preset due retained-profit example. Claude's original 3.5 remains traceable in source file. Hola Prime 7 proposed product IDs and 8 variants not integrated until catalogue mapping; 10 complete proposals, 5 partial including variants, not counted as integrated. The5ers two additional proposed IDs also not added. Evolve Markets not added, Claude reports broker winding down; official site inaccessible on independent recheck.
 - Running catalogue snapshot: 87 unreferenced before, minus 22 newly referenced and one Hyper Growth ID = 64 remaining; partial and proposed/unmapped offers additional. Cumulative 162 complete entries by previous running tally (variants/repeated listings included). Existing PNPL update not counted twice. Full runtime/build/visual validation pending; single atomic commit.
+
+## RZR, For Traders, Lark, OFP, ThinkCapital, Equity Edge, Atlas, FundedBull — 2026-11-28
+
+18 existing product IDs and one variant reviewed; 9 complete, 10 partial. Official pages checked today. No catalogue prices, firm ratings or production deployment changed.
+
+| Firm | ID | /5 |
+|---|---|---:|
+| hantec-trader | rzr-instant24 | 0.5 |
+| hantec-trader | rzr-instant-lite | 0.5 |
+| hantec-trader | rzr-instant-funding | Partial |
+| for-traders | fortraders-1-step | 2 |
+| lark-funding | lark-1-step-career | Partial |
+| lark-funding | lark-3-step | Partial |
+| ofp-funding | ofp-instant-95 | Partial |
+| ofp-funding | ofp-challenge-8-5 | Partial |
+| thinkcapital | thinkcapital-bolt | 1 |
+| thinkcapital | thinkcapital-bolt-flex | 1 |
+| equity-edge | equity-edge-1-step-legacy | Partial |
+| equity-edge | equity-edge-1-step-swift | Partial |
+| equity-edge | equity-edge-instant | Partial |
+| atlas-funded | atlas-1-step | 3 |
+| atlas-funded | atlas-2-step | 3 |
+| funded-bull | funded-bull-1-step | Partial |
+| funded-bull | funded-bull-2-step | 3 |
+| funded-bull | funded-bull-3-step | Partial |
+| for-traders | fortraders-1-step / fast-static | 3 |
+
+- RZR Instant24 uses best individual trade, not best day; Lite includes the 3% retained buffer in its 20% formula. Standard consistency not explicitly verified. https://help.rzrfunded.com/en/support/solutions/articles/158000470348-instant24 ; https://help.rzrfunded.com/en/support/solutions/articles/158000470347-instant-lite.
+- For Traders current Fast and Fast Static from June 8. Drawdown Protection 2% floating loss permanently cuts share to 50%, second closes account. https://help.fortraders.com/en/articles/14652456-how-does-drawdown-protection-work. Separate static variant.
+- Lark Career monthly data reward separate from ordinary performance rewards; don't count conditional fee as guaranteed salary. Evaluation articles don't explicitly establish funded floor, so partial.
+- OFP generic old instant 95% and 8/5 challenge identifiers not matched to latest model list; no full stars. https://help.ofpfunding.com/differences-between-models/.
+- ThinkCapital first 6%/7% target and 20%/25% consistency; news rule covers automatic exits. https://www.thinkcapital.com/tc-faqs/funded-accounts/how-often-are-payouts-offered-for-simulated-funded-accounts/ ; https://www.thinkcapital.com/tc-faqs/penalties-faq-section/penalties-faq-section/.
+- Equity Edge proportional trailing and reset formulas do not fit existing fixed-dollar simulator; partial pending exact consistency and funded restrictions.
+- Atlas current risk-engine settings vs older terms discrepancy; current 14-day route and five profitable days, 90% share. Atlas Protector and short-trade profit deductions. No split preset because protector changes it.
+- FundedBull evaluation limits not silently promoted to funded; 1/3-step partial, 2-step prior card confirms floor. Qualitative replicability scored separately from numerical best-day rule.
+- Claude assigned 19 non-overlapping IDs in separate proposal file. Inventory 64 minus 18 = 46 still unreferenced (including Claude's 19); partials and unmapped variants additional. Running complete tally 171, duplicates and variants included. New assertions not yet executed, full build pending. One atomic commit.

@@ -1864,6 +1864,524 @@ evidence["oneup-trader"] = {
     }
   }
 };
+// RZR / For Traders / Lark / OFP / ThinkCapital / Equity Edge / Atlas / FundedBull batch, 2026-11-28.
+evidence["hantec-trader"] = {
+  "rzr-instant24": {
+    "checkedOn": "2026-11-28",
+    "scope": "RZR (formerly Hantec Trader) current Instant24, no add-ons; short-duration account.",
+    "scopeFr": "RZR (ancien Hantec Trader) Instant24 actuel, sans option ; compte de courte durée.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470348-instant24",
+        "reason": "3% starting-balance distance trailing closed balance."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470348-instant24",
+        "reason": "3% minimum profit and full withdrawal only; eligibility after 24 hours within limited-time product."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470348-instant24",
+        "reason": "15% best individual trade divided by accumulated profits; partial exits and linked trade ideas aggregated."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470348-instant24",
+        "reason": "News allowed, no EAs, Friday positions closed."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470348-instant24",
+        "reason": "1% combined floating-loss hard breach and prohibited trade-idea splitting; no scaling."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 3,
+      "profitSplit": 80,
+      "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470348-instant24"
+    }
+  },
+  "rzr-instant-lite": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current RZR Instant Lite no add-ons.",
+    "scopeFr": "RZR Instant Lite actuel sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470347-instant-lite",
+        "reason": "5% closed-balance trailing, locks at initial balance at +5% or first payout."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470347-instant-lite",
+        "reason": "First payout after 14 days; five days at least 0.5%, permanent 3% profit buffer, $20 minimum."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470347-instant-lite",
+        "reason": "20% best day, buffer counts in denominator."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470347-instant-lite",
+        "reason": "No opening or closing within three minutes either side of red-folder news, no EAs or weekend holding."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470347-instant-lite",
+        "reason": "1% combined floating loss hard breach."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 5,
+      "profitSplit": 80,
+      "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470347-instant-lite"
+    }
+  },
+  "rzr-instant-funding": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current RZR Instant standard, no add-ons; consistency absence must be explicitly confirmed in latest rules.",
+    "scopeFr": "RZR Instant standard actuel sans option ; absence de consistency à confirmer explicitement.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470345-instant-funding",
+        "reason": "6% trailing maximum loss, locks at starting balance after 6% profit."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470345-instant-funding",
+        "reason": "14-day default payout; lock on withdrawal can require retained buffer."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470345-instant-funding",
+        "reason": "News and weekend holding restricted without add-on."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470345-instant-funding",
+        "reason": "3% combined open floating-loss hard breach."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470345-instant-funding"
+    }
+  }
+};
+evidence["for-traders"] = {
+  "fortraders-1-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Forex Fast trailing, purchases from 8 June 2026; separate Fast Static choice.",
+    "scopeFr": "Forex Fast trailing depuis le 8 juin 2026 ; option Fast Static distincte.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.fortraders.com/en/articles/15360683-fast-account-forex",
+        "reason": "6% trailing max loss, including Master stage."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.fortraders.com/en/articles/15360683-fast-account-forex",
+        "reason": "14-day cycle, three 0.5% profitable days, $100 minimum and $15K cap."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.fortraders.com/en/articles/15360683-fast-account-forex",
+        "reason": "No funded consistency score."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fortraders.com/en/articles/15360683-fast-account-forex",
+        "reason": "No new trades within five minutes either side of major news; overnight and weekend holding allowed."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.fortraders.com/en/articles/14652456-how-does-drawdown-protection-work",
+        "reason": "At 2% combined floating loss all positions closed; first trigger permanently cuts split to 50%, second closes account."
+      }
+    },
+    "preset": {
+      "source": "https://help.fortraders.com/en/articles/15360683-fast-account-forex"
+    }
+  }
+};
+evidence["lark-funding"] = {
+  "lark-1-step-career": {
+    "checkedOn": "2026-11-28",
+    "scope": "Career Master performance reward; separate monthly data fee is not ordinary payout; funded drawdown applicability not explicit in evaluation article.",
+    "scopeFr": "Performance du compte Master Career ; prime mensuelle de données distincte ; seuil financé non explicite dans article d'évaluation.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://helpdesk.larkfunding.com/en/articles/12853883-1-step-career-evaluation-details",
+        "reason": "14-day ordinary rewards, 80% share, $40 fee; separate conditional monthly data reward."
+      }
+    }
+  },
+  "lark-3-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial; official programme describes evaluation loss limit but not explicitly the funded loss rules.",
+    "scopeFr": "Partiel : article décrit le seuil d'évaluation, pas explicitement celui financé.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://helpdesk.larkfunding.com/en/articles/8251071-3-step-evaluation-details",
+        "reason": "14-day Master rewards, $40 fee and 80% standard split."
+      }
+    }
+  }
+};
+evidence["ofp-funding"] = {
+  "ofp-instant-95": {
+    "checkedOn": "2026-11-28",
+    "scope": "Legacy generic 95% catalogue ID not mapped to current Lite, Classic or Plus; do not infer a current purchase rating.",
+    "scopeFr": "Ancien identifiant générique 95 %, non associé aux modèles actuels Lite, Classic ou Plus.",
+    "assessments": {
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.ofpfunding.com/what-are-the-trading-rules-every-ofp-trader-must-follow/",
+        "reason": "General prohibited strategies include gap exploitation, HFT and abnormal lot sizes."
+      }
+    }
+  },
+  "ofp-challenge-8-5": {
+    "checkedOn": "2026-11-28",
+    "scope": "Old 8%/5% targets conflict with current 8%/4% marketing; exact funded contract pending.",
+    "scopeFr": "Anciennes cibles 8 %/5 % divergentes des 8 %/4 % actuelles ; contrat financé à confirmer.",
+    "assessments": {
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.ofpfunding.com/what-are-the-trading-rules-every-ofp-trader-must-follow/",
+        "reason": "General strategy restrictions documented; programme-specific application pending."
+      }
+    }
+  }
+};
+evidence["thinkcapital"] = {
+  "thinkcapital-bolt": {
+    "checkedOn": "2026-11-28",
+    "scope": "Standard current Bolt route, no paid options; first reward target only.",
+    "scopeFr": "Bolt actuel standard, sans option ; cible au premier retrait uniquement.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://www.thinkcapital.com/terms-of-services/",
+        "reason": "6% trailing from highest equity, locks at initial capital."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://www.thinkcapital.com/tc-faqs/funded-accounts/how-often-are-payouts-offered-for-simulated-funded-accounts/",
+        "reason": "First payout requires 6% profit; 14-day cycle, $100 minimum, no minimum profitable days."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://www.thinkcapital.com/tc-faqs/funded-accounts/how-often-are-payouts-offered-for-simulated-funded-accounts/",
+        "reason": "20% best day against net closed cycle profit."
+      },
+      "trading": {
+        "points": 0,
+        "source": "https://www.thinkcapital.com/tc-faqs/penalties-faq-section/penalties-faq-section/",
+        "reason": "No opening, closing or automatic execution within five minutes either side of red-folder news; holding over weekend without option causes hard breach."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.thinkcapital.com/terms-of-services/",
+        "reason": "30-day inactivity hard breach, risk-team permission for automation, forbidden-trading review."
+      }
+    },
+    "preset": {
+      "consistency": 20,
+      "consistencyBasis": "net",
+      "profitSplit": 80,
+      "source": "https://www.thinkcapital.com/thinkcapital-instant-funding-update/"
+    }
+  },
+  "thinkcapital-bolt-flex": {
+    "checkedOn": "2026-11-28",
+    "scope": "Standard current Bolt route, no paid options; first reward target only.",
+    "scopeFr": "Bolt actuel standard, sans option ; cible au premier retrait uniquement.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://www.thinkcapital.com/tc-faqs/introduction-to-thinkcapital-programs/bolt-flex-plan/",
+        "reason": "7% trailing from highest closed balance, locks at initial capital."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://www.thinkcapital.com/tc-faqs/funded-accounts/how-often-are-payouts-offered-for-simulated-funded-accounts/",
+        "reason": "First payout requires 7% profit; 14-day cycle, $100 minimum, no minimum profitable days."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://www.thinkcapital.com/tc-faqs/funded-accounts/how-often-are-payouts-offered-for-simulated-funded-accounts/",
+        "reason": "25% best day against net closed cycle profit."
+      },
+      "trading": {
+        "points": 0,
+        "source": "https://www.thinkcapital.com/tc-faqs/penalties-faq-section/penalties-faq-section/",
+        "reason": "No opening, closing or automatic execution within five minutes either side of red-folder news; holding over weekend without option causes hard breach."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.thinkcapital.com/terms-of-services/",
+        "reason": "30-day inactivity hard breach, risk-team permission for automation, forbidden-trading review."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 7,
+      "consistency": 25,
+      "consistencyBasis": "net",
+      "profitSplit": 80,
+      "source": "https://www.thinkcapital.com/tc-faqs/introduction-to-thinkcapital-programs/bolt-flex-plan/"
+    }
+  }
+};
+evidence["equity-edge"] = {
+  "equity-edge-1-step-legacy": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current 1-Step baseline; funded-trader FAQ describes trailing floor; exact consistency and additional risk gates not fully verified.",
+    "scopeFr": "1-Step actuel ; FAQ traders financés décrit le seuil suiveur ; consistency et autres restrictions à vérifier.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://equityedge.io/funded-traders/maximum-daily-loss-and-total-loss-for-1-step-accounts",
+        "reason": "6% proportional trail from highest balance or equity, no fixed-dollar preset."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://equityedge.io/funded-traders/payout-process",
+        "reason": "14-day standard funded reward eligibility and manual review."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://equityedge.io/evaluation-questions/2-minute-average-trade-duration-rule",
+        "reason": "Two-minute average trade-duration rule applies in funded phase; news profit review."
+      }
+    }
+  },
+  "equity-edge-1-step-swift": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current 1-Step baseline; funded-trader FAQ describes trailing floor; exact consistency and additional risk gates not fully verified.",
+    "scopeFr": "1-Step actuel ; FAQ traders financés décrit le seuil suiveur ; consistency et autres restrictions à vérifier.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://equityedge.io/funded-traders/maximum-daily-loss-and-total-loss-for-1-step-accounts",
+        "reason": "5% proportional trail from highest balance or equity, no fixed-dollar preset."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://equityedge.io/funded-traders/payout-process",
+        "reason": "14-day standard funded reward eligibility and manual review."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://equityedge.io/evaluation-questions/2-minute-average-trade-duration-rule",
+        "reason": "Two-minute average trade-duration rule applies in funded phase; news profit review."
+      }
+    }
+  },
+  "equity-edge-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Instant; exact consistency and other payout conditions require additional reading.",
+    "scopeFr": "Instant actuel ; consistency exacte et autres conditions de retrait à vérifier.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://equityedge.io/instant-accounts/maximum-daily-loss-and-total-loss-for-instant-accounts",
+        "reason": "5% proportional trail from balance/equity high, resets to initial balance at payout; resumes trailing at +5%."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://equityedge.io/instant-accounts/performance-consistency-rules",
+        "reason": "First 3% of profits retained as safety buffer."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://equityedge.io/evaluation-questions/2-minute-average-trade-duration-rule",
+        "reason": "Two-minute average duration applies to Instant; news restrictions also apply."
+      }
+    }
+  }
+};
+evidence["atlas-funded"] = {
+  "atlas-1-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current risk-engine plan settings dated 26 October 2026; no paid add-ons; older general terms differ.",
+    "scopeFr": "Paramètres du moteur de risque du 26 octobre 2026 ; sans option ; ancien contrat divergent.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.atlasfunded.com/one-step",
+        "reason": "7% static max loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.atlasfunded.com/one-step",
+        "reason": "Five days each at least 0.5% per cycle, first and subsequent 14-day payouts, $100 minimum, 90% standard split."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.atlasfunded.com/one-step",
+        "reason": "No consistency rule."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.atlasfunded.com/one-step",
+        "reason": "Profit removed from trades inside five-minute news window or shorter than three minutes."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.atlasfunded.com/one-step",
+        "reason": "Atlas Protector 2% floating loss closes all positions, reduces split to 50% first time, second hard breach; 80% margin usage triggers closure of trades and profit deduction."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 7,
+      "source": "https://help.atlasfunded.com/one-step"
+    }
+  },
+  "atlas-2-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current risk-engine plan settings dated 26 October 2026; no paid add-ons; older general terms differ.",
+    "scopeFr": "Paramètres du moteur de risque du 26 octobre 2026 ; sans option ; ancien contrat divergent.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.atlasfunded.com/two-step",
+        "reason": "10% static max loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.atlasfunded.com/two-step",
+        "reason": "Five days each at least 0.5% per cycle, first and subsequent 14-day payouts, $100 minimum, 90% standard split."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.atlasfunded.com/two-step",
+        "reason": "No consistency rule."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.atlasfunded.com/two-step",
+        "reason": "Profit removed from trades inside five-minute news window or shorter than three minutes."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.atlasfunded.com/two-step",
+        "reason": "Atlas Protector 2% floating loss closes all positions, reduces split to 50% first time, second hard breach; 80% margin usage triggers closure of trades and profit deduction."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://help.atlasfunded.com/two-step"
+    }
+  }
+};
+evidence["funded-bull"] = {
+  "funded-bull-1-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current contract §4.1 evaluation thresholds; only 2-Step funded floor corroborated in prior product audit; strategy replicability distinct from numerical consistency.",
+    "scopeFr": "Contrat actuel §4.1 pour l'évaluation ; seul seuil financé 2-Step corroboré par audit antérieur ; régularité de stratégie distincte d'un ratio.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://fundedbull.com/terms/",
+        "reason": "14-day initial payout then seven days; size-dependent minimum threshold, payout schedule may be adjusted; 90% share."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://fundedbull.com/trading-rules/",
+        "reason": "Strategy and risk sizing must remain consistent with evaluation; no numerical best-day threshold specified."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundedbull.com/trading-rules/",
+        "reason": "News permitted funded; AI, HFT and unauthorized copying restricted."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fundedbull.com/terms/",
+        "reason": "2% per-trade risk expected, inactivity after 15 days; contract permits termination and forfeiture for violations."
+      }
+    }
+  },
+  "funded-bull-2-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current contract §4.1 evaluation thresholds; only 2-Step funded floor corroborated in prior product audit; strategy replicability distinct from numerical consistency.",
+    "scopeFr": "Contrat actuel §4.1 pour l'évaluation ; seul seuil financé 2-Step corroboré par audit antérieur ; régularité de stratégie distincte d'un ratio.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://fundedbull.com/terms/",
+        "reason": "8% static total loss in 2-Step; prior official programme card confirms funded limits."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fundedbull.com/terms/",
+        "reason": "14-day initial payout then seven days; size-dependent minimum threshold, payout schedule may be adjusted; 90% share."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://fundedbull.com/trading-rules/",
+        "reason": "Strategy and risk sizing must remain consistent with evaluation; no numerical best-day threshold specified."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundedbull.com/trading-rules/",
+        "reason": "News permitted funded; AI, HFT and unauthorized copying restricted."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fundedbull.com/terms/",
+        "reason": "2% per-trade risk expected, inactivity after 15 days; contract permits termination and forfeiture for violations."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "source": "https://fundedbull.com/terms/"
+    }
+  },
+  "funded-bull-3-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current contract §4.1 evaluation thresholds; only 2-Step funded floor corroborated in prior product audit; strategy replicability distinct from numerical consistency.",
+    "scopeFr": "Contrat actuel §4.1 pour l'évaluation ; seul seuil financé 2-Step corroboré par audit antérieur ; régularité de stratégie distincte d'un ratio.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://fundedbull.com/terms/",
+        "reason": "14-day initial payout then seven days; size-dependent minimum threshold, payout schedule may be adjusted; 90% share."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://fundedbull.com/trading-rules/",
+        "reason": "Strategy and risk sizing must remain consistent with evaluation; no numerical best-day threshold specified."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundedbull.com/trading-rules/",
+        "reason": "News permitted funded; AI, HFT and unauthorized copying restricted."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fundedbull.com/terms/",
+        "reason": "2% per-trade risk expected, inactivity after 15 days; contract permits termination and forfeiture for violations."
+      }
+    }
+  }
+};
 // TradeXProp / Atmos / Clarity / FTM / Traders Launch / DayTraders batch, 2026-11-28.
 evidence["tradexprop"] = {
   "tradexprop-x-1-step": {
@@ -6579,6 +7097,7 @@ Object.assign(evidence["funded-trading-plus"],{
     }
   }
 });
+addVariant('for-traders','fortraders-1-step','fast-static','Fast Static','Fast Static','Current Forex Fast Static, from 8 June 2026.','Forex Fast Static actuel depuis le 8 juin 2026.',{drawdown:{points:1,source:"https://help.fortraders.com/en/articles/15376206-fast-static-account-forex",reason:'6% fixed floor, unchanged by profits and withdrawals.'},payout:{points:.5,source:"https://help.fortraders.com/en/articles/15376206-fast-static-account-forex",reason:'14-day rewards; three qualifying days, $100 minimum and $15K cap.'}},{drawdown:'static',lossPercent:6,source:"https://help.fortraders.com/en/articles/15376206-fast-static-account-forex"});
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA
