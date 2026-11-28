@@ -3,6 +3,8 @@ export type Criterion = 'drawdown'|'payout'|'consistency'|'trading'|'funded';
 export type Assessment = {points:0|0.5|1;source:string;reason:string};
 export type ProgrammeEvidence = {
   checkedOn:string; scope:string; scopeFr?:string; assessments:Partial<Record<Criterion,Assessment>>;
+  /** Editorial disposition, never a verified criterion or a simulator input. */
+  reviewOutcome?:{kind:'estimated'|'legacy'; reason:string; reasonFr:string; source:string; estimate?:number};
   /** Only explicitly verified facts. No assumption that a missing rule is absent. */
   preset?:{consistency?:number; consistencyBasis?:'net'; drawdown?:'static'|'eod'|'intraday'; lossPercent?:number; profitSplit?:number; source:string};
 };
@@ -1980,8 +1982,8 @@ evidence["sure-leverage"] = {
 evidence["willis-capital"] = {
   "wfunded-skillcheck": {
     "checkedOn": "2026-11-28",
-    "scope": "Generic SkillCheck ID combines Standard and Expedited. Common funded FAQ says balance-based overall calculation analogous to daily recalculation but gives no high-water-mark or reset rule. Marketing now says simulated while FAQ retains live wording. Separate model mapping and exact overall floor required. Official FAQ confirms intraday upward recalculation of daily loss, and says overall loss follows the same concept without a day boundary. No explicit overall floor or high-water-mark formula; secondary review supplies percentages but not the funded mechanism.",
-    "scopeFr": "SkillCheck générique Standard/Expedited ; référence du seuil global et réinitialisation non explicites, discours live/simulé contradictoire. FAQ : recalcul journalier à la hausse, concept global analogue ; formule exacte du seuil non publiée.",
+    "scope": "Generic SkillCheck ID combines Standard and Expedited. Common funded FAQ says balance-based overall calculation analogous to daily recalculation but gives no high-water-mark or reset rule. Marketing now says simulated while FAQ retains live wording. Separate model mapping and exact overall floor required. Official FAQ confirms intraday upward recalculation of daily loss, and says overall loss follows the same concept without a day boundary. No explicit overall floor or high-water-mark formula; secondary review supplies percentages but not the funded mechanism. Current Standard and Expedited pages both show 6% maximum loss and 4% daily in their rendered one-phase tables, while Standard prose says 5% daily funded. No exact preset.",
+    "scopeFr": "SkillCheck générique Standard/Expedited ; référence du seuil global et réinitialisation non explicites, discours live/simulé contradictoire. FAQ : recalcul journalier à la hausse, concept global analogue ; formule exacte du seuil non publiée. Tableaux Standard/Expedited : 6 % global et 4 % journalier ; texte Standard indique 5 % journalier. Pas de préréglage.",
     "assessments": {
       "consistency": {
         "points": 0.5,
@@ -2003,6 +2005,13 @@ evidence["willis-capital"] = {
         "source": "https://www.wfunded.io/en/faq",
         "reason": "News and weekend holding allowed with mandatory funded stop loss placed at least 15 minutes before major news; copy trading prohibited."
       }
+    },
+    "reviewOutcome": {
+      "kind": "estimated",
+      "reason": "Official FAQ says overall loss follows the balance-based daily concept without a day boundary, and the daily calculation rises with balance. This suggests trailing rather than static, but exact floor/reset is not published. Use conservative zero contribution to estimated drawdown; no simulator preset.",
+      "reasonFr": "FAQ : recalcul du drawdown journalier à la hausse, concept global analogue sans limite de jour. Trailing probable mais formule inconnue ; estimation prudente à 0/1 sur cet axe, sans préréglage.",
+      "source": "https://www.wfunded.io/en/faq",
+      "estimate": 1.5
     }
   }
 };
@@ -2022,6 +2031,12 @@ evidence["superfunded"] = {
         "source": "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
         "reason": "Prior V2 audit records 40%/30% profit distribution by size."
       }
+    },
+    "reviewOutcome": {
+      "kind": "legacy",
+      "reason": "SuperFunded rebrand to Eightcap Challenges confirmed by partner newsletter reporting on 26 Nov and archive redirect on 25 Nov. Prior contract migration is not established, so this legacy offer is not an active-product rating. New Eightcap rules must not be used for existing SuperFunded accounts.",
+      "reasonFr": "Ancienne offre SuperFunded : changement de marque confirmé ; migration des contrats non établie. Ne pas noter cette ancienne offre comme un produit Eightcap actuel.",
+      "source": "https://joinprop.com/blog/prop-news/superfunded-becomes-eightcap-challenges/"
     }
   },
   "superfunded-two-phase": {
@@ -2044,6 +2059,12 @@ evidence["superfunded"] = {
         "source": "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
         "reason": "Prior V2 audit records 40%/30% profit distribution by size."
       }
+    },
+    "reviewOutcome": {
+      "kind": "legacy",
+      "reason": "SuperFunded rebrand to Eightcap Challenges confirmed by partner newsletter reporting on 26 Nov and archive redirect on 25 Nov. Prior contract migration is not established, so this legacy offer is not an active-product rating. New Eightcap rules must not be used for existing SuperFunded accounts.",
+      "reasonFr": "Ancienne offre SuperFunded : changement de marque confirmé ; migration des contrats non établie. Ne pas noter cette ancienne offre comme un produit Eightcap actuel.",
+      "source": "https://joinprop.com/blog/prop-news/superfunded-becomes-eightcap-challenges/"
     }
   }
 };
@@ -2376,8 +2397,8 @@ evidence["directfundedtrader"] = {
   },
   "directfundedtrader-turbo": {
     "checkedOn": "2026-11-28",
-    "scope": "Turbo pay-after-pass funded route; public checkout shows 8% maximum loss and 3% daily, but general FAQ uses 10% example and does not specify Turbo's funded floor formula. Partial pending model-specific confirmation. General FAQ expressly describes Evaluation and Fast Funding, not Turbo; contract archive does not establish Turbo-specific funded floor. JoinProp's September Turbo review explicitly confirms the 8% funded loss basis was not published. No static/trailing assumption.",
-    "scopeFr": "Turbo, paiement après réussite ; 8 % de perte globale et 3 % journalière à la commande ; formule exacte financée à confirmer. FAQ générale limitée à Evaluation/Fast Funding ; contrat Turbo non identifié. JoinProp confirme que le type de drawdown financé de 8 % n'est pas publié.",
+    "scope": "Turbo pay-after-pass funded route; public checkout shows 8% maximum loss and 3% daily, but general FAQ uses 10% example and does not specify Turbo's funded floor formula. Partial pending model-specific confirmation. General FAQ expressly describes Evaluation and Fast Funding, not Turbo; contract archive does not establish Turbo-specific funded floor. JoinProp's September Turbo review explicitly confirms the 8% funded loss basis was not published. No static/trailing assumption. Checkout confirms funded 8% maximum and 3% daily; displayed dollar example is inconsistent with 8%, so percent not auto-applied.",
+    "scopeFr": "Turbo, paiement après réussite ; 8 % de perte globale et 3 % journalière à la commande ; formule exacte financée à confirmer. FAQ générale limitée à Evaluation/Fast Funding ; contrat Turbo non identifié. JoinProp confirme que le type de drawdown financé de 8 % n'est pas publié. Commande : 8 % global et 3 % journalier ; exemple en dollars incohérent, aucun préréglage.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -2399,6 +2420,13 @@ evidence["directfundedtrader"] = {
         "source": "https://directfundedtrader.com/faq-rules",
         "reason": "Funded stop-loss within 30 seconds and three trades per week; violations can disable account."
       }
+    },
+    "reviewOutcome": {
+      "kind": "estimated",
+      "reason": "Forex Prop Reviews (27 Nov 2026) describes Turbo's drawdown as static, consistent with the company's general initial-balance calculation. The official Turbo checkout confirms 8% but does not state the reference; the secondary article is indexed but direct retrieval blocked. Estimate assumes static, not verified; no simulator preset.",
+      "reasonFr": "Forex Prop Reviews (27 nov.) qualifie le drawdown de statique ; commande officielle 8 % mais référence non précisée. Hypothèse statique pour l'estimation, non confirmée ; sans préréglage.",
+      "source": "https://forexpropreviews.com/direct-funded-trader-turbo-challenge-new-promotion/",
+      "estimate": 2.5
     }
   },
   "directfundedtrader-fastfunding": {
@@ -2460,6 +2488,13 @@ evidence["tradersedgefx"] = {
         "source": "https://tradersedgefx.com/2-Step-Simulated-TEFX-FAQs/",
         "reason": "Funded-specific FAQ expresses total loss as 12% of initial balance; general guidelines define the overall floor relative to initial capital, not a trailing peak."
       }
+    },
+    "reviewOutcome": {
+      "kind": "estimated",
+      "reason": "No funded numerical consistency disclosed in the account-specific FAQ, general rules or independent comparators FundedChecker and PropFirmMap; midpoint .5 assigned to the unknown axis for editorial estimate only. No statement that the rule is absent.",
+      "reasonFr": "Ratio de consistency non publié ; estimation avec 0,5/1 sur le seul critère inconnu, sans affirmer l'absence de règle.",
+      "source": "https://fundedchecker.com/reviews/tradersedgefx/",
+      "estimate": 2.5
     }
   },
   "tradersedgefx-1-step": {
@@ -2487,6 +2522,13 @@ evidence["tradersedgefx"] = {
         "source": "https://tradersedgefx.com/1-step-simulated-tefx-faqs/",
         "reason": "Funded-specific FAQ expresses total loss as 12% of initial balance; general guidelines define the overall floor relative to initial capital, not a trailing peak."
       }
+    },
+    "reviewOutcome": {
+      "kind": "estimated",
+      "reason": "No funded numerical consistency disclosed in the account-specific FAQ, general rules or independent comparators FundedChecker and PropFirmMap; midpoint .5 assigned to the unknown axis for editorial estimate only. No statement that the rule is absent.",
+      "reasonFr": "Ratio de consistency non publié ; estimation avec 0,5/1 sur le seul critère inconnu, sans affirmer l'absence de règle.",
+      "source": "https://fundedchecker.com/reviews/tradersedgefx/",
+      "estimate": 2.5
     }
   },
   "tradersedgefx-hft": {
@@ -2514,6 +2556,13 @@ evidence["tradersedgefx"] = {
         "source": "https://tradersedgefx.com/HFT-Simulated-TEFX-FAQs/",
         "reason": "Funded-specific FAQ expresses total loss as 10% of initial balance; general guidelines define the overall floor relative to initial capital, not a trailing peak."
       }
+    },
+    "reviewOutcome": {
+      "kind": "estimated",
+      "reason": "No funded numerical consistency disclosed in the account-specific FAQ, general rules or independent comparators FundedChecker and PropFirmMap; midpoint .5 assigned to the unknown axis for editorial estimate only. No statement that the rule is absent.",
+      "reasonFr": "Ratio de consistency non publié ; estimation avec 0,5/1 sur le seul critère inconnu, sans affirmer l'absence de règle.",
+      "source": "https://fundedchecker.com/reviews/tradersedgefx/",
+      "estimate": 1.5
     }
   }
 };
@@ -2615,6 +2664,13 @@ evidence["titan-capital-markets"] = {
         "source": "https://propfirmtier.com/en/firms/titan-capital-markets",
         "reason": "Funded news execution/modification restricted ±3 minutes; EAs and trade copiers need approval. Weekend holding unreported."
       }
+    },
+    "reviewOutcome": {
+      "kind": "estimated",
+      "reason": "Official model pages and PickMyFirm describe the other axes; 20% consistency is specifically reported for Instant Pro, not these plans. Unknown funded consistency gets midpoint .5 for estimate only. Purchase remains blocked.",
+      "reasonFr": "Le ratio de 20 % est documenté pour Instant Pro, pas ces offres ; consistency inconnue notée 0,5/1 uniquement pour l'estimation. Achat toujours bloqué.",
+      "source": "https://pickmyfirm.com/firms/titan-capital-markets/rules",
+      "estimate": 1.5
     }
   },
   "titan-2step": {
@@ -2642,6 +2698,13 @@ evidence["titan-capital-markets"] = {
         "source": "https://propfirmtier.com/en/firms/titan-capital-markets",
         "reason": "Funded news execution/modification restricted ±3 minutes; EAs and trade copiers need approval. Weekend holding unreported."
       }
+    },
+    "reviewOutcome": {
+      "kind": "estimated",
+      "reason": "Official model pages and PickMyFirm describe the other axes; 20% consistency is specifically reported for Instant Pro, not these plans. Unknown funded consistency gets midpoint .5 for estimate only. Purchase remains blocked.",
+      "reasonFr": "Le ratio de 20 % est documenté pour Instant Pro, pas ces offres ; consistency inconnue notée 0,5/1 uniquement pour l'estimation. Achat toujours bloqué.",
+      "source": "https://pickmyfirm.com/firms/titan-capital-markets/rules",
+      "estimate": 2.5
     }
   },
   "titan-3step": {
@@ -2669,6 +2732,13 @@ evidence["titan-capital-markets"] = {
         "source": "https://propfirmtier.com/en/firms/titan-capital-markets",
         "reason": "Funded news execution/modification restricted ±3 minutes; EAs and trade copiers need approval. Weekend holding unreported."
       }
+    },
+    "reviewOutcome": {
+      "kind": "estimated",
+      "reason": "Official model pages and PickMyFirm describe the other axes; 20% consistency is specifically reported for Instant Pro, not these plans. Unknown funded consistency gets midpoint .5 for estimate only. Purchase remains blocked.",
+      "reasonFr": "Le ratio de 20 % est documenté pour Instant Pro, pas ces offres ; consistency inconnue notée 0,5/1 uniquement pour l'estimation. Achat toujours bloqué.",
+      "source": "https://pickmyfirm.com/firms/titan-capital-markets/rules",
+      "estimate": 2.5
     }
   }
 };
@@ -7984,5 +8054,11 @@ export const CRITERIA
 export function getProgrammeEvidence(slug:string,id:string,variant?:string){return variant?getProgrammeVariants(slug,id).find(x=>x.id===variant)?.evidence:evidence[slug]?.[id]}
 export function programmeFlexibility(item:ProgrammeEvidence|undefined){
   const valid=CRITERIA.flatMap(key=>{const a=item?.assessments[key];return a&&[0,.5,1].includes(a.points)&&a.reason.trim()&&a.source.startsWith('https://')?[a]:[]});
-  return {verified:valid.length,stars:valid.length===5?valid.reduce((sum,a)=>sum+a.points,0):null};
+  const known=valid.reduce((sum,a)=>sum+a.points,0);
+  const disposition=item?.reviewOutcome;
+  const status=disposition?.kind??(valid.length===5?'verified':'partial');
+  const range: [number,number]|null=status==='estimated'?[known,known+5-valid.length]:null;
+  const estimate=disposition?.estimate;
+  const estimatedStars=range&&typeof estimate==='number'&&Number.isFinite(estimate)&&estimate>=range[0]&&estimate<=range[1]?estimate:null;
+  return {verified:valid.length,stars:!disposition&&valid.length===5?known:null,status,estimatedStars,range};
 }

@@ -53,26 +53,38 @@
     {
       "slug": "willis-capital",
       "id": "wfunded-skillcheck",
-      "status": "blocked",
+      "status": "estimated",
       "score": null,
       "verified": 4,
-      "blocker": "Exact funded overall-loss mechanism and programme mapping."
+      "blocker": "Official FAQ says overall loss follows the balance-based daily concept without a day boundary, and the daily calculation rises with balance. This suggests trailing rather than static, but exact floor/reset is not published. Use conservative zero contribution to estimated drawdown; no simulator preset.",
+      "estimate": 1.5,
+      "range": [
+        1.5,
+        2.5
+      ],
+      "source": "https://www.wfunded.io/en/faq"
     },
     {
       "slug": "superfunded",
       "id": "superfunded-one-phase",
-      "status": "blocked",
+      "status": "legacy",
       "score": null,
       "verified": 2,
-      "blocker": "Legacy brand redirect; exact SuperFunded contract not recovered."
+      "blocker": "SuperFunded rebrand to Eightcap Challenges confirmed by partner newsletter reporting on 26 Nov and archive redirect on 25 Nov. Prior contract migration is not established, so this legacy offer is not an active-product rating. New Eightcap rules must not be used for existing SuperFunded accounts.",
+      "estimate": null,
+      "range": null,
+      "source": "https://joinprop.com/blog/prop-news/superfunded-becomes-eightcap-challenges/"
     },
     {
       "slug": "superfunded",
       "id": "superfunded-two-phase",
-      "status": "blocked",
+      "status": "legacy",
       "score": null,
       "verified": 3,
-      "blocker": "Legacy brand redirect; exact SuperFunded contract not recovered."
+      "blocker": "SuperFunded rebrand to Eightcap Challenges confirmed by partner newsletter reporting on 26 Nov and archive redirect on 25 Nov. Prior contract migration is not established, so this legacy offer is not an active-product rating. New Eightcap rules must not be used for existing SuperFunded accounts.",
+      "estimate": null,
+      "range": null,
+      "source": "https://joinprop.com/blog/prop-news/superfunded-becomes-eightcap-challenges/"
     },
     {
       "slug": "sfx-funded",
@@ -85,58 +97,100 @@
     {
       "slug": "directfundedtrader",
       "id": "directfundedtrader-turbo",
-      "status": "blocked",
+      "status": "estimated",
       "score": null,
       "verified": 4,
-      "blocker": "Funded drawdown reference not established for Turbo."
+      "blocker": "Forex Prop Reviews (27 Nov 2026) describes Turbo's drawdown as static, consistent with the company's general initial-balance calculation. The official Turbo checkout confirms 8% but does not state the reference; the secondary article is indexed but direct retrieval blocked. Estimate assumes static, not verified; no simulator preset.",
+      "estimate": 2.5,
+      "range": [
+        1.5,
+        2.5
+      ],
+      "source": "https://forexpropreviews.com/direct-funded-trader-turbo-challenge-new-promotion/"
     },
     {
       "slug": "tradersedgefx",
       "id": "tradersedgefx-1-step",
-      "status": "blocked",
+      "status": "estimated",
       "score": null,
       "verified": 4,
-      "blocker": "Need written confirmation of funded consistency (or exact contract)."
+      "blocker": "No funded numerical consistency disclosed in the account-specific FAQ, general rules or independent comparators FundedChecker and PropFirmMap; midpoint .5 assigned to the unknown axis for editorial estimate only. No statement that the rule is absent.",
+      "estimate": 2.5,
+      "range": [
+        2,
+        3
+      ],
+      "source": "https://fundedchecker.com/reviews/tradersedgefx/"
     },
     {
       "slug": "tradersedgefx",
       "id": "tradersedgefx-2-step",
-      "status": "blocked",
+      "status": "estimated",
       "score": null,
       "verified": 4,
-      "blocker": "Need written confirmation of funded consistency (or exact contract)."
+      "blocker": "No funded numerical consistency disclosed in the account-specific FAQ, general rules or independent comparators FundedChecker and PropFirmMap; midpoint .5 assigned to the unknown axis for editorial estimate only. No statement that the rule is absent.",
+      "estimate": 2.5,
+      "range": [
+        2,
+        3
+      ],
+      "source": "https://fundedchecker.com/reviews/tradersedgefx/"
     },
     {
       "slug": "tradersedgefx",
       "id": "tradersedgefx-hft",
-      "status": "blocked",
+      "status": "estimated",
       "score": null,
       "verified": 4,
-      "blocker": "Need written confirmation of funded consistency (or exact contract)."
+      "blocker": "No funded numerical consistency disclosed in the account-specific FAQ, general rules or independent comparators FundedChecker and PropFirmMap; midpoint .5 assigned to the unknown axis for editorial estimate only. No statement that the rule is absent.",
+      "estimate": 1.5,
+      "range": [
+        1,
+        2
+      ],
+      "source": "https://fundedchecker.com/reviews/tradersedgefx/"
     },
     {
       "slug": "titan-capital-markets",
       "id": "titan-1step",
-      "status": "blocked",
+      "status": "estimated",
       "score": null,
       "verified": 4,
-      "blocker": "Funded consistency not explicitly confirmed or excluded; purchase blocked."
+      "blocker": "Official model pages and PickMyFirm describe the other axes; 20% consistency is specifically reported for Instant Pro, not these plans. Unknown funded consistency gets midpoint .5 for estimate only. Purchase remains blocked.",
+      "estimate": 1.5,
+      "range": [
+        1,
+        2
+      ],
+      "source": "https://pickmyfirm.com/firms/titan-capital-markets/rules"
     },
     {
       "slug": "titan-capital-markets",
       "id": "titan-2step",
-      "status": "blocked",
+      "status": "estimated",
       "score": null,
       "verified": 4,
-      "blocker": "Funded consistency not explicitly confirmed or excluded; purchase blocked."
+      "blocker": "Official model pages and PickMyFirm describe the other axes; 20% consistency is specifically reported for Instant Pro, not these plans. Unknown funded consistency gets midpoint .5 for estimate only. Purchase remains blocked.",
+      "estimate": 2.5,
+      "range": [
+        2,
+        3
+      ],
+      "source": "https://pickmyfirm.com/firms/titan-capital-markets/rules"
     },
     {
       "slug": "titan-capital-markets",
       "id": "titan-3step",
-      "status": "blocked",
+      "status": "estimated",
       "score": null,
       "verified": 4,
-      "blocker": "Funded consistency not explicitly confirmed or excluded; purchase blocked."
+      "blocker": "Official model pages and PickMyFirm describe the other axes; 20% consistency is specifically reported for Instant Pro, not these plans. Unknown funded consistency gets midpoint .5 for estimate only. Purchase remains blocked.",
+      "estimate": 2.5,
+      "range": [
+        2,
+        3
+      ],
+      "source": "https://pickmyfirm.com/firms/titan-capital-markets/rules"
     },
     {
       "slug": "titan-capital-markets",
@@ -149,11 +203,15 @@
   ],
   "counts": {
     "rated": 8,
-    "blocked": 10,
+    "estimated": 8,
+    "legacy": 2,
+    "blocked": 0,
     "complete": 171,
-    "partial": 57,
+    "estimatedTotal": 8,
+    "legacyTotal": 2,
+    "partial": 47,
     "untouched": 19,
     "variants": 16
   },
-  "followup": "Secondary research 28 Nov: two existing IDs completed, two SFX variants added. No production changes."
+  "followup": "Final editorial disposition: all ten outstanding ChatGPT IDs now classified; eight explicitly estimated with bounds, two legacy. 171 verified catalogue ratings + 8 estimates + 2 legacy + 47 Claude partial + 19 Claude untouched = 247. Verified stars remain null for estimates and legacy. No change to firm rating or price, no production deployment."
 }

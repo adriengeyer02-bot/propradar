@@ -481,3 +481,25 @@ Inventory: 169 complete, 59 partial/blocked, 19 untouched (Claude), total 247. 1
 - DFT Turbo: https://joinprop.com/prop-news/direct-funded-trader-opens-its-turbo-challenge-at-9-99-and-publishes-the-activation-fee-that-follows/ independently notes that the 8% funded drawdown type is unspecified. WFunded official FAQ and https://propfirmreviews.net/reviews/w-funded/ give loss figures but no exact overall funded floor formula. Both remain partial.
 - SuperFunded rebrand corroborated by https://joinprop.com/blog/prop-news/superfunded-becomes-eightcap-challenges/ and https://prop-up.net/news/superfunded-eightcap-challenges-20261119. Current successor rules separately corroborated by https://tradinglookup.com/prop-firms/forex/eightcap-challenges/ ; static 8%/10%, funded 30%/50% daily profit distribution. Legacy IDs not silently relabelled; migration/price catalogue decision required. No company ratings or prices edited.
 - Inventory: 171/247 complete, 57 partial (10 ChatGPT + 47 Claude), 19 untouched, 16 complete variants. Assertions updated; runtime/build not executed. No production merge.
+
+
+## Final editorial disposition of remaining ten ChatGPT IDs — 2026-11-28
+
+All ten assigned IDs now have a publishable disposition in the rating component. Eight are explicitly estimated, not represented as fully verified stars; two old SuperFunded offers are legacy/unranked. An unknown criterion contributes a range [0,1]; where evidence is inconclusive use midpoint .5, with a specific documented conservative/likely assumption for WFunded/DFT. None of these assumptions is injected into simulator presets or verified axes. Legacy labels do not change commercial catalogue/checkout flags. No general scoring changes.
+
+| ID | Status | Confirmed axes | Estimate | Possible score |
+|---|---|---:|---:|---|
+| tradersedgefx-1-step | estimated | 4/5 | 2.5 | 2–3 |
+| tradersedgefx-2-step | estimated | 4/5 | 2.5 | 2–3 |
+| tradersedgefx-hft | estimated | 4/5 | 1.5 | 1–2 |
+| titan-1step | estimated | 4/5 | 1.5 | 1–2 |
+| titan-2step | estimated | 4/5 | 2.5 | 2–3 |
+| titan-3step | estimated | 4/5 | 2.5 | 2–3 |
+| wfunded-skillcheck | estimated | 4/5 | 1.5 | 1.5–2.5 |
+| directfundedtrader-turbo | estimated | 4/5 | 2.5 | 1.5–2.5 |
+| superfunded-one-phase | legacy | 2/5 | — | — |
+| superfunded-two-phase | legacy | 3/5 | — | — |
+
+Sources rechecked: TradersEdgeFX official funded model FAQs and Overall Rules; FundedChecker https://fundedchecker.com/reviews/tradersedgefx/ and PropFirmMap https://propfirmmap.com/firms/tradersedgefx explicitly say funded consistency not reported. Titan official 3-Step page https://support.tgmarkets.com/articles/3-step-evaluation-rules and PickMyFirm https://pickmyfirm.com/firms/titan-capital-markets/rules (reference-only, not recommended). WFunded FAQ https://www.wfunded.io/en/faq and Standard/Expedited product pages. DFT checkout https://directfundedtrader.com/turbo and indexed Forex Prop Reviews https://forexpropreviews.com/direct-funded-trader-turbo-challenge-new-promotion/ (direct retrieval blocked; estimate only). SuperFunded rebrand https://joinprop.com/blog/prop-news/superfunded-becomes-eightcap-challenges/ and official archive index; Eightcap successor contract archived under `terms-archive/superfunded/51fd7bdf8fad.txt`, not applied to legacy purchases. Successor catalogue mapping remains a separate product-data migration, not part of this rating-only lot.
+
+Inventory: 171 verified + 8 estimated + 2 legacy + 47 partial (Claude) + 19 untouched (Claude) = 247. 16 additional fully scored variants. Zero undispositioned ChatGPT IDs. Component explicitly labels estimates and legacy status; English fallback for non-French locales consistent with existing component. Tests expanded, static validation of entries and estimate bounds performed, full build/runtime/visual test not executed.
