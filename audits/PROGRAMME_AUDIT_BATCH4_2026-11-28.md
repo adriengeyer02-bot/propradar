@@ -375,3 +375,45 @@ Five firms, 15 complete catalogue entries and variants; exact IDs verified again
 - Atlas current risk-engine settings vs older terms discrepancy; current 14-day route and five profitable days, 90% share. Atlas Protector and short-trade profit deductions. No split preset because protector changes it.
 - FundedBull evaluation limits not silently promoted to funded; 1/3-step partial, 2-step prior card confirms floor. Qualitative replicability scored separately from numerical best-day rule.
 - Claude assigned 19 non-overlapping IDs in separate proposal file. Inventory 64 minus 18 = 46 still unreferenced (including Claude's 19); partials and unmapped variants additional. Running complete tally 171, duplicates and variants included. New assertions not yet executed, full build pending. One atomic commit.
+
+## Remaining ChatGPT catalogue IDs — 2026-11-28
+
+27 existing catalogue IDs and one optional variant reviewed. 7 complete, 21 partial. Current official pages checked where accessible; older source observations explicitly marked as prior audits, not fresh verification. No catalogue prices, firm ratings or production deployment changed.
+
+| Firm | ID | /5 |
+|---|---|---:|
+| rebelsfunding | rebelsfunding-gold-1-phase | Partial |
+| sabiotrade | sabiotrade-evaluation | Partial |
+| sure-leverage | slf-instant-zero | 2 |
+| willis-capital | wfunded-skillcheck | Partial |
+| superfunded | superfunded-one-phase | Partial |
+| superfunded | superfunded-two-phase | Partial |
+| sfx-funded | sfx-2-step | 2 |
+| sfx-funded | sfx-1-step-pro | 0.5 |
+| sfx-funded | sfx-instant | Partial |
+| tx3-funding | tx3-instant | 0 |
+| tx3-funding | tx3-flex | 2 |
+| now-trade-funded | ntf-standard-two-step | Partial |
+| now-trade-funded | ntf-progressive-one-step | Partial |
+| now-trade-funded | ntf-1k-starter | Partial |
+| directfundedtrader | directfundedtrader-evaluation | Partial |
+| directfundedtrader | directfundedtrader-turbo | Partial |
+| directfundedtrader | directfundedtrader-fastfunding | Partial |
+| tradersedgefx | tradersedgefx-2-step | Partial |
+| tradersedgefx | tradersedgefx-1-step | Partial |
+| tradersedgefx | tradersedgefx-hft | Partial |
+| monevis | monevis-instant | 3 |
+| titan-capital-markets | titan-instant | Partial |
+| titan-capital-markets | titan-1step | Partial |
+| titan-capital-markets | titan-2step | Partial |
+| titan-capital-markets | titan-3step | Partial |
+| exfunded | exfunded-1step | Partial |
+| exfunded | exfunded-2step | Partial |
+| sure-leverage | slf-instant-zero / static | 3 |
+
+- Sure Leverage Zero default trailing, static optional. No consistency but first payout denial halves share and second closes account. Buffer/reset wording ambiguous; avoid fixed split preset after penalty.
+- SFX Ascend 25%, Pro 20% SSI; Pro 1% floating loss first trigger reduces share to 40%, second closes. Generic Instant help and multi-offer pricing do not match; leave partial.
+- TX3 Flex post-24 August: 0.5% combined floating risk, 20% best day, 2%-5% payout range. Instant Standard 3% buffer, 1% aggregate risk, 15% consistency.
+- Monevis 6% target within 30 days, reactivation fee if positive below target, no overnight/weekend holding; marketing says unlimited time. No numerical consistency.
+- Rebels Gold separate RCF contract and subsequent payout cadence/consistency unresolved; SabioTrade general 40% vs 55% rules and plan-specific loss limits unresolved. WFunded generic ID requires split. Superfunded V2 inaccessible; earlier audit retained as such. NowTrade, DFT, TradersEdge, Titan, ExFunded unresolved as scoped. Titan and ExFunded purchase links remain blocked in existing firm audit; no closure asserted.
+- Inventory before this batch 154 mapped complete + 47 partial + 46 unexamined = 247, plus 13 complete variants. After 27 new IDs: 160 mapped complete, 68 partial, 19 untouched (Claude lot 2), 14 completed variants. All 27 assigned ChatGPT IDs now have evidence entries; not all fully rated. Claude separately tasked with 47 old partials, new partials still require follow-up. Prior running counter superseded by deduplicated catalogue counts. Full runtime/build/visual checks pending.

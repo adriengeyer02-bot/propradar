@@ -1864,6 +1864,680 @@ evidence["oneup-trader"] = {
     }
   }
 };
+// Remaining ChatGPT catalogue IDs, 2026-11-28.
+evidence["rebelsfunding"] = {
+  "rebelsfunding-gold-1-phase": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Gold RCF rules; no numerical concentration rule stated, exact separate RCF contract not available.",
+    "scopeFr": "Règles Gold RCF actuelles ; pas de ratio explicite ; contrat RCF séparé non disponible.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.rebelsfunding.com/all-the-rules/",
+        "reason": "6% fixed total loss from initial size, applies to RCF."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://www.rebelsfunding.com/all-the-rules/",
+        "reason": "First request after 14 days, minimum $50; separate RCF contract and subsequent cycle to confirm."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.rebelsfunding.com/all-the-rules/",
+        "reason": "RCF trades must last 60 seconds; new entries banned in five minutes before red news; holding/closing existing positions permitted."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.rebelsfunding.com/all-the-rules/",
+        "reason": "1.5% maximum risk per trade or related group, including correlated instruments and unrealized losses; 4% daily loss in RCF."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "source": "https://www.rebelsfunding.com/all-the-rules/"
+    }
+  }
+};
+evidence["sabiotrade"] = {
+  "sabiotrade-evaluation": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current general terms, post-2-February-2026 funded account; exact plan-specific loss limits and 40% vs 55% trade concentration unresolved.",
+    "scopeFr": "CG actuelles, compte après le 2 février 2026 ; seuils du plan exact et ratios 40 %/55 % à réconcilier.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://sabiotrade.us/terms",
+        "reason": "At least seven days since previous reward; eligibility subject to review."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://sabiotrade.us/terms",
+        "reason": "40% best-day and/or single-trade limit; separate 55% single-trade requirement also stated; restrictive 40% reading, exact plan to confirm."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://sabiotrade.us/terms",
+        "reason": "Scalping, hedging and automation without written permission prohibited."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://sabiotrade.us/terms",
+        "reason": "Discretionary reward adjustment/withholding and initial-balance protection review; funded rule breach can forfeit rewards."
+      }
+    }
+  }
+};
+evidence["sure-leverage"] = {
+  "slf-instant-zero": {
+    "checkedOn": "2026-11-28",
+    "scope": "Default trailing Zero; optional static variant separate, daily loss retained. Payout buffer/reset wording ambiguous; score reflects confirmed gate.",
+    "scopeFr": "Zero trailing par défaut ; variante statique séparée, perte journalière maintenue. Formulation du buffer/reset ambiguë.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.sureleveragefunding.com/en/articles/16546983-instant-funding-zero-no-consistency-rule",
+        "reason": "4% of initial size below highest balance/equity; never trails down."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.sureleveragefunding.com/en/articles/16546983-instant-funding-zero-no-consistency-rule",
+        "reason": "14-day cycle, first 3% profit not withdrawable, no profitable-day requirement; reset wording may affect remaining loss cushion."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.sureleveragefunding.com/en/articles/16546983-instant-funding-zero-no-consistency-rule",
+        "reason": "Explicitly no consistency requirement."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.sureleveragefunding.com/en/articles/16546983-instant-funding-zero-no-consistency-rule",
+        "reason": "No opening/closing ±5 minutes around news, no EAs, minimum two-minute hold."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.sureleveragefunding.com/en/articles/16546983-instant-funding-zero-no-consistency-rule",
+        "reason": "At first payout denial split halved; second denial closes account; 20 soft breaches or ≥50% of trades in breach trigger penalties."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 4,
+      "source": "https://help.sureleveragefunding.com/en/articles/16546983-instant-funding-zero-no-consistency-rule"
+    }
+  }
+};
+evidence["willis-capital"] = {
+  "wfunded-skillcheck": {
+    "checkedOn": "2026-11-28",
+    "scope": "Generic legacy multi-programme ID; current Standard/Expedited/Direct Funding need separate mapping.",
+    "scopeFr": "Identifiant générique ancien ; Standard/Expedited/Direct Funding à séparer.",
+    "assessments": {
+      "consistency": {
+        "points": 0.5,
+        "source": "https://www.wfunded.io/en/faq",
+        "reason": "Qualitative consistency of strategy across trades stated, not a confirmed numerical threshold."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.wfunded.io/en/terms-and-conditions",
+        "reason": "Allocation discretionary after SkillCheck and separate contract; IP rules apply."
+      }
+    }
+  }
+};
+evidence["superfunded"] = {
+  "superfunded-one-phase": {
+    "checkedOn": "2026-11-28",
+    "scope": "Prior 17 November audit of V2 dated 22 October 2026; PDF inaccessible on current recheck. Do not assign new full score without rereading.",
+    "scopeFr": "Audit du 17 novembre du règlement V2 du 22 octobre 2026 ; PDF inaccessible au nouveau contrôle.",
+    "assessments": {
+      "payout": {
+        "points": 0,
+        "source": "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
+        "reason": "Prior V2 audit: first three payouts capped at 5% of account and excess may be removed; 14-day cycle."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
+        "reason": "Prior V2 audit records 40%/30% profit distribution by size."
+      }
+    }
+  },
+  "superfunded-two-phase": {
+    "checkedOn": "2026-11-28",
+    "scope": "Prior 17 November audit of V2 dated 22 October 2026; PDF inaccessible on current recheck. Do not assign new full score without rereading.",
+    "scopeFr": "Audit du 17 novembre du règlement V2 du 22 octobre 2026 ; PDF inaccessible au nouveau contrôle.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
+        "reason": "Prior archived audit records 10% static total loss; not freshly verified."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
+        "reason": "Prior V2 audit: first three payouts capped at 5% of account and excess may be removed; 14-day cycle."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
+        "reason": "Prior V2 audit records 40%/30% profit distribution by size."
+      }
+    }
+  }
+};
+evidence["sfx-funded"] = {
+  "sfx-2-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Ascend standard 85% payout route; Ignite not assumed equivalent.",
+    "scopeFr": "Ascend actuel, retrait standard 85 % ; Ignite non assimilé.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://sfxfunded.com/help/ascend-challenge",
+        "reason": "8% static funded maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://sfxfunded.com/help/payout-timing-ascend",
+        "reason": "14-day cycle, five trading days and minimum 2% profit; separate early route at 40% split."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://sfxfunded.com/help/ascend-challenge",
+        "reason": "25% funded Stability Index."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://sfxfunded.com/help/news-trading-ascend",
+        "reason": "±2 minutes red news all instruments, including SL/TP, profits deducted; third violation account closure."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://sfxfunded.com/docs/terms-of-service",
+        "reason": "Terms reserve payout discretion and risk-based deductions/reduction of share."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "source": "https://sfxfunded.com/help/ascend-challenge"
+    }
+  },
+  "sfx-1-step-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current 1-Step Pro; proportional trailing not represented by fixed-dollar simulator.",
+    "scopeFr": "1-Step Pro actuel ; trailing proportionnel non représenté par simulateur à distance fixe.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://sfxfunded.com/help/1-step-pro",
+        "reason": "6% of highest recorded account value, proportional trailing, never decreases."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://sfxfunded.com/help/payout-timing-1-step-pro",
+        "reason": "Seven qualifying days per payout and 3% minimum profit."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://sfxfunded.com/help/1-step-pro",
+        "reason": "20% funded Stability Index."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://sfxfunded.com/help/news-trading-1-step-pro",
+        "reason": "Funded news execution and automatic exits restricted ±2 minutes."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://sfxfunded.com/help/1-step-pro",
+        "reason": "1% combined floating loss: first breach cuts share to 40%, second permanently closes account."
+      }
+    }
+  },
+  "sfx-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "Generic Standard/Pro/Flex catalogue card conflicts with current generic help article (6% trail, 15% SSI); split into mapped offers before rating.",
+    "scopeFr": "Fiche générique Standard/Pro/Flex contradictoire avec article actuel (6 % trailing, SSI 15 %) ; distinguer offres.",
+    "assessments": {
+      "payout": {
+        "points": 0,
+        "source": "https://sfxfunded.com/help/payout-timing-instant",
+        "reason": "Current generic Instant help: ten trading days and 4% profit each cycle."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://sfxfunded.com/help/news-trading-instant",
+        "reason": "Automatic SL/TP during news window restricted; second violation closes account."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://sfxfunded.com/help/instant-funding",
+        "reason": "Current generic help describes 2% floating loss hard breach, 1% on 300K/400K."
+      }
+    }
+  }
+};
+evidence["tx3-funding"] = {
+  "tx3-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "Instant Standard only, rules updated 17 November; no paid options.",
+    "scopeFr": "Instant Standard uniquement ; règles du 17 novembre, sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://faq.tx3funding.com/trading-rules-for-instant-standard-accounts",
+        "reason": "5% fixed-distance balance trail, never moves down."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://faq.tx3funding.com/how-payouts-work-instant-standard",
+        "reason": "Seven profitable days at 0.25%, 14-day cycle, 3% permanent buffer and 1% minimum payout."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://faq.tx3funding.com/trading-rules-for-instant-standard-accounts",
+        "reason": "15% best-day ratio delays payout."
+      },
+      "trading": {
+        "points": 0,
+        "source": "https://faq.tx3funding.com/trading-rules-for-instant-standard-accounts",
+        "reason": "News and weekend trading prohibited; any rule breach terminates account."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://faq.tx3funding.com/trading-rules-for-instant-standard-accounts",
+        "reason": "1% combined risk across all active trades; hard breach."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 5,
+      "profitSplit": 80,
+      "source": "https://faq.tx3funding.com/trading-rules-for-instant-standard-accounts"
+    }
+  },
+  "tx3-flex": {
+    "checkedOn": "2026-11-28",
+    "scope": "Post-24 August 2026 Flex only, dedicated rules updated 17 November override generic older payout guide; no add-ons.",
+    "scopeFr": "Flex depuis le 24 août 2026 ; règlement dédié du 17 novembre prévaut sur ancien guide générique ; sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://faq.tx3funding.com/challenge-rules-objectives-flex-challenge",
+        "reason": "5% static funded maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://faq.tx3funding.com/challenge-rules-objectives-flex-challenge",
+        "reason": "Biweekly, five 0.5%-profit days, minimum 2%, cap 5% of initial balance per cycle."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://faq.tx3funding.com/challenge-rules-objectives-flex-challenge",
+        "reason": "20% best day, delays payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://faq.tx3funding.com/help/tx3-funding/comparing-tx3-funding-forex-challenges",
+        "reason": "News only with add-on; weekend holding allowed."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://faq.tx3funding.com/challenge-rules-objectives-flex-challenge",
+        "reason": "0.5% combined floating loss hard limit measured live; 2.5% daily funded loss."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 5,
+      "profitSplit": 80,
+      "source": "https://faq.tx3funding.com/challenge-rules-objectives-flex-challenge"
+    }
+  }
+};
+evidence["now-trade-funded"] = {
+  "ntf-standard-two-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Prior official FAQ audit, current product pages not mapped and older payout schedule differs.",
+    "scopeFr": "FAQ auditée précédemment ; fiches actuelles non rattachées, ancien calendrier divergent.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://nowtradefunded.com/faqs/",
+        "reason": "Prior FAQ: first 30 days funded, later biweekly, minimum $100; older schedule has additional caps."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://nowtradefunded.com/faqs/",
+        "reason": "Prior FAQ prohibits weekend holding except crypto and grid/copy/HFT."
+      }
+    }
+  },
+  "ntf-progressive-one-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Prior official FAQ audit, current product pages not mapped and older payout schedule differs.",
+    "scopeFr": "FAQ auditée précédemment ; fiches actuelles non rattachées, ancien calendrier divergent.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://nowtradefunded.com/faqs/",
+        "reason": "Prior FAQ: first 30 days funded, later biweekly, minimum $100; older schedule has additional caps."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://nowtradefunded.com/faqs/",
+        "reason": "Prior FAQ prohibits weekend holding except crypto and grid/copy/HFT."
+      }
+    }
+  },
+  "ntf-1k-starter": {
+    "checkedOn": "2026-11-28",
+    "scope": "Prior official FAQ audit, current product pages not mapped and older payout schedule differs.",
+    "scopeFr": "FAQ auditée précédemment ; fiches actuelles non rattachées, ancien calendrier divergent.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://nowtradefunded.com/faqs/",
+        "reason": "Prior FAQ: first 30 days funded, later biweekly, minimum $100; older schedule has additional caps."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://nowtradefunded.com/faqs/",
+        "reason": "Prior FAQ prohibits weekend holding except crypto and grid/copy/HFT."
+      }
+    }
+  }
+};
+evidence["directfundedtrader"] = {
+  "directfundedtrader-evaluation": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current general funded FAQ; exact funded drawdown and applicable payout route need checkout contract.",
+    "scopeFr": "FAQ financée actuelle ; seuil exact et formule de retrait à confirmer au contrat.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "General FAQ reward minimum $100, default 80% with possible increases; product-specific frequency choices differ."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "FAQ states consistency applies only to Instant Funded plans."
+      },
+      "trading": {
+        "points": 0,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "Any trade closed in under 60 seconds disables account; funded stop loss and news closing rules."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "Funded stop-loss within 30 seconds and three trades per week; violations can disable account."
+      }
+    }
+  },
+  "directfundedtrader-turbo": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current general funded FAQ; exact funded drawdown and applicable payout route need checkout contract.",
+    "scopeFr": "FAQ financée actuelle ; seuil exact et formule de retrait à confirmer au contrat.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "General FAQ reward minimum $100, default 80% with possible increases; product-specific frequency choices differ."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "FAQ states consistency applies only to Instant Funded plans."
+      },
+      "trading": {
+        "points": 0,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "Any trade closed in under 60 seconds disables account; funded stop loss and news closing rules."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "Funded stop-loss within 30 seconds and three trades per week; violations can disable account."
+      }
+    }
+  },
+  "directfundedtrader-fastfunding": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current general funded FAQ; exact funded drawdown and applicable payout route need checkout contract.",
+    "scopeFr": "FAQ financée actuelle ; seuil exact et formule de retrait à confirmer au contrat.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "General FAQ reward minimum $100, default 80% with possible increases; product-specific frequency choices differ."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "FAQ states consistency applies only to Instant Funded plans."
+      },
+      "trading": {
+        "points": 0,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "Any trade closed in under 60 seconds disables account; funded stop loss and news closing rules."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://directfundedtrader.com/faq-rules",
+        "reason": "Funded stop-loss within 30 seconds and three trades per week; violations can disable account."
+      }
+    }
+  }
+};
+evidence["tradersedgefx"] = {
+  "tradersedgefx-2-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "General rules verified; product-specific funded total loss type, consistency and payout conditions not fully mapped.",
+    "scopeFr": "Règlement général vérifié ; seuil total financé, consistency et retraits par offre à confirmer.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
+        "reason": "Prior product review found early payout caps; exact timing varies by route."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
+        "reason": "No opening or closing within two minutes of NYSE open; minimum holding restrictions."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
+        "reason": "20-lot maximum in prior rules audit; inactivity notification requested."
+      }
+    }
+  },
+  "tradersedgefx-1-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "General rules verified; product-specific funded total loss type, consistency and payout conditions not fully mapped.",
+    "scopeFr": "Règlement général vérifié ; seuil total financé, consistency et retraits par offre à confirmer.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
+        "reason": "Prior product review found early payout caps; exact timing varies by route."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
+        "reason": "No opening or closing within two minutes of NYSE open; minimum holding restrictions."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
+        "reason": "20-lot maximum in prior rules audit; inactivity notification requested."
+      }
+    }
+  },
+  "tradersedgefx-hft": {
+    "checkedOn": "2026-11-28",
+    "scope": "General rules verified; product-specific funded total loss type, consistency and payout conditions not fully mapped.",
+    "scopeFr": "Règlement général vérifié ; seuil total financé, consistency et retraits par offre à confirmer.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
+        "reason": "Prior product review found early payout caps; exact timing varies by route."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
+        "reason": "No opening or closing within two minutes of NYSE open; minimum holding restrictions."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
+        "reason": "20-lot maximum in prior rules audit; inactivity notification requested."
+      }
+    }
+  }
+};
+evidence["monevis"] = {
+  "monevis-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Instant sales rules, 30-day target deadline despite unlimited-time marketing.",
+    "scopeFr": "Instant actuel ; cible sous 30 jours malgré marketing sans limite.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://monevis.com/instant-funding",
+        "reason": "8% static total loss."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://monevis.com/instant-funding",
+        "reason": "6% profit target; biweekly payout, 50% share."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://monevis.com/instant-funding",
+        "reason": "Explicit no consistency rule."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://monevis.com/instant-funding",
+        "reason": "No overnight/weekend holding; ±5-minute major news restriction may deduct profits."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://monevis.com/instant-funding",
+        "reason": "30-day deadline to meet target; fee-based reactivation if profitable but below 6%."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "profitSplit": 50,
+      "source": "https://monevis.com/instant-funding"
+    }
+  }
+};
+evidence["titan-capital-markets"] = {
+  "titan-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "Purchase links paused in existing audit; exact programme rules inaccessible or not fully verified on current check. Not a current commercial rating.",
+    "scopeFr": "Liens d'achat suspendus dans audit existant ; règlement exact inaccessible ou non vérifié au contrôle. Pas de note commerciale.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://support.tgmarkets.com/articles/performance-fee-policy/",
+        "reason": "Published performance fee policy lists 70% starting share; exact eligibility per plan needs confirmation."
+      }
+    }
+  },
+  "titan-1step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Purchase links paused in existing audit; exact programme rules inaccessible or not fully verified on current check. Not a current commercial rating.",
+    "scopeFr": "Liens d'achat suspendus dans audit existant ; règlement exact inaccessible ou non vérifié au contrôle. Pas de note commerciale.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://support.tgmarkets.com/articles/performance-fee-policy/",
+        "reason": "Published performance fee policy lists 90% starting share; exact eligibility per plan needs confirmation."
+      }
+    }
+  },
+  "titan-2step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Purchase links paused in existing audit; exact programme rules inaccessible or not fully verified on current check. Not a current commercial rating.",
+    "scopeFr": "Liens d'achat suspendus dans audit existant ; règlement exact inaccessible ou non vérifié au contrôle. Pas de note commerciale.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://support.tgmarkets.com/articles/performance-fee-policy/",
+        "reason": "Published performance fee policy lists 90% starting share; exact eligibility per plan needs confirmation."
+      }
+    }
+  },
+  "titan-3step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Purchase links paused in existing audit; exact programme rules inaccessible or not fully verified on current check. Not a current commercial rating.",
+    "scopeFr": "Liens d'achat suspendus dans audit existant ; règlement exact inaccessible ou non vérifié au contrôle. Pas de note commerciale.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://support.tgmarkets.com/articles/performance-fee-policy/",
+        "reason": "Published performance fee policy lists 95% starting share; exact eligibility per plan needs confirmation."
+      }
+    }
+  }
+};
+evidence["exfunded"] = {
+  "exfunded-1step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current branded FAQ on alternate domain; funded loss mechanics and applicable payout cadence unresolved; checkout remains blocked.",
+    "scopeFr": "FAQ actuelle sur domaine alternatif ; mécanisme de perte et calendrier financé non résolus ; achat bloqué.",
+    "assessments": {
+      "consistency": {
+        "points": 0,
+        "source": "https://exfunded.sandai-investment.com/faq/",
+        "reason": "Eligible lot sizes between half and twice average; profits from trades outside range ineligible."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://exfunded.sandai-investment.com/faq/",
+        "reason": "Trades must last five minutes to be eligible for withdrawal."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://exfunded.sandai-investment.com/faq/",
+        "reason": "First funded daily lot-volume violation returns account to phase 1 and forfeits all profits; second breaches account."
+      }
+    }
+  },
+  "exfunded-2step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current branded FAQ on alternate domain; funded loss mechanics and applicable payout cadence unresolved; checkout remains blocked.",
+    "scopeFr": "FAQ actuelle sur domaine alternatif ; mécanisme de perte et calendrier financé non résolus ; achat bloqué.",
+    "assessments": {
+      "consistency": {
+        "points": 0,
+        "source": "https://exfunded.sandai-investment.com/faq/",
+        "reason": "Eligible lot sizes between half and twice average; profits from trades outside range ineligible."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://exfunded.sandai-investment.com/faq/",
+        "reason": "Trades must last five minutes to be eligible for withdrawal."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://exfunded.sandai-investment.com/faq/",
+        "reason": "First funded daily lot-volume violation returns account to phase 1 and forfeits all profits; second breaches account."
+      }
+    }
+  }
+};
 // RZR / For Traders / Lark / OFP / ThinkCapital / Equity Edge / Atlas / FundedBull batch, 2026-11-28.
 evidence["hantec-trader"] = {
   "rzr-instant24": {
@@ -7098,6 +7772,7 @@ Object.assign(evidence["funded-trading-plus"],{
   }
 });
 addVariant('for-traders','fortraders-1-step','fast-static','Fast Static','Fast Static','Current Forex Fast Static, from 8 June 2026.','Forex Fast Static actuel depuis le 8 juin 2026.',{drawdown:{points:1,source:"https://help.fortraders.com/en/articles/15376206-fast-static-account-forex",reason:'6% fixed floor, unchanged by profits and withdrawals.'},payout:{points:.5,source:"https://help.fortraders.com/en/articles/15376206-fast-static-account-forex",reason:'14-day rewards; three qualifying days, $100 minimum and $15K cap.'}},{drawdown:'static',lossPercent:6,source:"https://help.fortraders.com/en/articles/15376206-fast-static-account-forex"});
+addVariant('sure-leverage','slf-instant-zero','static','Static loss limit','Perte maximale statique','Zero with optional static 4% floor.','Zero avec option seuil statique 4 %.',{drawdown:{points:1,source:"https://help.sureleveragefunding.com/en/articles/16546983-instant-funding-zero-no-consistency-rule",reason:'4% fixed below initial balance, not trailing.'}},{drawdown:'static',lossPercent:4,source:"https://help.sureleveragefunding.com/en/articles/16546983-instant-funding-zero-no-consistency-rule"});
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA
