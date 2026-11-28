@@ -7,7 +7,7 @@ import { CRITERIA, programmeFlexibility } from './programmeFlexibility';
  */
 export type ProgrammeCategory = 'one'|'two'|'three'|'challenge'|'instant'|'futures'|'futuresInstant'|'scaling'|'futuresScaling'|'crypto'|'cryptoInstant'|'equities'|'options';
 export type CategoryProduct = { id:string; name:string; type:string; tradableAssets?:string[] };
-const phaseOverrides:Record<string,ProgrammeCategory> = {'fundednext-stellar-lite-current':'two','qt-one':'one','qt-two':'two','qt-power':'two','e8-one-current':'one'};
+const phaseOverrides:Record<string,ProgrammeCategory> = {'fundednext-stellar-lite-current':'two','qt-one':'one','qt-two':'two','qt-power':'two','e8-one-current':'one','e8-classic-v2-current':'one','bg-bnpl-current':'one'};
 export function programmeCategory(p:CategoryProduct):ProgrammeCategory {
  const assets=p.tradableAssets??[];
  const futures=p.type==='Futures evaluation'||assets.some(a=>/^futures$/i.test(a.trim()));
@@ -27,6 +27,10 @@ export function isInstantCategory(c:ProgrammeCategory){return c==='instant'||c==
 const isFuturesCategory=(c:ProgrammeCategory)=>c==='futures'||c==='futuresInstant'||c==='futuresScaling';
 const reviewedFacts:{drawdown:Record<string,string>;consistency:Record<string,number>;trading:Record<string,number>}={
   "drawdown": {
+    "6% trailing below the highest closed balance, locking at the starting balance once reached.": "balance-lock",
+    "8% trailing below the highest closed balance, locking at the starting balance once reached.": "balance-lock",
+    "$2K intraday trailing, locks at $51K after balance exceeds $53K; $1K daily loss limit.": "lock-basis-unknown",
+    "Live intraday trailing with daily loss stop; lock at starting balance.": "lock-basis-unknown",
     "6% trailing highest closed balance, locks at initial balance; highest floor preserved after withdrawals, remaining gap trails in next cycle.": "balance-lock",
     "6% trailing highest closing balance, locks at initial balance.": "balance-lock",
     "6% balance-high trailing, locks at initial balance.": "balance-lock",
@@ -77,6 +81,15 @@ const reviewedFacts:{drawdown:Record<string,string>;consistency:Record<string,nu
     "3% real-time trailing; first withdrawal locks the floor at initial balance.": "lock-basis-unknown"
   },
   "consistency": {
+    "40% funded consistency; none in evaluation.": 40,
+    "40% best day / net total profit; exceeding delays payout, not account failure.": 40,
+    "21% best day / net total profit at payout eligibility.": 21,
+    "21% net profit best-day ratio.": 21,
+    "20% best-day share of current cycle profit.": 20,
+    "Best trading day must be strictly below 40% of cycle profits; resets on each request.": 40,
+    "40% of accumulated profit checked at payout; failure delays eligibility.": 40,
+    "Best day below 50% of total profit, in evaluation and funded; not met means the payout stays unavailable, no breach.": 50,
+    "Funded best day below 20% of profit in the payout period.": 20,
     "50% best closed day divided by total closed net trading profit; post-12 October cohort. Exceeding it delays eligibility, not termination.": 50,
     "50% funded best-day condition.": 50,
     "50% funded best-day ratio according to current product-specific FAQ.": 50,
@@ -142,6 +155,8 @@ const reviewedFacts:{drawdown:Record<string,string>;consistency:Record<string,nu
     "15% maximum best-day ratio; delays payout until compliant.": 15
   },
   "trading": {
+    "Scaled contract allocation and no swing holding across sessions.": 1,
+    "News, own-account copying and no minimum trade duration allowed; no overnight/weekend holding and contract limits.": 1,
     "Intraday-only CME futures; prescribed daily closing times and conduct restrictions.": 1,
     "Product-specific contract limits and daily session restrictions.": 1,
     "Intraday futures; no overnight/weekend positions; programme news trading permitted.": 1,

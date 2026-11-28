@@ -958,7 +958,7 @@ evidence["trade-the-pool"] = {
   },
   "ttp-swing-max": {
     "checkedOn": "2026-11-28",
-    "scope": "Current Swing MAX Professional account. Funded swing drawdown formula not confirmed. Follow-up 28 Nov: drawdown: Funded swing drawdown formula still not published: the programme terms define the stop-out as the account value by equity and describe a one-time move of the max drawdown to the initial balance at 3x daily-loss in equity, but give no swing-specific amount; the programme page gives 7% of buying power for the swing evaluation only and no funded swing terms.",
+    "scope": "Current Swing MAX Professional account. Funded swing drawdown formula not confirmed. Follow-up 28 Nov: drawdown: Funded swing drawdown formula still not published: the programme terms define the stop-out as the account value by equity and describe a one-time move of the max drawdown to the initial balance at 3x daily-loss in equity, but give no swing-specific amount; the programme page gives 7% of buying power for the swing evaluation only and no funded swing terms. Documentary follow-up 28 Nov (PR #321): partly stated: the 7% figure is published for the evaluation; the programme page says funded traders \"keep trading under the same trading conditions (DL, Exposure)\"; the 3x DL move is in the payouts section; Program Terms say swing scaling mechanics are \"to come\".; available. Remaining: Confirm in writing that the 7% maximum loss and the 3x-DL move apply unchanged on funded swing accounts.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -987,7 +987,7 @@ evidence["trade-the-pool"] = {
   },
   "ttp-swing-flex": {
     "checkedOn": "2026-11-28",
-    "scope": "Current Swing FLEX Professional account. Funded swing drawdown formula not confirmed. Follow-up 28 Nov: drawdown: Funded swing drawdown formula still not published: the programme terms define the stop-out as the account value by equity and describe a one-time move of the max drawdown to the initial balance at 3x daily-loss in equity, but give no swing-specific amount; the programme page gives 7% of buying power for the swing evaluation only and no funded swing terms.",
+    "scope": "Current Swing FLEX Professional account. Funded swing drawdown formula not confirmed. Follow-up 28 Nov: drawdown: Funded swing drawdown formula still not published: the programme terms define the stop-out as the account value by equity and describe a one-time move of the max drawdown to the initial balance at 3x daily-loss in equity, but give no swing-specific amount; the programme page gives 7% of buying power for the swing evaluation only and no funded swing terms. Documentary follow-up 28 Nov (PR #321): partly stated: the 7% figure is published for the evaluation; the programme page says funded traders \"keep trading under the same trading conditions (DL, Exposure)\"; the 3x DL move is in the payouts section; Program Terms say swing scaling mechanics are \"to come\".; available. Remaining: Same as Swing MAX: funded swing loss formula not written separately.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -1016,7 +1016,7 @@ evidence["trade-the-pool"] = {
   },
   "ttp-edge": {
     "checkedOn": "2026-11-28",
-    "scope": "Edge Professional 50K/100K; funded drawdown measured EOD; exact lock mechanics not confirmed. Follow-up 28 Nov: drawdown: Edge Pro: 4% maximum drawdown on 50K and 100K, calculated on end-of-day values; the page does not say whether it is fixed from the initial balance or trails EOD highs, nor whether it locks. Either 1 (EOD static) or 0.5 (EOD trailing) depending on the unstated formula; Edge is absent from the programme terms.",
+    "scope": "Edge Professional 50K/100K; funded drawdown measured EOD; exact lock mechanics not confirmed. Follow-up 28 Nov: drawdown: Edge Pro: 4% maximum drawdown on 50K and 100K, calculated on end-of-day values; the page does not say whether it is fixed from the initial balance or trails EOD highs, nor whether it locks. Either 1 (EOD static) or 0.5 (EOD trailing) depending on the unstated formula; Edge is absent from the programme terms. Documentary follow-up 28 Nov (PR #321): stated for Pro; available. Remaining: Is the 4% EOD drawdown fixed from the initial balance or trailing EOD highs, and does it lock?",
     "assessments": {
       "payout": {
         "points": 0,
@@ -2970,7 +2970,7 @@ evidence["for-traders"] = {
 evidence["lark-funding"] = {
   "lark-1-step-career": {
     "checkedOn": "2026-11-28",
-    "scope": "Career Master performance reward; separate monthly data fee is not ordinary payout; funded drawdown applicability not explicit in evaluation article. Follow-up 28 Nov: drawdown: The programme article states a 7% static limit for the evaluation only; no published Master Account (funded) loss rule for this programme (the only funded-specific article is the Instant Master one). | trading: No news restriction in the evaluation article; EA, weekend and funded-specific restrictions are not stated (prohibited-strategies article not programme-specific). | funded: Funded risk, inactivity and termination rules for the Master Account are not published for this programme.",
+    "scope": "Career Master performance reward; separate monthly data fee is not ordinary payout; funded drawdown applicability not explicit in evaluation article. Follow-up 28 Nov: drawdown: The programme article states a 7% static limit for the evaluation only; no published Master Account (funded) loss rule for this programme (the only funded-specific article is the Instant Master one). | trading: No news restriction in the evaluation article; EA, weekend and funded-specific restrictions are not stated (prohibited-strategies article not programme-specific). | funded: Funded risk, inactivity and termination rules for the Master Account are not published for this programme. Documentary follow-up 28 Nov (PR #321): not stated officially for the Master Account; competitor (Propvator) states 7% static in evaluation and funded stage; available. Remaining: Funded Master Account loss limits are not published for this programme (only the Instant Master has its own article).",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -2986,7 +2986,7 @@ evidence["lark-funding"] = {
   },
   "lark-3-step": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial; official programme describes evaluation loss limit but not explicitly the funded loss rules. Follow-up 28 Nov: drawdown: The programme article states a 5% static limit for the evaluation only; no published Master Account (funded) loss rule for this programme (the only funded-specific article is the Instant Master one). | trading: No news restriction in the evaluation article; EA, weekend and funded-specific restrictions are not stated (prohibited-strategies article not programme-specific). | funded: Funded risk, inactivity and termination rules for the Master Account are not published for this programme.",
+    "scope": "Partial; official programme describes evaluation loss limit but not explicitly the funded loss rules. Follow-up 28 Nov: drawdown: The programme article states a 5% static limit for the evaluation only; no published Master Account (funded) loss rule for this programme (the only funded-specific article is the Instant Master one). | trading: No news restriction in the evaluation article; EA, weekend and funded-specific restrictions are not stated (prohibited-strategies article not programme-specific). | funded: Funded risk, inactivity and termination rules for the Master Account are not published for this programme. Documentary follow-up 28 Nov (PR #321): not stated officially; competitors (Propvator, TheTrustedProp) list 5% static and no daily limit on the funded stage; available. Remaining: Funded Master Account loss limits not published for the 3-Step.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -3004,24 +3004,36 @@ evidence["lark-funding"] = {
 evidence["ofp-funding"] = {
   "ofp-instant-95": {
     "checkedOn": "2026-11-28",
-    "scope": "Legacy generic 95% catalogue ID not mapped to current Lite, Classic or Plus; do not infer a current purchase rating. Follow-up 28 Nov: drawdown: Legacy catalogue ID: current Terms list Instant Lite, Classic, Pro, Prime and Plus; the \"up to 95%\" wording survives only on the instant.ofpfunding.com marketing page. The ID cannot be mapped to one current plan and the Terms page could not be read in full on 28 Nov 2026. | payout: Legacy catalogue ID: current Terms list Instant Lite, Classic, Pro, Prime and Plus; the \"up to 95%\" wording survives only on the instant.ofpfunding.com marketing page. The ID cannot be mapped to one current plan and the Terms page could not be read in full on 28 Nov 2026. | consistency: Legacy catalogue ID: current Terms list Instant Lite, Classic, Pro, Prime and Plus; the \"up to 95%\" wording survives only on the instant.ofpfunding.com marketing page. The ID cannot be mapped to one current plan and the Terms page could not be read in full on 28 Nov 2026. | funded: Legacy catalogue ID: current Terms list Instant Lite, Classic, Pro, Prime and Plus; the \"up to 95%\" wording survives only on the instant.ofpfunding.com marketing page. The ID cannot be mapped to one current plan and the Terms page could not be read in full on 28 Nov 2026.",
+    "scope": "Legacy generic 95% catalogue ID not mapped to current Lite, Classic or Plus; do not infer a current purchase rating. Follow-up 28 Nov: drawdown: Legacy catalogue ID: current Terms list Instant Lite, Classic, Pro, Prime and Plus; the \"up to 95%\" wording survives only on the instant.ofpfunding.com marketing page. The ID cannot be mapped to one current plan and the Terms page could not be read in full on 28 Nov 2026. | payout: Legacy catalogue ID: current Terms list Instant Lite, Classic, Pro, Prime and Plus; the \"up to 95%\" wording survives only on the instant.ofpfunding.com marketing page. The ID cannot be mapped to one current plan and the Terms page could not be read in full on 28 Nov 2026. | consistency: Legacy catalogue ID: current Terms list Instant Lite, Classic, Pro, Prime and Plus; the \"up to 95%\" wording survives only on the instant.ofpfunding.com marketing page. The ID cannot be mapped to one current plan and the Terms page could not be read in full on 28 Nov 2026. | funded: Legacy catalogue ID: current Terms list Instant Lite, Classic, Pro, Prime and Plus; the \"up to 95%\" wording survives only on the instant.ofpfunding.com marketing page. The ID cannot be mapped to one current plan and the Terms page could not be read in full on 28 Nov 2026. Claude 28 Nov: The 25 Nov 2026 Terms list five instant plans, all at 100% split: Instant Lite, Classic, Pro, Prime and Plus. \"Up to 95%\" survives only on the instant.ofpfunding.com marketing page. No plan with a 95% split is in the current Terms.",
     "assessments": {
       "trading": {
         "points": 0.5,
         "source": "https://help.ofpfunding.com/what-are-the-trading-rules-every-ofp-trader-must-follow/",
         "reason": "General prohibited strategies include gap exploitation, HFT and abnormal lot sizes."
       }
+    },
+    "reviewOutcome": {
+      "kind": "legacy",
+      "source": "https://ofpfunding.com/terms-and-conditions",
+      "reason": "Old catalogue ID not sold under these terms; current successor products require separate mapping. Existing-account rights not inferred.",
+      "reasonFr": "Ancienne référence commerciale : non vendue sous ces conditions. Les offres actuelles doivent être identifiées séparément."
     }
   },
   "ofp-challenge-8-5": {
     "checkedOn": "2026-11-28",
-    "scope": "Old 8%/5% targets conflict with current 8%/4% marketing; exact funded contract pending. Follow-up 28 Nov: drawdown: 8%/5% targets match the older Royal Challenge description; the current Terms list challenge phase plans (section 2) that could not be read in full, and current marketing shows other targets. Exact funded contract for this ID not established. | payout: 8%/5% targets match the older Royal Challenge description; the current Terms list challenge phase plans (section 2) that could not be read in full, and current marketing shows other targets. Exact funded contract for this ID not established. | consistency: 8%/5% targets match the older Royal Challenge description; the current Terms list challenge phase plans (section 2) that could not be read in full, and current marketing shows other targets. Exact funded contract for this ID not established. | funded: 8%/5% targets match the older Royal Challenge description; the current Terms list challenge phase plans (section 2) that could not be read in full, and current marketing shows other targets. Exact funded contract for this ID not established.",
+    "scope": "Old 8%/5% targets conflict with current 8%/4% marketing; exact funded contract pending. Follow-up 28 Nov: drawdown: 8%/5% targets match the older Royal Challenge description; the current Terms list challenge phase plans (section 2) that could not be read in full, and current marketing shows other targets. Exact funded contract for this ID not established. | payout: 8%/5% targets match the older Royal Challenge description; the current Terms list challenge phase plans (section 2) that could not be read in full, and current marketing shows other targets. Exact funded contract for this ID not established. | consistency: 8%/5% targets match the older Royal Challenge description; the current Terms list challenge phase plans (section 2) that could not be read in full, and current marketing shows other targets. Exact funded contract for this ID not established. | funded: 8%/5% targets match the older Royal Challenge description; the current Terms list challenge phase plans (section 2) that could not be read in full, and current marketing shows other targets. Exact funded contract for this ID not established. Claude 28 Nov: The 25 Nov 2026 Terms list a Two-Phase challenge at 8% then 4% (not 5%) and a One-Phase at 8%; the 8%/5% \"Royal Challenge\" is described in older (2024) OFP blog posts.",
     "assessments": {
       "trading": {
         "points": 0.5,
         "source": "https://help.ofpfunding.com/what-are-the-trading-rules-every-ofp-trader-must-follow/",
         "reason": "General strategy restrictions documented; programme-specific application pending."
       }
+    },
+    "reviewOutcome": {
+      "kind": "legacy",
+      "source": "https://ofpfunding.com/terms-and-conditions",
+      "reason": "Old catalogue ID not sold under these terms; current successor products require separate mapping. Existing-account rights not inferred.",
+      "reasonFr": "Ancienne référence commerciale : non vendue sous ces conditions. Les offres actuelles doivent être identifiées séparément."
     }
   }
 };
@@ -3279,7 +3291,7 @@ evidence["atlas-funded"] = {
 evidence["funded-bull"] = {
   "funded-bull-1-step": {
     "checkedOn": "2026-11-28",
-    "scope": "Current contract §4.1 evaluation thresholds; only 2-Step funded floor corroborated in prior product audit; strategy replicability distinct from numerical consistency. Follow-up 28 Nov: drawdown: Terms §4.1 give the evaluation limit (6% trailing); §4.2.3 only says funded traders must keep following \"daily and overall drawdown limits\" without figures or type, and §5.2 says the maximum drawdown \"resets to the initial account balance\" after a payout, which does not define the funded floor. Trading rules page gives no funded figures.",
+    "scope": "Current contract §4.1 evaluation thresholds; only 2-Step funded floor corroborated in prior product audit; strategy replicability distinct from numerical consistency. Follow-up 28 Nov: drawdown: Terms §4.1 give the evaluation limit (6% trailing); §4.2.3 only says funded traders must keep following \"daily and overall drawdown limits\" without figures or type, and §5.2 says the maximum drawdown \"resets to the initial account balance\" after a payout, which does not define the funded floor. Trading rules page gives no funded figures. Documentary follow-up 28 Nov (PR #321): not stated: §4.2.3 only says funded traders must comply with \"daily and overall drawdown limits\"; PropFirmMap shows one funded row of 8% / 4% for all routes; available. Remaining: Ask FundedBull for the funded loss limit and type for the 1-Step route.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -3342,7 +3354,7 @@ evidence["funded-bull"] = {
   },
   "funded-bull-3-step": {
     "checkedOn": "2026-11-28",
-    "scope": "Current contract §4.1 evaluation thresholds; only 2-Step funded floor corroborated in prior product audit; strategy replicability distinct from numerical consistency. Follow-up 28 Nov: drawdown: Terms §4.1 give the evaluation limit (7% static); §4.2.3 only says funded traders must keep following \"daily and overall drawdown limits\" without figures or type, and §5.2 says the maximum drawdown \"resets to the initial account balance\" after a payout, which does not define the funded floor. Trading rules page gives no funded figures.",
+    "scope": "Current contract §4.1 evaluation thresholds; only 2-Step funded floor corroborated in prior product audit; strategy replicability distinct from numerical consistency. Follow-up 28 Nov: drawdown: Terms §4.1 give the evaluation limit (7% static); §4.2.3 only says funded traders must keep following \"daily and overall drawdown limits\" without figures or type, and §5.2 says the maximum drawdown \"resets to the initial account balance\" after a payout, which does not define the funded floor. Trading rules page gives no funded figures. Documentary follow-up 28 Nov (PR #321): not stated (same §4.2.3 wording); PropFirmMap funded row 8% / 4%; available. Remaining: Ask FundedBull for the funded loss limit and type for the 3-Step route.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -4014,7 +4026,7 @@ evidence["traders-launch"] = {
   },
   "traders-launch-static-25k": {
     "checkedOn": "2026-11-28",
-    "scope": "Static 25K 90% route only; verify exact funded floor and lower split variants separately. Follow-up 28 Nov: drawdown: The site offers \"EOD or Static\" drawdown plans, but the published plan cards, FAQ and futures rules only give EOD figures (locking at starting balance) and a 50% session rule for static evaluations; the funded floor of the Static 25K plan is not published.",
+    "scope": "Static 25K 90% route only; verify exact funded floor and lower split variants separately. Follow-up 28 Nov: drawdown: The site offers \"EOD or Static\" drawdown plans, but the published plan cards, FAQ and futures rules only give EOD figures (locking at starting balance) and a 50% session rule for static evaluations; the funded floor of the Static 25K plan is not published. Documentary follow-up 28 Nov (PR #321): stated by competitors (no buffer stage, static); PropRadar read \"$500 static\" on the official homepage on 30 Oct 2026; available (limited drop). Remaining: Official page with the Static plan funded rules (only plan cards and third-party copies were readable).",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -4508,12 +4520,12 @@ evidence["wsfunded"] = {
   },
   "wsfunded-prime-1phase": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: exact funded loss formula and payout eligibility pending. Follow-up 28 Nov: drawdown: Checkout and plan comparison show a 3% \"max dynamic drawdown\" and 1% daily loss for Prime, but no published formula (balance or equity, lock, reset) for the funded stage.",
+    "scope": "Prime One Phase: programme FAQ specifies balance-high trailing, and checkout confirms 3% maximum/1% daily. Payout cap period not specified; severe gate and cap independently sufficient to score payout axis zero.",
     "assessments": {
       "payout": {
-        "points": 1,
-        "source": "https://faq.wsfunded.com/en/articles/17660303-1-phase-wall-street-prime",
-        "reason": "Official article advertises instant payout and 90% split."
+        "points": 0,
+        "source": "https://wsfunded.com/en/faq",
+        "reason": "Despite instant requests and 90% share, 4% minimum profit and maximum withdrawal 1% of initial account balance; cap period unspecified."
       },
       "consistency": {
         "points": 1,
@@ -4529,6 +4541,11 @@ evidence["wsfunded"] = {
         "points": 0.5,
         "source": "https://faq.wsfunded.com/en/articles/9582168-news-trading",
         "reason": "Funded news window of 4 minutes either side of red-folder events; EAs allowed; 1% risk per idea counted under funded."
+      },
+      "drawdown": {
+        "points": 0,
+        "source": "https://wsfunded.com/en/faq",
+        "reason": "3% maximum loss follows highest account balance reached; funded programme rule, no separate funded percentage."
       }
     }
   }
@@ -4680,7 +4697,7 @@ evidence["crypto-fund-trader"] = {
   },
   "cft-evaluation": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: generic legacy catalogue ID does not uniquely identify current 1-Phase or 2-Phase. Follow-up 28 Nov: drawdown: The generic \"Evaluation\" ID can match 1-Phase Classic, Pro, Turbo, 2-Phase or 3-Phase, which have different drawdowns (3%-10% static) and payout cycles. Remap the catalogue entry before rating. | consistency: The generic \"Evaluation\" ID can match 1-Phase Classic, Pro, Turbo, 2-Phase or 3-Phase, which have different drawdowns (3%-10% static) and payout cycles. Remap the catalogue entry before rating. | funded: The generic \"Evaluation\" ID can match 1-Phase Classic, Pro, Turbo, 2-Phase or 3-Phase, which have different drawdowns (3%-10% static) and payout cycles. Remap the catalogue entry before rating.",
+    "scope": "Partial: generic legacy catalogue ID does not uniquely identify current 1-Phase or 2-Phase. Follow-up 28 Nov: drawdown: The generic \"Evaluation\" ID can match 1-Phase Classic, Pro, Turbo, 2-Phase or 3-Phase, which have different drawdowns (3%-10% static) and payout cycles. Remap the catalogue entry before rating. | consistency: The generic \"Evaluation\" ID can match 1-Phase Classic, Pro, Turbo, 2-Phase or 3-Phase, which have different drawdowns (3%-10% static) and payout cycles. Remap the catalogue entry before rating. | funded: The generic \"Evaluation\" ID can match 1-Phase Classic, Pro, Turbo, 2-Phase or 3-Phase, which have different drawdowns (3%-10% static) and payout cycles. Remap the catalogue entry before rating. Documentary follow-up 28 Nov (PR #321): yes (same limits on the Final Stage per FAQ wording); available. Remaining: Rename the catalogue entry \"2-Phase Evaluation\" for clarity.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -4696,7 +4713,7 @@ evidence["crypto-fund-trader"] = {
   },
   "cft-accelerated": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: current Classic/Pro/Turbo mapping unresolved. Follow-up 28 Nov: drawdown: The \"Accelerated\" ID has no current equivalent: the FAQ says 1-Phase Classic, Pro and Turbo replace the former 1-Phase and Instant evaluations. Remap the catalogue entry before rating. | consistency: The \"Accelerated\" ID has no current equivalent: the FAQ says 1-Phase Classic, Pro and Turbo replace the former 1-Phase and Instant evaluations. Remap the catalogue entry before rating. | funded: The \"Accelerated\" ID has no current equivalent: the FAQ says 1-Phase Classic, Pro and Turbo replace the former 1-Phase and Instant evaluations. Remap the catalogue entry before rating.",
+    "scope": "Partial: current Classic/Pro/Turbo mapping unresolved. Follow-up 28 Nov: drawdown: The \"Accelerated\" ID has no current equivalent: the FAQ says 1-Phase Classic, Pro and Turbo replace the former 1-Phase and Instant evaluations. Remap the catalogue entry before rating. | consistency: The \"Accelerated\" ID has no current equivalent: the FAQ says 1-Phase Classic, Pro and Turbo replace the former 1-Phase and Instant evaluations. Remap the catalogue entry before rating. | funded: The \"Accelerated\" ID has no current equivalent: the FAQ says 1-Phase Classic, Pro and Turbo replace the former 1-Phase and Instant evaluations. Remap the catalogue entry before rating. Claude 28 Nov: Catalogue fee range $40 (5K) to $1,199 (200K) matches the former 1-Phase; the FAQ says 1-Phase Classic, Pro and Turbo \"replace the former 1-Phase and Instant Evaluations\" and describes the former 1-Phase as \"existing accounts\".",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -4708,6 +4725,12 @@ evidence["crypto-fund-trader"] = {
         "source": "https://cryptofundtrader.com/faq/",
         "reason": "General news and overnight/weekend holding allowed."
       }
+    },
+    "reviewOutcome": {
+      "kind": "legacy",
+      "source": "https://cryptofundtrader.com/faq/",
+      "reason": "Old catalogue ID not sold under these terms; current successor products require separate mapping. Existing-account rights not inferred.",
+      "reasonFr": "Ancienne référence commerciale : non vendue sous ces conditions. Les offres actuelles doivent être identifiées séparément."
     }
   },
   "cft-instant": {
@@ -4836,7 +4859,7 @@ evidence["funded7"] = {
 evidence["dna-funded"] = {
   "dna-1-phase-march-2026": {
     "checkedOn": "2026-11-28",
-    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score. Follow-up 28 Nov: payout: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | consistency: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | trading: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | funded: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme.",
+    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score. Follow-up 28 Nov: payout: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | consistency: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | trading: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | funded: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. Documentary follow-up 28 Nov (PR #321): stated in March 2026 rules; orders paused (not purchasable). Remaining: Confirm whether checkout reopened; March 2026 rules could not be re-read on 28 Nov 2026.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -4847,7 +4870,7 @@ evidence["dna-funded"] = {
   },
   "dna-2-phase-march-2026": {
     "checkedOn": "2026-11-28",
-    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score. Follow-up 28 Nov: payout: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | consistency: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | trading: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | funded: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme.",
+    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score. Follow-up 28 Nov: payout: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | consistency: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | trading: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | funded: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. Documentary follow-up 28 Nov (PR #321): stated in March 2026 rules; orders paused (not purchasable). Remaining: Confirm whether checkout reopened; March 2026 rules could not be re-read on 28 Nov 2026.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -4858,7 +4881,7 @@ evidence["dna-funded"] = {
   },
   "dna-rapid-march-2026": {
     "checkedOn": "2026-11-28",
-    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score. Follow-up 28 Nov: payout: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | consistency: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | trading: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | funded: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme.",
+    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score. Follow-up 28 Nov: payout: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | consistency: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | trading: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | funded: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. Documentary follow-up 28 Nov (PR #321): stated in March 2026 rules; orders paused (not purchasable). Remaining: Confirm whether checkout reopened; March 2026 rules could not be re-read on 28 Nov 2026.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -4869,7 +4892,7 @@ evidence["dna-funded"] = {
   },
   "dna-instant-march-2026": {
     "checkedOn": "2026-11-28",
-    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score. Follow-up 28 Nov: payout: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | consistency: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | trading: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | funded: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme.",
+    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score. Follow-up 28 Nov: payout: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | consistency: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | trading: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | funded: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. Documentary follow-up 28 Nov (PR #321): yes (no evaluation); orders paused (not purchasable). Remaining: Confirm whether checkout reopened; March 2026 rules could not be re-read on 28 Nov 2026.",
     "assessments": {
       "drawdown": {
         "points": 0,
@@ -5592,7 +5615,7 @@ evidence["funding-traders"] = {
 evidence["quant-tekel"] = {
   "qt-one": {
     "checkedOn": "2026-11-28",
-    "scope": "Current help article says static 6% in evaluation; funded floor versus prior marketing needs confirmation. Follow-up 28 Nov: drawdown: Help article: 6% maximum drawdown \"(Static)\" for the evaluation; homepage: \"6% target, 6% trailing drawdown\" for the same one-step plan. Funded floor not stated separately. | trading: Homepage comparison says no news rule for QT ONE; not rated while the drawdown contradiction blocks the programme.",
+    "scope": "Current help article says static 6% in evaluation; funded floor versus prior marketing needs confirmation. Follow-up 28 Nov: drawdown: Help article: 6% maximum drawdown \"(Static)\" for the evaluation; homepage: \"6% target, 6% trailing drawdown\" for the same one-step plan. Funded floor not stated separately. | trading: Homepage comparison says no news rule for QT ONE; not rated while the drawdown contradiction blocks the programme. Documentary follow-up 28 Nov (PR #321): not stated separately; available. Remaining: Ask QT which drawdown applies on the funded QT ONE account.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -5680,7 +5703,7 @@ evidence["quant-tekel"] = {
   },
   "qt-power": {
     "checkedOn": "2026-11-28",
-    "scope": "Power purchases from 11 August; 14-day cycle; funded floor and full trading freedoms still to verify. Follow-up 28 Nov: drawdown: \"8% of the initial balance\" appears under the 2-Step evaluation question; the article does not say it applies to funded accounts or that it is static.",
+    "scope": "QT POWER purchased from 11 August; funded maximum and daily loss verified in general terms covering evaluation and funded stages. 2% exposure cap reported only by a comparator, not verified.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -5701,6 +5724,11 @@ evidence["quant-tekel"] = {
         "points": 1,
         "source": "https://support.qtfunded.com/support/articles/5744325221663-qt-power",
         "reason": "\"The standard News Rule does not apply to QT Power accounts\"; existing positions can be held over weekends; only generic all-or-nothing strategies prohibited."
+      },
+      "drawdown": {
+        "points": 1,
+        "source": "https://qtfunded.quanttekel.com/terms-and-conditions-general/",
+        "reason": "QT Evaluation Stage and Funded Stages: 8% static maximum loss from initial balance, 4% daily limit using EOD values."
       }
     }
   }
@@ -7964,7 +7992,7 @@ addVariant('funderpro','funderpro-pro','daily-60','Daily 60%','Quotidien 60%','P
 Object.assign(evidence["the5ers"],{
   "the5ers-high-stakes-current": {
     "checkedOn": "2026-11-28",
-    "scope": "High Stakes Pro stage after the New (10%/5%) or Classic (8%/5%) evaluation; product page read 28 Nov 2026 (New tab displayed; Classic tab not rendered in the capture). Funded rules are shared by both entry tiers. Exact funded tier loss percentage and consistency remain unconfirmed. Follow-up 28 Nov: consistency: Re-read on 28 Nov 2026 (same evidence set as audits/CLAUDE_PROGRAMME_BATCH_2026-11-28.json): the High Stakes page, general rules FAQ (3 Nov) and payout FAQ (24 Nov) list no consistency rule; the consistency FAQ (30 Oct) says the percentage depends on account type or region without naming programmes; an official blog (Sep 2026) states a 50% funded-only rule for High Stakes; the 2-Step Plan FAQ states 50% on the Pro account for a plan whose price and 3% daily loss do not match High Stakes. Not rated until The5ers names the rule for High Stakes.",
+    "scope": "High Stakes Pro stage after the New (10%/5%) or Classic (8%/5%) evaluation; product page read 28 Nov 2026 (New tab displayed; Classic tab not rendered in the capture). Funded rules are shared by both entry tiers. Exact funded tier loss percentage and consistency remain unconfirmed. Follow-up 28 Nov: consistency: Re-read on 28 Nov 2026 (same evidence set as audits/CLAUDE_PROGRAMME_BATCH_2026-11-28.json): the High Stakes page, general rules FAQ (3 Nov) and payout FAQ (24 Nov) list no consistency rule; the consistency FAQ (30 Oct) says the percentage depends on account type or region without naming programmes; an official blog (Sep 2026) states a 50% funded-only rule for High Stakes; the 2-Step Plan FAQ states 50% on the Pro account for a plan whose price and 3% daily loss do not match High Stakes. Not rated until The5ers names the rule for High Stakes. Documentary follow-up 28 Nov (PR #321): stated: same loss limits on the Pro account; available. Remaining: Ask The5ers to confirm in writing that High Stakes Pro has no best-day rule.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -8227,6 +8255,721 @@ addVariant('sure-leverage','slf-instant-zero','static','Static loss limit','Pert
 // Current distinct SFX Instant purchases: shared catalogue ID until pricing remap; no inherited numeric preset.
 addVariant('sfx-funded','sfx-instant','instant-pro','Instant Pro','Instant Pro','Current Pro from 19 October 2026; separate purchase, not a paid add-on.','Pro depuis le 19 octobre 2026 ; offre distincte.',{"drawdown":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17653907-instant-pro-how-it-works","reason":"6% proportional trailing from peak account value, explicitly resets after payout."},"payout":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17653903-when-can-i-get-paid-in-the-instant-pro-program","reason":"Five qualifying days at 0.75% each and 4% profit per cycle; on demand, nominal 85% share."},"consistency":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17653907-instant-pro-how-it-works","reason":"20% SSI."},"trading":{"points":0.5,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17653913-can-i-trade-during-news-in-the-instant-pro-program","reason":"Restricted red-folder window ±2 minutes, including automatic executions; first violation removes affected profit, second closes account."},"funded":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17653907-instant-pro-how-it-works","reason":"2% combined floating loss closes account immediately; 1% on 300K/400K."}});
 addVariant('sfx-funded','sfx-instant','instant-flex','Instant Flex','Instant Flex','Current Flex from 19 October 2026; separate purchase, not a paid add-on.','Flex depuis le 19 octobre 2026 ; offre distincte.',{"drawdown":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17305154-instant-flex-how-it-works","reason":"5% proportional trailing from peak account value, not fixed-dollar."},"payout":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17653861-when-can-i-get-paid-in-the-instant-flex-program","reason":"Five qualifying days at 0.75% each and 4% profit per cycle; biweekly, nominal 85% share."},"consistency":{"points":1,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17305154-instant-flex-how-it-works","reason":"Explicitly no consistency rule."},"trading":{"points":0.5,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17305210-can-i-trade-during-news-in-the-instant-flex-program","reason":"Restricted red-folder window ±2 minutes, including automatic executions; first violation removes affected profit, second closes account."},"funded":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17305154-instant-flex-how-it-works","reason":"1% combined floating loss first reduces split to 40%, second closes account."}});
+
+// Recovered, non-overwriting programme audit records from 27 November branches.
+evidence["myfundedfutures"] = {...(evidence["myfundedfutures"]??{}), ...{
+  "mffu-signature-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "Current permanent Signature 5K/10K/20K, formerly Studio; simulated funded stage. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Signature permanent 5K/10K/20K, anciennement Studio ; phase financée simulée.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+        "reason": "Static loss floor throughout evaluation and sim funded, no daily loss stop."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+        "reason": "Anytime after positions closed; no buffer, waiting period or qualifying days, ordinary $100/$250 minimum."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+        "reason": "No best-day ratio in evaluation or simulated funded."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+        "reason": "News allowed; micro contracts only, Hyperprop-only platform."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+        "reason": "Daily profit caps $2,500/$5,000/$10,000, one account, live transition after five approved payouts or $5,000 total requested; live starts with limited allocation."
+      }
+    }
+  }
+}};
+evidence["top-one-futures"] = {...(evidence["top-one-futures"]??{}), ...{
+  "top-one-elite-access-intraday": {
+    "checkedOn": "2026-11-27",
+    "scope": "Elite ACCESS Intraday: EOD challenge → intraday funded. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Elite ACCESS Intraday : challenge EOD puis trailing intraday financé.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/17059267-elite-access-intraday-accounts-overview",
+        "reason": "EOD evaluation switches to intraday equity trailing, including unrealized gains; funded soft daily loss limit."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/17059773-elite-access-intraday-payout-requirements",
+        "reason": "Five qualifying profitable days, retained $1.5K–$4.5K buffer, $500 minimum, $1K–$2.5K cap and at least 50% fresh profit after first request."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17059773-elite-access-intraday-payout-requirements",
+        "reason": "40% funded consistency; none in evaluation."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17059267-elite-access-intraday-accounts-overview",
+        "reason": "High-impact news blackout two minutes on each side including SL/TP execution; contract scaling."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17059267-elite-access-intraday-accounts-overview",
+        "reason": "Risk review around three payouts; highest-profit account transitions, remaining accounts close."
+      }
+    }
+  },
+  "top-one-elite-access-static": {
+    "checkedOn": "2026-11-27",
+    "scope": "Elite ACCESS Static: static challenge → EOD funded. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Elite ACCESS Static : challenge statique puis trailing EOD financé.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17889367-elite-access-static-accounts-overview",
+        "reason": "Funded EOD trailing floor locks at starting balance + $100, with soft daily loss stop; static evaluation does not carry into funding."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/17889378-elite-access-static-payout-requirements",
+        "reason": "Five qualifying profitable days, retained $1.5K–$4.5K buffer, $500 minimum, $1K–$2.5K cap and at least 50% fresh profit after first request."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17889378-elite-access-static-payout-requirements",
+        "reason": "40% funded consistency; none in evaluation."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17889367-elite-access-static-accounts-overview",
+        "reason": "High-impact news blackout two minutes on each side including SL/TP execution; contract scaling."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/17889367-elite-access-static-accounts-overview",
+        "reason": "Risk review around three payouts; highest-profit account transitions, remaining accounts close."
+      }
+    }
+  }
+}};
+evidence["blusky-trading"] = {...(evidence["blusky-trading"]??{}), ...{
+  "blusky-launch": {
+    "checkedOn": "2026-11-27",
+    "scope": "Launch 50/100/200K after Buffer, Sim Funded, October 2026 transition policy; evaluation consistency source conflict does not change funded rating. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Launch 50/100/200K après Buffer, phase financée simulée ; politique d'octobre 2026.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.blusky.pro/en/articles/12434469-sim-funded-accounts-processing",
+        "reason": "After Buffer, Sim Funded uses fixed minimum balance; evaluation drawdown may trail."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+        "reason": "$500 minimum and $500 additional ordinary trading profit between requests, rolling seven-day caps and non-withdrawable buffer."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.blusky.pro/en/articles/14184170-evaluation-overview",
+        "reason": "No Sim Funded percentage consistency for Launch or Propel."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+        "reason": "Platform-dependent scaling, assigned contract limits, additional risk controls and restrictions may be imposed; profits outside limits may be adjusted."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account",
+        "reason": "Standard $10K aggregate profit review may pause trading and payouts; all sim accounts cease eligibility on live invitation; eligible profit enters separate Bonus Vault, live starts at zero."
+      }
+    }
+  },
+  "blusky-propel-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "Propel 25–300K after Buffer, Sim Funded; excess Buffer profit not carried over. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Propel 25–300K après Buffer ; l'excédent du profit Buffer n'est pas transféré.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.blusky.pro/en/articles/12434469-sim-funded-accounts-processing",
+        "reason": "After Buffer, Sim Funded uses fixed minimum balance; evaluation drawdown may trail."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+        "reason": "$500 minimum and $500 additional ordinary trading profit between requests, rolling seven-day caps and non-withdrawable buffer."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.blusky.pro/en/articles/14184170-evaluation-overview",
+        "reason": "No Sim Funded percentage consistency for Launch or Propel."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+        "reason": "Platform-dependent scaling, assigned contract limits, additional risk controls and restrictions may be imposed; profits outside limits may be adjusted."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account",
+        "reason": "Mandatory $10K total-profit review, risk controls and loss of sim payout eligibility on live invitation; Bonus Vault separate from live capital."
+      }
+    }
+  },
+  "blusky-orbit-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "Orbit 50/100/150/200K, Sim Funded; plan-specific payout cadence and live ceilings. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Orbit 50/100/150/200K, phase financée simulée ; seuils de retrait et de passage en réel par taille.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts",
+        "reason": "Funded floor follows closed daily profit until locked at initial capital."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts",
+        "reason": "Payout every three trading days above retained threshold, $500 minimum, rolling caps $2K–$3K depending on tier; general $500 fresh-profit rule also applies."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts",
+        "reason": "40% best day / net total profit; exceeding delays payout, not account failure."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+        "reason": "Platform-dependent scaling, assigned contract limits, additional risk controls and restrictions may be imposed; profits outside limits may be adjusted."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account",
+        "reason": "Orbit profit ceilings $10K/$12.5K/$15K/$12.5K; review can occur earlier, payouts held and sim accounts cease on live invitation."
+      }
+    }
+  },
+  "blusky-instant-sim-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "50K Instant Sim Funded; not Orbit evaluation. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Instant Sim Funded 50K ; distinct du challenge Orbit.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+        "reason": "$2K intraday trailing, locks at $51K after balance exceeds $53K; $1K daily loss limit."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+        "reason": "Only above $53K, rolling $2.5K cap; general fresh-profit requirement."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+        "reason": "21% best day / net total profit at payout eligibility."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+        "reason": "Platform-dependent scaling, assigned contract limits, additional risk controls and restrictions may be imposed; profits outside limits may be adjusted."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account",
+        "reason": "Standard $10K aggregate profit review may pause trading and payouts; all sim accounts cease eligibility on live invitation; eligible profit enters separate Bonus Vault, live starts at zero."
+      }
+    }
+  },
+  "blusky-direct-funded-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "Direct to Funded $3,500 account, not conventional nominal 50K account. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Direct to Funded, capital affiché de 3 500 $, distinct du compte nominal 50K.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+        "reason": "$2.5K static loss limit, $1K minimum balance and $2K daily loss limit."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+        "reason": "Withdraw only above $3.5K, $3K rolling weekly cap, split 50% first 30 trading days then 80%."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+        "reason": "21% net profit best-day ratio."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+        "reason": "Platform-dependent scaling, assigned contract limits, additional risk controls and restrictions may be imposed; profits outside limits may be adjusted."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+        "reason": "Fourth negative trading day in any rolling ten traded days closes account; standard brokerage review also applies."
+      }
+    }
+  }
+}};
+evidence["daytraders-com"] = {...(evidence["daytraders-com"]??{}), ...{
+  "daytraders-s2f-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "S2F Instant 25/50/150K simulated funded, no evaluation. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "S2F Instant 25/50/150K, compte financé simulé sans challenge.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+        "reason": "EOD trailing; daily loss stop for 50K and 150K only."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://daytraders.com/help/articles/17684752-s2f-payouts",
+        "reason": "Ten new qualifying days, fresh profit target each cycle ($2K–$10K first request), $500 minimum and $1K–$3K per-request cap."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://daytraders.com/help/articles/17684752-s2f-payouts",
+        "reason": "20% best-day share of current cycle profit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17704089-trading-hours-holidays-and-overnight-positions",
+        "reason": "News trading is allowed; the same article says close trades at session end but also permits overnight/weekend holding. Clarify that conflict before holding through a close."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://daytraders.com/help/articles/17697925-moving-from-pro-or-s2f-to-live",
+        "reason": "Discretionary live invitation closes sim accounts; excess simulated balances generally forfeited unless credited at risk-team discretion. For requests totaling at least $10K that day, half becomes live loss allocation."
+      }
+    }
+  },
+  "daytraders-s2l-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "Straight to Live after S2L evaluation; Core/Edge/Ultra actual live accounts, not invited sim traders. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Straight to Live après challenge S2L, comptes réels Core/Edge/Ultra ; hors invitations depuis la simulation.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://daytraders.com/help/articles/17697922-live-accounts",
+        "reason": "Live intraday trailing with daily loss stop; lock at starting balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17697923-live-payouts",
+        "reason": "Daily uncapped withdrawals after floor locks; permanent $1K reserve, $500 minimum and 80% share."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://daytraders.com/help/articles/17697923-live-payouts",
+        "reason": "No live best-day ratio or minimum daily profit for payouts."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17704089-trading-hours-holidays-and-overnight-positions",
+        "reason": "News trading is allowed; the same article says close trades at session end but also permits overnight/weekend holding. Clarify that conflict before holding through a close."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17697922-live-accounts",
+        "reason": "Only one live account tradeable initially until floor locks or account fails; risk manager enables next. Cannot hold sim and live simultaneously."
+      }
+    }
+  }
+}};
+evidence["uprofit-trader"] = {...(evidence["uprofit-trader"]??{}), ...{
+  "uprofit-day-soft": {
+    "checkedOn": "2026-11-27",
+    "scope": "Current Soft virtual live, October 8 payout rules; 50K funded risk example. Not legacy DAY. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Soft Virtual Live actuel, règles de retrait du 8 octobre ; exemple 50K. Hors ancien DAY.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://uprofit.com/help/uprofit-soft-live-virtual-50k-52063647938580",
+        "reason": "50K: $2,000 trailing loss floor locks at initial balance; $1,100 soft daily loss limit."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://uprofit.com/help/uprofit-soft-payout-policy-52063548100500",
+        "reason": "Three profitable days per request, permanent $2,500 safety net on 50K, gross cap of 3% of account size per request."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://uprofit.com/help/uprofit-soft-payout-policy-52063548100500",
+        "reason": "Best trading day must be strictly below 40% of cycle profits; resets on each request."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://uprofit.com/help/uprofit-soft-live-virtual-50k-52063647938580",
+        "reason": "Scaled contract allocation and no swing holding across sessions."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://uprofit.com/help/uprofit-soft-payout-policy-52063548100500",
+        "reason": "Account closes after six withdrawals."
+      }
+    }
+  },
+  "uprofit-day-flex": {
+    "checkedOn": "2026-11-27",
+    "scope": "Current Flex virtual live, October 8 payout rules; 50K funded risk example. Not legacy DAY. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Flex Virtual Live actuel, règles de retrait du 8 octobre ; exemple 50K. Hors ancien DAY.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://uprofit.com/help/uprofit-flex-live-virtual-50k-52062598543508",
+        "reason": "50K: $2,000 trailing loss floor locks at initial balance; no daily loss limit."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://uprofit.com/help/uprofit-flex-payout-policy-52062715698580",
+        "reason": "Three profitable days per request, permanent $2,500 safety net on 50K, gross cap of 3% of account size per request."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://uprofit.com/help/uprofit-flex-payout-policy-52062715698580",
+        "reason": "Best trading day must be strictly below 40% of cycle profits; resets on each request."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://uprofit.com/help/uprofit-flex-live-virtual-50k-52062598543508",
+        "reason": "Scaled contract allocation and no swing holding across sessions."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://uprofit.com/help/uprofit-flex-payout-policy-52062715698580",
+        "reason": "Account closes after six withdrawals."
+      }
+    }
+  },
+  "uprofit-one-50k": {
+    "checkedOn": "2026-11-27",
+    "scope": "ONE 50K virtual live. Public payout checklist has no funded percentage ratio but absence not expressly confirmed; no final stars until confirmed. Static floor changes after first payout. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "ONE 50K Virtual Live. Absence de consistency chiffrée financée à confirmer ; pas de note finale. Seuil fixe modifié au premier retrait.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://uprofit.com/help/uprofit-one-payout-policy-49177986296468",
+        "reason": "Initially $1,000 static drawdown; after first payout policy says drawdown is adjusted to $0. Exact dashboard convention requires confirmation."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://uprofit.com/help/uprofit-one-payout-policy-49177986296468",
+        "reason": "Five $150+ profitable days per request; 50% of available profit and $2,000 cap; no SafetyNet, new profits required."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://uprofit.com/help/how-does-the-virtual-live-stage-of-the-one-50k-account-work-49177546289300",
+        "reason": "Two E-minis or 20 micros, no swing between sessions."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://uprofit.com/help/uprofit-one-payout-policy-49177986296468",
+        "reason": "Maximum six withdrawals per account; compliance with best-practices rules required."
+      }
+    }
+  }
+}};
+evidence["lvlup-futures"] = {...(evidence["lvlup-futures"]??{}), ...{
+  "lvlup-futures-lvlup": {
+    "checkedOn": "2026-11-27",
+    "scope": "Lvlup account, funded baseline; separate provider trader agreement not reviewed. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Compte Lvlup, phase financée standard ; contrat distinct du partenaire non relu.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://lvlupfutures.com/rules",
+        "reason": "5% EOD trailing, locks at initial balance after 6% profit; no daily loss stop."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://lvlupfutures.com/rules",
+        "reason": "14-day cycle, cap 10% of initial account size; no five-profitable-day requirement; payout does not reset floor."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://lvlupfutures.com/rules",
+        "reason": "40% of accumulated profit checked at payout; failure delays eligibility."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://lvlupfutures.com/rules",
+        "reason": "News, own-account copying and no minimum trade duration allowed; no overnight/weekend holding and contract limits."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://lvlupfutures.com/rules",
+        "reason": "30-day inactivity requirement and nonnumeric strategy switching/all-in restrictions; funding and payout review."
+      }
+    }
+  },
+  "lvlup-futures-starter": {
+    "checkedOn": "2026-11-27",
+    "scope": "Starter account, funded baseline; separate provider trader agreement not reviewed. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Compte Starter, phase financée standard ; contrat distinct du partenaire non relu.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://lvlupfutures.com/rules",
+        "reason": "EOD trailing, size-dependent distance; no daily loss stop."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://lvlupfutures.com/rules",
+        "reason": "Five profitable days per payout, up to 50% of generated profit and $1K–$3K cap."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://lvlupfutures.com/rules",
+        "reason": "40% applies only to evaluation; explicitly no funded consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://lvlupfutures.com/rules",
+        "reason": "News, own-account copying and no minimum trade duration allowed; no overnight/weekend holding and contract limits."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://lvlupfutures.com/rules",
+        "reason": "Permanent closure after fifth approved payout, even if profit remains."
+      }
+    }
+  }
+}};
+evidence["blue-guardian"] = {...(evidence["blue-guardian"]??{}), ...{
+  "bg-one-nano-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "1 Step Nano (CFD). Help article updated 23 November 2026; funded stage; no add-ons. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "1 Step Nano (CFD). Article du centre d’aide mis à jour le 23 novembre 2026 ; phase financée ; sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426784-1-step-nano-rules",
+        "reason": "6% trailing below the highest closed balance, locking at the starting balance once reached."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426784-1-step-nano-rules",
+        "reason": "Every 7 days, after 5 trading days with at least 0.5% profit."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426784-1-step-nano-rules",
+        "reason": "Best day below 50% of total profit, in evaluation and funded; not met means the payout stays unavailable, no breach."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426784-1-step-nano-rules",
+        "reason": "Funded: no opening or closing within 5 minutes of high-impact news on affected instruments. Overnight, weekend and own EAs allowed. Further funded rules on some plans (2-minute minimum hold, more than 80% margin treated as all-or-nothing)."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://blueguardian.com/faq/articles/18426784-1-step-nano-rules",
+        "reason": "No Guardian Shield on Nano accounts and no other funded condition beyond those counted above."
+      }
+    }
+  },
+  "bg-bnpl-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "Buy Now Pay Later (CFD). Help article updated 23 November 2026; funded stage; no add-ons. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "Buy Now Pay Later (CFD). Article du centre d’aide mis à jour le 23 novembre 2026 ; phase financée ; sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426786-buy-now-pay-later-bnpl-rules",
+        "reason": "8% trailing below the highest closed balance, locking at the starting balance once reached."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426786-buy-now-pay-later-bnpl-rules",
+        "reason": "On demand after 5 trading days with at least 0.5% profit; no cap stated."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426786-buy-now-pay-later-bnpl-rules",
+        "reason": "Funded best day below 20% of profit in the payout period."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426786-buy-now-pay-later-bnpl-rules",
+        "reason": "Funded: no opening or closing within 5 minutes of high-impact news on affected instruments; overnight, weekend and own EAs allowed."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426786-buy-now-pay-later-bnpl-rules",
+        "reason": "Guardian Shield closes all open trades at a combined 1% floating loss; the first trigger permanently cuts the split to 50%, the second permanently breaches the account."
+      }
+    }
+  }
+}};
+evidence["funding-pips"] = {...(evidence["funding-pips"]??{}), ...{
+  "pips-two-step-flex": {
+    "checkedOn": "2026-11-27",
+    "scope": "2-Step Flex, Bi-Weekly 80% split chosen at purchase (the 95% split, also chosen at purchase, needs 3 profitable days per cycle). Help article read 27 November 2026; Master stage; default reward cycle; no add-on. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "2-Step Flex, part Bi-Weekly 80 % choisie à l’achat (la part de 95 %, aussi choisie à l’achat, exige 3 jours gagnants par cycle). Article du centre d’aide lu le 27 novembre 2026 ; compte Master ; cycle de récompense par défaut ; sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex",
+        "reason": "12% static floor below the starting account size."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex",
+        "reason": "Bi-weekly reward at 80%, minimum 1% of account size; no cap stated."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex",
+        "reason": "The 35% consistency score applies to the On Demand cycle only."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex",
+        "reason": "Master: profit from trades opened or closed within 5 minutes of high-impact news or speeches is deducted (trades opened 5+ hours before are exempt); overnight and weekend positions are closed automatically unless the Swing add-on was bought at purchase."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex",
+        "reason": "Master onboarding (KYC, responsible-trading review, agreement) and a 30-day inactivity breach; no funded profit target. Loss limits are counted under drawdown."
+      }
+    }
+  },
+  "pips-one-step-lite": {
+    "checkedOn": "2026-11-27",
+    "scope": "1-Step Lite. Help article read 27 November 2026; Master stage; default reward cycle; no add-on. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "1-Step Lite. Article du centre d’aide lu le 27 novembre 2026 ; compte Master ; cycle de récompense par défaut ; sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53459210586769-1-Step-Lite",
+        "reason": "2% static floor below the starting account size (narrow, but static)."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53459210586769-1-Step-Lite",
+        "reason": "Daily 80% rewards, as many requests a day as wanted once profit reaches 1%; no cap stated."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53459210586769-1-Step-Lite",
+        "reason": "The page says the model has only two rules: daily loss and maximum loss."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53459210586769-1-Step-Lite",
+        "reason": "Master: profit from trades opened or closed within 5 minutes of high-impact news or speeches is deducted (trades opened 5+ hours before are exempt); overnight and weekend positions are closed automatically unless the Swing add-on was bought at purchase."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53459210586769-1-Step-Lite",
+        "reason": "Master onboarding (KYC, responsible-trading review, agreement) and a 30-day inactivity breach; no funded profit target. Loss limits are counted under drawdown."
+      }
+    }
+  },
+  "pips-two-step-lite": {
+    "checkedOn": "2026-11-27",
+    "scope": "2-Step Lite. Help article read 27 November 2026; Master stage; default reward cycle; no add-on. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "2-Step Lite. Article du centre d’aide lu le 27 novembre 2026 ; compte Master ; cycle de récompense par défaut ; sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53459248360721-2-Step-Lite",
+        "reason": "2% static floor below the starting account size (narrow, but static)."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53459248360721-2-Step-Lite",
+        "reason": "Daily 80% rewards, as many requests a day as wanted once profit reaches 1%; no cap stated."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53459248360721-2-Step-Lite",
+        "reason": "The page says the model has only two rules: daily loss and maximum loss."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53459248360721-2-Step-Lite",
+        "reason": "Master: profit from trades opened or closed within 5 minutes of high-impact news or speeches is deducted (trades opened 5+ hours before are exempt); overnight and weekend positions are closed automatically unless the Swing add-on was bought at purchase."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53459248360721-2-Step-Lite",
+        "reason": "Master onboarding (KYC, responsible-trading review, agreement) and a 30-day inactivity breach; no funded profit target. Loss limits are counted under drawdown."
+      }
+    }
+  },
+  "pips-one-step-labs": {
+    "checkedOn": "2026-11-27",
+    "scope": "1 Step Labs, purchases from 19 November 2026. Consistency not assessed: the page neither states nor excludes a rule, so no rating is published. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "1 Step Labs, achats à partir du 19 novembre 2026. Consistency non évaluée : la page ne mentionne ni n’exclut de règle, donc aucune note n’est publiée.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53187088949777-1-Step-Labs",
+        "reason": "3% maximum loss trailing the higher end-of-day balance or equity, locking at the starting balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53187088949777-1-Step-Labs",
+        "reason": "Daily requests, but the account must be 3% in profit each time, the day must be up at least $200 and each request is capped at $1,000."
+      },
+      "trading": {
+        "points": 0,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53187088949777-1-Step-Labs",
+        "reason": "Master: overnight and weekend holding not allowed and no add-on can enable it; news-window profits deducted."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/53187088949777-1-Step-Labs",
+        "reason": "Master onboarding (KYC, responsible-trading review, agreement) and a 30-day inactivity breach; no funded profit target. Loss limits are counted under drawdown."
+      }
+    }
+  }
+}};
+evidence["e8-markets"] = {...(evidence["e8-markets"]??{}), ...{
+  "e8-classic-v2-current": {
+    "checkedOn": "2026-11-27",
+    "scope": "E8 Classic v2, Forex/CFD, default 2% daily drawdown configuration; the variant without daily drawdown has the same rating. Help article read 27 November 2026. Recovered from 27 Nov audit branch; current checkout price not rechecked.",
+    "scopeFr": "E8 Classic v2, Forex/CFD, configuration par défaut avec perte journalière de 2 % ; la variante sans perte journalière a la même note. Article du centre d’aide lu le 27 novembre 2026.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://intercom.help/e8/en/articles/18310577-e8-classic-v-2",
+        "reason": "4% static maximum loss from the initial balance: a fixed limit that never trails or moves, in the challenge and in the Performance stage."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://intercom.help/e8/en/articles/18310577-e8-classic-v-2",
+        "reason": "Payout requests can be submitted daily once the $100 minimum profit is reached; no buffer or cap described; 80% or 90% share."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://intercom.help/e8/en/articles/18310577-e8-classic-v-2",
+        "reason": "The article states zero consistency rules."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://intercom.help/e8/en/articles/18310577-e8-classic-v-2",
+        "reason": "In the Performance stage only 40% of profits made in the news window are eligible; copy trading only across the trader’s own accounts; EAs allowed if not shared between users (trading policies). Weekend holding not stated; it would not change the score."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://intercom.help/e8/en/articles/18310577-e8-classic-v-2",
+        "reason": "Same drawdown limits in the Performance stage and no time limit; the article says the payout minimum is the only requirement. One closed trade every 60 days is ordinary activity."
+      }
+    }
+  }
+}};
+(variants["funding-pips"]??={})["pips-two-step-flex"]=[{"id":"on-demand","label":"2-Step Flex On Demand 100%","labelFr":"2-Step Flex On Demand 100 %","evidence":{"checkedOn":"2026-11-27","scope":"On Demand 100% cycle selected at Master: 35% consistency score, 7 profitable days of at least 0.5% and the Striking System.","scopeFr":"Cycle On Demand 100 % choisi au compte Master : score de consistency de 35 %, 7 jours gagnants d’au moins 0,5 % et Striking System.","assessments":{"drawdown":{"points":1,"source":"https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex","reason":"12% static floor below the starting account size."},"payout":{"points":0.5,"source":"https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex","reason":"On demand, but only after 7 profitable days of at least 0.5% of account size; both conditions reset after each reward."},"consistency":{"points":0.5,"source":"https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex","reason":"No day may exceed 35% of total profit; reward requests are blocked until the score comes back down."},"trading":{"points":0.5,"source":"https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex","reason":"Master: profit from trades opened or closed within 5 minutes of high-impact news or speeches is deducted (trades opened 5+ hours before are exempt); overnight and weekend positions are closed automatically unless the Swing add-on was bought at purchase."},"funded":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex","reason":"Striking System: a trade idea losing 1% of account size gets a warning; the 2nd halves the split, the 3rd cuts it to 20%, the 4th breaches the account. Warnings do not reset between cycles."}}}}];
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA
