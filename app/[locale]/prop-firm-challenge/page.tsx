@@ -17,6 +17,9 @@ import { localizedGuidePath } from '../../lib/guideI18n';
 import { rich } from '../../lib/rich';
 import { td } from '../../lib/dataI18n';
 import IntentLink from '../../components/IntentLink';
+import ChallengeExplorer from '../../components/challenge/ChallengeExplorer';
+import { challengeCatalog } from '../../lib/challengeCatalog';
+import { challengeExplorerCopy } from '../../lib/challengeExplorerI18n';
 
 const PATH = '/prop-firm-challenge';
 const PUBLISHED_AT = '2026-10-29';
@@ -162,6 +165,8 @@ export default async function PropFirmChallengePage({ params }: Props) {
   const locale: Locale = isLocale(raw) ? raw : 'en';
   const t = getMessages(locale);
   const c = t.challenge;
+  const x = challengeExplorerCopy(locale);
+  const offers = challengeCatalog(locale);
   const L = (path: string) => localePath(locale, path);
   const G = (slug: string) => localizedGuidePath(locale, slug);
   const dt = (text?: string) => td(locale, text);
@@ -257,7 +262,8 @@ export default async function PropFirmChallengePage({ params }: Props) {
             <time dateTime={updatedAt}>{fmt(t.guide.updated, { date: updatedAt })}</time>
           </div>
           <div className="actions">
-            <a href="#compare" className="btn btn-primary">{c.ctaCompare}</a>
+            <a href="#explorer" className="btn btn-primary">{c.ctaCompare}</a>
+            <a href="#find-my-challenge" className="btn">{x.finderCta}</a>
             <IntentLink href={L('/prop-firm-comparison')} className="btn">{c.ctaTable}</IntentLink>
           </div>
         </div>
@@ -267,6 +273,23 @@ export default async function PropFirmChallengePage({ params }: Props) {
           <div><dt>{c.factLowest}</dt><dd>{fees.length ? formatUsd(fees[0]) : '—'}</dd></div>
           <div><dt>{c.factMedian}</dt><dd>{medianFee ? formatUsd(medianFee) : '—'}</dd></div>
         </dl>
+      </section>
+
+      {/* Challenge explorer (Geyer, 2026-11-28): filters, cards, three-way comparison, finder. */}
+      <section className="section pr-challenge-explorer" id="explorer" aria-labelledby="explorer-title">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">{x.eyebrow}</div>
+            <h2 id="explorer-title">{fmt(x.title, { count: offers.length })}</h2>
+          </div>
+          <p className="section-note">{x.lead}</p>
+        </div>
+        <ChallengeExplorer
+          locale={locale}
+          copy={x}
+          offers={offers}
+          typeLabels={{ Challenge: tv(t, 'Challenge'), 'Instant funding': tv(t, 'Instant funding'), 'Futures evaluation': tv(t, 'Futures evaluation'), Scaling: tv(t, 'Scaling') }}
+        />
       </section>
 
       <article className="pr-prose">

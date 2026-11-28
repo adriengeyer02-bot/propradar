@@ -8,6 +8,8 @@ import { notFound } from 'next/navigation';
 import FirmLogo from '../../../components/FirmLogo';
 import PartnerCodeOffer from '../../../components/PartnerCodeOffer';
 import ProgrammeFlexibility from '../../../components/ProgrammeFlexibility';
+import FoldBody from '../../../components/firm/FoldBody';
+import { challengeExplorerCopy } from '../../../lib/challengeExplorerI18n';
 import SourceSubmission from '../../../components/SourceSubmission';
 import ClosedFirmNotice, { ClosedFirmArchiveLabel } from '../../../components/ClosedFirmNotice';
 import { firmLogoFor } from '../../../lib/firmLogos';
@@ -540,6 +542,7 @@ export default async function FirmPage({ params }: Props) {
   const tx = (text?: string | null) => td(locale, toEnglishText(text ?? ''));
   const ruleTx = (text: string) => td(locale, text);
   const f = t.firm;
+  const x = challengeExplorerCopy(locale);
   const v = (value: string) => tv(t, value);
   const L = (path: string) => localePath(locale, path);
   const lower = (value: string) => (locale === 'de' ? value : value.toLowerCase());
@@ -1322,6 +1325,11 @@ export default async function FirmPage({ params }: Props) {
                   </a>
                 ) : null}
                 {firm.status !== 'Fermée' && firm.partnerOffer?.href ? <small className="pr-program-affiliate-note">{f.partnerOffer.discAffiliate}</small> : null}
+                {firm.status !== 'Fermée' && product.type !== 'Scaling' ? (
+                  <Link className="pr-link pr-program-compare" href={`${L('/prop-firm-challenge')}?${new URLSearchParams({ compare: `${firm.slug}:${product.id}` }).toString()}#explorer`}>
+                    {x.compareLink} <span aria-hidden="true">→</span>
+                  </Link>
+                ) : null}
               </article>
             ))}
             {firm.products.length === 1 && firm.status !== 'Fermée' ? <ProductContext firm={firm} product={firm.products[0]} f={f} locale={locale} /> : null}
@@ -1637,6 +1645,7 @@ export default async function FirmPage({ params }: Props) {
 
       </section>
 
+      <p className="container pr-fineprint pr-technical-lead"><strong>{x.firmPageTitle}</strong> · {x.firmPageLead}</p>
       <section className="container pr-section" id="regulatory" aria-labelledby={`legal-${firm.slug}`}>
         <header className="pr-section-head">
           <div>
@@ -1648,6 +1657,7 @@ export default async function FirmPage({ params }: Props) {
             <span>{f.checkedLabel} <time dateTime={regulatoryAudit.lastChecked}>{regulatoryAudit.lastChecked}</time></span>
           </div>
         </header>
+        <FoldBody sectionId="regulatory" more={x.firmPageMore} less={x.firmPageLess}>
         <p className="pr-section-lead">{tx(regulatoryAudit.summary)}</p>
 
         <EntityChain firmName={firm.name} entities={regulatoryAudit.entities} labels={f.chain} auditHref={`${L('/audit')}#jurisdictions`} locale={locale} />
@@ -1676,6 +1686,7 @@ export default async function FirmPage({ params }: Props) {
             )}
           </details>
         </div>
+        </FoldBody>
       </section>
 
       <section className="container pr-section" id="audit" aria-labelledby={`reviews-${firm.slug}`}>
@@ -1689,6 +1700,7 @@ export default async function FirmPage({ params }: Props) {
             <span>{f.payoutCheck} <time dateTime={firm.reviewSignals.lastSignalCheck}>{firm.reviewSignals.lastSignalCheck}</time></span>
           </div>
         </header>
+        <FoldBody sectionId="audit" more={x.firmPageMore} less={x.firmPageLess}>
 
         {firm.payoutProofs?.length ? (
           <div className="pr-payout-proofs" aria-labelledby={`payout-proofs-${firm.slug}`}>
@@ -1844,6 +1856,7 @@ export default async function FirmPage({ params }: Props) {
             </div>
           </div>
         </details>
+        </FoldBody>
       </section>
 
       <section className="container pr-section" id="guides" aria-labelledby={`guides-${firm.slug}`}>
@@ -1853,6 +1866,7 @@ export default async function FirmPage({ params }: Props) {
             <h2 id={`guides-${firm.slug}`}>{fmt(f.guidesTitle, { name: firm.name })}</h2>
           </div>
         </header>
+        <FoldBody sectionId="guides" more={x.firmPageMore} less={x.firmPageLess}>
         {locale !== 'en' ? <p className="pr-fineprint">{f.guidesNote}</p> : null}
         <ul className="pr-link-list">
           {editorialMentions.map(({ brief, section }) => (
@@ -1880,6 +1894,7 @@ export default async function FirmPage({ params }: Props) {
             );
           })}
         </ul>
+        </FoldBody>
       </section>
 
       <section className="container pr-section" id="faq" aria-labelledby={`faq-${firm.slug}`}>
@@ -1909,6 +1924,7 @@ export default async function FirmPage({ params }: Props) {
             <span className={`pr-tag pr-tone-${badgeTone(auditStatusClass(firm.auditStatus))}`}>{v(toEnglishText(firm.auditStatus))}</span>
           </div>
         </header>
+        <FoldBody sectionId="sources" more={x.firmPageMore} less={x.firmPageLess}>
         <div className="pr-sources-grid">
           <div className="pr-sources-main">
             <p className="pr-section-lead">{tx(firm.auditSummary)}</p>
@@ -1959,6 +1975,7 @@ export default async function FirmPage({ params }: Props) {
             </RevealOnView>
           ) : null}
         </div>
+        </FoldBody>
       </section>
     </main>
   );

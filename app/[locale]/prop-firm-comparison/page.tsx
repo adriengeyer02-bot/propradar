@@ -6,6 +6,7 @@ import { toEnglishText } from '../../lib/i18n';
 import { latestReviewDate } from '../../lib/riskTone';
 import { SITE_URL } from '../../lib/site';
 import ComparatorClient from './ComparatorClient';
+import ChallengeEntry from '../../components/challenge/ChallengeEntry';
 
 // Built once per build: the browser receives the slim rows, never the full profiles.
 const FIRMS = listedFirms.map(toComparatorFirm);
@@ -49,6 +50,7 @@ export default async function ComparatorPage({ params }: { params: Promise<{ loc
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(comparatorSchema(locale)).replace(/</g, '\\u003c') }} />
+      <ChallengeEntry locale={locale} />
       <ComparatorClient
         locale={locale}
         ui={{ compare: t.compare, table: t.table, values: t.values, styles: t.styles }}
