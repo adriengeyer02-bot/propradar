@@ -586,6 +586,81 @@ const evidence:Record<string,Record<string,ProgrammeEvidence>>={
     }
   }
 };
+evidence.tradeday = {
+  "tradeday-quick-pay": {
+    "checkedOn": "2026-11-28",
+    "scope": "TradeDay 2.0 Quick Pay, new purchases; Funded Sim baseline, live transition included. Both evaluation drawdown options converge to intraday funded.",
+    "scopeFr": "Quick Pay 2.0, nouveaux achats ; compte simulé financé et transition live. Les deux modes d'évaluation deviennent intraday en phase financée.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405228-what-is-quick-pay-",
+        "reason": "Intraday trailing in Funded Sim for both evaluation types; gross profits include prior payouts."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405228-what-is-quick-pay-",
+        "reason": "Day-one eligibility, $250 minimum and no payout buffer; tiered share 50% below $4,000 retained profit and 80% above, split proportionally."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405228-what-is-quick-pay-",
+        "reason": "30% evaluation consistency only; explicitly absent in Funded Sim."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889-what-are-the-rules-for-funded-funded-sim-and-funded-live-traders-",
+        "reason": "Permitted trading hours, products and position limits; tier-one news profits excluded under the published funded rules."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000353468-quick-pay-funded-sim-path-to-live-trading",
+        "reason": "Mandatory review and trading pause at $10,000 gross profit; excess profit forfeited. Three-month cooling-off after loss of live account."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405228-what-is-quick-pay-"
+    }
+  },
+  "tradeday-fast-pass": {
+    "checkedOn": "2026-11-28",
+    "scope": "TradeDay 2.0 Fast Pass, opened on or after 26 July 2026; Funded Sim baseline, live transition included.",
+    "scopeFr": "Fast Pass 2.0, comptes ouverts à partir du 26 juillet 2026 ; compte simulé financé et transition live.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889-what-are-the-rules-for-funded-funded-sim-and-funded-live-traders-",
+        "reason": "EOD trailing in Funded Sim; locks at initial balance, including on first payout request per payout policy."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy",
+        "reason": "Five qualifying winning days ($100–250 by tier), fresh net profit and $250 minimum; 50% maximum withdrawal with $750–2,250 tier caps. 80% share."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy",
+        "reason": "45% best day divided by cumulative gross profits including prior payouts; not a per-cycle net denominator."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889-what-are-the-rules-for-funded-funded-sim-and-funded-live-traders-",
+        "reason": "Permitted trading hours, products and position limits; tier-one news profits excluded under published funded rules."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404097-fast-pass-funded-sim-route-to-funded-live",
+        "reason": "Mandatory live transition at fifth payout request or earlier; simulated account closes and new live account starts at zero with buffer and position limits. Three-month cooling-off after live loss."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 80,
+      "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy"
+    }
+  }
+};
 // New catalogue entries, verified against current official plan documentation.
 evidence.topstep['topstep-static-combine-current'] = {
   "checkedOn": "2026-11-27",
@@ -733,7 +808,7 @@ addVariant('ftmo','ftmo-two-step-current','swing-account','Swing account','Compt
   'CFD 2-Step Swing choisi à la commande ; levier de base 1:30, passage de Standard vers Swing impossible.',
   {trading:{points:1,source:'https://ftmo.com/faq/what-is-the-swing-account-type-and-how-does-it-work/',reason:'No special news or market-close holding restrictions; reduced base leverage 1:30, general forbidden practices still apply.'}});
 const fnPayoutOptions='https://help.fundednext.com/en/articles/10701585-how-often-will-i-receive-my-performance-reward';
-const fnOnDemand='https://help.fundednext.com/en/articles/15586820-does-fundednext-cfds-offer-on-demand-performance-rewards';
+const fnOnDemand=fnPayoutOptions;
 for(const [id,loss,cohort,cohortFr] of [
   ['fundednext-stellar-two-current',10,'Current 2-Step checkout','2-Step actuel à la commande'],
   ['fundednext-stellar-lite-current',8,'Lite purchase/reset from 12 October 2026','Lite acheté/réinitialisé à partir du 12 octobre 2026']
