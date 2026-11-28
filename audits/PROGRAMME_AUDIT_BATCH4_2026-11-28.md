@@ -30,3 +30,36 @@ UX handoff: separate branch from latest main; improve challenge discovery and co
 - Existing exact product IDs verified against firm-updates.json blob; no company scores or catalogue data modified. Cumulative 31 complete assessments based on previous count. 72 regression assertions prepared, execution/build pending.
 - Visible label changed to Programme rating / Note du programme and equivalents across 15 locales. Internal names and formula unchanged; the rating covers funded-stage rules, not overall commercial value or safety.
 - FundedNext variants independently corroborated by the 16 October reward FAQ (both 2-Step and Lite). Its current Lite guide has conflicting standard-cycle text, so retain date-specific FAQ as authority for the standard cycle and record discrepancy for review.
+
+## Consolidated additional batch — 2026-11-28
+
+18 complete catalogue entries/variants (3 partial). Three E8 Futures offers are also listed under E8 Markets; shared duplicate catalogue IDs are not unique programmes. Exact product IDs verified against the existing firm-updates blob. No global rating changes or price mutations. All criteria have source URLs in programmeFlexibility.ts.
+
+| Firm | Product ID | Stars |
+|---|---|---:|
+| apex-trader-funding | apex-eod-current | 2 |
+| apex-trader-funding | apex-intraday-current | 1.5 |
+| e8-markets | e8-one-current | 2 |
+| e8-markets | e8-pro-current | 3.5 |
+| e8-markets | e8-zero-current | 2 |
+| e8-futures | e8-zero-max | 2 |
+| e8-futures | e8-zero-starter | 2 |
+| e8-markets | e8-signature-current | 1.5 |
+| e8-futures | e8-signature-futures | 1.5 |
+| funding-pips | pips-one-step-flex | 3.5 |
+| funding-pips | pips-one-step-flex / on-demand | 2 |
+| funding-pips | pips-two-step-standard | 3.5 |
+| funding-pips | pips-two-step-standard / on-demand | 2 |
+| funding-pips | pips-two-step-standard / weekly-60 | 3.5 |
+| funding-pips | pips-two-step-pro | 3.5 |
+| funding-pips | pips-two-step-pro / on-demand | 2 |
+| funding-pips | pips-zero-direct | 0 |
+| funded-trading-plus | ftp-pnpl-current | 1.5 |
+| funded-trading-plus | ftp-express-current | Partial |
+| funded-trading-plus | ftp-classic-current | Partial |
+| funded-trading-plus | ftp-instant-current | Partial |
+
+- E8 Zero current purchase cohort has four payouts, not five (official article contains stale five-payout introductory wording; explicit 1 October cutoff and FAQ resolve). E8 One FAQ says 4% dynamic/3% daily whereas custom-account pricing FAQ says 6%/4%; do not auto-preset loss percentage. Payout split varies. E8 duplicate listings not independent unique products.
+- FundingPips scheduled vs on-demand routes distinguished. Current official pages report 80% bi-weekly Flex, and 100% on-demand rather than prior monthly wording; Standard and Pro also have on-demand. Warning system explicitly applies on on-demand routes; no automatic 100% split preset because strikes can reduce it. Current Pro evaluation minimum differs from prior audit, and newer catalogue also mentions Flex/Labs/Lite not yet mapped to exact product IDs. Product cards and pricing need a subsequent coordinated correction. Zero has 15% consistency, 1% floating open-risk cap and seven profitable days in rolling 30 days.
+- FT+ Express/Classic/Instant left partial: source date/version and funded details require confirmation; Express page reports a last update after current date. PNPL rating scoped to the specific published rules, not necessarily every newer Activation Account. The5ers conflicts unresolved.
+- Test assertions added (93 expected). No execution of full build or visual QA. One atomic commit for code/tests/audit; no production deployment. Existing programme rating formula unchanged.

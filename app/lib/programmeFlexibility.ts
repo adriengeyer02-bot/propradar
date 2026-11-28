@@ -661,6 +661,570 @@ evidence.tradeday = {
     }
   }
 };
+// Consolidated programme audit, 2026-11-28.
+evidence["apex-trader-funding"] = {
+  "apex-eod-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current non-legacy PA, simulated funded stage.",
+    "scopeFr": "Compte PA actuel, hors Legacy ; phase financée simulée.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/",
+        "reason": "End-of-day trailing maximum loss, enforced continuously."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+        "reason": "Five qualifying days ($250/day on 50K), payout caps, $500 minimum and safety net; 100% split."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+        "reason": "Best day must be strictly below 50% of profit since last approved payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://apextraderfunding.com/help-center/uncategorized/prohibited-activities/",
+        "reason": "No automation or overnight market-close positions; ordinary news trading allowed, news-chasing prohibited."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+        "reason": "PA closes after six payouts; tier-based position limits and daily loss pauses apply."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 100,
+      "source": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/"
+    }
+  },
+  "apex-intraday-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current non-legacy PA, simulated funded stage.",
+    "scopeFr": "Compte PA actuel, hors Legacy ; phase financée simulée.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-performance-accounts-pa/",
+        "reason": "Intraday trailing maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "reason": "Five qualifying days ($200/day on 50K), payout caps, $500 minimum and safety net; 100% split."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "reason": "Best day must be strictly below 50% of profit since last approved payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://apextraderfunding.com/help-center/uncategorized/prohibited-activities/",
+        "reason": "No automation or overnight market-close positions; ordinary news trading allowed, news-chasing prohibited."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+        "reason": "PA closes after six payouts; tier-based position limits and daily loss pauses apply."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "profitSplit": 100,
+      "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-performance-accounts-pa/"
+    }
+  }
+};
+evidence["e8-markets"] = {
+  "e8-one-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Classic/perpetual, current funded rules; conflicting 4% vs 6% preset left unselected.",
+    "scopeFr": "Classic/perpetual, phase financée ; valeur de drawdown par défaut contradictoire (4 % ou 6 %).",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.e8markets.com/en/articles/11775980-e8-one",
+        "reason": "Dynamic maximum loss moves with each higher closed balance, not end-of-day; locks at initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.e8markets.com/en/articles/9323884-payout-request-on-e8-one",
+        "reason": "No per-request cap; non-resetting loss floor and minimum payout above half daily drawdown; may need to leave a buffer."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.e8markets.com/en/articles/10450125-40-best-day-rule",
+        "reason": "40% funded best day; reset on payout request."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news",
+        "reason": "Funded news execution restriction; gains can be deducted."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.e8markets.com/en/articles/11775980-e8-one",
+        "reason": "Account activity required every 60 days; ordinary verification not penalized."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "source": "https://help.e8markets.com/en/articles/11775980-e8-one"
+    }
+  },
+  "e8-pro-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Classic/perpetual funded account; 8% documented example, customizable.",
+    "scopeFr": "Compte financé Classic/perpetual ; exemple à 8 %, personnalisable.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.e8markets.com/en/articles/15274219-e8-pro",
+        "reason": "Static loss limit until first payout, then raised to initial balance; payout effect assessed under payout."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.e8markets.com/en/articles/13653464-payout-request-from-e8-pro",
+        "reason": "Daily requests only after 1% new profit; only half the profit is requestable and the other half retained as buffer."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.e8markets.com/en/articles/15274219-e8-pro",
+        "reason": "No funded best-day consistency rule."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://help.e8markets.com/en/articles/9185497-can-i-trade-news",
+        "reason": "No specific news restrictions; overnight and weekend holding allowed according to official comparison."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.e8markets.com/en/articles/15274219-e8-pro",
+        "reason": "Only 2% of initial account value per day counts as profit; inactivity limit 60 days."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "source": "https://help.e8markets.com/en/articles/15274219-e8-pro"
+    }
+  },
+  "e8-zero-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "E8 Zero Starter/Max shared rule rating; purchases from 1 October 2026 19:00 UTC+2; older five-payout cohort excluded.",
+    "scopeFr": "E8 Zero Starter/Max shared rule rating; achats à partir du 1er octobre 2026 ; anciens comptes exclus.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://helpfutures.e8markets.com/en/articles/11864596-eod-dynamic-drawdown",
+        "reason": "EOD dynamic loss floor; locks at initial balance on reaching threshold or first withdrawal."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max",
+        "reason": "Daily $100 minimum; size-dependent caps, unused cycle profits cannot be requested later."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max",
+        "reason": "40% best-day rule in evaluation only, no funded consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max",
+        "reason": "News allowed; mandatory daily close and position limits."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max",
+        "reason": "Four payouts then account closed; free new challenge is not replacement funded account. Seven-day activity rule."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max"
+    }
+  },
+  "e8-signature-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Signature Futures, four-payout funded model.",
+    "scopeFr": "Signature Futures actuel ; quatre retraits en phase financée.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://helpfutures.e8markets.com/en/articles/11864596-eod-dynamic-drawdown",
+        "reason": "EOD dynamic loss floor, locks at initial balance."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://helpfutures.e8markets.com/en/articles/11940573-payout-caps-and-buffers-for-e8-signature-explained",
+        "reason": "Mandatory drawdown-sized buffer, tier/sequence caps; only new cycle profit eligible, no access to retained buffer."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature",
+        "reason": "35% funded best-day criterion."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature",
+        "reason": "News allowed, daily closure and contract limits."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://helpfutures.e8markets.com/en/articles/11940573-payout-caps-and-buffers-for-e8-signature-explained",
+        "reason": "Four payouts then funded account closed, regardless of remaining buffer; new challenge offered."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 80,
+      "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+    }
+  }
+};
+evidence["e8-futures"] = {
+  "e8-zero-max": {
+    "checkedOn": "2026-11-28",
+    "scope": "E8 Zero Max; purchases from 1 October 2026 19:00 UTC+2; older five-payout cohort excluded.",
+    "scopeFr": "E8 Zero Max; achats à partir du 1er octobre 2026 ; anciens comptes exclus.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://helpfutures.e8markets.com/en/articles/11864596-eod-dynamic-drawdown",
+        "reason": "EOD dynamic loss floor; locks at initial balance on reaching threshold or first withdrawal."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max",
+        "reason": "Daily $100 minimum; size-dependent caps, unused cycle profits cannot be requested later."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max",
+        "reason": "40% best-day rule in evaluation only, no funded consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max",
+        "reason": "News allowed; mandatory daily close and position limits."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max",
+        "reason": "Four payouts then account closed; free new challenge is not replacement funded account. Seven-day activity rule."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max"
+    }
+  },
+  "e8-zero-starter": {
+    "checkedOn": "2026-11-28",
+    "scope": "E8 Zero Starter; purchases from 1 October 2026 19:00 UTC+2; older five-payout cohort excluded.",
+    "scopeFr": "E8 Zero Starter; achats à partir du 1er octobre 2026 ; anciens comptes exclus.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://helpfutures.e8markets.com/en/articles/11864596-eod-dynamic-drawdown",
+        "reason": "EOD dynamic loss floor; locks at initial balance on reaching threshold or first withdrawal."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max",
+        "reason": "Daily $100 minimum; size-dependent caps, unused cycle profits cannot be requested later."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max",
+        "reason": "40% best-day rule in evaluation only, no funded consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max",
+        "reason": "News allowed; mandatory daily close and position limits."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max",
+        "reason": "Four payouts then account closed; free new challenge is not replacement funded account. Seven-day activity rule."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "source": "https://helpfutures.e8markets.com/en/articles/15935817-e8-zero-starter-and-max"
+    }
+  },
+  "e8-signature-futures": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Signature Futures, four-payout funded model.",
+    "scopeFr": "Signature Futures actuel ; quatre retraits en phase financée.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://helpfutures.e8markets.com/en/articles/11864596-eod-dynamic-drawdown",
+        "reason": "EOD dynamic loss floor, locks at initial balance."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://helpfutures.e8markets.com/en/articles/11940573-payout-caps-and-buffers-for-e8-signature-explained",
+        "reason": "Mandatory drawdown-sized buffer, tier/sequence caps; only new cycle profit eligible, no access to retained buffer."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature",
+        "reason": "35% funded best-day criterion."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature",
+        "reason": "News allowed, daily closure and contract limits."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://helpfutures.e8markets.com/en/articles/11940573-payout-caps-and-buffers-for-e8-signature-explained",
+        "reason": "Four payouts then funded account closed, regardless of remaining buffer; new challenge offered."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 80,
+      "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+    }
+  }
+};
+evidence["funding-pips"] = {
+  "pips-one-step-flex": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current non-legacy Master; 14-day 80% reward route; no add-ons; published temporary trading restrictions included.",
+    "scopeFr": "Master actuel hors anciens comptes ; retrait à 14 jours (80 %), sans option ; restrictions temporaires comprises.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex",
+        "reason": "12% fixed maximum loss from initial capital."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex",
+        "reason": "14 calendar days after first executed trade; 1% minimum reward request; 80% nominal share."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex",
+        "reason": "Percentage best-day requirement is listed for On Demand, not this scheduled reward route."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex",
+        "reason": "Master news profit restrictions and temporary position closure rules; no swing add-on assumed."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex",
+        "reason": "30-day inactivity hard breach; general Master risk requirements. Special On Demand strikes are assessed in its own variant."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 12,
+      "profitSplit": 80,
+      "source": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex"
+    }
+  },
+  "pips-two-step-standard": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current non-legacy Master; 14-day 80% reward route; no add-ons; published temporary trading restrictions included.",
+    "scopeFr": "Master actuel hors anciens comptes ; retrait à 14 jours (80 %), sans option ; restrictions temporaires comprises.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+        "reason": "10% fixed maximum loss from initial capital."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+        "reason": "14 calendar days after first executed trade; 1% minimum reward request; 80% nominal share."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+        "reason": "Percentage best-day requirement is listed for On Demand, not this scheduled reward route."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+        "reason": "Master news profit restrictions and temporary position closure rules; no swing add-on assumed."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+        "reason": "30-day inactivity hard breach; general Master risk requirements. Special On Demand strikes are assessed in its own variant."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "profitSplit": 80,
+      "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"
+    }
+  },
+  "pips-two-step-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current non-legacy Master; 7-day 80% reward route; no add-ons; published temporary trading restrictions included.",
+    "scopeFr": "Master actuel hors anciens comptes ; retrait à 7 jours (80 %), sans option ; restrictions temporaires comprises.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model",
+        "reason": "6% fixed maximum loss from initial capital."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model",
+        "reason": "7 calendar days after first executed trade; 1% minimum reward request; 80% nominal share."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model",
+        "reason": "Percentage best-day requirement is listed for On Demand, not this scheduled reward route."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model",
+        "reason": "Master news profit restrictions and temporary position closure rules; no swing add-on assumed."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model",
+        "reason": "30-day inactivity hard breach; general Master risk requirements. Special On Demand strikes are assessed in its own variant."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model"
+    }
+  },
+  "pips-zero-direct": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Zero Instant Master, no evaluation.",
+    "scopeFr": "Zero Instant Master actuel, sans challenge.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+        "reason": "5% intraday equity-high trailing loss, locks at initial balance after 5% profit."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+        "reason": "95% bi-weekly subject to 15% consistency, seven qualified days and additional reward eligibility gates; no ordinary payout access."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+        "reason": "15% maximum best-day ratio; delays payout until compliant."
+      },
+      "trading": {
+        "points": 0,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+        "reason": "Opening or holding through restricted news and holding over weekends cause hard breach."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+        "reason": "1% maximum aggregate floating loss; seven 0.25% profitable days every rolling 30 days or account closes."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 5,
+      "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero"
+    }
+  }
+};
+evidence["funded-trading-plus"] = {
+  "ftp-pnpl-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Published Pass Now Pay Later funded rules; activation-account naming and cohort still to reconcile.",
+    "scopeFr": "Règles financées Pass Now Pay Later ; appellation Activation Accounts et périmètre à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+        "reason": "6% intraday equity trailing loss locks at initial balance."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+        "reason": "Ten traded days per cycle, minimum 3% withdrawal and 80% share."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+        "reason": "25% funded best-day limit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+        "reason": "Weekend holding allowed; news subject to separate policy."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+        "reason": "Activation fee after passing and 3% funded daily hard loss limit."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/"
+    }
+  },
+  "ftp-express-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: existing 18 November audit; current help page version/date and funded-specific rules require confirmation.",
+    "scopeFr": "Partiel : audit du 18 novembre ; version datée et règles financées à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+        "reason": "6% relative closed-balance trailing maximum loss in prior product audit; exact funded version pending."
+      }
+    }
+  },
+  "ftp-classic-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: existing 18 November audit; current help page version/date and funded-specific rules require confirmation.",
+    "scopeFr": "Partiel : audit du 18 novembre ; version datée et règles financées à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/",
+        "reason": "8% static maximum loss in prior product audit; exact funded version pending."
+      }
+    }
+  },
+  "ftp-instant-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: existing 18 November audit; current help page version/date and funded-specific rules require confirmation.",
+    "scopeFr": "Partiel : audit du 18 novembre ; version datée et règles financées à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.fundedtradingplus.com/instant-program-information/",
+        "reason": "6% relative closed-balance trailing maximum loss in prior product audit; exact funded version pending."
+      }
+    }
+  }
+};
 // New catalogue entries, verified against current official plan documentation.
 evidence.topstep['topstep-static-combine-current'] = {
   "checkedOn": "2026-11-27",
@@ -829,6 +1393,10 @@ for(const [id,loss,cohort,cohortFr] of [
 for(const [slug,id] of [['ftmo','ftmo-two-step-current'],['fundednext','fundednext-stellar-two-current'],['fundednext','fundednext-stellar-lite-current']]){
   for(const item of variants[slug]?.[id]??[]) item.evidence.checkedOn='2026-11-28';
 }
+addVariant("funding-pips","pips-one-step-flex","on-demand","On Demand 100%","Retrait à la demande 100%","Current Master, on-demand reward route, no add-ons.","Master actuel, retrait à la demande, sans option.",{"payout":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex","reason":"Seven qualifying days of at least 0.5% each, 1% minimum reward; 100% nominal share subject to strike reductions."},"consistency":{"points":0.5,"source":"https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex","reason":"35% best day, reset after each processed reward."},"funded":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex","reason":"1% loss per aggregated trade idea triggers cumulative strikes: second halves split, third reduces to 20%, fourth closes account; profits from warned ideas deducted."}},{"drawdown":"static","lossPercent":12,"consistency":35,"consistencyBasis":"net","source":"https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex"});
+addVariant("funding-pips","pips-two-step-standard","on-demand","On Demand 100%","Retrait à la demande 100%","Current Master, on-demand reward route, no add-ons.","Master actuel, retrait à la demande, sans option.",{"payout":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard","reason":"Seven qualifying days of at least 0.5% each, 1% minimum reward; 100% nominal share subject to strike reductions."},"consistency":{"points":0.5,"source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard","reason":"35% best day, reset after each processed reward."},"funded":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard","reason":"1% loss per aggregated trade idea triggers cumulative strikes: second halves split, third reduces to 20%, fourth closes account; profits from warned ideas deducted."}},{"drawdown":"static","lossPercent":10,"consistency":35,"consistencyBasis":"net","source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"});
+addVariant("funding-pips","pips-two-step-standard","weekly-60","Weekly 60%","Retrait hebdomadaire 60%","Current Master weekly 60% option, no add-ons.","Master actuel, retrait hebdomadaire 60 %, sans option.",{"payout":{"points":0.5,"source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard","reason":"Seven-day withdrawal schedule; minimum request 1%; 60% share."}},{"drawdown":"static","lossPercent":10,"profitSplit":60,"source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"});
+addVariant("funding-pips","pips-two-step-pro","on-demand","On Demand 100%","Retrait à la demande 100%","Current Master, on-demand reward route, no add-ons.","Master actuel, retrait à la demande, sans option.",{"payout":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model","reason":"Seven qualifying days of at least 0.5% each, 1% minimum reward; 100% nominal share subject to strike reductions."},"consistency":{"points":0.5,"source":"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model","reason":"35% best day, reset after each processed reward."},"funded":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model","reason":"1% loss per aggregated trade idea triggers cumulative strikes: second halves split, third reduces to 20%, fourth closes account; profits from warned ideas deducted."}},{"drawdown":"static","lossPercent":6,"consistency":35,"consistencyBasis":"net","source":"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model"});
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA
