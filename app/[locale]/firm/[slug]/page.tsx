@@ -1177,7 +1177,7 @@ export default async function FirmPage({ params }: Props) {
                   {product.isPopular ? <span className="pr-tag">{f.popular}</span> : null}
                 </div>
                 <h3>{tx(product.name)}</h3>
-                {firm.status !== 'Fermée' ? <ProgrammeFlexibility locale={locale} slug={firm.slug} productId={product.id} /> : null}
+                {firm.status !== 'Fermée' ? <ProgrammeFlexibility locale={locale} slug={firm.slug} product={product} /> : null}
                 {(() => {
                   const rows = (priceTable?.programs ?? []).filter((program) => program.productId === product.id).flatMap((program) => program.rows.map((row) => ({ price: row.price, size: row.size, currency: program.currency })));
                   const cheapest = rows.length ? rows.reduce((low, row) => (row.price < low.price ? row : low)) : undefined;
