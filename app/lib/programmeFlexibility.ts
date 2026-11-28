@@ -726,6 +726,30 @@ addVariant('tradeify','tradeify-select-300k-current','daily','Select 300K Daily'
   payout:{points:.5,source:"https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan",reason:'Daily above $6,100 buffer, cap $4,000, at least half the withdrawal from new profit.'},
   funded:{points:0,source:"https://help.tradeify.co/en/articles/12969284-tradeify-elite-program",reason:'Same live-transition restrictions; mandatory $3K daily loss limit and funded scaling.'}
 },{drawdown:'eod',profitSplit:90,source:"https://help.tradeify.co/en/articles/17845238-300k-select-account-permanent-plan"});
+
+/** Checkout choices with a distinct funded ruleset, not additional purchased products. */
+addVariant('ftmo','ftmo-two-step-current','swing-account','Swing account','Compte Swing',
+  'CFD 2-Step Swing selected at checkout; 1:30 base leverage, cannot switch from Standard to Swing later.',
+  'CFD 2-Step Swing choisi à la commande ; levier de base 1:30, passage de Standard vers Swing impossible.',
+  {trading:{points:1,source:'https://ftmo.com/faq/what-is-the-swing-account-type-and-how-does-it-work/',reason:'No special news or market-close holding restrictions; reduced base leverage 1:30, general forbidden practices still apply.'}});
+const fnPayoutOptions='https://help.fundednext.com/en/articles/10701585-how-often-will-i-receive-my-performance-reward';
+const fnOnDemand='https://help.fundednext.com/en/articles/15586820-does-fundednext-cfds-offer-on-demand-performance-rewards';
+for(const [id,loss,cohort,cohortFr] of [
+  ['fundednext-stellar-two-current',10,'Current 2-Step checkout','2-Step actuel à la commande'],
+  ['fundednext-stellar-lite-current',8,'Lite purchase/reset from 12 October 2026','Lite acheté/réinitialisé à partir du 12 octobre 2026']
+] as const){
+  addVariant('fundednext',id,'three-day-reward','3 Day Reward','Retrait 3 jours',
+    cohort+'; 3-day payout option, no paid add-ons.',cohortFr+' ; retrait 3 jours, sans option payante.',{
+      payout:{points:0,source:fnPayoutOptions,reason:'Requires three profitable trading days of at least 1% each per cycle; 60% reward share. Cycle extends until conditions are met.'},
+      consistency:{points:1,source:fnPayoutOptions,reason:'No separate percentage best-day rule listed for this option; the three 1% winning-day requirements are counted under payout.'}
+    },{drawdown:'static',lossPercent:loss,profitSplit:60,source:fnPayoutOptions});
+  addVariant('fundednext',id,'on-demand-reward','On-Demand Reward','Retrait à la demande',
+    cohort+'; on-demand payout option, no paid add-ons.',cohortFr+' ; retrait à la demande, sans option payante.',{
+      payout:{points:0.5,source:fnOnDemand,reason:'Eligibility at end of day requires at least 2% account growth; 90% reward share, no fixed cycle end. Wallet transfer and compliance review apply.'},
+      consistency:{points:0.5,source:fnOnDemand,reason:'Best trading day must not exceed 40% of total generated profit when requesting a reward; eligibility condition, not a daily trading cap.'}
+    },{drawdown:'static',lossPercent:loss,profitSplit:90,source:fnOnDemand});
+}
+
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA
