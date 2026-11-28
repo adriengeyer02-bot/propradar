@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import FirmLogo from '../../components/FirmLogo';
+import ChallengeExplorer from '../../components/challenge/ChallengeExplorer';
+import { challengeCatalog } from '../../lib/challengeCatalog';
+import { challengeExplorerCopy } from '../../lib/challengeExplorerI18n';
 import {
   formatUsd,
   hasPayoutRiskSignal,
@@ -17,9 +20,6 @@ import { localizedGuidePath } from '../../lib/guideI18n';
 import { rich } from '../../lib/rich';
 import { td } from '../../lib/dataI18n';
 import IntentLink from '../../components/IntentLink';
-import ChallengeExplorer from '../../components/challenge/ChallengeExplorer';
-import { challengeCatalog } from '../../lib/challengeCatalog';
-import { challengeExplorerCopy } from '../../lib/challengeExplorerI18n';
 
 const PATH = '/prop-firm-challenge';
 const PUBLISHED_AT = '2026-10-29';
