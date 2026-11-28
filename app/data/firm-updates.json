@@ -2659,6 +2659,56 @@
           "tradableAssets": ["Forex", "CFD"],
           "hasConsistencyRule": true,
           "consistencyRule": "15% best-day concentration; a single crypto payout cap of $250."
+        },
+        {
+          "id": "bg-one-nano-current",
+          "name": "1 Step Nano (CFD)",
+          "type": "Challenge",
+          "description": "Up to $200K; 10% target, no minimum days to pass, 50% best-day rule in evaluation and funded, 7-day payouts, no Guardian Shield.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 200000,
+          "profitTarget": "10% one phase",
+          "maxDailyLoss": "4% daily from the higher of balance or equity at the 5 PM New York reset",
+          "maxDrawdown": "6% trailing highest closed balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://blueguardian.com/faq/articles/18426784-1-step-nano-rules",
+          "drawdownDetails": "Trails 6% below the highest closed balance and locks at the starting balance after +6%.",
+          "profitSplit": "85% (100% with add-on)",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best day below 50% of total profit, in evaluation and on the funded account; the payout stays unavailable until met (no breach).",
+          "minTradingDays": "None to pass; 5 days with ≥0.5% profit before a payout"
+        },
+        {
+          "id": "bg-bnpl-current",
+          "name": "Buy Now Pay Later (CFD)",
+          "type": "Challenge",
+          "description": "$10 to start, one-time activation fee only after passing; 4% target, 8% trailing drawdown, 20% funded consistency, on-demand payouts, 1% Guardian Shield.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "4% one phase",
+          "maxDailyLoss": "4% daily from the 5 PM New York reset",
+          "maxDrawdown": "8% trailing highest closed balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://blueguardian.com/faq/articles/18426786-buy-now-pay-later-bnpl-rules",
+          "drawdownDetails": "Trails 8% below the highest closed balance and locks at the starting balance after +8%.",
+          "profitSplit": "80%; permanently 50% after a first Guardian Shield trigger",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded only: best day below 20% of total profit in the payout period.",
+          "minTradingDays": "5 days with ≥0.5% profit before a payout"
         }
       ],
       "auditedPrograms": [
@@ -2982,6 +3032,107 @@
           "tradableAssets": ["Futures"],
           "hasConsistencyRule": true,
           "consistencyRule": "Largest profitable day at most 50% of total profitable days in Phase 1, 34% in the Buffer Zone (official help article, 29 Oct 2026)."
+        },
+        {
+          "id": "blusky-propel-current",
+          "name": "Propel plans",
+          "type": "Futures evaluation",
+          "description": "Monthly evaluation and Buffer Zone; no launch fee. Buffer profit above its target is not transferred. Sim Funded has a static floor; $500 fresh profit between payouts and rolling caps.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 300000,
+          "profitTarget": "$1,500/$3,000/$6,000/$3,000/$6,000/$20,000 (25/50/100/150/200/300K evaluation)",
+          "maxDailyLoss": "None in evaluation or Buffer; account-specific funded controls possible",
+          "maxDrawdown": "Evaluation $1,200/$2,000/$2,500 EOD (25/50/100K); $1,000/$2,000/$5,000 static (150/200/300K). Sim Funded static minimum balance.",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.blusky.pro/en/articles/12434469-sim-funded-accounts-processing",
+          "drawdownDetails": "Funded uses fixed minimum balance; evaluation model differs by size.",
+          "profitSplit": "90% standard simulated funded",
+          "platforms": [
+            "Tradovate",
+            "Rithmic",
+            "Volumetrica (availability varies)"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "55% evaluation; 34% Buffer (21% for 300K); none in Sim Funded."
+        },
+        {
+          "id": "blusky-orbit-current",
+          "name": "Orbit plans",
+          "type": "Futures evaluation",
+          "description": "Two phases: evaluation then Sim Funded, no Buffer phase. Payout every three trading days above tier-specific threshold, $500 minimum, rolling caps; brokerage review at tier-specific profit ceiling.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 200000,
+          "profitTarget": "Tier-specific evaluation target",
+          "maxDailyLoss": "Account-specific risk controls possible",
+          "maxDrawdown": "Funded EOD trailing $2,000/$3,000/$4,500/$3,000 (50/100/150/200K); locks at starting balance",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts",
+          "drawdownDetails": "Follows closed daily profit, locks once loss distance is earned back.",
+          "profitSplit": "90% standard simulated funded",
+          "platforms": [
+            "Tradovate",
+            "Rithmic",
+            "Volumetrica (availability varies)"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "No evaluation ratio; 40% of net total profit in Sim Funded.",
+          "minTradingDays": "Evaluation can pass in one day; funded requests every three trading days"
+        },
+        {
+          "id": "blusky-instant-sim-current",
+          "name": "Instant Sim Funded",
+          "type": "Instant funding",
+          "description": "50K, one-time purchase, no evaluation or reset. $53K withdrawal threshold, rolling $2,500 cap; separate brokerage review.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 50000,
+          "profitTarget": "No evaluation",
+          "maxDailyLoss": "$1,000",
+          "maxDrawdown": "$2,000 intraday trailing, locks at $51K after balance exceeds $53K",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+          "drawdownDetails": "Intraday highest balance; locks $1,000 above initial capital.",
+          "profitSplit": "80%",
+          "platforms": [
+            "Tradovate",
+            "Rithmic",
+            "Volumetrica (availability varies)"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "21% net profit best-day ratio at withdrawal; exceeding delays payout."
+        },
+        {
+          "id": "blusky-direct-funded-current",
+          "name": "Direct to Funded",
+          "type": "Instant funding",
+          "description": "One-time purchase; no evaluation or reset. Fourth negative traded day within rolling ten traded days closes account. Withdrawal above $3,500, weekly $3,000 cap.",
+          "accountSizeMin": 3500,
+          "accountSizeMax": 3500,
+          "profitTarget": "No evaluation",
+          "maxDailyLoss": "$2,000",
+          "maxDrawdown": "$2,500 static; minimum balance $1,000",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+          "drawdownDetails": "Fixed floor; negative-day rule separate.",
+          "profitSplit": "50% first 30 trading days; 80% thereafter",
+          "platforms": [
+            "Tradovate",
+            "Rithmic",
+            "Volumetrica (availability varies)"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "21% net profit best-day ratio at withdrawal; separate rolling losing-day limit."
         }
       ],
       "addSources": [
@@ -4688,6 +4839,30 @@
           "tradableAssets": ["Futures"],
           "hasConsistencyRule": true,
           "consistencyRule": "Funded best day ≤35%; nonwithdrawable drawdown buffer and size-based caps."
+        },
+        {
+          "id": "e8-classic-v2-current",
+          "name": "E8 Classic v2",
+          "type": "Challenge",
+          "description": "One-step challenge with a 4% static loss limit that never moves, daily payout requests from $100 profit and no consistency rule; a variant without daily drawdown costs more.",
+          "accountSizeMin": 2000,
+          "accountSizeMax": 50000,
+          "profitTarget": "8% single phase",
+          "maxDailyLoss": "2% of initial balance, from the higher of starting balance or equity (optional variant without daily drawdown)",
+          "maxDrawdown": "4% static from initial balance",
+          "drawdownType": "Static",
+          "drawdownSource": "https://intercom.help/e8/en/articles/18310577-e8-classic-v-2",
+          "drawdownDetails": "Official help: a fixed loss limit based on the initial balance that never trails or moves; same limits in the Performance stage.",
+          "profitSplit": "80% or 90% (chosen at checkout)",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "minTradingDays": "None; one closed trade every 60 days",
+          "hasConsistencyRule": false
         }
       ],
       "auditedPrograms": [
@@ -8027,6 +8202,117 @@
           "hasConsistencyRule": true,
           "consistencyRule": "Direct payout qualified-day and profit concentration rules vary by tier.",
           "minTradingDays": "7 profitable days ≥0.25% in rolling 30-day period"
+        },
+        {
+          "id": "pips-two-step-flex",
+          "name": "2-Step Flex",
+          "type": "Challenge",
+          "description": "Two-phase 5K–100K, 10% then 8% target; the 80% or 95% bi-weekly split is chosen at purchase and locked.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "profitTarget": "10% Phase 1; 8% Phase 2",
+          "maxDailyLoss": "4% daily",
+          "maxDrawdown": "12% static from starting capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex",
+          "drawdownDetails": "Fixed floor 12% below the starting account size.",
+          "profitSplit": "80% bi-weekly, 95% bi-weekly (3 profitable days per cycle) or 100% on demand",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "On Demand cycle only: best day ≤35%, 7 profitable days ≥0.5% and the Striking System."
+        },
+        {
+          "id": "pips-one-step-lite",
+          "name": "1-Step Lite",
+          "type": "Challenge",
+          "description": "Single-stage 25K–100K with only daily and maximum loss rules; daily 80% rewards once profit reaches 1%.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 100000,
+          "profitTarget": "6% single evaluation",
+          "maxDailyLoss": "1% daily from the higher opening balance/equity",
+          "maxDrawdown": "2% static from starting capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/53459210586769-1-Step-Lite",
+          "drawdownDetails": "Fixed floor 2% below the starting account size; floating losses count.",
+          "profitSplit": "80% daily (as often as wanted, 1% minimum)",
+          "platforms": [
+            "MT5",
+            "Match-Trader",
+            "cTrader (+$20)"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Metals",
+            "Indices",
+            "Energies",
+            "Crypto"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "none"
+        },
+        {
+          "id": "pips-two-step-lite",
+          "name": "2-Step Lite",
+          "type": "Challenge",
+          "description": "Two-phase 25K–100K with only daily and maximum loss rules; daily 80% rewards once profit reaches 1%.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 100000,
+          "profitTarget": "6% Phase 1; 3% Phase 2",
+          "maxDailyLoss": "1% daily from the higher opening balance/equity",
+          "maxDrawdown": "2% static from starting capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/53459248360721-2-Step-Lite",
+          "drawdownDetails": "Fixed floor 2% below the starting account size; floating losses count.",
+          "profitSplit": "80% daily (as often as wanted, 1% minimum)",
+          "platforms": [
+            "MT5",
+            "Match-Trader",
+            "cTrader (+$20)"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Metals",
+            "Indices",
+            "Energies",
+            "Crypto"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "none"
+        },
+        {
+          "id": "pips-one-step-labs",
+          "name": "1 Step Labs",
+          "type": "Challenge",
+          "description": "Single-stage, rules stated for the 100K account (purchases from 19 November 2026); up to 5 accounts outside the usual allocation.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "profitTarget": "5% single evaluation",
+          "maxDailyLoss": "1% daily from the higher opening balance/equity",
+          "maxDrawdown": "3% end-of-day trailing, locks at the starting balance",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/53187088949777-1-Step-Labs",
+          "drawdownDetails": "Trails the higher end-of-day balance or equity until it reaches the starting balance, then stays there.",
+          "profitSplit": "85% daily; account must be 3% in profit, $1,000 maximum per request",
+          "platforms": [
+            "MT5",
+            "Match-Trader",
+            "cTrader"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Metals",
+            "Indices",
+            "Energies",
+            "Crypto"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "none"
         }
       ],
       "auditedPrograms": [
@@ -12536,6 +12822,29 @@
           "minTradingDays": "2 evaluation days; one-day add-on has different profit goal",
           "hasConsistencyRule": true,
           "consistencyRule": "Best day ≤50% of total evaluation profits."
+        },
+        {
+          "id": "mffu-signature-current",
+          "name": "Signature — static",
+          "type": "Futures evaluation",
+          "description": "Former Studio range, now permanent Signature 5K/10K/20K. One-time payment, no activation fee. Payouts anytime after closing positions, no buffer or minimum trading days. Funded daily net profit cap $2,500/$5,000/$10,000; live eligibility after five approved payouts or $5,000 total requested.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 20000,
+          "profitTarget": "$500/$1,000/$2,000",
+          "maxDailyLoss": "None",
+          "maxDrawdown": "$250/$500/$1,000 static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.myfundedfutures.com/en/articles/18543937-signature-plans-a-comprehensive-guide",
+          "drawdownDetails": "Fixed floor in evaluation and simulated funded stages; no trailing.",
+          "profitSplit": "80% Sim Funded; 90% Live",
+          "platforms": [
+            "Hyperprop"
+          ],
+          "tradableAssets": [
+            "Futures (micros only)"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "None"
         }
       ],
       "set": {
@@ -16080,6 +16389,60 @@
           "minTradingDays": "none",
           "hasConsistencyRule": true,
           "consistencyRule": "Best day may not exceed 15% of total profit at payout request."
+        },
+        {
+          "id": "top-one-elite-access-intraday",
+          "name": "Elite ACCESS Intraday",
+          "type": "Futures evaluation",
+          "description": "$39 EOD evaluation; switches to intraday equity trailing when funded. Activation $90–$233. Same funded 40% consistency, buffer, five profitable days, payout cap and 50% fresh-profit rules as ACCESS EOD.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "6%: $1,500 (25K) to $9,000 (150K)",
+          "maxDailyLoss": "None in evaluation; funded soft breach $500 (25K) to $1,750 (150K)",
+          "maxDrawdown": "Evaluation $1K/$2K/$3K/$4K; funded $1K/$2K/$3K/$3.5K",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.toponefutures.com/en/articles/17059267-elite-access-intraday-accounts-overview",
+          "drawdownDetails": "EOD trailing in evaluation; intraday equity peaks, including unrealized profits, move funded floor.",
+          "profitSplit": "90%",
+          "platforms": [
+            "Tradovate",
+            "NinjaTrader",
+            "TradingView",
+            "BlackArrow"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "1 (evaluation); 5 profitable days per payout (funded)",
+          "hasConsistencyRule": true,
+          "consistencyRule": "None in evaluation; 40% best-day rule on the funded account; from the second payout at least 50% of each request must come from new profit."
+        },
+        {
+          "id": "top-one-elite-access-static",
+          "name": "Elite ACCESS Static",
+          "type": "Futures evaluation",
+          "description": "$39 static evaluation; switches to EOD trailing when funded. Activation $139–$359. Same funded 40% consistency, buffer, five profitable days, payout cap and 50% fresh-profit rules as ACCESS EOD.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "6%: $1,500 (25K) to $9,000 (150K)",
+          "maxDailyLoss": "None in evaluation; funded soft breach $500 (25K) to $1,750 (150K)",
+          "maxDrawdown": "Evaluation $1K/$2K/$3K/$4K; funded $1K/$2K/$3K/$3.5K",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.toponefutures.com/en/articles/17889367-elite-access-static-accounts-overview",
+          "drawdownDetails": "Fixed drawdown in evaluation; funded floor follows EOD closing balance and locks at starting balance + $100.",
+          "profitSplit": "90%",
+          "platforms": [
+            "Tradovate",
+            "NinjaTrader",
+            "TradingView",
+            "BlackArrow"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "1 (evaluation); 5 profitable days per payout (funded)",
+          "hasConsistencyRule": true,
+          "consistencyRule": "None in evaluation; 40% best-day rule on the funded account; from the second payout at least 50% of each request must come from new profit."
         }
       ],
       "auditedPrograms": [
@@ -21694,7 +22057,57 @@
       "setProducts": [
         {"id": "daytraders-trailing", "name": "Trailing evaluation", "type": "Futures evaluation", "description": "Single-phase evaluation, 25K to 300K. Intraday trailing drawdown (e.g. $2,500 on 50K). Profit target $1,500 on 25K up to $15,000 on 300K. Consistency: no day above 50% of profits in evaluation.", "accountSizeMin": 25000, "accountSizeMax": 300000, "profitTarget": "$1,500 (25K) to $15,000 (300K)", "maxDailyLoss": "not stated", "maxDrawdown": "intraday trailing (e.g. $2,500 on 50K)", "profitSplit": "100% on sim-funded (Pro) accounts", "platforms": ["ArcTrader", "Rithmic"], "tradableAssets": ["Futures"], "hasConsistencyRule": true, "consistencyRule": "50% in evaluation, 30% on Pro"},
         {"id": "daytraders-eod", "name": "EOD evaluation", "type": "Futures evaluation", "description": "25K to 300K. From $75 per account (25K EOD), plus a flat $5 activation fee. 25K: $1,500 target, $1,000 drawdown, $800 daily loss.", "accountSizeMin": 25000, "accountSizeMax": 300000, "entryFeeMin": 75, "profitTarget": "$1,500 on 25K", "maxDailyLoss": "$800 on 25K", "maxDrawdown": "$1,000 on 25K, end-of-day trailing", "profitSplit": "100% on sim-funded (Pro) accounts", "platforms": ["ArcTrader", "Rithmic"], "tradableAssets": ["Futures"], "hasConsistencyRule": true, "consistencyRule": "50% in evaluation, 30% on Pro"},
-        {"id": "daytraders-static", "name": "Static evaluation", "type": "Futures evaluation", "description": "25K to 150K. Fixed drawdown floor that never moves.", "accountSizeMin": 25000, "accountSizeMax": 150000, "profitTarget": "proportional to account size", "maxDailyLoss": "not stated", "maxDrawdown": "static (fixed floor)", "profitSplit": "100% on sim-funded (Pro) accounts", "platforms": ["ArcTrader", "Rithmic"], "tradableAssets": ["Futures"], "hasConsistencyRule": false, "consistencyRule": "not stated"}
+        {"id": "daytraders-static", "name": "Static evaluation", "type": "Futures evaluation", "description": "25K to 150K. Fixed drawdown floor that never moves.", "accountSizeMin": 25000, "accountSizeMax": 150000, "profitTarget": "proportional to account size", "maxDailyLoss": "not stated", "maxDrawdown": "static (fixed floor)", "profitSplit": "100% on sim-funded (Pro) accounts", "platforms": ["ArcTrader", "Rithmic"], "tradableAssets": ["Futures"], "hasConsistencyRule": false, "consistencyRule": "not stated"},
+        {
+          "id": "daytraders-s2f-current",
+          "name": "S2F — Instant Sim Funded",
+          "type": "Instant funding",
+          "description": "No evaluation. Ten qualifying days per payout cycle; first profit target $2K/$3.5K/$10K, later targets decrease. Caps $1K/$2K/$3K on 25K/50K/150K; $500 minimum. Sim balances may be forfeited on live invitation.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "Per payout cycle, first $2,000/$3,500/$10,000",
+          "maxDailyLoss": "None for 25K; applies to 50K/150K",
+          "maxDrawdown": "EOD trailing; verify exact tier at checkout",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+          "drawdownDetails": "End-of-day trailing.",
+          "profitSplit": "100% simulated",
+          "platforms": [
+            "ArcTrader",
+            "Rithmic"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "20% best-day share per payout cycle.",
+          "minTradingDays": "No evaluation; 10 qualifying days per payout"
+        },
+        {
+          "id": "daytraders-s2l-current",
+          "name": "S2L — Straight to Live",
+          "type": "Futures evaluation",
+          "description": "Sim evaluation then real-market funding, Core 50K / Edge 150K / Ultra 300K. Eight qualifying evaluation days, 25% evaluation consistency. Live: no consistency, withdrawals above $1K buffer after loss floor locks, $500 minimum. One live account initially tradeable; other accounts enabled sequentially.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 300000,
+          "profitTarget": "Tier-specific evaluation target",
+          "maxDailyLoss": "$1,000/$1,750/$3,250 on live",
+          "maxDrawdown": "$2,000/$4,500/$7,000 intraday trailing on live",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://daytraders.com/help/articles/17697913-s2l-drawdown",
+          "drawdownDetails": "Live floor starts at initial balance minus loss distance, trails peak equity and locks at initial balance.",
+          "profitSplit": "80% live",
+          "platforms": [
+            "Onyx",
+            "Quantower"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "25% evaluation; none in live.",
+          "minTradingDays": "8 qualifying evaluation days; no live minimum payout days"
+        }
       ],
       "changelog": [
         {

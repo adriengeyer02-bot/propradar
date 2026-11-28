@@ -1,0 +1,534 @@
+{
+  "asOf": "2026-11-28",
+  "base": "7ac48fd8febe3a62a766ec74232997fa0df52450",
+  "recovered": [
+    {
+      "slug": "myfundedfutures",
+      "id": "mffu-signature-current",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "top-one-futures",
+      "id": "top-one-elite-access-intraday",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "top-one-futures",
+      "id": "top-one-elite-access-static",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "blusky-trading",
+      "id": "blusky-launch",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": true,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "blusky-trading",
+      "id": "blusky-propel-current",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "blusky-trading",
+      "id": "blusky-orbit-current",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "blusky-trading",
+      "id": "blusky-instant-sim-current",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "blusky-trading",
+      "id": "blusky-direct-funded-current",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "daytraders-com",
+      "id": "daytraders-s2f-current",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "daytraders-com",
+      "id": "daytraders-s2l-current",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "uprofit-trader",
+      "id": "uprofit-day-soft",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": true,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "uprofit-trader",
+      "id": "uprofit-day-flex",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": true,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "uprofit-trader",
+      "id": "uprofit-one-50k",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": true,
+      "axes": 4,
+      "variants": 0
+    },
+    {
+      "slug": "lvlup-futures",
+      "id": "lvlup-futures-lvlup",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": true,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "lvlup-futures",
+      "id": "lvlup-futures-starter",
+      "oldRef": "bc48383ce152afb8c1b6e7e4eb257c5f3988476b",
+      "existing": true,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "blue-guardian",
+      "id": "bg-one-nano-current",
+      "oldRef": "ad8dab661b97323c2adc8575b8cd0d1e827c1770",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "blue-guardian",
+      "id": "bg-bnpl-current",
+      "oldRef": "ad8dab661b97323c2adc8575b8cd0d1e827c1770",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-two-step-flex",
+      "oldRef": "ad8dab661b97323c2adc8575b8cd0d1e827c1770",
+      "existing": false,
+      "axes": 5,
+      "variants": 1
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-one-step-lite",
+      "oldRef": "ad8dab661b97323c2adc8575b8cd0d1e827c1770",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-two-step-lite",
+      "oldRef": "ad8dab661b97323c2adc8575b8cd0d1e827c1770",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-one-step-labs",
+      "oldRef": "ad8dab661b97323c2adc8575b8cd0d1e827c1770",
+      "existing": false,
+      "axes": 4,
+      "variants": 0
+    },
+    {
+      "slug": "e8-markets",
+      "id": "e8-classic-v2-current",
+      "oldRef": "ad8dab661b97323c2adc8575b8cd0d1e827c1770",
+      "existing": false,
+      "axes": 5,
+      "variants": 0
+    }
+  ],
+  "claude20": [
+    {
+      "slug": "the5ers",
+      "id": "the5ers-high-stakes-current",
+      "kind": "partial"
+    },
+    {
+      "slug": "trade-the-pool",
+      "id": "ttp-swing-max",
+      "kind": "partial"
+    },
+    {
+      "slug": "trade-the-pool",
+      "id": "ttp-swing-flex",
+      "kind": "partial"
+    },
+    {
+      "slug": "trade-the-pool",
+      "id": "ttp-edge",
+      "kind": "partial"
+    },
+    {
+      "slug": "lark-funding",
+      "id": "lark-1-step-career",
+      "kind": "partial"
+    },
+    {
+      "slug": "lark-funding",
+      "id": "lark-3-step",
+      "kind": "partial"
+    },
+    {
+      "slug": "dna-funded",
+      "id": "dna-1-phase-march-2026",
+      "kind": "partial"
+    },
+    {
+      "slug": "dna-funded",
+      "id": "dna-2-phase-march-2026",
+      "kind": "partial"
+    },
+    {
+      "slug": "dna-funded",
+      "id": "dna-rapid-march-2026",
+      "kind": "partial"
+    },
+    {
+      "slug": "dna-funded",
+      "id": "dna-instant-march-2026",
+      "kind": "partial"
+    },
+    {
+      "slug": "ofp-funding",
+      "id": "ofp-instant-95",
+      "kind": "legacy",
+      "old": null,
+      "new": null
+    },
+    {
+      "slug": "ofp-funding",
+      "id": "ofp-challenge-8-5",
+      "kind": "legacy",
+      "old": null,
+      "new": null
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "id": "cft-evaluation",
+      "kind": "partial"
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "id": "cft-accelerated",
+      "kind": "legacy",
+      "old": null,
+      "new": null
+    },
+    {
+      "slug": "funded-bull",
+      "id": "funded-bull-1-step",
+      "kind": "partial"
+    },
+    {
+      "slug": "funded-bull",
+      "id": "funded-bull-3-step",
+      "kind": "partial"
+    },
+    {
+      "slug": "quant-tekel",
+      "id": "qt-one",
+      "kind": "partial"
+    },
+    {
+      "slug": "quant-tekel",
+      "id": "qt-power",
+      "kind": "verified",
+      "old": 4,
+      "new": 5
+    },
+    {
+      "slug": "wsfunded",
+      "id": "wsfunded-prime-1phase",
+      "kind": "verified",
+      "old": 4,
+      "new": 5
+    },
+    {
+      "slug": "traders-launch",
+      "id": "traders-launch-static-25k",
+      "kind": "partial"
+    }
+  ],
+  "results": [
+    {
+      "slug": "myfundedfutures",
+      "id": "mffu-signature-current",
+      "category": "futures",
+      "quality": 4.5,
+      "absolute": 1,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "top-one-futures",
+      "id": "top-one-elite-access-intraday",
+      "category": "futures",
+      "quality": 2.25,
+      "absolute": 3.5,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "top-one-futures",
+      "id": "top-one-elite-access-static",
+      "category": "futures",
+      "quality": 3,
+      "absolute": 3,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "blusky-trading",
+      "id": "blusky-launch",
+      "category": "futures",
+      "quality": 2.75,
+      "absolute": 2.5,
+      "verified": 5,
+      "existing": true
+    },
+    {
+      "slug": "blusky-trading",
+      "id": "blusky-propel-current",
+      "category": "futures",
+      "quality": 2.75,
+      "absolute": 2.5,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "blusky-trading",
+      "id": "blusky-orbit-current",
+      "category": "futures",
+      "quality": 2.25,
+      "absolute": 3.5,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "blusky-trading",
+      "id": "blusky-instant-sim-current",
+      "category": "futuresInstant",
+      "quality": 1.5,
+      "absolute": 4.5,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "blusky-trading",
+      "id": "blusky-direct-funded-current",
+      "category": "futuresInstant",
+      "quality": 2.25,
+      "absolute": 3.5,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "daytraders-com",
+      "id": "daytraders-s2f-current",
+      "category": "futuresInstant",
+      "quality": 2,
+      "absolute": 4,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "daytraders-com",
+      "id": "daytraders-s2l-current",
+      "category": "futures",
+      "quality": 3.5,
+      "absolute": 2.5,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "uprofit-trader",
+      "id": "uprofit-day-soft",
+      "category": "futures",
+      "quality": 2.5,
+      "absolute": 3.5,
+      "verified": 5,
+      "existing": true
+    },
+    {
+      "slug": "uprofit-trader",
+      "id": "uprofit-day-flex",
+      "category": "futures",
+      "quality": 2.5,
+      "absolute": 3.5,
+      "verified": 5,
+      "existing": true
+    },
+    {
+      "slug": "uprofit-trader",
+      "id": "uprofit-one-50k",
+      "category": "futures",
+      "quality": null,
+      "absolute": null,
+      "verified": 4,
+      "existing": true
+    },
+    {
+      "slug": "lvlup-futures",
+      "id": "lvlup-futures-lvlup",
+      "category": "futures",
+      "quality": 4,
+      "absolute": 2.5,
+      "verified": 5,
+      "existing": true
+    },
+    {
+      "slug": "lvlup-futures",
+      "id": "lvlup-futures-starter",
+      "category": "futures",
+      "quality": 2.75,
+      "absolute": 3,
+      "verified": 5,
+      "existing": true
+    },
+    {
+      "slug": "blue-guardian",
+      "id": "bg-one-nano-current",
+      "category": "one",
+      "quality": 4,
+      "absolute": 2.5,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "blue-guardian",
+      "id": "bg-bnpl-current",
+      "category": "one",
+      "quality": 2.25,
+      "absolute": 4,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-two-step-flex",
+      "category": "two",
+      "quality": 4.75,
+      "absolute": 0.5,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-two-step-flex",
+      "variant": "on-demand",
+      "category": "two",
+      "quality": 3,
+      "absolute": 2.5,
+      "verified": 5
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-one-step-lite",
+      "category": "one",
+      "quality": 4.75,
+      "absolute": 0.5,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-two-step-lite",
+      "category": "two",
+      "quality": 4.75,
+      "absolute": 0.5,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-one-step-labs",
+      "category": "one",
+      "quality": null,
+      "absolute": null,
+      "verified": 4,
+      "existing": false
+    },
+    {
+      "slug": "e8-markets",
+      "id": "e8-classic-v2-current",
+      "category": "one",
+      "quality": 4.75,
+      "absolute": 0.5,
+      "verified": 5,
+      "existing": false
+    },
+    {
+      "slug": "quant-tekel",
+      "id": "qt-power",
+      "category": "two",
+      "quality": 4.25,
+      "absolute": 1.5,
+      "verified": 5,
+      "existing": true
+    },
+    {
+      "slug": "wsfunded",
+      "id": "wsfunded-prime-1phase",
+      "category": "one",
+      "quality": 1.75,
+      "absolute": 3.5,
+      "verified": 5,
+      "existing": true
+    }
+  ],
+  "inventory": {
+    "catalogue": 344,
+    "verified": 217,
+    "estimated": 8,
+    "legacy": 8,
+    "partial": 17,
+    "untouched": 94,
+    "variants": 21
+  },
+  "tests": {
+    "jsEquivalentAssertions": 883,
+    "failures": 0
+  }
+}
