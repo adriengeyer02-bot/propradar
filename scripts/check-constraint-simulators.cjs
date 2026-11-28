@@ -79,4 +79,8 @@ for(const [id,loss] of [['fundednext-stellar-two-current',10],['fundednext-stell
  assert.equal(getProgrammeVariants('fundednext',id).length,2);
 }
 assert.equal(getProgrammeEvidence('ftmo','ftmo-two-step-current','swing-account').checkedOn,'2026-11-28');
-console.log('Constraint simulators and evidence gating: 68 checks OK');
+assert.equal(programmeFlexibility(getProgrammeEvidence('tradeday','tradeday-quick-pay')).stars,2);
+assert.equal(programmeFlexibility(getProgrammeEvidence('tradeday','tradeday-fast-pass')).stars,2);
+assert.equal(getProgrammeEvidence('tradeday','tradeday-quick-pay').preset.profitSplit,undefined);
+assert.equal(getProgrammeEvidence('tradeday','tradeday-fast-pass').preset.consistency,undefined);
+console.log('Constraint simulators and evidence gating: 72 checks OK');
