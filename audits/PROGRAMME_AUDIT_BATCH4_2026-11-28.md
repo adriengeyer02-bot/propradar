@@ -63,3 +63,28 @@ UX handoff: separate branch from latest main; improve challenge discovery and co
 - FundingPips scheduled vs on-demand routes distinguished. Current official pages report 80% bi-weekly Flex, and 100% on-demand rather than prior monthly wording; Standard and Pro also have on-demand. Warning system explicitly applies on on-demand routes; no automatic 100% split preset because strikes can reduce it. Current Pro evaluation minimum differs from prior audit, and newer catalogue also mentions Flex/Labs/Lite not yet mapped to exact product IDs. Product cards and pricing need a subsequent coordinated correction. Zero has 15% consistency, 1% floating open-risk cap and seven profitable days in rolling 30 days.
 - FT+ Express/Classic/Instant left partial: source date/version and funded details require confirmation; Express page reports a last update after current date. PNPL rating scoped to the specific published rules, not necessarily every newer Activation Account. The5ers conflicts unresolved.
 - Test assertions added (93 expected). No execution of full build or visual QA. One atomic commit for code/tests/audit; no production deployment. Existing programme rating formula unchanged.
+
+## Additional CFD audit — Blue Guardian, BrightFunded, GOAT
+
+13 existing catalogue IDs reviewed; 12 complete and one legacy-only partial. All five criteria sourced in programmeFlexibility.ts; no firm score or price changes. Current published help-center pages retrieved 28 November. Scores apply only to specified cohorts.
+
+| Firm | Product ID | /5 |
+|---|---|---:|
+| blue-guardian | bg-one-standard-current | 2 |
+| blue-guardian | bg-two-standard-current | 3 |
+| blue-guardian | bg-two-nano-current | 3.5 |
+| blue-guardian | bg-instant-standard-current | 1 |
+| blue-guardian | bg-instant-starter-current | 0.5 |
+| brightfunded | bf-one-step-daily-current | 2.5 |
+| brightfunded | bf-two-step-bright-current | 4 |
+| brightfunded | bf-instant-current | 0.5 |
+| goat-funded-trader | goat-one-new | 2.5 |
+| goat-funded-trader | goat-two-standard-new | Legacy / partial |
+| goat-funded-trader | goat-instant-goat | 0.5 |
+| goat-funded-trader | goat-instant-premium | 1.5 |
+| goat-funded-trader | goat-instant-daily | 1.5 |
+
+- Blue Guardian: Instant Starter request cap $250 gross, 90% split = $225 before external fees, then closes. Shield 1% instant/2% standard; after first trigger split reduced to 50%, second closes. Nano no Shield. Minimum hold two minutes funded. Standard and Instant conditional split omitted from numeric preset. New 1-Step Nano and BNPL listed in official current index, exact catalogue IDs missing; no unsupported new purchase cards added.
+- BrightFunded: post-16-Nov models only, 1% buffer on Daily, 3% on Instant; Instant 15% best day, five 0.5% days, biggest losing trade no greater than biggest winner. Inactivity reactivation ends 30 November. No penalty for ordinary KYC.
+- GOAT: official current 2-Step Standard explicitly no longer available; legacy note only, catalogue still needs removal from purchase filters. News policy changed 24 Nov to cap aggregate profit per release rather than trade (3% post-10-Nov; 1% older); funded minimum hold 60s post-6-Oct. All current payouts subject to best-win/worst-loss condition, 3% processing fee and trading pause during processing. Initial caps and deducted daily profit are material. Additional new products and Instant Daily static variant need catalogue mapping. General news policy: https://help.goatfundedtrader.com/en/articles/10742084-is-news-trading-allowed. No unsupported fixed split preset where conditional.
+- Regression: replaced brittle printed assertion count with success text; loop-expanded executions exceed static count. Full runtime/build/visual checks pending. Cumulative 61 complete catalogue evaluations per prior audit count, including duplicate E8 listings. No production deployment.

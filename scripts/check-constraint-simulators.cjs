@@ -104,4 +104,17 @@ assert.equal(programmeFlexibility(getProgrammeEvidence("funded-trading-plus","ft
 assert.equal(programmeFlexibility(getProgrammeEvidence("funded-trading-plus","ftp-express-current")).stars,null);
 assert.equal(programmeFlexibility(getProgrammeEvidence("funded-trading-plus","ftp-classic-current")).stars,null);
 assert.equal(programmeFlexibility(getProgrammeEvidence("funded-trading-plus","ftp-instant-current")).stars,null);
-console.log('Constraint simulators and evidence gating: 93 checks OK');
+assert.equal(programmeFlexibility(getProgrammeEvidence("blue-guardian","bg-one-standard-current")).stars,2);
+assert.equal(programmeFlexibility(getProgrammeEvidence("blue-guardian","bg-two-standard-current")).stars,3);
+assert.equal(programmeFlexibility(getProgrammeEvidence("blue-guardian","bg-two-nano-current")).stars,3.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence("blue-guardian","bg-instant-standard-current")).stars,1);
+assert.equal(programmeFlexibility(getProgrammeEvidence("blue-guardian","bg-instant-starter-current")).stars,0.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence("brightfunded","bf-one-step-daily-current")).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence("brightfunded","bf-two-step-bright-current")).stars,4);
+assert.equal(programmeFlexibility(getProgrammeEvidence("brightfunded","bf-instant-current")).stars,0.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence("goat-funded-trader","goat-one-new")).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence("goat-funded-trader","goat-two-standard-new")).stars,null);
+assert.equal(programmeFlexibility(getProgrammeEvidence("goat-funded-trader","goat-instant-goat")).stars,0.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence("goat-funded-trader","goat-instant-premium")).stars,1.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence("goat-funded-trader","goat-instant-daily")).stars,1.5);
+console.log('Constraint simulators and evidence gating: all assertions passed');

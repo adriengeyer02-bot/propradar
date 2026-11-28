@@ -661,6 +661,475 @@ evidence.tradeday = {
     }
   }
 };
+// Reviewed CFD models, 2026-11-28.
+evidence["blue-guardian"] = {
+  "bg-one-standard-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current CFD Standard funded, representative 100K; ordinary payout route, no add-ons.",
+    "scopeFr": "CFD Standard financé actuel, compte 100K représentatif ; retrait standard, sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426782-1-step-standard-rules",
+        "reason": "6% trail below highest closed balance, locks at initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426782-1-step-standard-rules",
+        "reason": "14-day cycle, three days at 0.5% profit each; 85% nominal share; after drawdown locks, 1% retained buffer."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.blueguardian.com/en/articles/18426605-how-payouts-work",
+        "reason": "Published Standard payout conditions do not impose percentage best-day consistency; profitable days counted under payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426782-1-step-standard-rules",
+        "reason": "Two-minute funded hold, restricted news execution; overnight and weekends allowed."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426782-1-step-standard-rules",
+        "reason": "Guardian Shield at 2% aggregate floating loss: permanent split reduction to 50% on first trigger, termination on second."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "source": "https://blueguardian.com/faq/articles/18426782-1-step-standard-rules"
+    }
+  },
+  "bg-two-standard-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current CFD Standard funded, representative 100K; ordinary payout route, no add-ons.",
+    "scopeFr": "CFD Standard financé actuel, compte 100K représentatif ; retrait standard, sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://blueguardian.com/faq/articles/18426783-2-step-standard-rules",
+        "reason": "8% static loss floor."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426783-2-step-standard-rules",
+        "reason": "14-day cycle, three days at 0.5% profit each; 85% nominal share."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.blueguardian.com/en/articles/18426605-how-payouts-work",
+        "reason": "Published Standard payout conditions do not impose percentage best-day consistency; profitable days counted under payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426783-2-step-standard-rules",
+        "reason": "Two-minute funded hold, restricted news execution; overnight and weekends allowed."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426783-2-step-standard-rules",
+        "reason": "Guardian Shield at 2% aggregate floating loss: permanent split reduction to 50% on first trigger, termination on second."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "source": "https://blueguardian.com/faq/articles/18426783-2-step-standard-rules"
+    }
+  },
+  "bg-two-nano-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current CFD Nano funded, no add-ons.",
+    "scopeFr": "CFD Nano financé actuel, sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://blueguardian.com/faq/articles/18426785-2-step-nano-rules",
+        "reason": "10% static max loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426785-2-step-nano-rules",
+        "reason": "14-day withdrawals limited to 2% of initial account size each cycle; excess stays in account."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426785-2-step-nano-rules",
+        "reason": "Funded best day strictly below 50% of total profit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426785-2-step-nano-rules",
+        "reason": "Two-minute funded holding period; news execution window restricted."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://blueguardian.com/faq/articles/18426785-2-step-nano-rules",
+        "reason": "No Guardian Shield or funded minimum trading days; ordinary loss limits and review."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "profitSplit": 80,
+      "source": "https://blueguardian.com/faq/articles/18426785-2-step-nano-rules"
+    }
+  },
+  "bg-instant-standard-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current CFD Instant Standard 100K baseline; 300K/400K have 15% consistency and 200K+ initial caps.",
+    "scopeFr": "CFD Instant Standard 100K ; consistency à 15 % sur 300K/400K et plafonds initiaux dès 200K.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426779-instant-standard-account-rules",
+        "reason": "6% highest closed-balance trailing, locks at initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426779-instant-standard-account-rules",
+        "reason": "Five profitable days at 0.5% each, 1% buffer after drawdown lock; larger tiers have first-two-payout caps."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426779-instant-standard-account-rules",
+        "reason": "20% funded best day (15% on 300K/400K), strict below threshold."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426779-instant-standard-account-rules",
+        "reason": "Two-minute minimum hold and news window restriction; overnight/weekend allowed."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426779-instant-standard-account-rules",
+        "reason": "1% combined floating loss triggers permanent split reduction to 50%, second trigger permanently closes account."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "source": "https://blueguardian.com/faq/articles/18426779-instant-standard-account-rules"
+    }
+  },
+  "bg-instant-starter-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Single-use 5K CFD Instant Starter, checkout only; current rules.",
+    "scopeFr": "CFD Instant Starter 5K à usage unique ; offre accessible par lien de commande.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426780-instant-starter-account-rules",
+        "reason": "5% highest closed-balance trailing."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426780-instant-starter-account-rules",
+        "reason": "Five 0.5% days; one crypto-only request from $100 to $250 gross, at 90% share maximum $225 net before external fees."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426780-instant-starter-account-rules",
+        "reason": "Best day strictly below 15% of total profit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://blueguardian.com/faq/articles/18426780-instant-starter-account-rules",
+        "reason": "Two-minute minimum hold; news, overnight and weekend trading allowed."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://blueguardian.com/faq/articles/18426780-instant-starter-account-rules",
+        "reason": "1% floating Shield, permanent split reduction then closure on second trigger; one withdrawal closes the account."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 5,
+      "source": "https://blueguardian.com/faq/articles/18426780-instant-starter-account-rules"
+    }
+  }
+};
+evidence["brightfunded"] = {
+  "bf-one-step-daily-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "CFD purchased on or after 16 November 2026; no add-ons, standard funded reward.",
+    "scopeFr": "CFD acheté à partir du 16 novembre 2026 ; sans option, retrait standard.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me",
+        "reason": "6% real-time equity trailing maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.brightfunded.com/en/articles/18457136-how-can-i-request-my-payout",
+        "reason": "Daily payout after first funded trade; mandatory 1% retained buffer."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.brightfunded.com/en/articles/18457247-does-brightfunded-have-a-consistency-rule",
+        "reason": "No percentage consistency or requirement to keep position size fixed."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.brightfunded.com/en/articles/9241694-can-i-trade-news",
+        "reason": "Funded news execution within five minutes either side can invalidate profits; qualifying 48h take-profit exception."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.brightfunded.com/en/articles/11774572-inactivity-rule-policy",
+        "reason": "Hard breach after 30 calendar days inactive; reactivation ending 1 December."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me"
+    }
+  },
+  "bf-two-step-bright-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "CFD purchased on or after 16 November 2026; no add-ons, standard funded reward.",
+    "scopeFr": "CFD acheté à partir du 16 novembre 2026 ; sans option, retrait standard.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me",
+        "reason": "8% static maximum loss."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://help.brightfunded.com/en/articles/18457136-how-can-i-request-my-payout",
+        "reason": "14-day payout, no mandatory buffer or minimum withdrawal."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.brightfunded.com/en/articles/18457247-does-brightfunded-have-a-consistency-rule",
+        "reason": "No percentage consistency or requirement to keep position size fixed."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.brightfunded.com/en/articles/9241694-can-i-trade-news",
+        "reason": "Funded news execution within five minutes either side can invalidate profits; qualifying 48h take-profit exception."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.brightfunded.com/en/articles/11774572-inactivity-rule-policy",
+        "reason": "Hard breach after 30 calendar days inactive; reactivation ending 1 December."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "profitSplit": 80,
+      "source": "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me"
+    }
+  },
+  "bf-instant-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current CFD Instant from 16 November, no add-ons.",
+    "scopeFr": "CFD Instant actuel depuis le 16 novembre, sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me",
+        "reason": "5% real-time trailing loss."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.brightfunded.com/en/articles/18450315-how-do-payouts-work-on-instant",
+        "reason": "Mandatory 3% buffer, 1% minimum payout, five days at 0.5% profit each and largest loss no larger than largest win."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.brightfunded.com/en/articles/18450315-how-do-payouts-work-on-instant",
+        "reason": "15% best-day rule resets at payout request."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me",
+        "reason": "Restricted funded news; no weekend holding, auto-close Friday."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.brightfunded.com/en/articles/18450321-instant-account-rules",
+        "reason": "1% combined floating loss hard breach plus 30-day inactivity hard breach."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 5,
+      "profitSplit": 90,
+      "source": "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me"
+    }
+  }
+};
+evidence["goat-funded-trader"] = {
+  "goat-one-new": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current 1-Step purchased from 10 November 2026, 3% daily loss option, regular 80% reward.",
+    "scopeFr": "1-Step actuel acheté à partir du 10 novembre 2026, perte journalière 3 %, retrait standard à 80 %.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.goatfundedtrader.com/1-step.html",
+        "reason": "6% static loss."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.goatfundedtrader.com/1-step.html",
+        "reason": "Four 0.5% days per reward; 14-day cycle and first two payouts capped, excess profit deducted; global best-trade vs worst-trade gate and processing fee also apply."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.goatfundedtrader.com/1-step.html",
+        "reason": "No percentage best-day consistency; trade-size outcome gate counted under payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades",
+        "reason": "Funded trades shorter than 60 seconds lose profits but retain losses for purchases from 6 October; news-profit cap applies per release from 24 November (3% current purchases)."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.goatfundedtrader.com/en/articles/10742107-what-is-goat-guard",
+        "reason": "2% aggregate floating loss triggers reduction to 50%; second trigger closes account. Daily profit cap $3,000 applies."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "source": "https://help.goatfundedtrader.com/1-step.html"
+    }
+  },
+  "goat-two-standard-new": {
+    "checkedOn": "2026-11-28",
+    "scope": "Legacy 2-Step Standard, closed to new purchases; rating deliberately withheld from current product comparison.",
+    "scopeFr": "Ancien 2-Step Standard, fermé aux nouveaux achats ; aucune note pour une offre actuelle.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.goatfundedtrader.com/2-step-standard.html",
+        "reason": "10% static on existing accounts; current FAQ explicitly says this model is no longer available for purchase."
+      }
+    }
+  },
+  "goat-instant-goat": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current purchase from 10 November 2026, ordinary 80% reward route.",
+    "scopeFr": "Achat actuel à partir du 10 novembre 2026 ; retrait standard à 80 %.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.goatfundedtrader.com/instant-goat.html",
+        "reason": "6% real-time equity trailing, reset following payout."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
+        "reason": "Model requires five days at 0.5% each and 14-day reward cycle; initial caps, best-win vs worst-loss gate and 3% processing fee."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.goatfundedtrader.com/instant-goat.html",
+        "reason": "15% best-day consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades",
+        "reason": "Funded trades shorter than 60 seconds lose profits but retain losses for purchases from 6 October; news-profit cap applies per release from 24 November (3% current purchases)."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.goatfundedtrader.com/instant-goat.html",
+        "reason": "2% aggregate open floating loss hard breach; daily profit cap and payout review also apply."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://help.goatfundedtrader.com/instant-goat.html"
+    }
+  },
+  "goat-instant-premium": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current purchase from 10 November 2026, ordinary 80% reward route.",
+    "scopeFr": "Achat actuel à partir du 10 novembre 2026 ; retrait standard à 80 %.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.goatfundedtrader.com/instant-premium.html",
+        "reason": "6% real-time equity trailing, reset following payout."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
+        "reason": "Model requires five days at 0.5% each and 14-day reward cycle; initial caps, best-win vs worst-loss gate and 3% processing fee."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.goatfundedtrader.com/instant-premium.html",
+        "reason": "No percentage best-day consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades",
+        "reason": "Funded trades shorter than 60 seconds lose profits but retain losses for purchases from 6 October; news-profit cap applies per release from 24 November (3% current purchases)."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.goatfundedtrader.com/instant-premium.html",
+        "reason": "1% aggregate open floating loss hard breach; daily profit cap and payout review also apply."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://help.goatfundedtrader.com/instant-premium.html"
+    }
+  },
+  "goat-instant-daily": {
+    "checkedOn": "2026-11-28",
+    "scope": "Trailing option only, current purchases; newly mentioned static option requires distinct review.",
+    "scopeFr": "Option trailing uniquement ; option fixe récemment mentionnée à auditer séparément.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.goatfundedtrader.com/instant-daily.html",
+        "reason": "3% real-time trailing; first withdrawal locks the floor at initial balance."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.goatfundedtrader.com/instant-daily.html",
+        "reason": "Daily requests of 1%–3%; withdrawing all profit can close account; best-win vs worst-loss gate, tiered split, processing fee."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.goatfundedtrader.com/instant-daily.html",
+        "reason": "No percentage best-day consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades",
+        "reason": "Funded trades shorter than 60 seconds lose profits but retain losses for purchases from 6 October; news-profit cap applies per release from 24 November (3% current purchases)."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.goatfundedtrader.com/instant-daily.html",
+        "reason": "1% aggregate floating loss closes account; account expires after 30 days."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 3,
+      "source": "https://help.goatfundedtrader.com/instant-daily.html"
+    }
+  }
+};
 // Consolidated programme audit, 2026-11-28.
 evidence["apex-trader-funding"] = {
   "apex-eod-current": {
