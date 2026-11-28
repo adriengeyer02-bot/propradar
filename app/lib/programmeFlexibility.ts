@@ -1864,6 +1864,693 @@ evidence["oneup-trader"] = {
     }
   }
 };
+// Orion / WSFunded / Ment / CFT / Funded7 / DNA batch, 2026-11-28.
+evidence["orion-funded"] = {
+  "orion-standard-2-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current funded help-centre rules; no add-ons. Older contractual overnight wording conflicts for Standard.",
+    "scopeFr": "Règles financées actuelles du centre d'aide, sans option. Contradiction ancienne sur le port de positions Standard.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.orionfunded.com/faq/programs/max-drawdown",
+        "reason": "6% fixed below initial balance."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://www.orionfunded.com/faq/payouts/payout-request",
+        "reason": "14-day cycle and ordinary review; $100 minimum."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://www.orionfunded.com/faq/programs/consistency-rule",
+        "reason": "Explicitly no best-day ratio."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.orionfunded.com/faq/programs/news-trading",
+        "reason": "No order execution or modification within two minutes either side of major news."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.orionfunded.com/faq/programs/prohibited-practices",
+        "reason": "Risk-pattern restrictions include unusually large positions and cumulative exposure; grid and other prohibited strategies reviewed."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "source": "https://www.orionfunded.com/faq/programs/max-drawdown"
+    }
+  },
+  "orion-select-3-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current funded help-centre rules; no add-ons. Older contractual overnight wording conflicts for Standard.",
+    "scopeFr": "Règles financées actuelles du centre d'aide, sans option. Contradiction ancienne sur le port de positions Standard.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.orionfunded.com/faq/programs/max-drawdown",
+        "reason": "5% fixed below initial balance."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://www.orionfunded.com/faq/payouts/payout-request",
+        "reason": "14-day cycle and ordinary review; $100 minimum."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://www.orionfunded.com/faq/programs/consistency-rule",
+        "reason": "Explicitly no best-day ratio."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.orionfunded.com/faq/programs/news-trading",
+        "reason": "No order execution or modification within two minutes either side of major news."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.orionfunded.com/faq/programs/prohibited-practices",
+        "reason": "Risk-pattern restrictions include unusually large positions and cumulative exposure; grid and other prohibited strategies reviewed."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 5,
+      "source": "https://www.orionfunded.com/faq/programs/max-drawdown"
+    }
+  },
+  "orion-nova-1-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current funded help-centre rules; no add-ons. Older contractual overnight wording conflicts for Standard.",
+    "scopeFr": "Règles financées actuelles du centre d'aide, sans option. Contradiction ancienne sur le port de positions Standard.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://www.orionfunded.com/faq/programs/max-drawdown",
+        "reason": "5% proportional equity high-water trail, locks at initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://www.orionfunded.com/faq/payouts/payout-request",
+        "reason": "14-day cycle; first 3% profit ineligible for withdrawal; $100 minimum."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://www.orionfunded.com/faq/programs/consistency-rule",
+        "reason": "20% best-day limit in funded reward cycle."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.orionfunded.com/faq/programs/news-trading",
+        "reason": "No order execution or modification within two minutes either side of major news."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.orionfunded.com/faq/programs/prohibited-practices",
+        "reason": "Risk-pattern restrictions include unusually large positions and cumulative exposure; grid and other prohibited strategies reviewed."
+      }
+    },
+    "preset": {
+      "source": "https://www.orionfunded.com/faq/programs/max-drawdown"
+    }
+  },
+  "orion-zero-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current funded help-centre rules; no add-ons. Older contractual overnight wording conflicts for Standard.",
+    "scopeFr": "Règles financées actuelles du centre d'aide, sans option. Contradiction ancienne sur le port de positions Standard.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://www.orionfunded.com/faq/programs/max-drawdown",
+        "reason": "6% proportional closed-balance high-water trail, locks at initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://www.orionfunded.com/faq/payouts/payout-request",
+        "reason": "14-day cycle; first 3% profit ineligible for withdrawal; $100 minimum."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://www.orionfunded.com/faq/programs/consistency-rule",
+        "reason": "20% best-day limit in funded reward cycle."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.orionfunded.com/faq/programs/news-trading",
+        "reason": "50% share on trades opened/closed within five minutes of high-impact news."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.orionfunded.com/faq/programs/prohibited-practices",
+        "reason": "Risk-pattern restrictions include unusually large positions and cumulative exposure; grid and other prohibited strategies reviewed."
+      }
+    },
+    "preset": {
+      "source": "https://www.orionfunded.com/faq/programs/max-drawdown"
+    }
+  }
+};
+evidence["wsfunded"] = {
+  "wsfunded-instant-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Instant rules; profit split and exact trailing formula inconsistent across examples, no preset.",
+    "scopeFr": "Règles Instant actuelles ; partage et formule du trailing contradictoires, pas de préremplissage.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/10719208-instant-pro",
+        "reason": "5% peak-balance trailing, no downward reset or lock after withdrawal."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/10719208-instant-pro",
+        "reason": "Four 0.5%-profitable days and non-resetting loss floor may cause breach at withdrawal or next trade."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/10719208-instant-pro",
+        "reason": "15% best-day share of net total profit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://faq.wsfunded.com/en/articles/10719208-instant-pro",
+        "reason": "Stop loss required within two minutes; special SL/TP requirement on news trades, general funded news restriction documented separately."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach",
+        "reason": "First direct 1% risk-per-idea violation can cancel both funded account and payout."
+      }
+    }
+  },
+  "wsfunded-instant-standard": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Instant rules; profit split and exact trailing formula inconsistent across examples, no preset.",
+    "scopeFr": "Règles Instant actuelles ; partage et formule du trailing contradictoires, pas de préremplissage.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/10719192-instant-standard",
+        "reason": "6% peak-balance trailing, no downward reset or lock after withdrawal."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/10719192-instant-standard",
+        "reason": "Four 0.5%-profitable days and non-resetting loss floor may cause breach at withdrawal or next trade."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://faq.wsfunded.com/en/articles/10719192-instant-standard",
+        "reason": "30% best-day share of net total profit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://faq.wsfunded.com/en/articles/10719192-instant-standard",
+        "reason": "Stop loss required within two minutes; special SL/TP requirement on news trades, general funded news restriction documented separately."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach",
+        "reason": "First direct 1% risk-per-idea violation can cancel both funded account and payout."
+      }
+    }
+  },
+  "wsfunded-classic-2phase": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: exact funded consistency not explicitly confirmed; programme-specific September rules.",
+    "scopeFr": "Partiel : consistency financée non explicitement confirmée ; règles spécifiques de septembre.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://faq.wsfunded.com/en/articles/8717270-2-phases-wall-street-classic",
+        "reason": "8% static max loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://faq.wsfunded.com/en/articles/8717270-2-phases-wall-street-classic",
+        "reason": "First payout 15 days then every ten days."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://faq.wsfunded.com/en/articles/8717270-2-phases-wall-street-classic",
+        "reason": "Stop loss within two minutes; EA permission subject to contractual third-party restrictions."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach",
+        "reason": "First direct breach of risk per idea (50% daily drawdown) cancels funded account and payout."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "profitSplit": 80,
+      "source": "https://faq.wsfunded.com/en/articles/8717270-2-phases-wall-street-classic"
+    }
+  },
+  "wsfunded-ultra-2phase": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: exact funded consistency not explicitly confirmed; programme-specific September rules.",
+    "scopeFr": "Partiel : consistency financée non explicitement confirmée ; règles spécifiques de septembre.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://faq.wsfunded.com/en/articles/8717276-2-phases-wall-street-ultra",
+        "reason": "10% static max loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://faq.wsfunded.com/en/articles/8717276-2-phases-wall-street-ultra",
+        "reason": "First payout 15 days then every ten days."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://faq.wsfunded.com/en/articles/8717276-2-phases-wall-street-ultra",
+        "reason": "Stop loss within two minutes; EA permission subject to contractual third-party restrictions."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach",
+        "reason": "First direct breach of risk per idea (50% daily drawdown) cancels funded account and payout."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "profitSplit": 80,
+      "source": "https://faq.wsfunded.com/en/articles/8717276-2-phases-wall-street-ultra"
+    }
+  },
+  "wsfunded-rapid-1phase": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: exact funded consistency not explicitly confirmed; programme-specific September rules.",
+    "scopeFr": "Partiel : consistency financée non explicitement confirmée ; règles spécifiques de septembre.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://faq.wsfunded.com/en/articles/8717253-1-phase-wall-street-rapid",
+        "reason": "6% static max loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://faq.wsfunded.com/en/articles/8717253-1-phase-wall-street-rapid",
+        "reason": "First payout 30 days then every ten days."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://faq.wsfunded.com/en/articles/8717253-1-phase-wall-street-rapid",
+        "reason": "Stop loss within two minutes; EA permission subject to contractual third-party restrictions."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach",
+        "reason": "First direct breach of risk per idea (50% daily drawdown) cancels funded account and payout."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://faq.wsfunded.com/en/articles/8717253-1-phase-wall-street-rapid"
+    }
+  },
+  "wsfunded-power-1phase": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: published 6% initial floor and previous funded trailing wording require reconciliation.",
+    "scopeFr": "Partiel : seuil initial de 6 % et ancien seuil suiveur financé à réconcilier.",
+    "assessments": {
+      "payout": {
+        "points": 1,
+        "source": "https://faq.wsfunded.com/en/articles/16859382-1-phase-wall-street-power",
+        "reason": "14-day first and subsequent payout interval."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/16859382-1-phase-wall-street-power",
+        "reason": "20% best-day limit."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/11142820-trading-idea",
+        "reason": "1% risk per trading idea."
+      }
+    }
+  },
+  "wsfunded-prime-1phase": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: exact funded loss formula and payout eligibility pending.",
+    "scopeFr": "Partiel : seuil financé et éligibilité aux retraits à confirmer.",
+    "assessments": {
+      "payout": {
+        "points": 1,
+        "source": "https://faq.wsfunded.com/en/articles/17660303-1-phase-wall-street-prime",
+        "reason": "Official article advertises instant payout and 90% split."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://faq.wsfunded.com/en/articles/17660303-1-phase-wall-street-prime",
+        "reason": "No consistency rule stated."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/11142820-trading-idea",
+        "reason": "1% maximum risk per trading idea."
+      }
+    }
+  }
+};
+evidence["ment-funding"] = {
+  "ment-forex-1-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "25K–1M Forex, no paid add-ons; >1M tiers have separate rules.",
+    "scopeFr": "Forex 25K à 1M, sans option ; au-delà de 1M règles distinctes.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/",
+        "reason": "6% static initial loss, floor rises to initial balance after first withdrawal."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/",
+        "reason": "First payout day one; withdrawing can remove loss cushion after first payout floor locks; 75% standard share."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://mentfunding.com/",
+        "reason": "No best-day rule on 25K–1M."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/",
+        "reason": "No entries within three minutes either side of news, weekend holding requires add-on."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/",
+        "reason": "30-day activity requirement; ordinary account limits."
+      }
+    },
+    "preset": {
+      "profitSplit": 75,
+      "source": "https://mentfunding.com/"
+    }
+  },
+  "ment-futures": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current CME Futures standard funded, no add-ons.",
+    "scopeFr": "CME Futures financé standard actuel, sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/",
+        "reason": "6% initial fixed loss, raised to starting balance after first payout."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/",
+        "reason": "First payout then 30-day cadence; first payout raises floor to starting balance."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/",
+        "reason": "33% best-day limit at each payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/",
+        "reason": "News allowed; front-month contracts only, exchange margin limits."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/",
+        "reason": "Daily loss 3% of prior closing balance, hard breach."
+      }
+    },
+    "preset": {
+      "profitSplit": 75,
+      "source": "https://mentfunding.com/"
+    }
+  },
+  "ment-equities": {
+    "checkedOn": "2026-11-28",
+    "scope": "Equities Static baseline; Trailing rated separately.",
+    "scopeFr": "Actions Static de référence ; variante Trailing notée séparément.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://mentfunding.com/",
+        "reason": "6% static maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/",
+        "reason": "14-day cycle, $100 minimum and three 0.5% profitable days."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/",
+        "reason": "33% funded best-day limit for Static."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/",
+        "reason": "3% daily profit cap pauses trading; 4% daily intraday loss hard breach."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://mentfunding.com/"
+    }
+  }
+};
+evidence["crypto-fund-trader"] = {
+  "cft-break": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Break Final Stage, no add-ons; size-dependent proportional trail.",
+    "scopeFr": "Break Final Stage actuel, sans option ; trailing proportionnel selon taille.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://cryptofundtrader.com/faq/",
+        "reason": "4% of highest balance on 25K/50K; 3% on 100K."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://cryptofundtrader.com/faq/",
+        "reason": "On-demand after evaluation and activation fee; no minimum traded days, all positions closed."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://cryptofundtrader.com/faq/",
+        "reason": "40% best-day share of total profits to date; not established as cycle reset."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://cryptofundtrader.com/faq/",
+        "reason": "News and overnight/weekend positions generally allowed; no funded copy trading even between own Break accounts."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://cryptofundtrader.com/faq/",
+        "reason": "Maximum five Final Stage accounts; funded compliance review and general restrictions."
+      }
+    }
+  },
+  "cft-evaluation": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: generic legacy catalogue ID does not uniquely identify current 1-Phase or 2-Phase.",
+    "scopeFr": "Partiel : identifiant générique ancien, ne distingue pas les 1-Phase et 2-Phase actuels.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://cryptofundtrader.com/faq/",
+        "reason": "Current 2-Phase standard 15 traded days or 30 calendar days; 1-Phase seven traded days; map exact offer."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://cryptofundtrader.com/faq/",
+        "reason": "General news and overnight/weekend holding allowed, subject to model-specific exceptions."
+      }
+    }
+  },
+  "cft-accelerated": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: current Classic/Pro/Turbo mapping unresolved.",
+    "scopeFr": "Partiel : correspondance Classic/Pro/Turbo à confirmer.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://cryptofundtrader.com/faq/",
+        "reason": "Current 1-Phase reward seven traded days, optional two-day paid add-on."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://cryptofundtrader.com/faq/",
+        "reason": "General news and overnight/weekend holding allowed."
+      }
+    }
+  },
+  "cft-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "Legacy only: official FAQ says no longer available for purchase.",
+    "scopeFr": "Ancien programme : la FAQ confirme la fin des nouveaux achats.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://cryptofundtrader.com/faq/",
+        "reason": "Existing accounts may request Withdrawal & Upgrade at 10% profit or ordinary reward under other evaluation conditions."
+      }
+    }
+  }
+};
+evidence["funded7"] = {
+  "funded7-two-phase": {
+    "checkedOn": "2026-11-28",
+    "scope": "Published comparison and general OREF framework; standard Pro tier, no promotional accounts.",
+    "scopeFr": "Comparatif et règlement OREF ; niveau Pro standard, hors comptes promotionnels.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://funded7.com/challenge-comparison/",
+        "reason": "10% static total loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://funded7.com/challenge-comparison/",
+        "reason": "Seven-day payout cycle; $100 minimum, quality and activity requirements; contractual monthly cap."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://funded7.com/faq/rule-1-payout-criteria/",
+        "reason": "Dynamic trade-size outlier rule, at least ten closed trades and three active days; (second + third largest trade profit) / largest trade profit >=0.90. Failure defers payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://funded7.com/faq/rule-2-3-position-risk-execution/",
+        "reason": "Fast-trade frequency limits: more than 2% of trades under 15s or 3% under 30s triggers restricted tier."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://funded7.com/faq/rule-2-3-position-risk-execution/",
+        "reason": "Portfolio, correlation-bucket and single-position risk limits; 3% standard, 2% Silver, 1% Bronze; restricted tier and profit nullification rules."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "profitSplit": 80,
+      "source": "https://funded7.com/challenge-comparison/"
+    }
+  },
+  "funded7-one-phase": {
+    "checkedOn": "2026-11-28",
+    "scope": "Published comparison and general OREF framework; standard Pro tier, no promotional accounts.",
+    "scopeFr": "Comparatif et règlement OREF ; niveau Pro standard, hors comptes promotionnels.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://funded7.com/challenge-comparison/",
+        "reason": "Seven-day payout cycle; $100 minimum, quality and activity requirements; contractual monthly cap."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://funded7.com/faq/rule-1-payout-criteria/",
+        "reason": "Dynamic trade-size outlier rule, at least ten closed trades and three active days; (second + third largest trade profit) / largest trade profit >=0.90. Failure defers payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://funded7.com/faq/rule-2-3-position-risk-execution/",
+        "reason": "Fast-trade frequency limits: more than 2% of trades under 15s or 3% under 30s triggers restricted tier."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://funded7.com/faq/rule-2-3-position-risk-execution/",
+        "reason": "Portfolio, correlation-bucket and single-position risk limits; 3% standard, 2% Silver, 1% Bronze; restricted tier and profit nullification rules."
+      }
+    }
+  },
+  "funded7-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "Published comparison and general OREF framework; standard Pro tier, no promotional accounts.",
+    "scopeFr": "Comparatif et règlement OREF ; niveau Pro standard, hors comptes promotionnels.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://funded7.com/challenge-comparison/",
+        "reason": "Seven-day payout cycle; $100 minimum, quality and activity requirements; contractual monthly cap."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://funded7.com/faq/rule-1-payout-criteria/",
+        "reason": "Dynamic trade-size outlier rule, at least ten closed trades and three active days; (second + third largest trade profit) / largest trade profit >=0.90. Failure defers payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://funded7.com/faq/rule-2-3-position-risk-execution/",
+        "reason": "Fast-trade frequency limits: more than 2% of trades under 15s or 3% under 30s triggers restricted tier."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://funded7.com/faq/rule-2-3-position-risk-execution/",
+        "reason": "Portfolio, correlation-bucket and single-position risk limits; 3% standard, 2% Silver, 1% Bronze; restricted tier and profit nullification rules."
+      }
+    }
+  }
+};
+evidence["dna-funded"] = {
+  "dna-1-phase-march-2026": {
+    "checkedOn": "2026-11-28",
+    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score.",
+    "scopeFr": "Ancienne version de mars 2026 ; commandes signalées suspendues, site officiel inaccessible. Pas de note commerciale actuelle.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://dnafunded.com/faqs/",
+        "reason": "Prior archived review: 6% static limit; not freshly verified."
+      }
+    }
+  },
+  "dna-2-phase-march-2026": {
+    "checkedOn": "2026-11-28",
+    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score.",
+    "scopeFr": "Ancienne version de mars 2026 ; commandes signalées suspendues, site officiel inaccessible. Pas de note commerciale actuelle.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://dnafunded.com/faqs/",
+        "reason": "Prior archived review: 8% static limit; not freshly verified."
+      }
+    }
+  },
+  "dna-rapid-march-2026": {
+    "checkedOn": "2026-11-28",
+    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score.",
+    "scopeFr": "Ancienne version de mars 2026 ; commandes signalées suspendues, site officiel inaccessible. Pas de note commerciale actuelle.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://dnafunded.com/faqs/",
+        "reason": "Prior archived review: 5% static limit; not freshly verified."
+      }
+    }
+  },
+  "dna-instant-march-2026": {
+    "checkedOn": "2026-11-28",
+    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score.",
+    "scopeFr": "Ancienne version de mars 2026 ; commandes signalées suspendues, site officiel inaccessible. Pas de note commerciale actuelle.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://dnafunded.com/faqs/",
+        "reason": "Prior archived review: 4% equity trailing limit; not freshly verified."
+      }
+    }
+  }
+};
 // Top One / Instant Funding / Funding Traders / QT batch, 2026-11-28.
 evidence["top-one-trader"] = {
   "top-one-trader-flash": {

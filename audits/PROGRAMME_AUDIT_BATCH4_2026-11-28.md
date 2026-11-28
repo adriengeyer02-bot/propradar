@@ -256,3 +256,43 @@ Five firms, 15 complete catalogue entries and variants; exact IDs verified again
 - Funding Traders: current model-specific FAQ and older generic withdrawal policy differ, particularly Instant 14 days vs on-demand; retain partial Instant until contract cohort resolved. PRO programme ratings are explicitly scoped to current model-specific help rules; generic terms discrepancy displayed in scope. https://fundingtraders.com/withdrawal-policy.
 - QT: August 11 new Instant uses 30% consistency (not old 25%), 100% share, 8% profit needed for first 5% withdrawal with 3% buffer; 1% risk per instrument and mandatory SL within 60s. QT ONE funded drawdown applicability, QT TWO funded consistency, and Power funded loss/trading details need confirmation. General payout article includes discretionary risk interview with forfeiture for nonattendance; no ordinary KYC penalty. https://support.qtfunded.com/support/articles/5613700809887-performance-fee-policy.
 - Same catalogue inventory: 135 previously unreferenced IDs minus 23 = 112 still unreferenced; additional partials and unmapped variants remain. Running cumulative complete entries 133 (variants and repeated listings included). 23 new assertions; execution/build/visual validation pending. Single atomic commit; no main merge.
+
+## Orion, WSFunded, Ment, Crypto Fund Trader, Funded7, DNA — 2026-11-28
+
+25 catalogue IDs examined; 10 complete, 15 partial or legacy. Official help pages independently opened for active firms; DNA site returned HTTP 403, historical figures only. No company ratings/prices changed.
+
+| Firm | ID | /5 |
+|---|---|---:|
+| orion-funded | orion-standard-2-step | 4 |
+| orion-funded | orion-select-3-step | 4 |
+| orion-funded | orion-nova-1-step | 1.5 |
+| orion-funded | orion-zero-instant | 1.5 |
+| wsfunded | wsfunded-instant-pro | 0.5 |
+| wsfunded | wsfunded-instant-standard | 1 |
+| wsfunded | wsfunded-classic-2phase | Partial/legacy |
+| wsfunded | wsfunded-ultra-2phase | Partial/legacy |
+| wsfunded | wsfunded-rapid-1phase | Partial/legacy |
+| wsfunded | wsfunded-power-1phase | Partial/legacy |
+| wsfunded | wsfunded-prime-1phase | Partial/legacy |
+| ment-funding | ment-forex-1-step | 3 |
+| ment-funding | ment-futures | 2.5 |
+| ment-funding | ment-equities | Partial/legacy |
+| crypto-fund-trader | cft-break | 2.5 |
+| crypto-fund-trader | cft-evaluation | Partial/legacy |
+| crypto-fund-trader | cft-accelerated | Partial/legacy |
+| crypto-fund-trader | cft-instant | Partial/legacy |
+| funded7 | funded7-two-phase | 2 |
+| funded7 | funded7-one-phase | Partial/legacy |
+| funded7 | funded7-instant | Partial/legacy |
+| dna-funded | dna-1-phase-march-2026 | Partial/legacy |
+| dna-funded | dna-2-phase-march-2026 | Partial/legacy |
+| dna-funded | dna-rapid-march-2026 | Partial/legacy |
+| dna-funded | dna-instant-march-2026 | Partial/legacy |
+
+- Orion Zero trails closed balance; Nova funded trails equity, including unrealized gains. Both proportional floor examples differ from fixed-dollar simulator; 3% payout buffer and 20% best day. https://www.orionfunded.com/faq/programs/max-drawdown ; https://www.orionfunded.com/faq/programs/consistency-rule.
+- WSFunded Instant: non-resetting floor may cause immediate breach after withdrawal; 4 days >=0.5% each. Direct 1% idea-risk violation cancels account and payout; Classic/Ultra/Rapid analogous 50% daily drawdown rule. https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach. Do not assume missing consistency means none. Power drawdown scope unresolved.
+- Ment: Forex and futures 6% fixed initial loss moves once at first payout, not ordinary static for entire account life. Forex >1M separate 35% consistency. Equities Static/Trailing distinct; exact execution freedoms pending. https://mentfunding.com/.
+- CFT Instant discontinued per FAQ. Break 40% lifetime profit denominator, paid activation after review. Generic catalogue IDs not uniquely mapped. https://cryptofundtrader.com/faq/.
+- Funded7 quality score not best-day consistency: QC >=0.90 based on top three trade profits, plus dynamic trade-size outlier gate and minimum activity. Restricted tiers and max portfolio risk explicit. https://funded7.com/faq/rule-1-payout-criteria/ ; https://funded7.com/faq/rule-2-3-position-risk-execution/. One/Instant trailing mechanic not fully confirmed; partial.
+- DNA new orders reportedly suspended; no closure asserted. Official site inaccessible 403 at review; historical March scope and no current stars. Secondary current status: https://bestprops.com/what-is-dna-funded/ ; https://propdesknews.com/firms/dna-funded/rules/. Do not promote until verified.
+- Inventory: 112 unreferenced IDs before this batch, 87 after; existing partials and unlisted variants remain. Running cumulative 143 complete entries (variants/repeated listings included). 25 new assertions. No full execution/build/visual validation yet; single atomic commit.
