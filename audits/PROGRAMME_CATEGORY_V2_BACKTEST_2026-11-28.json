@@ -1,0 +1,2168 @@
+{
+  "asOf": "2026-11-28",
+  "base": "30cd5d54aa502135af32db6e4984a57de87a63f7",
+  "scope": "Fixed category rubric for funded-stage rules; historical absolute assessment unchanged, no pass probability, no evaluation target scoring.",
+  "counts": {
+    "main": 195,
+    "variants": 20
+  },
+  "overall": {
+    "before": 2.428205128205128,
+    "after": 3.2,
+    "under2": 20,
+    "atLeast4": 55
+  },
+  "categories": {
+    "one": {
+      "n": 39,
+      "old": 99.5,
+      "new": 123.5,
+      "under2": 4,
+      "atLeast4": 7
+    },
+    "two": {
+      "n": 40,
+      "old": 130.5,
+      "new": 150.75,
+      "under2": 0,
+      "atLeast4": 17
+    },
+    "instant": {
+      "n": 44,
+      "old": 60.5,
+      "new": 102.25,
+      "under2": 16,
+      "atLeast4": 4
+    },
+    "three": {
+      "n": 5,
+      "old": 18.5,
+      "new": 20.75,
+      "under2": 0,
+      "atLeast4": 4
+    },
+    "scaling": {
+      "n": 1,
+      "old": 4,
+      "new": 4.5,
+      "under2": 0,
+      "atLeast4": 1
+    },
+    "futures": {
+      "n": 43,
+      "old": 102.5,
+      "new": 145,
+      "under2": 0,
+      "atLeast4": 13
+    },
+    "futuresInstant": {
+      "n": 6,
+      "old": 8.5,
+      "new": 15.75,
+      "under2": 0,
+      "atLeast4": 0
+    },
+    "futuresScaling": {
+      "n": 2,
+      "old": 6.5,
+      "new": 8.25,
+      "under2": 0,
+      "atLeast4": 2
+    },
+    "equities": {
+      "n": 3,
+      "old": 8.5,
+      "new": 11.5,
+      "under2": 0,
+      "atLeast4": 2
+    },
+    "crypto": {
+      "n": 6,
+      "old": 23,
+      "new": 26,
+      "under2": 0,
+      "atLeast4": 5
+    },
+    "challenge": {
+      "n": 6,
+      "old": 11.5,
+      "new": 15.75,
+      "under2": 0,
+      "atLeast4": 0
+    }
+  },
+  "examples": [
+    {
+      "slug": "ftmo",
+      "id": "ftmo-one-step-current",
+      "variant": null,
+      "category": "one",
+      "old": 3.5,
+      "quality": 4.5,
+      "constraints": 1.5
+    },
+    {
+      "slug": "ftmo",
+      "id": "ftmo-two-step-current",
+      "variant": null,
+      "category": "two",
+      "old": 4.5,
+      "quality": 4.75,
+      "constraints": 0.5
+    },
+    {
+      "slug": "ftmo",
+      "id": "ftmo-two-step-current",
+      "variant": "swing-account",
+      "category": "two",
+      "old": 5,
+      "quality": 5,
+      "constraints": 0
+    },
+    {
+      "slug": "ftmo",
+      "id": "ftmo-instant-current",
+      "variant": null,
+      "category": "instant",
+      "old": 2,
+      "quality": 2.75,
+      "constraints": 3
+    },
+    {
+      "slug": "the5ers",
+      "id": "the5ers-bootcamp-current",
+      "variant": null,
+      "category": "three",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "topstep",
+      "id": "topstep-trading-combine-current",
+      "variant": null,
+      "category": "futures",
+      "old": 3,
+      "quality": 4.25,
+      "constraints": 2
+    },
+    {
+      "slug": "topstep",
+      "id": "topstep-trading-combine-current",
+      "variant": "xfa-consistency",
+      "category": "futures",
+      "old": 2.5,
+      "quality": 4,
+      "constraints": 2.5
+    },
+    {
+      "slug": "tradeify",
+      "id": "tradeify-lightning",
+      "variant": null,
+      "category": "futuresInstant",
+      "old": 1,
+      "quality": 2,
+      "constraints": 4
+    },
+    {
+      "slug": "sfx-funded",
+      "id": "sfx-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 0.5,
+      "quality": 0.75,
+      "constraints": 4.5
+    },
+    {
+      "slug": "sfx-funded",
+      "id": "sfx-instant",
+      "variant": "instant-pro",
+      "category": "instant",
+      "old": 0.5,
+      "quality": 0.75,
+      "constraints": 4.5
+    },
+    {
+      "slug": "sfx-funded",
+      "id": "sfx-instant",
+      "variant": "instant-flex",
+      "category": "instant",
+      "old": 1.5,
+      "quality": 1.75,
+      "constraints": 3.5
+    },
+    {
+      "slug": "tx3-funding",
+      "id": "tx3-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 0,
+      "quality": 0.5,
+      "constraints": 5
+    },
+    {
+      "slug": "monevis",
+      "id": "monevis-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "city-traders-imperium",
+      "id": "cti-direct-current",
+      "variant": null,
+      "category": "instant",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-zero-direct",
+      "variant": null,
+      "category": "instant",
+      "old": 0,
+      "quality": 0.5,
+      "constraints": 5
+    }
+  ],
+  "ratings": [
+    {
+      "slug": "ftmo",
+      "id": "ftmo-one-step-current",
+      "variant": null,
+      "category": "one",
+      "old": 3.5,
+      "quality": 4.5,
+      "constraints": 1.5
+    },
+    {
+      "slug": "ftmo",
+      "id": "ftmo-two-step-current",
+      "variant": null,
+      "category": "two",
+      "old": 4.5,
+      "quality": 4.75,
+      "constraints": 0.5
+    },
+    {
+      "slug": "ftmo",
+      "id": "ftmo-two-step-current",
+      "variant": "swing-account",
+      "category": "two",
+      "old": 5,
+      "quality": 5,
+      "constraints": 0
+    },
+    {
+      "slug": "ftmo",
+      "id": "ftmo-instant-current",
+      "variant": null,
+      "category": "instant",
+      "old": 2,
+      "quality": 2.75,
+      "constraints": 3
+    },
+    {
+      "slug": "the5ers",
+      "id": "the5ers-bootcamp-current",
+      "variant": null,
+      "category": "three",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "the5ers",
+      "id": "the5ers-hyper-growth-current",
+      "variant": null,
+      "category": "scaling",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "fundednext",
+      "id": "fundednext-stellar-one-current",
+      "variant": null,
+      "category": "one",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "fundednext",
+      "id": "fundednext-stellar-two-current",
+      "variant": null,
+      "category": "two",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "fundednext",
+      "id": "fundednext-stellar-two-current",
+      "variant": "three-day-reward",
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "fundednext",
+      "id": "fundednext-stellar-two-current",
+      "variant": "on-demand-reward",
+      "category": "two",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "fundednext",
+      "id": "fundednext-stellar-lite-current",
+      "variant": null,
+      "category": "two",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "fundednext",
+      "id": "fundednext-stellar-lite-current",
+      "variant": "three-day-reward",
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "fundednext",
+      "id": "fundednext-stellar-lite-current",
+      "variant": "on-demand-reward",
+      "category": "two",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "fundednext",
+      "id": "fundednext-stellar-instant-current",
+      "variant": null,
+      "category": "instant",
+      "old": 2,
+      "quality": 3.25,
+      "constraints": 3
+    },
+    {
+      "slug": "take-profit-trader",
+      "id": "tpt-intraday-2026",
+      "variant": null,
+      "category": "futures",
+      "old": 2.5,
+      "quality": 3.5,
+      "constraints": 2.5
+    },
+    {
+      "slug": "take-profit-trader",
+      "id": "tpt-classic-2026",
+      "variant": null,
+      "category": "futures",
+      "old": 2.5,
+      "quality": 3.5,
+      "constraints": 2.5
+    },
+    {
+      "slug": "take-profit-trader",
+      "id": "tpt-eod-2026",
+      "variant": null,
+      "category": "futures",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "alpha-futures",
+      "id": "alpha-futures-zero",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 3,
+      "constraints": 3
+    },
+    {
+      "slug": "alpha-futures",
+      "id": "alpha-futures-standard",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 3,
+      "constraints": 3
+    },
+    {
+      "slug": "alpha-futures",
+      "id": "alpha-futures-advanced",
+      "variant": null,
+      "category": "futures",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "alpha-futures",
+      "id": "alpha-futures-direct",
+      "variant": null,
+      "category": "futuresInstant",
+      "old": 1,
+      "quality": 2,
+      "constraints": 4
+    },
+    {
+      "slug": "topstep",
+      "id": "topstep-trading-combine-current",
+      "variant": null,
+      "category": "futures",
+      "old": 3,
+      "quality": 4.25,
+      "constraints": 2
+    },
+    {
+      "slug": "topstep",
+      "id": "topstep-trading-combine-current",
+      "variant": "xfa-consistency",
+      "category": "futures",
+      "old": 2.5,
+      "quality": 4,
+      "constraints": 2.5
+    },
+    {
+      "slug": "topstep",
+      "id": "topstep-static-combine-current",
+      "variant": null,
+      "category": "futures",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "topstep",
+      "id": "topstep-static-combine-current",
+      "variant": "xfa-consistency",
+      "category": "futures",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "topstep",
+      "id": "topstep-freedom-250k-current",
+      "variant": null,
+      "category": "futures",
+      "old": 3,
+      "quality": 4.25,
+      "constraints": 2
+    },
+    {
+      "slug": "tradeify",
+      "id": "tradeify-growth-eval",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 3,
+      "constraints": 3
+    },
+    {
+      "slug": "tradeify",
+      "id": "tradeify-lightning",
+      "variant": null,
+      "category": "futuresInstant",
+      "old": 1,
+      "quality": 2,
+      "constraints": 4
+    },
+    {
+      "slug": "tradeify",
+      "id": "tradeify-select-eval",
+      "variant": null,
+      "category": "futures",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "tradeify",
+      "id": "tradeify-select-eval",
+      "variant": "daily",
+      "category": "futures",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "tradeify",
+      "id": "tradeify-select-300k-current",
+      "variant": null,
+      "category": "futures",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "tradeify",
+      "id": "tradeify-select-300k-current",
+      "variant": "daily",
+      "category": "futures",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "tradeday",
+      "id": "tradeday-quick-pay",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 2.5,
+      "constraints": 3
+    },
+    {
+      "slug": "tradeday",
+      "id": "tradeday-fast-pass",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 3,
+      "constraints": 3
+    },
+    {
+      "slug": "earn2trade",
+      "id": "e2t-tcp",
+      "variant": null,
+      "category": "futures",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "earn2trade",
+      "id": "e2t-gauntlet",
+      "variant": null,
+      "category": "futures",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "earn2trade",
+      "id": "e2t-livesim",
+      "variant": null,
+      "category": "futuresScaling",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "earn2trade",
+      "id": "e2t-tcp-large-fixed",
+      "variant": null,
+      "category": "futuresScaling",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "the-trading-pit",
+      "id": "ttp-futures-prime",
+      "variant": null,
+      "category": "futures",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "the-trading-pit",
+      "id": "ttp-futures-instant",
+      "variant": null,
+      "category": "futuresInstant",
+      "old": 1.5,
+      "quality": 3,
+      "constraints": 3.5
+    },
+    {
+      "slug": "trade-the-pool",
+      "id": "ttp-day-max",
+      "variant": null,
+      "category": "equities",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "trade-the-pool",
+      "id": "ttp-day-flex",
+      "variant": null,
+      "category": "equities",
+      "old": 2.5,
+      "quality": 3.5,
+      "constraints": 2.5
+    },
+    {
+      "slug": "funded-futures-network",
+      "id": "funded-futures-network-max-standard",
+      "variant": null,
+      "category": "futures",
+      "old": 2.5,
+      "quality": 3.75,
+      "constraints": 2.5
+    },
+    {
+      "slug": "funded-futures-network",
+      "id": "funded-futures-network-steady",
+      "variant": null,
+      "category": "futures",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "maven-trading",
+      "id": "maven-standard-one-step",
+      "variant": null,
+      "category": "one",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "maven-trading",
+      "id": "maven-standard-two-step",
+      "variant": null,
+      "category": "two",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "maven-trading",
+      "id": "maven-standard-three-step",
+      "variant": null,
+      "category": "three",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "maven-trading",
+      "id": "maven-static-one-step",
+      "variant": null,
+      "category": "one",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "maven-trading",
+      "id": "maven-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 0.5,
+      "quality": 1.25,
+      "constraints": 4.5
+    },
+    {
+      "slug": "lux-trading-firm",
+      "id": "lux-1-step-evaluation",
+      "variant": null,
+      "category": "one",
+      "old": 2.5,
+      "quality": 2.75,
+      "constraints": 2.5
+    },
+    {
+      "slug": "blueberry-funded",
+      "id": "blueberry-prime-2-step",
+      "variant": null,
+      "category": "two",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "breakout-prop",
+      "id": "breakout-classic",
+      "variant": null,
+      "category": "crypto",
+      "old": 4.5,
+      "quality": 4.75,
+      "constraints": 0.5
+    },
+    {
+      "slug": "breakout-prop",
+      "id": "breakout-pro",
+      "variant": null,
+      "category": "crypto",
+      "old": 4.5,
+      "quality": 4.75,
+      "constraints": 0.5
+    },
+    {
+      "slug": "breakout-prop",
+      "id": "breakout-turbo",
+      "variant": null,
+      "category": "crypto",
+      "old": 4.5,
+      "quality": 4.75,
+      "constraints": 0.5
+    },
+    {
+      "slug": "funderpro",
+      "id": "funderpro-one-phase",
+      "variant": null,
+      "category": "one",
+      "old": 3.5,
+      "quality": 3.75,
+      "constraints": 1.5
+    },
+    {
+      "slug": "funderpro",
+      "id": "funderpro-classic",
+      "variant": null,
+      "category": "two",
+      "old": 3.5,
+      "quality": 3.75,
+      "constraints": 1.5
+    },
+    {
+      "slug": "funderpro",
+      "id": "funderpro-pro",
+      "variant": null,
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "funderpro",
+      "id": "funderpro-pro",
+      "variant": "daily-60",
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "ftuk",
+      "id": "ftuk-flex-challenge",
+      "variant": null,
+      "category": "challenge",
+      "old": 1,
+      "quality": 2.25,
+      "constraints": 4
+    },
+    {
+      "slug": "ftuk",
+      "id": "ftuk-instant-funding",
+      "variant": null,
+      "category": "instant",
+      "old": 1,
+      "quality": 2.75,
+      "constraints": 4
+    },
+    {
+      "slug": "ftuk",
+      "id": "ftuk-flex-futures",
+      "variant": null,
+      "category": "futures",
+      "old": 2.5,
+      "quality": 3.75,
+      "constraints": 2.5
+    },
+    {
+      "slug": "ftuk",
+      "id": "ftuk-instant-sim-futures",
+      "variant": null,
+      "category": "futuresInstant",
+      "old": 1.5,
+      "quality": 2.75,
+      "constraints": 3.5
+    },
+    {
+      "slug": "oneup-trader",
+      "id": "oneup-standard-current",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 3.25,
+      "constraints": 3
+    },
+    {
+      "slug": "oneup-trader",
+      "id": "oneup-pro-current",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 3.25,
+      "constraints": 3
+    },
+    {
+      "slug": "oneup-trader",
+      "id": "oneup-express-return",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 3.25,
+      "constraints": 3
+    },
+    {
+      "slug": "rebelsfunding",
+      "id": "rebelsfunding-gold-1-phase",
+      "variant": null,
+      "category": "one",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "sabiotrade",
+      "id": "sabiotrade-evaluation",
+      "variant": null,
+      "category": "challenge",
+      "old": 1.5,
+      "quality": 2,
+      "constraints": 3.5
+    },
+    {
+      "slug": "sure-leverage",
+      "id": "slf-instant-zero",
+      "variant": null,
+      "category": "instant",
+      "old": 2,
+      "quality": 2.5,
+      "constraints": 3
+    },
+    {
+      "slug": "sure-leverage",
+      "id": "slf-instant-zero",
+      "variant": "static",
+      "category": "instant",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "sfx-funded",
+      "id": "sfx-2-step",
+      "variant": null,
+      "category": "two",
+      "old": 2,
+      "quality": 2.5,
+      "constraints": 3
+    },
+    {
+      "slug": "sfx-funded",
+      "id": "sfx-1-step-pro",
+      "variant": null,
+      "category": "one",
+      "old": 0.5,
+      "quality": 0.75,
+      "constraints": 4.5
+    },
+    {
+      "slug": "sfx-funded",
+      "id": "sfx-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 0.5,
+      "quality": 0.75,
+      "constraints": 4.5
+    },
+    {
+      "slug": "sfx-funded",
+      "id": "sfx-instant",
+      "variant": "instant-pro",
+      "category": "instant",
+      "old": 0.5,
+      "quality": 0.75,
+      "constraints": 4.5
+    },
+    {
+      "slug": "sfx-funded",
+      "id": "sfx-instant",
+      "variant": "instant-flex",
+      "category": "instant",
+      "old": 1.5,
+      "quality": 1.75,
+      "constraints": 3.5
+    },
+    {
+      "slug": "tx3-funding",
+      "id": "tx3-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 0,
+      "quality": 0.5,
+      "constraints": 5
+    },
+    {
+      "slug": "tx3-funding",
+      "id": "tx3-flex",
+      "variant": null,
+      "category": "challenge",
+      "old": 2,
+      "quality": 2.75,
+      "constraints": 3
+    },
+    {
+      "slug": "now-trade-funded",
+      "id": "ntf-standard-two-step",
+      "variant": null,
+      "category": "two",
+      "old": 2.5,
+      "quality": 2.75,
+      "constraints": 2.5
+    },
+    {
+      "slug": "now-trade-funded",
+      "id": "ntf-progressive-one-step",
+      "variant": null,
+      "category": "one",
+      "old": 1.5,
+      "quality": 1.75,
+      "constraints": 3.5
+    },
+    {
+      "slug": "now-trade-funded",
+      "id": "ntf-1k-starter",
+      "variant": null,
+      "category": "three",
+      "old": 2.5,
+      "quality": 2.75,
+      "constraints": 2.5
+    },
+    {
+      "slug": "directfundedtrader",
+      "id": "directfundedtrader-evaluation",
+      "variant": null,
+      "category": "two",
+      "old": 2.5,
+      "quality": 2.75,
+      "constraints": 2.5
+    },
+    {
+      "slug": "directfundedtrader",
+      "id": "directfundedtrader-fastfunding",
+      "variant": null,
+      "category": "one",
+      "old": 2.5,
+      "quality": 2.75,
+      "constraints": 2.5
+    },
+    {
+      "slug": "monevis",
+      "id": "monevis-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "titan-capital-markets",
+      "id": "titan-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 0.5,
+      "quality": 1.25,
+      "constraints": 4.5
+    },
+    {
+      "slug": "exfunded",
+      "id": "exfunded-1step",
+      "variant": null,
+      "category": "one",
+      "old": 2,
+      "quality": 2.5,
+      "constraints": 3
+    },
+    {
+      "slug": "exfunded",
+      "id": "exfunded-2step",
+      "variant": null,
+      "category": "two",
+      "old": 2,
+      "quality": 2.5,
+      "constraints": 3
+    },
+    {
+      "slug": "hantec-trader",
+      "id": "rzr-instant24",
+      "variant": null,
+      "category": "instant",
+      "old": 0.5,
+      "quality": 1,
+      "constraints": 4.5
+    },
+    {
+      "slug": "hantec-trader",
+      "id": "rzr-instant-lite",
+      "variant": null,
+      "category": "instant",
+      "old": 0.5,
+      "quality": 2,
+      "constraints": 4.5
+    },
+    {
+      "slug": "hantec-trader",
+      "id": "rzr-instant-funding",
+      "variant": null,
+      "category": "instant",
+      "old": 2,
+      "quality": 2.75,
+      "constraints": 3
+    },
+    {
+      "slug": "for-traders",
+      "id": "fortraders-1-step",
+      "variant": null,
+      "category": "one",
+      "old": 2,
+      "quality": 2.5,
+      "constraints": 3
+    },
+    {
+      "slug": "for-traders",
+      "id": "fortraders-1-step",
+      "variant": "fast-static",
+      "category": "one",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "thinkcapital",
+      "id": "thinkcapital-bolt",
+      "variant": null,
+      "category": "instant",
+      "old": 1,
+      "quality": 2.25,
+      "constraints": 4
+    },
+    {
+      "slug": "thinkcapital",
+      "id": "thinkcapital-bolt-flex",
+      "variant": null,
+      "category": "instant",
+      "old": 1,
+      "quality": 2.75,
+      "constraints": 4
+    },
+    {
+      "slug": "equity-edge",
+      "id": "equity-edge-1-step-legacy",
+      "variant": null,
+      "category": "one",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "equity-edge",
+      "id": "equity-edge-1-step-swift",
+      "variant": null,
+      "category": "one",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "equity-edge",
+      "id": "equity-edge-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 1.5,
+      "quality": 2.5,
+      "constraints": 3.5
+    },
+    {
+      "slug": "atlas-funded",
+      "id": "atlas-1-step",
+      "variant": null,
+      "category": "one",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "atlas-funded",
+      "id": "atlas-2-step",
+      "variant": null,
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "funded-bull",
+      "id": "funded-bull-2-step",
+      "variant": null,
+      "category": "two",
+      "old": 3,
+      "quality": 3.75,
+      "constraints": 2
+    },
+    {
+      "slug": "tradexprop",
+      "id": "tradexprop-x-1-step",
+      "variant": null,
+      "category": "one",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "tradexprop",
+      "id": "tradexprop-x-2-step",
+      "variant": null,
+      "category": "two",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "tradexprop",
+      "id": "tradexprop-instant-funded-x",
+      "variant": null,
+      "category": "instant",
+      "old": 2.5,
+      "quality": 4,
+      "constraints": 2.5
+    },
+    {
+      "slug": "tradexprop",
+      "id": "tradexprop-crypto-x-1-step",
+      "variant": null,
+      "category": "crypto",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "tradexprop",
+      "id": "tradexprop-crypto-x-2-step",
+      "variant": null,
+      "category": "crypto",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "atmos-funded",
+      "id": "atmos-nova",
+      "variant": null,
+      "category": "one",
+      "old": 1.5,
+      "quality": 1.75,
+      "constraints": 3.5
+    },
+    {
+      "slug": "atmos-funded",
+      "id": "atmos-2-step-standard",
+      "variant": null,
+      "category": "two",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "atmos-funded",
+      "id": "atmos-instant-funding",
+      "variant": null,
+      "category": "instant",
+      "old": 1,
+      "quality": 2.25,
+      "constraints": 4
+    },
+    {
+      "slug": "clarity-traders",
+      "id": "clarity-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "clarity-traders",
+      "id": "clarity-1step",
+      "variant": null,
+      "category": "one",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "clarity-traders",
+      "id": "clarity-2step",
+      "variant": null,
+      "category": "two",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "funded-trader-markets",
+      "id": "ftm-1step-nitro",
+      "variant": null,
+      "category": "one",
+      "old": 2,
+      "quality": 3.5,
+      "constraints": 3
+    },
+    {
+      "slug": "funded-trader-markets",
+      "id": "ftm-2step-plus",
+      "variant": null,
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "funded-trader-markets",
+      "id": "ftm-instant-standard",
+      "variant": null,
+      "category": "instant",
+      "old": 1.5,
+      "quality": 2.75,
+      "constraints": 3.5
+    },
+    {
+      "slug": "funded-trader-markets",
+      "id": "ftm-instant-pro",
+      "variant": null,
+      "category": "instant",
+      "old": 1,
+      "quality": 2,
+      "constraints": 4
+    },
+    {
+      "slug": "funded-trader-markets",
+      "id": "ftm-instant-plus",
+      "variant": null,
+      "category": "instant",
+      "old": 0.5,
+      "quality": 1.75,
+      "constraints": 4.5
+    },
+    {
+      "slug": "traders-launch",
+      "id": "traders-launch-futures-standard",
+      "variant": null,
+      "category": "futures",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "traders-launch",
+      "id": "traders-launch-futures-legacy-nyc",
+      "variant": null,
+      "category": "futures",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "daytraders-com",
+      "id": "daytraders-trailing",
+      "variant": null,
+      "category": "futures",
+      "old": 1.5,
+      "quality": 2.25,
+      "constraints": 3.5
+    },
+    {
+      "slug": "daytraders-com",
+      "id": "daytraders-eod",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 3,
+      "constraints": 3
+    },
+    {
+      "slug": "daytraders-com",
+      "id": "daytraders-static",
+      "variant": null,
+      "category": "futures",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "orion-funded",
+      "id": "orion-standard-2-step",
+      "variant": null,
+      "category": "two",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "orion-funded",
+      "id": "orion-select-3-step",
+      "variant": null,
+      "category": "three",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "orion-funded",
+      "id": "orion-nova-1-step",
+      "variant": null,
+      "category": "one",
+      "old": 1.5,
+      "quality": 2.5,
+      "constraints": 3.5
+    },
+    {
+      "slug": "orion-funded",
+      "id": "orion-zero-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 1.5,
+      "quality": 3.5,
+      "constraints": 3.5
+    },
+    {
+      "slug": "wsfunded",
+      "id": "wsfunded-instant-pro",
+      "variant": null,
+      "category": "instant",
+      "old": 0.5,
+      "quality": 1.25,
+      "constraints": 4.5
+    },
+    {
+      "slug": "wsfunded",
+      "id": "wsfunded-instant-standard",
+      "variant": null,
+      "category": "instant",
+      "old": 1,
+      "quality": 1.75,
+      "constraints": 4
+    },
+    {
+      "slug": "wsfunded",
+      "id": "wsfunded-classic-2phase",
+      "variant": null,
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "wsfunded",
+      "id": "wsfunded-ultra-2phase",
+      "variant": null,
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "wsfunded",
+      "id": "wsfunded-rapid-1phase",
+      "variant": null,
+      "category": "one",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "wsfunded",
+      "id": "wsfunded-power-1phase",
+      "variant": null,
+      "category": "one",
+      "old": 1.5,
+      "quality": 2,
+      "constraints": 3.5
+    },
+    {
+      "slug": "ment-funding",
+      "id": "ment-forex-1-step",
+      "variant": null,
+      "category": "one",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "ment-funding",
+      "id": "ment-futures",
+      "variant": null,
+      "category": "futures",
+      "old": 2.5,
+      "quality": 4,
+      "constraints": 2.5
+    },
+    {
+      "slug": "ment-funding",
+      "id": "ment-equities",
+      "variant": null,
+      "category": "equities",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "id": "cft-break",
+      "variant": null,
+      "category": "crypto",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "funded7",
+      "id": "funded7-two-phase",
+      "variant": null,
+      "category": "two",
+      "old": 2,
+      "quality": 2.5,
+      "constraints": 3
+    },
+    {
+      "slug": "funded7",
+      "id": "funded7-one-phase",
+      "variant": null,
+      "category": "one",
+      "old": 1,
+      "quality": 1.5,
+      "constraints": 4
+    },
+    {
+      "slug": "funded7",
+      "id": "funded7-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 1,
+      "quality": 1.5,
+      "constraints": 4
+    },
+    {
+      "slug": "top-one-trader",
+      "id": "top-one-trader-flash",
+      "variant": null,
+      "category": "one",
+      "old": 2,
+      "quality": 2.5,
+      "constraints": 3
+    },
+    {
+      "slug": "top-one-trader",
+      "id": "top-one-trader-2-step-pro",
+      "variant": null,
+      "category": "two",
+      "old": 2.5,
+      "quality": 2.75,
+      "constraints": 2.5
+    },
+    {
+      "slug": "top-one-trader",
+      "id": "top-one-trader-instant-funding",
+      "variant": null,
+      "category": "instant",
+      "old": 1.5,
+      "quality": 2.75,
+      "constraints": 3.5
+    },
+    {
+      "slug": "top-one-trader",
+      "id": "top-one-trader-instant-prime",
+      "variant": null,
+      "category": "instant",
+      "old": 1.5,
+      "quality": 2.25,
+      "constraints": 3.5
+    },
+    {
+      "slug": "top-one-trader",
+      "id": "top-one-trader-magnum",
+      "variant": null,
+      "category": "instant",
+      "old": 1,
+      "quality": 2.25,
+      "constraints": 4
+    },
+    {
+      "slug": "top-one-trader",
+      "id": "top-one-trader-nova",
+      "variant": null,
+      "category": "challenge",
+      "old": 1.5,
+      "quality": 2.25,
+      "constraints": 3.5
+    },
+    {
+      "slug": "top-one-futures",
+      "id": "top-one-elite-evaluation",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 2.75,
+      "constraints": 3
+    },
+    {
+      "slug": "top-one-futures",
+      "id": "top-one-elite-daily",
+      "variant": null,
+      "category": "futures",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "top-one-futures",
+      "id": "top-one-elite-access",
+      "variant": null,
+      "category": "futures",
+      "old": 2.5,
+      "quality": 3.75,
+      "constraints": 2.5
+    },
+    {
+      "slug": "top-one-futures",
+      "id": "top-one-instant-sim-funded",
+      "variant": null,
+      "category": "futuresInstant",
+      "old": 2,
+      "quality": 3.5,
+      "constraints": 3
+    },
+    {
+      "slug": "top-one-futures",
+      "id": "top-one-ignite",
+      "variant": null,
+      "category": "futuresInstant",
+      "old": 1.5,
+      "quality": 2.5,
+      "constraints": 3.5
+    },
+    {
+      "slug": "instant-funding",
+      "id": "instant-funding-pro",
+      "variant": null,
+      "category": "instant",
+      "old": 3,
+      "quality": 4,
+      "constraints": 2
+    },
+    {
+      "slug": "instant-funding",
+      "id": "instant-funding-one-phase-pro",
+      "variant": null,
+      "category": "one",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "instant-funding",
+      "id": "instant-funding-two-phase",
+      "variant": null,
+      "category": "two",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "funding-traders",
+      "id": "funding-traders-pro6",
+      "variant": null,
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "funding-traders",
+      "id": "funding-traders-pro10",
+      "variant": null,
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "funding-traders",
+      "id": "funding-traders-1-step-pro",
+      "variant": null,
+      "category": "one",
+      "old": 1.5,
+      "quality": 2.5,
+      "constraints": 3.5
+    },
+    {
+      "slug": "funding-traders",
+      "id": "funding-traders-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 1.5,
+      "quality": 2.75,
+      "constraints": 3.5
+    },
+    {
+      "slug": "quant-tekel",
+      "id": "qt-two",
+      "variant": null,
+      "category": "two",
+      "old": 2.5,
+      "quality": 2.75,
+      "constraints": 2.5
+    },
+    {
+      "slug": "quant-tekel",
+      "id": "qt-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 1,
+      "quality": 1.75,
+      "constraints": 4
+    },
+    {
+      "slug": "audacity-capital",
+      "id": "audacity-ability-challenge",
+      "variant": null,
+      "category": "two",
+      "old": 4.5,
+      "quality": 4.75,
+      "constraints": 0.5
+    },
+    {
+      "slug": "audacity-capital",
+      "id": "audacity-ability-one",
+      "variant": null,
+      "category": "one",
+      "old": 4,
+      "quality": 4.75,
+      "constraints": 1
+    },
+    {
+      "slug": "audacity-capital",
+      "id": "audacity-ftp-instant",
+      "variant": null,
+      "category": "instant",
+      "old": 2.5,
+      "quality": 3.75,
+      "constraints": 2.5
+    },
+    {
+      "slug": "city-traders-imperium",
+      "id": "cti-one-current",
+      "variant": null,
+      "category": "one",
+      "old": 3.5,
+      "quality": 3.75,
+      "constraints": 1.5
+    },
+    {
+      "slug": "city-traders-imperium",
+      "id": "cti-two-current",
+      "variant": null,
+      "category": "two",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "city-traders-imperium",
+      "id": "cti-instant-current",
+      "variant": null,
+      "category": "instant",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "city-traders-imperium",
+      "id": "cti-direct-current",
+      "variant": null,
+      "category": "instant",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "alpha-capital-group",
+      "id": "alpha-pro",
+      "variant": null,
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "alpha-capital-group",
+      "id": "alpha-pro",
+      "variant": "on-demand",
+      "category": "two",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "alpha-capital-group",
+      "id": "alpha-one",
+      "variant": null,
+      "category": "one",
+      "old": 1.5,
+      "quality": 2.75,
+      "constraints": 3.5
+    },
+    {
+      "slug": "alpha-capital-group",
+      "id": "alpha-direct",
+      "variant": null,
+      "category": "instant",
+      "old": 0.5,
+      "quality": 1.75,
+      "constraints": 4.5
+    },
+    {
+      "slug": "fintokei",
+      "id": "finto-start-new",
+      "variant": null,
+      "category": "one",
+      "old": 3,
+      "quality": 3,
+      "constraints": 2
+    },
+    {
+      "slug": "fintokei",
+      "id": "finto-swift-new",
+      "variant": null,
+      "category": "one",
+      "old": 3.5,
+      "quality": 3.75,
+      "constraints": 1.5
+    },
+    {
+      "slug": "fintokei",
+      "id": "finto-pro-two",
+      "variant": null,
+      "category": "two",
+      "old": 4.5,
+      "quality": 4.75,
+      "constraints": 0.5
+    },
+    {
+      "slug": "fintokei",
+      "id": "finto-swing-two",
+      "variant": null,
+      "category": "two",
+      "old": 4.5,
+      "quality": 4.75,
+      "constraints": 0.5
+    },
+    {
+      "slug": "myfundedfutures",
+      "id": "mffu-rapid-intraday",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 2.75,
+      "constraints": 3
+    },
+    {
+      "slug": "myfundedfutures",
+      "id": "mffu-rapid-eod",
+      "variant": null,
+      "category": "futures",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "myfundedfutures",
+      "id": "mffu-pro",
+      "variant": null,
+      "category": "futures",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "myfundedfutures",
+      "id": "mffu-builder",
+      "variant": null,
+      "category": "futures",
+      "old": 2.5,
+      "quality": 4.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "fxify",
+      "id": "fxi-two-pro",
+      "variant": null,
+      "category": "two",
+      "old": 3.5,
+      "quality": 3.75,
+      "constraints": 1.5
+    },
+    {
+      "slug": "fxify",
+      "id": "fxi-instant-lite",
+      "variant": null,
+      "category": "instant",
+      "old": 1.5,
+      "quality": 3,
+      "constraints": 3.5
+    },
+    {
+      "slug": "fxify",
+      "id": "fxi-one",
+      "variant": null,
+      "category": "one",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "fxify",
+      "id": "fxi-two-std",
+      "variant": null,
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "fxify",
+      "id": "fxi-two-classic",
+      "variant": null,
+      "category": "two",
+      "old": 3.5,
+      "quality": 4,
+      "constraints": 1.5
+    },
+    {
+      "slug": "fxify",
+      "id": "fxi-two-classic",
+      "variant": "monthly-100",
+      "category": "two",
+      "old": 3.5,
+      "quality": 4,
+      "constraints": 1.5
+    },
+    {
+      "slug": "fxify",
+      "id": "fxi-three",
+      "variant": null,
+      "category": "three",
+      "old": 4.5,
+      "quality": 4.75,
+      "constraints": 0.5
+    },
+    {
+      "slug": "blue-guardian",
+      "id": "bg-one-standard-current",
+      "variant": null,
+      "category": "one",
+      "old": 2,
+      "quality": 3,
+      "constraints": 3
+    },
+    {
+      "slug": "blue-guardian",
+      "id": "bg-two-standard-current",
+      "variant": null,
+      "category": "two",
+      "old": 3,
+      "quality": 3.5,
+      "constraints": 2
+    },
+    {
+      "slug": "blue-guardian",
+      "id": "bg-two-nano-current",
+      "variant": null,
+      "category": "two",
+      "old": 3.5,
+      "quality": 4.5,
+      "constraints": 1.5
+    },
+    {
+      "slug": "blue-guardian",
+      "id": "bg-instant-standard-current",
+      "variant": null,
+      "category": "instant",
+      "old": 1,
+      "quality": 2.5,
+      "constraints": 4
+    },
+    {
+      "slug": "blue-guardian",
+      "id": "bg-instant-starter-current",
+      "variant": null,
+      "category": "instant",
+      "old": 0.5,
+      "quality": 1.25,
+      "constraints": 4.5
+    },
+    {
+      "slug": "brightfunded",
+      "id": "bf-one-step-daily-current",
+      "variant": null,
+      "category": "one",
+      "old": 2.5,
+      "quality": 3.25,
+      "constraints": 2.5
+    },
+    {
+      "slug": "brightfunded",
+      "id": "bf-two-step-bright-current",
+      "variant": null,
+      "category": "two",
+      "old": 4,
+      "quality": 4.5,
+      "constraints": 1
+    },
+    {
+      "slug": "brightfunded",
+      "id": "bf-instant-current",
+      "variant": null,
+      "category": "instant",
+      "old": 0.5,
+      "quality": 1,
+      "constraints": 4.5
+    },
+    {
+      "slug": "goat-funded-trader",
+      "id": "goat-one-new",
+      "variant": null,
+      "category": "one",
+      "old": 2.5,
+      "quality": 2.75,
+      "constraints": 2.5
+    },
+    {
+      "slug": "goat-funded-trader",
+      "id": "goat-instant-goat",
+      "variant": null,
+      "category": "instant",
+      "old": 0.5,
+      "quality": 1,
+      "constraints": 4.5
+    },
+    {
+      "slug": "goat-funded-trader",
+      "id": "goat-instant-premium",
+      "variant": null,
+      "category": "instant",
+      "old": 1.5,
+      "quality": 1.75,
+      "constraints": 3.5
+    },
+    {
+      "slug": "goat-funded-trader",
+      "id": "goat-instant-daily",
+      "variant": null,
+      "category": "instant",
+      "old": 1.5,
+      "quality": 2,
+      "constraints": 3.5
+    },
+    {
+      "slug": "apex-trader-funding",
+      "id": "apex-eod-current",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 3.25,
+      "constraints": 3
+    },
+    {
+      "slug": "apex-trader-funding",
+      "id": "apex-intraday-current",
+      "variant": null,
+      "category": "futures",
+      "old": 1.5,
+      "quality": 2.5,
+      "constraints": 3.5
+    },
+    {
+      "slug": "e8-markets",
+      "id": "e8-one-current",
+      "variant": null,
+      "category": "one",
+      "old": 2,
+      "quality": 3.5,
+      "constraints": 3
+    },
+    {
+      "slug": "e8-markets",
+      "id": "e8-pro-current",
+      "variant": null,
+      "category": "challenge",
+      "old": 3.5,
+      "quality": 3.75,
+      "constraints": 1.5
+    },
+    {
+      "slug": "e8-markets",
+      "id": "e8-zero-current",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 2.75,
+      "constraints": 3
+    },
+    {
+      "slug": "e8-markets",
+      "id": "e8-signature-current",
+      "variant": null,
+      "category": "futures",
+      "old": 1.5,
+      "quality": 2.5,
+      "constraints": 3.5
+    },
+    {
+      "slug": "e8-futures",
+      "id": "e8-zero-max",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 2.75,
+      "constraints": 3
+    },
+    {
+      "slug": "e8-futures",
+      "id": "e8-zero-starter",
+      "variant": null,
+      "category": "futures",
+      "old": 2,
+      "quality": 2.75,
+      "constraints": 3
+    },
+    {
+      "slug": "e8-futures",
+      "id": "e8-signature-futures",
+      "variant": null,
+      "category": "futures",
+      "old": 1.5,
+      "quality": 2.5,
+      "constraints": 3.5
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-one-step-flex",
+      "variant": null,
+      "category": "one",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-one-step-flex",
+      "variant": "on-demand",
+      "category": "one",
+      "old": 2,
+      "quality": 2.5,
+      "constraints": 3
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-two-step-standard",
+      "variant": null,
+      "category": "two",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-two-step-standard",
+      "variant": "on-demand",
+      "category": "two",
+      "old": 2,
+      "quality": 2.5,
+      "constraints": 3
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-two-step-standard",
+      "variant": "weekly-60",
+      "category": "two",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-two-step-pro",
+      "variant": null,
+      "category": "two",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-two-step-pro",
+      "variant": "on-demand",
+      "category": "two",
+      "old": 2,
+      "quality": 2.5,
+      "constraints": 3
+    },
+    {
+      "slug": "funding-pips",
+      "id": "pips-zero-direct",
+      "variant": null,
+      "category": "instant",
+      "old": 0,
+      "quality": 0.5,
+      "constraints": 5
+    },
+    {
+      "slug": "funded-trading-plus",
+      "id": "ftp-pnpl-current",
+      "variant": null,
+      "category": "challenge",
+      "old": 2,
+      "quality": 2.75,
+      "constraints": 3
+    },
+    {
+      "slug": "funded-trading-plus",
+      "id": "ftp-express-current",
+      "variant": null,
+      "category": "one",
+      "old": 3.5,
+      "quality": 4.25,
+      "constraints": 1.5
+    },
+    {
+      "slug": "funded-trading-plus",
+      "id": "ftp-classic-current",
+      "variant": null,
+      "category": "two",
+      "old": 3,
+      "quality": 3.75,
+      "constraints": 2
+    },
+    {
+      "slug": "funded-trading-plus",
+      "id": "ftp-instant-current",
+      "variant": null,
+      "category": "instant",
+      "old": 3,
+      "quality": 4.25,
+      "constraints": 2
+    }
+  ]
+}
