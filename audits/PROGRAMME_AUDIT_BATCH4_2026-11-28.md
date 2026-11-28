@@ -219,3 +219,40 @@ Five firms, 15 complete catalogue entries and variants; exact IDs verified again
 - FTUK: 30-second minimum includes SL/TP exits. Forex consistency thresholds vary by level and strict inequality; no simple simulator consistency preset. Instant Forex target-based reward wording differs from broad on-demand marketing. Futures FLEX fresh-profit 50% rule: https://faq.ftuk.com/en/articles/17589504-flex-futures-daily-progression-rule. Instant Funding PRO Forex is a new separate purchase and needs mapped ID.
 - OneUp: no funded evaluation-style consistency, but weekly trade-volume requirement and initial 90-day probation positive PnL check every 15 calendar days. https://help.oneuptrader.com/article/372-funded-trader-rules. No universal fixed profit split preset. Express is not open to first-time customers.
 - Inventory scan: before this batch 149 catalogue IDs not referenced in programmeFlexibility.ts, including one assigned The5ers ID; after this batch 14 newly covered IDs, 135 still unreferenced on same catalogue snapshot, plus existing partials and unmapped offers. Not the number of all programmes market-wide. Cumulative 116 complete evaluations per previous running total (duplicates/variants included). Full runtime/build/visual validation pending. One atomic commit.
+
+## Top One Trader / Futures, Instant Funding, Funding Traders, QT — 2026-11-28
+
+23 exact existing product IDs reviewed, 17 complete and 6 partial. Current official product articles read; no catalogue prices or company scores changed. Scope and source at each axis; conflicting terms remain flagged.
+
+| Firm | ID | /5 |
+|---|---|---:|
+| top-one-trader | top-one-trader-flash | 2 |
+| top-one-trader | top-one-trader-2-step-pro | 2.5 |
+| top-one-trader | top-one-trader-2-step-plus | Partial |
+| top-one-trader | top-one-trader-instant-funding | 1.5 |
+| top-one-trader | top-one-trader-instant-prime | 1.5 |
+| top-one-trader | top-one-trader-magnum | 1 |
+| top-one-trader | top-one-trader-nova | 1.5 |
+| top-one-futures | top-one-elite-evaluation | 2 |
+| top-one-futures | top-one-elite-daily | 3 |
+| top-one-futures | top-one-elite-access | 2.5 |
+| top-one-futures | top-one-instant-sim-funded | 2 |
+| top-one-futures | top-one-ignite | 1.5 |
+| instant-funding | instant-funding-pro | Partial |
+| instant-funding | instant-funding-one-phase-pro | 2.5 |
+| instant-funding | instant-funding-two-phase | 2.5 |
+| funding-traders | funding-traders-pro6 | 3 |
+| funding-traders | funding-traders-pro10 | 3 |
+| funding-traders | funding-traders-1-step-pro | 1.5 |
+| funding-traders | funding-traders-instant | Partial |
+| quant-tekel | qt-one | Partial |
+| quant-tekel | qt-two | Partial |
+| quant-tekel | qt-instant | 1 |
+| quant-tekel | qt-power | Partial |
+
+- Top One Trader: ESS measures (largest winning day + absolute largest losing day) / net profit, not ordinary consistency. No best-day simulator preset for ESS. Profitable trades must last five full minutes, including automatic exits. PLUS is discontinued (https://help.toponetrader.com/en/collections/17913309-2-step-plus-accounts-discontinued), do not market as current; first payout raises static floor to initial balance. Magnum rating is 500K only. NOVA current help page shows $7 entry, unlike older $1 catalogue description; catalogue reconciliation needed. Funded NOVA daily loss 3%, not absent. https://help.toponetrader.com/en/articles/13832165-nova-account-overview.
+- Top One Futures: Access EOD scope only; new static/intraday and other offers need separate IDs; Elite current sale status unconfirmed. Live pathway now pre-live / live from zero rather than capped carryover; do not infer forfeiture beyond explicit terms. Ignite 5% new target after each withdrawal is based on the new balance, not fixed original capital. https://help.toponefutures.com/en/articles/12707415-ignite-accounts-payout-requirements.
+- Instant Funding: Smart hybrid floor is neither ordinary continuous trailing nor fixed throughout lifetime; no simulated preset. Pro percentage consistency not explicitly confirmed, remain partial. One-Phase Pro / Two-Phase have 40% funded best-day gate and 1.5% minimum net profit. https://instantfunding.com/help/payout-on-demand/.
+- Funding Traders: current model-specific FAQ and older generic withdrawal policy differ, particularly Instant 14 days vs on-demand; retain partial Instant until contract cohort resolved. PRO programme ratings are explicitly scoped to current model-specific help rules; generic terms discrepancy displayed in scope. https://fundingtraders.com/withdrawal-policy.
+- QT: August 11 new Instant uses 30% consistency (not old 25%), 100% share, 8% profit needed for first 5% withdrawal with 3% buffer; 1% risk per instrument and mandatory SL within 60s. QT ONE funded drawdown applicability, QT TWO funded consistency, and Power funded loss/trading details need confirmation. General payout article includes discretionary risk interview with forfeiture for nonattendance; no ordinary KYC penalty. https://support.qtfunded.com/support/articles/5613700809887-performance-fee-policy.
+- Same catalogue inventory: 135 previously unreferenced IDs minus 23 = 112 still unreferenced; additional partials and unmapped variants remain. Running cumulative complete entries 133 (variants and repeated listings included). 23 new assertions; execution/build/visual validation pending. Single atomic commit; no main merge.

@@ -1864,6 +1864,801 @@ evidence["oneup-trader"] = {
     }
   }
 };
+// Top One / Instant Funding / Funding Traders / QT batch, 2026-11-28.
+evidence["top-one-trader"] = {
+  "top-one-trader-flash": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current funded FLASH standard, no add-ons.",
+    "scopeFr": "FLASH financé standard actuel, sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types",
+        "reason": "7% trailing maximum loss, locks at starting balance upon payout or sufficient profit."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types",
+        "reason": "14-day cycle, 2% minimum payout, $25K monthly cap; 80% default split."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types",
+        "reason": "No best-day consistency or ESS."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/12458632-minimum-hold-time-rule-for-trades",
+        "reason": "Profitable trades require five full minutes, including automatic TP or profitable SL; news/EA restrictions vary by account."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/8318230-what-are-the-rules-for-the-1-step-flash-challenge-account",
+        "reason": "Funded 3% daily profit cap; excess profits voided and trading paused for day."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 7,
+      "profitSplit": 80,
+      "source": "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types"
+    }
+  },
+  "top-one-trader-2-step-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "2-Step PRO v2 after May 18, standard funded route.",
+    "scopeFr": "2-Step PRO v2 depuis le 18 mai, retrait standard.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.toponetrader.com/en/articles/15164777-2-step-pro-v2-overview",
+        "reason": "9% static overall maximum loss."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/15164777-2-step-pro-v2-overview",
+        "reason": "14-day cycle, 3% minimum, three 0.5% profitable days, 6% or $15K cap per payout."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.toponetrader.com/en/articles/15164777-2-step-pro-v2-overview",
+        "reason": "No best-day consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/12458632-minimum-hold-time-rule-for-trades",
+        "reason": "Profitable trades require five full minutes, including automatic TP or profitable SL; news/EA restrictions vary by account."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/15164923-2-step-pro-v2-equity-shield",
+        "reason": "EquityShield closes positions at 2.5% aggregate floating loss; soft-breach limit, daily profit cap $3K/$4K also apply."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 9,
+      "profitSplit": 85,
+      "source": "https://help.toponetrader.com/en/articles/15164777-2-step-pro-v2-overview"
+    }
+  },
+  "top-one-trader-2-step-plus": {
+    "checkedOn": "2026-11-28",
+    "scope": "Discontinued offer per official help collection; legacy rules documented, not a current purchase rating.",
+    "scopeFr": "Offre arrêtée selon le centre d'aide ; règles des anciens comptes, pas de note commerciale actuelle.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/15303179-2-step-plus-lock-upon-payout-lup",
+        "reason": "8% standard static initial loss limit (10% launch); locks at starting balance after first withdrawal."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/13391994-2-step-plus-overview",
+        "reason": "Five 0.5% days, 14-day cycle, 2% minimum and per-cycle cap."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.toponetrader.com/en/articles/13391994-2-step-plus-overview",
+        "reason": "No numerical consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/12458632-minimum-hold-time-rule-for-trades",
+        "reason": "Profitable trades require five full minutes, including automatic TP or profitable SL; news/EA restrictions vary by account."
+      }
+    }
+  },
+  "top-one-trader-instant-funding": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Instant Funding, no paid add-ons.",
+    "scopeFr": "Instant Funding actuel, sans option payante.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/12575317-what-are-the-rules-for-the-instant-funding-account",
+        "reason": "6% trailing maximum loss locks at initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types",
+        "reason": "30-day standard cycle, 2% minimum, $25K monthly cap; 60% initial share rising to 90%."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/13021467-understanding-the-difference-between-consistency-and-ess-requirements",
+        "reason": "15% best-day ratio, resets after payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/12458632-minimum-hold-time-rule-for-trades",
+        "reason": "Profitable trades require five full minutes, including automatic TP or profitable SL; news/EA restrictions vary by account."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/12575317-what-are-the-rules-for-the-instant-funding-account",
+        "reason": "Ten soft breaches allowed, 30-day inactivity hard breach; stop loss required."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "source": "https://help.toponetrader.com/en/articles/12575317-what-are-the-rules-for-the-instant-funding-account"
+    }
+  },
+  "top-one-trader-instant-prime": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Instant Prime post-Oct 25 2025, no add-ons.",
+    "scopeFr": "Instant Prime actuel après le 25 octobre 2025, sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/12132613-prime-accounts-overview",
+        "reason": "5% trailing maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types",
+        "reason": "14-day cycle, 2% minimum, $25K monthly cap; share 80/90/100% over successive payouts."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/13021467-understanding-the-difference-between-consistency-and-ess-requirements",
+        "reason": "ESS <=20% includes largest winning day plus absolute largest losing day divided by net profit; stricter than ordinary best-day rule."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/12458632-minimum-hold-time-rule-for-trades",
+        "reason": "Profitable trades require five full minutes, including automatic TP or profitable SL; news/EA restrictions vary by account."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/12132613-prime-accounts-overview",
+        "reason": "Five soft breaches, mandatory stop loss, 30-day inactivity, lot limits."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 5,
+      "source": "https://help.toponetrader.com/en/articles/12132613-prime-accounts-overview"
+    }
+  },
+  "top-one-trader-magnum": {
+    "checkedOn": "2026-11-28",
+    "scope": "500K Magnum only, limited offer; 1M marketing variant not covered.",
+    "scopeFr": "Magnum 500K uniquement, offre limitée ; variante 1M non couverte.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/17032981-magnum-500k-account-limited-time",
+        "reason": "4% closing-balance trailing, locks at initial balance."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/17032981-magnum-500k-account-limited-time",
+        "reason": "14-day cycle, $10K minimum profit/withdrawal, $25K per rolling 30 days; staged split."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/17032981-magnum-500k-account-limited-time",
+        "reason": "15% ESS, not a simple best-day rule."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/12458632-minimum-hold-time-rule-for-trades",
+        "reason": "Profitable trades require five full minutes, including automatic TP or profitable SL; news/EA restrictions vary by account."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/17032981-magnum-500k-account-limited-time",
+        "reason": "Five soft breaches, mandatory stop loss, 20 open lots maximum, inactivity hard breach after 30 days."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 4,
+      "source": "https://help.toponetrader.com/en/articles/17032981-magnum-500k-account-limited-time"
+    }
+  },
+  "top-one-trader-nova": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current NOVA funded standard, no paid upgrades.",
+    "scopeFr": "NOVA financé actuel standard, sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/13832165-nova-account-overview",
+        "reason": "Funded 5% equity trailing, locks at starting balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/13833385-nova-payout-rules",
+        "reason": "14-day cycle, 2% minimum, $25K rolling 30-day cap, 90% default share."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.toponetrader.com/en/articles/13021467-understanding-the-difference-between-consistency-and-ess-requirements",
+        "reason": "20% ESS includes largest profitable day plus absolute largest losing day over net profit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/12458632-minimum-hold-time-rule-for-trades",
+        "reason": "Profitable trades require five full minutes, including automatic TP or profitable SL; news/EA restrictions vary by account."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/13832165-nova-account-overview",
+        "reason": "2% per symbol/2.5% combined EquityShield soft breaches and 30-day inactivity; funded daily 3%."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 5,
+      "profitSplit": 90,
+      "source": "https://help.toponetrader.com/en/articles/13832165-nova-account-overview"
+    }
+  }
+};
+evidence["top-one-futures"] = {
+  "top-one-elite-evaluation": {
+    "checkedOn": "2026-11-28",
+    "scope": "Elite Sim Funded legacy evaluation route; current purchase availability unconfirmed.",
+    "scopeFr": "Elite Sim Funded issu de l'évaluation ; disponibilité à l'achat à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/14617600-differences-between-elite-elite-access-and-elite-daily-accounts",
+        "reason": "EOD trailing drawdown."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/12717928-elite-sim-funded-account-payout-requirements",
+        "reason": "Fresh 6% / 5% / 4% profit target in successive cycles and per-request caps."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/12717928-elite-sim-funded-account-payout-requirements",
+        "reason": "25% best-day limit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/10908016-minimum-trade-time-rule-explained",
+        "reason": "Ten-second minimum trade duration; excessive rapid trades may have profits removed. Session closing and programme-specific news restrictions apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
+        "reason": "Risk review can transition trader to pre-live/live; sim account rules and contract limits differ from live. Current live accounts start at zero rather than carrying all sim profits."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 90,
+      "source": "https://help.toponefutures.com/en/articles/14617600-differences-between-elite-elite-access-and-elite-daily-accounts"
+    }
+  },
+  "top-one-elite-daily": {
+    "checkedOn": "2026-11-28",
+    "scope": "Elite Daily V2 current, EOD variant.",
+    "scopeFr": "Elite Daily V2 actuel, variante EOD.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/15056075-elite-daily-v2-overview",
+        "reason": "End-of-day trailing drawdown."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/15056446-elite-daily-v2-daily-payout-rules",
+        "reason": "Daily eligibility above buffer plus $500, capped withdrawals, 50% fresh profit from second payout."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.toponefutures.com/en/articles/15056446-elite-daily-v2-daily-payout-rules",
+        "reason": "No funded consistency target; 40% applies only to evaluation."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/10908016-minimum-trade-time-rule-explained",
+        "reason": "Ten-second minimum trade duration; excessive rapid trades may have profits removed. Session closing and programme-specific news restrictions apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
+        "reason": "Risk review can transition trader to pre-live/live; sim account rules and contract limits differ from live. Current live accounts start at zero rather than carrying all sim profits."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 90,
+      "source": "https://help.toponefutures.com/en/articles/15056075-elite-daily-v2-overview"
+    }
+  },
+  "top-one-elite-access": {
+    "checkedOn": "2026-11-28",
+    "scope": "Elite Access EOD only; Intraday and Static variants excluded.",
+    "scopeFr": "Elite Access EOD seulement ; variantes Intraday et Static exclues.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/14617600-differences-between-elite-elite-access-and-elite-daily-accounts",
+        "reason": "EOD trailing drawdown."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/14595161-elite-access-payout-requirements",
+        "reason": "Five profitable days, buffer plus $500, caps $1K–$2.5K, 50% fresh-profit progression."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/14595161-elite-access-payout-requirements",
+        "reason": "40% funded best-day requirement."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/10908016-minimum-trade-time-rule-explained",
+        "reason": "Ten-second minimum trade duration; excessive rapid trades may have profits removed. Session closing and programme-specific news restrictions apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
+        "reason": "Risk review can transition trader to pre-live/live; sim account rules and contract limits differ from live. Current live accounts start at zero rather than carrying all sim profits."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 90,
+      "source": "https://help.toponefutures.com/en/articles/14595161-elite-access-payout-requirements"
+    }
+  },
+  "top-one-instant-sim-funded": {
+    "checkedOn": "2026-11-28",
+    "scope": "Instant Sim Funded 2.0 purchased from 27 July 2026.",
+    "scopeFr": "Instant Sim Funded 2.0 acheté depuis le 27 juillet 2026.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/11020805-overview-of-the-instant-sim-funded-program",
+        "reason": "EOD trailing maximum loss by size, $1K–$5,250."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/11020805-overview-of-the-instant-sim-funded-program",
+        "reason": "Size-dependent payout caps $1K–$3K and profit eligibility per payout."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/11020805-overview-of-the-instant-sim-funded-program",
+        "reason": "20% funded best-day ratio."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/10908016-minimum-trade-time-rule-explained",
+        "reason": "Ten-second minimum trade duration; excessive rapid trades may have profits removed. Session closing and programme-specific news restrictions apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
+        "reason": "Risk review can transition trader to pre-live/live; sim account rules and contract limits differ from live. Current live accounts start at zero rather than carrying all sim profits."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 90,
+      "source": "https://help.toponefutures.com/en/articles/11020805-overview-of-the-instant-sim-funded-program"
+    }
+  },
+  "top-one-ignite": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Ignite instant funded.",
+    "scopeFr": "Ignite financé instantané actuel.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview",
+        "reason": "EOD trailing maximum loss."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/12707415-ignite-accounts-payout-requirements",
+        "reason": "5% profit target each payout, recalculated on post-withdrawal balance; $250 minimum and $500–$2K cap."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.toponefutures.com/en/articles/12707415-ignite-accounts-payout-requirements",
+        "reason": "15% best-day consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/10908016-minimum-trade-time-rule-explained",
+        "reason": "Ten-second minimum trade duration; excessive rapid trades may have profits removed. Session closing and programme-specific news restrictions apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
+        "reason": "Risk review can transition trader to pre-live/live; sim account rules and contract limits differ from live. Current live accounts start at zero rather than carrying all sim profits."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 90,
+      "source": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview"
+    }
+  }
+};
+evidence["instant-funding"] = {
+  "instant-funding-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Instant Funding Pro formerly Smart, no Swing add-on; no explicit percentage consistency located.",
+    "scopeFr": "Instant Funding Pro actuel ancien Smart, sans Swing ; absence de confirmation explicite sur la consistency.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://instantfunding.com/help/instant-funding-program/",
+        "reason": "Hybrid loss limit: initial 10% below starting balance, raised once to 5% below starting balance after +5% closed gain."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://instantfunding.com/help/instant-funding-program/",
+        "reason": "First 14 days after initial trade, then seven days after next trade; $25 minimum and mandatory Smart Drawdown lock."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://instantfunding.com/help/instant-funding-program/",
+        "reason": "News restriction ±4 minutes and weekend holding requires Swing."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://instantfunding.com/help/instant-funding-program/",
+        "reason": "3% risk per trade idea; other prohibited trading practices."
+      }
+    }
+  },
+  "instant-funding-one-phase-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Standard funded, without news/weekend add-ons.",
+    "scopeFr": "Compte financé standard, sans options annonces/week-end.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://instantfunding.com/help/one-phase/",
+        "reason": "8% static maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://instantfunding.com/help/payout-on-demand/",
+        "reason": "On-demand after 1.5% net profit or $25, whichever is greater."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://instantfunding.com/help/payout-on-demand/",
+        "reason": "40% best-day share of total profit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://instantfunding.com/help/one-phase/",
+        "reason": "High-impact news restriction ±4 minutes; funded weekend holding requires add-on."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://instantfunding.com/help/one-phase/",
+        "reason": "Risk per trade idea limited to half initial daily loss allowance, aggregates re-entry within ten minutes; hard breach. Maximum lot breach resets account."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "source": "https://instantfunding.com/help/one-phase/"
+    }
+  },
+  "instant-funding-two-phase": {
+    "checkedOn": "2026-11-28",
+    "scope": "Standard funded, without news/weekend add-ons.",
+    "scopeFr": "Compte financé standard, sans options annonces/week-end.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://instantfunding.com/help/two-phase/",
+        "reason": "10% static maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://instantfunding.com/help/payout-on-demand/",
+        "reason": "On-demand after 1.5% net profit or $25, whichever is greater."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://instantfunding.com/help/payout-on-demand/",
+        "reason": "40% best-day share of total profit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://instantfunding.com/help/two-phase/",
+        "reason": "High-impact news restriction ±4 minutes; funded weekend holding requires add-on."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://instantfunding.com/help/two-phase/",
+        "reason": "Risk per trade idea limited to half initial daily loss allowance, aggregates re-entry within ten minutes; hard breach. Maximum lot breach resets account."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://instantfunding.com/help/two-phase/"
+    }
+  }
+};
+evidence["funding-traders"] = {
+  "funding-traders-pro6": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current programme-specific help rules; standard 21-day schedule without add-ons. Generic withdrawal policy differs; confirm purchase contract.",
+    "scopeFr": "FAQ du programme actuel ; cycle standard 21 jours sans option. Politique générale différente ; contrat applicable à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://fundingtraders.com/help/en/articles/13399206-2-step-pro",
+        "reason": "6% fixed maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fundingtraders.com/help/en/articles/13399206-2-step-pro",
+        "reason": "Default 21-day cycle; paid 14-day option; generic withdrawal policy uses other thresholds, verify applicable terms."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://fundingtraders.com/blog/prop-firm-consistency-rules/",
+        "reason": "No best-day rule on current PRO6/PRO10 product-specific FAQ."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundingtraders.com/help/en/articles/13399206-2-step-pro",
+        "reason": "High-impact news-influenced trades may not exceed 30% of total profits; five-hour exception for qualifying holdings."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://fundingtraders.com/help/en/articles/13399206-2-step-pro",
+        "reason": "Trade-idea risk cap with aggregate floating/closed losses, including same-direction re-entry; separate risk violation from overall drawdown."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://fundingtraders.com/help/en/articles/13399206-2-step-pro"
+    }
+  },
+  "funding-traders-pro10": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current programme-specific help rules; standard 21-day schedule without add-ons. Generic withdrawal policy differs; confirm purchase contract.",
+    "scopeFr": "FAQ du programme actuel ; cycle standard 21 jours sans option. Politique générale différente ; contrat applicable à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://fundingtraders.com/help/en/articles/13399206-2-step-pro",
+        "reason": "10% fixed maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fundingtraders.com/help/en/articles/13399206-2-step-pro",
+        "reason": "Default 21-day cycle; paid 14-day option; generic withdrawal policy uses other thresholds, verify applicable terms."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://fundingtraders.com/blog/prop-firm-consistency-rules/",
+        "reason": "No best-day rule on current PRO6/PRO10 product-specific FAQ."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundingtraders.com/help/en/articles/13399206-2-step-pro",
+        "reason": "High-impact news-influenced trades may not exceed 30% of total profits; five-hour exception for qualifying holdings."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://fundingtraders.com/help/en/articles/13399206-2-step-pro",
+        "reason": "Trade-idea risk cap with aggregate floating/closed losses, including same-direction re-entry; separate risk violation from overall drawdown."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "profitSplit": 80,
+      "source": "https://fundingtraders.com/help/en/articles/13399206-2-step-pro"
+    }
+  },
+  "funding-traders-1-step-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current programme-specific help rules; standard 21-day schedule without add-ons. Generic withdrawal policy differs; confirm purchase contract.",
+    "scopeFr": "FAQ du programme actuel ; cycle standard 21 jours sans option. Politique générale différente ; contrat applicable à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://fundingtraders.com/help/en/articles/13615032-1-step-pro",
+        "reason": "10% highest recorded balance trailing maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fundingtraders.com/help/en/articles/13615032-1-step-pro",
+        "reason": "Default 21-day cycle; paid 14-day option; generic withdrawal policy uses other thresholds, verify applicable terms."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://fundingtraders.com/blog/prop-firm-consistency-rules/",
+        "reason": "50% funded best-day ratio according to current product-specific FAQ."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundingtraders.com/help/en/articles/13615032-1-step-pro",
+        "reason": "High-impact news-influenced trades may not exceed 30% of total profits; five-hour exception for qualifying holdings."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://fundingtraders.com/help/en/articles/13615032-1-step-pro",
+        "reason": "Trade-idea risk cap with aggregate floating/closed losses, including same-direction re-entry; separate risk violation from overall drawdown."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 10,
+      "profitSplit": 90,
+      "source": "https://fundingtraders.com/help/en/articles/13615032-1-step-pro"
+    }
+  },
+  "funding-traders-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "New Instant-Funded FAQ; general withdrawal policy still describes 14-day cycle and other conditions. Payout cadence unresolved.",
+    "scopeFr": "Nouvelle FAQ Instant-Funded ; politique générale encore à 14 jours et conditions différentes. Retrait à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://fundingtraders.com/help/en/articles/17459915-instant-funded",
+        "reason": "6% highest-balance trailing; locks at initial balance after +3% gain."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://fundingtraders.com/help/en/articles/17459915-instant-funded",
+        "reason": "15% best-day consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundingtraders.com/withdrawal-policy",
+        "reason": "General withdrawal policy lists news and weekend holding restrictions; exact new-cohort details to reconcile."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://fundingtraders.com/help/en/articles/17459915-instant-funded",
+        "reason": "1% combined floating loss limit across all open trades."
+      }
+    },
+    "preset": {
+      "source": "https://fundingtraders.com/help/en/articles/17459915-instant-funded"
+    }
+  }
+};
+evidence["quant-tekel"] = {
+  "qt-one": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current help article says static 6% in evaluation; funded floor versus prior marketing needs confirmation.",
+    "scopeFr": "FAQ actuelle : 6 % statique en évaluation ; seuil financé à réconcilier avec l'ancien marketing.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://support.qtfunded.com/support/articles/9000000000001-qt-one",
+        "reason": "Four trading-day cycle and minimum four days, 70% share."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://support.qtfunded.com/support/articles/9000000000001-qt-one",
+        "reason": "No consistency requirement in funded account."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://support.qtfunded.com/support/articles/9000000000001-qt-one",
+        "reason": "1% aggregate floating loss hard breach."
+      }
+    }
+  },
+  "qt-two": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current QT TWO; exact funded consistency and trading policy not confirmed.",
+    "scopeFr": "QT TWO actuel ; consistency financée et liberté de trading à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two",
+        "reason": "8% static maximum in programme rules."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two",
+        "reason": "14-day cycle, four 0.5% profitable days, 5% cap per cycle and excess removed before next cycle."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two",
+        "reason": "1% aggregate floating loss first soft, second hard; SL within 60 seconds or hard breach."
+      }
+    }
+  },
+  "qt-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "New Instant accounts purchased from 11 August 2026; older model excluded; legacy contract to reconcile.",
+    "scopeFr": "Instant acheté depuis le 11 août 2026 ; anciens comptes exclus ; contrat antérieur à réconcilier.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://support.qtfunded.com/support/articles/9000000000003-qt-instant-funded-new",
+        "reason": "6% peak balance/equity trailing, locks at starting balance upon withdrawal."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://support.qtfunded.com/support/articles/9000000000003-qt-instant-funded-new",
+        "reason": "14-day cycle, four +1% profitable days, 5% minimum withdrawal and 3% retained buffer (8% initial profit required); 100% split."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://support.qtfunded.com/support/articles/9000000000003-qt-instant-funded-new",
+        "reason": "30% best-day share at withdrawal, new cohort only."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://support.qtfunded.com/support/articles/9000000000003-qt-instant-funded-new",
+        "reason": "No news restriction; mandatory stop loss within 60 seconds."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://support.qtfunded.com/support/articles/9000000000003-qt-instant-funded-new",
+        "reason": "1% floating loss per instrument hard breach; missing stop loss after 60 seconds hard breach."
+      }
+    },
+    "preset": {
+      "profitSplit": 100,
+      "source": "https://support.qtfunded.com/support/articles/9000000000003-qt-instant-funded-new"
+    }
+  },
+  "qt-power": {
+    "checkedOn": "2026-11-28",
+    "scope": "Power purchases from 11 August; 14-day cycle; funded floor and full trading freedoms still to verify.",
+    "scopeFr": "Power depuis le 11 août ; cycle 14 jours ; seuil financé et liberté de trading à confirmer.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://support.qtfunded.com/support/articles/5744325221663-qt-power",
+        "reason": "14-day cycle, four trading days, 80% share."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://support.qtfunded.com/support/articles/5744325221663-qt-power",
+        "reason": "35% best-day ratio in both phases and funded."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://support.qtfunded.com/support/articles/5744325221663-qt-power",
+        "reason": "14-day inactivity rule; generic prohibited strategies."
+      }
+    }
+  }
+};
 // Reviewed six additional firms, 2026-11-28.
 evidence["audacity-capital"] = {
   "audacity-ability-challenge": {
