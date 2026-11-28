@@ -958,8 +958,7 @@ evidence["trade-the-pool"] = {
   },
   "ttp-swing-max": {
     "checkedOn": "2026-11-28",
-    "scope": "Current Swing MAX Professional account. Funded swing drawdown formula not confirmed.",
-    "scopeFr": "Compte Professional Swing MAX actuel. Formule de drawdown financé swing à confirmer.",
+    "scope": "Current Swing MAX Professional account. Funded swing drawdown formula not confirmed. Follow-up 28 Nov: drawdown: Funded swing drawdown formula still not published: the programme terms define the stop-out as the account value by equity and describe a one-time move of the max drawdown to the initial balance at 3x daily-loss in equity, but give no swing-specific amount; the programme page gives 7% of buying power for the swing evaluation only and no funded swing terms.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -988,8 +987,7 @@ evidence["trade-the-pool"] = {
   },
   "ttp-swing-flex": {
     "checkedOn": "2026-11-28",
-    "scope": "Current Swing FLEX Professional account. Funded swing drawdown formula not confirmed.",
-    "scopeFr": "Compte Professional Swing FLEX actuel. Formule de drawdown financé swing à confirmer.",
+    "scope": "Current Swing FLEX Professional account. Funded swing drawdown formula not confirmed. Follow-up 28 Nov: drawdown: Funded swing drawdown formula still not published: the programme terms define the stop-out as the account value by equity and describe a one-time move of the max drawdown to the initial balance at 3x daily-loss in equity, but give no swing-specific amount; the programme page gives 7% of buying power for the swing evaluation only and no funded swing terms.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -1018,8 +1016,7 @@ evidence["trade-the-pool"] = {
   },
   "ttp-edge": {
     "checkedOn": "2026-11-28",
-    "scope": "Edge Professional 50K/100K; funded drawdown measured EOD; exact lock mechanics not confirmed.",
-    "scopeFr": "Edge Professional 50K/100K ; drawdown financé calculé en fin de journée, mécanisme de verrouillage à confirmer.",
+    "scope": "Edge Professional 50K/100K; funded drawdown measured EOD; exact lock mechanics not confirmed. Follow-up 28 Nov: drawdown: Edge Pro: 4% maximum drawdown on 50K and 100K, calculated on end-of-day values; the page does not say whether it is fixed from the initial balance or trails EOD highs, nor whether it locks. Either 1 (EOD static) or 0.5 (EOD trailing) depending on the unstated formula; Edge is absent from the programme terms.",
     "assessments": {
       "payout": {
         "points": 0,
@@ -1088,7 +1085,7 @@ evidence["funded-futures-network"] = {
   },
   "funded-futures-network-steady": {
     "checkedOn": "2026-11-28",
-    "scope": "Current STEADY; unresolved conflict between general and dedicated news/automation rules.",
+    "scope": "Current STEADY; unresolved conflict between general and dedicated news/automation rules. The news/automation wording conflict remains and should be clarified by FFN, but it does not change the axis score.",
     "scopeFr": "STEADY actuel ; contradiction sur les annonces et l'automatisation entre FAQ générale et fiche dédiée.",
     "assessments": {
       "drawdown": {
@@ -1110,6 +1107,11 @@ evidence["funded-futures-network"] = {
         "points": 0.5,
         "source": "https://steady.fundedfuturesnetwork.com/",
         "reason": "Live review after five payouts; exact live transition conditions require clarification."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundedfuturesnetwork.zendesk.com/hc/en-us/articles/46870363111451-Article-3-4-Permitted-Trading-Hours-and-Position-Closing-Rules",
+        "reason": "Day-trade only: positions must be flat by 4:50 PM ET daily and over the weekend (auto-close; open positions at close fail the account). News: the STEADY landing page advertises no blackout windows (evaluation section) while Article 3.3 (updated 20 Feb 2026) bars T1 news on all sim-funded accounts with liquidation; automation is \"not supported\" on the STEADY page but \"allowed at FFN discretion\" in the FAQ. Both readings give 0.5: session closure alone is material, and a T1 ban plus session closure is not severe under the rubric (same score as MFFU Pro)."
       }
     },
     "preset": {
@@ -1308,8 +1310,7 @@ evidence["maven-trading"] = {
 evidence["lux-trading-firm"] = {
   "lux-1-step-evaluation": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial; current Rules of Engagement 80% instant-withdrawal career stages versus another public 75% monthly rule set; checkout applicability not established.",
-    "scopeFr": "Partiel : règlement actuel 80 % et retraits à la demande, autre règlement public à 75 % mensuel ; contrat applicable à confirmer.",
+    "scope": "New Trading Rules, current career stages; Old Trading Rules separately labelled, not used. Contradiction resolved by the site navigation labelling: rules-of-engagement-3 = New Trading Rules, trading-rules = Old Trading Rules.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -1330,6 +1331,11 @@ evidence["lux-trading-firm"] = {
         "points": 0,
         "source": "https://luxtradingfirm.com/t_c-2/",
         "reason": "Personalized risk-manager requirements and expulsion clause; existing public rules allow account removal for serious or repeated risk-management failures."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://luxtradingfirm.com/rules-of-engagement-3/",
+        "reason": "Current \"New Trading Rules\" page (modified 14 Oct 2026): funded traders keep 80%; withdrawals can be requested at any time once the balance is in profit, no fixed payout cycle, no stated minimum or cap; positions must be closed at withdrawal. The 75%/monthly wording is on the separate \"Old Trading Rules\" page; the Terms set no frequency or split for standard accounts."
       }
     }
   }
@@ -2888,8 +2894,7 @@ evidence["hantec-trader"] = {
   },
   "rzr-instant-funding": {
     "checkedOn": "2026-11-28",
-    "scope": "Current RZR Instant standard, no add-ons; consistency absence must be explicitly confirmed in latest rules.",
-    "scopeFr": "RZR Instant standard actuel sans option ; absence de consistency à confirmer explicitement.",
+    "scope": "Current RZR Instant standard, no add-ons; published no consistency rule.",
     "assessments": {
       "drawdown": {
         "points": 0,
@@ -2910,6 +2915,11 @@ evidence["hantec-trader"] = {
         "points": 0,
         "source": "https://help.rzrfunded.com/en/support/solutions/articles/158000470345-instant-funding",
         "reason": "3% combined open floating-loss hard breach."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://rzrfunded.com/",
+        "reason": "Homepage programme card lists \"Consistency: No\" for Instant Funding (Instant Lite 20%, Instant24 15% are separate products); the Instant Funding help article (modified 16 Oct) states no consistency rule."
       }
     },
     "preset": {
@@ -2960,25 +2970,33 @@ evidence["for-traders"] = {
 evidence["lark-funding"] = {
   "lark-1-step-career": {
     "checkedOn": "2026-11-28",
-    "scope": "Career Master performance reward; separate monthly data fee is not ordinary payout; funded drawdown applicability not explicit in evaluation article.",
-    "scopeFr": "Performance du compte Master Career ; prime mensuelle de données distincte ; seuil financé non explicite dans article d'évaluation.",
+    "scope": "Career Master performance reward; separate monthly data fee is not ordinary payout; funded drawdown applicability not explicit in evaluation article. Follow-up 28 Nov: drawdown: The programme article states a 7% static limit for the evaluation only; no published Master Account (funded) loss rule for this programme (the only funded-specific article is the Instant Master one). | trading: No news restriction in the evaluation article; EA, weekend and funded-specific restrictions are not stated (prohibited-strategies article not programme-specific). | funded: Funded risk, inactivity and termination rules for the Master Account are not published for this programme.",
     "assessments": {
       "payout": {
         "points": 0.5,
         "source": "https://helpdesk.larkfunding.com/en/articles/12853883-1-step-career-evaluation-details",
         "reason": "14-day ordinary rewards, 80% share, $40 fee; separate conditional monthly data reward."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://larkfunding.com/",
+        "reason": "Firm-wide: homepage and programme pages state zero consistency rules; the Monthly Base Reward conditions are a separate data fee, not a payout gate."
       }
     }
   },
   "lark-3-step": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial; official programme describes evaluation loss limit but not explicitly the funded loss rules.",
-    "scopeFr": "Partiel : article décrit le seuil d'évaluation, pas explicitement celui financé.",
+    "scope": "Partial; official programme describes evaluation loss limit but not explicitly the funded loss rules. Follow-up 28 Nov: drawdown: The programme article states a 5% static limit for the evaluation only; no published Master Account (funded) loss rule for this programme (the only funded-specific article is the Instant Master one). | trading: No news restriction in the evaluation article; EA, weekend and funded-specific restrictions are not stated (prohibited-strategies article not programme-specific). | funded: Funded risk, inactivity and termination rules for the Master Account are not published for this programme.",
     "assessments": {
       "payout": {
         "points": 0.5,
         "source": "https://helpdesk.larkfunding.com/en/articles/8251071-3-step-evaluation-details",
         "reason": "14-day Master rewards, $40 fee and 80% standard split."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://larkfunding.com/",
+        "reason": "Firm-wide: homepage and programme pages state zero consistency rules; the Monthly Base Reward conditions are a separate data fee, not a payout gate."
       }
     }
   }
@@ -2986,8 +3004,7 @@ evidence["lark-funding"] = {
 evidence["ofp-funding"] = {
   "ofp-instant-95": {
     "checkedOn": "2026-11-28",
-    "scope": "Legacy generic 95% catalogue ID not mapped to current Lite, Classic or Plus; do not infer a current purchase rating.",
-    "scopeFr": "Ancien identifiant générique 95 %, non associé aux modèles actuels Lite, Classic ou Plus.",
+    "scope": "Legacy generic 95% catalogue ID not mapped to current Lite, Classic or Plus; do not infer a current purchase rating. Follow-up 28 Nov: drawdown: Legacy catalogue ID: current Terms list Instant Lite, Classic, Pro, Prime and Plus; the \"up to 95%\" wording survives only on the instant.ofpfunding.com marketing page. The ID cannot be mapped to one current plan and the Terms page could not be read in full on 28 Nov 2026. | payout: Legacy catalogue ID: current Terms list Instant Lite, Classic, Pro, Prime and Plus; the \"up to 95%\" wording survives only on the instant.ofpfunding.com marketing page. The ID cannot be mapped to one current plan and the Terms page could not be read in full on 28 Nov 2026. | consistency: Legacy catalogue ID: current Terms list Instant Lite, Classic, Pro, Prime and Plus; the \"up to 95%\" wording survives only on the instant.ofpfunding.com marketing page. The ID cannot be mapped to one current plan and the Terms page could not be read in full on 28 Nov 2026. | funded: Legacy catalogue ID: current Terms list Instant Lite, Classic, Pro, Prime and Plus; the \"up to 95%\" wording survives only on the instant.ofpfunding.com marketing page. The ID cannot be mapped to one current plan and the Terms page could not be read in full on 28 Nov 2026.",
     "assessments": {
       "trading": {
         "points": 0.5,
@@ -2998,8 +3015,7 @@ evidence["ofp-funding"] = {
   },
   "ofp-challenge-8-5": {
     "checkedOn": "2026-11-28",
-    "scope": "Old 8%/5% targets conflict with current 8%/4% marketing; exact funded contract pending.",
-    "scopeFr": "Anciennes cibles 8 %/5 % divergentes des 8 %/4 % actuelles ; contrat financé à confirmer.",
+    "scope": "Old 8%/5% targets conflict with current 8%/4% marketing; exact funded contract pending. Follow-up 28 Nov: drawdown: 8%/5% targets match the older Royal Challenge description; the current Terms list challenge phase plans (section 2) that could not be read in full, and current marketing shows other targets. Exact funded contract for this ID not established. | payout: 8%/5% targets match the older Royal Challenge description; the current Terms list challenge phase plans (section 2) that could not be read in full, and current marketing shows other targets. Exact funded contract for this ID not established. | consistency: 8%/5% targets match the older Royal Challenge description; the current Terms list challenge phase plans (section 2) that could not be read in full, and current marketing shows other targets. Exact funded contract for this ID not established. | funded: 8%/5% targets match the older Royal Challenge description; the current Terms list challenge phase plans (section 2) that could not be read in full, and current marketing shows other targets. Exact funded contract for this ID not established.",
     "assessments": {
       "trading": {
         "points": 0.5,
@@ -3092,8 +3108,7 @@ evidence["thinkcapital"] = {
 evidence["equity-edge"] = {
   "equity-edge-1-step-legacy": {
     "checkedOn": "2026-11-28",
-    "scope": "Current 1-Step baseline; funded-trader FAQ describes trailing floor; exact consistency and additional risk gates not fully verified.",
-    "scopeFr": "1-Step actuel ; FAQ traders financés décrit le seuil suiveur ; consistency et autres restrictions à vérifier.",
+    "scope": "1-Step baseline, funded phase; historical catalogue label retained. Current funded trading rules and payout process.",
     "assessments": {
       "drawdown": {
         "points": 0,
@@ -3109,13 +3124,22 @@ evidence["equity-edge"] = {
         "points": 0.5,
         "source": "https://equityedge.io/evaluation-questions/2-minute-average-trade-duration-rule",
         "reason": "Two-minute average trade-duration rule applies in funded phase; news profit review."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://equityedge.io/trading-rules/trading-rules-and-guidelines",
+        "reason": "Trading rules and guidelines and the funded payout-process page contain no best-day or consistency requirement for 1-Step funded accounts (the 15% score is published for Instant accounts only)."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://equityedge.io/trading-rules/trading-rules-and-guidelines",
+        "reason": "\"There is no inactivity rule for 1-Step and 2-Step accounts\"; no per-trade risk limit; termination and payout forfeiture only for rule violations (news-window profit deductions already counted under trading)."
       }
     }
   },
   "equity-edge-1-step-swift": {
     "checkedOn": "2026-11-28",
-    "scope": "Current 1-Step baseline; funded-trader FAQ describes trailing floor; exact consistency and additional risk gates not fully verified.",
-    "scopeFr": "1-Step actuel ; FAQ traders financés décrit le seuil suiveur ; consistency et autres restrictions à vérifier.",
+    "scope": "1-Step Swift, funded phase; current funded trading rules and payout process.",
     "assessments": {
       "drawdown": {
         "points": 0,
@@ -3131,13 +3155,22 @@ evidence["equity-edge"] = {
         "points": 0.5,
         "source": "https://equityedge.io/evaluation-questions/2-minute-average-trade-duration-rule",
         "reason": "Two-minute average trade-duration rule applies in funded phase; news profit review."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://equityedge.io/trading-rules/trading-rules-and-guidelines",
+        "reason": "Trading rules and guidelines and the funded payout-process page contain no best-day or consistency requirement for 1-Step funded accounts (the 15% score is published for Instant accounts only)."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://equityedge.io/trading-rules/trading-rules-and-guidelines",
+        "reason": "\"There is no inactivity rule for 1-Step and 2-Step accounts\"; no per-trade risk limit; termination and payout forfeiture only for rule violations (news-window profit deductions already counted under trading)."
       }
     }
   },
   "equity-edge-instant": {
     "checkedOn": "2026-11-28",
-    "scope": "Current Instant; exact consistency and other payout conditions require additional reading.",
-    "scopeFr": "Instant actuel ; consistency exacte et autres conditions de retrait à vérifier.",
+    "scope": "Current Instant funded phase; 15% consistency and largest-loss/win gate.",
     "assessments": {
       "drawdown": {
         "points": 0,
@@ -3153,6 +3186,16 @@ evidence["equity-edge"] = {
         "points": 0.5,
         "source": "https://equityedge.io/evaluation-questions/2-minute-average-trade-duration-rule",
         "reason": "Two-minute average duration applies to Instant; news restrictions also apply."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://equityedge.io/instant-accounts/performance-consistency-rules",
+        "reason": "15% consistency score: the largest winning day cannot exceed 15% of net profits since the last payout request."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://equityedge.io/instant-accounts/performance-consistency-rules",
+        "reason": "Account terminated after more than 30 days of inactivity; largest single loss must not exceed largest single win before a payout (two-minute average-duration deductions already counted under trading)."
       }
     }
   }
@@ -3236,8 +3279,7 @@ evidence["atlas-funded"] = {
 evidence["funded-bull"] = {
   "funded-bull-1-step": {
     "checkedOn": "2026-11-28",
-    "scope": "Current contract §4.1 evaluation thresholds; only 2-Step funded floor corroborated in prior product audit; strategy replicability distinct from numerical consistency.",
-    "scopeFr": "Contrat actuel §4.1 pour l'évaluation ; seul seuil financé 2-Step corroboré par audit antérieur ; régularité de stratégie distincte d'un ratio.",
+    "scope": "Current contract §4.1 evaluation thresholds; only 2-Step funded floor corroborated in prior product audit; strategy replicability distinct from numerical consistency. Follow-up 28 Nov: drawdown: Terms §4.1 give the evaluation limit (6% trailing); §4.2.3 only says funded traders must keep following \"daily and overall drawdown limits\" without figures or type, and §5.2 says the maximum drawdown \"resets to the initial account balance\" after a payout, which does not define the funded floor. Trading rules page gives no funded figures.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -3300,8 +3342,7 @@ evidence["funded-bull"] = {
   },
   "funded-bull-3-step": {
     "checkedOn": "2026-11-28",
-    "scope": "Current contract §4.1 evaluation thresholds; only 2-Step funded floor corroborated in prior product audit; strategy replicability distinct from numerical consistency.",
-    "scopeFr": "Contrat actuel §4.1 pour l'évaluation ; seul seuil financé 2-Step corroboré par audit antérieur ; régularité de stratégie distincte d'un ratio.",
+    "scope": "Current contract §4.1 evaluation thresholds; only 2-Step funded floor corroborated in prior product audit; strategy replicability distinct from numerical consistency. Follow-up 28 Nov: drawdown: Terms §4.1 give the evaluation limit (7% static); §4.2.3 only says funded traders must keep following \"daily and overall drawdown limits\" without figures or type, and §5.2 says the maximum drawdown \"resets to the initial account balance\" after a payout, which does not define the funded floor. Trading rules page gives no funded figures.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -3404,8 +3445,7 @@ evidence["tradexprop"] = {
   },
   "tradexprop-instant-funded-x": {
     "checkedOn": "2026-11-28",
-    "scope": "Current sales grid shows 8% trailing and lock at payout; exact trail timing and subsequent withdrawal cycle unresolved.",
-    "scopeFr": "Grille actuelle : trailing 8 % et verrouillage au retrait ; fréquence du seuil et retraits suivants à confirmer.",
+    "scope": "Current Instant Funded X; 8% trailing on closed balance, locks at initial balance. Subsequent withdrawal cadence remains uncertain.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -3426,13 +3466,17 @@ evidence["tradexprop"] = {
         "points": 0.5,
         "source": "https://tradexprop.com/instantfunding/",
         "reason": "30-day inactivity requirement."
+      },
+      "drawdown": {
+        "points": 0,
+        "source": "https://tradexprop.com/faqinstantfundedx/",
+        "reason": "8% maximum trailing drawdown on closed balance (not equity) until an 8% return, then permanently locked at the starting balance; sales grid also locks it at payout; it does not reset on withdrawal."
       }
     }
   },
   "tradexprop-crypto-x-1-step": {
     "checkedOn": "2026-11-28",
-    "scope": "Current crypto-only plan; no percentage consistency explicitly confirmed; split varies by source.",
-    "scopeFr": "Crypto uniquement ; absence de confirmation de la consistency ; partage contradictoire.",
+    "scope": "Current crypto-only 1-Step; no consistency per Crypto FAQ; split varies by source.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -3448,6 +3492,16 @@ evidence["tradexprop"] = {
         "points": 0.5,
         "source": "https://tradexprop.com/crypto-faq/",
         "reason": "Daily cap of 3% in either direction closes positions and pauses trading until next day."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://tradexprop.com/forex-faq/",
+        "reason": "The 45% best-day rule is stated to apply to new Evaluation plans \"Forex only\" (from 16 Apr 2025); the Crypto FAQ states no consistency rule."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/crypto-faq/",
+        "reason": "Opening a position within 3 minutes before or after a news event is prohibited; copy-trading EAs prohibited by the Terms; the firm may limit open positions or leverage at any time."
       }
     },
     "preset": {
@@ -3458,8 +3512,7 @@ evidence["tradexprop"] = {
   },
   "tradexprop-crypto-x-2-step": {
     "checkedOn": "2026-11-28",
-    "scope": "Current crypto-only plan; no percentage consistency explicitly confirmed; split varies by source.",
-    "scopeFr": "Crypto uniquement ; absence de confirmation de la consistency ; partage contradictoire.",
+    "scope": "Current crypto-only 2-Step; no consistency per Crypto FAQ; split varies by source.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -3475,6 +3528,16 @@ evidence["tradexprop"] = {
         "points": 0.5,
         "source": "https://tradexprop.com/crypto-faq/",
         "reason": "Daily cap of 3% in either direction closes positions and pauses trading until next day."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://tradexprop.com/forex-faq/",
+        "reason": "The 45% best-day rule is stated to apply to new Evaluation plans \"Forex only\" (from 16 Apr 2025); the Crypto FAQ states no consistency rule."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/crypto-faq/",
+        "reason": "Opening a position within 3 minutes before or after a news event is prohibited; copy-trading EAs prohibited by the Terms; the firm may limit open positions or leverage at any time."
       }
     },
     "preset": {
@@ -3703,8 +3766,7 @@ evidence["clarity-traders"] = {
 evidence["funded-trader-markets"] = {
   "ftm-1step-nitro": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: funded floor continuity and split discrepancy need verification.",
-    "scopeFr": "Partiel : seuil financé et partage à vérifier.",
+    "scope": "Nitro current funded rules, 6% balance trail; split discrepancy remains.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -3720,6 +3782,16 @@ evidence["funded-trader-markets"] = {
         "points": 0.5,
         "source": "https://fundedtradermarkets.com/faq/category/general-trading-rules",
         "reason": "Overnight/weekend allowed, restrictions on rapid trading and strategies."
+      },
+      "drawdown": {
+        "points": 0,
+        "source": "https://fundedtradermarkets.com/faq",
+        "reason": "6% overall drawdown trails the highest recorded balance and locks at the initial balance once the account is up 6%."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fundedtradermarkets.com/faq/category/account-rules",
+        "reason": "30-day inactivity policy: the account can be terminated after 30 consecutive days without activity (exceptions on prior notice); homepage states no floating-loss limit on Nitro."
       }
     }
   },
@@ -3747,6 +3819,11 @@ evidence["funded-trader-markets"] = {
         "points": 0,
         "source": "https://fundedtradermarkets.com/faq/category/2-step-plus-evaluation",
         "reason": "1% floating loss auto-closes all positions and progressively reduces share to permanent 20% after fourth violation."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://fundedtradermarkets.com/programs",
+        "reason": "Programme comparison lists \"Consistency: Sim None\" for 2-Step Plus."
       }
     },
     "preset": {
@@ -3756,8 +3833,7 @@ evidence["funded-trader-markets"] = {
   },
   "ftm-instant-standard": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: archived plan rules but current detailed Standard FAQ not verified.",
-    "scopeFr": "Partiel : anciennes règles disponibles, FAQ Standard détaillée non vérifiée.",
+    "scope": "Current Instant Standard model FAQ; 5% balance trail, 15% best-day rule. Baseline payout axis (0.5) is more lenient than Instant Pro (0) although both use full withdrawals only and a 50%-to-80% stepped split; flagged for consolidation, not changed here.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -3768,6 +3844,21 @@ evidence["funded-trader-markets"] = {
         "points": 0.5,
         "source": "https://fundedtradermarkets.com/faq/category/general-trading-rules",
         "reason": "Weekend holding allowed; strategy and rapid trading restrictions."
+      },
+      "drawdown": {
+        "points": 0,
+        "source": "https://fundedtradermarkets.com/faq/how-does-the-overall-drawdown-limit-for-the-instant-standard-account-work",
+        "reason": "5% of initial balance trailing from the highest balance, never locks; resets to the initial level only after a full withdrawal."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://fundedtradermarkets.com/faq/what-is-the-consistency-requirement-on-instant-standard-account",
+        "reason": "No single day may exceed 15% of total profit before a payout."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fundedtradermarkets.com/faq/category/account-rules",
+        "reason": "30-day inactivity policy: the account can be terminated after 30 consecutive days without activity (exceptions on prior notice); the 1% floating-loss Shield is published for Instant Plus, not Standard."
       }
     }
   },
@@ -3795,6 +3886,11 @@ evidence["funded-trader-markets"] = {
         "points": 0.5,
         "source": "https://fundedtradermarkets.com/faq/category/general-trading-rules",
         "reason": "Overnight/weekend allowed; strategy and rapid trading restrictions."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fundedtradermarkets.com/faq/category/account-rules",
+        "reason": "30-day inactivity policy: the account can be terminated after 30 consecutive days without activity (exceptions on prior notice); no floating-loss Shield published for Instant Pro."
       }
     },
     "preset": {
@@ -3918,8 +4014,7 @@ evidence["traders-launch"] = {
   },
   "traders-launch-static-25k": {
     "checkedOn": "2026-11-28",
-    "scope": "Static 25K 90% route only; verify exact funded floor and lower split variants separately.",
-    "scopeFr": "Static 25K à 90 % uniquement ; seuil exact et autres partages à confirmer.",
+    "scope": "Static 25K 90% route only; verify exact funded floor and lower split variants separately. Follow-up 28 Nov: drawdown: The site offers \"EOD or Static\" drawdown plans, but the published plan cards, FAQ and futures rules only give EOD figures (locking at starting balance) and a 50% session rule for static evaluations; the funded floor of the Static 25K plan is not published.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -4271,8 +4366,7 @@ evidence["wsfunded"] = {
   },
   "wsfunded-classic-2phase": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: exact funded consistency not explicitly confirmed; programme-specific September rules.",
-    "scopeFr": "Partiel : consistency financée non explicitement confirmée ; règles spécifiques de septembre.",
+    "scope": "Classic 2-Phase funded rules, September cohort; no consistency per programme card.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -4293,6 +4387,11 @@ evidence["wsfunded"] = {
         "points": 0,
         "source": "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach",
         "reason": "First direct breach of risk per idea (50% daily drawdown) cancels funded account and payout."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://faq.wsfunded.com/en/articles/8717270-2-phases-wall-street-classic",
+        "reason": "Programme article lists the funded rules without any consistency rule; the homepage plan card states \"No consistency rule\" and the official blog says the 6-10% static models have no consistency rule (exception: Instant Pro). The 40% funded rule in the general FAQ belongs to a 4% drawdown plan, not this one."
       }
     },
     "preset": {
@@ -4304,8 +4403,7 @@ evidence["wsfunded"] = {
   },
   "wsfunded-ultra-2phase": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: exact funded consistency not explicitly confirmed; programme-specific September rules.",
-    "scopeFr": "Partiel : consistency financée non explicitement confirmée ; règles spécifiques de septembre.",
+    "scope": "Ultra 2-Phase funded rules, September cohort; no consistency per programme card.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -4326,6 +4424,11 @@ evidence["wsfunded"] = {
         "points": 0,
         "source": "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach",
         "reason": "First direct breach of risk per idea (50% daily drawdown) cancels funded account and payout."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://faq.wsfunded.com/en/articles/8717276-2-phases-wall-street-ultra",
+        "reason": "Programme article lists the funded rules without any consistency rule; the homepage plan card states \"No consistency rule\" and the official blog says the 6-10% static models have no consistency rule (exception: Instant Pro). The 40% funded rule in the general FAQ belongs to a 4% drawdown plan, not this one."
       }
     },
     "preset": {
@@ -4337,8 +4440,7 @@ evidence["wsfunded"] = {
   },
   "wsfunded-rapid-1phase": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: exact funded consistency not explicitly confirmed; programme-specific September rules.",
-    "scopeFr": "Partiel : consistency financée non explicitement confirmée ; règles spécifiques de septembre.",
+    "scope": "Rapid 1-Phase funded rules, September cohort; no consistency per programme card.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -4359,6 +4461,11 @@ evidence["wsfunded"] = {
         "points": 0,
         "source": "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach",
         "reason": "First direct breach of risk per idea (50% daily drawdown) cancels funded account and payout."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://faq.wsfunded.com/en/articles/8717253-1-phase-wall-street-rapid",
+        "reason": "Programme article lists the funded rules without any consistency rule; the homepage plan card states \"No consistency rule\" and the official blog says the 6-10% static models have no consistency rule (exception: Instant Pro). The 40% funded rule in the general FAQ belongs to a 4% drawdown plan, not this one."
       }
     },
     "preset": {
@@ -4370,8 +4477,7 @@ evidence["wsfunded"] = {
   },
   "wsfunded-power-1phase": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: published 6% initial floor and previous funded trailing wording require reconciliation.",
-    "scopeFr": "Partiel : seuil initial de 6 % et ancien seuil suiveur financé à réconcilier.",
+    "scope": "Power 1-Phase funded rules; 6% trailing distinct from evaluation fixed floor. Resolves the baseline \"6% initial floor vs funded trailing\" question: the article separates evaluation (fixed) and funded (trailing).",
     "assessments": {
       "payout": {
         "points": 1,
@@ -4387,13 +4493,22 @@ evidence["wsfunded"] = {
         "points": 0,
         "source": "https://faq.wsfunded.com/en/articles/11142820-trading-idea",
         "reason": "1% risk per trading idea."
+      },
+      "drawdown": {
+        "points": 0,
+        "source": "https://faq.wsfunded.com/en/articles/16859382-1-phase-wall-street-power",
+        "reason": "Programme article: \"Maximum Trailing Drawdown (FUNDED Phase Only) will be 6%\"; the 6% below initial balance applies to the evaluation. Homepage card also labels it dynamic."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://faq.wsfunded.com/en/articles/9582168-news-trading",
+        "reason": "Funded accounts may not open or close trades on affected instruments 4 minutes either side of red-folder news; stop-loss placement rules apply."
       }
     }
   },
   "wsfunded-prime-1phase": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: exact funded loss formula and payout eligibility pending.",
-    "scopeFr": "Partiel : seuil financé et éligibilité aux retraits à confirmer.",
+    "scope": "Partial: exact funded loss formula and payout eligibility pending. Follow-up 28 Nov: drawdown: Checkout and plan comparison show a 3% \"max dynamic drawdown\" and 1% daily loss for Prime, but no published formula (balance or equity, lock, reset) for the funded stage.",
     "assessments": {
       "payout": {
         "points": 1,
@@ -4409,6 +4524,11 @@ evidence["wsfunded"] = {
         "points": 0,
         "source": "https://faq.wsfunded.com/en/articles/11142820-trading-idea",
         "reason": "1% maximum risk per trading idea."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://faq.wsfunded.com/en/articles/9582168-news-trading",
+        "reason": "Funded news window of 4 minutes either side of red-folder events; EAs allowed; 1% risk per idea counted under funded."
       }
     }
   }
@@ -4510,6 +4630,11 @@ evidence["ment-funding"] = {
         "points": 0.5,
         "source": "https://mentfunding.com/",
         "reason": "3% daily profit cap pauses trading; 4% daily intraday loss hard breach."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://mentfunding.com/terms-and-conditions/",
+        "reason": "Opening a position within 3 minutes of a news event is prohibited; single-share equity CFD positions must be closed before earnings releases (by 3:50 pm ET); copy-trading EAs prohibited; EAs, hedging and scalping otherwise allowed."
       }
     },
     "preset": {
@@ -4555,8 +4680,7 @@ evidence["crypto-fund-trader"] = {
   },
   "cft-evaluation": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: generic legacy catalogue ID does not uniquely identify current 1-Phase or 2-Phase.",
-    "scopeFr": "Partiel : identifiant générique ancien, ne distingue pas les 1-Phase et 2-Phase actuels.",
+    "scope": "Partial: generic legacy catalogue ID does not uniquely identify current 1-Phase or 2-Phase. Follow-up 28 Nov: drawdown: The generic \"Evaluation\" ID can match 1-Phase Classic, Pro, Turbo, 2-Phase or 3-Phase, which have different drawdowns (3%-10% static) and payout cycles. Remap the catalogue entry before rating. | consistency: The generic \"Evaluation\" ID can match 1-Phase Classic, Pro, Turbo, 2-Phase or 3-Phase, which have different drawdowns (3%-10% static) and payout cycles. Remap the catalogue entry before rating. | funded: The generic \"Evaluation\" ID can match 1-Phase Classic, Pro, Turbo, 2-Phase or 3-Phase, which have different drawdowns (3%-10% static) and payout cycles. Remap the catalogue entry before rating.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -4572,8 +4696,7 @@ evidence["crypto-fund-trader"] = {
   },
   "cft-accelerated": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: current Classic/Pro/Turbo mapping unresolved.",
-    "scopeFr": "Partiel : correspondance Classic/Pro/Turbo à confirmer.",
+    "scope": "Partial: current Classic/Pro/Turbo mapping unresolved. Follow-up 28 Nov: drawdown: The \"Accelerated\" ID has no current equivalent: the FAQ says 1-Phase Classic, Pro and Turbo replace the former 1-Phase and Instant evaluations. Remap the catalogue entry before rating. | consistency: The \"Accelerated\" ID has no current equivalent: the FAQ says 1-Phase Classic, Pro and Turbo replace the former 1-Phase and Instant evaluations. Remap the catalogue entry before rating. | funded: The \"Accelerated\" ID has no current equivalent: the FAQ says 1-Phase Classic, Pro and Turbo replace the former 1-Phase and Instant evaluations. Remap the catalogue entry before rating.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -4597,6 +4720,12 @@ evidence["crypto-fund-trader"] = {
         "source": "https://cryptofundtrader.com/faq/",
         "reason": "Existing accounts may request Withdrawal & Upgrade at 10% profit or ordinary reward under other evaluation conditions."
       }
+    },
+    "reviewOutcome": {
+      "kind": "legacy",
+      "reason": "Discontinued for new purchases according to the firm's official documentation. Historical rules retained; no active-programme rating.",
+      "reasonFr": "Offre arrêtée pour les nouveaux achats selon la documentation officielle. Règles historiques conservées, aucune note d’offre active.",
+      "source": "https://cryptofundtrader.com/faq/"
     }
   }
 };
@@ -4663,6 +4792,11 @@ evidence["funded7"] = {
         "points": 0,
         "source": "https://funded7.com/faq/rule-2-3-position-risk-execution/",
         "reason": "Portfolio, correlation-bucket and single-position risk limits; 3% standard, 2% Silver, 1% Bronze; restricted tier and profit nullification rules."
+      },
+      "drawdown": {
+        "points": 0,
+        "source": "https://funded7.com/challenge-comparison/",
+        "reason": "One Phase: 8% maximum total loss, type \"Trailing\" in the official comparison and general rules (Two Phase is the static product)."
       }
     }
   },
@@ -4690,6 +4824,11 @@ evidence["funded7"] = {
         "points": 0,
         "source": "https://funded7.com/faq/rule-2-3-position-risk-execution/",
         "reason": "Portfolio, correlation-bucket and single-position risk limits; 3% standard, 2% Silver, 1% Bronze; restricted tier and profit nullification rules."
+      },
+      "drawdown": {
+        "points": 0,
+        "source": "https://funded7.com/challenge-comparison/",
+        "reason": "Instant Funding: 8% maximum total loss, type \"Trailing\" in the official comparison and general rules (Two Phase is the static product)."
       }
     }
   }
@@ -4697,8 +4836,7 @@ evidence["funded7"] = {
 evidence["dna-funded"] = {
   "dna-1-phase-march-2026": {
     "checkedOn": "2026-11-28",
-    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score.",
-    "scopeFr": "Ancienne version de mars 2026 ; commandes signalées suspendues, site officiel inaccessible. Pas de note commerciale actuelle.",
+    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score. Follow-up 28 Nov: payout: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | consistency: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | trading: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | funded: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -4709,8 +4847,7 @@ evidence["dna-funded"] = {
   },
   "dna-2-phase-march-2026": {
     "checkedOn": "2026-11-28",
-    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score.",
-    "scopeFr": "Ancienne version de mars 2026 ; commandes signalées suspendues, site officiel inaccessible. Pas de note commerciale actuelle.",
+    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score. Follow-up 28 Nov: payout: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | consistency: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | trading: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | funded: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -4721,8 +4858,7 @@ evidence["dna-funded"] = {
   },
   "dna-rapid-march-2026": {
     "checkedOn": "2026-11-28",
-    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score.",
-    "scopeFr": "Ancienne version de mars 2026 ; commandes signalées suspendues, site officiel inaccessible. Pas de note commerciale actuelle.",
+    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score. Follow-up 28 Nov: payout: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | consistency: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | trading: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | funded: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -4733,8 +4869,7 @@ evidence["dna-funded"] = {
   },
   "dna-instant-march-2026": {
     "checkedOn": "2026-11-28",
-    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score.",
-    "scopeFr": "Ancienne version de mars 2026 ; commandes signalées suspendues, site officiel inaccessible. Pas de note commerciale actuelle.",
+    "scope": "Historical March 2026 cohort only; new orders reportedly paused, official site unavailable at review. No current purchase score. Follow-up 28 Nov: payout: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | consistency: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | trading: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme. | funded: Historical March 2026 cohort: official rule pages unreachable on 28 Nov 2026; current FAQ does not split rules by programme.",
     "assessments": {
       "drawdown": {
         "points": 0,
@@ -4846,7 +4981,18 @@ evidence["top-one-trader"] = {
         "points": 0.5,
         "source": "https://help.toponetrader.com/en/articles/12458632-minimum-hold-time-rule-for-trades",
         "reason": "Profitable trades require five full minutes, including automatic TP or profitable SL; news/EA restrictions vary by account."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.toponetrader.com/en/articles/13391994-2-step-plus-overview",
+        "reason": "Existing accounts: 30-day inactivity closure, 2% per-symbol / 2.5% combined open-risk caps with a 1% Equity Shield and four soft breaches before a hard breach."
       }
+    },
+    "reviewOutcome": {
+      "kind": "legacy",
+      "reason": "Discontinued for new purchases according to the firm's official documentation. Historical rules retained; no active-programme rating.",
+      "reasonFr": "Offre arrêtée pour les nouveaux achats selon la documentation officielle. Règles historiques conservées, aucune note d’offre active.",
+      "source": "https://help.toponetrader.com/"
     }
   },
   "top-one-trader-instant-funding": {
@@ -5189,8 +5335,7 @@ evidence["top-one-futures"] = {
 evidence["instant-funding"] = {
   "instant-funding-pro": {
     "checkedOn": "2026-11-28",
-    "scope": "Current Instant Funding Pro formerly Smart, no Swing add-on; no explicit percentage consistency located.",
-    "scopeFr": "Instant Funding Pro actuel ancien Smart, sans Swing ; absence de confirmation explicite sur la consistency.",
+    "scope": "Current Instant Funding Pro formerly Smart, no Swing add-on; no consistency per programme list.",
     "assessments": {
       "drawdown": {
         "points": 0.5,
@@ -5211,6 +5356,11 @@ evidence["instant-funding"] = {
         "points": 0.5,
         "source": "https://instantfunding.com/help/instant-funding-program/",
         "reason": "3% risk per trade idea; other prohibited trading practices."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://instantfunding.com/",
+        "reason": "Homepage programme list: \"Instant Funding PRO — No Consistency or Daily Drawdown\" (best-day rules are published for Micro, Starter, One-Phase and Two-Phase products, not PRO)."
       }
     }
   },
@@ -5406,8 +5556,7 @@ evidence["funding-traders"] = {
   },
   "funding-traders-instant": {
     "checkedOn": "2026-11-28",
-    "scope": "New Instant-Funded FAQ; general withdrawal policy still describes 14-day cycle and other conditions. Payout cadence unresolved.",
-    "scopeFr": "Nouvelle FAQ Instant-Funded ; politique générale encore à 14 jours et conditions différentes. Retrait à confirmer.",
+    "scope": "Current Instant-Funded FAQ and dated change list; default 14-day cycle, paid on-demand add-on. The instant.fundingtraders.com page still shows on-demand payouts and a 3.5% minimum, and a blog says 7 days; the dated homepage change list and the help article agree on 14 days without the 3.5% minimum.",
     "assessments": {
       "drawdown": {
         "points": 0,
@@ -5428,6 +5577,11 @@ evidence["funding-traders"] = {
         "points": 0,
         "source": "https://fundingtraders.com/help/en/articles/17459915-instant-funded",
         "reason": "1% combined floating loss limit across all open trades."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://fundingtraders.com/help/en/articles/17333842-all-add-ons",
+        "reason": "Default Instant Funding cycle: first payout 14 days after the first trade, then every 14 days (on-demand only as a paid add-on); homepage confirms 14-day requests and records that the 3.5% minimum profit was removed ($50 minimum payout remains)."
       }
     },
     "preset": {
@@ -5438,8 +5592,7 @@ evidence["funding-traders"] = {
 evidence["quant-tekel"] = {
   "qt-one": {
     "checkedOn": "2026-11-28",
-    "scope": "Current help article says static 6% in evaluation; funded floor versus prior marketing needs confirmation.",
-    "scopeFr": "FAQ actuelle : 6 % statique en évaluation ; seuil financé à réconcilier avec l'ancien marketing.",
+    "scope": "Current help article says static 6% in evaluation; funded floor versus prior marketing needs confirmation. Follow-up 28 Nov: drawdown: Help article: 6% maximum drawdown \"(Static)\" for the evaluation; homepage: \"6% target, 6% trailing drawdown\" for the same one-step plan. Funded floor not stated separately. | trading: Homepage comparison says no news rule for QT ONE; not rated while the drawdown contradiction blocks the programme.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -5460,8 +5613,7 @@ evidence["quant-tekel"] = {
   },
   "qt-two": {
     "checkedOn": "2026-11-28",
-    "scope": "Current QT TWO; exact funded consistency and trading policy not confirmed.",
-    "scopeFr": "QT TWO actuel ; consistency financée et liberté de trading à confirmer.",
+    "scope": "Current QT TWO; no consistency per comparison, news profit forfeiture window.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -5477,6 +5629,16 @@ evidence["quant-tekel"] = {
         "points": 0,
         "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two",
         "reason": "1% aggregate floating loss first soft, second hard; SL within 60 seconds or hard breach."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://www.qtfunded.com/",
+        "reason": "Official comparison table: consistency score \"None\" for QT TWO."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.qtfunded.com/",
+        "reason": "News rule \"Restricted - profit forfeited\" (10-minute window); weekend holding allowed but no new trades or modifications at weekends."
       }
     }
   },
@@ -5518,8 +5680,7 @@ evidence["quant-tekel"] = {
   },
   "qt-power": {
     "checkedOn": "2026-11-28",
-    "scope": "Power purchases from 11 August; 14-day cycle; funded floor and full trading freedoms still to verify.",
-    "scopeFr": "Power depuis le 11 août ; cycle 14 jours ; seuil financé et liberté de trading à confirmer.",
+    "scope": "Power purchases from 11 August; 14-day cycle; funded floor and full trading freedoms still to verify. Follow-up 28 Nov: drawdown: \"8% of the initial balance\" appears under the 2-Step evaluation question; the article does not say it applies to funded accounts or that it is static.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -5535,6 +5696,11 @@ evidence["quant-tekel"] = {
         "points": 0.5,
         "source": "https://support.qtfunded.com/support/articles/5744325221663-qt-power",
         "reason": "14-day inactivity rule; generic prohibited strategies."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://support.qtfunded.com/support/articles/5744325221663-qt-power",
+        "reason": "\"The standard News Rule does not apply to QT Power accounts\"; existing positions can be held over weekends; only generic all-or-nothing strategies prohibited."
       }
     }
   }
@@ -6188,13 +6354,12 @@ evidence["myfundedfutures"] = {
   },
   "mffu-builder": {
     "checkedOn": "2026-11-28",
-    "scope": "Partial: existing 25K no-DLL guide now explicitly legacy; need map new Builder purchase cohort.",
-    "scopeFr": "Partiel : guide 25K sans DLL désormais Legacy ; nouveau catalogue à réconcilier.",
+    "scope": "Current Builder cohort; EOD drawdown, funded session closure and live transition rules. Mapped to the current Builder cohort; the legacy 25K no-DLL guide shares the same EOD drawdown, news and inactivity rules.",
     "assessments": {
       "drawdown": {
         "points": 0.5,
-        "source": "https://help.myfundedfutures.com/en/articles/15862870-builder-plan-25k-legacy-no-dll",
-        "reason": "Legacy 25K: EOD trailing."
+        "source": "https://help.myfundedfutures.com/en/articles/17036130-builder-plan-25k-a-comprehensive-look",
+        "reason": "Current Builder cohort (soft-pause DLL, legacy no-DLL guide now archived): sim-funded MLL is end-of-day trailing and only adjusts after the session close."
       },
       "payout": {
         "points": 0.5,
@@ -6205,6 +6370,16 @@ evidence["myfundedfutures"] = {
         "points": 0.5,
         "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
         "reason": "50% funded best-day condition."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/17036130-builder-plan-25k-a-comprehensive-look",
+        "reason": "News trading unrestricted; positions cannot be held overnight (auto-closed at session close); soft daily loss limit pauses the session."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/17036130-builder-plan-25k-a-comprehensive-look",
+        "reason": "Sim account closes after 7 calendar days without a trade; promotion to live after the 5th approved payout at the risk team's discretion, with a 21-day cooldown after a live breach. No forfeiture clause located for Builder."
       }
     }
   }
@@ -6738,6 +6913,12 @@ evidence["goat-funded-trader"] = {
         "source": "https://help.goatfundedtrader.com/2-step-standard.html",
         "reason": "10% static on existing accounts; current FAQ explicitly says this model is no longer available for purchase."
       }
+    },
+    "reviewOutcome": {
+      "kind": "legacy",
+      "reason": "Discontinued for new purchases according to the firm's official documentation. Historical rules retained; no active-programme rating.",
+      "reasonFr": "Offre arrêtée pour les nouveaux achats selon la documentation officielle. Règles historiques conservées, aucune note d’offre active.",
+      "source": "https://help.goatfundedtrader.com/"
     }
   },
   "goat-instant-goat": {
@@ -7783,8 +7964,7 @@ addVariant('funderpro','funderpro-pro','daily-60','Daily 60%','Quotidien 60%','P
 Object.assign(evidence["the5ers"],{
   "the5ers-high-stakes-current": {
     "checkedOn": "2026-11-28",
-    "scope": "High Stakes Pro stage after the New (10%/5%) or Classic (8%/5%) evaluation; product page read 28 Nov 2026 (New tab displayed; Classic tab not rendered in the capture). Funded rules are shared by both entry tiers. Exact funded tier loss percentage and consistency remain unconfirmed.",
-    "scopeFr": "Compte Pro High Stakes après l'évaluation New (10 %/5 %) ou Classic (8 %/5 %) ; règles financées communes.",
+    "scope": "High Stakes Pro stage after the New (10%/5%) or Classic (8%/5%) evaluation; product page read 28 Nov 2026 (New tab displayed; Classic tab not rendered in the capture). Funded rules are shared by both entry tiers. Exact funded tier loss percentage and consistency remain unconfirmed. Follow-up 28 Nov: consistency: Re-read on 28 Nov 2026 (same evidence set as audits/CLAUDE_PROGRAMME_BATCH_2026-11-28.json): the High Stakes page, general rules FAQ (3 Nov) and payout FAQ (24 Nov) list no consistency rule; the consistency FAQ (30 Oct) says the percentage depends on account type or region without naming programmes; an official blog (Sep 2026) states a 50% funded-only rule for High Stakes; the 2-Step Plan FAQ states 50% on the Pro account for a plan whose price and 3% daily loss do not match High Stakes. Not rated until The5ers names the rule for High Stakes.",
     "assessments": {
       "drawdown": {
         "points": 1,

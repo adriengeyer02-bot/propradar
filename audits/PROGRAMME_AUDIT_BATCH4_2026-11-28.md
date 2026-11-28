@@ -503,3 +503,60 @@ All ten assigned IDs now have a publishable disposition in the rating component.
 Sources rechecked: TradersEdgeFX official funded model FAQs and Overall Rules; FundedChecker https://fundedchecker.com/reviews/tradersedgefx/ and PropFirmMap https://propfirmmap.com/firms/tradersedgefx explicitly say funded consistency not reported. Titan official 3-Step page https://support.tgmarkets.com/articles/3-step-evaluation-rules and PickMyFirm https://pickmyfirm.com/firms/titan-capital-markets/rules (reference-only, not recommended). WFunded FAQ https://www.wfunded.io/en/faq and Standard/Expedited product pages. DFT checkout https://directfundedtrader.com/turbo and indexed Forex Prop Reviews https://forexpropreviews.com/direct-funded-trader-turbo-challenge-new-promotion/ (direct retrieval blocked; estimate only). SuperFunded rebrand https://joinprop.com/blog/prop-news/superfunded-becomes-eightcap-challenges/ and official archive index; Eightcap successor contract archived under `terms-archive/superfunded/51fd7bdf8fad.txt`, not applied to legacy purchases. Successor catalogue mapping remains a separate product-data migration, not part of this rating-only lot.
 
 Inventory: 171 verified + 8 estimated + 2 legacy + 47 partial (Claude) + 19 untouched (Claude) = 247. 16 additional fully scored variants. Zero undispositioned ChatGPT IDs. Component explicitly labels estimates and legacy status; English fallback for non-French locales consistent with existing component. Tests expanded, static validation of entries and estimate bounds performed, full build/runtime/visual test not executed.
+
+
+## Release consolidation of Claude PR #319
+
+47 exact programme IDs reconciled with current baseline; 24 complete scores recomputed, 3 discontinued offers marked legacy, 20 remaining partial with explicit reasons. Original research preserved in `audits/CLAUDE_PARTIAL_PROGRAMMES_FINAL_2026-11-28.json`. No assumption added to missing axes. 19 separate Claude IDs not delivered in a visible branch. Scope: programme ratings only; no firm score, pricing or unrelated UX edits. Static baseline/score checks passed for all 47; runtime tests separate.
+
+| ID | Status | Score |
+|---|---|---:|
+| the5ers-high-stakes-current | contradiction persistante | — |
+| ttp-swing-max | information officielle indisponible | — |
+| ttp-swing-flex | information officielle indisponible | — |
+| ttp-edge | information officielle indisponible | — |
+| funded-futures-network-steady | note complète | 3 |
+| lux-1-step-evaluation | note complète | 2.5 |
+| rzr-instant-funding | note complète | 2 |
+| lark-1-step-career | information officielle indisponible | — |
+| lark-3-step | information officielle indisponible | — |
+| ofp-instant-95 | information officielle indisponible | — |
+| ofp-challenge-8-5 | information officielle indisponible | — |
+| equity-edge-1-step-legacy | note complète | 3 |
+| equity-edge-1-step-swift | note complète | 3 |
+| equity-edge-instant | note complète | 1.5 |
+| funded-bull-1-step | information officielle indisponible | — |
+| funded-bull-3-step | information officielle indisponible | — |
+| tradexprop-instant-funded-x | note complète | 2.5 |
+| tradexprop-crypto-x-1-step | note complète | 3.5 |
+| tradexprop-crypto-x-2-step | note complète | 3.5 |
+| ftm-1step-nitro | note complète | 2 |
+| ftm-2step-plus | note complète | 3 |
+| ftm-instant-standard | note complète | 1.5 |
+| ftm-instant-pro | note complète | 1 |
+| traders-launch-static-25k | information officielle indisponible | — |
+| wsfunded-classic-2phase | note complète | 3 |
+| wsfunded-ultra-2phase | note complète | 3 |
+| wsfunded-rapid-1phase | note complète | 3 |
+| wsfunded-power-1phase | note complète | 1.5 |
+| wsfunded-prime-1phase | information officielle indisponible | — |
+| ment-equities | note complète | 3 |
+| cft-evaluation | information officielle indisponible | — |
+| cft-accelerated | information officielle indisponible | — |
+| cft-instant | offre arrêtée | — |
+| funded7-one-phase | note complète | 1 |
+| funded7-instant | note complète | 1 |
+| dna-1-phase-march-2026 | information officielle indisponible | — |
+| dna-2-phase-march-2026 | information officielle indisponible | — |
+| dna-rapid-march-2026 | information officielle indisponible | — |
+| dna-instant-march-2026 | information officielle indisponible | — |
+| top-one-trader-2-step-plus | offre arrêtée | — |
+| instant-funding-pro | note complète | 3 |
+| funding-traders-instant | note complète | 1.5 |
+| qt-one | contradiction persistante | — |
+| qt-two | note complète | 2.5 |
+| qt-power | information officielle indisponible | — |
+| mffu-builder | note complète | 2.5 |
+| goat-two-standard-new | offre arrêtée | — |
+
+Inventory: 195 full, 8 estimated, 5 legacy, 20 partial, 19 untouched = 247; 16 additional variants.
