@@ -661,6 +661,852 @@ evidence.tradeday = {
     }
   }
 };
+// Reviewed six additional firms, 2026-11-28.
+evidence["audacity-capital"] = {
+  "audacity-ability-challenge": {
+    "checkedOn": "2026-11-28",
+    "scope": "Funded baseline, post-2 November rules. Ability One evaluation day requirements conflict; funded rules agreed.",
+    "scopeFr": "Phase financée, règles après le 2 novembre. Contradiction sur les jours d'évaluation Ability One, pas sur la phase financée.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://audacity.capital/en/terms-and-conditions/",
+        "reason": "10% absolute max loss in funded stage."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://audacity.capital/knowledge-center/ability-challenge/",
+        "reason": "First request after 14 days, then fortnightly; no funded minimum days, nominal split starts at 75%."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://audacity.capital/knowledge-center/trading-guidelines/",
+        "reason": "No default best-day concentration rule."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://audacity.capital/knowledge-center/trading-guidelines/",
+        "reason": "All programmes: weekend/overnight holding permitted; opening, closing (including TP/SL) or adding within three minutes either side of major news is discouraged as excessive risk."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://audacity.capital/en/terms-and-conditions/",
+        "reason": "No separate funded profit target or minimum days; ordinary verification and documented risk limits."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://audacity.capital/en/terms-and-conditions/"
+    }
+  },
+  "audacity-ability-one": {
+    "checkedOn": "2026-11-28",
+    "scope": "Funded baseline, post-2 November rules. Ability One evaluation day requirements conflict; funded rules agreed.",
+    "scopeFr": "Phase financée, règles après le 2 novembre. Contradiction sur les jours d'évaluation Ability One, pas sur la phase financée.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://audacity.capital/en/terms-and-conditions/",
+        "reason": "6% absolute max loss in funded stage."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://audacity.capital/knowledge-center/ability-one/",
+        "reason": "First request after 14 days, then fortnightly; no funded minimum days, nominal split starts at 75%."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://audacity.capital/knowledge-center/trading-guidelines/",
+        "reason": "50% funded net best day, resets after payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://audacity.capital/knowledge-center/trading-guidelines/",
+        "reason": "All programmes: weekend/overnight holding permitted; opening, closing (including TP/SL) or adding within three minutes either side of major news is discouraged as excessive risk."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://audacity.capital/en/terms-and-conditions/",
+        "reason": "No separate funded profit target or minimum days; ordinary verification and documented risk limits."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "source": "https://audacity.capital/en/terms-and-conditions/",
+      "consistency": 50,
+      "consistencyBasis": "net"
+    }
+  },
+  "audacity-ftp-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "New FTP purchases from 2 November 2026; no scaling. Overall floor moves once, separate daily equity trail.",
+    "scopeFr": "FTP depuis le 2 novembre 2026 ; sans scaling. Seuil global ajusté une fois, seuil journalier suiveur.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://audacity.capital/knowledge-center/ftp/",
+        "reason": "10% maximum loss from initial capital, raises to starting balance after 10% profit; distinct 5% intraday equity daily trail."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://audacity.capital/knowledge-center/ftp/",
+        "reason": "14-day payouts, tiered 75/80/85% share; risk review pauses trading 1–3 working days; method-specific minimum $20 or $1,000."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://audacity.capital/knowledge-center/ftp/",
+        "reason": "35% net best day, resets at payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://audacity.capital/knowledge-center/trading-guidelines/",
+        "reason": "All programmes: weekend/overnight holding permitted; opening, closing (including TP/SL) or adding within three minutes either side of major news is discouraged as excessive risk."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://audacity.capital/knowledge-center/trading-guidelines/",
+        "reason": "One FTP account at a time; intraday equity daily trail imposes extra constraint beyond total loss floor."
+      }
+    },
+    "preset": {
+      "consistency": 35,
+      "consistencyBasis": "net",
+      "lossPercent": 10,
+      "source": "https://audacity.capital/knowledge-center/ftp/"
+    }
+  }
+};
+evidence["city-traders-imperium"] = {
+  "cti-one-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Standard funded terms, no VIP enhancements. Direct schedule conflicts between official comparison and product page.",
+    "scopeFr": "Phase financée standard, sans avantages VIP. Calendrier Direct contradictoire entre comparatif et fiche.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "5% balance-high trailing loss limit; no daily limit."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "First payout after seven days, then monthly; early withdrawal at 10% net profit."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "No best-day consistency for payout; 20% for scaling on direct routes only."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "News/weekend holding and third-party EAs allowed; Martingale allowed on this model."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "No additional funded target required to retain account; optional scaling conditions separate."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 5,
+      "source": "https://citytradersimperium.com/choosing-your-funding-program/"
+    }
+  },
+  "cti-two-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Standard funded terms, no VIP enhancements. Direct schedule conflicts between official comparison and product page.",
+    "scopeFr": "Phase financée standard, sans avantages VIP. Calendrier Direct contradictoire entre comparatif et fiche.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "10% static loss limit; 5% daily limit."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "First payout after seven days, then monthly; early withdrawal at 10% net profit."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "No best-day consistency for payout; 20% for scaling on direct routes only."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "News/weekend holding allowed; own EAs only and no Martingale."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "No additional funded target required to retain account; optional scaling conditions separate."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://citytradersimperium.com/choosing-your-funding-program/"
+    }
+  },
+  "cti-instant-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Standard funded terms, no VIP enhancements. Direct schedule conflicts between official comparison and product page.",
+    "scopeFr": "Phase financée standard, sans avantages VIP. Calendrier Direct contradictoire entre comparatif et fiche.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "6% static loss limit; no daily limit."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "Only after reaching 10% to unlock full allocation, then five days; later twice monthly."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "No best-day consistency for payout; 20% for scaling on direct routes only."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "News/weekend holding allowed; own EAs only and no Martingale."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "Starts at half nominal allocation; full balance unlocked at 10% profit, already counted as payout gate; scaling limited by 20% rule."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "source": "https://citytradersimperium.com/choosing-your-funding-program/"
+    }
+  },
+  "cti-direct-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Standard funded terms, no VIP enhancements. Direct schedule conflicts between official comparison and product page.",
+    "scopeFr": "Phase financée standard, sans avantages VIP. Calendrier Direct contradictoire entre comparatif et fiche.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "6% static loss limit; no daily limit."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://citytradersimperium.com/direct-funding/",
+        "reason": "Day-five first on-demand request; product page says no fixed schedule, comparison says twice monthly thereafter; conservative rating."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "No best-day consistency for payout; 20% for scaling on direct routes only."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "News/weekend holding allowed; own EAs only and no Martingale."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+        "reason": "No additional funded target required to retain account; optional scaling conditions separate."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "source": "https://citytradersimperium.com/choosing-your-funding-program/"
+    }
+  }
+};
+evidence["alpha-capital-group"] = {
+  "alpha-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Pro 8/10 baseline, biweekly reward; Pro 6 separate loss tier, same published news restrictions.",
+    "scopeFr": "Pro 8/10, retrait bimensuel ; Pro 6 avec seuil différent.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/8420429-alpha-pro-8-10",
+        "reason": "8% or 10% static total loss; Pro 6 is static 6%."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/10570531-bi-weekly-performance-fee",
+        "reason": "14-day cycle; first withdrawal requires five strategy-consistent trading days, $100 minimum."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/10570531-bi-weekly-performance-fee",
+        "reason": "Biweekly route has five strategy-consistent days initially, not a numerical best-day percentage."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/8420429-alpha-pro-8-10",
+        "reason": "No execution on targeted instruments five minutes either side of major news; no funded weekend hold."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/15888623-what-is-the-max-risk-rule-and-how-does-it-work",
+        "reason": "Funded max-risk-per-asset hard closure, includes losing positions and linked trades; lot-limit violations may forfeit profits or deactivate account."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "source": "https://help.alphacapitalgroup.uk/en/articles/8420429-alpha-pro-8-10"
+    }
+  },
+  "alpha-one": {
+    "checkedOn": "2026-11-28",
+    "scope": "Alpha One 6/10/12, on-demand only.",
+    "scopeFr": "Alpha One 6/10/12, retrait à la demande.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/10097421-alpha-one-6-10-12",
+        "reason": "4/6/8% highest-balance trailing, locks at initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/10102634-on-demand-performance-fee",
+        "reason": "2% new profit and best-day eligibility; withdrawing all after drawdown lock closes account."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/10102634-on-demand-performance-fee",
+        "reason": "40% funded net best day per cycle."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/10097421-alpha-one-6-10-12",
+        "reason": "No execution on targeted instruments five minutes either side of major news; weekend holding allowed."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/15888623-what-is-the-max-risk-rule-and-how-does-it-work",
+        "reason": "Funded max-risk-per-asset hard closure, includes losing positions and linked trades; lot-limit violations may forfeit profits or deactivate account."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "source": "https://help.alphacapitalgroup.uk/en/articles/10097421-alpha-one-6-10-12",
+      "consistency": 40,
+      "consistencyBasis": "net"
+    }
+  },
+  "alpha-direct": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Instant-Qualified, on-demand only.",
+    "scopeFr": "Instant-Qualified actuel, retrait à la demande.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/16003693-alpha-direct",
+        "reason": "5% high-water balance trail until initial balance."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/10102634-on-demand-performance-fee",
+        "reason": "3% permanently retained buffer, then minimum 1% new profit."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/10102634-on-demand-performance-fee",
+        "reason": "15% best-day share of net profit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/16003693-alpha-direct",
+        "reason": "No funded weekend holding, no EAs, targeted news window five minutes either side."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.alphacapitalgroup.uk/en/articles/15888623-what-is-the-max-risk-rule-and-how-does-it-work",
+        "reason": "1% maximum per asset, including linked same-direction losses within ten minutes; hard closure."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 5,
+      "consistency": 15,
+      "consistencyBasis": "net",
+      "profitSplit": 90,
+      "source": "https://help.alphacapitalgroup.uk/en/articles/16003693-alpha-direct"
+    }
+  }
+};
+evidence["fintokei"] = {
+  "finto-start-new": {
+    "checkedOn": "2026-11-28",
+    "scope": "New StartTrader from 21 October 2026; standard unmodified account.",
+    "scopeFr": "StartTrader depuis le 21 octobre 2026 ; compte standard sans restriction individuelle.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/17677670-what-s-new-on-starttrader-from-october-21-2026-soft-breach-payouts-and-purchase-rules",
+        "reason": "8% static total loss; first 2% daily hit soft breach, second hard."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://support.fintokei.com/en/articles/17677670-what-s-new-on-starttrader-from-october-21-2026-soft-breach-payouts-and-purchase-rules",
+        "reason": "14-day cycle, 2% minimum gross profit, lifetime cap $400 over at most two requests."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/17677670-what-s-new-on-starttrader-from-october-21-2026-soft-breach-payouts-and-purchase-rules",
+        "reason": "No default percentage consistency; individually imposed restrictions possible."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/6538843-can-trade-any-time-hold-positions-over-weekends-and-trade-during-news",
+        "reason": "News and overnight/weekend holding allowed."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://support.fintokei.com/en/articles/17677670-what-s-new-on-starttrader-from-october-21-2026-soft-breach-payouts-and-purchase-rules",
+        "reason": "Account closes at lifetime payout cap; only eligible first/second lifetime purchases."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "profitSplit": 80,
+      "source": "https://support.fintokei.com/en/articles/17677670-what-s-new-on-starttrader-from-october-21-2026-soft-breach-payouts-and-purchase-rules"
+    }
+  },
+  "finto-swift-new": {
+    "checkedOn": "2026-11-28",
+    "scope": "SwiftTrader purchases after 15 July 2026; default account, no individual restrictions.",
+    "scopeFr": "SwiftTrader après le 15 juillet 2026 ; compte standard, sans restrictions individuelles.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/8409176-what-rules-do-i-have-to-follow-to-keep-my-swifttrader-account",
+        "reason": "3% fixed total loss."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://support.fintokei.com/en/articles/8408430-what-is-the-performance-reward-ratio-on-swifttrader-accounts",
+        "reason": "Minimum 3% profit every payout; at least three trading days under current model FAQ; 90% split."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/8409176-what-rules-do-i-have-to-follow-to-keep-my-swifttrader-account",
+        "reason": "Default 3% daily profit cap applies in evaluation only, no funded best-day percentage stated by model rules."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/6538843-can-trade-any-time-hold-positions-over-weekends-and-trade-during-news",
+        "reason": "News and overnight/weekend holding allowed."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices",
+        "reason": "Risk warnings may lead to individual restrictions on existing/future accounts; inactivity closure after 30 days."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 3,
+      "profitSplit": 90,
+      "source": "https://support.fintokei.com/en/articles/8409176-what-rules-do-i-have-to-follow-to-keep-my-swifttrader-account"
+    }
+  },
+  "finto-pro-two": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current standard ProTrader regular, no individually imposed restrictions.",
+    "scopeFr": "ProTrader classique actuel, sans restriction individuelle.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/6538826-how-are-the-daily-loss-limit-and-maximum-loss-limit-calculated",
+        "reason": "10% static loss, 5% daily reset on EOD equity, monitored on equity."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/6538884-how-and-how-often-can-i-withdraw-my-performance-rewards-and-what-is-the-minimum-amount",
+        "reason": "14-day standard rewards, ordinary minimums; minimum three trading days under programme rules."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/6538878-what-rules-do-i-have-to-follow-to-keep-my-protrader-account",
+        "reason": "No default funded best-day ratio; specific risk-triggered consistency can be imposed."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/6538843-can-trade-any-time-hold-positions-over-weekends-and-trade-during-news",
+        "reason": "News, overnight and weekend holding allowed."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices",
+        "reason": "Risk warnings can impose additional rules across current/future accounts; inactivity closure after 30 days."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://support.fintokei.com/en/articles/6538826-how-are-the-daily-loss-limit-and-maximum-loss-limit-calculated"
+    }
+  },
+  "finto-swing-two": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current standard ProTrader Swing, no individually imposed restrictions.",
+    "scopeFr": "ProTrader Swing actuel, sans restriction individuelle.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/6538826-how-are-the-daily-loss-limit-and-maximum-loss-limit-calculated",
+        "reason": "10% static loss, 5% daily reset on closed balance, monitored on equity."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/6538884-how-and-how-often-can-i-withdraw-my-performance-rewards-and-what-is-the-minimum-amount",
+        "reason": "14-day standard rewards, ordinary minimums; minimum three trading days under programme rules."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/6538878-what-rules-do-i-have-to-follow-to-keep-my-protrader-account",
+        "reason": "No default funded best-day ratio; specific risk-triggered consistency can be imposed."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://support.fintokei.com/en/articles/6538843-can-trade-any-time-hold-positions-over-weekends-and-trade-during-news",
+        "reason": "News, overnight and weekend holding allowed."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices",
+        "reason": "Risk warnings can impose additional rules across current/future accounts; inactivity closure after 30 days."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://support.fintokei.com/en/articles/6538826-how-are-the-daily-loss-limit-and-maximum-loss-limit-calculated"
+    }
+  }
+};
+evidence["myfundedfutures"] = {
+  "mffu-rapid-intraday": {
+    "checkedOn": "2026-11-28",
+    "scope": "Sim funded, 50K representative, no optional daily loss limit; live transition included.",
+    "scopeFr": "Compte simulé financé 50K représentatif, sans limite journalière optionnelle ; transition live comprise.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.myfundedfutures.com/en/articles/13134709-rapid-plan-50k-a-comprehensive-look",
+        "reason": "Funded intraday trailing, locks at $100."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/13134709-rapid-plan-50k-a-comprehensive-look",
+        "reason": "Daily withdrawals after buffer $2,100 at 50K; $500 minimum; EOD subsequent fresh-profit requirement."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.myfundedfutures.com/en/articles/13134709-rapid-plan-50k-a-comprehensive-look",
+        "reason": "No funded percentage consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/8230009-news-trading-policy",
+        "reason": "Tier-one news restrictions and intraday futures closure."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.myfundedfutures.com/en/articles/13134718-understanding-rapid-live",
+        "reason": "Automatic live transition at $10K net in one day, excess profit forfeited; up to $5K reserve, conditional access."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "profitSplit": 90,
+      "source": "https://help.myfundedfutures.com/en/articles/13134709-rapid-plan-50k-a-comprehensive-look"
+    }
+  },
+  "mffu-rapid-eod": {
+    "checkedOn": "2026-11-28",
+    "scope": "Sim funded, 50K representative, no optional daily loss limit; live transition included.",
+    "scopeFr": "Compte simulé financé 50K représentatif, sans limite journalière optionnelle ; transition live comprise.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/16158363-rapid-eod-50k-a-comprehensive-look",
+        "reason": "Funded eod trailing, locks at $100."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/16158363-rapid-eod-50k-a-comprehensive-look",
+        "reason": "Daily withdrawals after buffer $2,100 at 50K; $500 minimum; EOD subsequent fresh-profit requirement."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.myfundedfutures.com/en/articles/16158363-rapid-eod-50k-a-comprehensive-look",
+        "reason": "No funded percentage consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/8230009-news-trading-policy",
+        "reason": "Tier-one news restrictions and intraday futures closure."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.myfundedfutures.com/en/articles/13134718-understanding-rapid-live",
+        "reason": "Automatic live transition at $10K net in one day, excess profit forfeited; up to $5K reserve, conditional access."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 90,
+      "source": "https://help.myfundedfutures.com/en/articles/16158363-rapid-eod-50k-a-comprehensive-look"
+    }
+  },
+  "mffu-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Redesigned Pro from 23 November 2026; older accounts excluded; one-day evaluation add-on shares funded terms.",
+    "scopeFr": "Pro refondu à partir du 23 novembre 2026 ; anciens comptes exclus ; option 1 jour mêmes règles financées.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "reason": "EOD trailing, after first withdrawal locks at nominal account + $100."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+        "reason": "14-day cycle, $1K minimum, buffer requirements with partial withdrawals possible; $100K simulated cap."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "reason": "No funded best-day percentage rule."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "reason": "Tier-one news prohibited funded, position limits and session closure."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan",
+        "reason": "Live transition review after three consecutive payouts, $20K profit or at risk invitation; above $100K forfeited, reserve up to $5K conditional bonus and 21-day cooldown after live breach."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 80,
+      "source": "https://help.myfundedfutures.com/en/articles/17573707-comprehensive-look-into-redesigned-pro-plan"
+    }
+  },
+  "mffu-builder": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: existing 25K no-DLL guide now explicitly legacy; need map new Builder purchase cohort.",
+    "scopeFr": "Partiel : guide 25K sans DLL désormais Legacy ; nouveau catalogue à réconcilier.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/15862870-builder-plan-25k-legacy-no-dll",
+        "reason": "Legacy 25K: EOD trailing."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+        "reason": "Builder overview describes buffer and $1K/$2K caps on 25K/50K."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+        "reason": "50% funded best-day condition."
+      }
+    }
+  }
+};
+evidence["fxify"] = {
+  "fxi-two-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current 2-Phase Pro, standard funded account.",
+    "scopeFr": "2-Phase Pro actuel, compte financé standard.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://fxify.com/blog/introducing-fxify-2-phase-pro/",
+        "reason": "8% fixed overall max loss."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://fxify.com/faqs/all-faqs/two-phase-pro/2-phase-pro-what-is-the-max-profit-on-my-account/",
+        "reason": "First two withdrawal caps 5% or $8K on 200K/250K; excess deducted, plus three 0.5% days and ten-day cycle."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://fxify.com/blog/introducing-fxify-2-phase-pro/",
+        "reason": "Comparison says no consistency rule."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://fxify.com/faqs/all-faqs/two-phase-pro/2-phase-pro-can-i-trade-news-on-2-phase-pro/",
+        "reason": "News trading permitted, subject to risk guidance; no special news window."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fxify.com/faqs/all-faqs/two-phase-pro/2-phase-pro-whats-the-max-and-minimum-trading-days-is-there-a-specific-time-window-to-complete-the-profit-targets/",
+        "reason": "60-day inactivity hard breach; ordinary rules otherwise."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "profitSplit": 80,
+      "source": "https://fxify.com/blog/introducing-fxify-2-phase-pro/"
+    }
+  },
+  "fxi-instant-lite": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Instant Lite, baseline 80% split.",
+    "scopeFr": "Instant Lite actuel, partage standard 80 %.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://fxify.com/newsroom/introducing-fxify-instant-funding-lite/",
+        "reason": "4% trailing high closed balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fxify.com/blog/prop-firm-payout-process/",
+        "reason": "First reward after ten calendar days, five traded days, $50 minimum; subsequent schedule to verify."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://fxify.com/faqs/all-faqs/instant-funding-lite-how-does-the-20-consistency-rule-work/",
+        "reason": "20% funded best-day threshold."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fxify.com/faqs/all-faqs/instant-funding-lite-faq/instant-funding-lite-can-i-trade-news-on-instant-funding-lite/",
+        "reason": "High-impact window includes automatic TP/SL; gains ineligible, losses retained."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fxify.com/faqs/all-faqs/instant-funding-lite-how-does-the-20-consistency-rule-work/",
+        "reason": "60-day inactivity breach."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 4,
+      "profitSplit": 80,
+      "source": "https://fxify.com/newsroom/introducing-fxify-instant-funding-lite/"
+    }
+  },
+  "fxi-one": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: drawdown and payout evidence, funded news/weekend and remaining rules require exact programme verification.",
+    "scopeFr": "Partiel : drawdown et retraits documentés ; règles financées annonces/week-end et autres conditions à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/",
+        "reason": "6% trailing max loss per programme documentation."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fxify.com/faqs/all-faqs/how-do-i-withdraw-my-profits/",
+        "reason": "First withdrawal on demand, then 30 days default; 14 days paid add-on."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/"
+    }
+  },
+  "fxi-two-std": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: drawdown and payout evidence, funded news/weekend and remaining rules require exact programme verification.",
+    "scopeFr": "Partiel : drawdown et retraits documentés ; règles financées annonces/week-end et autres conditions à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/",
+        "reason": "10% trailing max loss per programme documentation."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fxify.com/faqs/all-faqs/how-do-i-withdraw-my-profits/",
+        "reason": "First withdrawal on demand, then 30 days default; 14 days paid add-on."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://fxify.com/blog/introducing-fxify-2-phase-pro/",
+        "reason": "Comparison lists no consistency."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 10,
+      "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/"
+    }
+  },
+  "fxi-two-classic": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: drawdown and payout evidence, funded news/weekend and remaining rules require exact programme verification.",
+    "scopeFr": "Partiel : drawdown et retraits documentés ; règles financées annonces/week-end et autres conditions à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/",
+        "reason": "10% static max loss per programme documentation."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fxify.com/faqs/all-faqs/how-do-i-withdraw-my-profits/",
+        "reason": "Classic choice of 14-day 80% or 30-day 100% as detailed in payout overview."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://fxify.com/blog/introducing-fxify-2-phase-pro/",
+        "reason": "25% funded best-day rule."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/"
+    }
+  },
+  "fxi-three": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: drawdown and payout evidence, funded news/weekend and remaining rules require exact programme verification.",
+    "scopeFr": "Partiel : drawdown et retraits documentés ; règles financées annonces/week-end et autres conditions à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/",
+        "reason": "5% static max loss per programme documentation."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fxify.com/faqs/all-faqs/how-do-i-withdraw-my-profits/",
+        "reason": "First withdrawal on demand, then 30 days default; 14 days paid add-on."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 5,
+      "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/"
+    }
+  }
+};
 // Reviewed CFD models, 2026-11-28.
 evidence["blue-guardian"] = {
   "bg-one-standard-current": {
@@ -1866,6 +2712,7 @@ addVariant("funding-pips","pips-one-step-flex","on-demand","On Demand 100%","Ret
 addVariant("funding-pips","pips-two-step-standard","on-demand","On Demand 100%","Retrait à la demande 100%","Current Master, on-demand reward route, no add-ons.","Master actuel, retrait à la demande, sans option.",{"payout":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard","reason":"Seven qualifying days of at least 0.5% each, 1% minimum reward; 100% nominal share subject to strike reductions."},"consistency":{"points":0.5,"source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard","reason":"35% best day, reset after each processed reward."},"funded":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard","reason":"1% loss per aggregated trade idea triggers cumulative strikes: second halves split, third reduces to 20%, fourth closes account; profits from warned ideas deducted."}},{"drawdown":"static","lossPercent":10,"consistency":35,"consistencyBasis":"net","source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"});
 addVariant("funding-pips","pips-two-step-standard","weekly-60","Weekly 60%","Retrait hebdomadaire 60%","Current Master weekly 60% option, no add-ons.","Master actuel, retrait hebdomadaire 60 %, sans option.",{"payout":{"points":0.5,"source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard","reason":"Seven-day withdrawal schedule; minimum request 1%; 60% share."}},{"drawdown":"static","lossPercent":10,"profitSplit":60,"source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"});
 addVariant("funding-pips","pips-two-step-pro","on-demand","On Demand 100%","Retrait à la demande 100%","Current Master, on-demand reward route, no add-ons.","Master actuel, retrait à la demande, sans option.",{"payout":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model","reason":"Seven qualifying days of at least 0.5% each, 1% minimum reward; 100% nominal share subject to strike reductions."},"consistency":{"points":0.5,"source":"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model","reason":"35% best day, reset after each processed reward."},"funded":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model","reason":"1% loss per aggregated trade idea triggers cumulative strikes: second halves split, third reduces to 20%, fourth closes account; profits from warned ideas deducted."}},{"drawdown":"static","lossPercent":6,"consistency":35,"consistencyBasis":"net","source":"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model"});
+addVariant('alpha-capital-group','alpha-pro','on-demand','On-Demand','Retrait à la demande','Pro 8/10, on-demand reward.','Pro 8/10, retrait à la demande.',{payout:{points:.5,source:"https://help.alphacapitalgroup.uk/en/articles/10102634-on-demand-performance-fee",reason:'Minimum 2% gross profit; request on demand once eligible.'},consistency:{points:.5,source:"https://help.alphacapitalgroup.uk/en/articles/10102634-on-demand-performance-fee",reason:'40% net best-day share per payout window.'}},{drawdown:'static',consistency:40,consistencyBasis:'net',source:"https://help.alphacapitalgroup.uk/en/articles/10102634-on-demand-performance-fee"});
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA

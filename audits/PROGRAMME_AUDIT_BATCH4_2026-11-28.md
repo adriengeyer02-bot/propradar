@@ -88,3 +88,42 @@ UX handoff: separate branch from latest main; improve challenge discovery and co
 - BrightFunded: post-16-Nov models only, 1% buffer on Daily, 3% on Instant; Instant 15% best day, five 0.5% days, biggest losing trade no greater than biggest winner. Inactivity reactivation ends 30 November. No penalty for ordinary KYC.
 - GOAT: official current 2-Step Standard explicitly no longer available; legacy note only, catalogue still needs removal from purchase filters. News policy changed 24 Nov to cap aggregate profit per release rather than trade (3% post-10-Nov; 1% older); funded minimum hold 60s post-6-Oct. All current payouts subject to best-win/worst-loss condition, 3% processing fee and trading pause during processing. Initial caps and deducted daily profit are material. Additional new products and Instant Daily static variant need catalogue mapping. General news policy: https://help.goatfundedtrader.com/en/articles/10742084-is-news-trading-allowed. No unsupported fixed split preset where conditional.
 - Regression: replaced brittle printed assertion count with success text; loop-expanded executions exceed static count. Full runtime/build/visual checks pending. Cumulative 61 complete catalogue evaluations per prior audit count, including duplicate E8 listings. No production deployment.
+
+## Six-firm audit — 2026-11-28
+
+25 catalogue entries and funded choices: 20 complete and 5 partial. Official programme pages consulted today; no global score or pricing edits. Exact product IDs from main catalogue. Scope only current default funded rules unless indicated.
+
+| Firm | ID | Stars |
+|---|---|---:|
+| audacity-capital | audacity-ability-challenge | 4.5 |
+| audacity-capital | audacity-ability-one | 4 |
+| audacity-capital | audacity-ftp-instant | 2.5 |
+| city-traders-imperium | cti-one-current | 3.5 |
+| city-traders-imperium | cti-two-current | 4 |
+| city-traders-imperium | cti-instant-current | 3 |
+| city-traders-imperium | cti-direct-current | 4 |
+| alpha-capital-group | alpha-pro | 3 |
+| alpha-capital-group | alpha-one | 1.5 |
+| alpha-capital-group | alpha-direct | 0.5 |
+| fintokei | finto-start-new | 3 |
+| fintokei | finto-swift-new | 3.5 |
+| fintokei | finto-pro-two | 4.5 |
+| fintokei | finto-swing-two | 4.5 |
+| myfundedfutures | mffu-rapid-intraday | 2 |
+| myfundedfutures | mffu-rapid-eod | 2.5 |
+| myfundedfutures | mffu-pro | 2.5 |
+| myfundedfutures | mffu-builder | Partial |
+| fxify | fxi-two-pro | 3.5 |
+| fxify | fxi-instant-lite | 1.5 |
+| fxify | fxi-one | Partial |
+| fxify | fxi-two-std | Partial |
+| fxify | fxi-two-classic | Partial |
+| fxify | fxi-three | Partial |
+| alpha-capital-group | alpha-pro / on-demand | 2.5 |
+
+- Audacity: November 2 cohort; Ability One evaluation-day conflict remains within its own FAQ; funded-stage rules agree. FTP daily equity trail separate from overall floor; no constant split preset.
+- CTI: Direct marketing claims on-demand after day five, comparative page says twice monthly subsequently. Conservative payout score until clarified. No payout consistency, scaling-only 20% on direct plans. Half initial allocation for Instant.
+- Alpha: Pro baseline biweekly, separate on-demand route. Direct requires 3% buffer + 1% profit and 15% concentration; one-percent per-asset hard risk limit. Pro/One max-risk rule and lot limits.
+- Fintokei: SwiftTrader reward now 90% for post-15 July purchases, previous catalogue says 80%; catalogue update pending. StartTrader lifetime $400 cap and max two requests. Default versus individualized restrictions distinguished; no claim that restrictions never apply.
+- MFFU: Pro redesigned effective 23 November, reserve and forfeiture policy; Rapid 50K representative no DLL; optional DLL and new Signature not yet mapped. Builder guide now Legacy; remain partial until new products reconciled.
+- FXIFY: Pro first-two-payout surplus deducted, Lite 20% consistency. Other four remain partial pending funded trading rule evidence. Do not equate missing evidence to absence. Full runtime/build/visual checks pending. Cumulative 81 complete catalogue evaluations per prior count (duplicate E8 listings included).
