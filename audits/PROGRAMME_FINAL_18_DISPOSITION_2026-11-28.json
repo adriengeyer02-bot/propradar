@@ -1,0 +1,158 @@
+{
+  "checkedOn": "2026-11-28",
+  "base": "a4ee3c6da6b5f20762cab010c0492c853e43ee40",
+  "decisions": [
+    {
+      "slug": "now-trade-funded",
+      "id": "ntf-standard-two-step",
+      "status": "rated",
+      "score": 2.5,
+      "verified": 5,
+      "blocker": ""
+    },
+    {
+      "slug": "now-trade-funded",
+      "id": "ntf-progressive-one-step",
+      "status": "rated",
+      "score": 1.5,
+      "verified": 5,
+      "blocker": ""
+    },
+    {
+      "slug": "now-trade-funded",
+      "id": "ntf-1k-starter",
+      "status": "rated",
+      "score": 2.5,
+      "verified": 5,
+      "blocker": ""
+    },
+    {
+      "slug": "exfunded",
+      "id": "exfunded-1step",
+      "status": "rated",
+      "score": 2,
+      "verified": 5,
+      "blocker": "Checkout remains blocked; documentary score only."
+    },
+    {
+      "slug": "exfunded",
+      "id": "exfunded-2step",
+      "status": "rated",
+      "score": 2,
+      "verified": 5,
+      "blocker": "Checkout remains blocked; documentary score only."
+    },
+    {
+      "slug": "rebelsfunding",
+      "id": "rebelsfunding-gold-1-phase",
+      "status": "rated",
+      "score": 3,
+      "verified": 5,
+      "blocker": "Separate RCF contract unavailable; scope explicitly public rules."
+    },
+    {
+      "slug": "willis-capital",
+      "id": "wfunded-skillcheck",
+      "status": "blocked",
+      "score": null,
+      "verified": 4,
+      "blocker": "Exact funded overall-loss mechanism and programme mapping."
+    },
+    {
+      "slug": "superfunded",
+      "id": "superfunded-one-phase",
+      "status": "blocked",
+      "score": null,
+      "verified": 2,
+      "blocker": "Legacy brand redirect; exact SuperFunded contract not recovered."
+    },
+    {
+      "slug": "superfunded",
+      "id": "superfunded-two-phase",
+      "status": "blocked",
+      "score": null,
+      "verified": 3,
+      "blocker": "Legacy brand redirect; exact SuperFunded contract not recovered."
+    },
+    {
+      "slug": "sfx-funded",
+      "id": "sfx-instant",
+      "status": "blocked",
+      "score": null,
+      "verified": 3,
+      "blocker": "Split Standard/Pro/Flex catalogue and obtain matching funded terms."
+    },
+    {
+      "slug": "directfundedtrader",
+      "id": "directfundedtrader-turbo",
+      "status": "blocked",
+      "score": null,
+      "verified": 4,
+      "blocker": "Funded drawdown reference not established for Turbo."
+    },
+    {
+      "slug": "tradersedgefx",
+      "id": "tradersedgefx-1-step",
+      "status": "blocked",
+      "score": null,
+      "verified": 4,
+      "blocker": "Need written confirmation of funded consistency (or exact contract)."
+    },
+    {
+      "slug": "tradersedgefx",
+      "id": "tradersedgefx-2-step",
+      "status": "blocked",
+      "score": null,
+      "verified": 4,
+      "blocker": "Need written confirmation of funded consistency (or exact contract)."
+    },
+    {
+      "slug": "tradersedgefx",
+      "id": "tradersedgefx-hft",
+      "status": "blocked",
+      "score": null,
+      "verified": 4,
+      "blocker": "Need written confirmation of funded consistency (or exact contract)."
+    },
+    {
+      "slug": "titan-capital-markets",
+      "id": "titan-1step",
+      "status": "blocked",
+      "score": null,
+      "verified": 3,
+      "blocker": "Funded consistency and complete trading permissions; purchase remains blocked."
+    },
+    {
+      "slug": "titan-capital-markets",
+      "id": "titan-2step",
+      "status": "blocked",
+      "score": null,
+      "verified": 3,
+      "blocker": "Funded consistency and complete trading permissions; purchase remains blocked."
+    },
+    {
+      "slug": "titan-capital-markets",
+      "id": "titan-3step",
+      "status": "blocked",
+      "score": null,
+      "verified": 3,
+      "blocker": "Funded consistency and complete trading permissions; purchase remains blocked."
+    },
+    {
+      "slug": "titan-capital-markets",
+      "id": "titan-instant",
+      "status": "blocked",
+      "score": null,
+      "verified": 4,
+      "blocker": "Direct article inaccessible, exact product mapping and overnight/weekend policy."
+    }
+  ],
+  "counts": {
+    "rated": 6,
+    "blocked": 12,
+    "complete": 169,
+    "partial": 59,
+    "untouched": 19,
+    "variants": 14
+  }
+}

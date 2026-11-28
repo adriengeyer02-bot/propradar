@@ -1868,8 +1868,8 @@ evidence["oneup-trader"] = {
 evidence["rebelsfunding"] = {
   "rebelsfunding-gold-1-phase": {
     "checkedOn": "2026-11-28",
-    "scope": "Current Gold RCF rules; no numerical concentration rule stated, exact separate RCF contract not available.",
-    "scopeFr": "Règles Gold RCF actuelles ; pas de ratio explicite ; contrat RCF séparé non disponible.",
+    "scope": "Gold RCF public rules v3.2 (11 November 2026), public score only; separate RCF contract and subsequent reward cadence unavailable, no guarantee of eligibility. Official comparison explicitly states no consistency rule.",
+    "scopeFr": "Gold RCF, règlement public v3.2 du 11 novembre 2026 ; note des règles publiées, contrat RCF séparé et cadence suivante non accessibles.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -1887,9 +1887,14 @@ evidence["rebelsfunding"] = {
         "reason": "RCF trades must last 60 seconds; new entries banned in five minutes before red news; holding/closing existing positions permitted."
       },
       "funded": {
-        "points": 0.5,
+        "points": 0,
         "source": "https://www.rebelsfunding.com/all-the-rules/",
-        "reason": "1.5% maximum risk per trade or related group, including correlated instruments and unrealized losses; 4% daily loss in RCF."
+        "reason": "Passing evaluation does not automatically grant RCF account; separate approval and contract required. 1.5% risk per related trade idea and 4% daily loss. Ordinary identity checks not penalised."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://www.rebelsfunding.com/best-crypto-prop-firms/",
+        "reason": "Official comparison explicitly lists no consistency rule; Gold RCF rulebook has no minimum number of trades before reward request. Individual trade-risk restrictions assessed separately."
       }
     },
     "preset": {
@@ -1975,8 +1980,8 @@ evidence["sure-leverage"] = {
 evidence["willis-capital"] = {
   "wfunded-skillcheck": {
     "checkedOn": "2026-11-28",
-    "scope": "Generic legacy multi-programme ID; current Standard/Expedited/Direct Funding need separate mapping.",
-    "scopeFr": "Identifiant générique ancien ; Standard/Expedited/Direct Funding à séparer.",
+    "scope": "Generic SkillCheck ID combines Standard and Expedited. Common funded FAQ says balance-based overall calculation analogous to daily recalculation but gives no high-water-mark or reset rule. Marketing now says simulated while FAQ retains live wording. Separate model mapping and exact overall floor required.",
+    "scopeFr": "SkillCheck générique Standard/Expedited ; référence du seuil global et réinitialisation non explicites, discours live/simulé contradictoire.",
     "assessments": {
       "consistency": {
         "points": 0.5,
@@ -1984,9 +1989,19 @@ evidence["willis-capital"] = {
         "reason": "Qualitative consistency of strategy across trades stated, not a confirmed numerical threshold."
       },
       "funded": {
-        "points": 0.5,
+        "points": 0,
         "source": "https://www.wfunded.io/en/terms-and-conditions",
-        "reason": "Allocation discretionary after SkillCheck and separate contract; IP rules apply."
+        "reason": "Company reserves broad termination discretion; FAQ states all prior profits forfeited for missing mandatory stop loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://www.wfunded.io/en/faq",
+        "reason": "First withdrawal monthly, later biweekly, $100 minimum and 70% split in general FAQ."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.wfunded.io/en/faq",
+        "reason": "News and weekend holding allowed with mandatory funded stop loss placed at least 15 minutes before major news; copy trading prohibited."
       }
     }
   }
@@ -1994,8 +2009,8 @@ evidence["willis-capital"] = {
 evidence["superfunded"] = {
   "superfunded-one-phase": {
     "checkedOn": "2026-11-28",
-    "scope": "Prior 17 November audit of V2 dated 22 October 2026; PDF inaccessible on current recheck. Do not assign new full score without rereading.",
-    "scopeFr": "Audit du 17 novembre du règlement V2 du 22 octobre 2026 ; PDF inaccessible au nouveau contrôle.",
+    "scope": "Legacy SuperFunded offer. Archive index (25 November) confirms home, FAQ and old V2 PDF all redirect to Eightcap Challenges Japanese home; actual archived replacement rulebook belongs to Eightcap. No contractual succession or exact programme equivalence verified. Prior figures historical only.",
+    "scopeFr": "Ancienne offre SuperFunded ; archives du 25 novembre : accueil, FAQ et PDF V2 redirigent vers Eightcap Challenges. Correspondance contractuelle non démontrée ; données historiques.",
     "assessments": {
       "payout": {
         "points": 0,
@@ -2011,8 +2026,8 @@ evidence["superfunded"] = {
   },
   "superfunded-two-phase": {
     "checkedOn": "2026-11-28",
-    "scope": "Prior 17 November audit of V2 dated 22 October 2026; PDF inaccessible on current recheck. Do not assign new full score without rereading.",
-    "scopeFr": "Audit du 17 novembre du règlement V2 du 22 octobre 2026 ; PDF inaccessible au nouveau contrôle.",
+    "scope": "Legacy SuperFunded offer. Archive index (25 November) confirms home, FAQ and old V2 PDF all redirect to Eightcap Challenges Japanese home; actual archived replacement rulebook belongs to Eightcap. No contractual succession or exact programme equivalence verified. Prior figures historical only.",
+    "scopeFr": "Ancienne offre SuperFunded ; archives du 25 novembre : accueil, FAQ et PDF V2 redirigent vers Eightcap Challenges. Correspondance contractuelle non démontrée ; données historiques.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -2104,13 +2119,13 @@ evidence["sfx-funded"] = {
   },
   "sfx-instant": {
     "checkedOn": "2026-11-28",
-    "scope": "Generic Standard/Pro/Flex catalogue card conflicts with current generic help article (6% trail, 15% SSI); split into mapped offers before rating.",
-    "scopeFr": "Fiche générique Standard/Pro/Flex contradictoire avec article actuel (6 % trailing, SSI 15 %) ; distinguer offres.",
+    "scope": "Generic Instant card; current checkout distinguishes Standard 5% max loss / 15% consistency, Pro 6% / 20%, Flex 5% / none. Official 17 November comparison: Standard and Pro on demand, Flex biweekly; generic help contradicts these with 6% trail and ten days / 4% profit. No model mapping or shared numerical preset.",
+    "scopeFr": "Instant générique : Standard 5 %/15 %, Pro 6 %/20 %, Flex 5 %/sans consistency ; retraits à la demande ou bimensuels selon offre. FAQ générique contradictoire.",
     "assessments": {
       "payout": {
         "points": 0,
         "source": "https://sfxfunded.com/help/payout-timing-instant",
-        "reason": "Current generic Instant help: ten trading days and 4% profit each cycle."
+        "reason": "Generic help requires 10 days and 4% profit; newer model-specific marketing differs, so do not generalise this gate to all models."
       },
       "trading": {
         "points": 0.5,
@@ -2206,53 +2221,113 @@ evidence["tx3-funding"] = {
 evidence["now-trade-funded"] = {
   "ntf-standard-two-step": {
     "checkedOn": "2026-11-28",
-    "scope": "Prior official FAQ audit, current product pages not mapped and older payout schedule differs.",
-    "scopeFr": "FAQ auditée précédemment ; fiches actuelles non rattachées, ancien calendrier divergent.",
+    "scope": "Standard Two-Step, funded phase, Schedule of Assessment Programs dated 16 November 2026, archived 25 November (terms-archive/now-trade-funded/1473efab9f19.txt). Specific programme table prevails over general consistency wording; public old URL exposes a different older schedule. Current checkout availability not established.",
+    "scopeFr": "Standard Two-Step, phase financée, règlement du 16 novembre 2026 archivé le 25 novembre ; tableau spécifique retenu malgré la formulation générale. Disponibilité à la commande non confirmée.",
     "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://nowtradefunded.com/legal/soa.pdf",
+        "reason": "10% static total loss and 5% start-of-day balance daily loss, explicitly stated in funded column."
+      },
       "payout": {
-        "points": 0.5,
-        "source": "https://nowtradefunded.com/faqs/",
-        "reason": "Prior FAQ: first 30 days funded, later biweekly, minimum $100; older schedule has additional caps."
+        "points": 0,
+        "source": "https://nowtradefunded.com/legal/soa.pdf",
+        "reason": "Ten funded trading days, first request after 30 days with 50% share and cap 2.5% starting balance, subsequent 14-day cycles with 80% share and 5% cap; notes 6, 8, 10."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://nowtradefunded.com/legal/soa.pdf",
+        "reason": "Specific funded table explicitly says No for profit and volume consistency; general notes 3–4 describe rules where applicable, conflicting if read universally. No universal consistency assertion."
       },
       "trading": {
         "points": 0.5,
-        "source": "https://nowtradefunded.com/faqs/",
-        "reason": "Prior FAQ prohibits weekend holding except crypto and grid/copy/HFT."
+        "source": "https://nowtradefunded.com/legal/soa.pdf",
+        "reason": "Funded weekend and high-impact news trading prohibited, EA allowed except enumerated prohibited practices in note 13."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://nowtradefunded.com/terms-and-conditions",
+        "reason": "Terms clauses 10, 12.3 and 18.2: discretionary funded selection, forfeiture of payments on prohibited-use violation, termination without cause. 30-day inactivity; ordinary KYC excluded."
       }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://nowtradefunded.com/legal/soa.pdf"
     }
   },
   "ntf-progressive-one-step": {
     "checkedOn": "2026-11-28",
-    "scope": "Prior official FAQ audit, current product pages not mapped and older payout schedule differs.",
-    "scopeFr": "FAQ auditée précédemment ; fiches actuelles non rattachées, ancien calendrier divergent.",
+    "scope": "Progressive One-Step, funded phase, Schedule of Assessment Programs dated 16 November 2026, archived 25 November (terms-archive/now-trade-funded/1473efab9f19.txt). Specific programme table prevails over general consistency wording; public old URL exposes a different older schedule. Current checkout availability not established.",
+    "scopeFr": "Progressive One-Step, phase financée, règlement du 16 novembre 2026 archivé le 25 novembre ; tableau spécifique retenu malgré la formulation générale. Disponibilité à la commande non confirmée.",
     "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://nowtradefunded.com/legal/soa.pdf",
+        "reason": "6% trailing from highest equity, never moves down; note 14 confirms intraday high watermark. No daily loss."
+      },
       "payout": {
-        "points": 0.5,
-        "source": "https://nowtradefunded.com/faqs/",
-        "reason": "Prior FAQ: first 30 days funded, later biweekly, minimum $100; older schedule has additional caps."
+        "points": 0,
+        "source": "https://nowtradefunded.com/legal/soa.pdf",
+        "reason": "Ten funded trading days, first request after 30 days with 50% share and cap 2.5% starting balance, subsequent 14-day cycles with 80% share and 5% cap; notes 6, 8, 10."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://nowtradefunded.com/legal/soa.pdf",
+        "reason": "Specific funded table explicitly says No for profit and volume consistency; general notes 3–4 describe rules where applicable, conflicting if read universally. No universal consistency assertion."
       },
       "trading": {
         "points": 0.5,
-        "source": "https://nowtradefunded.com/faqs/",
-        "reason": "Prior FAQ prohibits weekend holding except crypto and grid/copy/HFT."
+        "source": "https://nowtradefunded.com/legal/soa.pdf",
+        "reason": "Funded weekend and high-impact news trading prohibited, EA allowed except enumerated prohibited practices in note 13."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://nowtradefunded.com/terms-and-conditions",
+        "reason": "Terms clauses 10, 12.3 and 18.2: discretionary funded selection, forfeiture of payments on prohibited-use violation, termination without cause. 30-day inactivity; ordinary KYC excluded."
       }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "source": "https://nowtradefunded.com/legal/soa.pdf"
     }
   },
   "ntf-1k-starter": {
     "checkedOn": "2026-11-28",
-    "scope": "Prior official FAQ audit, current product pages not mapped and older payout schedule differs.",
-    "scopeFr": "FAQ auditée précédemment ; fiches actuelles non rattachées, ancien calendrier divergent.",
+    "scope": "1K Starter Three-Step, funded phase, Schedule of Assessment Programs dated 16 November 2026, archived 25 November (terms-archive/now-trade-funded/1473efab9f19.txt). Specific programme table prevails over general consistency wording; public old URL exposes a different older schedule. Current checkout availability not established.",
+    "scopeFr": "1K Starter Three-Step, phase financée, règlement du 16 novembre 2026 archivé le 25 novembre ; tableau spécifique retenu malgré la formulation générale. Disponibilité à la commande non confirmée.",
     "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://nowtradefunded.com/legal/soa.pdf",
+        "reason": "10% static total loss and 5% start-of-day balance daily loss, explicitly stated in funded column."
+      },
       "payout": {
-        "points": 0.5,
-        "source": "https://nowtradefunded.com/faqs/",
-        "reason": "Prior FAQ: first 30 days funded, later biweekly, minimum $100; older schedule has additional caps."
+        "points": 0,
+        "source": "https://nowtradefunded.com/legal/soa.pdf",
+        "reason": "Ten funded trading days, first request after 30 days with 50% share and cap 2.5% starting balance, subsequent 14-day cycles with 80% share and 5% cap; notes 6, 8, 10."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://nowtradefunded.com/legal/soa.pdf",
+        "reason": "Specific funded table explicitly says No for profit and volume consistency; general notes 3–4 describe rules where applicable, conflicting if read universally. No universal consistency assertion."
       },
       "trading": {
         "points": 0.5,
-        "source": "https://nowtradefunded.com/faqs/",
-        "reason": "Prior FAQ prohibits weekend holding except crypto and grid/copy/HFT."
+        "source": "https://nowtradefunded.com/legal/soa.pdf",
+        "reason": "Funded weekend and high-impact news trading prohibited, EA allowed except enumerated prohibited practices in note 13."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://nowtradefunded.com/terms-and-conditions",
+        "reason": "Terms clauses 10, 12.3 and 18.2: discretionary funded selection, forfeiture of payments on prohibited-use violation, termination without cause. 30-day inactivity; ordinary KYC excluded."
       }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://nowtradefunded.com/legal/soa.pdf"
     }
   }
 };
@@ -2291,8 +2366,8 @@ evidence["directfundedtrader"] = {
   },
   "directfundedtrader-turbo": {
     "checkedOn": "2026-11-28",
-    "scope": "Turbo pay-after-pass funded route; public checkout shows 8% maximum loss and 3% daily, but general FAQ uses 10% example and does not specify Turbo's funded floor formula. Partial pending model-specific confirmation.",
-    "scopeFr": "Turbo, paiement après réussite ; 8 % de perte globale et 3 % journalière à la commande ; formule exacte financée à confirmer.",
+    "scope": "Turbo pay-after-pass funded route; public checkout shows 8% maximum loss and 3% daily, but general FAQ uses 10% example and does not specify Turbo's funded floor formula. Partial pending model-specific confirmation. General FAQ expressly describes Evaluation and Fast Funding, not Turbo; contract archive does not establish Turbo-specific funded floor.",
+    "scopeFr": "Turbo, paiement après réussite ; 8 % de perte globale et 3 % journalière à la commande ; formule exacte financée à confirmer. FAQ générale limitée à Evaluation/Fast Funding ; contrat Turbo non identifié.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -2352,8 +2427,8 @@ evidence["directfundedtrader"] = {
 evidence["tradersedgefx"] = {
   "tradersedgefx-2-step": {
     "checkedOn": "2026-11-28",
-    "scope": "2-Step funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed.",
-    "scopeFr": "FAQ financée 2-Step et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue.",
+    "scope": "2-Step funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed. Rechecked model FAQ, Overall Rules and archived Common Terms (25 Nov); no explicit confirmation of numerical consistency absence. No imputed point.",
+    "scopeFr": "FAQ financée 2-Step et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue. FAQ par modèle et règles communes revérifiées ; absence de ratio non démontrée.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -2379,8 +2454,8 @@ evidence["tradersedgefx"] = {
   },
   "tradersedgefx-1-step": {
     "checkedOn": "2026-11-28",
-    "scope": "1-Step funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed.",
-    "scopeFr": "FAQ financée 1-Step et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue.",
+    "scope": "1-Step funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed. Rechecked model FAQ, Overall Rules and archived Common Terms (25 Nov); no explicit confirmation of numerical consistency absence. No imputed point.",
+    "scopeFr": "FAQ financée 1-Step et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue. FAQ par modèle et règles communes revérifiées ; absence de ratio non démontrée.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -2406,8 +2481,8 @@ evidence["tradersedgefx"] = {
   },
   "tradersedgefx-hft": {
     "checkedOn": "2026-11-28",
-    "scope": "HFT funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed.",
-    "scopeFr": "FAQ financée HFT et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue.",
+    "scope": "HFT funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed. Rechecked model FAQ, Overall Rules and archived Common Terms (25 Nov); no explicit confirmation of numerical consistency absence. No imputed point.",
+    "scopeFr": "FAQ financée HFT et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue. FAQ par modèle et règles communes revérifiées ; absence de ratio non démontrée.",
     "assessments": {
       "payout": {
         "points": 0,
@@ -2475,49 +2550,94 @@ evidence["monevis"] = {
 evidence["titan-capital-markets"] = {
   "titan-instant": {
     "checkedOn": "2026-11-28",
-    "scope": "Purchase links paused in existing audit; exact programme rules inaccessible or not fully verified on current check. Not a current commercial rating.",
-    "scopeFr": "Liens d'achat suspendus dans audit existant ; règlement exact inaccessible ou non vérifié au contrôle. Pas de note commerciale.",
+    "scope": "Cached official Instant Pro rules available in search index, direct fetch returns 503; archive shows support suspended. Existing generic Instant ID not confirmed to match currently purchasable Pro product. Checkout blocked; no current commercial rating.",
+    "scopeFr": "Instant Pro indexé, accès direct 503 ; rattachement exact de la fiche générique et vente actuelle non établis.",
     "assessments": {
       "payout": {
-        "points": 0.5,
-        "source": "https://support.tgmarkets.com/articles/performance-fee-policy/",
-        "reason": "Published performance fee policy lists 70% starting share; exact eligibility per plan needs confirmation."
+        "points": 0,
+        "source": "https://support.tgmarkets.com/articles/instant-pro-rules/",
+        "reason": "Cached article: four profitable days, 2% minimum withdrawal; general policy biweekly assigned day only, 70% starting share."
+      },
+      "drawdown": {
+        "points": 0,
+        "source": "https://support.tgmarkets.com/articles/instant-pro-rules/",
+        "reason": "Cached Instant Pro article states 6% trailing HWM maximum loss, 3% daily trailing."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://support.tgmarkets.com/articles/instant-pro-rules/",
+        "reason": "Cached article states 20% best-day maximum."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://support.tgmarkets.com/articles/instant-pro-rules/",
+        "reason": "Cached article: 2% floating loss hard breach, maximum 3 positions per instrument, 2% exposure, mandatory stop loss within 60 seconds."
       }
     }
   },
   "titan-1step": {
     "checkedOn": "2026-11-28",
-    "scope": "Purchase links paused in existing audit; exact programme rules inaccessible or not fully verified on current check. Not a current commercial rating.",
-    "scopeFr": "Liens d'achat suspendus dans audit existant ; règlement exact inaccessible ou non vérifié au contrôle. Pas de note commerciale.",
+    "scope": "Published 1-Step rule article and fee policy retrieved 28 Nov; several support URLs return 503, archive also shows suspended service. Checkout blocked. Funded concentration and trading freedoms not explicitly verified.",
+    "scopeFr": "Règlement 1-Step retrouvé ; certaines pages du support renvoient 503, achat bloqué. Consistency et libertés financées à confirmer.",
     "assessments": {
       "payout": {
         "points": 0.5,
         "source": "https://support.tgmarkets.com/articles/performance-fee-policy/",
-        "reason": "Published performance fee policy lists 90% starting share; exact eligibility per plan needs confirmation."
+        "reason": "Biweekly on assigned request day only, no soft breaches; funded minimum 5 trading days in model article, starting split 90%."
+      },
+      "drawdown": {
+        "points": 0,
+        "source": "https://support.tgmarkets.com/articles/1-step-evaluation-rules/",
+        "reason": "6% trailing from highest equity or balance over entire history."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://support.tgmarkets.com/articles/1-step-evaluation-rules/",
+        "reason": "Excessive margin subject to Risk Team assessment and hard breach on evaluation and simulated funded accounts; for 1/2-Step stop loss mandatory within 60 seconds."
       }
     }
   },
   "titan-2step": {
     "checkedOn": "2026-11-28",
-    "scope": "Purchase links paused in existing audit; exact programme rules inaccessible or not fully verified on current check. Not a current commercial rating.",
-    "scopeFr": "Liens d'achat suspendus dans audit existant ; règlement exact inaccessible ou non vérifié au contrôle. Pas de note commerciale.",
+    "scope": "Published 2-Step rule article and fee policy retrieved 28 Nov; several support URLs return 503, archive also shows suspended service. Checkout blocked. Funded concentration and trading freedoms not explicitly verified.",
+    "scopeFr": "Règlement 2-Step retrouvé ; certaines pages du support renvoient 503, achat bloqué. Consistency et libertés financées à confirmer.",
     "assessments": {
       "payout": {
         "points": 0.5,
         "source": "https://support.tgmarkets.com/articles/performance-fee-policy/",
-        "reason": "Published performance fee policy lists 90% starting share; exact eligibility per plan needs confirmation."
+        "reason": "Biweekly on assigned request day only, no soft breaches; funded minimum 3 trading days in model article, starting split 90%."
+      },
+      "drawdown": {
+        "points": 1,
+        "source": "https://support.tgmarkets.com/articles/2-step-evaluation-rules/",
+        "reason": "10% maximum loss from initial balance; 4% daily loss."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://support.tgmarkets.com/articles/2-step-evaluation-rules/",
+        "reason": "Excessive margin subject to Risk Team assessment and hard breach on evaluation and simulated funded accounts; for 1/2-Step stop loss mandatory within 60 seconds."
       }
     }
   },
   "titan-3step": {
     "checkedOn": "2026-11-28",
-    "scope": "Purchase links paused in existing audit; exact programme rules inaccessible or not fully verified on current check. Not a current commercial rating.",
-    "scopeFr": "Liens d'achat suspendus dans audit existant ; règlement exact inaccessible ou non vérifié au contrôle. Pas de note commerciale.",
+    "scope": "Published 3-Step rule article and fee policy retrieved 28 Nov; several support URLs return 503, archive also shows suspended service. Checkout blocked. Funded concentration and trading freedoms not explicitly verified.",
+    "scopeFr": "Règlement 3-Step retrouvé ; certaines pages du support renvoient 503, achat bloqué. Consistency et libertés financées à confirmer.",
     "assessments": {
       "payout": {
         "points": 0.5,
         "source": "https://support.tgmarkets.com/articles/performance-fee-policy/",
-        "reason": "Published performance fee policy lists 95% starting share; exact eligibility per plan needs confirmation."
+        "reason": "Biweekly on assigned request day only, no soft breaches; funded minimum 3 trading days in model article, starting split 95%."
+      },
+      "drawdown": {
+        "points": 1,
+        "source": "https://support.tgmarkets.com/articles/3-step-evaluation-rules/",
+        "reason": "10% maximum loss from initial balance; 4% daily loss."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://support.tgmarkets.com/articles/3-step-evaluation-rules/",
+        "reason": "Excessive margin subject to Risk Team assessment and hard breach on evaluation and simulated funded accounts; for 1/2-Step stop loss mandatory within 60 seconds."
       }
     }
   }
@@ -2525,8 +2645,8 @@ evidence["titan-capital-markets"] = {
 evidence["exfunded"] = {
   "exfunded-1step": {
     "checkedOn": "2026-11-28",
-    "scope": "Current branded FAQ on alternate domain; funded loss mechanics and applicable payout cadence unresolved; checkout remains blocked.",
-    "scopeFr": "FAQ actuelle sur domaine alternatif ; mécanisme de perte et calendrier financé non résolus ; achat bloqué.",
+    "scope": "1-Step published CFD rules on alternate branded domain, USD accounts. Existing purchase block unchanged; not confirmation of current sale or payout reliability. Product page 14-calendar-day cadence vs FAQ 10 traded days; size-dependent caps, no fixed split or loss amount preset.",
+    "scopeFr": "1-Step CFD, règles publiées sur domaine alternatif, comptes USD ; achat toujours bloqué. 14 jours calendaires contre 10 jours tradés selon FAQ ; plafonds selon taille.",
     "assessments": {
       "consistency": {
         "points": 0,
@@ -2536,19 +2656,29 @@ evidence["exfunded"] = {
       "trading": {
         "points": 0.5,
         "source": "https://exfunded.sandai-investment.com/faq/",
-        "reason": "Trades must last five minutes to be eligible for withdrawal."
+        "reason": "News and weekend holding permitted, but five-minute minimum holding and funded five-minute spacing between new positions, no EAs."
       },
       "funded": {
         "points": 0,
         "source": "https://exfunded.sandai-investment.com/faq/",
-        "reason": "First funded daily lot-volume violation returns account to phase 1 and forfeits all profits; second breaches account."
+        "reason": "First funded daily lot-volume violation returns account to phase 1 and forfeits profits; second terminates. Account review and discretionary profit removal also stated."
+      },
+      "drawdown": {
+        "points": 1,
+        "source": "https://exfunded.sandai-investment.com/faq/",
+        "reason": "FAQ breach calculation explicitly refers to active equity below initial balance, rather than a rising peak. Programme pages give evaluation amounts; funded percentage not assumed."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://exfunded.sandai-investment.com/exfunded-step-1-challenge/",
+        "reason": "Product page 14 calendar days; FAQ requires 10 traded days, qualifying profitable days, $50/$100 minimum and caps through $25K; $50K+ uncapped. Initial 70% share scales with withdrawals."
       }
     }
   },
   "exfunded-2step": {
     "checkedOn": "2026-11-28",
-    "scope": "Current branded FAQ on alternate domain; funded loss mechanics and applicable payout cadence unresolved; checkout remains blocked.",
-    "scopeFr": "FAQ actuelle sur domaine alternatif ; mécanisme de perte et calendrier financé non résolus ; achat bloqué.",
+    "scope": "2-Step published CFD rules on alternate branded domain, USD accounts. Existing purchase block unchanged; not confirmation of current sale or payout reliability. Product page 14-calendar-day cadence vs FAQ 10 traded days; size-dependent caps, no fixed split or loss amount preset.",
+    "scopeFr": "2-Step CFD, règles publiées sur domaine alternatif, comptes USD ; achat toujours bloqué. 14 jours calendaires contre 10 jours tradés selon FAQ ; plafonds selon taille.",
     "assessments": {
       "consistency": {
         "points": 0,
@@ -2558,12 +2688,22 @@ evidence["exfunded"] = {
       "trading": {
         "points": 0.5,
         "source": "https://exfunded.sandai-investment.com/faq/",
-        "reason": "Trades must last five minutes to be eligible for withdrawal."
+        "reason": "News and weekend holding permitted, but five-minute minimum holding and funded five-minute spacing between new positions, no EAs."
       },
       "funded": {
         "points": 0,
         "source": "https://exfunded.sandai-investment.com/faq/",
-        "reason": "First funded daily lot-volume violation returns account to phase 1 and forfeits all profits; second breaches account."
+        "reason": "First funded daily lot-volume violation returns account to phase 1 and forfeits profits; second terminates. Account review and discretionary profit removal also stated."
+      },
+      "drawdown": {
+        "points": 1,
+        "source": "https://exfunded.sandai-investment.com/faq/",
+        "reason": "FAQ breach calculation explicitly refers to active equity below initial balance, rather than a rising peak. Programme pages give evaluation amounts; funded percentage not assumed."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://exfunded.sandai-investment.com/exfunded-2-step-challenge/",
+        "reason": "Product page 14 calendar days; FAQ requires 10 traded days, qualifying profitable days, $50/$100 minimum and caps through $25K; $50K+ uncapped. Initial 70% share scales with withdrawals."
       }
     }
   }

@@ -432,3 +432,42 @@ Five firms, 15 complete catalogue entries and variants; exact IDs verified again
 - DFT Evaluation and Fast Funding Standard: **2.5/5 each** (1/.5/1/0/0). General FAQ gives a fixed initial-balance loss calculation with a 90K worked floor on 100K despite an erroneous 100% statement. Evaluation checkout confirms 10%. Fast Funding checkout 10% conflicts with older 7% description; both use the general initial-balance method, no numerical preset. Monthly 100%, biweekly 80%, weekly 70% checkout options versus general first-four-weeks schedule; no single split preset. Stop-loss within 30 seconds, three trades on distinct days weekly, mandatory closure before high-impact news. Turbo remains partial: 8% overall and 3% daily shown, no model-specific formula. Sources: https://directfundedtrader.com/faq-rules ; https://directfundedtrader.com/ ; https://directfundedtrader.com/turbo.
 - TradersEdgeFX 1-Step, 2-Step and HFT: now 4/5 evidence axes; no full stars until numerical consistency presence/absence verified. Funded-specific FAQs give 12%/12%/10% of initial balance, 15/15/30-day payout cycle, 5/5/10 days, 70%/70%/50% share. General 6% payout cap lifted only after discretionary trade-copy approval. Terms conflict with specific FAQs on news; restrictive funded rules displayed. General rules prohibit HFT bots despite HFT branding; short trades trigger profit removal, repeated violation closes account. Sources: https://tradersedgefx.com/1-step-simulated-tefx-faqs/ ; https://tradersedgefx.com/2-Step-Simulated-TEFX-FAQs/ ; https://tradersedgefx.com/HFT-Simulated-TEFX-FAQs/ ; https://tradersedgefx.com/Overall-Rules-and-Conditions/ ; https://tradersedgefx.com/trading-guidelines/ ; https://tradersedgefx.com/terms-of-services/.
 - Now Trade FAQ returned no readable content today; retain partial historical evidence, not fresh confirmation. Rebels Gold still lacks separate RCF contract. Inventory: 163 complete, 65 partial, 19 untouched; 14 complete variants. No price/company rating/production changes. Tests updated, not executed.
+
+
+# ChatGPT final 18-programme disposition — 2026-11-28
+
+All 18 assigned unresolved catalogue IDs revisited. A blocked outcome is not a full rating and is not counted as such. No changes to company ratings, pricing, availability flags, other Claude lots or production.
+
+| Firm | ID | Outcome | Verified axes | Score | Residual limitation |
+|---|---|---|---:|---:|---|
+| now-trade-funded | ntf-standard-two-step | rated | 5/5 | 2.5 | None beyond documented scope |
+| now-trade-funded | ntf-progressive-one-step | rated | 5/5 | 1.5 | None beyond documented scope |
+| now-trade-funded | ntf-1k-starter | rated | 5/5 | 2.5 | None beyond documented scope |
+| exfunded | exfunded-1step | rated | 5/5 | 2 | Checkout remains blocked; documentary score only. |
+| exfunded | exfunded-2step | rated | 5/5 | 2 | Checkout remains blocked; documentary score only. |
+| rebelsfunding | rebelsfunding-gold-1-phase | rated | 5/5 | 3 | Separate RCF contract unavailable; scope explicitly public rules. |
+| willis-capital | wfunded-skillcheck | blocked | 4/5 | — | Exact funded overall-loss mechanism and programme mapping. |
+| superfunded | superfunded-one-phase | blocked | 2/5 | — | Legacy brand redirect; exact SuperFunded contract not recovered. |
+| superfunded | superfunded-two-phase | blocked | 3/5 | — | Legacy brand redirect; exact SuperFunded contract not recovered. |
+| sfx-funded | sfx-instant | blocked | 3/5 | — | Split Standard/Pro/Flex catalogue and obtain matching funded terms. |
+| directfundedtrader | directfundedtrader-turbo | blocked | 4/5 | — | Funded drawdown reference not established for Turbo. |
+| tradersedgefx | tradersedgefx-1-step | blocked | 4/5 | — | Need written confirmation of funded consistency (or exact contract). |
+| tradersedgefx | tradersedgefx-2-step | blocked | 4/5 | — | Need written confirmation of funded consistency (or exact contract). |
+| tradersedgefx | tradersedgefx-hft | blocked | 4/5 | — | Need written confirmation of funded consistency (or exact contract). |
+| titan-capital-markets | titan-1step | blocked | 3/5 | — | Funded consistency and complete trading permissions; purchase remains blocked. |
+| titan-capital-markets | titan-2step | blocked | 3/5 | — | Funded consistency and complete trading permissions; purchase remains blocked. |
+| titan-capital-markets | titan-3step | blocked | 3/5 | — | Funded consistency and complete trading permissions; purchase remains blocked. |
+| titan-capital-markets | titan-instant | blocked | 4/5 | — | Direct article inaccessible, exact product mapping and overnight/weekend policy. |
+
+Sources and provenance:
+- Now Trade: archive `agent/terms-archive:terms-archive/now-trade-funded/1473efab9f19.txt` (SOA explicitly dated 16 Nov 2026, pages 1, 2, 4, 5–6; archived 25 Nov), `9836ec3f0ff3.txt` (current terms clauses 10, 12.3, 18.2), archive index. Older public PDF under 2024 path differs; archive final URL is `/legal/soa.pdf`, direct recheck inaccessible. Specific model tables used over general notes 3–4; no fresh availability claim. 1K checkout marketing says free vs schedule $2; no price change.
+- ExFunded: https://exfunded.sandai-investment.com/faq/ and both model pages. Fixed initial-balance reference verified; funded loss percentage not assumed. Existing blocked checkout preserved. Payout cadence conflicts explicitly recorded; no numerical simulator preset.
+- RebelsFunding: https://www.rebelsfunding.com/all-the-rules/ (Gold §§8–10), https://www.rebelsfunding.com/best-crypto-prop-firms/ explicitly no consistency. Separate RCF agreement missing; public rating only.
+- SuperFunded: archive index shows redirect to Eightcap Challenges for old V2 rules, not recovered SuperFunded PDF. Never substitute Eightcap clauses for SuperFunded.
+- WFunded: https://www.wfunded.io/en/faq and /en/terms-and-conditions; general balance-based formula insufficient to fix exact overall high-water-mark behaviour.
+- SFX: https://sfxfunded.com/instant-funding ; https://sfxfunded.com/blog/sfx-funded-vs-alpha-capital-group (17 Nov); generic FAQ conflicts. No catalogue split in this audit-only branch.
+- DFT: https://directfundedtrader.com/faq-rules and /turbo; exact funded drawdown reference unresolved.
+- TradersEdgeFX: funded-specific 1-Step, 2-Step and HFT FAQs and Overall Rules, plus archived Common Terms. No explicit consistency answer. No inferred absence.
+- Titan: cached Instant Pro article plus 1/2/3-Step model articles and Performance Fee Policy; several direct requests 503 and archive confirms suspended support on 25 Nov. No current purchase assertion.
+
+Inventory: 169 complete, 59 partial/blocked, 19 untouched (Claude), total 247. 14 completed variants unchanged. Assigned lot exhausted as a review; blocked items require external evidence or catalogue remapping. Static validation checks exact 18 IDs, five axes and test expectations. Full TS/runtime/build/visual checks not executed.
