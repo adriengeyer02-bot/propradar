@@ -160,3 +160,33 @@ UX handoff: separate branch from latest main; improve challenge discovery and co
 - FXIFY: One/Two Standard/Three have explicitly no consistency; Classic funded 25% historical best day does not reset at withdrawal, so no standard net-cycle preset. Add monthly 100% route. Ordinary payout cycle differences and trailing floor risk captured. Existing Instant Lite also has non-reset historical best day; do not model it as per-cycle net.
 - Hola Prime: archived evidence dossier dated 26 Nov read; no setProducts mapping in current firm-updates blob. Do not invent product IDs, and do not assign complete ratings until exact schedules/IDs and funded-stage details matched. Catalogue coordination required.
 - Cumulative 95 complete catalogue evaluations per prior audit count, duplicates included; four completed entries previously had no score. Full runtime/build/visual validation pending; single atomic commit.
+
+## Maven, Lux, FundedNext audit and parallel-work handoff — 2026-11-28
+
+| Firm | ID | /5 |
+|---|---|---:|
+| maven-trading | maven-standard-one-step | 2.5 |
+| maven-trading | maven-standard-two-step | 3.5 |
+| maven-trading | maven-standard-three-step | 3.5 |
+| maven-trading | maven-static-one-step | 3 |
+| maven-trading | maven-instant | 0.5 |
+| lux-trading-firm | lux-1-step-evaluation | Partial |
+| fundednext | fundednext-stellar-instant-current | 2 |
+
+- Maven: Standard 1/2/3 no consistency; all models $10K rolling 30-day cap. Static M2 permanently reduces split to 50% on first 2% trigger and closes on second. Static news wording conflicts, both versions restrict profits. Instant timing conflicts between public FAQ and help centre (10 business days vs on demand); score reflects undisputed 3% growth gate and cap, no false certainty about timing. The equity-percentage trailing formula does not fit the existing fixed-dollar simulator; no unsupported drawdown preset. OMO, BNPL, Mini and Predictions require new catalogue mapping. Sources: https://maventrading.com/faqs, https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/, https://maventrading.crisp.help/en/article/payout-requirements-for-funded-trading-accounts-14yu6of/, https://maventrading.crisp.help/en/article/instant-funded-account-rules-1k2ozdo/, https://maventrading.com/static-1-step.
+- Lux: one unresolved criterion (payout) blocks stars; do not treat alternative public rulebook as current without proof. Sources: https://luxtradingfirm.com/rules-of-engagement-3/, https://luxtradingfirm.com/trading-rules/, https://luxtradingfirm.com/t_c-2/.
+- Stellar Instant: 5% growth gate, EOD check, non-resetting floor, 3% aggregate risk, no best-day ratio. Quick Strike warning 20%, 30% after warning leads to forfeiture and possible closure at cycle end. Existing Stellar ratings should be reviewed consistently for Quick Strike treatment; no silent change in this batch.
+
+### FundedNext Futures — candidates only; catalogue mapping required
+
+No separate FundedNext Futures setProducts in checked firm-updates blob and no futures price rows for this firm. Do not invent IDs or count these as integrated ratings. Proposed axes D/P/C/T/F (current simulated funded baseline, no add-ons) must be reviewed with live-transition policy before integration. Shared restrictions: news and bots permitted; daily closure, micro-scalping policy and prohibited strategies apply. Sources: https://helpfutures.fundednext.com/en/articles/17225754-what-are-the-trading-hours-in-fundednext-futures and https://helpfutures.fundednext.com/en/articles/14298337-what-are-the-prohibited-trading-strategies-of-fundednext-futures ; live transition https://helpfutures.fundednext.com/en/articles/16522296-road-to-live-trading-rapid-flex-direct.
+
+| Model | D/P/C/T/F | Candidate stars | Evidence |
+|---|---|---:|---|
+| Legacy | 0.5/0.5/1/0.5/0.5 | 3 | EOD trailing; 5 benchmark days, $500 profit, $250 minimum; 50% and caps lifted after 30 benchmark days, full withdrawal still hard breach; 80% split; no funded consistency. [Rules](https://helpfutures.fundednext.com/en/articles/17229581-fundednext-futures-legacy-fundednext-account-all-rules) |
+| Flex | 0.5/0.5/1/0.5/0 | 2.5 | EOD trail; 5 benchmark days, $500 profit, capped 50% withdrawal and 95% split; no funded consistency; closes after five rewards. [Rules](https://helpfutures.fundednext.com/en/articles/17229848-fundednext-futures-flex-fundednext-account-all-rules) |
+| Rapid Pro | 0.5/0.5/0.5/0.5/0 | 2 | EOD trail, no default DLL, three-day payouts with $500 cycle profit and $250 minimum; 40% funded consistency; 90% split, caps by tier and cycle; closes after five rewards. [Rules](https://helpfutures.fundednext.com/en/articles/18568699-fundednext-futures-rapid-pro) |
+| Rapid Daily | 0.5/0.5/1/0.5/0 | 2.5 | EOD trailing, daily withdrawal above drawdown+$100 buffer and $500 cycle profit, $250 minimum; no funded consistency; 90% split; closes after five rewards. [Rules](https://helpfutures.fundednext.com/en/articles/18568768-fundednext-futures-rapid-daily) |
+| Direct 50K | 0.5/0/0/0.5/0 | 1 | EOD trailing with $2,100 buffer, 20% all-time best day versus current cycle profit, $800–$1,200 withdrawals at 90%; closes after five rewards; 100K/150K table conflicts with one-size text, scope 50K only. [Rules](https://helpfutures.fundednext.com/en/articles/17430065-fundednext-futures-direct-account-all-rules) |
+
+Claude handoff: The5ers, Funded Trading Plus, Hola Prime, Evolve Markets; separate JSON audit file only. Do not touch those ratings in this batch. Cumulative 101 complete integrated catalogue evaluations per prior count, includes duplicated listings; five Futures candidates excluded. Tests added, full runtime/build/visual validation pending; single commit.

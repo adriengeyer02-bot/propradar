@@ -1116,6 +1116,222 @@ evidence["funded-futures-network"] = {
     }
   }
 };
+evidence["maven-trading"] = {
+  "maven-standard-one-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Standard Forex simulated funded, no paid add-ons; trailing formula for 1-Step not fixed-dollar.",
+    "scopeFr": "Forex Standard financé simulé actuel, sans option payante ; seuil suiveur du 1-Step proportionnel au pic d'équité.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/",
+        "reason": "5% of peak real-time equity, never locks before payout; resets after payout."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://maventrading.crisp.help/en/article/payout-requirements-for-funded-trading-accounts-14yu6of/",
+        "reason": "Ten business days from first trade per cycle, $20 minimum, $10K rolling 30-day cap per trader. 80% default split."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://maventrading.crisp.help/en/article/what-is-the-consistency-rule-and-how-does-it-work-6n4p3r/",
+        "reason": "No percentage consistency rule during challenge or funded stage."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://maventrading.com/faqs",
+        "reason": "At least half trades held 60 seconds; restricted red-folder news window includes pending orders and SL/TP."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://maventrading.com/faqs",
+        "reason": "One trade per 30 days required to maintain account; general risk and trading restrictions."
+      }
+    },
+    "preset": {
+      "profitSplit": 80,
+      "source": "https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/"
+    }
+  },
+  "maven-standard-two-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Standard Forex simulated funded, no paid add-ons; trailing formula for 1-Step not fixed-dollar.",
+    "scopeFr": "Forex Standard financé simulé actuel, sans option payante ; seuil suiveur du 1-Step proportionnel au pic d'équité.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/",
+        "reason": "8% fixed below initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://maventrading.crisp.help/en/article/payout-requirements-for-funded-trading-accounts-14yu6of/",
+        "reason": "Ten business days from first trade per cycle, $20 minimum, $10K rolling 30-day cap per trader; three fresh profitable days at 0.5% each. 80% default split."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://maventrading.crisp.help/en/article/what-is-the-consistency-rule-and-how-does-it-work-6n4p3r/",
+        "reason": "No percentage consistency rule during challenge or funded stage."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://maventrading.com/faqs",
+        "reason": "At least half trades held 60 seconds; restricted red-folder news window includes pending orders and SL/TP."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://maventrading.com/faqs",
+        "reason": "One trade per 30 days required to maintain account; general risk and trading restrictions."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "profitSplit": 80,
+      "source": "https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/"
+    }
+  },
+  "maven-standard-three-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Standard Forex simulated funded, no paid add-ons; trailing formula for 1-Step not fixed-dollar.",
+    "scopeFr": "Forex Standard financé simulé actuel, sans option payante ; seuil suiveur du 1-Step proportionnel au pic d'équité.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/",
+        "reason": "3% fixed below initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://maventrading.crisp.help/en/article/payout-requirements-for-funded-trading-accounts-14yu6of/",
+        "reason": "Ten business days from first trade per cycle, $20 minimum, $10K rolling 30-day cap per trader. 80% default split."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://maventrading.crisp.help/en/article/what-is-the-consistency-rule-and-how-does-it-work-6n4p3r/",
+        "reason": "No percentage consistency rule during challenge or funded stage."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://maventrading.com/faqs",
+        "reason": "At least half trades held 60 seconds; restricted red-folder news window includes pending orders and SL/TP."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://maventrading.com/faqs",
+        "reason": "One trade per 30 days required to maintain account; general risk and trading restrictions."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 3,
+      "profitSplit": 80,
+      "source": "https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/"
+    }
+  },
+  "maven-static-one-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Static 1-Step, M2 Account Saver applies; no paid add-ons.",
+    "scopeFr": "Static 1-Step actuel, dispositif M2 Account Saver ; sans option payante.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://maventrading.com/static-1-step",
+        "reason": "5% fixed below starting balance; same evaluation and funded."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://maventrading.crisp.help/en/article/payout-requirements-for-funded-trading-accounts-14yu6of/",
+        "reason": "Ten business days and four fresh 0.5%-profit days; first two withdrawals capped at 6% and 8%; $10K aggregate rolling 30-day cap."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://maventrading.com/faqs",
+        "reason": "No percentage consistency score in funded phase."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://maventrading.com/faqs",
+        "reason": "News-window restriction includes automatic orders in FAQ; another payout article instead describes 0.5% event profit cap. Both materially restrict news profits; confirm exact rule before purchase."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://maventrading.com/faqs",
+        "reason": "M2 2% trigger closes positions, permanently reduces reward share to 50% on first breach, deactivates account on second."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 5,
+      "source": "https://maventrading.com/static-1-step"
+    }
+  },
+  "maven-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Instant Forex; official FAQ conflicts with help-centre timing (10 business days versus on-demand); conservative gate score.",
+    "scopeFr": "Forex Instant actuel ; divergence FAQ et centre d'aide sur délai de retrait (10 jours ouvrés ou à la demande).",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/",
+        "reason": "3% of highest equity including floating gains; dynamic high-water drawdown."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://maventrading.com/faqs",
+        "reason": "At least 3% profit before payout; $10K rolling cap; website FAQ says 10 business days, help centre says immediate once conditions met. Both require the growth threshold."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://maventrading.crisp.help/en/article/instant-funded-account-rules-1k2ozdo/",
+        "reason": "20% best day over total profit required at payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://maventrading.crisp.help/en/article/instant-funded-account-rules-1k2ozdo/",
+        "reason": "News and overnight/weekend trading allowed; at least half trades held 60 seconds, EAs prohibited."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/",
+        "reason": "1% total floating loss hard breach, separate from 2% daily and 3% trailing maximum."
+      }
+    },
+    "preset": {
+      "profitSplit": 80,
+      "source": "https://maventrading.crisp.help/en/article/instant-funded-account-rules-1k2ozdo/"
+    }
+  }
+};
+evidence["lux-trading-firm"] = {
+  "lux-1-step-evaluation": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial; current Rules of Engagement 80% instant-withdrawal career stages versus another public 75% monthly rule set; checkout applicability not established.",
+    "scopeFr": "Partiel : règlement actuel 80 % et retraits à la demande, autre règlement public à 75 % mensuel ; contrat applicable à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://luxtradingfirm.com/rules-of-engagement-3/",
+        "reason": "6% static loss from initial capital in current 1-Step career stage tables."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://luxtradingfirm.com/rules-of-engagement-3/",
+        "reason": "Uniform chosen risk percentage of remaining risk capital must be applied across trades; combined concurrent exposure restricted."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://luxtradingfirm.com/rules-of-engagement-3/",
+        "reason": "Stop loss required before entering; stop-loss adjustment restricted near news, news bracketing forbidden."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://luxtradingfirm.com/t_c-2/",
+        "reason": "Personalized risk-manager requirements and expulsion clause; existing public rules allow account removal for serious or repeated risk-management failures."
+      }
+    }
+  }
+};
 // Reviewed six additional firms, 2026-11-28.
 evidence["audacity-capital"] = {
   "audacity-ability-challenge": {
@@ -3321,6 +3537,40 @@ Object.assign(evidence.fxify,{
   }
 });
 addVariant('fxify','fxi-two-classic','monthly-100','Monthly 100%','Mensuel 100%','Classic 30-day cycle, 100% share.','Classic cycle de 30 jours, partage 100 %.',{payout:{points:.5,source:"https://fxify.com/blog/top-prop-firms-with-two-phase-challenges/",reason:'30-day payout cycle; 100% share.'}},{drawdown:'static',lossPercent:10,profitSplit:100,source:"https://fxify.com/blog/top-prop-firms-with-two-phase-challenges/"});
+Object.assign(evidence.fundednext,{
+  "fundednext-stellar-instant-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current CFD Stellar Instant, direct simulated, no add-ons; loss floor not reset following payout.",
+    "scopeFr": "CFD Stellar Instant actuel, financement simulé direct, sans option ; seuil de perte non réinitialisé après retrait.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "6% trailing highest closed balance, locks at initial balance; highest floor preserved after withdrawals, remaining gap trails in next cycle."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.fundednext.com/en/articles/15586820-does-fundednext-cfds-offer-on-demand-performance-rewards",
+        "reason": "5% initial-balance growth threshold checked EOD; placing another trade disables transfer until next check. Starting reward share 70%, later 80%."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "Explicitly no percentage best-day consistency; Quick Strike is separate trading-style metric."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext",
+        "reason": "Quick Strike: profit from trades under 30s monitored per cycle; warning at 20%, forfeiture and possible termination at 30% after warning. High-impact news profit allocation 40% per Stellar Instant rules."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+        "reason": "3% maximum combined risk at any time, including realized and floating losses; no daily loss limit or funded target for retaining account."
+      }
+    }
+  }
+});
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA

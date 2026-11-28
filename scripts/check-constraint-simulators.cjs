@@ -156,4 +156,11 @@ assert.equal(programmeFlexibility(getProgrammeEvidence("trade-the-pool","ttp-edg
 assert.equal(programmeFlexibility(getProgrammeEvidence("funded-futures-network","funded-futures-network-max-standard")).stars,2.5);
 assert.equal(programmeFlexibility(getProgrammeEvidence("funded-futures-network","funded-futures-network-steady")).stars,null);
 assert.equal(programmeFlexibility(getProgrammeEvidence('fxify','fxi-two-classic','monthly-100')).stars,3.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence("maven-trading","maven-standard-one-step")).stars,2.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence("maven-trading","maven-standard-two-step")).stars,3.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence("maven-trading","maven-standard-three-step")).stars,3.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence("maven-trading","maven-static-one-step")).stars,3);
+assert.equal(programmeFlexibility(getProgrammeEvidence("maven-trading","maven-instant")).stars,0.5);
+assert.equal(programmeFlexibility(getProgrammeEvidence("lux-trading-firm","lux-1-step-evaluation")).stars,null);
+assert.equal(programmeFlexibility(getProgrammeEvidence("fundednext","fundednext-stellar-instant-current")).stars,2);
 console.log('Constraint simulators and evidence gating: all assertions passed');
