@@ -269,7 +269,8 @@ assert.equal(programmeFlexibility(getProgrammeEvidence("funded-bull","funded-bul
 assert.equal(programmeFlexibility(getProgrammeEvidence("funded-bull","funded-bull-3-step")).stars,null);
 assert.equal(programmeFlexibility(getProgrammeEvidence('for-traders','fortraders-1-step','fast-static')).stars,3);
 assert.equal(programmeFlexibility(getProgrammeEvidence("rebelsfunding","rebelsfunding-gold-1-phase")).stars,null);
-assert.equal(programmeFlexibility(getProgrammeEvidence("sabiotrade","sabiotrade-evaluation")).stars,null);
+assert.equal(programmeFlexibility(getProgrammeEvidence("sabiotrade","sabiotrade-evaluation")).stars,1.5);
+assert.equal(getProgrammeEvidence("sabiotrade","sabiotrade-evaluation").preset,undefined);
 assert.equal(programmeFlexibility(getProgrammeEvidence("sure-leverage","slf-instant-zero")).stars,2);
 assert.equal(programmeFlexibility(getProgrammeEvidence("willis-capital","wfunded-skillcheck")).stars,null);
 assert.equal(programmeFlexibility(getProgrammeEvidence("superfunded","superfunded-one-phase")).stars,null);

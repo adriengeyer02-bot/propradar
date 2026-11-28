@@ -1902,28 +1902,33 @@ evidence["rebelsfunding"] = {
 evidence["sabiotrade"] = {
   "sabiotrade-evaluation": {
     "checkedOn": "2026-11-28",
-    "scope": "Current general terms, post-2-February-2026 funded account; exact plan-specific loss limits and 40% vs 55% trade concentration unresolved.",
-    "scopeFr": "CG actuelles, compte après le 2 février 2026 ; seuils du plan exact et ratios 40 %/55 % à réconcilier.",
+    "scope": "Current CFD Single/Intraday reward accounts, .com and .us public rules, purchases from 2 February 2026. Score reflects common trailing mechanism and material concentration restrictions; percentages and post-reward protections vary by plan/domain. No options account or numerical preset.",
+    "scopeFr": "Comptes CFD Single/Intraday, règles publiques .com et .us, achats depuis le 2 février 2026. Mécanisme trailing commun ; ratios et protection après retrait variables selon le plan/domaine. Hors options, sans préréglage numérique.",
     "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://sabiotrade.com/trading-rules",
+        "reason": "Highest closed-balance trailing floor, 6% initial balance Single or 5% Intraday; US terms section 3 confirms the same trailing mechanism (plan percentages vary)."
+      },
       "payout": {
         "points": 0.5,
-        "source": "https://sabiotrade.us/terms",
-        "reason": "At least seven days since previous reward; eligibility subject to review."
+        "source": "https://sabiotrade.com/performance-rewards",
+        "reason": "First request when profitable, subsequent requests seven days apart, all positions closed. General terms also require 5–7 comparable trades; full withdrawal leaves no buffer against the initial-balance floor under .com rules."
       },
       "consistency": {
         "points": 0.5,
         "source": "https://sabiotrade.us/terms",
-        "reason": "40% best-day and/or single-trade limit; separate 55% single-trade requirement also stated; restrictive 40% reading, exact plan to confirm."
+        "reason": "US sections 5/7 specify 40% best-day and/or single-trade concentration and separately 55% single-trade eligibility. .com terms sections 6/9 specify 55% individual trade for payouts despite the public summary omitting funded consistency. No net-cycle preset."
       },
       "trading": {
         "points": 0.5,
-        "source": "https://sabiotrade.us/terms",
-        "reason": "Scalping, hedging and automation without written permission prohibited."
+        "source": "https://sabiotrade.com/terms",
+        "reason": "Scalping, hedging and unapproved automation prohibited; equivalent US restrictions."
       },
       "funded": {
         "points": 0,
         "source": "https://sabiotrade.us/terms",
-        "reason": "Discretionary reward adjustment/withholding and initial-balance protection review; funded rule breach can forfeit rewards."
+        "reason": "Discretionary reward denial/adjustment and funded breach forfeiture; .com sections 6/9/10 also permit discretionary refusal and forfeiture for applicable purchase cohorts. Ordinary KYC not penalised."
       }
     }
   }
