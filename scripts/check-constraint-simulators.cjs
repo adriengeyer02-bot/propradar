@@ -66,4 +66,17 @@ const a={points:0.5,source:'https://example.com',reason:'documented test fixture
 const complete={checkedOn:'2026-11-27',scope:'test',assessments:{drawdown:a,payout:a,consistency:a,trading:a,funded:a}};
 assert.equal(programmeFlexibility(complete).stars,2.5);
 assert.equal(programmeFlexibility({...complete,assessments:{...complete.assessments,payout:{...a,source:''}}}).stars,null);
-console.log('Constraint simulators and evidence gating: 52 checks OK');
+assert.equal(programmeFlexibility(getProgrammeEvidence('ftmo','ftmo-two-step-current','swing-account')).stars,5);
+for(const [id,loss] of [['fundednext-stellar-two-current',10],['fundednext-stellar-lite-current',8]]){
+ const three=getProgrammeEvidence('fundednext',id,'three-day-reward');
+ const demand=getProgrammeEvidence('fundednext',id,'on-demand-reward');
+ assert.equal(programmeFlexibility(three).stars,3);
+ assert.equal(programmeFlexibility(demand).stars,3);
+ assert.equal(three.preset.profitSplit,60);
+ assert.equal(demand.preset.profitSplit,90);
+ assert.equal(three.preset.lossPercent,loss);
+ assert.equal(demand.preset.lossPercent,loss);
+ assert.equal(getProgrammeVariants('fundednext',id).length,2);
+}
+assert.equal(getProgrammeEvidence('ftmo','ftmo-two-step-current','swing-account').checkedOn,'2026-11-28');
+console.log('Constraint simulators and evidence gating: 68 checks OK');
