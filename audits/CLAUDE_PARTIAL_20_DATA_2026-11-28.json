@@ -1,0 +1,2032 @@
+{
+  "title": "Claude — data collection for the 20 partial programme audits published on PropRadar (no stars)",
+  "createdOn": "2026-11-28",
+  "author": "Claude (Opus 5.5)",
+  "baseline": {
+    "branch": "main",
+    "commit": "30cd5d54",
+    "file": "app/lib/programmeFlexibility.ts"
+  },
+  "scope": "Objective data only, ahead of the per-category product scale: commercial availability, structure, drawdown mechanics, withdrawal conditions and restrictions. No stars are computed. The general 100-point score, prices and production are untouched.",
+  "method": "Sources in this order: official pages read or searched on 28 Nov 2026; the agent/terms-archive branch (full-text captures of 25 Nov 2026); PropRadar firm-updates.json restrictive rules; competitor comparators where official text is missing (marked type \"competitor\"). Each fact keeps its source type; competitor-only facts are flagged in fundedApplies or contradictions.",
+  "availabilityValues": [
+    "available",
+    "available (limited drop)",
+    "available (listed, not in the comparison table)",
+    "orders paused (not purchasable)",
+    "discontinued (existing accounts only)",
+    "not sold under this name",
+    "not sold with these targets"
+  ],
+  "programmes": [
+    {
+      "productId": "the5ers-high-stakes-current",
+      "firm": "The5ers",
+      "slug": "the5ers",
+      "programme": "High Stakes (2-Step, New 10%/5% and Classic 8%/5%) — Pro account",
+      "category": {
+        "market": "forex-cfd",
+        "model": "2-step evaluation",
+        "fundedStage": "Pro account"
+      },
+      "availability": {
+        "status": "available",
+        "evidence": "High Stakes page read 28 Nov 2026 (New tab live); general rules FAQ updated 3 Nov 2026; drawdown FAQ updated 16 Nov 2026."
+      },
+      "structure": {
+        "phases": 2,
+        "targets": "New: 10% then 5%; Classic: 8% then 5%",
+        "timeLimit": "none",
+        "minDays": "3 profitable days per phase (competitor tables)"
+      },
+      "drawdown": {
+        "daily": "3%-5% depending on plan (5% on the main tiers); recalculated at 00:00 server time from the higher of previous-day closing balance or closing equity; breach = termination.",
+        "max": "8%-10% depending on plan (10% on New); \"absolute drawdown from your initial account balance\"; breach = termination.",
+        "type": "static (absolute from initial balance)",
+        "fundedApplies": "stated: same loss limits on the Pro account",
+        "notes": "Older July education pages called the drawdown trailing; the 16 Nov 2026 High Stakes drawdown FAQ states absolute from initial balance."
+      },
+      "payout": {
+        "split": "80% (scaling plan raises it)",
+        "first": "14 days after Pro account start",
+        "frequency": "every 14 days",
+        "minimum": "$300 P&L (50K) / $500 (100K)",
+        "cap": "$3,000 per payout (50K) / $4,000 (100K); crypto withdrawals limited to $1,500 per transaction; T&C 7.6 allows an unpublished per-transaction threshold above which payouts are split into consecutive weekly instalments.",
+        "consistency": "No consistency rule on the High Stakes page, general rules FAQ (3 Nov) or payout FAQ (24 Nov). The 50% funded best-day rule found in the 2-Step Plan FAQ belongs to the separate \"Summer\" 2-Step plan (PropFirmMatch and The GodFunded list it under Summer plans; FundedFast and CryptoSlate list High Stakes with no consistency rule). One official blog (Sep 2026) still says 50% for High Stakes.",
+        "other": "Three profitable days of at least 0.5% of initial balance are required for each scale-up; interview may be requested and must take place within 5 business days or pending payouts are denied (T&C 3.2)."
+      },
+      "restrictions": {
+        "news": "Executing orders from 2 minutes before to 2 minutes after high-impact news is prohibited (Forex Factory, server time); profits from that window are deducted, losses kept. Holding through news allowed.",
+        "overnightWeekend": "Allowed.",
+        "automation": "Own EAs allowed; third-party EAs where other traders hold the same trades, EAs without owned source code, and EAs creating excessive server load are prohibited.",
+        "copyTrading": "Trade coordination or copy trading with other traders/accounts prohibited.",
+        "holdTime": "No numeric minimum; HFT \"measured within a few seconds\" and tick scalping prohibited.",
+        "riskLimits": "No per-trade risk cap or stop-loss requirement on High Stakes.",
+        "inactivity": "60 consecutive days on Pro accounts (30 on evaluation).",
+        "other": "Discretionary \"uncommercial activity\" clause (Trading Rule 19); termination allowed for public disparaging statements (T&C 10.1); VPN geo-circumvention is a fundamental breach."
+      },
+      "contradictions": [
+        "Consistency: one official blog (Sep 2026) states a 50% funded rule for High Stakes; all current High Stakes rule pages state none and third parties attribute the 50% rule to the Summer plan."
+      ],
+      "openQuestions": [
+        "Ask The5ers to confirm in writing that High Stakes Pro has no best-day rule."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "High Stakes page",
+          "url": "https://the5ers.com/high-stakes/",
+          "date": "2026-11-28"
+        },
+        {
+          "type": "official",
+          "label": "General rules for High Stakes (updated 3 Nov 2026)",
+          "url": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"
+        },
+        {
+          "type": "official",
+          "label": "Drawdown rule for High Stakes (updated 16 Nov 2026)",
+          "url": "https://the5ers.com/faqs/what-is-the-drawdown-rule-for-high-stakes/"
+        },
+        {
+          "type": "official",
+          "label": "Payout policy and hub credit in High Stakes",
+          "url": "https://the5ers.com/faqs/payout-policy-and-hub-credit-in-the-high-stakes-program/"
+        },
+        {
+          "type": "official",
+          "label": "2-Step Plan rules (Summer plan)",
+          "url": "https://the5ers.com/faqs/2-step-plan-rules-specifications/"
+        },
+        {
+          "type": "official",
+          "label": "Terms and conditions",
+          "url": "https://the5ers.com/terms-and-conditions/"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive the5ers (25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/the5ers",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "competitor",
+          "label": "PropFirmMatch — consistency rules by plan",
+          "url": "https://propfirmmatch.com/crypto/prop-firms/the-5-ers/challenges"
+        },
+        {
+          "type": "competitor",
+          "label": "FundedFast — High Stakes, no consistency rule (17 Oct 2026)",
+          "url": "https://fundedfast.com/de/firms/the5ers",
+          "date": "2026-10-17"
+        },
+        {
+          "type": "competitor",
+          "label": "CryptoSlate review — High Stakes tables",
+          "url": "https://cryptoslate.com/prop-firms/the5ers-review/"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible",
+        "drawdown": "Journalier 5 % (plus haut solde/équité de clôture) ; max 10 % fixe depuis le solde initial, identique en Pro",
+        "retrait": "14 jours, 80 %, plafond 3 000 $/4 000 $ par retrait, minimum 300 $/500 $, pas de règle de constance sur les pages High Stakes",
+        "restrictions": "Ordres interdits ±2 min autour des news (profits retirés) ; HFT et EA tiers restreints ; inactivité 60 jours",
+        "ouvert": "Un article de blog officiel mentionne encore 50 % : la règle semble appartenir au plan Summer"
+      }
+    },
+    {
+      "productId": "ttp-swing-max",
+      "firm": "Trade The Pool",
+      "slug": "trade-the-pool",
+      "programme": "Swing MAX (US stocks, $2K-$40K buying power)",
+      "category": {
+        "market": "stocks",
+        "model": "1-step evaluation, swing",
+        "fundedStage": "Professional account"
+      },
+      "availability": {
+        "status": "available",
+        "evidence": "Programme page archived 25 Nov 2026 shows Swing $2K-$40K plans with live checkout links; competitor tables (July-Oct 2026) list Swing MAX."
+      },
+      "structure": {
+        "phases": 1,
+        "targets": "15% of buying power",
+        "timeLimit": "100 calendar days",
+        "minDays": "none; minimum 5 positions"
+      },
+      "drawdown": {
+        "daily": "3% daily pause: when equity minus start-of-day realised balance exceeds the limit, positions are closed and trading pauses until the next day (not a breach); one optional pause reset per day.",
+        "max": "7% of buying power (e.g. $700 on $10K). Stop-out is measured on equity (\"projected balance\"). Once equity reaches 3x the daily limit (+9%), the floor moves once, instantly, to the initial balance.",
+        "type": "static floor with a one-time step-up to the initial balance at +3x DL (equity-based)",
+        "fundedApplies": "partly stated: the 7% figure is published for the evaluation; the programme page says funded traders \"keep trading under the same trading conditions (DL, Exposure)\"; the 3x DL move is in the payouts section; Program Terms say swing scaling mechanics are \"to come\"."
+      },
+      "payout": {
+        "split": "70/30 in the published plan table (competitors: up to 80% once funded)",
+        "first": "14 days",
+        "frequency": "every 14 days; a scale-up restarts the withdrawal clock",
+        "minimum": "$300 profit ($150 on smallest size), at least 5 positions",
+        "cap": "none published",
+        "consistency": "Maximum position profit ratio: 30% in evaluation, 70% in funded (position-based, not best-day).",
+        "other": "Scaling at +10% validated profit on buying power."
+      },
+      "restrictions": {
+        "news": "No news restriction published.",
+        "overnightWeekend": "Overnight and weekend holding allowed with full exposure; opening a position to hold overnight requires the stock to average at least 500,000 shares/day over the previous 14 days; tickers are disabled before earnings (no earnings holding).",
+        "automation": "Not restricted for swing in the published terms (automated trading notes concern FLEX day).",
+        "copyTrading": "Allowed only between 2 own accounts; for swing only $2K and $10K accounts may be paired; wash trading (opposite position within 30 minutes in another account) forbidden.",
+        "holdTime": "Minimum 30 seconds and $0.10 entry-to-exit movement for a trade to count.",
+        "riskLimits": "Buying-power limits only; total base buying power across accounts capped at $450K.",
+        "inactivity": "14-day inactivity timeout on funded accounts (baseline evidence).",
+        "other": "Minimum 5 positions for a payout or scale-up; regular-hours volume rules per asset."
+      },
+      "contradictions": [],
+      "openQuestions": [
+        "Confirm in writing that the 7% maximum loss and the 3x-DL move apply unchanged on funded swing accounts."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "The Program page",
+          "url": "https://tradethepool.com/the-program/"
+        },
+        {
+          "type": "official",
+          "label": "Program Terms",
+          "url": "https://tradethepool.com/program-terms/"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive trade-the-pool (25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/trade-the-pool",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json restrictive rules (trade-the-pool)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "competitor",
+          "label": "PropFirmMap review (Swing 3% daily / 7% max static, July 2026)",
+          "url": "https://propfirmmap.com/blog/trade-the-pool-review-2026-stocks-etf-prop-firm-pricing-payouts",
+          "date": "2026-07-22"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible",
+        "drawdown": "Pause journalière 3 % ; perte max 7 % du pouvoir d'achat mesurée en équité, plancher relevé une fois au solde initial à +9 % ; application au financé déduite du texte, non écrite noir sur blanc",
+        "retrait": "14 jours, minimum 300 $, 5 positions ; position max 70 % du profit en financé",
+        "restrictions": "Pas de détention avant résultats ; overnight si volume moyen ≥ 500 000 actions ; tenue min 30 s / 0,10 $",
+        "ouvert": "Confirmer le drawdown financé swing"
+      }
+    },
+    {
+      "productId": "ttp-swing-flex",
+      "firm": "Trade The Pool",
+      "slug": "trade-the-pool",
+      "programme": "Swing FLEX (US stocks, $2K-$40K buying power)",
+      "category": {
+        "market": "stocks",
+        "model": "1-step evaluation, swing",
+        "fundedStage": "Professional account"
+      },
+      "availability": {
+        "status": "available",
+        "evidence": "Programme page archived 25 Nov 2026 (FLEX Swing plans with checkout links); TTP blog April 2026 table."
+      },
+      "structure": {
+        "phases": 1,
+        "targets": "15% of buying power",
+        "timeLimit": "unlimited",
+        "minDays": "none; minimum 5 positions"
+      },
+      "drawdown": {
+        "daily": "3% daily pause: when equity minus start-of-day realised balance exceeds the limit, positions are closed and trading pauses until the next day (not a breach); one optional pause reset per day.",
+        "max": "7% of buying power (e.g. $700 on $10K). Stop-out is measured on equity (\"projected balance\"). Once equity reaches 3x the daily limit (+9%), the floor moves once, instantly, to the initial balance.",
+        "type": "static floor with a one-time step-up to the initial balance at +3x DL (equity-based)",
+        "fundedApplies": "partly stated: the 7% figure is published for the evaluation; the programme page says funded traders \"keep trading under the same trading conditions (DL, Exposure)\"; the 3x DL move is in the payouts section; Program Terms say swing scaling mechanics are \"to come\"."
+      },
+      "payout": {
+        "split": "70/30 in the published plan table",
+        "first": "14 days",
+        "frequency": "every 14 days; scale-up restarts the clock",
+        "minimum": "$300 profit ($150 on smallest size), at least 5 positions; three profitable days of 0.5% per cycle",
+        "cap": "none published",
+        "consistency": "50% maximum single-position share of profit, evaluation and funded.",
+        "other": "Scaling at +10% validated profit."
+      },
+      "restrictions": {
+        "news": "No news restriction published.",
+        "overnightWeekend": "Overnight and weekend holding allowed with full exposure; opening a position to hold overnight requires the stock to average at least 500,000 shares/day over the previous 14 days; tickers are disabled before earnings (no earnings holding).",
+        "automation": "Not restricted for swing in the published terms (automated trading notes concern FLEX day).",
+        "copyTrading": "Allowed only between 2 own accounts; for swing only $2K and $10K accounts may be paired; wash trading (opposite position within 30 minutes in another account) forbidden.",
+        "holdTime": "Minimum 30 seconds and $0.10 entry-to-exit movement for a trade to count.",
+        "riskLimits": "Buying-power limits only; total base buying power across accounts capped at $450K.",
+        "inactivity": "14-day inactivity timeout on funded accounts (baseline evidence).",
+        "other": "Minimum 5 positions for a payout or scale-up; regular-hours volume rules per asset."
+      },
+      "contradictions": [],
+      "openQuestions": [
+        "Same as Swing MAX: funded swing loss formula not written separately."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "The Program page",
+          "url": "https://tradethepool.com/the-program/"
+        },
+        {
+          "type": "official",
+          "label": "Program Terms",
+          "url": "https://tradethepool.com/program-terms/"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive trade-the-pool (25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/trade-the-pool",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json restrictive rules (trade-the-pool)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "official",
+          "label": "TTP blog — FLEX vs MAX swing table (Apr 2026)",
+          "url": "https://tradethepool.com/fundamental/how-does-a-prop-firm-work/",
+          "date": "2026-04-27"
+        },
+        {
+          "type": "competitor",
+          "label": "PropFirmMatch — FLEX 50% eval and funded",
+          "url": "https://propfirmmatch.com/futures/prop-firms/trade-the-pool"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible",
+        "drawdown": "Identique Swing MAX (3 % / 7 %, équité, relèvement unique au solde initial)",
+        "retrait": "14 jours, minimum 300 $, 3 jours à 0,5 % ; position max 50 % du profit",
+        "restrictions": "Identiques Swing MAX",
+        "ouvert": "Confirmer le drawdown financé swing"
+      }
+    },
+    {
+      "productId": "ttp-edge",
+      "firm": "Trade The Pool",
+      "slug": "trade-the-pool",
+      "programme": "Edge ($50K / $100K buying power)",
+      "category": {
+        "market": "stocks",
+        "model": "1-step evaluation, day trading",
+        "fundedStage": "Edge Pro"
+      },
+      "availability": {
+        "status": "available",
+        "evidence": "Edge FAQ on the programme page archived 25 Nov 2026: $156 (50K) and $266 (100K) one-time fees with checkout links."
+      },
+      "structure": {
+        "phases": 1,
+        "targets": "6% evaluation target",
+        "timeLimit": "not stated",
+        "minDays": "not stated; minimum positions 20 on 100K in the plan table"
+      },
+      "drawdown": {
+        "daily": "Pro: EOD daily loss 2.5% (50K) / 1.8% (100K); reaching it permanently disables the account (not a pause).",
+        "max": "4% on both sizes; \"On Pro accounts, drawdown is calculated using end-of-day values.\"",
+        "type": "EOD-measured; fixed-from-initial vs trailing not stated",
+        "fundedApplies": "stated for Pro",
+        "notes": "The general 3x-DL move to the initial balance is written for all accounts in the payouts FAQ; not confirmed for Edge."
+      },
+      "payout": {
+        "split": "80/20",
+        "first": "after a 4% first withdrawal target",
+        "frequency": "subsequent withdrawals after +1% (50K) / +1.5% (100K)",
+        "minimum": "$500",
+        "cap": "$1,500 (50K) / $2,000 (100K) per withdrawal",
+        "consistency": "40% on Pro accounts.",
+        "other": "No scaling on Pro."
+      },
+      "restrictions": {
+        "news": "None published.",
+        "overnightWeekend": "24/5 sessions; overnight exposure rules of day accounts apply.",
+        "automation": "Not specified for Edge.",
+        "copyTrading": "Up to 3 Edge accounts (evaluation and Pro); not with other account types.",
+        "holdTime": "Minimum 30 seconds and $0.10 move.",
+        "riskLimits": "Each position limited to 5% of the stock's previous 1-minute volume.",
+        "inactivity": "Not stated for Edge.",
+        "other": ""
+      },
+      "contradictions": [],
+      "openQuestions": [
+        "Is the 4% EOD drawdown fixed from the initial balance or trailing EOD highs, and does it lock?"
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "The Program page",
+          "url": "https://tradethepool.com/the-program/"
+        },
+        {
+          "type": "official",
+          "label": "Program Terms",
+          "url": "https://tradethepool.com/program-terms/"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive trade-the-pool (25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/trade-the-pool",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json restrictive rules (trade-the-pool)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "competitor",
+          "label": "PropFirmMatch — Edge payout cap and 40% consistency",
+          "url": "https://propfirmmatch.com/perpetuals/prop-firms/trade-the-pool?tab=offers"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible",
+        "drawdown": "Perte max 4 % calculée en fin de journée (fixe ou suiveuse : non précisé) ; perte journalière EOD 2,5 %/1,8 % éliminatoire",
+        "retrait": "80 %, premier retrait à +4 %, puis +1 %/+1,5 % ; 500 $ min, 1 500 $/2 000 $ max ; constance 40 %",
+        "restrictions": "Position ≤ 5 % du volume de la minute précédente ; 30 s / 0,10 $ ; copie entre 3 comptes Edge",
+        "ouvert": "Nature exacte du drawdown EOD"
+      }
+    },
+    {
+      "productId": "lark-1-step-career",
+      "firm": "Lark Funding",
+      "slug": "lark-funding",
+      "programme": "1-Step Career (\"Earn in drawdown\")",
+      "category": {
+        "market": "forex-cfd",
+        "model": "1-step evaluation",
+        "fundedStage": "Master Account"
+      },
+      "availability": {
+        "status": "available",
+        "evidence": "Homepage (Black Friday offer) lists \"1-Step Earn in drawdown\": 10% target, 7% drawdown; programme article in the help-centre Programs collection."
+      },
+      "structure": {
+        "phases": 1,
+        "targets": "10%",
+        "timeLimit": "none",
+        "minDays": "none"
+      },
+      "drawdown": {
+        "daily": "5% of balance calculated at 5:00 pm EST; hard breach.",
+        "max": "7% of initial balance, static.",
+        "type": "static",
+        "fundedApplies": "not stated officially for the Master Account; competitor (Propvator) states 7% static in evaluation and funded stage",
+        "notes": "Smart Restart (1% per trade, -5%) applies to evaluation only."
+      },
+      "payout": {
+        "split": "80% standard, 90% with paid upgrade",
+        "first": "14 days",
+        "frequency": "every 14 days (weekly with paid add-on)",
+        "minimum": "$100 request; flat $40 processing fee (Riseworks)",
+        "cap": "Per-day and per-trade gain limit of $10,000: excess excluded from funded payouts",
+        "consistency": "None (firm-wide \"zero consistency rules\").",
+        "other": "Separate Monthly Base Reward (data fee): requires drawdown better than -3.5% and three 0.5% profitable days per 30-day period; not an ordinary payout gate."
+      },
+      "restrictions": {
+        "news": "No news restriction.",
+        "overnightWeekend": "Not restricted, except single-share equity CFDs must be closed by 3:50 pm ET before earnings, dividends or corporate actions.",
+        "automation": "HFT prohibited; other EAs not restricted in the published text.",
+        "copyTrading": "Only between accounts the trader owns and controls; signal services and group trading prohibited.",
+        "holdTime": "None published.",
+        "riskLimits": "All-or-nothing and gambling-style trading prohibited (repeated offences: account closure).",
+        "inactivity": "At least one trade every 30 days (breach can be lifted on request).",
+        "other": "VPN/VPS allowed but weighed in investigations; prohibited during KYC."
+      },
+      "contradictions": [],
+      "openQuestions": [
+        "Funded Master Account loss limits are not published for this programme (only the Instant Master has its own article)."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "Payouts FAQ",
+          "url": "https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work"
+        },
+        {
+          "type": "official",
+          "label": "Prohibited trading strategies",
+          "url": "https://helpdesk.larkfunding.com/en/articles/8243502-prohibited-trading-strategies"
+        },
+        {
+          "type": "official",
+          "label": "Homepage (zero consistency, static drawdowns)",
+          "url": "https://larkfunding.com/"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive lark-funding (25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/lark-funding",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json restrictive rules (lark-funding)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "official",
+          "label": "1-Step Career evaluation details",
+          "url": "https://helpdesk.larkfunding.com/en/articles/12853883-1-step-career-evaluation-details"
+        },
+        {
+          "type": "competitor",
+          "label": "Propvator — Lark drawdown by stage",
+          "url": "https://propvator.com/blog/?p=2936"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible",
+        "drawdown": "Journalier 5 % (17 h EST, éliminatoire) ; max 7 % fixe ; application au financé confirmée seulement par un comparateur",
+        "retrait": "14 jours, 80 %, 100 $ min, frais 40 $ ; gain plafonné à 10 000 $ par jour ou par trade",
+        "restrictions": "Clôture des CFD actions avant résultats ; pas de HFT ; inactivité 30 jours",
+        "ouvert": "Règles du compte financé non publiées"
+      }
+    },
+    {
+      "productId": "lark-3-step",
+      "firm": "Lark Funding",
+      "slug": "lark-funding",
+      "programme": "3-Step",
+      "category": {
+        "market": "forex-cfd",
+        "model": "3-step evaluation",
+        "fundedStage": "Master Account"
+      },
+      "availability": {
+        "status": "available",
+        "evidence": "Programme article dated 27 Apr 2026 in the Programs collection; homepage lists 1-Step, 3-Step and Instant; competitor tables (Sep-Oct 2026)."
+      },
+      "structure": {
+        "phases": 3,
+        "targets": "5% / 4% / 3%",
+        "timeLimit": "none",
+        "minDays": "none"
+      },
+      "drawdown": {
+        "daily": "No daily loss limit in the evaluation.",
+        "max": "5% of initial balance, static.",
+        "type": "static",
+        "fundedApplies": "not stated officially; competitors (Propvator, TheTrustedProp) list 5% static and no daily limit on the funded stage",
+        "notes": ""
+      },
+      "payout": {
+        "split": "80% standard, 90% with paid upgrade",
+        "first": "14 days",
+        "frequency": "every 14 days (weekly with paid add-on)",
+        "minimum": "$100 request; flat $40 processing fee (Riseworks)",
+        "cap": "Per-day and per-trade gain limit of $10,000: excess excluded from funded payouts",
+        "consistency": "None (firm-wide \"zero consistency rules\").",
+        "other": ""
+      },
+      "restrictions": {
+        "news": "No news restriction.",
+        "overnightWeekend": "Not restricted, except single-share equity CFDs must be closed by 3:50 pm ET before earnings, dividends or corporate actions.",
+        "automation": "HFT prohibited; other EAs not restricted in the published text.",
+        "copyTrading": "Only between accounts the trader owns and controls; signal services and group trading prohibited.",
+        "holdTime": "None published.",
+        "riskLimits": "All-or-nothing and gambling-style trading prohibited (repeated offences: account closure).",
+        "inactivity": "At least one trade every 30 days (breach can be lifted on request).",
+        "other": "VPN/VPS allowed but weighed in investigations; prohibited during KYC."
+      },
+      "contradictions": [],
+      "openQuestions": [
+        "Funded Master Account loss limits not published for the 3-Step."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "Payouts FAQ",
+          "url": "https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work"
+        },
+        {
+          "type": "official",
+          "label": "Prohibited trading strategies",
+          "url": "https://helpdesk.larkfunding.com/en/articles/8243502-prohibited-trading-strategies"
+        },
+        {
+          "type": "official",
+          "label": "Homepage (zero consistency, static drawdowns)",
+          "url": "https://larkfunding.com/"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive lark-funding (25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/lark-funding",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json restrictive rules (lark-funding)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "official",
+          "label": "3-Step evaluation details",
+          "url": "https://helpdesk.larkfunding.com/en/articles/8251071-3-step-evaluation-details"
+        },
+        {
+          "type": "competitor",
+          "label": "TheTrustedProp — funded 5% max, 0% daily",
+          "url": "https://thetrustedprop.com/prop-firms/lark-funding"
+        },
+        {
+          "type": "competitor",
+          "label": "Propvator — Lark drawdown by stage",
+          "url": "https://propvator.com/blog/?p=2936"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible",
+        "drawdown": "Pas de limite journalière ; max 5 % fixe ; financé confirmé seulement par des comparateurs",
+        "retrait": "Identique 1-Step Career",
+        "restrictions": "Identiques 1-Step Career",
+        "ouvert": "Règles du compte financé non publiées"
+      }
+    },
+    {
+      "productId": "dna-1-phase-march-2026",
+      "firm": "DNA Funded",
+      "slug": "dna-funded",
+      "programme": "1 Phase (accounts opened since 3 Feb 2026)",
+      "category": {
+        "market": "forex-cfd",
+        "model": "1-step evaluation",
+        "fundedStage": "funded stage"
+      },
+      "availability": {
+        "status": "orders paused (not purchasable)",
+        "evidence": "Official homepage/FAQ notice: \"MT5 accounts are migrating to TradeLocker ... New orders are currently paused\" (indexed Sep-Oct 2026; read on product pages by PropRadar 19 Nov 2026). Third parties report the pause from September/October 2026 (LuxAlgo, QuantVPS, MyPropGenius 8 Oct, FundingTraders blog); an earlier pause ended 13 Aug 2026 (The GodFunded). On 28 Nov 2026 the FAQ page loaded with a \"FRIDAY30\" promotion and no pause notice, but homepage, product and rules pages failed to load. No resumption announcement found. Site traffic -96% vs January peak (PropWeekly, Sep 2026)."
+      },
+      "structure": {
+        "phases": 1,
+        "sizes": "$5K-$200K",
+        "listFees": "$59-$1,209 (March 2026)",
+        "minDays": 5
+      },
+      "drawdown": {
+        "daily": "Not re-readable on 28 Nov 2026 (earlier account vintages differ).",
+        "max": "6% of initial balance, static.",
+        "type": "static",
+        "fundedApplies": "stated in March 2026 rules"
+      },
+      "payout": {
+        "split": "80% standard, 90% paid add-on",
+        "first": "14 days of funded trading (7 with Earlier Payout add-on)",
+        "frequency": "14 days between requests",
+        "minimum": "$100 net of split",
+        "cap": "First three approved payouts each capped at 5% of account size; excess forfeited at reset",
+        "consistency": "Profit-distribution rule: one day may contribute at most 30% of a requested payout (40% for accounts bought before 3 Feb 2026); excess deducted, no breach.",
+        "other": "Five trading days with trades held at least 60 seconds; payout approval at the company's sole discretion (video or phone call possible)."
+      },
+      "restrictions": {
+        "news": "No trading 10 minutes before and after major releases and \"market-shocks\".",
+        "overnightWeekend": "Allowed.",
+        "automation": "EAs allowed on 1 Phase, 2 Phase and Rapid (third-party EAs verified first); Instant Funding is manual only.",
+        "copyTrading": "Allowed in evaluation, prohibited in funded stage.",
+        "holdTime": "60 seconds minimum per trade (new accounts).",
+        "riskLimits": "HFT, hedge arbitrage, tick scalping, grid, one-sided betting, latency/reverse arbitrage prohibited in funded stage.",
+        "inactivity": "One trade every 30 days.",
+        "other": "Up to three challenges totalling $600K."
+      },
+      "contradictions": [
+        "28 Nov 2026 FAQ shows a FRIDAY30 promotion while the last readable official notice says new orders are paused."
+      ],
+      "openQuestions": [
+        "Confirm whether checkout reopened; March 2026 rules could not be re-read on 28 Nov 2026."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "Rules and Conditions V.2 (March 2026)",
+          "url": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf"
+        },
+        {
+          "type": "official",
+          "label": "FAQ",
+          "url": "https://dnafunded.com/faqs/",
+          "date": "2026-11-28"
+        },
+        {
+          "type": "official",
+          "label": "Homepage notice (indexed)",
+          "url": "https://dnafunded.com/"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json DNA (official PDF read 18-19 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive dna-funded (blocked, 35-byte captures, 25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/dna-funded",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "competitor",
+          "label": "LuxAlgo — DNA paused new orders (checked 8 Sep 2026)",
+          "url": "https://www.luxalgo.com/blog/best-prop-firms-for-algorithmic-trading-in-2025/"
+        },
+        {
+          "type": "competitor",
+          "label": "QuantVPS — orders paused October 2026",
+          "url": "https://www.quantvps.com/blog/forex-prop-firm-reviews"
+        },
+        {
+          "type": "competitor",
+          "label": "The GodFunded — earlier resumption 13 Aug 2026",
+          "url": "https://thegodfunded.com/en/firms/dnafunded/news/"
+        },
+        {
+          "type": "competitor",
+          "label": "PropWeekly shutdown tracker",
+          "url": "https://propweekly.com/shutdowns"
+        }
+      ],
+      "fr": {
+        "dispo": "Commandes suspendues (avis officiel ; promo FRIDAY30 visible le 28/11 sans réouverture confirmée)",
+        "drawdown": "Max 6 % fixe ; journalier non relu",
+        "retrait": "14 jours, 80 % ; 3 premiers retraits plafonnés à 5 % du compte (excédent perdu) ; une journée ≤ 30 % du retrait ; approbation discrétionnaire",
+        "restrictions": "News ±10 min ; tenue 60 s ; pas de copie en financé ; inactivité 30 jours",
+        "ouvert": "Réouverture des ventes non confirmée"
+      }
+    },
+    {
+      "productId": "dna-2-phase-march-2026",
+      "firm": "DNA Funded",
+      "slug": "dna-funded",
+      "programme": "2 Phase (accounts opened since 3 Feb 2026)",
+      "category": {
+        "market": "forex-cfd",
+        "model": "2-step evaluation",
+        "fundedStage": "funded stage"
+      },
+      "availability": {
+        "status": "orders paused (not purchasable)",
+        "evidence": "Official homepage/FAQ notice: \"MT5 accounts are migrating to TradeLocker ... New orders are currently paused\" (indexed Sep-Oct 2026; read on product pages by PropRadar 19 Nov 2026). Third parties report the pause from September/October 2026 (LuxAlgo, QuantVPS, MyPropGenius 8 Oct, FundingTraders blog); an earlier pause ended 13 Aug 2026 (The GodFunded). On 28 Nov 2026 the FAQ page loaded with a \"FRIDAY30\" promotion and no pause notice, but homepage, product and rules pages failed to load. No resumption announcement found. Site traffic -96% vs January peak (PropWeekly, Sep 2026)."
+      },
+      "structure": {
+        "phases": 2,
+        "targets": "8% / 5%",
+        "sizes": "$5K-$200K",
+        "listFees": "$49-$1,079",
+        "minDays": 5
+      },
+      "drawdown": {
+        "daily": "5%.",
+        "max": "8% of initial balance, static.",
+        "type": "static",
+        "fundedApplies": "stated in March 2026 rules"
+      },
+      "payout": {
+        "split": "80% standard, 90% paid add-on",
+        "first": "14 days of funded trading (7 with Earlier Payout add-on)",
+        "frequency": "14 days between requests",
+        "minimum": "$100 net of split",
+        "cap": "First three approved payouts each capped at 5% of account size; excess forfeited at reset",
+        "consistency": "Profit-distribution rule: one day may contribute at most 30% of a requested payout (40% for accounts bought before 3 Feb 2026); excess deducted, no breach.",
+        "other": "Five trading days with trades held at least 60 seconds; payout approval at the company's sole discretion (video or phone call possible)."
+      },
+      "restrictions": {
+        "news": "No trading 10 minutes before and after major releases and \"market-shocks\".",
+        "overnightWeekend": "Allowed.",
+        "automation": "EAs allowed on 1 Phase, 2 Phase and Rapid (third-party EAs verified first); Instant Funding is manual only.",
+        "copyTrading": "Allowed in evaluation, prohibited in funded stage.",
+        "holdTime": "60 seconds minimum per trade (new accounts).",
+        "riskLimits": "HFT, hedge arbitrage, tick scalping, grid, one-sided betting, latency/reverse arbitrage prohibited in funded stage.",
+        "inactivity": "One trade every 30 days.",
+        "other": "Up to three challenges totalling $600K."
+      },
+      "contradictions": [
+        "28 Nov 2026 FAQ shows a FRIDAY30 promotion while the last readable official notice says new orders are paused."
+      ],
+      "openQuestions": [
+        "Confirm whether checkout reopened; March 2026 rules could not be re-read on 28 Nov 2026."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "Rules and Conditions V.2 (March 2026)",
+          "url": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf"
+        },
+        {
+          "type": "official",
+          "label": "FAQ",
+          "url": "https://dnafunded.com/faqs/",
+          "date": "2026-11-28"
+        },
+        {
+          "type": "official",
+          "label": "Homepage notice (indexed)",
+          "url": "https://dnafunded.com/"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json DNA (official PDF read 18-19 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive dna-funded (blocked, 35-byte captures, 25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/dna-funded",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "competitor",
+          "label": "LuxAlgo — DNA paused new orders (checked 8 Sep 2026)",
+          "url": "https://www.luxalgo.com/blog/best-prop-firms-for-algorithmic-trading-in-2025/"
+        },
+        {
+          "type": "competitor",
+          "label": "QuantVPS — orders paused October 2026",
+          "url": "https://www.quantvps.com/blog/forex-prop-firm-reviews"
+        },
+        {
+          "type": "competitor",
+          "label": "The GodFunded — earlier resumption 13 Aug 2026",
+          "url": "https://thegodfunded.com/en/firms/dnafunded/news/"
+        },
+        {
+          "type": "competitor",
+          "label": "PropWeekly shutdown tracker",
+          "url": "https://propweekly.com/shutdowns"
+        }
+      ],
+      "fr": {
+        "dispo": "Commandes suspendues (avis officiel ; promo FRIDAY30 visible le 28/11 sans réouverture confirmée)",
+        "drawdown": "Journalier 5 % ; max 8 % fixe",
+        "retrait": "14 jours, 80 % ; 3 premiers retraits plafonnés à 5 % du compte (excédent perdu) ; une journée ≤ 30 % du retrait ; approbation discrétionnaire",
+        "restrictions": "News ±10 min ; tenue 60 s ; pas de copie en financé ; inactivité 30 jours",
+        "ouvert": "Réouverture des ventes non confirmée"
+      }
+    },
+    {
+      "productId": "dna-rapid-march-2026",
+      "firm": "DNA Funded",
+      "slug": "dna-funded",
+      "programme": "Rapid (10 days)",
+      "category": {
+        "market": "forex-cfd",
+        "model": "1-step evaluation, 10-day limit",
+        "fundedStage": "funded stage"
+      },
+      "availability": {
+        "status": "orders paused (not purchasable)",
+        "evidence": "Official homepage/FAQ notice: \"MT5 accounts are migrating to TradeLocker ... New orders are currently paused\" (indexed Sep-Oct 2026; read on product pages by PropRadar 19 Nov 2026). Third parties report the pause from September/October 2026 (LuxAlgo, QuantVPS, MyPropGenius 8 Oct, FundingTraders blog); an earlier pause ended 13 Aug 2026 (The GodFunded). On 28 Nov 2026 the FAQ page loaded with a \"FRIDAY30\" promotion and no pause notice, but homepage, product and rules pages failed to load. No resumption announcement found. Site traffic -96% vs January peak (PropWeekly, Sep 2026)."
+      },
+      "structure": {
+        "phases": 1,
+        "targets": "5%",
+        "sizes": "$10K-$100K",
+        "listFees": "$99-$549",
+        "timeLimit": "10 days",
+        "minDays": 3
+      },
+      "drawdown": {
+        "daily": "3%.",
+        "max": "5% of initial balance, static.",
+        "type": "static",
+        "fundedApplies": "stated in March 2026 rules"
+      },
+      "payout": {
+        "split": "80% standard, 90% paid add-on",
+        "first": "14 days of funded trading (7 with Earlier Payout add-on)",
+        "frequency": "14 days between requests",
+        "minimum": "$100 net of split",
+        "cap": "First three approved payouts each capped at 5% of account size; excess forfeited at reset",
+        "consistency": "Profit-distribution rule: one day may contribute at most 30% of a requested payout (40% for accounts bought before 3 Feb 2026); excess deducted, no breach.",
+        "other": "Five trading days with trades held at least 60 seconds; payout approval at the company's sole discretion (video or phone call possible)."
+      },
+      "restrictions": {
+        "news": "No trading 10 minutes before and after major releases and \"market-shocks\".",
+        "overnightWeekend": "Allowed.",
+        "automation": "EAs allowed on 1 Phase, 2 Phase and Rapid (third-party EAs verified first); Instant Funding is manual only.",
+        "copyTrading": "Allowed in evaluation, prohibited in funded stage.",
+        "holdTime": "60 seconds minimum per trade (new accounts).",
+        "riskLimits": "HFT, hedge arbitrage, tick scalping, grid, one-sided betting, latency/reverse arbitrage prohibited in funded stage.",
+        "inactivity": "One trade every 30 days.",
+        "other": "Up to three challenges totalling $600K."
+      },
+      "contradictions": [
+        "28 Nov 2026 FAQ shows a FRIDAY30 promotion while the last readable official notice says new orders are paused."
+      ],
+      "openQuestions": [
+        "Confirm whether checkout reopened; March 2026 rules could not be re-read on 28 Nov 2026."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "Rules and Conditions V.2 (March 2026)",
+          "url": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf"
+        },
+        {
+          "type": "official",
+          "label": "FAQ",
+          "url": "https://dnafunded.com/faqs/",
+          "date": "2026-11-28"
+        },
+        {
+          "type": "official",
+          "label": "Homepage notice (indexed)",
+          "url": "https://dnafunded.com/"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json DNA (official PDF read 18-19 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive dna-funded (blocked, 35-byte captures, 25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/dna-funded",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "competitor",
+          "label": "LuxAlgo — DNA paused new orders (checked 8 Sep 2026)",
+          "url": "https://www.luxalgo.com/blog/best-prop-firms-for-algorithmic-trading-in-2025/"
+        },
+        {
+          "type": "competitor",
+          "label": "QuantVPS — orders paused October 2026",
+          "url": "https://www.quantvps.com/blog/forex-prop-firm-reviews"
+        },
+        {
+          "type": "competitor",
+          "label": "The GodFunded — earlier resumption 13 Aug 2026",
+          "url": "https://thegodfunded.com/en/firms/dnafunded/news/"
+        },
+        {
+          "type": "competitor",
+          "label": "PropWeekly shutdown tracker",
+          "url": "https://propweekly.com/shutdowns"
+        }
+      ],
+      "fr": {
+        "dispo": "Commandes suspendues (avis officiel ; promo FRIDAY30 visible le 28/11 sans réouverture confirmée)",
+        "drawdown": "Journalier 3 % ; max 5 % fixe ; 10 jours",
+        "retrait": "14 jours, 80 % ; 3 premiers retraits plafonnés à 5 % du compte (excédent perdu) ; une journée ≤ 30 % du retrait ; approbation discrétionnaire",
+        "restrictions": "News ±10 min ; tenue 60 s ; pas de copie en financé ; inactivité 30 jours",
+        "ouvert": "Réouverture des ventes non confirmée"
+      }
+    },
+    {
+      "productId": "dna-instant-march-2026",
+      "firm": "DNA Funded",
+      "slug": "dna-funded",
+      "programme": "Instant Funding",
+      "category": {
+        "market": "forex-cfd",
+        "model": "instant funding",
+        "fundedStage": "funded stage"
+      },
+      "availability": {
+        "status": "orders paused (not purchasable)",
+        "evidence": "Official homepage/FAQ notice: \"MT5 accounts are migrating to TradeLocker ... New orders are currently paused\" (indexed Sep-Oct 2026; read on product pages by PropRadar 19 Nov 2026). Third parties report the pause from September/October 2026 (LuxAlgo, QuantVPS, MyPropGenius 8 Oct, FundingTraders blog); an earlier pause ended 13 Aug 2026 (The GodFunded). On 28 Nov 2026 the FAQ page loaded with a \"FRIDAY30\" promotion and no pause notice, but homepage, product and rules pages failed to load. No resumption announcement found. Site traffic -96% vs January peak (PropWeekly, Sep 2026)."
+      },
+      "structure": {
+        "phases": 0,
+        "sizes": "$5K-$50K",
+        "listFees": "$199-$979"
+      },
+      "drawdown": {
+        "daily": "Not re-readable on 28 Nov 2026.",
+        "max": "4% trailing from peak equity.",
+        "type": "trailing (equity)",
+        "fundedApplies": "yes (no evaluation)"
+      },
+      "payout": {
+        "split": "80% standard, 90% paid add-on",
+        "first": "14 days of funded trading (7 with Earlier Payout add-on)",
+        "frequency": "14 days between requests",
+        "minimum": "$100 net of split",
+        "cap": "First three approved payouts each capped at 5% of account size; excess forfeited at reset",
+        "consistency": "Profit-distribution rule: one day may contribute at most 30% of a requested payout (40% for accounts bought before 3 Feb 2026); excess deducted, no breach.",
+        "other": "Five trading days with trades held at least 60 seconds; payout approval at the company's sole discretion (video or phone call possible)."
+      },
+      "restrictions": {
+        "news": "No trading 10 minutes before and after major releases and \"market-shocks\".",
+        "overnightWeekend": "Allowed.",
+        "automation": "Manual trading only (EAs and scripts breach the account).",
+        "copyTrading": "Allowed in evaluation, prohibited in funded stage.",
+        "holdTime": "60 seconds minimum per trade (new accounts).",
+        "riskLimits": "HFT, hedge arbitrage, tick scalping, grid, one-sided betting, latency/reverse arbitrage prohibited in funded stage.",
+        "inactivity": "One trade every 30 days.",
+        "other": "Up to three challenges totalling $600K."
+      },
+      "contradictions": [
+        "28 Nov 2026 FAQ shows a FRIDAY30 promotion while the last readable official notice says new orders are paused."
+      ],
+      "openQuestions": [
+        "Confirm whether checkout reopened; March 2026 rules could not be re-read on 28 Nov 2026."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "Rules and Conditions V.2 (March 2026)",
+          "url": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf"
+        },
+        {
+          "type": "official",
+          "label": "FAQ",
+          "url": "https://dnafunded.com/faqs/",
+          "date": "2026-11-28"
+        },
+        {
+          "type": "official",
+          "label": "Homepage notice (indexed)",
+          "url": "https://dnafunded.com/"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json DNA (official PDF read 18-19 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive dna-funded (blocked, 35-byte captures, 25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/dna-funded",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "competitor",
+          "label": "LuxAlgo — DNA paused new orders (checked 8 Sep 2026)",
+          "url": "https://www.luxalgo.com/blog/best-prop-firms-for-algorithmic-trading-in-2025/"
+        },
+        {
+          "type": "competitor",
+          "label": "QuantVPS — orders paused October 2026",
+          "url": "https://www.quantvps.com/blog/forex-prop-firm-reviews"
+        },
+        {
+          "type": "competitor",
+          "label": "The GodFunded — earlier resumption 13 Aug 2026",
+          "url": "https://thegodfunded.com/en/firms/dnafunded/news/"
+        },
+        {
+          "type": "competitor",
+          "label": "PropWeekly shutdown tracker",
+          "url": "https://propweekly.com/shutdowns"
+        }
+      ],
+      "fr": {
+        "dispo": "Commandes suspendues (avis officiel ; promo FRIDAY30 visible le 28/11 sans réouverture confirmée)",
+        "drawdown": "Max 4 % suiveur sur l'équité",
+        "retrait": "14 jours, 80 % ; 3 premiers retraits plafonnés à 5 % du compte (excédent perdu) ; une journée ≤ 30 % du retrait ; approbation discrétionnaire",
+        "restrictions": "News ±10 min ; tenue 60 s ; pas de copie en financé ; inactivité 30 jours ; manuel uniquement",
+        "ouvert": "Réouverture des ventes non confirmée"
+      }
+    },
+    {
+      "productId": "ofp-instant-95",
+      "firm": "OFP Funding",
+      "slug": "ofp-funding",
+      "programme": "Instant funding (95% split) — legacy catalogue ID",
+      "category": {
+        "market": "forex-cfd",
+        "model": "instant funding",
+        "fundedStage": "instant account"
+      },
+      "availability": {
+        "status": "not sold under this name",
+        "evidence": "The 25 Nov 2026 Terms list five instant plans, all at 100% split: Instant Lite, Classic, Pro, Prime and Plus. \"Up to 95%\" survives only on the instant.ofpfunding.com marketing page. No plan with a 95% split is in the current Terms."
+      },
+      "mapping": {
+        "currentEquivalents": {
+          "Instant Lite": "$50K-$200K; 3% daily / 5% overall; 1% max risk; 5% profit target; min 5 days; max 30 days; no consistency.",
+          "Instant Classic": "$5K-$200K; 5% / 10%; 1% max risk; no target; min 5 days; 25% consistency.",
+          "Instant Pro": "$25K-$100K; 3% / 5%; 1% max risk; min 10 days; no consistency; monthly payout.",
+          "Instant Prime": "$10K-$200K; 5% / 10%; 1% max risk; min 10 days; no consistency.",
+          "Instant Plus": "$5K-$100K; 3% / 6%; no max-risk rule; min 5 days; no consistency."
+        }
+      },
+      "structure": {
+        "phases": 0
+      },
+      "drawdown": {
+        "daily": "Balance must not fall below the highest balance of the calendar day minus the daily %, UK time (T&C 6.2.2).",
+        "max": "Balance must not lose more than the overall % of the balance at the last Reward (T&C 6.2.3): fixed between rewards, rebased at each reward.",
+        "type": "balance-based, rebased at each reward",
+        "fundedApplies": "yes (instant)"
+      },
+      "payout": {
+        "split": "100% on all current instant plans",
+        "first": "28-day review cycle in the Terms (marketing mentions monthly, bi-weekly and on-demand options)",
+        "frequency": "per review period",
+        "minimum": "not stated in Terms",
+        "cap": "none stated",
+        "consistency": "Plan-specific Inconsistency Score (best day / period P&L); at or above the plan maximum, no Reward.",
+        "other": ""
+      },
+      "restrictions": {
+        "news": "News straddling and gap trading around scheduled events or within 2 hours of market close prohibited (payout denial).",
+        "overnightWeekend": "Not restricted except gap-trading clause.",
+        "automation": "AI/HFT bots, mass-order entry and latency scalping prohibited.",
+        "copyTrading": "Copy trading across OFP accounts prohibited.",
+        "holdTime": "HFT one-minute pattern listed as prohibited.",
+        "riskLimits": "Floating P&L must not fall below -1% of account size where the plan has a Max Risk Limit: T&C 6.2.1 says the account is closed immediately, the help centre calls it a soft rule with a balance reset. Max 2 active trades in the same direction and asset.",
+        "inactivity": "28 consecutive calendar days.",
+        "other": "Rewards are reviewed at the end of each 28-day period; all positions must be closed by 23:59 the day before Review Day."
+      },
+      "contradictions": [
+        "1% floating-loss rule: hard closure in T&C 6.2.1 vs soft balance reset in the help centre.",
+        "Payout timing: 28-day review in the Terms vs bi-weekly/on-demand options in marketing."
+      ],
+      "openQuestions": [
+        "Remap the catalogue entry to one of the five current instant plans before any rating."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "Terms and conditions (plan tables §1-2, rules §6.2)",
+          "url": "https://ofpfunding.com/terms-and-conditions"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive ofp-funding (full T&C text, 25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/ofp-funding",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "official",
+          "label": "Trading rules help article",
+          "url": "https://help.ofpfunding.com/what-are-the-trading-rules-every-ofp-trader-must-follow/"
+        },
+        {
+          "type": "official",
+          "label": "Prohibited strategies",
+          "url": "https://help.ofpfunding.com/which-strategies-are-not-allowed-hedging-arbitrage-hft-martingale/"
+        },
+        {
+          "type": "official",
+          "label": "Instant marketing page (up to 95%)",
+          "url": "https://instant.ofpfunding.com/"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json restrictive rules (ofp-funding)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        }
+      ],
+      "fr": {
+        "dispo": "Plus vendu sous ce nom (aucune offre à 95 % dans les CGU) ; 5 plans instantanés à 100 %",
+        "drawdown": "Journalier depuis le plus haut solde du jour ; max depuis le solde au dernier retrait",
+        "retrait": "Revue tous les 28 jours ; 100 % ; score d'incohérence selon le plan",
+        "restrictions": "Perte latente -1 % (fermeture ou remise à zéro selon la source) ; 2 trades max même sens ; pas de bots ; inactivité 28 jours",
+        "ouvert": "Rattacher l'identifiant à un plan actuel"
+      }
+    },
+    {
+      "productId": "ofp-challenge-8-5",
+      "firm": "OFP Funding",
+      "slug": "ofp-funding",
+      "programme": "Two-step challenge (8% / 5%) — legacy catalogue ID",
+      "category": {
+        "market": "forex-cfd",
+        "model": "2-step evaluation",
+        "fundedStage": "funded phase"
+      },
+      "availability": {
+        "status": "not sold with these targets",
+        "evidence": "The 25 Nov 2026 Terms list a Two-Phase challenge at 8% then 4% (not 5%) and a One-Phase at 8%; the 8%/5% \"Royal Challenge\" is described in older (2024) OFP blog posts."
+      },
+      "mapping": {
+        "currentEquivalents": {
+          "Two-Phase (8% / 4%)": "$5K-$200K; 5% daily / 10% overall in both phases and funded; min 5 days per phase and funded; no consistency; funded split up to 100%.",
+          "One-Phase (8%)": "$5K-$200K; 3% daily / 6% overall in challenge and funded; min 5 days; no consistency; 100% split."
+        }
+      },
+      "structure": {
+        "phases": 2,
+        "targets": "current equivalent 8% / 4%"
+      },
+      "drawdown": {
+        "daily": "Balance must not fall below the highest balance of the calendar day minus the daily %, UK time (T&C 6.2.2).",
+        "max": "Balance must not lose more than the overall % of the balance at the last Reward (T&C 6.2.3): fixed between rewards, rebased at each reward.",
+        "type": "balance-based, rebased at each reward",
+        "fundedApplies": "stated in the plan table (funded phase 5% / 10%)"
+      },
+      "payout": {
+        "split": "up to 100%",
+        "first": "28-day review cycle",
+        "frequency": "per review period",
+        "minimum": "not stated",
+        "cap": "none stated",
+        "consistency": "Plan table: none for the Two-Phase (an Inconsistency Score clause exists in §6.2.4).",
+        "other": ""
+      },
+      "restrictions": {
+        "news": "News straddling and gap trading around scheduled events or within 2 hours of market close prohibited (payout denial).",
+        "overnightWeekend": "Not restricted except gap-trading clause.",
+        "automation": "AI/HFT bots, mass-order entry and latency scalping prohibited.",
+        "copyTrading": "Copy trading across OFP accounts prohibited.",
+        "holdTime": "HFT one-minute pattern listed as prohibited.",
+        "riskLimits": "Floating P&L must not fall below -1% of account size where the plan has a Max Risk Limit: T&C 6.2.1 says the account is closed immediately, the help centre calls it a soft rule with a balance reset. Max 2 active trades in the same direction and asset.",
+        "inactivity": "28 consecutive calendar days.",
+        "other": "Rewards are reviewed at the end of each 28-day period; all positions must be closed by 23:59 the day before Review Day."
+      },
+      "contradictions": [
+        "8%/5% catalogue targets vs 8%/4% in the current Terms.",
+        "Same 1% floating-loss contradiction as the instant plans (applies only where the plan sets a Max Risk Limit)."
+      ],
+      "openQuestions": [
+        "Remap to the current Two-Phase (8%/4%) or retire the ID."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "Terms and conditions (plan tables §1-2, rules §6.2)",
+          "url": "https://ofpfunding.com/terms-and-conditions"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive ofp-funding (full T&C text, 25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/ofp-funding",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "official",
+          "label": "Trading rules help article",
+          "url": "https://help.ofpfunding.com/what-are-the-trading-rules-every-ofp-trader-must-follow/"
+        },
+        {
+          "type": "official",
+          "label": "Prohibited strategies",
+          "url": "https://help.ofpfunding.com/which-strategies-are-not-allowed-hedging-arbitrage-hft-martingale/"
+        },
+        {
+          "type": "official",
+          "label": "Instant marketing page (up to 95%)",
+          "url": "https://instant.ofpfunding.com/"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json restrictive rules (ofp-funding)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        }
+      ],
+      "fr": {
+        "dispo": "Plus vendu avec ces objectifs ; équivalent actuel : 2 phases 8 %/4 %",
+        "drawdown": "Équivalent actuel : 5 %/10 % en phases et en financé ; max depuis le solde au dernier retrait",
+        "retrait": "Revue tous les 28 jours ; jusqu'à 100 % ; pas de constance sur ce plan",
+        "restrictions": "Identiques OFP Instant",
+        "ouvert": "Rattacher l'identifiant au 2 phases 8 %/4 %"
+      }
+    },
+    {
+      "productId": "cft-evaluation",
+      "firm": "Crypto Fund Trader",
+      "slug": "crypto-fund-trader",
+      "programme": "\"Evaluation\" — catalogue ID matching the current 2-Phase Evaluation",
+      "category": {
+        "market": "crypto + multi-asset",
+        "model": "2-step evaluation",
+        "fundedStage": "Final Stage account"
+      },
+      "availability": {
+        "status": "available",
+        "evidence": "Catalogue fee range $58 (5K) to $1,250 (200K) matches the 2-Phase price list (FundedFast 28 Oct 2026); the FAQ lists the 2-Phase Evaluation as a current programme."
+      },
+      "mapping": {
+        "mappedTo": "2-Phase Evaluation",
+        "basis": "price match ($58-$1,250) and FAQ programme list"
+      },
+      "structure": {
+        "phases": 2,
+        "targets": "8% / 5% (competitor tables)",
+        "sizes": "$5K-$200K",
+        "minDays": "5 per phase (unless add-on)",
+        "timeLimit": "none"
+      },
+      "drawdown": {
+        "daily": "5%, calculated on balance at 00:05 UTC; breaches measured on equity.",
+        "max": "10% fixed on the initial balance.",
+        "type": "static",
+        "fundedApplies": "yes (same limits on the Final Stage per FAQ wording)"
+      },
+      "payout": {
+        "split": "80%",
+        "first": "after 15 traded days or 30 calendar days",
+        "frequency": "every 15 traded days or 30 calendar days (7 traded days with paid Weekly add-on)",
+        "minimum": "not stated",
+        "cap": "$10,000 profit per day/trade cap; crypto payouts up to $5,000 per transaction (third party)",
+        "consistency": "None on 2-Phase.",
+        "other": "KYC required; all trades must be closed before a request."
+      },
+      "restrictions": {
+        "news": "Allowed (Ascend excepted).",
+        "overnightWeekend": "Allowed on all account types.",
+        "automation": "HFT, tick scalping, latency arbitrage, news-scalping and multi-account reverse-trading EAs prohibited.",
+        "copyTrading": "Hedging/reverse trading across accounts prohibited (Terms 7.1).",
+        "holdTime": "None published.",
+        "riskLimits": "Profit above $10,000 per day and/or per trade deducted; stop loss and 2% max risk only used as criteria for suspension reviews.",
+        "inactivity": "Not addressed in the FAQ.",
+        "other": "Multiple accounts from the same household/IP prohibited; US residents excluded (Terms 7.3); firm may adjust the scholarship amount after review (Terms 8(ix))."
+      },
+      "contradictions": [],
+      "openQuestions": [
+        "Rename the catalogue entry \"2-Phase Evaluation\" for clarity."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "FAQ",
+          "url": "https://cryptofundtrader.com/faq/"
+        },
+        {
+          "type": "official",
+          "label": "Terms and conditions",
+          "url": "https://cryptofundtrader.com/terms-and-conditions/"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive crypto-fund-trader (25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/crypto-fund-trader",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json CFT products and rules",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "competitor",
+          "label": "FundedFast — 1 Phase $40-$1,199, 2 Phases $58-$1,250 (28 Oct 2026)",
+          "url": "https://fundedfast.com/firms/crypto-fund-trader",
+          "date": "2026-10-28"
+        },
+        {
+          "type": "competitor",
+          "label": "The GodFunded — CFT challenges table",
+          "url": "https://thegodfunded.com/en/firms/cryptofundtrader/challenges"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible (= 2 phases actuel, correspondance par les prix)",
+        "drawdown": "Journalier 5 % (solde 00 h 05 UTC, rupture en équité) ; max 10 % fixe",
+        "retrait": "80 % ; après 15 jours tradés ou 30 jours calendaires (7 jours avec option) ; profit plafonné à 10 000 $/jour ou trade",
+        "restrictions": "Pas de HFT, tick scalping, arbitrage ; news et week-end autorisés",
+        "ouvert": "Renommer l'entrée du catalogue"
+      }
+    },
+    {
+      "productId": "cft-accelerated",
+      "firm": "Crypto Fund Trader",
+      "slug": "crypto-fund-trader",
+      "programme": "\"Accelerated\" — catalogue ID matching the former 1-Phase Evaluation",
+      "category": {
+        "market": "crypto + multi-asset",
+        "model": "1-step evaluation",
+        "fundedStage": "Final Stage account"
+      },
+      "availability": {
+        "status": "discontinued (existing accounts only)",
+        "evidence": "Catalogue fee range $40 (5K) to $1,199 (200K) matches the former 1-Phase; the FAQ says 1-Phase Classic, Pro and Turbo \"replace the former 1-Phase and Instant Evaluations\" and describes the former 1-Phase as \"existing accounts\"."
+      },
+      "mapping": {
+        "mappedTo": "former 1-Phase Evaluation",
+        "currentSuccessors": {
+          "1-Phase Classic": "10% target, 3% daily, 6% static max",
+          "1-Phase Pro": "12% target, 3% daily, 5% static max",
+          "1-Phase Turbo": "9% target, 3% daily, 3% static max",
+          "common": "reward every 7 traded days (2 with paid 48h add-on); daily loss on balance at 00:05 UTC; included in the $300K allocation"
+        }
+      },
+      "structure": {
+        "phases": 1,
+        "targets": "10% (former 1-Phase)"
+      },
+      "drawdown": {
+        "daily": "4% (former 1-Phase).",
+        "max": "6% trailing on the highest balance, stops at the initial balance (e.g. $100K: floor $94K, fixed at $100K once balance reaches $107K).",
+        "type": "trailing (balance), locks at initial balance",
+        "fundedApplies": "yes for existing accounts"
+      },
+      "payout": {
+        "split": "80%",
+        "first": "not stated separately for the former 1-Phase",
+        "frequency": "not stated separately",
+        "minimum": "not stated",
+        "cap": "$10,000 per day/trade",
+        "consistency": "None.",
+        "other": ""
+      },
+      "restrictions": {
+        "news": "Allowed (Ascend excepted).",
+        "overnightWeekend": "Allowed on all account types.",
+        "automation": "HFT, tick scalping, latency arbitrage, news-scalping and multi-account reverse-trading EAs prohibited.",
+        "copyTrading": "Hedging/reverse trading across accounts prohibited (Terms 7.1).",
+        "holdTime": "None published.",
+        "riskLimits": "Profit above $10,000 per day and/or per trade deducted; stop loss and 2% max risk only used as criteria for suspension reviews.",
+        "inactivity": "Not addressed in the FAQ.",
+        "other": "Multiple accounts from the same household/IP prohibited; US residents excluded (Terms 7.3); firm may adjust the scholarship amount after review (Terms 8(ix))."
+      },
+      "contradictions": [],
+      "openQuestions": [
+        "Retire the ID or replace it by the three current 1-Phase variants."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "FAQ",
+          "url": "https://cryptofundtrader.com/faq/"
+        },
+        {
+          "type": "official",
+          "label": "Terms and conditions",
+          "url": "https://cryptofundtrader.com/terms-and-conditions/"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive crypto-fund-trader (25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/crypto-fund-trader",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json CFT products and rules",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "competitor",
+          "label": "FundedFast — 1 Phase $40-$1,199, 2 Phases $58-$1,250 (28 Oct 2026)",
+          "url": "https://fundedfast.com/firms/crypto-fund-trader",
+          "date": "2026-10-28"
+        },
+        {
+          "type": "competitor",
+          "label": "The GodFunded — CFT challenges table",
+          "url": "https://thegodfunded.com/en/firms/cryptofundtrader/challenges"
+        }
+      ],
+      "fr": {
+        "dispo": "Arrêté (comptes existants) ; remplacé par 1-Phase Classic/Pro/Turbo",
+        "drawdown": "Journalier 4 % ; max 6 % suiveur sur le solde, bloqué au solde initial",
+        "retrait": "80 % ; cadence propre non publiée ; plafond 10 000 $/jour",
+        "restrictions": "Identiques CFT Evaluation",
+        "ouvert": "Retirer l'identifiant ou le remplacer par les variantes actuelles"
+      }
+    },
+    {
+      "productId": "funded-bull-1-step",
+      "firm": "FundedBull",
+      "slug": "funded-bull",
+      "programme": "1 Step Challenge",
+      "category": {
+        "market": "forex-cfd",
+        "model": "1-step evaluation",
+        "fundedStage": "funded account"
+      },
+      "availability": {
+        "status": "available",
+        "evidence": "Terms §4.1 list 1-, 2- and 3-Step challenges; PropFirmMap and TheTrustedProp (Sep 2026) list all three routes on sale, $5K-$250K."
+      },
+      "structure": {
+        "phases": 1,
+        "targets": "9%",
+        "timeLimit": "unlimited",
+        "minDays": 5
+      },
+      "drawdown": {
+        "daily": "3%.",
+        "max": "6%, \"Drawdown Type: Trailing\" (challenge parameters). Terms 1.8.8 define drawdown as a percentage of the account's highest equity point.",
+        "type": "trailing (equity high, per definition)",
+        "fundedApplies": "not stated: §4.2.3 only says funded traders must comply with \"daily and overall drawdown limits\"; PropFirmMap shows one funded row of 8% / 4% for all routes",
+        "notes": "Post-payout reset to the initial balance (§5.2) is ambiguous for the floor."
+      },
+      "payout": {
+        "split": "90%",
+        "first": "after 14 days and 5 trading days (a day counts at 0.5% of the profit target)",
+        "frequency": "then within 7 days",
+        "minimum": "$200 profit share on 5K/10K, 2% of account size on 25K-250K (homepage shows $500)",
+        "cap": "none stated",
+        "consistency": "Qualitative \"replicability\": strategy, risk and execution must match the challenge and the most profitable day; no numeric best-day rule.",
+        "other": "Trading locked while a payout is processed; only non-breached accounts eligible; after a processed payout \"the maximum drawdown limit resets to the initial account balance\" (§5.2)."
+      },
+      "restrictions": {
+        "news": "Challenge: no trading 5 minutes before/after news; funded: no news restriction.",
+        "overnightWeekend": "Not restricted.",
+        "automation": "Software/AI, ultra-high-speed or HFT giving an unfair advantage prohibited (§6.1.4).",
+        "copyTrading": "Unauthorised copy trading, signal services and group trading prohibited.",
+        "holdTime": "None published.",
+        "riskLimits": "No more than 2% of equity risked per trade expected (§6.1.11); positions noticeably larger than usual prohibited (§6.1.10).",
+        "inactivity": "More than 15 consecutive days (7 on the discounted plan).",
+        "other": "One account per person without approval."
+      },
+      "contradictions": [
+        "Funded loss limits: Terms give none; PropFirmMap reports 8% / 4% for all funded accounts."
+      ],
+      "openQuestions": [
+        "Ask FundedBull for the funded loss limit and type for the 1-Step route."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "Terms of Use (§4.1, §4.2.3, §5.2, §6.1)",
+          "url": "https://fundedbull.com/terms/"
+        },
+        {
+          "type": "official",
+          "label": "Trading rules",
+          "url": "https://fundedbull.com/trading-rules/"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive funded-bull (full terms, 25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/funded-bull",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json restrictive rules (funded-bull)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "competitor",
+          "label": "PropFirmMap — FundedBull review (funded row 8% / 4%, reset on payout)",
+          "url": "https://propfirmmap.com/blog/fundedbull-review"
+        },
+        {
+          "type": "competitor",
+          "label": "Propvator — FundedBull drawdown by challenge",
+          "url": "https://propvator.com/blog/?p=5154"
+        },
+        {
+          "type": "competitor",
+          "label": "TheTrustedProp — challenges (Sep 2026)",
+          "url": "https://thetrustedprop.com/prop-firms/fundedbull/challenges"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible",
+        "drawdown": "Défi : journalier 3 %, max 6 % suiveur (équité) ; financé non précisé (un comparateur indique 8 %/4 %)",
+        "retrait": "90 % ; 1er retrait après 14 jours et 5 jours de trading, puis 7 jours ; minimum 200 $ ou 2 %",
+        "restrictions": "Risque ≤ 2 % par trade ; pas de HFT ni IA ; inactivité 15 jours ; trading bloqué pendant un retrait",
+        "ouvert": "Drawdown du compte financé"
+      }
+    },
+    {
+      "productId": "funded-bull-3-step",
+      "firm": "FundedBull",
+      "slug": "funded-bull",
+      "programme": "3 Step Challenge",
+      "category": {
+        "market": "forex-cfd",
+        "model": "3-step evaluation",
+        "fundedStage": "funded account"
+      },
+      "availability": {
+        "status": "available",
+        "evidence": "Same as 1 Step."
+      },
+      "structure": {
+        "phases": 3,
+        "targets": "6% / 6% / 6%",
+        "timeLimit": "unlimited",
+        "minDays": 5
+      },
+      "drawdown": {
+        "daily": "4%.",
+        "max": "7%, \"Drawdown Type: Static\" (challenge parameters).",
+        "type": "static (challenge)",
+        "fundedApplies": "not stated (same §4.2.3 wording); PropFirmMap funded row 8% / 4%",
+        "notes": ""
+      },
+      "payout": {
+        "split": "90%",
+        "first": "after 14 days and 5 trading days (a day counts at 0.5% of the profit target)",
+        "frequency": "then within 7 days",
+        "minimum": "$200 profit share on 5K/10K, 2% of account size on 25K-250K (homepage shows $500)",
+        "cap": "none stated",
+        "consistency": "Qualitative \"replicability\": strategy, risk and execution must match the challenge and the most profitable day; no numeric best-day rule.",
+        "other": "Trading locked while a payout is processed; only non-breached accounts eligible; after a processed payout \"the maximum drawdown limit resets to the initial account balance\" (§5.2)."
+      },
+      "restrictions": {
+        "news": "Challenge: no trading 5 minutes before/after news; funded: no news restriction.",
+        "overnightWeekend": "Not restricted.",
+        "automation": "Software/AI, ultra-high-speed or HFT giving an unfair advantage prohibited (§6.1.4).",
+        "copyTrading": "Unauthorised copy trading, signal services and group trading prohibited.",
+        "holdTime": "None published.",
+        "riskLimits": "No more than 2% of equity risked per trade expected (§6.1.11); positions noticeably larger than usual prohibited (§6.1.10).",
+        "inactivity": "More than 15 consecutive days (7 on the discounted plan).",
+        "other": "One account per person without approval."
+      },
+      "contradictions": [
+        "Funded loss limits: Terms give none; PropFirmMap reports 8% / 4%."
+      ],
+      "openQuestions": [
+        "Ask FundedBull for the funded loss limit and type for the 3-Step route."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "Terms of Use (§4.1, §4.2.3, §5.2, §6.1)",
+          "url": "https://fundedbull.com/terms/"
+        },
+        {
+          "type": "official",
+          "label": "Trading rules",
+          "url": "https://fundedbull.com/trading-rules/"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive funded-bull (full terms, 25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/funded-bull",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json restrictive rules (funded-bull)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "competitor",
+          "label": "PropFirmMap — FundedBull review (funded row 8% / 4%, reset on payout)",
+          "url": "https://propfirmmap.com/blog/fundedbull-review"
+        },
+        {
+          "type": "competitor",
+          "label": "Propvator — FundedBull drawdown by challenge",
+          "url": "https://propvator.com/blog/?p=5154"
+        },
+        {
+          "type": "competitor",
+          "label": "TheTrustedProp — challenges (Sep 2026)",
+          "url": "https://thetrustedprop.com/prop-firms/fundedbull/challenges"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible",
+        "drawdown": "Défi : journalier 4 %, max 7 % fixe ; financé non précisé (comparateur : 8 %/4 %)",
+        "retrait": "Identique 1 Step",
+        "restrictions": "Identiques 1 Step",
+        "ouvert": "Drawdown du compte financé"
+      }
+    },
+    {
+      "productId": "qt-one",
+      "firm": "QT Funded (Quant Tekel)",
+      "slug": "quant-tekel",
+      "programme": "QT ONE (1-Step)",
+      "category": {
+        "market": "forex-cfd",
+        "model": "1-step evaluation",
+        "fundedStage": "Performance account"
+      },
+      "availability": {
+        "status": "available",
+        "evidence": "Launched 11 Aug 2026 (The GodFunded); first plan in the homepage comparison table and QT Launch FAQ."
+      },
+      "structure": {
+        "phases": 1,
+        "targets": "6%",
+        "timeLimit": "none",
+        "minDays": "none"
+      },
+      "drawdown": {
+        "daily": "3% of starting balance, threshold recalculated each day from the higher of previous-day closing balance or equity (trailing daily level).",
+        "max": "Launch FAQ and help article: 6% (Static) in the evaluation. Homepage card and comparison table: \"6% trailing\".",
+        "type": "contradictory (static vs trailing)",
+        "fundedApplies": "not stated separately"
+      },
+      "payout": {
+        "split": "70%",
+        "first": "after a 4 trading-day cycle",
+        "frequency": "every 4 trading days",
+        "minimum": "4 trading days",
+        "cap": "none stated",
+        "consistency": "None.",
+        "other": ""
+      },
+      "restrictions": {
+        "news": "No news rule (homepage table).",
+        "overnightWeekend": "Positions may be held over weekends; no new trades or modifications at weekends (platform).",
+        "automation": "Prohibited Strategies Policy (not detailed in the FAQ).",
+        "copyTrading": "Per Prohibited Strategies Policy.",
+        "holdTime": "None.",
+        "riskLimits": "Funded: total floating loss must not exceed 1% at any time; exceeding it is a hard breach.",
+        "inactivity": "7-day inactivity = hard breach (Launch FAQ); some support articles say 14 days; general T&C say 30 days.",
+        "other": "Stop-loss rule: none (homepage table)."
+      },
+      "contradictions": [
+        "Maximum drawdown: static (Launch FAQ, help article) vs trailing (homepage card and comparison table).",
+        "Inactivity: 7 vs 14 vs 30 days depending on the document."
+      ],
+      "openQuestions": [
+        "Ask QT which drawdown applies on the funded QT ONE account."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "QT Launch FAQ (PDF)",
+          "url": "https://qtfunded.quanttekel.com/wp-content/themes/qt-funded/assets/doc/QT%20Launch%20FAQ.pdf"
+        },
+        {
+          "type": "official",
+          "label": "Homepage plan cards and comparison table",
+          "url": "https://qtfunded.quanttekel.com/"
+        },
+        {
+          "type": "official",
+          "label": "Terms and Conditions (general)",
+          "url": "https://qtfunded.quanttekel.com/terms-and-conditions-general/"
+        },
+        {
+          "type": "official",
+          "label": "Weekend holding article",
+          "url": "https://support.qtfunded.com/support/articles/5412723610527-Can-I-hold-trades-over-the-weekend"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive quant-tekel (25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/quant-tekel",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json restrictive rules (quant-tekel)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "official",
+          "label": "QT ONE help article",
+          "url": "https://support.qtfunded.com/support/articles/9000000000001-qt-one"
+        },
+        {
+          "type": "competitor",
+          "label": "The GodFunded — QT catalogue overhaul (11 Aug 2026)",
+          "url": "https://thegodfunded.com/en/news/qtfunded-overhauls-catalog-new-plans-4-day-payouts-and-risk-rule-adjustments",
+          "date": "2026-08-11"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible",
+        "drawdown": "Journalier 3 % (niveau suiveur) ; max 6 % « statique » (FAQ) contre « trailing » (page d'accueil)",
+        "retrait": "70 %, cycle de 4 jours de trading, pas de constance",
+        "restrictions": "Perte latente 1 % éliminatoire en financé ; inactivité 7 j (14 ou 30 selon d'autres pages)",
+        "ouvert": "Type de drawdown et durée d'inactivité"
+      }
+    },
+    {
+      "productId": "qt-power",
+      "firm": "QT Funded (Quant Tekel)",
+      "slug": "quant-tekel",
+      "programme": "QT POWER (2-Step, 6% / 6%)",
+      "category": {
+        "market": "forex-cfd",
+        "model": "2-step evaluation",
+        "fundedStage": "funded account"
+      },
+      "availability": {
+        "status": "available (listed, not in the comparison table)",
+        "evidence": "Homepage \"Choose your evaluation\" cards include QT POWER (6% target, 80%, 14 days, 8% max, $5K-$100K); product pages show \"InStock\"; the comparison table lists only QT ONE, TWO and INSTANT. Launched 21 Aug 2026; support article distinguishes purchases before/after 11 Aug."
+      },
+      "structure": {
+        "phases": 2,
+        "targets": "6% / 6%",
+        "minDays": "4 per phase",
+        "timeLimit": "not stated"
+      },
+      "drawdown": {
+        "daily": "4%, fixed on the initial balance and based on end-of-day values.",
+        "max": "8% of the initial balance.",
+        "type": "static",
+        "fundedApplies": "stated: listed under \"QT Evaluation Stage and Funded Stages — Maximum & Daily Loss Limits\" in the general Terms (the support article alone does not say)"
+      },
+      "payout": {
+        "split": "80%",
+        "first": "14 days (accounts bought on or before 10 Aug: first payout on demand)",
+        "frequency": "14 days",
+        "minimum": "4 trading days",
+        "cap": "none stated",
+        "consistency": "35% best-day score in challenge and funded.",
+        "other": ""
+      },
+      "restrictions": {
+        "news": "\"The standard News Rule does not apply to QT Power accounts.\"",
+        "overnightWeekend": "Positions may be held over weekends; no new trades at weekends.",
+        "automation": "Not addressed.",
+        "copyTrading": "Not addressed.",
+        "holdTime": "None.",
+        "riskLimits": "\"All or nothing\" strategies prohibited; FXEmpire reports a 2% per-trade exposure cap (not found on the official article).",
+        "inactivity": "14 days (all accounts).",
+        "other": ""
+      },
+      "contradictions": [
+        "Availability: absent from the homepage comparison table although sold via the plan cards."
+      ],
+      "openQuestions": [
+        "Confirm the 2% exposure cap reported by FXEmpire."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "QT Launch FAQ (PDF)",
+          "url": "https://qtfunded.quanttekel.com/wp-content/themes/qt-funded/assets/doc/QT%20Launch%20FAQ.pdf"
+        },
+        {
+          "type": "official",
+          "label": "Homepage plan cards and comparison table",
+          "url": "https://qtfunded.quanttekel.com/"
+        },
+        {
+          "type": "official",
+          "label": "Terms and Conditions (general)",
+          "url": "https://qtfunded.quanttekel.com/terms-and-conditions-general/"
+        },
+        {
+          "type": "official",
+          "label": "Weekend holding article",
+          "url": "https://support.qtfunded.com/support/articles/5412723610527-Can-I-hold-trades-over-the-weekend"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive quant-tekel (25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/quant-tekel",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json restrictive rules (quant-tekel)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "official",
+          "label": "QT POWER help article",
+          "url": "https://support.qtfunded.com/support/articles/5744325221663-qt-power"
+        },
+        {
+          "type": "official",
+          "label": "QT Power product page",
+          "url": "https://qtfunded.quanttekel.com/product/qt-power-2-step-stage-1-50000-mt5-2/"
+        },
+        {
+          "type": "competitor",
+          "label": "FXEmpire — QT Funded review",
+          "url": "https://www.fxempire.com/prop-firms/qtfunded"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible (fiche sur la page d'accueil, absent du tableau comparatif)",
+        "drawdown": "Journalier 4 % fixe (fin de journée) ; max 8 % du solde initial, applicable aussi en financé selon les CGU",
+        "retrait": "80 %, 14 jours, constance 35 %",
+        "restrictions": "Pas de règle news ; inactivité 14 jours ; stratégies « tout ou rien » interdites",
+        "ouvert": "Plafond d'exposition 2 % à confirmer"
+      }
+    },
+    {
+      "productId": "wsfunded-prime-1phase",
+      "firm": "WSFunded",
+      "slug": "wsfunded",
+      "programme": "(1 Phase) Wall Street PRIME",
+      "category": {
+        "market": "forex-cfd",
+        "model": "1-step evaluation",
+        "fundedStage": "funded account"
+      },
+      "availability": {
+        "status": "available",
+        "evidence": "Checkout (purchase.wsfunded.com) lists Prime among 1-Phase plans; FAQ article \"Updated within the last hour\" in the 25 Nov 2026 archive; 50K and 100K sizes highlighted."
+      },
+      "structure": {
+        "phases": 1,
+        "targets": "5%",
+        "minDays": "none",
+        "timeLimit": "none"
+      },
+      "drawdown": {
+        "daily": "1%: floating equity when a trade is open, otherwise closed balance at the start of the day; resets daily.",
+        "max": "3% trailing: \"follows the highest account balance reached\"; breach when balance falls to the limit.",
+        "type": "trailing (balance high-water mark)",
+        "fundedApplies": "stated as programme rule (no separate funded figure)"
+      },
+      "payout": {
+        "split": "90%",
+        "first": "instant (on request)",
+        "frequency": "instant, first and subsequent",
+        "minimum": "at least 4% profit generated before a request",
+        "cap": "maximum withdrawal limited to 1% of the initial balance",
+        "consistency": "None.",
+        "other": ""
+      },
+      "restrictions": {
+        "news": "News trading allowed in Phase 1 only; not permitted on the funded account (4 minutes either side, profits deducted).",
+        "overnightWeekend": "Allowed (swing trading permitted).",
+        "automation": "EAs allowed per the Prime article, but Terms 7.18 cancel accounts using third-party EAs.",
+        "copyTrading": "Not permitted on funded accounts (Terms 7.27).",
+        "holdTime": "Trades under 60 seconds prohibited.",
+        "riskLimits": "Max 1% risk per trading idea; stop loss within 2 minutes of opening (funded softbreach cancels the pending payout).",
+        "inactivity": "30 days.",
+        "other": "Warning ladder in Terms 8.4 (leverage reduction and payout delays)."
+      },
+      "contradictions": [
+        "Published payout axis \"instant payout\" omits the 4% minimum profit and the 1%-of-initial-balance withdrawal cap."
+      ],
+      "openQuestions": [
+        "Is the 1% withdrawal cap per request or per period?"
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "WSFunded FAQ (Prime section)",
+          "url": "https://wsfunded.com/en/faq"
+        },
+        {
+          "type": "official",
+          "label": "Checkout plan comparison",
+          "url": "https://purchase.wsfunded.com/"
+        },
+        {
+          "type": "official",
+          "label": "News trading article",
+          "url": "https://faq.wsfunded.com/en/articles/9582168-news-trading"
+        },
+        {
+          "type": "official",
+          "label": "Terms and conditions",
+          "url": "https://wsfunded.com/en/terms-conditions"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive wsfunded (FAQ full text, 25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/wsfunded",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json restrictive rules (wsfunded)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible",
+        "drawdown": "Journalier 1 % ; max 3 % suiveur sur le plus haut solde",
+        "retrait": "90 %, à la demande, mais 4 % de profit minimum et retrait plafonné à 1 % du solde initial",
+        "restrictions": "News interdites en financé ; stop loss sous 2 min ; risque 1 % par idée ; tenue 60 s ; inactivité 30 jours",
+        "ouvert": "Le plafond de 1 % contredit la note « retrait instantané » publiée"
+      }
+    },
+    {
+      "productId": "traders-launch-static-25k",
+      "firm": "Traders Launch",
+      "slug": "traders-launch",
+      "programme": "Static 25K (futures, limited \"Static\" line)",
+      "category": {
+        "market": "futures",
+        "model": "1-step evaluation, static drawdown",
+        "fundedStage": "SimFunded"
+      },
+      "availability": {
+        "status": "available (limited drop)",
+        "evidence": "Homepage offers \"Premium, Static or the latest TL Drop\"; Static line ($25K-$100K) launched as limited accounts (X post, ~Oct 2026; 128 accounts left on 9 Oct per ComparePropFirms); BestProps (mid-Nov 2026) lists Static still sold."
+      },
+      "structure": {
+        "phases": 1,
+        "targets": "$1,500",
+        "minDays": "3 (competitor)",
+        "timeLimit": "60 days",
+        "fees": "$119 (60%), $149 (80%), $169 (90%)"
+      },
+      "drawdown": {
+        "daily": "No daily loss limit; evaluation session profit capped at 50% of the target on static plans (pause, not breach).",
+        "max": "$500 static drawdown (2% of 25K), does not trail; no buffer stage.",
+        "type": "static",
+        "fundedApplies": "stated by competitors (no buffer stage, static); PropRadar read \"$500 static\" on the official homepage on 30 Oct 2026"
+      },
+      "payout": {
+        "split": "60%, 80% or 90%, chosen at purchase",
+        "first": "once SimFunded profit is above +1%",
+        "frequency": "one request per 24 hours per trader across accounts",
+        "minimum": "+1% profit",
+        "cap": "No payout cap on Static 90%; daily earnings limit of $1,000 on Static 60%/80% 25K (PropFirmMatch); review of up to 5 business days at $100K cumulative payouts.",
+        "consistency": "No consistency rule once funded.",
+        "other": "Payouts described as discretionary awards; partner-programme referrals may be ineligible (Terms)."
+      },
+      "restrictions": {
+        "news": "Not restricted.",
+        "overnightWeekend": "Futures session rules; flat around CME index price-limit zones (within 2% of the daily limit).",
+        "automation": "HFT-style trading prohibited; review if over 10% of trades open and close within 2 seconds.",
+        "copyTrading": "Coordinated cross-trader hedging prohibited.",
+        "holdTime": "Scalps of 5-30 seconds allowed.",
+        "riskLimits": "Hedging prohibited; routine martingale adding to losers may trigger review.",
+        "inactivity": "At least one trade in any 7 days; SimFunded account paused (evaluation breached).",
+        "other": "Background check and due diligence before funding; terms changeable without notice."
+      },
+      "contradictions": [],
+      "openQuestions": [
+        "Official page with the Static plan funded rules (only plan cards and third-party copies were readable)."
+      ],
+      "sources": [
+        {
+          "type": "official",
+          "label": "Homepage plan cards",
+          "url": "https://traderslaunch.com/"
+        },
+        {
+          "type": "official",
+          "label": "Futures rules",
+          "url": "https://traderslaunch.com/futures/rules"
+        },
+        {
+          "type": "official",
+          "label": "FAQ",
+          "url": "https://traderslaunch.com/faq"
+        },
+        {
+          "type": "official",
+          "label": "Traders Launch X post — Static LIMITED accounts",
+          "url": "https://x.com/TradersLaunch/status/2105267667221229994"
+        },
+        {
+          "type": "archive",
+          "label": "Terms archive traders-launch (25 Nov 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/tree/agent/terms-archive/terms-archive/traders-launch",
+          "date": "2026-11-25"
+        },
+        {
+          "type": "repo",
+          "label": "firm-updates.json (Static 25K read 30 Oct 2026)",
+          "url": "https://github.com/adriengeyer02-bot/propradar/blob/main/app/data/firm-updates.json"
+        },
+        {
+          "type": "competitor",
+          "label": "PropFirmMatch — Static 80% 25K challenge page",
+          "url": "https://propfirmmatch.com/futures/prop-firm-challenges/traders-launch-futures-evaluation-static-80-profit-split-1-step-25k"
+        },
+        {
+          "type": "competitor",
+          "label": "PropFirmMatch — Traders Launch rules (daily earnings limits)",
+          "url": "https://propfirmmatch.com/futures/prop-firms/traders-launch"
+        },
+        {
+          "type": "competitor",
+          "label": "ComparePropFirms — TL Early Access static",
+          "url": "https://comparepropfirms.com/prop-firm/traders-launch/"
+        },
+        {
+          "type": "competitor",
+          "label": "BestProps — Static line",
+          "url": "https://bestprops.com/prop-firms/traders-launch/"
+        }
+      ],
+      "fr": {
+        "dispo": "Disponible (série limitée)",
+        "drawdown": "500 $ fixe, sans suivi ni palier tampon ; pas de perte journalière",
+        "retrait": "60/80/90 % au choix ; dès +1 %, une demande par 24 h ; plafond journalier 1 000 $ sur 60/80 %, aucun sur 90 %",
+        "restrictions": "Pas de HFT (< 2 s) ni couverture ; un trade tous les 7 jours ; vérification d'antécédents",
+        "ouvert": "Pas de page officielle détaillant le compte financé Static"
+      }
+    }
+  ]
+}
