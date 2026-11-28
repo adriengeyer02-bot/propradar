@@ -1864,6 +1864,737 @@ evidence["oneup-trader"] = {
     }
   }
 };
+// TradeXProp / Atmos / Clarity / FTM / Traders Launch / DayTraders batch, 2026-11-28.
+evidence["tradexprop"] = {
+  "tradexprop-x-1-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Forex plans purchased from 16 April 2025, no add-ons; current funded FAQ.",
+    "scopeFr": "Forex acheté depuis le 16 avril 2025, sans option ; FAQ financée actuelle.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://tradexprop.com/forex-faq/",
+        "reason": "6% fixed loss from initial balance; funded rules same as evaluation."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://tradexprop.com/forex-faq/",
+        "reason": "14-calendar-day cycle from activation or previous processed payout; net profit required."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/forex-faq/",
+        "reason": "45% best day calculated from daily equity snapshots; resets after payout, not closed balance-only."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/forex-faq/",
+        "reason": "Restricted news window; prohibited strategies and trading-style review."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/forex-faq/",
+        "reason": "30-day inactivity hard breach; hard breach forfeits gains unless eligible paid Payout Protector."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "source": "https://tradexprop.com/forex-faq/"
+    }
+  },
+  "tradexprop-x-2-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Forex plans purchased from 16 April 2025, no add-ons; current funded FAQ.",
+    "scopeFr": "Forex acheté depuis le 16 avril 2025, sans option ; FAQ financée actuelle.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://tradexprop.com/forex-faq/",
+        "reason": "8% fixed loss from initial balance; funded rules same as evaluation."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://tradexprop.com/forex-faq/",
+        "reason": "14-calendar-day cycle from activation or previous processed payout; net profit required."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/forex-faq/",
+        "reason": "45% best day calculated from daily equity snapshots; resets after payout, not closed balance-only."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/forex-faq/",
+        "reason": "Restricted news window; prohibited strategies and trading-style review."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/forex-faq/",
+        "reason": "30-day inactivity hard breach; hard breach forfeits gains unless eligible paid Payout Protector."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "source": "https://tradexprop.com/forex-faq/"
+    }
+  },
+  "tradexprop-instant-funded-x": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current sales grid shows 8% trailing and lock at payout; exact trail timing and subsequent withdrawal cycle unresolved.",
+    "scopeFr": "Grille actuelle : trailing 8 % et verrouillage au retrait ; fréquence du seuil et retraits suivants à confirmer.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/instantfunding/",
+        "reason": "First payout available immediately; floor locks on payout."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://tradexprop.com/instantfunding/",
+        "reason": "Product page states no consistency rule."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/instantfunding/",
+        "reason": "EAs permitted; weekend holding requires add-on."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/instantfunding/",
+        "reason": "30-day inactivity requirement."
+      }
+    }
+  },
+  "tradexprop-crypto-x-1-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current crypto-only plan; no percentage consistency explicitly confirmed; split varies by source.",
+    "scopeFr": "Crypto uniquement ; absence de confirmation de la consistency ; partage contradictoire.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://tradexprop.com/crypto-faq/",
+        "reason": "6% static max loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/crypto-faq/",
+        "reason": "First request at any time, thereafter every 30 days; account drawdown does not reset."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/crypto-faq/",
+        "reason": "Daily cap of 3% in either direction closes positions and pauses trading until next day."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "source": "https://tradexprop.com/crypto-faq/"
+    }
+  },
+  "tradexprop-crypto-x-2-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current crypto-only plan; no percentage consistency explicitly confirmed; split varies by source.",
+    "scopeFr": "Crypto uniquement ; absence de confirmation de la consistency ; partage contradictoire.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://tradexprop.com/crypto-faq/",
+        "reason": "9% static max loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/crypto-faq/",
+        "reason": "First request at any time, thereafter every 30 days; account drawdown does not reset."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradexprop.com/crypto-faq/",
+        "reason": "Daily cap of 3% in either direction closes positions and pauses trading until next day."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 9,
+      "source": "https://tradexprop.com/crypto-faq/"
+    }
+  }
+};
+evidence["atmos-funded"] = {
+  "atmos-nova": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current published funded FAQ, no add-ons; exact trailing formula not preset.",
+    "scopeFr": "FAQ financée actuelle, sans option ; pas de préremplissage du seuil suiveur sans formule exacte.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.atmosfunded.com/en/articles/12381211-drawdowns-loss-limits-how-they-work",
+        "reason": "8% trailing with equity, locks at initial balance on payout."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.atmosfunded.com/en/articles/13959447-nova-challenge",
+        "reason": "Seven days at 0.5% each, $100 minimum; full payout leaves no loss allowance after lock."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.atmosfunded.com/en/articles/12381353-what-is-the-consistency-rule",
+        "reason": "No percentage consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.atmosfunded.com/en/articles/13959447-nova-challenge",
+        "reason": "High-impact news restriction ±2 minutes per FAQ; archived agreement says five minutes."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.atmosfunded.com/en/articles/13959447-nova-challenge",
+        "reason": "1% daily aggregate risk per symbol, including closed and floating risk."
+      }
+    }
+  },
+  "atmos-2-step-standard": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current FAQ baseline, no paid add-ons; archived agreement conflicts on news window.",
+    "scopeFr": "FAQ actuelle standard, sans option ; ancien contrat contradictoire sur annonces.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.atmosfunded.com/en/articles/12380559-2-step-standard-challenge",
+        "reason": "10% static total loss in both evaluation and funded phases."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://help.atmosfunded.com/en/articles/12380559-2-step-standard-challenge",
+        "reason": "Standard 14-day cycle."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.atmosfunded.com/en/articles/12381353-what-is-the-consistency-rule",
+        "reason": "No percentage consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.atmosfunded.com/en/articles/12380559-2-step-standard-challenge",
+        "reason": "News restricted ±2 minutes in funded FAQ; EA permission subject to strategy rules."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.atmosfunded.com/en/articles/12380559-2-step-standard-challenge",
+        "reason": "Allocation cap $400K; archived contract includes additional risk restrictions."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://help.atmosfunded.com/en/articles/12380559-2-step-standard-challenge"
+    }
+  },
+  "atmos-instant-funding": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current FAQ 14-day payout; archived agreement says five days, confirm applicable contract.",
+    "scopeFr": "FAQ actuelle 14 jours ; ancien contrat cinq jours, à confirmer.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.atmosfunded.com/en/articles/12381211-drawdowns-loss-limits-how-they-work",
+        "reason": "5% trailing loss locks at initial balance when payout requested."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://help.atmosfunded.com/en/articles/12380563-instant-funding",
+        "reason": "Full withdrawal leaves no loss allowance after floor lock; buffer must remain."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.atmosfunded.com/en/articles/12381353-what-is-the-consistency-rule",
+        "reason": "20% equity-based best day."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.atmosfunded.com/en/articles/12380563-instant-funding",
+        "reason": "Restricted news, EA allowed; archived contract differs on window."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.atmosfunded.com/en/articles/12380563-instant-funding",
+        "reason": "3% daily loss hard breach and maximum allocation $200K."
+      }
+    }
+  }
+};
+evidence["clarity-traders"] = {
+  "clarity-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current published Terms §§6–8; unfilled placeholders and add-on conflicts remain. No add-ons.",
+    "scopeFr": "CG actuelles §§6–8 ; champs non remplis et contradictions sur options. Sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "5% overall fixed floor from initial balance; Instant daily loss trails separately with formula placeholder."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "Seven trading days and 14-day cycle; 70/80/90% staged split; USDT only."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "10% of requested profit, not necessarily cycle net P&L."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "Trades shorter than 60 seconds prohibited; automation requires add-on; weekend trading versus holding distinction unclear."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "60-day inactivity and unresolved review can prevent payout; ordinary KYC not penalized."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 5,
+      "source": "https://www.claritytraders.com/terms-and-conditions"
+    }
+  },
+  "clarity-1step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current published Terms §§6–8; unfilled placeholders and add-on conflicts remain. No add-ons.",
+    "scopeFr": "CG actuelles §§6–8 ; champs non remplis et contradictions sur options. Sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "10% overall fixed floor from initial balance; Instant daily loss trails separately with formula placeholder."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "Seven trading days and 14-day cycle; 70/80/90% staged split; USDT only."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "20% of requested profit, not necessarily cycle net P&L."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "Trades shorter than 60 seconds prohibited; automation requires add-on; weekend trading versus holding distinction unclear."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "60-day inactivity and unresolved review can prevent payout; ordinary KYC not penalized."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://www.claritytraders.com/terms-and-conditions"
+    }
+  },
+  "clarity-2step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current published Terms §§6–8; unfilled placeholders and add-on conflicts remain. No add-ons.",
+    "scopeFr": "CG actuelles §§6–8 ; champs non remplis et contradictions sur options. Sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "10% overall fixed floor from initial balance; Instant daily loss trails separately with formula placeholder."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "Seven trading days and 14-day cycle; 70/80/90% staged split; USDT only."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "20% of requested profit, not necessarily cycle net P&L."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "Trades shorter than 60 seconds prohibited; automation requires add-on; weekend trading versus holding distinction unclear."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.claritytraders.com/terms-and-conditions",
+        "reason": "60-day inactivity and unresolved review can prevent payout; ordinary KYC not penalized."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://www.claritytraders.com/terms-and-conditions"
+    }
+  }
+};
+evidence["funded-trader-markets"] = {
+  "ftm-1step-nitro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: funded floor continuity and split discrepancy need verification.",
+    "scopeFr": "Partiel : seuil financé et partage à vérifier.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://fundedtradermarkets.com/faq/is-there-a-requirement-for-a-minimum-number-of-trading-days",
+        "reason": "Five funded days at 0.5% each."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://fundedtradermarkets.com/faq/category/1-step-nitro-evaluation",
+        "reason": "45% funded best day based on daily balance difference."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundedtradermarkets.com/faq/category/general-trading-rules",
+        "reason": "Overnight/weekend allowed, restrictions on rapid trading and strategies."
+      }
+    }
+  },
+  "ftm-2step-plus": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current FAQ 10% static and 70% starting share; sales landing page differs. Omit percentage preset.",
+    "scopeFr": "FAQ : 10 % statique et partage 70 % ; page commerciale divergente. Sans taux prérempli.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://fundedtradermarkets.com/faq/category/2-step-plus-evaluation",
+        "reason": "Static overall drawdown in programme FAQ."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fundedtradermarkets.com/faq/is-there-a-requirement-for-a-minimum-number-of-trading-days",
+        "reason": "Five qualifying funded days at 0.5% each."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundedtradermarkets.com/faq/category/general-trading-rules",
+        "reason": "Overnight/weekend allowed, restrictions on rapid trading."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://fundedtradermarkets.com/faq/category/2-step-plus-evaluation",
+        "reason": "1% floating loss auto-closes all positions and progressively reduces share to permanent 20% after fourth violation."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "source": "https://fundedtradermarkets.com/faq/category/2-step-plus-evaluation"
+    }
+  },
+  "ftm-instant-standard": {
+    "checkedOn": "2026-11-28",
+    "scope": "Partial: archived plan rules but current detailed Standard FAQ not verified.",
+    "scopeFr": "Partiel : anciennes règles disponibles, FAQ Standard détaillée non vérifiée.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://fundedtradermarkets.com/faq/is-there-a-requirement-for-a-minimum-number-of-trading-days",
+        "reason": "Five funded profitable days at 0.5%."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundedtradermarkets.com/faq/category/general-trading-rules",
+        "reason": "Weekend holding allowed; strategy and rapid trading restrictions."
+      }
+    }
+  },
+  "ftm-instant-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current model-specific FAQ; internal daily loss contradiction, no universal split preset.",
+    "scopeFr": "FAQ actuelle spécifique ; contradiction interne sur perte journalière, pas de partage fixe.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://fundedtradermarkets.com/faq/category/instant-funding-pro",
+        "reason": "3% fixed-dollar trail from highest balance, never locks."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://fundedtradermarkets.com/faq/category/instant-funding-pro",
+        "reason": "Full withdrawals only, staged split, five qualifying days per general FAQ."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://fundedtradermarkets.com/faq/category/instant-funding-pro",
+        "reason": "15% best-day share of overall profit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundedtradermarkets.com/faq/category/general-trading-rules",
+        "reason": "Overnight/weekend allowed; strategy and rapid trading restrictions."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 3,
+      "source": "https://fundedtradermarkets.com/faq/category/instant-funding-pro"
+    }
+  },
+  "ftm-instant-plus": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Instant Plus model-specific FAQ; baseline 80% subject to Shield.",
+    "scopeFr": "Instant Plus FAQ actuelle ; partage 80 % soumis au Shield.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://fundedtradermarkets.com/faq/category/instant-funding-plus",
+        "reason": "6% trail from highest balance, locks at initial balance after +6%."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://fundedtradermarkets.com/faq/category/instant-funding-plus",
+        "reason": "Full withdrawal after floor lock leaves no loss allowance; five qualifying days per general FAQ."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://fundedtradermarkets.com/faq/category/instant-funding-plus",
+        "reason": "15% best-day share of overall profit."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundedtradermarkets.com/faq/category/general-trading-rules",
+        "reason": "Overnight/weekend holding allowed; strategy and rapid trading restrictions."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://fundedtradermarkets.com/faq/category/instant-funding-plus",
+        "reason": "1% floating loss Shield auto-closes positions and reduces reward share, down to permanent 20%."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "source": "https://fundedtradermarkets.com/faq/category/instant-funding-plus"
+    }
+  }
+};
+evidence["traders-launch"] = {
+  "traders-launch-futures-standard": {
+    "checkedOn": "2026-11-28",
+    "scope": "Premium 80% baseline; current general funded rules.",
+    "scopeFr": "Premium 80% baseline ; règles financées générales actuelles.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://www.traderslaunch.com/faq",
+        "reason": "EOD trailing floor locks permanently at starting balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://traderslaunch.com/payout-rules",
+        "reason": "Daily requests above +1% profit, no minimum days; review at $100K total payouts."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://traderslaunch.com/futures/rules",
+        "reason": "No funded consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://traderslaunch.com/futures/rules",
+        "reason": "Session and price-limit zone restrictions; hedging prohibition per FAQ."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.traderslaunch.com/faq",
+        "reason": "Seven-day inactivity pauses funded account (reactivation possible); fixed contract limit."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 80,
+      "source": "https://www.traderslaunch.com/faq"
+    }
+  },
+  "traders-launch-futures-legacy-nyc": {
+    "checkedOn": "2026-11-28",
+    "scope": "Legacy NYC 80% route; sale availability unconfirmed; current general funded rules.",
+    "scopeFr": "Legacy NYC 80% route; sale availability unconfirmed ; règles financées générales actuelles.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://www.traderslaunch.com/faq",
+        "reason": "EOD trailing floor locks permanently at starting balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://traderslaunch.com/payout-rules",
+        "reason": "Daily requests above +1% profit, no minimum days; review at $100K total payouts."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://traderslaunch.com/futures/rules",
+        "reason": "No funded consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://traderslaunch.com/futures/rules",
+        "reason": "Session and price-limit zone restrictions; hedging prohibition per FAQ."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.traderslaunch.com/faq",
+        "reason": "Seven-day inactivity pauses funded account (reactivation possible); fixed contract limit."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 80,
+      "source": "https://www.traderslaunch.com/faq"
+    }
+  },
+  "traders-launch-static-25k": {
+    "checkedOn": "2026-11-28",
+    "scope": "Static 25K 90% route only; verify exact funded floor and lower split variants separately.",
+    "scopeFr": "Static 25K à 90 % uniquement ; seuil exact et autres partages à confirmer.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://traderslaunch.com/",
+        "reason": "Static 90% advertised without per-payout cap; general +1% eligibility applies subject to programme rules."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://traderslaunch.com/",
+        "reason": "No funded consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://traderslaunch.com/futures/rules",
+        "reason": "Futures session and price-limit restrictions."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.traderslaunch.com/faq",
+        "reason": "Seven-day funded inactivity pause; reactivation possible."
+      }
+    }
+  }
+};
+evidence["daytraders-com"] = {
+  "daytraders-trailing": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Pro funded plan, comparison published October 2026; no add-ons.",
+    "scopeFr": "Compte Pro financé actuel, comparatif octobre 2026 ; sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+        "reason": "intraday overall drawdown; Static fixed for evaluation and funded."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17684700-trail-payouts",
+        "reason": "Eight qualifying days each payout; $500 minimum; tier-specific minimum remaining balance and maximum request."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+        "reason": "30% funded best-day consistency on all three plans, including Static."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17704089-trading-hours-holidays-and-overnight-positions",
+        "reason": "Published close-by-session guidance coexists with overnight/weekend permission; no automatic liquidation at session close. Other trading restrictions apply."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://daytraders.com/help/articles/17697925-moving-from-pro-or-s2f-to-live",
+        "reason": "Discretionary live invitation closes sim accounts; excess simulated balances generally forfeited, possible discretionary live performance rewards."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "profitSplit": 100,
+      "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview"
+    }
+  },
+  "daytraders-eod": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Pro funded plan, comparison published October 2026; no add-ons.",
+    "scopeFr": "Compte Pro financé actuel, comparatif octobre 2026 ; sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+        "reason": "eod overall drawdown; Static fixed for evaluation and funded."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17684739-eod-payouts",
+        "reason": "Eight qualifying days each payout; $500 minimum; tier-specific minimum remaining balance and maximum request."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+        "reason": "30% funded best-day consistency on all three plans, including Static."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17704089-trading-hours-holidays-and-overnight-positions",
+        "reason": "Published close-by-session guidance coexists with overnight/weekend permission; no automatic liquidation at session close. Other trading restrictions apply."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://daytraders.com/help/articles/17697925-moving-from-pro-or-s2f-to-live",
+        "reason": "Discretionary live invitation closes sim accounts; excess simulated balances generally forfeited, possible discretionary live performance rewards."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 100,
+      "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview"
+    }
+  },
+  "daytraders-static": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Pro funded plan, comparison published October 2026; no add-ons.",
+    "scopeFr": "Compte Pro financé actuel, comparatif octobre 2026 ; sans option.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+        "reason": "static overall drawdown; Static fixed for evaluation and funded."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17684719-static-payouts",
+        "reason": "Eight qualifying days each payout; $500 minimum; tier-specific minimum remaining balance and maximum request."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+        "reason": "30% funded best-day consistency on all three plans, including Static."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://daytraders.com/help/articles/17704089-trading-hours-holidays-and-overnight-positions",
+        "reason": "Published close-by-session guidance coexists with overnight/weekend permission; no automatic liquidation at session close. Other trading restrictions apply."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://daytraders.com/help/articles/17697925-moving-from-pro-or-s2f-to-live",
+        "reason": "Discretionary live invitation closes sim accounts; excess simulated balances generally forfeited, possible discretionary live performance rewards."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "profitSplit": 100,
+      "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview"
+    }
+  }
+};
 // Orion / WSFunded / Ment / CFT / Funded7 / DNA batch, 2026-11-28.
 evidence["orion-funded"] = {
   "orion-standard-2-step": {
@@ -5586,6 +6317,268 @@ Object.assign(evidence.fundednext,{
   }
 });
 addVariant('funderpro','funderpro-pro','daily-60','Daily 60%','Quotidien 60%','Pro daily route; no paid add-ons.','Pro quotidien, sans option payante.',{payout:{points:.5,source:"https://support.funderpro.com/en/articles/419844-how-does-reward-frequency-and-eligibility-work-for-funderpro-challenges",reason:'Daily reward requests require profit of at least 1% of initial balance; 60% share.'}},{drawdown:'static',lossPercent:10,profitSplit:60,source:"https://support.funderpro.com/en/articles/377860-what-is-the-drawdown-rule-and-how-does-it-apply-to-funded-account-challenges"});
+// Reviewed Claude PR #318: only mapped catalogue IDs; original proposal retained in audits.
+Object.assign(evidence["the5ers"],{
+  "the5ers-high-stakes-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "High Stakes Pro stage after the New (10%/5%) or Classic (8%/5%) evaluation; product page read 28 Nov 2026 (New tab displayed; Classic tab not rendered in the capture). Funded rules are shared by both entry tiers. Exact funded tier loss percentage and consistency remain unconfirmed.",
+    "scopeFr": "Compte Pro High Stakes après l'évaluation New (10 %/5 %) ou Classic (8 %/5 %) ; règles financées communes.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://the5ers.com/faqs/what-is-drawdown-and-how-is-it-calculated/",
+        "reason": "10% maximum loss from the initial balance; the drawdown FAQ example fixes the equity stop-out at $4,500 on a $5,000 account while the allowance grows with retained profit (absolute floor, not trailing)."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://the5ers.com/faqs/payout-policy-and-hub-credit-in-the-high-stakes-program/",
+        "reason": "Bi-weekly payouts on the Pro account, capped at $3,000 (50K) and $4,000 (100K) per payout with minimum P&L of $300/$500; crypto withdrawals limited to $1,500 per transaction (FAQ updated 24 Nov 2026)."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+        "reason": "Executing any order from 2 minutes before to 2 minutes after high-impact news is prohibited; profits are deducted and losses kept. Overnight and weekend holding allowed."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://the5ers.com/high-stakes/",
+        "reason": "Pro account keeps the 5% maximum daily loss; three profitable days (>=0.5% of initial balance) are required for each scale-up; Pro accounts expire after 60 consecutive days of inactivity."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "source": "https://the5ers.com/high-stakes/"
+    }
+  },
+  "the5ers-bootcamp-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Bootcamp Pro stage ($20K/$100K/$250K start); programme FAQ updated 2 Nov 2026; product page read 28 Nov 2026.",
+    "scopeFr": "Compte Pro Bootcamp (départ 20K/100K/250K) ; FAQ du 2 novembre 2026.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://the5ers.com/faqs/what-is-drawdown-and-how-is-it-calculated/",
+        "reason": "Pro maximum loss 4% of the account balance at each level (scaling table). The drawdown FAQ (22 Jul 2026) defines the equity stop-out as a fixed floor from the initial balance whose allowance grows with retained profit (Bootcamp example: floor $9,500 stays while profit rises). The dedicated FAQ's fixed floor example prevails over inconsistent educational blog wording; Pro scaling table gives 4%."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+        "reason": "First payout 14 days after receiving the Pro account, then every 2 weeks; the 14-day cycle restarts every time the account scales."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://www.the5ers.com/fixed-vs-dynamic-profit-targets/",
+        "reason": "Official article states Bootcamp has no published percentage-based consistency rule; programme FAQ and product page list none."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+        "reason": "News trading allowed except bracketing strategies; overnight and weekend holding allowed (index swaps high). No mandatory stop loss on any The5ers programme, Bootcamp included."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+        "reason": "Remaining fee paid to activate the Pro account; 3% daily pause on Pro (trading resumes next day); each active account must use a different trading method; closure after 30 days of inactivity."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 4,
+      "source": "https://the5ers.com/bootcamp/"
+    }
+  },
+  "the5ers-hyper-growth-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Hyper Growth Pro stages; programme FAQ updated 2 Nov 2026; Growth product page read 28 Nov 2026 (Hyper Growth tab).",
+    "scopeFr": "Comptes Pro Hyper Growth ; FAQ du 2 novembre 2026.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+        "reason": "Accounts that hit the stop-out are terminated; the stop-out is 6% below the initial account size. The drawdown FAQ example keeps the floor at $9,400 on a $10,000 account as profit grows."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+        "reason": "First payout 14 days after receiving a Pro account, then every 2 weeks; the cycle resets each time the account scales."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://www.the5ers.com/fixed-vs-dynamic-profit-targets/",
+        "reason": "Official article states Hyper Growth has no published percentage-based consistency rule; programme FAQ and product page list none."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+        "reason": "News trading allowed except bracket strategies; weekend holding allowed; leverage 1:30."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+        "reason": "3% daily pause disables the account for the rest of the day without termination; same target and loss rules at each Pro stage; accounts inactive for more than 30 consecutive days expire; $40,000 evaluation capital cap per trader."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "source": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/"
+    }
+  }
+});
+Object.assign(evidence["funded-trading-plus"],{
+  "ftp-express-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Help article last updated 12 August 2026 (MM.DD.YYYY help-centre format) (format of the help centre); funded FT+ Trader simulated live account.",
+    "scopeFr": "Compte FT+ Trader du 1-Step Express ; article mis à jour le 12 août 2026.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+        "reason": "6% maximum loss trailing the closed-balance high watermark until it reaches the initial balance (balance-based relative trailing)."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+        "reason": "Withdrawal as soon as the account is in profit, from day 1, minimum $50, then every 7 days; 80% split."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.fundedtradingplus.com/consistency-rule/",
+        "reason": "The dedicated Consistency Rule article lists only the 2-Step Classic (35% evaluation / 50% funded); the Express article lists its rules without any consistency requirement."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+        "reason": "Overnight and weekend holding allowed; no stop-loss requirement; news trading allowed (Risk Review Policy), with margin-utilisation review triggers rather than hard limits."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+        "reason": "4% daily drawdown on the prior closed balance remains a hard limit; 30-day inactivity is a hard breach; scale requests need a flat account and risk review."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://help.fundedtradingplus.com/1-step-express-program-information/"
+    }
+  },
+  "ftp-classic-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Help article last updated 07.02.2026; funded FT+ Trader simulated live account.",
+    "scopeFr": "Compte FT+ Trader du 2-Step Classic ; article du 07.02.2026.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/",
+        "reason": "8% static maximum drawdown fixed on the initial balance, unaffected by profits."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/",
+        "reason": "First withdrawal 10 calendar days after account creation, then every 10 days; minimum 1% of the initial balance; 80% split. The 50% consistency gate is counted under consistency. 1% minimum is a material gate."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://help.fundedtradingplus.com/consistency-rule/",
+        "reason": "Funded 50% best-day limit over the payout period; payout is blocked until met, not forfeited; resets after each payout. The programme worked example includes retained pre-withdrawal profit in denominator, so no standard net-cycle preset."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://help.fundedtradingplus.com/risk-review-policy/",
+        "reason": "News and scalping allowed subject to risk review; weekend holding permitted per programme page. The 3% symbol hard breach is counted under funded instead."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/",
+        "reason": "3% per-symbol equity loss hard breach in funded phase; inactivity also applies."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 8,
+      "profitSplit": 80,
+      "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/"
+    }
+  },
+  "ftp-instant-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Help article last updated 12 August 2026 (MM.DD.YYYY help-centre format); no evaluation.",
+    "scopeFr": "Compte Instant ; article du 12 août 2026.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.fundedtradingplus.com/instant-program-information/",
+        "reason": "6% maximum loss trailing the balance high watermark until it reaches the initial balance."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://help.fundedtradingplus.com/instant-program-information/",
+        "reason": "Withdrawal from day 1 once in profit, minimum $50, then every 7 days; researcher contract and KYC required (ordinary)."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.fundedtradingplus.com/consistency-rule/",
+        "reason": "Consistency Rule article lists only the 2-Step Classic; the Instant article lists its rules without any consistency requirement."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.fundedtradingplus.com/instant-program-information/",
+        "reason": "No weekend holding: all trades must be closed by 4:30 pm EST on Friday or are closed by the system. News allowed per Risk Review Policy; no stop-loss requirement."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundedtradingplus.com/instant-program-information/",
+        "reason": "6% daily drawdown on the higher of prior balance or equity remains a hard limit; 30-day inactivity hard breach; scale requests need a flat account and risk review."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://help.fundedtradingplus.com/instant-program-information/"
+    }
+  },
+  "ftp-pnpl-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "PNPL article updated 09.24.2026; the Activation Accounts funded-rules article (09.18.2026) describes the same structure (fee to start, activation fee after passing, 6% equity trailing, 3% daily, 25% consistency). Payout minimum differs from generic Activation FAQ; specific PNPL 3% withdrawal threshold used.",
+    "scopeFr": "PNPL, phase financée ; article du 24.09.2026, cohérent avec « Activation Accounts » (18.09.2026).",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+        "reason": "Funded 6% trailing on equity, following the equity high until it locks at the starting balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+        "reason": "First payout after 10 trading days and at least 10 trading days between payouts; 3% minimum (PNPL page: minimum withdrawal 3% of balance; Activation page: 3% profit threshold, withdrawal from $50); 80% split. Moderate gate, no cap."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+        "reason": "25% best-day limit at payout request (delays, does not cancel); below the 30% threshold of the rubric."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+        "reason": "News trading, weekend holding and weekend trading allowed on the funded stage (subject to the FT+ news policy; the policy link on the page is a placeholder, and the Risk Review Policy states news trading is allowed)."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+        "reason": "Activation fee due after passing; 3% balance-based daily loss is a hard breach; no scaling."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/"
+    }
+  }
+});
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA

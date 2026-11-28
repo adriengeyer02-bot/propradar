@@ -296,3 +296,46 @@ Five firms, 15 complete catalogue entries and variants; exact IDs verified again
 - Funded7 quality score not best-day consistency: QC >=0.90 based on top three trade profits, plus dynamic trade-size outlier gate and minimum activity. Restricted tiers and max portfolio risk explicit. https://funded7.com/faq/rule-1-payout-criteria/ ; https://funded7.com/faq/rule-2-3-position-risk-execution/. One/Instant trailing mechanic not fully confirmed; partial.
 - DNA new orders reportedly suspended; no closure asserted. Official site inaccessible 403 at review; historical March scope and no current stars. Secondary current status: https://bestprops.com/what-is-dna-funded/ ; https://propdesknews.com/firms/dna-funded/rules/. Do not promote until verified.
 - Inventory: 112 unreferenced IDs before this batch, 87 after; existing partials and unlisted variants remain. Running cumulative 143 complete entries (variants/repeated listings included). 25 new assertions. No full execution/build/visual validation yet; single atomic commit.
+
+## TradeXProp, Atmos, Clarity, FTM, Traders Launch, DayTraders + Claude review — 2026-11-28
+
+22 new catalogue IDs, 14 complete, 8 partial. Official pages checked today. Claude PR #318 proposal preserved verbatim in audits/CLAUDE_PROGRAMME_BATCH_2026-11-28.json; 7 mapped programme entries reviewed/updated, 5 newly complete, PNPL re-rated. No price or company rating changes.
+
+| Firm | ID | /5 |
+|---|---|---:|
+| tradexprop | tradexprop-x-1-step | 3.5 |
+| tradexprop | tradexprop-x-2-step | 3.5 |
+| tradexprop | tradexprop-instant-funded-x | Partial |
+| tradexprop | tradexprop-crypto-x-1-step | Partial |
+| tradexprop | tradexprop-crypto-x-2-step | Partial |
+| atmos-funded | atmos-nova | 1.5 |
+| atmos-funded | atmos-2-step-standard | 4 |
+| atmos-funded | atmos-instant-funding | 1 |
+| clarity-traders | clarity-instant | 2.5 |
+| clarity-traders | clarity-1step | 2.5 |
+| clarity-traders | clarity-2step | 2.5 |
+| funded-trader-markets | ftm-1step-nitro | Partial |
+| funded-trader-markets | ftm-2step-plus | Partial |
+| funded-trader-markets | ftm-instant-standard | Partial |
+| funded-trader-markets | ftm-instant-pro | Partial |
+| funded-trader-markets | ftm-instant-plus | 0.5 |
+| traders-launch | traders-launch-futures-standard | 3 |
+| traders-launch | traders-launch-futures-legacy-nyc | 3 |
+| traders-launch | traders-launch-static-25k | Partial |
+| daytraders-com | daytraders-trailing | 1.5 |
+| daytraders-com | daytraders-eod | 2 |
+| daytraders-com | daytraders-static | 2.5 |
+| the5ers | the5ers-high-stakes-current | Partial |
+| the5ers | the5ers-bootcamp-current | 4 |
+| the5ers | the5ers-hyper-growth-current | 4 |
+| funded-trading-plus | ftp-express-current | 3.5 |
+| funded-trading-plus | ftp-classic-current | 3 |
+| funded-trading-plus | ftp-instant-current | 3 |
+| funded-trading-plus | ftp-pnpl-current | 2 |
+
+- TradeXProp Forex consistency uses daily equity snapshots, not simple closed net P&L; no consistency preset. Crypto and Instant unresolved.
+- Atmos funded FAQ vs archived customer agreement differs on news window and payout intervals; scope visible. Clarity terms §§6–8 contain unfilled placeholders, but fixed overall floor expressly stated; Instant daily trail is separate.
+- FTM Shield reduces split down to 20%; Standard and Pro open issues retained. Traders Launch Static 25K exact funded floor and distinct payout tiers require verification. Legacy availability not asserted.
+- DayTraders all three Pro routes have 30% consistency and 8 qualifying days; official live pathway generally forfeits remaining simulated balances. Session close guidance coexists with overnight/weekend permission, not an automatic liquidation.
+- Claude source review: The5ers numerical stop-out examples establish fixed floor; Bootcamp 4% Pro per scaling table, Hyper Growth 6%. High Stakes consistency stays unassessed (general FAQ does not map account types; blog says 50%). No unsupported exact tier preset. Funded Trading Plus date format MM.DD.YYYY established by 09.24.2026. Express and Instant dates are 12 August, not future. PNPL 25% consistency rated 0; payout moderate gate .5, trading 1, total 2. Classic 3% symbol hard breach assigned to funded axis (0), not double-counted under trading; minimum 1% payout .5, total 3. No net-cycle consistency preset due retained-profit example. Claude's original 3.5 remains traceable in source file. Hola Prime 7 proposed product IDs and 8 variants not integrated until catalogue mapping; 10 complete proposals, 5 partial including variants, not counted as integrated. The5ers two additional proposed IDs also not added. Evolve Markets not added, Claude reports broker winding down; official site inaccessible on independent recheck.
+- Running catalogue snapshot: 87 unreferenced before, minus 22 newly referenced and one Hyper Growth ID = 64 remaining; partial and proposed/unmapped offers additional. Cumulative 162 complete entries by previous running tally (variants/repeated listings included). Existing PNPL update not counted twice. Full runtime/build/visual validation pending; single atomic commit.
