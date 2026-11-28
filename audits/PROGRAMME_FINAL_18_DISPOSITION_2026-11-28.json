@@ -77,10 +77,10 @@
     {
       "slug": "sfx-funded",
       "id": "sfx-instant",
-      "status": "blocked",
-      "score": null,
-      "verified": 3,
-      "blocker": "Split Standard/Pro/Flex catalogue and obtain matching funded terms."
+      "status": "rated",
+      "score": 0.5,
+      "verified": 5,
+      "blocker": "Standard baseline; Pro/Flex variants scored, separate prices still to map."
     },
     {
       "slug": "directfundedtrader",
@@ -119,40 +119,41 @@
       "id": "titan-1step",
       "status": "blocked",
       "score": null,
-      "verified": 3,
-      "blocker": "Funded consistency and complete trading permissions; purchase remains blocked."
+      "verified": 4,
+      "blocker": "Funded consistency not explicitly confirmed or excluded; purchase blocked."
     },
     {
       "slug": "titan-capital-markets",
       "id": "titan-2step",
       "status": "blocked",
       "score": null,
-      "verified": 3,
-      "blocker": "Funded consistency and complete trading permissions; purchase remains blocked."
+      "verified": 4,
+      "blocker": "Funded consistency not explicitly confirmed or excluded; purchase blocked."
     },
     {
       "slug": "titan-capital-markets",
       "id": "titan-3step",
       "status": "blocked",
       "score": null,
-      "verified": 3,
-      "blocker": "Funded consistency and complete trading permissions; purchase remains blocked."
+      "verified": 4,
+      "blocker": "Funded consistency not explicitly confirmed or excluded; purchase blocked."
     },
     {
       "slug": "titan-capital-markets",
       "id": "titan-instant",
-      "status": "blocked",
-      "score": null,
-      "verified": 4,
-      "blocker": "Direct article inaccessible, exact product mapping and overnight/weekend policy."
+      "status": "rated",
+      "score": 0.5,
+      "verified": 5,
+      "blocker": "Documentary rating; existing purchase block remains."
     }
   ],
   "counts": {
-    "rated": 6,
-    "blocked": 12,
-    "complete": 169,
-    "partial": 59,
+    "rated": 8,
+    "blocked": 10,
+    "complete": 171,
+    "partial": 57,
     "untouched": 19,
-    "variants": 14
-  }
+    "variants": 16
+  },
+  "followup": "Secondary research 28 Nov: two existing IDs completed, two SFX variants added. No production changes."
 }

@@ -1980,8 +1980,8 @@ evidence["sure-leverage"] = {
 evidence["willis-capital"] = {
   "wfunded-skillcheck": {
     "checkedOn": "2026-11-28",
-    "scope": "Generic SkillCheck ID combines Standard and Expedited. Common funded FAQ says balance-based overall calculation analogous to daily recalculation but gives no high-water-mark or reset rule. Marketing now says simulated while FAQ retains live wording. Separate model mapping and exact overall floor required.",
-    "scopeFr": "SkillCheck générique Standard/Expedited ; référence du seuil global et réinitialisation non explicites, discours live/simulé contradictoire.",
+    "scope": "Generic SkillCheck ID combines Standard and Expedited. Common funded FAQ says balance-based overall calculation analogous to daily recalculation but gives no high-water-mark or reset rule. Marketing now says simulated while FAQ retains live wording. Separate model mapping and exact overall floor required. Official FAQ confirms intraday upward recalculation of daily loss, and says overall loss follows the same concept without a day boundary. No explicit overall floor or high-water-mark formula; secondary review supplies percentages but not the funded mechanism.",
+    "scopeFr": "SkillCheck générique Standard/Expedited ; référence du seuil global et réinitialisation non explicites, discours live/simulé contradictoire. FAQ : recalcul journalier à la hausse, concept global analogue ; formule exacte du seuil non publiée.",
     "assessments": {
       "consistency": {
         "points": 0.5,
@@ -2009,8 +2009,8 @@ evidence["willis-capital"] = {
 evidence["superfunded"] = {
   "superfunded-one-phase": {
     "checkedOn": "2026-11-28",
-    "scope": "Legacy SuperFunded offer. Archive index (25 November) confirms home, FAQ and old V2 PDF all redirect to Eightcap Challenges Japanese home; actual archived replacement rulebook belongs to Eightcap. No contractual succession or exact programme equivalence verified. Prior figures historical only.",
-    "scopeFr": "Ancienne offre SuperFunded ; archives du 25 novembre : accueil, FAQ et PDF V2 redirigent vers Eightcap Challenges. Correspondance contractuelle non démontrée ; données historiques.",
+    "scope": "Legacy SuperFunded offer. Archive index (25 November) confirms home, FAQ and old V2 PDF all redirect to Eightcap Challenges Japanese home; actual archived replacement rulebook belongs to Eightcap. No contractual succession or exact programme equivalence verified. Prior figures historical only. JoinProp 26 November and Prop Up 19 November independently report rebrand to Eightcap Challenges. Mark legacy for catalogue reconciliation; current Eightcap rules separately identifiable, but existing customer migration terms not verified.",
+    "scopeFr": "Ancienne offre SuperFunded ; archives du 25 novembre : accueil, FAQ et PDF V2 redirigent vers Eightcap Challenges. Correspondance contractuelle non démontrée ; données historiques. Changement de marque corroboré les 19 et 26 novembre ; ancienne fiche à rapprocher du successeur, sans supposer la migration des contrats.",
     "assessments": {
       "payout": {
         "points": 0,
@@ -2026,8 +2026,8 @@ evidence["superfunded"] = {
   },
   "superfunded-two-phase": {
     "checkedOn": "2026-11-28",
-    "scope": "Legacy SuperFunded offer. Archive index (25 November) confirms home, FAQ and old V2 PDF all redirect to Eightcap Challenges Japanese home; actual archived replacement rulebook belongs to Eightcap. No contractual succession or exact programme equivalence verified. Prior figures historical only.",
-    "scopeFr": "Ancienne offre SuperFunded ; archives du 25 novembre : accueil, FAQ et PDF V2 redirigent vers Eightcap Challenges. Correspondance contractuelle non démontrée ; données historiques.",
+    "scope": "Legacy SuperFunded offer. Archive index (25 November) confirms home, FAQ and old V2 PDF all redirect to Eightcap Challenges Japanese home; actual archived replacement rulebook belongs to Eightcap. No contractual succession or exact programme equivalence verified. Prior figures historical only. JoinProp 26 November and Prop Up 19 November independently report rebrand to Eightcap Challenges. Mark legacy for catalogue reconciliation; current Eightcap rules separately identifiable, but existing customer migration terms not verified.",
+    "scopeFr": "Ancienne offre SuperFunded ; archives du 25 novembre : accueil, FAQ et PDF V2 redirigent vers Eightcap Challenges. Correspondance contractuelle non démontrée ; données historiques. Changement de marque corroboré les 19 et 26 novembre ; ancienne fiche à rapprocher du successeur, sans supposer la migration des contrats.",
     "assessments": {
       "drawdown": {
         "points": 1,
@@ -2119,23 +2119,33 @@ evidence["sfx-funded"] = {
   },
   "sfx-instant": {
     "checkedOn": "2026-11-28",
-    "scope": "Generic Instant card; current checkout distinguishes Standard 5% max loss / 15% consistency, Pro 6% / 20%, Flex 5% / none. Official 17 November comparison: Standard and Pro on demand, Flex biweekly; generic help contradicts these with 6% trail and ten days / 4% profit. No model mapping or shared numerical preset.",
-    "scopeFr": "Instant générique : Standard 5 %/15 %, Pro 6 %/20 %, Flex 5 %/sans consistency ; retraits à la demande ou bimensuels selon offre. FAQ générique contradictoire.",
+    "scope": "Instant Standard purchased from 19 October 2026; default cheapest current model. Pro and Flex are separate selectable rule variants pending catalogue price mapping. Not the older Instant or giveaway cohort.",
+    "scopeFr": "Instant Standard depuis le 19 octobre 2026 ; Pro et Flex évalués séparément. Ancienne offre et concours exclus. Tarifs distincts à rattacher.",
     "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://intercom.help/sfx-15a6836318fd/en/articles/17653905-instant-standard-how-it-works",
+        "reason": "5% of peak account value, proportional trailing, not a fixed-dollar trail."
+      },
       "payout": {
         "points": 0,
-        "source": "https://sfxfunded.com/help/payout-timing-instant",
-        "reason": "Generic help requires 10 days and 4% profit; newer model-specific marketing differs, so do not generalise this gate to all models."
+        "source": "https://intercom.help/sfx-15a6836318fd/en/articles/17653904-when-can-i-get-paid-in-the-instant-standard-program",
+        "reason": "Five qualifying days at 0.75% each and 4% profit per cycle; on demand, nominal 85% share."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://intercom.help/sfx-15a6836318fd/en/articles/17653905-instant-standard-how-it-works",
+        "reason": "15% SFX Stability Index for payout."
       },
       "trading": {
         "points": 0.5,
-        "source": "https://sfxfunded.com/help/news-trading-instant",
-        "reason": "Automatic SL/TP during news window restricted; second violation closes account."
+        "source": "https://intercom.help/sfx-15a6836318fd/en/articles/17653912-can-i-trade-during-news-in-the-instant-standard-program",
+        "reason": "Restricted red-folder window ±2 minutes, including automatic executions; first violation removes affected profit, second closes account."
       },
       "funded": {
         "points": 0,
-        "source": "https://sfxfunded.com/help/instant-funding",
-        "reason": "Current generic help describes 2% floating loss hard breach, 1% on 300K/400K."
+        "source": "https://intercom.help/sfx-15a6836318fd/en/articles/17653905-instant-standard-how-it-works",
+        "reason": "1% combined floating loss triggers permanent split reductions to 50% and 25%, then account closure on third violation."
       }
     }
   }
@@ -2366,8 +2376,8 @@ evidence["directfundedtrader"] = {
   },
   "directfundedtrader-turbo": {
     "checkedOn": "2026-11-28",
-    "scope": "Turbo pay-after-pass funded route; public checkout shows 8% maximum loss and 3% daily, but general FAQ uses 10% example and does not specify Turbo's funded floor formula. Partial pending model-specific confirmation. General FAQ expressly describes Evaluation and Fast Funding, not Turbo; contract archive does not establish Turbo-specific funded floor.",
-    "scopeFr": "Turbo, paiement après réussite ; 8 % de perte globale et 3 % journalière à la commande ; formule exacte financée à confirmer. FAQ générale limitée à Evaluation/Fast Funding ; contrat Turbo non identifié.",
+    "scope": "Turbo pay-after-pass funded route; public checkout shows 8% maximum loss and 3% daily, but general FAQ uses 10% example and does not specify Turbo's funded floor formula. Partial pending model-specific confirmation. General FAQ expressly describes Evaluation and Fast Funding, not Turbo; contract archive does not establish Turbo-specific funded floor. JoinProp's September Turbo review explicitly confirms the 8% funded loss basis was not published. No static/trailing assumption.",
+    "scopeFr": "Turbo, paiement après réussite ; 8 % de perte globale et 3 % journalière à la commande ; formule exacte financée à confirmer. FAQ générale limitée à Evaluation/Fast Funding ; contrat Turbo non identifié. JoinProp confirme que le type de drawdown financé de 8 % n'est pas publié.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -2427,8 +2437,8 @@ evidence["directfundedtrader"] = {
 evidence["tradersedgefx"] = {
   "tradersedgefx-2-step": {
     "checkedOn": "2026-11-28",
-    "scope": "2-Step funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed. Rechecked model FAQ, Overall Rules and archived Common Terms (25 Nov); no explicit confirmation of numerical consistency absence. No imputed point.",
-    "scopeFr": "FAQ financée 2-Step et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue. FAQ par modèle et règles communes revérifiées ; absence de ratio non démontrée.",
+    "scope": "2-Step funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed. Rechecked model FAQ, Overall Rules and archived Common Terms (25 Nov); no explicit confirmation of numerical consistency absence. No imputed point. Secondary checks: FundedChecker, PropFirmMap and Prop Firm Arena each mark funded consistency as unknown/not reported, not absent.",
+    "scopeFr": "FAQ financée 2-Step et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue. FAQ par modèle et règles communes revérifiées ; absence de ratio non démontrée. Trois comparateurs indiquent que la consistency n'est pas renseignée ; ce n'est pas une confirmation d'absence.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -2454,8 +2464,8 @@ evidence["tradersedgefx"] = {
   },
   "tradersedgefx-1-step": {
     "checkedOn": "2026-11-28",
-    "scope": "1-Step funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed. Rechecked model FAQ, Overall Rules and archived Common Terms (25 Nov); no explicit confirmation of numerical consistency absence. No imputed point.",
-    "scopeFr": "FAQ financée 1-Step et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue. FAQ par modèle et règles communes revérifiées ; absence de ratio non démontrée.",
+    "scope": "1-Step funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed. Rechecked model FAQ, Overall Rules and archived Common Terms (25 Nov); no explicit confirmation of numerical consistency absence. No imputed point. Secondary checks: FundedChecker, PropFirmMap and Prop Firm Arena each mark funded consistency as unknown/not reported, not absent.",
+    "scopeFr": "FAQ financée 1-Step et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue. FAQ par modèle et règles communes revérifiées ; absence de ratio non démontrée. Trois comparateurs indiquent que la consistency n'est pas renseignée ; ce n'est pas une confirmation d'absence.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -2481,8 +2491,8 @@ evidence["tradersedgefx"] = {
   },
   "tradersedgefx-hft": {
     "checkedOn": "2026-11-28",
-    "scope": "HFT funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed. Rechecked model FAQ, Overall Rules and archived Common Terms (25 Nov); no explicit confirmation of numerical consistency absence. No imputed point.",
-    "scopeFr": "FAQ financée HFT et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue. FAQ par modèle et règles communes revérifiées ; absence de ratio non démontrée.",
+    "scope": "HFT funded-specific FAQ and general rules. Numerical best-day consistency is not explicitly confirmed or excluded. General terms and FAQ conflict on news trading; more restrictive funded FAQ displayed. Rechecked model FAQ, Overall Rules and archived Common Terms (25 Nov); no explicit confirmation of numerical consistency absence. No imputed point. Secondary checks: FundedChecker, PropFirmMap and Prop Firm Arena each mark funded consistency as unknown/not reported, not absent.",
+    "scopeFr": "FAQ financée HFT et règlement général. Consistency numérique non confirmée ; contradiction sur les annonces, règle financée restrictive retenue. FAQ par modèle et règles communes revérifiées ; absence de ratio non démontrée. Trois comparateurs indiquent que la consistency n'est pas renseignée ; ce n'est pas une confirmation d'absence.",
     "assessments": {
       "payout": {
         "points": 0,
@@ -2550,8 +2560,8 @@ evidence["monevis"] = {
 evidence["titan-capital-markets"] = {
   "titan-instant": {
     "checkedOn": "2026-11-28",
-    "scope": "Cached official Instant Pro rules available in search index, direct fetch returns 503; archive shows support suspended. Existing generic Instant ID not confirmed to match currently purchasable Pro product. Checkout blocked; no current commercial rating.",
-    "scopeFr": "Instant Pro indexé, accès direct 503 ; rattachement exact de la fiche générique et vente actuelle non établis.",
+    "scope": "Instant Pro documentary rating; indexed official rules corroborated by PropFirmTier and PickMyFirm. Direct support previously returned 503; existing purchase block remains. Overnight/weekend permission not stated; news unrestricted per model-specific rule, EAs subject to approval.",
+    "scopeFr": "Instant Pro, note documentaire corroborée par deux comparateurs ; achat bloqué. Overnight/week-end non précisés, annonces autorisées selon règle spécifique ; robots soumis à accord.",
     "assessments": {
       "payout": {
         "points": 0,
@@ -2572,13 +2582,18 @@ evidence["titan-capital-markets"] = {
         "points": 0,
         "source": "https://support.tgmarkets.com/articles/instant-pro-rules/",
         "reason": "Cached article: 2% floating loss hard breach, maximum 3 positions per instrument, 2% exposure, mandatory stop loss within 60 seconds."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://support.tgmarkets.com/articles/expert-advisors-eas-trade-copiers-policy",
+        "reason": "Model-specific article allows news; general EA/copier rules require prior approval, independently corroborated. No claim about weekend holding."
       }
     }
   },
   "titan-1step": {
     "checkedOn": "2026-11-28",
-    "scope": "Published 1-Step rule article and fee policy retrieved 28 Nov; several support URLs return 503, archive also shows suspended service. Checkout blocked. Funded concentration and trading freedoms not explicitly verified.",
-    "scopeFr": "Règlement 1-Step retrouvé ; certaines pages du support renvoient 503, achat bloqué. Consistency et libertés financées à confirmer.",
+    "scope": "Published 1-Step rule article and fee policy retrieved 28 Nov; several support URLs return 503, archive also shows suspended service. Checkout blocked. Funded concentration and trading freedoms not explicitly verified. PropFirmTier and PickMyFirm independently corroborate drawdown and minimum days; their published consistency detail only specifies Instant Pro and does not explicitly exclude the rule on other plans.",
+    "scopeFr": "Règlement 1-Step retrouvé ; certaines pages du support renvoient 503, achat bloqué. Consistency et libertés financées à confirmer. Deux comparateurs corroborent le drawdown ; consistency non exclue explicitement pour ces offres.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -2594,13 +2609,18 @@ evidence["titan-capital-markets"] = {
         "points": 0,
         "source": "https://support.tgmarkets.com/articles/1-step-evaluation-rules/",
         "reason": "Excessive margin subject to Risk Team assessment and hard breach on evaluation and simulated funded accounts; for 1/2-Step stop loss mandatory within 60 seconds."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://propfirmtier.com/en/firms/titan-capital-markets",
+        "reason": "Funded news execution/modification restricted ±3 minutes; EAs and trade copiers need approval. Weekend holding unreported."
       }
     }
   },
   "titan-2step": {
     "checkedOn": "2026-11-28",
-    "scope": "Published 2-Step rule article and fee policy retrieved 28 Nov; several support URLs return 503, archive also shows suspended service. Checkout blocked. Funded concentration and trading freedoms not explicitly verified.",
-    "scopeFr": "Règlement 2-Step retrouvé ; certaines pages du support renvoient 503, achat bloqué. Consistency et libertés financées à confirmer.",
+    "scope": "Published 2-Step rule article and fee policy retrieved 28 Nov; several support URLs return 503, archive also shows suspended service. Checkout blocked. Funded concentration and trading freedoms not explicitly verified. PropFirmTier and PickMyFirm independently corroborate drawdown and minimum days; their published consistency detail only specifies Instant Pro and does not explicitly exclude the rule on other plans.",
+    "scopeFr": "Règlement 2-Step retrouvé ; certaines pages du support renvoient 503, achat bloqué. Consistency et libertés financées à confirmer. Deux comparateurs corroborent le drawdown ; consistency non exclue explicitement pour ces offres.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -2616,13 +2636,18 @@ evidence["titan-capital-markets"] = {
         "points": 0,
         "source": "https://support.tgmarkets.com/articles/2-step-evaluation-rules/",
         "reason": "Excessive margin subject to Risk Team assessment and hard breach on evaluation and simulated funded accounts; for 1/2-Step stop loss mandatory within 60 seconds."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://propfirmtier.com/en/firms/titan-capital-markets",
+        "reason": "Funded news execution/modification restricted ±3 minutes; EAs and trade copiers need approval. Weekend holding unreported."
       }
     }
   },
   "titan-3step": {
     "checkedOn": "2026-11-28",
-    "scope": "Published 3-Step rule article and fee policy retrieved 28 Nov; several support URLs return 503, archive also shows suspended service. Checkout blocked. Funded concentration and trading freedoms not explicitly verified.",
-    "scopeFr": "Règlement 3-Step retrouvé ; certaines pages du support renvoient 503, achat bloqué. Consistency et libertés financées à confirmer.",
+    "scope": "Published 3-Step rule article and fee policy retrieved 28 Nov; several support URLs return 503, archive also shows suspended service. Checkout blocked. Funded concentration and trading freedoms not explicitly verified. PropFirmTier and PickMyFirm independently corroborate drawdown and minimum days; their published consistency detail only specifies Instant Pro and does not explicitly exclude the rule on other plans.",
+    "scopeFr": "Règlement 3-Step retrouvé ; certaines pages du support renvoient 503, achat bloqué. Consistency et libertés financées à confirmer. Deux comparateurs corroborent le drawdown ; consistency non exclue explicitement pour ces offres.",
     "assessments": {
       "payout": {
         "points": 0.5,
@@ -2638,6 +2663,11 @@ evidence["titan-capital-markets"] = {
         "points": 0,
         "source": "https://support.tgmarkets.com/articles/3-step-evaluation-rules/",
         "reason": "Excessive margin subject to Risk Team assessment and hard breach on evaluation and simulated funded accounts; for 1/2-Step stop loss mandatory within 60 seconds."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://propfirmtier.com/en/firms/titan-capital-markets",
+        "reason": "Funded news execution/modification restricted ±3 minutes; EAs and trade copiers need approval. Weekend holding unreported."
       }
     }
   }
@@ -7943,6 +7973,10 @@ Object.assign(evidence["funded-trading-plus"],{
 });
 addVariant('for-traders','fortraders-1-step','fast-static','Fast Static','Fast Static','Current Forex Fast Static, from 8 June 2026.','Forex Fast Static actuel depuis le 8 juin 2026.',{drawdown:{points:1,source:"https://help.fortraders.com/en/articles/15376206-fast-static-account-forex",reason:'6% fixed floor, unchanged by profits and withdrawals.'},payout:{points:.5,source:"https://help.fortraders.com/en/articles/15376206-fast-static-account-forex",reason:'14-day rewards; three qualifying days, $100 minimum and $15K cap.'}},{drawdown:'static',lossPercent:6,source:"https://help.fortraders.com/en/articles/15376206-fast-static-account-forex"});
 addVariant('sure-leverage','slf-instant-zero','static','Static loss limit','Perte maximale statique','Zero with optional static 4% floor.','Zero avec option seuil statique 4 %.',{drawdown:{points:1,source:"https://help.sureleveragefunding.com/en/articles/16546983-instant-funding-zero-no-consistency-rule",reason:'4% fixed below initial balance, not trailing.'}},{drawdown:'static',lossPercent:4,source:"https://help.sureleveragefunding.com/en/articles/16546983-instant-funding-zero-no-consistency-rule"});
+
+// Current distinct SFX Instant purchases: shared catalogue ID until pricing remap; no inherited numeric preset.
+addVariant('sfx-funded','sfx-instant','instant-pro','Instant Pro','Instant Pro','Current Pro from 19 October 2026; separate purchase, not a paid add-on.','Pro depuis le 19 octobre 2026 ; offre distincte.',{"drawdown":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17653907-instant-pro-how-it-works","reason":"6% proportional trailing from peak account value, explicitly resets after payout."},"payout":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17653903-when-can-i-get-paid-in-the-instant-pro-program","reason":"Five qualifying days at 0.75% each and 4% profit per cycle; on demand, nominal 85% share."},"consistency":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17653907-instant-pro-how-it-works","reason":"20% SSI."},"trading":{"points":0.5,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17653913-can-i-trade-during-news-in-the-instant-pro-program","reason":"Restricted red-folder window ±2 minutes, including automatic executions; first violation removes affected profit, second closes account."},"funded":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17653907-instant-pro-how-it-works","reason":"2% combined floating loss closes account immediately; 1% on 300K/400K."}});
+addVariant('sfx-funded','sfx-instant','instant-flex','Instant Flex','Instant Flex','Current Flex from 19 October 2026; separate purchase, not a paid add-on.','Flex depuis le 19 octobre 2026 ; offre distincte.',{"drawdown":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17305154-instant-flex-how-it-works","reason":"5% proportional trailing from peak account value, not fixed-dollar."},"payout":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17653861-when-can-i-get-paid-in-the-instant-flex-program","reason":"Five qualifying days at 0.75% each and 4% profit per cycle; biweekly, nominal 85% share."},"consistency":{"points":1,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17305154-instant-flex-how-it-works","reason":"Explicitly no consistency rule."},"trading":{"points":0.5,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17305210-can-i-trade-during-news-in-the-instant-flex-program","reason":"Restricted red-folder window ±2 minutes, including automatic executions; first violation removes affected profit, second closes account."},"funded":{"points":0,"source":"https://intercom.help/sfx-15a6836318fd/en/articles/17305154-instant-flex-how-it-works","reason":"1% combined floating loss first reduces split to 40%, second closes account."}});
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA
