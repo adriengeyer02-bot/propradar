@@ -1332,6 +1332,538 @@ evidence["lux-trading-firm"] = {
     }
   }
 };
+evidence["blueberry-funded"] = {
+  "blueberry-prime-2-step": {
+    "checkedOn": "2026-11-28",
+    "scope": "Prime only, purchases from 17 August 2026; distinct from withdrawn 2-Step.",
+    "scopeFr": "Prime uniquement, achats depuis le 17 août 2026 ; distinct de l'ancien 2-Step.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.blueberryfunded.com/en/articles/12136509-what-is-the-prime-challenge",
+        "reason": "10% static total loss and fixed 4% daily allowance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.blueberryfunded.com/en/articles/12136624-prime-reward-structure",
+        "reason": "14-day cycle, three fresh active days each earning 0.5%, 80% share."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.blueberryfunded.com/en/articles/12136624-prime-reward-structure",
+        "reason": "No percentage profit concentration rule."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.blueberryfunded.com/en/articles/12140938-news-trading-policy-for-prime-challenge",
+        "reason": "No opening new positions two minutes before or after high-impact news; closing and managing permitted."
+      },
+      "funded": {
+        "points": 1,
+        "source": "https://help.blueberryfunded.com/en/articles/12136509-what-is-the-prime-challenge",
+        "reason": "No special funded trade-idea risk cap or lot-size cap; ordinary prohibited strategies apply."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "profitSplit": 80,
+      "source": "https://help.blueberryfunded.com/en/articles/12136509-what-is-the-prime-challenge"
+    }
+  }
+};
+evidence["breakout-prop"] = {
+  "breakout-classic": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Classic/Pro/Turbo funded rules, standard 80% split; not Spark. Account activation and withdrawals require approval.",
+    "scopeFr": "Règles financées Classic/Pro/Turbo actuelles, partage 80 %, hors Spark ; activation et retraits soumis à approbation.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.breakoutprop.com/program-rules/",
+        "reason": "6% static overall loss, 3% daily; funded stage retains evaluation loss limits per official how-it-works page."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://intercom.help/breakoutprop/en/articles/11647224-when-can-i-request-a-payout-from-my-funded-account",
+        "reason": "On-demand, $50 net minimum, flat positions required, no scheduled cycle; USDC ERC-20 and approval may take 12–24 hours."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://www.breakoutprop.com/how-it-works/",
+        "reason": "Explicitly no funded consistency requirement."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://www.breakoutprop.com/program-rules/",
+        "reason": "News permitted and trading available around the clock subject to maintenance; general prohibited trading rules remain."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.breakoutprop.com/funded-trader-agreement/",
+        "reason": "90-day inactivity suspension, reactivation by request. Company has contractual discretion to terminate access without notice; broader reliability is evaluated separately."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://www.breakoutprop.com/how-it-works/"
+    }
+  },
+  "breakout-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Classic/Pro/Turbo funded rules, standard 80% split; not Spark. Account activation and withdrawals require approval.",
+    "scopeFr": "Règles financées Classic/Pro/Turbo actuelles, partage 80 %, hors Spark ; activation et retraits soumis à approbation.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.breakoutprop.com/program-rules/",
+        "reason": "5% static overall loss, 3% daily; funded stage retains evaluation loss limits per official how-it-works page."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://intercom.help/breakoutprop/en/articles/11647224-when-can-i-request-a-payout-from-my-funded-account",
+        "reason": "On-demand, $50 net minimum, flat positions required, no scheduled cycle; USDC ERC-20 and approval may take 12–24 hours."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://www.breakoutprop.com/how-it-works/",
+        "reason": "Explicitly no funded consistency requirement."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://www.breakoutprop.com/program-rules/",
+        "reason": "News permitted and trading available around the clock subject to maintenance; general prohibited trading rules remain."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.breakoutprop.com/funded-trader-agreement/",
+        "reason": "90-day inactivity suspension, reactivation by request. Company has contractual discretion to terminate access without notice; broader reliability is evaluated separately."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 5,
+      "profitSplit": 80,
+      "source": "https://www.breakoutprop.com/how-it-works/"
+    }
+  },
+  "breakout-turbo": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Classic/Pro/Turbo funded rules, standard 80% split; not Spark. Account activation and withdrawals require approval.",
+    "scopeFr": "Règles financées Classic/Pro/Turbo actuelles, partage 80 %, hors Spark ; activation et retraits soumis à approbation.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://www.breakoutprop.com/program-rules/",
+        "reason": "3% static overall loss, 3% daily; funded stage retains evaluation loss limits per official how-it-works page."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://intercom.help/breakoutprop/en/articles/11647224-when-can-i-request-a-payout-from-my-funded-account",
+        "reason": "On-demand, $50 net minimum, flat positions required, no scheduled cycle; USDC ERC-20 and approval may take 12–24 hours."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://www.breakoutprop.com/how-it-works/",
+        "reason": "Explicitly no funded consistency requirement."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://www.breakoutprop.com/program-rules/",
+        "reason": "News permitted and trading available around the clock subject to maintenance; general prohibited trading rules remain."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.breakoutprop.com/funded-trader-agreement/",
+        "reason": "90-day inactivity suspension, reactivation by request. Company has contractual discretion to terminate access without notice; broader reliability is evaluated separately."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 3,
+      "profitSplit": 80,
+      "source": "https://www.breakoutprop.com/how-it-works/"
+    }
+  }
+};
+evidence["funderpro"] = {
+  "funderpro-one-phase": {
+    "checkedOn": "2026-11-28",
+    "scope": "Standard fortnightly route, no Swing or other paid add-ons.",
+    "scopeFr": "Retrait tous les 14 jours, sans Swing ni autre option payante.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://support.funderpro.com/en/articles/377860-what-is-the-drawdown-rule-and-how-does-it-apply-to-funded-account-challenges",
+        "reason": "6% static maximum loss based on initial capital; equity triggers breach."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://support.funderpro.com/en/articles/419844-how-does-reward-frequency-and-eligibility-work-for-funderpro-challenges",
+        "reason": "14-day cycle and $100 minimum profit, 80% standard split."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://support.funderpro.com/en/articles/377852-what-is-the-consistency-rule-and-how-does-it-affect-my-challenge",
+        "reason": "No percentage consistency in funded stage; evaluation conditions are separate."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://support.funderpro.com/en/articles/378023-are-news-holding-and-news-trading-allowed",
+        "reason": "News holding and trading on funded account require Swing add-on; weekend holding also requires Swing."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts",
+        "reason": "Margin cap of 20% initial balance per asset class; first violation deducts profits, second closes account and declines remaining payout."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 6,
+      "profitSplit": 80,
+      "source": "https://support.funderpro.com/en/articles/377860-what-is-the-drawdown-rule-and-how-does-it-apply-to-funded-account-challenges"
+    }
+  },
+  "funderpro-classic": {
+    "checkedOn": "2026-11-28",
+    "scope": "Standard fortnightly route, no Swing or other paid add-ons.",
+    "scopeFr": "Retrait tous les 14 jours, sans Swing ni autre option payante.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://support.funderpro.com/en/articles/377860-what-is-the-drawdown-rule-and-how-does-it-apply-to-funded-account-challenges",
+        "reason": "10% static maximum loss based on initial capital; equity triggers breach."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://support.funderpro.com/en/articles/419844-how-does-reward-frequency-and-eligibility-work-for-funderpro-challenges",
+        "reason": "14-day cycle and $100 minimum profit, 80% standard split."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://support.funderpro.com/en/articles/377852-what-is-the-consistency-rule-and-how-does-it-affect-my-challenge",
+        "reason": "No percentage consistency in funded stage; evaluation conditions are separate."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://support.funderpro.com/en/articles/378023-are-news-holding-and-news-trading-allowed",
+        "reason": "News holding and trading on funded account require Swing add-on; weekend holding also requires Swing."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts",
+        "reason": "Margin cap of 20% initial balance per asset class; first violation deducts profits, second closes account and declines remaining payout."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "profitSplit": 80,
+      "source": "https://support.funderpro.com/en/articles/377860-what-is-the-drawdown-rule-and-how-does-it-apply-to-funded-account-challenges"
+    }
+  },
+  "funderpro-pro": {
+    "checkedOn": "2026-11-28",
+    "scope": "Pro weekly 90% route, no Swing or other paid add-ons.",
+    "scopeFr": "Pro hebdomadaire 90 %, sans Swing ni autre option payante.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://support.funderpro.com/en/articles/377860-what-is-the-drawdown-rule-and-how-does-it-apply-to-funded-account-challenges",
+        "reason": "10% static maximum loss based on initial capital; equity triggers breach."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://support.funderpro.com/en/articles/419844-how-does-reward-frequency-and-eligibility-work-for-funderpro-challenges",
+        "reason": "Weekly request and minimum 1% of initial account balance profit; 90% share."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://support.funderpro.com/en/articles/377852-what-is-the-consistency-rule-and-how-does-it-affect-my-challenge",
+        "reason": "No percentage consistency in funded stage; evaluation conditions are separate."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://support.funderpro.com/en/articles/378023-are-news-holding-and-news-trading-allowed",
+        "reason": "News holding and trading on funded account require Swing add-on; weekend holding also requires Swing."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts",
+        "reason": "Margin cap of 20% initial balance per asset class; first violation deducts profits, second closes account and declines remaining payout."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "profitSplit": 90,
+      "source": "https://support.funderpro.com/en/articles/377860-what-is-the-drawdown-rule-and-how-does-it-apply-to-funded-account-challenges"
+    }
+  }
+};
+evidence["ftuk"] = {
+  "ftuk-flex-challenge": {
+    "checkedOn": "2026-11-28",
+    "scope": "FLEX Forex funded level 1; later levels change split and consistency.",
+    "scopeFr": "FLEX Forex financé niveau 1 ; partage et consistency évoluent aux niveaux supérieurs.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://faq.ftuk.com/en/articles/14322511-flex-challenge-explained",
+        "reason": "6% trailing highest closing balance, locks at initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://faq.ftuk.com/en/articles/14322511-flex-challenge-explained",
+        "reason": "On-demand after meeting eligibility; 60% share at level 1; higher-level small withdrawals may retain 60% share."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://faq.ftuk.com/en/articles/14322511-flex-challenge-explained",
+        "reason": "Best day strictly below 20% of profit requested at level 1; rises to 40% at higher levels."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://faq.ftuk.com/en/articles/14492295-is-there-a-minimum-trade-duration",
+        "reason": "Minimum 30 seconds per trade; automatic SL/TP before 30 seconds is also a violation. News allowed; other account-specific restrictions apply."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://faq.ftuk.com/en/articles/14322511-flex-challenge-explained",
+        "reason": "2% combined floating loss closes all positions; second trigger hard breach."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "source": "https://faq.ftuk.com/en/articles/14322511-flex-challenge-explained"
+    }
+  },
+  "ftuk-instant-funding": {
+    "checkedOn": "2026-11-28",
+    "scope": "Forex Instant Funding level 1, not Instant Funding PRO.",
+    "scopeFr": "Forex Instant Funding niveau 1, hors nouveau Instant Funding PRO.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://faq.ftuk.com/en/articles/12333289-what-are-the-drawdown-limits",
+        "reason": "6% balance-high trailing, locks at initial balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://faq.ftuk.com/en/articles/12339852-how-do-i-request-a-profit-payout",
+        "reason": "On-demand subject to level target; reward at current target rather than excess profit beyond 10% at levels through six. Account is view-only pending approval."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://faq.ftuk.com/en/articles/12310214-instant-funding-program-forex",
+        "reason": "Best day strictly below 20% initially, thresholds increase to 40% at level six."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://faq.ftuk.com/en/articles/14492295-is-there-a-minimum-trade-duration",
+        "reason": "Minimum 30 seconds per trade; automatic SL/TP before 30 seconds is also a violation. News allowed; other account-specific restrictions apply."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://faq.ftuk.com/en/articles/12339790-what-are-account-breaches",
+        "reason": "Second 2% Account Protector trigger terminates account; 30-day inactivity hard breach."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "source": "https://faq.ftuk.com/en/articles/12310214-instant-funding-program-forex"
+    }
+  },
+  "ftuk-flex-futures": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current FLEX Futures funded account; all size tiers.",
+    "scopeFr": "FLEX Futures financé actuel, toutes tailles.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://faq.ftuk.com/en/articles/17563548-flex-futures-account-rules-overview",
+        "reason": "EOD trailing limit by size; daily limit is soft breach."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://faq.ftuk.com/en/articles/17563548-flex-futures-account-rules-overview",
+        "reason": "Five qualifying winning days, buffer $1.5K–$4.5K, $500 minimum, caps $1K–$2.5K; second payout onward at least 50% new profit."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://faq.ftuk.com/en/articles/17589500-flex-futures-funded-consistency-rule",
+        "reason": "40% best day over current cycle total profit, resets after approval."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://faq.ftuk.com/en/articles/14492295-is-there-a-minimum-trade-duration",
+        "reason": "Minimum 30 seconds per trade; automatic SL/TP before 30 seconds is also a violation. News allowed; other account-specific restrictions apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://faq.ftuk.com/en/articles/17563548-flex-futures-account-rules-overview",
+        "reason": "Funded daily loss pause and maximum five accounts; contract limits apply."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 90,
+      "source": "https://faq.ftuk.com/en/articles/17563548-flex-futures-account-rules-overview"
+    }
+  },
+  "ftuk-instant-sim-futures": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Instant Sim Funding Futures; all size tiers.",
+    "scopeFr": "Instant Sim Funding Futures actuel, toutes tailles.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://faq.ftuk.com/en/articles/12355700-instant-sim-funding-futures-account-rules-overview",
+        "reason": "EOD trailing loss; daily loss pauses trading."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://faq.ftuk.com/en/articles/12354244-instant-sim-funding-payout-rules-caps-progression",
+        "reason": "6% payout target, five qualifying days, retained buffer and size-dependent cap; subsequent requests require 50% fresh profit."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://faq.ftuk.com/en/articles/12354244-instant-sim-funding-payout-rules-caps-progression",
+        "reason": "20% best day in current cycle; resets after approved payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://faq.ftuk.com/en/articles/14492295-is-there-a-minimum-trade-duration",
+        "reason": "Minimum 30 seconds per trade; automatic SL/TP before 30 seconds is also a violation. News allowed; other account-specific restrictions apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://faq.ftuk.com/en/articles/12355700-instant-sim-funding-futures-account-rules-overview",
+        "reason": "Daily loss pause, position scaling and copy trading between own FTUK accounts forbidden."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 90,
+      "source": "https://faq.ftuk.com/en/articles/12355700-instant-sim-funding-futures-account-rules-overview"
+    }
+  }
+};
+evidence["oneup-trader"] = {
+  "oneup-standard-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Standard/Pro route, published partner funded rules; evaluation length differs.",
+    "scopeFr": "Règles financées du partenaire ; durée d'évaluation différente selon Standard/Pro.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.oneuptrader.com/article/468-most-popular-questions",
+        "reason": "Real-time balance trailing, stops at original balance; no daily loss limit."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.oneuptrader.com/article/376-profit-info",
+        "reason": "Day-one eligibility above $1.5K–$5.5K withdrawal threshold by tier; $1K minimum, first $10K profits 100% then 90%."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.oneuptrader.com/article/468-most-popular-questions",
+        "reason": "Evaluation consistency explicitly does not apply after funding."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+        "reason": "All positions closed for major news and daily session closure; sub-10-second trading prohibited."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+        "reason": "Weekly executions must reach half the evaluation weekly average; positive net PnL above original balance every 15 days during first 90 days, warnings at discretion."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "source": "https://help.oneuptrader.com/article/468-most-popular-questions"
+    }
+  },
+  "oneup-pro-current": {
+    "checkedOn": "2026-11-28",
+    "scope": "Standard/Pro route, published partner funded rules; evaluation length differs.",
+    "scopeFr": "Règles financées du partenaire ; durée d'évaluation différente selon Standard/Pro.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.oneuptrader.com/article/468-most-popular-questions",
+        "reason": "Real-time balance trailing, stops at original balance; no daily loss limit."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.oneuptrader.com/article/376-profit-info",
+        "reason": "Day-one eligibility above $1.5K–$5.5K withdrawal threshold by tier; $1K minimum, first $10K profits 100% then 90%."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.oneuptrader.com/article/468-most-popular-questions",
+        "reason": "Evaluation consistency explicitly does not apply after funding."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+        "reason": "All positions closed for major news and daily session closure; sub-10-second trading prohibited."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+        "reason": "Weekly executions must reach half the evaluation weekly average; positive net PnL above original balance every 15 days during first 90 days, warnings at discretion."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "source": "https://help.oneuptrader.com/article/468-most-popular-questions"
+    }
+  },
+  "oneup-express-return": {
+    "checkedOn": "2026-11-28",
+    "scope": "Express requalification restricted to previously funded traders; partner funded rules.",
+    "scopeFr": "Règles financées du partenaire ; Express réservé aux anciens financés.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://help.oneuptrader.com/article/468-most-popular-questions",
+        "reason": "Real-time balance trailing, stops at original balance; no daily loss limit."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.oneuptrader.com/article/376-profit-info",
+        "reason": "Day-one eligibility above $1.5K–$5.5K withdrawal threshold by tier; $1K minimum, first $10K profits 100% then 90%."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.oneuptrader.com/article/468-most-popular-questions",
+        "reason": "Evaluation consistency explicitly does not apply after funding."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+        "reason": "All positions closed for major news and daily session closure; sub-10-second trading prohibited."
+      },
+      "funded": {
+        "points": 0,
+        "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+        "reason": "Weekly executions must reach half the evaluation weekly average; positive net PnL above original balance every 15 days during first 90 days, warnings at discretion."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "source": "https://help.oneuptrader.com/article/468-most-popular-questions"
+    }
+  }
+};
 // Reviewed six additional firms, 2026-11-28.
 evidence["audacity-capital"] = {
   "audacity-ability-challenge": {
@@ -3571,6 +4103,7 @@ Object.assign(evidence.fundednext,{
     }
   }
 });
+addVariant('funderpro','funderpro-pro','daily-60','Daily 60%','Quotidien 60%','Pro daily route; no paid add-ons.','Pro quotidien, sans option payante.',{payout:{points:.5,source:"https://support.funderpro.com/en/articles/419844-how-does-reward-frequency-and-eligibility-work-for-funderpro-challenges",reason:'Daily reward requests require profit of at least 1% of initial balance; 60% share.'}},{drawdown:'static',lossPercent:10,profitSplit:60,source:"https://support.funderpro.com/en/articles/377860-what-is-the-drawdown-rule-and-how-does-it-apply-to-funded-account-challenges"});
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA

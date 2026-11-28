@@ -190,3 +190,32 @@ No separate FundedNext Futures setProducts in checked firm-updates blob and no f
 | Direct 50K | 0.5/0/0/0.5/0 | 1 | EOD trailing with $2,100 buffer, 20% all-time best day versus current cycle profit, $800–$1,200 withdrawals at 90%; closes after five rewards; 100K/150K table conflicts with one-size text, scope 50K only. [Rules](https://helpfutures.fundednext.com/en/articles/17430065-fundednext-futures-direct-account-all-rules) |
 
 Claude handoff: The5ers, Funded Trading Plus, Hola Prime, Evolve Markets; separate JSON audit file only. Do not touch those ratings in this batch. Cumulative 101 complete integrated catalogue evaluations per prior count, includes duplicated listings; five Futures candidates excluded. Tests added, full runtime/build/visual validation pending; single commit.
+
+## Additional programme batch — verified 2026-11-28
+
+Five firms, 15 complete catalogue entries and variants; exact IDs verified against current PR-base catalogue. OneUp Standard/Pro/Express share funded-stage rules, with Express restricted to previous funded traders. No price or company rating changes.
+
+| Firm | ID | /5 |
+|---|---|---:|
+| blueberry-funded | blueberry-prime-2-step | 4 |
+| breakout-prop | breakout-classic | 4.5 |
+| breakout-prop | breakout-pro | 4.5 |
+| breakout-prop | breakout-turbo | 4.5 |
+| funderpro | funderpro-one-phase | 3.5 |
+| funderpro | funderpro-classic | 3.5 |
+| funderpro | funderpro-pro | 3 |
+| ftuk | ftuk-flex-challenge | 1 |
+| ftuk | ftuk-instant-funding | 1 |
+| ftuk | ftuk-flex-futures | 2.5 |
+| ftuk | ftuk-instant-sim-futures | 1.5 |
+| oneup-trader | oneup-standard-current | 2 |
+| oneup-trader | oneup-pro-current | 2 |
+| oneup-trader | oneup-express-return | 2 |
+| funderpro | funderpro-pro / daily-60 | 3 |
+
+- Blueberry Prime post-17-August cohort, three 0.5% active days per reward; not the retired 2-Step. https://help.blueberryfunded.com/en/articles/12136509-what-is-the-prime-challenge ; https://help.blueberryfunded.com/en/articles/12136624-prime-reward-structure ; https://help.blueberryfunded.com/en/articles/12137041-which-trading-strategies-are-prohibited-on-the-prime-challenge.
+- Breakout funded FAQ confirms approval after submission, unlike marketing wording suggesting immediate settlement: https://intercom.help/breakoutprop/en/articles/11647224-when-can-i-request-a-payout-from-my-funded-account. $50 after split and no open positions. Static loss limits retained from evaluation; no funded consistency or payout cap. Contract separately allows unilateral termination without notice and 90-day inactivity suspension: https://www.breakoutprop.com/funded-trader-agreement/. Stars are operational funded rules, not a finding of payout reliability. Spark002 is new and lacks a mapped ID; separate audit needed. Funded account activation after KYC/contract and final approval: https://intercom.help/breakoutprop/en/articles/11643924-if-i-pass-a-breakout-evaluation-do-i-automatically-become-a-funded-trader.
+- FunderPro: separate Daily 60% vs Weekly 90% Pro choice; 20% funded margin cap per asset class, first profit removal, second hard breach. Swing and other add-ons not scored. https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts ; https://support.funderpro.com/en/articles/419844-how-does-reward-frequency-and-eligibility-work-for-funderpro-challenges.
+- FTUK: 30-second minimum includes SL/TP exits. Forex consistency thresholds vary by level and strict inequality; no simple simulator consistency preset. Instant Forex target-based reward wording differs from broad on-demand marketing. Futures FLEX fresh-profit 50% rule: https://faq.ftuk.com/en/articles/17589504-flex-futures-daily-progression-rule. Instant Funding PRO Forex is a new separate purchase and needs mapped ID.
+- OneUp: no funded evaluation-style consistency, but weekly trade-volume requirement and initial 90-day probation positive PnL check every 15 calendar days. https://help.oneuptrader.com/article/372-funded-trader-rules. No universal fixed profit split preset. Express is not open to first-time customers.
+- Inventory scan: before this batch 149 catalogue IDs not referenced in programmeFlexibility.ts, including one assigned The5ers ID; after this batch 14 newly covered IDs, 135 still unreferenced on same catalogue snapshot, plus existing partials and unmapped offers. Not the number of all programmes market-wide. Cumulative 116 complete evaluations per previous running total (duplicates/variants included). Full runtime/build/visual validation pending. One atomic commit.
