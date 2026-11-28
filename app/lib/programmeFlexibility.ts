@@ -750,6 +750,10 @@ for(const [id,loss,cohort,cohortFr] of [
     },{drawdown:'static',lossPercent:loss,profitSplit:90,source:fnOnDemand});
 }
 
+// Only this batch's newly reviewed choices receive the new review date.
+for(const [slug,id] of [['ftmo','ftmo-two-step-current'],['fundednext','fundednext-stellar-two-current'],['fundednext','fundednext-stellar-lite-current']]){
+  for(const item of variants[slug]?.[id]??[]) item.evidence.checkedOn='2026-11-28';
+}
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA
