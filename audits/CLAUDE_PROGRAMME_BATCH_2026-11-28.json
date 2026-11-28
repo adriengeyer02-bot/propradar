@@ -1,0 +1,1201 @@
+{
+  "batch": "CLAUDE_PROGRAMME_BATCH_2026-11-28",
+  "author": "Claude",
+  "checkedOn": "2026-11-28",
+  "status": "Proposal for review and integration by ChatGPT. Not wired into programmeFlexibility.ts, prices, catalogue or Scale C.",
+  "methodology": {
+    "reference": "app/lib/programmeFlexibility.ts on branch chatgpt/programmes-batch4-2026-11-28 (commit be2db3a1) and audits/PROGRAMME_FLEXIBILITY_HANDOFF_2026-11-27.md",
+    "axes": [
+      "drawdown",
+      "payout",
+      "consistency",
+      "trading",
+      "funded"
+    ],
+    "scale": "Each axis 0, 0.5 or 1; stars only when all five axes are sourced; an unassessed axis is null, never a default.",
+    "rubric": {
+      "drawdown": "static 1; end-of-day trailing 0.5; intraday/equity or closed-balance trailing 0",
+      "payout": "unrestricted access with ordinary timing <=14 days 1; moderate delay, gate or cap 0.5; severe caps or forfeiture 0",
+      "consistency": "no rule 1; >=30% delaying (not forfeiting) payouts 0.5; lower than 30% or forfeiture 0",
+      "trading": "broad ordinary permissions 1; material restrictions 0.5; severe restrictions 0",
+      "funded": "ordinary objectives/KYC only 1; material extra conditions 0.5; permanent payout loss or hard termination rules beyond the loss limits 0"
+    },
+    "scopeRules": [
+      "Funded-stage rules only; evaluation rules are listed under evaluationRulesExcluded and never scored.",
+      "Default payout route is rated; other funded routes, purchase options and old versions are separate variants with overrides.",
+      "A rule is placed on one axis only (no double penalty).",
+      "Unresolved contradictions between official sources leave the axis null; a resolution, when proposed, is recorded in resolvedConflict for the reviewer.",
+      "Official sources only (firm FAQ, rules pages, product pages, terms, change logs); third-party sites used only to locate pages."
+    ]
+  },
+  "summary": {
+    "programmesReviewed": 16,
+    "variantsListed": 8,
+    "fullyRated": [
+      "the5ers-bootcamp-current 4.0",
+      "the5ers-hyper-growth-current 4.0",
+      "ftp-express-current 3.5",
+      "ftp-classic-current 3.5",
+      "ftp-instant-current 3.0",
+      "ftp-pnpl-current 2.0",
+      "hola-prime-2-step-prime 3.5 (monthly 3.5, on-demand 3.0)",
+      "hola-prime-1-step-prime 3.5 (monthly 3.5, on-demand 3.0)",
+      "hola-prime-2-step-pro 3.0 (monthly 3.0, on-demand 2.5)",
+      "hola-prime-direct 1.5"
+    ],
+    "completeEvaluationsIncludingVariants": 16,
+    "partial": [
+      "the5ers-high-stakes-current 4/5 (consistency open)",
+      "the5ers-2-step-plan 2/5",
+      "the5ers-pro-growth 3/5",
+      "hola-prime-2-step-fly 4/5 (+ legacy variant)",
+      "hola-prime-1-step-fly 4/5 (+ static add-on variant)",
+      "hola-prime-direct-fly 4/5"
+    ],
+    "disagreementsWithBatch4": [
+      "ftp-pnpl-current: payout, consistency and trading (see comparisonWithBatch4)",
+      "the5ers-bootcamp-current: drawdown proposed 1 where batch 4 left it open (see resolvedConflict)"
+    ]
+  },
+  "firms": [
+    {
+      "slug": "the5ers",
+      "catalogueProductIds": [
+        "the5ers-high-stakes-current",
+        "the5ers-bootcamp-current",
+        "the5ers-hyper-growth-current"
+      ],
+      "programmes": [
+        {
+          "productId": "the5ers-high-stakes-current",
+          "inCatalogue": true,
+          "name": "High Stakes (2-Step) — Pro account",
+          "scope": "High Stakes Pro stage after the New (10%/5%) or Classic (8%/5%) evaluation; product page read 28 Nov 2026 (New tab displayed; Classic tab not rendered in the capture). Funded rules are shared by both entry tiers.",
+          "scopeFr": "Compte Pro High Stakes après l'évaluation New (10 %/5 %) ou Classic (8 %/5 %) ; règles financées communes.",
+          "assessments": {
+            "drawdown": {
+              "points": 1,
+              "source": "https://the5ers.com/faqs/what-is-drawdown-and-how-is-it-calculated/",
+              "reason": "10% maximum loss from the initial balance; the drawdown FAQ example fixes the equity stop-out at $4,500 on a $5,000 account while the allowance grows with retained profit (absolute floor, not trailing).",
+              "alsoSource": "https://the5ers.com/high-stakes/"
+            },
+            "payout": {
+              "points": 0.5,
+              "source": "https://the5ers.com/faqs/payout-policy-and-hub-credit-in-the-high-stakes-program/",
+              "reason": "Bi-weekly payouts on the Pro account, capped at $3,000 (50K) and $4,000 (100K) per payout with minimum P&L of $300/$500; crypto withdrawals limited to $1,500 per transaction (FAQ updated 24 Nov 2026)."
+            },
+            "consistency": {
+              "points": null,
+              "status": "not-assessed",
+              "reason": "Unresolved: the High Stakes page, general rules FAQ (3 Nov) and payout FAQ (24 Nov) list no consistency rule; the consistency FAQ (30 Oct) says the percentage depends on account type or region without naming programmes; an official blog (Sep 2026) states a 50% funded-only rule for High Stakes; the 2-Step Plan FAQ (2 Nov) states 50% on the Pro account but for a $100K plan priced $149/$179 with 3% daily loss, which does not match High Stakes ($545, 5% daily).",
+              "sources": [
+                "https://the5ers.com/high-stakes/",
+                "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+                "https://the5ers.com/faqs/payout-policy-and-hub-credit-in-the-high-stakes-program/",
+                "https://the5ers.com/faqs/what-is-constancy-rule/",
+                "https://www.the5ers.com/fixed-vs-dynamic-profit-targets/",
+                "https://the5ers.com/faqs/2-step-plan-rules-specifications/"
+              ]
+            },
+            "trading": {
+              "points": 0.5,
+              "source": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+              "reason": "Executing any order from 2 minutes before to 2 minutes after high-impact news is prohibited; profits are deducted and losses kept. Overnight and weekend holding allowed.",
+              "alsoSource": "https://the5ers.com/high-stakes/"
+            },
+            "funded": {
+              "points": 0.5,
+              "source": "https://the5ers.com/high-stakes/",
+              "reason": "Pro account keeps the 5% maximum daily loss; three profitable days (>=0.5% of initial balance) are required for each scale-up; Pro accounts expire after 60 consecutive days of inactivity.",
+              "alsoSource": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"
+            }
+          },
+          "preset": {
+            "drawdown": "static",
+            "lossPercent": 10,
+            "profitSplit": 80,
+            "source": "https://the5ers.com/high-stakes/"
+          },
+          "evaluationRulesExcluded": [
+            "10%/5% (New) or 8%/5% (Classic) targets",
+            "3 minimum profitable days per phase",
+            "no consistency rule during evaluation"
+          ],
+          "comparisonWithBatch4": "Same drawdown 1, payout 0.5, trading 0.5. Adds funded 0.5. Consistency still not assessed.",
+          "axesVerified": 4,
+          "stars": null,
+          "ratingStatus": "not-rated (partial evidence)"
+        },
+        {
+          "proposedProductId": "the5ers-2-step-plan",
+          "inCatalogue": false,
+          "name": "2-Step Plan ($100K New $149 / Classic $179) — Pro account",
+          "scope": "Separate 2-Step plan described in the FAQ of 2 Nov 2026; not on the High Stakes product page and not in the PropRadar catalogue. Partial reading only.",
+          "assessments": {
+            "drawdown": {
+              "points": 1,
+              "source": "https://the5ers.com/faqs/2-step-plan-rules-specifications/",
+              "reason": "Maximum loss 10% of the initial balance (evaluation risk model; the FAQ does not give a different funded figure)."
+            },
+            "payout": {
+              "points": null,
+              "status": "not-assessed",
+              "reason": "Payout cap $2,000 per cycle and $250 minimum PnL are stated, but the cycle length is not; cannot tell moderate from severe.",
+              "sources": [
+                "https://the5ers.com/faqs/2-step-plan-rules-specifications/"
+              ]
+            },
+            "consistency": {
+              "points": 0.5,
+              "source": "https://the5ers.com/faqs/2-step-plan-rules-specifications/",
+              "reason": "50% consistency on the Pro account only; the consistency FAQ says exceeding it delays payout or scale-up and does not fail the account.",
+              "alsoSource": "https://the5ers.com/faqs/what-is-constancy-rule/"
+            },
+            "trading": {
+              "points": null,
+              "status": "not-assessed",
+              "reason": "News, weekend and EA rules for this plan are not stated on its FAQ.",
+              "sources": [
+                "https://the5ers.com/faqs/2-step-plan-rules-specifications/"
+              ]
+            },
+            "funded": {
+              "points": null,
+              "status": "not-assessed",
+              "reason": "Funded-stage conditions beyond consistency and payout cap are not stated.",
+              "sources": [
+                "https://the5ers.com/faqs/2-step-plan-rules-specifications/"
+              ]
+            }
+          },
+          "note": "Possibly a regional or partner variant; confirm with The5ers before adding to the catalogue.",
+          "axesVerified": 2,
+          "stars": null,
+          "ratingStatus": "not-rated (partial evidence)"
+        },
+        {
+          "productId": "the5ers-bootcamp-current",
+          "inCatalogue": true,
+          "name": "Bootcamp (3-Step) — Pro account",
+          "scope": "Bootcamp Pro stage ($20K/$100K/$250K start); programme FAQ updated 2 Nov 2026; product page read 28 Nov 2026.",
+          "scopeFr": "Compte Pro Bootcamp (départ 20K/100K/250K) ; FAQ du 2 novembre 2026.",
+          "assessments": {
+            "drawdown": {
+              "points": 1,
+              "source": "https://the5ers.com/faqs/what-is-drawdown-and-how-is-it-calculated/",
+              "reason": "Pro maximum loss 4% of the account balance at each level (scaling table). The drawdown FAQ (22 Jul 2026) defines the equity stop-out as a fixed floor from the initial balance whose allowance grows with retained profit (Bootcamp example: floor $9,500 stays while profit rises).",
+              "alsoSource": "https://the5ers.com/bootcamp/",
+              "resolvedConflict": "Batch 4 left this axis open because an official blog (Sep 2026) calls the Bootcamp limit \"trailing with retained profit\". The dedicated rules FAQ with a numerical example is preferred to educational blog text; the same blogs also claim a mandatory stop loss that the stop-loss FAQ explicitly denies. Reviewer may keep the axis open if this reading is not accepted."
+            },
+            "payout": {
+              "points": 0.5,
+              "source": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+              "reason": "First payout 14 days after receiving the Pro account, then every 2 weeks; the 14-day cycle restarts every time the account scales."
+            },
+            "consistency": {
+              "points": 1,
+              "source": "https://www.the5ers.com/fixed-vs-dynamic-profit-targets/",
+              "reason": "Official article states Bootcamp has no published percentage-based consistency rule; programme FAQ and product page list none.",
+              "alsoSource": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/"
+            },
+            "trading": {
+              "points": 1,
+              "source": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+              "reason": "News trading allowed except bracketing strategies; overnight and weekend holding allowed (index swaps high). No mandatory stop loss on any The5ers programme, Bootcamp included.",
+              "alsoSource": "https://the5ers.com/faqs/what-is-stop-loss-order-and-how-is-it-calculated/"
+            },
+            "funded": {
+              "points": 0.5,
+              "source": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+              "reason": "Remaining fee paid to activate the Pro account; 3% daily pause on Pro (trading resumes next day); each active account must use a different trading method; closure after 30 days of inactivity.",
+              "alsoSource": "https://the5ers.com/bootcamp/"
+            }
+          },
+          "preset": {
+            "drawdown": "static",
+            "lossPercent": 4,
+            "profitSplit": 50,
+            "source": "https://the5ers.com/bootcamp/"
+          },
+          "evaluationRulesExcluded": [
+            "6% target per step",
+            "5% maximum loss per step",
+            "no daily pause during evaluation"
+          ],
+          "comparisonWithBatch4": "Same payout 0.5, consistency 1, trading 1, funded 0.5. Adds drawdown 1 (see resolvedConflict) → 4.0/5.",
+          "axesVerified": 5,
+          "stars": 4.0,
+          "ratingStatus": "rated"
+        },
+        {
+          "productId": "the5ers-hyper-growth-current",
+          "inCatalogue": true,
+          "name": "Hyper Growth (1-Step) — Pro account",
+          "scope": "Hyper Growth Pro stages; programme FAQ updated 2 Nov 2026; Growth product page read 28 Nov 2026 (Hyper Growth tab).",
+          "scopeFr": "Comptes Pro Hyper Growth ; FAQ du 2 novembre 2026.",
+          "assessments": {
+            "drawdown": {
+              "points": 1,
+              "source": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+              "reason": "Accounts that hit the stop-out are terminated; the stop-out is 6% below the initial account size. The drawdown FAQ example keeps the floor at $9,400 on a $10,000 account as profit grows.",
+              "alsoSource": "https://the5ers.com/faqs/what-is-drawdown-and-how-is-it-calculated/",
+              "resolvedConflict": "Same blog wording (\"6 percent, trailing with retained profit\") as for Bootcamp; programme FAQ and drawdown FAQ both describe a fixed floor below the initial size."
+            },
+            "payout": {
+              "points": 0.5,
+              "source": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+              "reason": "First payout 14 days after receiving a Pro account, then every 2 weeks; the cycle resets each time the account scales."
+            },
+            "consistency": {
+              "points": 1,
+              "source": "https://www.the5ers.com/fixed-vs-dynamic-profit-targets/",
+              "reason": "Official article states Hyper Growth has no published percentage-based consistency rule; programme FAQ and product page list none.",
+              "alsoSource": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/"
+            },
+            "trading": {
+              "points": 1,
+              "source": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+              "reason": "News trading allowed except bracket strategies; weekend holding allowed; leverage 1:30.",
+              "alsoSource": "https://the5ers.com/hyper-growth/"
+            },
+            "funded": {
+              "points": 0.5,
+              "source": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+              "reason": "3% daily pause disables the account for the rest of the day without termination; same target and loss rules at each Pro stage; accounts inactive for more than 30 consecutive days expire; $40,000 evaluation capital cap per trader."
+            }
+          },
+          "preset": {
+            "drawdown": "static",
+            "lossPercent": 6,
+            "source": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/"
+          },
+          "comparisonWithBatch4": "Not in batch 4. Claude PR #309 rated 4 axes and left consistency open; consistency now rated 1 on the same basis batch 4 used for Bootcamp → 4.0/5.",
+          "axesVerified": 5,
+          "stars": 4.0,
+          "ratingStatus": "rated"
+        },
+        {
+          "proposedProductId": "the5ers-pro-growth",
+          "inCatalogue": false,
+          "name": "Pro Growth (1-Step) — Pro account",
+          "scope": "Second tab of the Growth product page (one-time fee $52 on 5K); not in the PropRadar catalogue. Partial reading only.",
+          "assessments": {
+            "drawdown": {
+              "points": 1,
+              "source": "https://the5ers.com/hyper-growth/",
+              "reason": "Stop-out level 6%; the drawdown FAQ defines the equity stop-out as a fixed floor from the initial balance.",
+              "alsoSource": "https://the5ers.com/faqs/what-is-drawdown-and-how-is-it-calculated/"
+            },
+            "payout": {
+              "points": null,
+              "status": "not-assessed",
+              "reason": "Pro Growth payout schedule is not stated on the pages read (Hyper Growth FAQ covers Hyper Growth only).",
+              "sources": [
+                "https://the5ers.com/hyper-growth/"
+              ]
+            },
+            "consistency": {
+              "points": null,
+              "status": "not-assessed",
+              "reason": "Not stated for Pro Growth.",
+              "sources": [
+                "https://the5ers.com/hyper-growth/"
+              ]
+            },
+            "trading": {
+              "points": 1,
+              "source": "https://the5ers.com/hyper-growth/",
+              "reason": "Programme specifications shared with Hyper Growth: news allowed except bracketing, weekend holding allowed."
+            },
+            "funded": {
+              "points": 0.5,
+              "source": "https://the5ers.com/hyper-growth/",
+              "reason": "Profit target, maximum loss and 3% daily loss (a loss limit, not a pause) remain the same at every Pro stage."
+            }
+          },
+          "axesVerified": 3,
+          "stars": null,
+          "ratingStatus": "not-rated (partial evidence)"
+        }
+      ]
+    },
+    {
+      "slug": "funded-trading-plus",
+      "catalogueProductIds": [
+        "ftp-express-current",
+        "ftp-classic-current",
+        "ftp-instant-current",
+        "ftp-pnpl-current"
+      ],
+      "uncatalogued": [
+        {
+          "name": "Master Trader Program",
+          "source": "https://help.fundedtradingplus.com/master-trader-program-information/",
+          "note": "Listed in the help centre; not audited in this batch."
+        }
+      ],
+      "programmes": [
+        {
+          "productId": "ftp-express-current",
+          "inCatalogue": true,
+          "name": "1-Step Express — FT+ Trader account",
+          "scope": "Help article last updated 08.12.2026 (format of the help centre); funded FT+ Trader simulated live account.",
+          "scopeFr": "Compte FT+ Trader du 1-Step Express ; article mis à jour le 08.12.2026.",
+          "assessments": {
+            "drawdown": {
+              "points": 0,
+              "source": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+              "reason": "6% maximum loss trailing the closed-balance high watermark until it reaches the initial balance (balance-based relative trailing)."
+            },
+            "payout": {
+              "points": 1,
+              "source": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+              "reason": "Withdrawal as soon as the account is in profit, from day 1, minimum $50, then every 7 days; 80% split."
+            },
+            "consistency": {
+              "points": 1,
+              "source": "https://help.fundedtradingplus.com/consistency-rule/",
+              "reason": "The dedicated Consistency Rule article lists only the 2-Step Classic (35% evaluation / 50% funded); the Express article lists its rules without any consistency requirement.",
+              "alsoSource": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+              "confidence": "medium"
+            },
+            "trading": {
+              "points": 1,
+              "source": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+              "reason": "Overnight and weekend holding allowed; no stop-loss requirement; news trading allowed (Risk Review Policy), with margin-utilisation review triggers rather than hard limits.",
+              "alsoSource": "https://help.fundedtradingplus.com/risk-review-policy/"
+            },
+            "funded": {
+              "points": 0.5,
+              "source": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+              "reason": "4% daily drawdown on the prior closed balance remains a hard limit; 30-day inactivity is a hard breach; scale requests need a flat account and risk review."
+            }
+          },
+          "preset": {
+            "drawdown": "intraday",
+            "lossPercent": 6,
+            "profitSplit": 80,
+            "source": "https://help.fundedtradingplus.com/1-step-express-program-information/"
+          },
+          "comparisonWithBatch4": "Same drawdown 0; batch 4 had no other axis → 3.5/5.",
+          "axesVerified": 5,
+          "stars": 3.5,
+          "ratingStatus": "rated"
+        },
+        {
+          "productId": "ftp-classic-current",
+          "inCatalogue": true,
+          "name": "2-Step Classic — FT+ Trader account",
+          "scope": "Help article last updated 07.02.2026; funded FT+ Trader simulated live account.",
+          "scopeFr": "Compte FT+ Trader du 2-Step Classic ; article du 07.02.2026.",
+          "assessments": {
+            "drawdown": {
+              "points": 1,
+              "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/",
+              "reason": "8% static maximum drawdown fixed on the initial balance, unaffected by profits."
+            },
+            "payout": {
+              "points": 1,
+              "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/",
+              "reason": "First withdrawal 10 calendar days after account creation, then every 10 days; minimum 1% of the initial balance; 80% split. The 50% consistency gate is counted under consistency."
+            },
+            "consistency": {
+              "points": 0.5,
+              "source": "https://help.fundedtradingplus.com/consistency-rule/",
+              "reason": "Funded 50% best-day limit over the payout period; payout is blocked until met, not forfeited; resets after each payout.",
+              "alsoSource": "https://help.fundedtradingplus.com/2-step-classic-program-information/"
+            },
+            "trading": {
+              "points": 0.5,
+              "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/",
+              "reason": "3% Symbol Loss Limit: any single instrument may not lose more than 3% of the prior-day balance (hard breach, applies on the funded account). Weekend holding allowed, no stop-loss requirement, news allowed per Risk Review Policy.",
+              "alsoSource": "https://help.fundedtradingplus.com/risk-review-policy/"
+            },
+            "funded": {
+              "points": 0.5,
+              "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/",
+              "reason": "4% daily drawdown hard limit; 30-day inactivity hard breach; scaling needs 20% new profit, one paid withdrawal, 2 months of activity per level and risk review."
+            }
+          },
+          "preset": {
+            "drawdown": "static",
+            "lossPercent": 8,
+            "consistency": 50,
+            "consistencyBasis": "net",
+            "profitSplit": 80,
+            "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/"
+          },
+          "evaluationRulesExcluded": [
+            "7% target per phase",
+            "35% consistency in both evaluation phases"
+          ],
+          "comparisonWithBatch4": "Same drawdown 1; batch 4 had no other axis → 3.5/5.",
+          "axesVerified": 5,
+          "stars": 3.5,
+          "ratingStatus": "rated"
+        },
+        {
+          "productId": "ftp-instant-current",
+          "inCatalogue": true,
+          "name": "Instant — FT+ Trader account",
+          "scope": "Help article last updated 08.12.2026; no evaluation.",
+          "scopeFr": "Compte Instant ; article du 08.12.2026.",
+          "assessments": {
+            "drawdown": {
+              "points": 0,
+              "source": "https://help.fundedtradingplus.com/instant-program-information/",
+              "reason": "6% maximum loss trailing the balance high watermark until it reaches the initial balance."
+            },
+            "payout": {
+              "points": 1,
+              "source": "https://help.fundedtradingplus.com/instant-program-information/",
+              "reason": "Withdrawal from day 1 once in profit, minimum $50, then every 7 days; researcher contract and KYC required (ordinary)."
+            },
+            "consistency": {
+              "points": 1,
+              "source": "https://help.fundedtradingplus.com/consistency-rule/",
+              "reason": "Consistency Rule article lists only the 2-Step Classic; the Instant article lists its rules without any consistency requirement.",
+              "alsoSource": "https://help.fundedtradingplus.com/instant-program-information/",
+              "confidence": "medium"
+            },
+            "trading": {
+              "points": 0.5,
+              "source": "https://help.fundedtradingplus.com/instant-program-information/",
+              "reason": "No weekend holding: all trades must be closed by 4:30 pm EST on Friday or are closed by the system. News allowed per Risk Review Policy; no stop-loss requirement.",
+              "alsoSource": "https://help.fundedtradingplus.com/risk-review-policy/"
+            },
+            "funded": {
+              "points": 0.5,
+              "source": "https://help.fundedtradingplus.com/instant-program-information/",
+              "reason": "6% daily drawdown on the higher of prior balance or equity remains a hard limit; 30-day inactivity hard breach; scale requests need a flat account and risk review."
+            }
+          },
+          "preset": {
+            "drawdown": "intraday",
+            "lossPercent": 6,
+            "profitSplit": 80,
+            "source": "https://help.fundedtradingplus.com/instant-program-information/"
+          },
+          "comparisonWithBatch4": "Same drawdown 0 → 3.0/5.",
+          "axesVerified": 5,
+          "stars": 3.0,
+          "ratingStatus": "rated"
+        },
+        {
+          "productId": "ftp-pnpl-current",
+          "inCatalogue": true,
+          "name": "Pass Now Pay Later — Funded stage",
+          "scope": "PNPL article updated 09.24.2026; the Activation Accounts funded-rules article (09.18.2026) describes the same structure (fee to start, activation fee after passing, 6% equity trailing, 3% daily, 25% consistency).",
+          "scopeFr": "PNPL, phase financée ; article du 24.09.2026, cohérent avec « Activation Accounts » (18.09.2026).",
+          "assessments": {
+            "drawdown": {
+              "points": 0,
+              "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+              "reason": "Funded 6% trailing on equity, following the equity high until it locks at the starting balance.",
+              "alsoSource": "https://help.fundedtradingplus.com/activation-accounts-funded-account-rules/"
+            },
+            "payout": {
+              "points": 0.5,
+              "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+              "reason": "First payout after 10 trading days and at least 10 trading days between payouts; 3% minimum (PNPL page: minimum withdrawal 3% of balance; Activation page: 3% profit threshold, withdrawal from $50); 80% split. Moderate gate, no cap.",
+              "alsoSource": "https://help.fundedtradingplus.com/activation-accounts-funded-account-rules/"
+            },
+            "consistency": {
+              "points": 0,
+              "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+              "reason": "25% best-day limit at payout request (delays, does not cancel); below the 30% threshold of the rubric.",
+              "alsoSource": "https://help.fundedtradingplus.com/activation-accounts-funded-account-rules/"
+            },
+            "trading": {
+              "points": 1,
+              "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+              "reason": "News trading, weekend holding and weekend trading allowed on the funded stage (subject to the FT+ news policy; the policy link on the page is a placeholder, and the Risk Review Policy states news trading is allowed).",
+              "alsoSource": "https://help.fundedtradingplus.com/risk-review-policy/"
+            },
+            "funded": {
+              "points": 0.5,
+              "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+              "reason": "Activation fee due after passing; 3% balance-based daily loss is a hard breach; no scaling."
+            }
+          },
+          "preset": {
+            "drawdown": "intraday",
+            "lossPercent": 6,
+            "consistency": 25,
+            "consistencyBasis": "net",
+            "profitSplit": 80,
+            "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/"
+          },
+          "comparisonWithBatch4": "Batch 4: 0 / 0 / 0.5 / 0.5 / 0.5 = 1.5. Claude: 0 / 0.5 / 0 / 1 / 0.5 = 2.0. Differences: payout 0.5 (10-trading-day cycle and 3% gate are moderate, not severe forfeiture); consistency 0 (25% is below the rubric's 30% threshold); trading 1 (the page explicitly allows news and weekend holding). Reviewer decision needed.",
+          "axesVerified": 5,
+          "stars": 2.0,
+          "ratingStatus": "rated"
+        }
+      ]
+    },
+    {
+      "slug": "hola-prime",
+      "catalogueProductIds": [
+        "hola-prime-program"
+      ],
+      "catalogueNote": "PropRadar holds a single generic product (hola-prime-program). Proposed product IDs below are suggestions for ChatGPT; prices not read.",
+      "discontinued": [
+        {
+          "name": "2-Step Prime X and USD 300,000 accounts",
+          "date": "2026-09-15",
+          "source": "https://www.holaprime.com/trading-rules-change-log/",
+          "note": "No longer sold; existing accounts keep their terms."
+        }
+      ],
+      "firmWideClauses": [
+        {
+          "rule": "Prime Consistency Program",
+          "source": "https://holaprime.com/forex/faq/prime-consistency-program/what-is-hola-primes-prime-consistency-program/",
+          "summary": "Discretionary enrolment of traders assessed as high-risk; profits removed and accounts rebalanced; 1% risk per trade idea, 30% margin cap, news prohibited while enrolled; 50% split after a second violation; exit after USD 20,000 aggregate profit and five payout cycles, on request."
+        },
+        {
+          "rule": "2% risk per trade idea with mandatory stop loss (TR.4)",
+          "source": "https://www.holaprime.com/trading-rules-change-log/",
+          "summary": "Applies to Prime/Pro sim funded and Direct accounts since 2 Sep 2026; no grace period; hard breach. Fly plans state no risk-per-trade rule."
+        }
+      ],
+      "programmes": [
+        {
+          "proposedProductId": "hola-prime-2-step-prime",
+          "inCatalogue": false,
+          "name": "2-Step Prime — Sim. Funded (bi-weekly 80%)",
+          "scope": "2-Step Prime FAQ read 28 Nov 2026; default payout route bi-weekly 80%. Max-loss FAQ states the limit applies in both challenge and sim funded account.",
+          "assessments": {
+            "drawdown": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/",
+              "reason": "10% of the initial balance (8% on $200K), static, applying to challenge and sim funded account.",
+              "alsoSource": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/"
+            },
+            "payout": {
+              "points": 0.5,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/",
+              "reason": "Bi-weekly: at least 3 profitable trading days (>=0.5% of initial balance) within the 14-day period; 2.5% processing fee."
+            },
+            "consistency": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/",
+              "reason": "Bi-weekly and monthly cycles carry no consistency requirement; the 40% score applies only to on-demand payouts."
+            },
+            "trading": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/",
+              "reason": "No restriction during news; weekend and overnight holding allowed on 2-Step Prime accounts."
+            },
+            "funded": {
+              "points": 0,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/",
+              "reason": "Funded only: risk per trade idea capped at 2% of initial balance with a mandatory stop loss on every trade; overlapping or 10-minute re-entries are aggregated; a breach is a hard breach that terminates the account. Firm-wide Prime Consistency Program can also remove profits and rebalance sim funded accounts at the firm's assessment.",
+              "alsoSource": "https://holaprime.com/forex/faq/prime-consistency-program/what-is-hola-primes-prime-consistency-program/"
+            }
+          },
+          "preset": {
+            "drawdown": "static",
+            "lossPercent": 10,
+            "profitSplit": 80,
+            "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/"
+          },
+          "variants": [
+            {
+              "id": "monthly-95",
+              "label": "Monthly cycle (95%)",
+              "labelFr": "Cycle mensuel (95 %)",
+              "kind": "payout route chosen on the funded account",
+              "overrides": {
+                "payout": {
+                  "points": 0.5,
+                  "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/",
+                  "reason": "Monthly cycle: at least 7 profitable trading days (>=0.5% each) within a 30-day period; 95% split."
+                }
+              },
+              "stars": 3.5,
+              "axesVerified": 5
+            },
+            {
+              "id": "on-demand-80",
+              "label": "On-demand payouts (80%)",
+              "labelFr": "Retraits à la demande (80 %)",
+              "kind": "payout route",
+              "overrides": {
+                "payout": {
+                  "points": 0.5,
+                  "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/",
+                  "reason": "On demand, but only once total profit reaches 2% of the initial balance."
+                },
+                "consistency": {
+                  "points": 0.5,
+                  "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/",
+                  "reason": "Biggest winning day must not exceed 40% of total profit; trading continues until the score falls."
+                }
+              },
+              "stars": 3.0,
+              "axesVerified": 5
+            }
+          ],
+          "evaluationRulesExcluded": [
+            "8%/5% targets",
+            "3 minimum trading days per phase",
+            "5% daily loss on challenge accounts"
+          ],
+          "axesVerified": 5,
+          "stars": 3.5,
+          "ratingStatus": "rated"
+        },
+        {
+          "proposedProductId": "hola-prime-1-step-prime",
+          "inCatalogue": false,
+          "name": "1-Step Prime — Sim. Funded (bi-weekly 80%)",
+          "scope": "1-Step Prime FAQ read 28 Nov 2026 (direct page read; Firecrawl credits exhausted).",
+          "assessments": {
+            "drawdown": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/",
+              "reason": "6% of the initial balance, static, applying to challenge and sim funded account.",
+              "alsoSource": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-prime-challenge/"
+            },
+            "payout": {
+              "points": 0.5,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-prime-challenge/",
+              "reason": "Bi-weekly: at least 3 profitable trading days within the 14-day period."
+            },
+            "consistency": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-prime-challenge/",
+              "reason": "No consistency requirement on bi-weekly or monthly cycles; 40% only on on-demand."
+            },
+            "trading": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-prime-challenge/",
+              "reason": "News trading allowed without restriction; weekend and overnight holding allowed."
+            },
+            "funded": {
+              "points": 0,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-prime-challenge/",
+              "reason": "Funded only: risk per trade idea capped at 2% of initial balance with a mandatory stop loss on every trade; overlapping or 10-minute re-entries are aggregated; a breach is a hard breach that terminates the account. Firm-wide Prime Consistency Program can also remove profits and rebalance sim funded accounts at the firm's assessment.",
+              "alsoSource": "https://holaprime.com/forex/faq/prime-consistency-program/what-is-hola-primes-prime-consistency-program/"
+            }
+          },
+          "preset": {
+            "drawdown": "static",
+            "lossPercent": 6,
+            "profitSplit": 80,
+            "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/"
+          },
+          "variants": [
+            {
+              "id": "monthly-95",
+              "label": "Monthly cycle (95%)",
+              "labelFr": "Cycle mensuel (95 %)",
+              "kind": "payout route chosen on the funded account",
+              "overrides": {
+                "payout": {
+                  "points": 0.5,
+                  "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-prime-challenge/",
+                  "reason": "Monthly cycle: at least 7 profitable trading days (>=0.5% each) within a 30-day period; 95% split."
+                }
+              },
+              "stars": 3.5,
+              "axesVerified": 5
+            },
+            {
+              "id": "on-demand-80",
+              "label": "On-demand payouts (80%)",
+              "labelFr": "Retraits à la demande (80 %)",
+              "kind": "payout route",
+              "overrides": {
+                "payout": {
+                  "points": 0.5,
+                  "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-prime-challenge/",
+                  "reason": "On demand, but only once total profit reaches 2% of the initial balance."
+                },
+                "consistency": {
+                  "points": 0.5,
+                  "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-prime-challenge/",
+                  "reason": "Biggest winning day must not exceed 40% of total profit; trading continues until the score falls."
+                }
+              },
+              "stars": 3.0,
+              "axesVerified": 5
+            }
+          ],
+          "axesVerified": 5,
+          "stars": 3.5,
+          "ratingStatus": "rated"
+        },
+        {
+          "proposedProductId": "hola-prime-2-step-pro",
+          "inCatalogue": false,
+          "name": "2-Step Pro — Sim. Funded (bi-weekly 80%)",
+          "scope": "2-Step Pro FAQ read 28 Nov 2026.",
+          "assessments": {
+            "drawdown": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/",
+              "reason": "10% of the initial balance (8% on $200K), static, challenge and sim funded.",
+              "alsoSource": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-pro-challenge/"
+            },
+            "payout": {
+              "points": 0.5,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-pro-challenge/",
+              "reason": "Bi-weekly: at least 3 profitable trading days within the 14-day period."
+            },
+            "consistency": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-pro-challenge/",
+              "reason": "No consistency requirement on bi-weekly or monthly cycles; 40% only on on-demand."
+            },
+            "trading": {
+              "points": 0.5,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-pro-challenge/",
+              "reason": "Sim funded: no opening or closing on affected instruments from 5 minutes before to 5 minutes after high-impact news (profits reversed); weekend holding not allowed (positions closed 15:45 EST Friday, account disabled until re-enabled); total open-lot exposure caps (soft breach, then deduction, 30% split and termination on a second breach)."
+            },
+            "funded": {
+              "points": 0,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-pro-challenge/",
+              "reason": "Funded only: risk per trade idea capped at 2% of initial balance with a mandatory stop loss on every trade; overlapping or 10-minute re-entries are aggregated; a breach is a hard breach that terminates the account. Firm-wide Prime Consistency Program can also remove profits and rebalance sim funded accounts at the firm's assessment.",
+              "alsoSource": "https://holaprime.com/forex/faq/prime-consistency-program/what-is-hola-primes-prime-consistency-program/"
+            }
+          },
+          "preset": {
+            "drawdown": "static",
+            "lossPercent": 10,
+            "profitSplit": 80,
+            "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/"
+          },
+          "variants": [
+            {
+              "id": "monthly-95",
+              "label": "Monthly cycle (95%)",
+              "labelFr": "Cycle mensuel (95 %)",
+              "kind": "payout route chosen on the funded account",
+              "overrides": {
+                "payout": {
+                  "points": 0.5,
+                  "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-pro-challenge/",
+                  "reason": "Monthly cycle: at least 7 profitable trading days (>=0.5% each) within a 30-day period; 95% split."
+                }
+              },
+              "stars": 3.0,
+              "axesVerified": 5
+            },
+            {
+              "id": "on-demand-80",
+              "label": "On-demand payouts (80%)",
+              "labelFr": "Retraits à la demande (80 %)",
+              "kind": "payout route",
+              "overrides": {
+                "payout": {
+                  "points": 0.5,
+                  "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-pro-challenge/",
+                  "reason": "On demand, but only once total profit reaches 2% of the initial balance."
+                },
+                "consistency": {
+                  "points": 0.5,
+                  "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-pro-challenge/",
+                  "reason": "Biggest winning day must not exceed 40% of total profit; trading continues until the score falls."
+                }
+              },
+              "stars": 2.5,
+              "axesVerified": 5
+            }
+          ],
+          "axesVerified": 5,
+          "stars": 3.0,
+          "ratingStatus": "rated"
+        },
+        {
+          "proposedProductId": "hola-prime-2-step-fly",
+          "inCatalogue": false,
+          "name": "2-Step Fly — Sim. Funded (purchases from 4 Nov 2026)",
+          "scope": "Launched 28 Oct 2026; change log TR.3 (4 Nov 2026 08:00 EST) moved the sim funded limit to intraday equity trailing. The product FAQ still shows the earlier 6% EOD-balance rule (see legacy variant).",
+          "assessments": {
+            "drawdown": {
+              "points": 0,
+              "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/",
+              "reason": "5% intraday trailing on the highest equity, locking 3% below the initial balance (accounts bought on or after 4 Nov 2026).",
+              "alsoSource": "https://www.holaprime.com/trading-rules-change-log/"
+            },
+            "payout": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-fly-challenge/",
+              "reason": "Payouts any number of times per day; only a 0.1% profit buffer; 80% split; 2.5% processing fee."
+            },
+            "consistency": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-fly-challenge/",
+              "reason": "No consistency rule on the sim funded account (the 50% rule applies to Phase 2 only).",
+              "alsoSource": "https://www.holaprime.com/trading-rules-change-log/"
+            },
+            "trading": {
+              "points": 0.5,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-fly-challenge/",
+              "reason": "News fully allowed and no risk-per-trade rule, but weekend holding is not permitted on the sim funded account: positions still open at 15:45 EST Friday are closed and the account is permanently terminated. Orders capped at 5 lots each."
+            },
+            "funded": {
+              "points": null,
+              "status": "not-assessed",
+              "reason": "Unresolved contradiction: the 10 Nov / 28 Oct 2026 change-log entries say Fly sim funded accounts have no Prohibited Trading Practices or restrictions, while the Prime Consistency Program page says it applies to all active Hola Prime (sim funded) accounts (profit removal and rebalance on enrolment) and does not exclude Fly. Left unrated until Hola Prime clarifies.",
+              "sources": [
+                "https://www.holaprime.com/trading-rules-change-log/",
+                "https://holaprime.com/forex/faq/prime-consistency-program/what-is-hola-primes-prime-consistency-program/"
+              ]
+            }
+          },
+          "preset": {
+            "drawdown": "intraday",
+            "lossPercent": 5,
+            "profitSplit": 80,
+            "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/"
+          },
+          "variants": [
+            {
+              "id": "legacy-before-2026-11-04",
+              "label": "Bought before 4 Nov 2026",
+              "labelFr": "Achat avant le 4 novembre 2026",
+              "kind": "old version",
+              "overrides": {
+                "drawdown": {
+                  "points": 0.5,
+                  "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-fly-challenge/",
+                  "reason": "6% trailing on the end-of-day closing balance, locking at the initial balance (rule shown on the product FAQ, superseded for new purchases by TR.3).",
+                  "alsoSource": "https://www.holaprime.com/trading-rules-change-log/"
+                }
+              },
+              "stars": null,
+              "axesVerified": 4
+            }
+          ],
+          "evaluationRulesExcluded": [
+            "8% target in each phase",
+            "3% daily loss and 6% static loss in both phases",
+            "50% consistency in Phase 2"
+          ],
+          "axesVerified": 4,
+          "stars": null,
+          "ratingStatus": "not-rated (partial evidence)"
+        },
+        {
+          "proposedProductId": "hola-prime-1-step-fly",
+          "inCatalogue": false,
+          "name": "1-Step Fly — Sim. Funded (standard, trailing)",
+          "scope": "Launched 10 Nov 2026 (change log ACC.6). The product FAQ shows 5% EOD-balance trailing; the max-loss FAQ and the change log both state 4% intraday equity trailing locking at the initial balance — the dated change log is followed.",
+          "assessments": {
+            "drawdown": {
+              "points": 0,
+              "source": "https://www.holaprime.com/trading-rules-change-log/",
+              "reason": "4% intraday equity-based trailing, locking at the initial balance.",
+              "alsoSource": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/",
+              "resolvedConflict": "Product FAQ says 5% EOD trailing; change log (10 Nov) and max-loss FAQ say 4% intraday. Both readings score 0 or 0.5; the dated change log is used. Reviewer may keep the axis open."
+            },
+            "payout": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-fly-challenge/",
+              "reason": "Anytime payouts with a 0.5% profit buffer; fixed 70% split."
+            },
+            "consistency": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-fly-challenge/",
+              "reason": "No consistency rule on the sim funded account (50% applies to the challenge only).",
+              "alsoSource": "https://www.holaprime.com/trading-rules-change-log/"
+            },
+            "trading": {
+              "points": 0.5,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-fly-challenge/",
+              "reason": "News fully allowed, no risk-per-trade rule, copy trading allowed; weekend holding not permitted on the sim funded account (closed 15:45 EST Friday and account permanently terminated); 5 lots per order."
+            },
+            "funded": {
+              "points": null,
+              "status": "not-assessed",
+              "reason": "Unresolved contradiction: the 10 Nov / 28 Oct 2026 change-log entries say Fly sim funded accounts have no Prohibited Trading Practices or restrictions, while the Prime Consistency Program page says it applies to all active Hola Prime (sim funded) accounts (profit removal and rebalance on enrolment) and does not exclude Fly. Left unrated until Hola Prime clarifies.",
+              "sources": [
+                "https://www.holaprime.com/trading-rules-change-log/",
+                "https://holaprime.com/forex/faq/prime-consistency-program/what-is-hola-primes-prime-consistency-program/"
+              ]
+            }
+          },
+          "preset": {
+            "drawdown": "intraday",
+            "lossPercent": 4,
+            "profitSplit": 70,
+            "source": "https://www.holaprime.com/trading-rules-change-log/"
+          },
+          "variants": [
+            {
+              "id": "static-mll-addon",
+              "label": "Static loss limit add-on",
+              "labelFr": "Option perte maximale statique",
+              "kind": "purchase option",
+              "overrides": {
+                "drawdown": {
+                  "points": 1,
+                  "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/",
+                  "reason": "3% static loss limit on the sim funded account, locking at the initial balance once equity reaches it.",
+                  "alsoSource": "https://www.holaprime.com/trading-rules-change-log/"
+                }
+              },
+              "stars": null,
+              "axesVerified": 4
+            }
+          ],
+          "evaluationRulesExcluded": [
+            "10% target",
+            "3% daily loss and 6% static loss (5% on the max-loss FAQ)",
+            "50% consistency"
+          ],
+          "axesVerified": 4,
+          "stars": null,
+          "ratingStatus": "not-rated (partial evidence)"
+        },
+        {
+          "proposedProductId": "hola-prime-direct",
+          "inCatalogue": false,
+          "name": "Direct — Sim. Funded (no evaluation)",
+          "scope": "Direct account FAQ read 28 Nov 2026 (direct page read).",
+          "assessments": {
+            "drawdown": {
+              "points": 0.5,
+              "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/",
+              "reason": "7% trailing on the end-of-day balance high-water mark, locking at the starting balance once 7% profit is reached.",
+              "alsoSource": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-direct-account/"
+            },
+            "payout": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-direct-account/",
+              "reason": "Bi-weekly, every 14 calendar days after the first trade; no profitable-day requirement stated; no cap listed."
+            },
+            "consistency": {
+              "points": 0,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-direct-account/",
+              "reason": "Biggest winning day must not exceed 20% of total profit before payout."
+            },
+            "trading": {
+              "points": 0,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-direct-account/",
+              "reason": "No execution on affected instruments ±5 minutes around high-impact news, an SL/TP triggered in the window closes the account; weekend holding prohibited, positions left open are closed and the account terminated."
+            },
+            "funded": {
+              "points": 0,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-direct-account/",
+              "reason": "2% risk per trade idea with mandatory stop loss (hard breach); 3% daily loss hard breach; firm-wide Prime Consistency Program can remove profits.",
+              "alsoSource": "https://holaprime.com/forex/faq/prime-consistency-program/what-is-hola-primes-prime-consistency-program/"
+            }
+          },
+          "preset": {
+            "drawdown": "eod",
+            "lossPercent": 7,
+            "consistency": 20,
+            "consistencyBasis": "net",
+            "profitSplit": 80,
+            "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/"
+          },
+          "axesVerified": 5,
+          "stars": 1.5,
+          "ratingStatus": "rated"
+        },
+        {
+          "proposedProductId": "hola-prime-direct-fly",
+          "inCatalogue": false,
+          "name": "Direct Fly — Sim. Funded (no evaluation)",
+          "scope": "Launched 10 Nov 2026 (change log ACC.6); Direct Fly FAQ read 28 Nov 2026.",
+          "assessments": {
+            "drawdown": {
+              "points": 0,
+              "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/",
+              "reason": "4% intraday equity trailing until the 2% profit milestone (Take-Off Mode), then locks at the initial balance (Turbo Mode).",
+              "alsoSource": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-direct-fly-sim-funded-account/"
+            },
+            "payout": {
+              "points": 0.5,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-direct-fly-sim-funded-account/",
+              "reason": "First payout only after reaching 2% profit, with trading paused for an internal review of up to 24 hours; afterwards anytime payouts with a 0.1% buffer; fixed 70% split."
+            },
+            "consistency": {
+              "points": 1,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-direct-fly-sim-funded-account/",
+              "reason": "No consistency rule stated."
+            },
+            "trading": {
+              "points": 0.5,
+              "source": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-direct-fly-sim-funded-account/",
+              "reason": "News prohibited in Take-Off Mode, allowed in Turbo Mode; weekend holding not allowed; 5 lots per order; no risk-per-trade rule."
+            },
+            "funded": {
+              "points": null,
+              "status": "not-assessed",
+              "reason": "Unresolved contradiction: the 10 Nov / 28 Oct 2026 change-log entries say Fly sim funded accounts have no Prohibited Trading Practices or restrictions, while the Prime Consistency Program page says it applies to all active Hola Prime (sim funded) accounts (profit removal and rebalance on enrolment) and does not exclude Fly. Left unrated until Hola Prime clarifies.",
+              "sources": [
+                "https://www.holaprime.com/trading-rules-change-log/",
+                "https://holaprime.com/forex/faq/prime-consistency-program/what-is-hola-primes-prime-consistency-program/"
+              ]
+            }
+          },
+          "preset": {
+            "drawdown": "intraday",
+            "lossPercent": 4,
+            "profitSplit": 70,
+            "source": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/"
+          },
+          "axesVerified": 4,
+          "stars": null,
+          "ratingStatus": "not-rated (partial evidence)"
+        }
+      ]
+    }
+  ],
+  "evolveMarkets": {
+    "finding": "Not a prop trading firm. Evolve Markets (evolve.markets) is an offshore, crypto-first retail broker (MT5, leverage up to 1:1000, crypto-only funding) founded in 2016. Its official site now shows a CEO message announcing an orderly wind-down (\"sun-setting its trading platform\"). No challenge, evaluation or funded-account programme was found on its site.",
+    "officialSource": "https://evolve.markets/",
+    "contextSources": [
+      {
+        "label": "Forex Peace Army broker page (third party): shutdown announcement dated 2024-03-10; SVG and Mwali registrations",
+        "url": "https://www.forexpeacearmy.com/forex-reviews/13354/evolve-markets-forex-brokers"
+      },
+      {
+        "label": "Trustpilot company page (company description: crypto-first trading platform)",
+        "url": "https://www.trustpilot.com/review/evolve.markets"
+      }
+    ],
+    "nameClash": "\"IF Evolve\" is a 1-Step programme of Instant Funding (a different firm), listed on comparison sites; it is unrelated to Evolve Markets.",
+    "recommendation": "Do not create a programme entry. If Evolve Markets is ever added to the radar, it belongs outside the prop-firm catalogue (broker, closing). Not present in propFirms.ts or firm-updates.json on main."
+  },
+  "sourcesRead": [
+    {
+      "url": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+      "updated": "2026-11-02"
+    },
+    {
+      "url": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+      "updated": "2026-11-02"
+    },
+    {
+      "url": "https://the5ers.com/faqs/how-does-the-bootcamp-scaling-plan-work/",
+      "updated": "2026-11-02"
+    },
+    {
+      "url": "https://the5ers.com/faqs/what-is-drawdown-and-how-is-it-calculated/",
+      "updated": "2026-07-22"
+    },
+    {
+      "url": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+      "updated": "2026-11-03"
+    },
+    {
+      "url": "https://the5ers.com/faqs/payout-policy-and-hub-credit-in-the-high-stakes-program/",
+      "updated": "2026-11-24"
+    },
+    {
+      "url": "https://the5ers.com/faqs/what-is-constancy-rule/",
+      "updated": "2026-10-30"
+    },
+    {
+      "url": "https://the5ers.com/faqs/2-step-plan-rules-specifications/",
+      "updated": "2026-11-02"
+    },
+    {
+      "url": "https://the5ers.com/faqs/what-is-stop-loss-order-and-how-is-it-calculated/",
+      "updated": "search excerpt"
+    },
+    {
+      "url": "https://www.the5ers.com/fixed-vs-dynamic-profit-targets/",
+      "updated": "2026-09-28"
+    },
+    {
+      "url": "https://the5ers.com/high-stakes/",
+      "updated": "read 2026-11-28"
+    },
+    {
+      "url": "https://the5ers.com/bootcamp/",
+      "updated": "read 2026-11-28"
+    },
+    {
+      "url": "https://the5ers.com/hyper-growth/",
+      "updated": "read 2026-11-28"
+    },
+    {
+      "url": "https://the5ers.com/terms-and-conditions/",
+      "updated": "2026-10-28",
+      "note": "No programme-specific consistency clause"
+    },
+    {
+      "url": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+      "updated": "08.12.2026 (help-centre format)"
+    },
+    {
+      "url": "https://help.fundedtradingplus.com/2-step-classic-program-information/",
+      "updated": "07.02.2026"
+    },
+    {
+      "url": "https://help.fundedtradingplus.com/instant-program-information/",
+      "updated": "08.12.2026"
+    },
+    {
+      "url": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+      "updated": "09.24.2026"
+    },
+    {
+      "url": "https://help.fundedtradingplus.com/activation-accounts-funded-account-rules/",
+      "updated": "09.18.2026"
+    },
+    {
+      "url": "https://help.fundedtradingplus.com/consistency-rule/",
+      "updated": "07.02.2026"
+    },
+    {
+      "url": "https://help.fundedtradingplus.com/risk-review-policy/",
+      "updated": "07.02.2026"
+    },
+    {
+      "url": "https://help.fundedtradingplus.com/trading-rules/",
+      "updated": "07.02.2026"
+    },
+    {
+      "url": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-prime-challenge/",
+      "updated": "read 2026-11-28"
+    },
+    {
+      "url": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-prime-challenge/",
+      "updated": "read 2026-11-28"
+    },
+    {
+      "url": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-pro-challenge/",
+      "updated": "read 2026-11-28"
+    },
+    {
+      "url": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-2-step-fly-challenge/",
+      "updated": "read 2026-11-28"
+    },
+    {
+      "url": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-1-step-fly-challenge/",
+      "updated": "read 2026-11-28"
+    },
+    {
+      "url": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-direct-account/",
+      "updated": "read 2026-11-28"
+    },
+    {
+      "url": "https://holaprime.com/forex/faq/hola-prime-challenges/hola-prime-direct-fly-sim-funded-account/",
+      "updated": "read 2026-11-28"
+    },
+    {
+      "url": "https://holaprime.com/forex/faq/trading-conditions/how-does-the-max-loss-limit-work/",
+      "updated": "read 2026-11-28"
+    },
+    {
+      "url": "https://www.holaprime.com/trading-rules-change-log/",
+      "updated": "latest entry 2026-11-25"
+    },
+    {
+      "url": "https://holaprime.com/forex/faq/prime-consistency-program/what-is-hola-primes-prime-consistency-program/",
+      "updated": "no date shown"
+    },
+    {
+      "url": "https://evolve.markets/",
+      "updated": "read 2026-11-28"
+    }
+  ]
+}
