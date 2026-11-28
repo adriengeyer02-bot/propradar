@@ -127,3 +127,36 @@ UX handoff: separate branch from latest main; improve challenge discovery and co
 - Fintokei: SwiftTrader reward now 90% for post-15 July purchases, previous catalogue says 80%; catalogue update pending. StartTrader lifetime $400 cap and max two requests. Default versus individualized restrictions distinguished; no claim that restrictions never apply.
 - MFFU: Pro redesigned effective 23 November, reserve and forfeiture policy; Rapid 50K representative no DLL; optional DLL and new Signature not yet mapped. Builder guide now Legacy; remain partial until new products reconciled.
 - FXIFY: Pro first-two-payout surplus deducted, Lite 20% consistency. Other four remain partial pending funded trading rule evidence. Do not equate missing evidence to absence. Full runtime/build/visual checks pending. Cumulative 81 complete catalogue evaluations per prior count (duplicate E8 listings included).
+
+## Futures, stock programmes and FXIFY completion — 2026-11-28
+
+18 entries reviewed, 14 complete including four previously partial FXIFY entries and one checkout variant. 4 partial. Official pages verified in this pass; prior source assertions should not be treated as independent verification. Existing catalogue IDs preserved, no price or firm rating modifications.
+
+| Firm | ID | /5 |
+|---|---|---:|
+| earn2trade | e2t-tcp | 3 |
+| earn2trade | e2t-gauntlet | 3 |
+| earn2trade | e2t-livesim | 3 |
+| earn2trade | e2t-tcp-large-fixed | 3.5 |
+| the-trading-pit | ttp-futures-prime | 3 |
+| the-trading-pit | ttp-futures-instant | 1.5 |
+| trade-the-pool | ttp-day-max | 3 |
+| trade-the-pool | ttp-day-flex | 2.5 |
+| trade-the-pool | ttp-swing-max | Partial |
+| trade-the-pool | ttp-swing-flex | Partial |
+| trade-the-pool | ttp-edge | Partial |
+| funded-futures-network | funded-futures-network-max-standard | 2.5 |
+| funded-futures-network | funded-futures-network-steady | Partial |
+| fxify | fxi-one | 3 |
+| fxify | fxi-two-std | 3 |
+| fxify | fxi-two-classic | 3.5 |
+| fxify | fxi-three | 4.5 |
+| fxify | fxi-two-classic / monthly-100 | 3.5 |
+
+- Earn2Trade: actual partner funded rules distinguish LiveSim EOD and Live trailing, TCP 200K/400K fixed. Five profitable days, no funded percentage consistency or buffer; lifetime LiveSim withdrawal thresholds trigger transition. Generic LiveSim duplicates programme routes, not unique purchase. Fee and share vary; no single split preset.
+- The Trading Pit: Instant requires a fresh profit goal each payout cycle; Prime five days at $150, 50% profit cap. Current English page USD prices contrast with catalogue EUR; no price conversion or replacement without locale scope.
+- Trade The Pool: position concentration not day concentration; no numeric simulator consistency preset. Day floor resets at 3× daily limit, not standard continuous trailing. Swing and Edge exact funded floor movement unresolved, no full stars until verified. Edge first 4% profit target before payout, then 1%/1.5%.
+- FFN: MAX Standard 50K representative. STEADY news and automation conflict remains, do not infer missing criterion. No claim that a live review necessarily closes all accounts based solely on current account card.
+- FXIFY: One/Two Standard/Three have explicitly no consistency; Classic funded 25% historical best day does not reset at withdrawal, so no standard net-cycle preset. Add monthly 100% route. Ordinary payout cycle differences and trailing floor risk captured. Existing Instant Lite also has non-reset historical best day; do not model it as per-cycle net.
+- Hola Prime: archived evidence dossier dated 26 Nov read; no setProducts mapping in current firm-updates blob. Do not invent product IDs, and do not assign complete ratings until exact schedules/IDs and funded-stage details matched. Catalogue coordination required.
+- Cumulative 95 complete catalogue evaluations per prior audit count, duplicates included; four completed entries previously had no score. Full runtime/build/visual validation pending; single atomic commit.

@@ -661,6 +661,461 @@ evidence.tradeday = {
     }
   }
 };
+evidence["earn2trade"] = {
+  "e2t-tcp": {
+    "checkedOn": "2026-11-28",
+    "scope": "TCP 25K–100K LiveSim; purchases from 2 November 2026; partner funding terms apply.",
+    "scopeFr": "TCP 25K–100K LiveSim ; achats à partir du 2 novembre 2026 ; conditions du partenaire de financement.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+        "reason": "LiveSim uses end-of-day drawdown; Live generally trails intraday, except large TCP."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+        "reason": "Five qualifying profitable days per request, size-specific daily profit minima; $100 minimum and tier-dependent 50%/80% split or 60% TCP400."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.earn2trade.com/en/articles/3849975-what-is-the-maintain-consistency-rule",
+        "reason": "30% concentration applies only to evaluation; explicitly absent in funded LiveSim/Live."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+        "reason": "News trading permitted; mandatory session closure, restricted instruments and trade copier ban."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+        "reason": "LiveSim total withdrawal thresholds trigger automatic Live transition; daily loss limit and funded account limits."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation"
+    }
+  },
+  "e2t-gauntlet": {
+    "checkedOn": "2026-11-28",
+    "scope": "Gauntlet Mini LiveSim; purchases from 2 November 2026; partner funding terms apply.",
+    "scopeFr": "Gauntlet Mini LiveSim ; achats à partir du 2 novembre 2026 ; conditions du partenaire de financement.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+        "reason": "LiveSim uses end-of-day drawdown; Live generally trails intraday, except large TCP."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+        "reason": "Five qualifying profitable days per request, size-specific daily profit minima; $100 minimum and tier-dependent 50%/80% split or 60% TCP400."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.earn2trade.com/en/articles/3849975-what-is-the-maintain-consistency-rule",
+        "reason": "30% concentration applies only to evaluation; explicitly absent in funded LiveSim/Live."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+        "reason": "News trading permitted; mandatory session closure, restricted instruments and trade copier ban."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+        "reason": "LiveSim total withdrawal thresholds trigger automatic Live transition; daily loss limit and funded account limits."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation"
+    }
+  },
+  "e2t-livesim": {
+    "checkedOn": "2026-11-28",
+    "scope": "Generic LiveSim (TCP 25K–100K or GM); purchases from 2 November 2026; partner funding terms apply.",
+    "scopeFr": "Generic LiveSim (TCP 25K–100K or GM) ; achats à partir du 2 novembre 2026 ; conditions du partenaire de financement.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+        "reason": "LiveSim uses end-of-day drawdown; Live generally trails intraday, except large TCP."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+        "reason": "Five qualifying profitable days per request, size-specific daily profit minima; $100 minimum and tier-dependent 50%/80% split or 60% TCP400."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.earn2trade.com/en/articles/3849975-what-is-the-maintain-consistency-rule",
+        "reason": "30% concentration applies only to evaluation; explicitly absent in funded LiveSim/Live."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+        "reason": "News trading permitted; mandatory session closure, restricted instruments and trade copier ban."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+        "reason": "LiveSim total withdrawal thresholds trigger automatic Live transition; daily loss limit and funded account limits."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation"
+    }
+  },
+  "e2t-tcp-large-fixed": {
+    "checkedOn": "2026-11-28",
+    "scope": "TCP 200K/400K Live; purchases from 2 November 2026; partner funding terms apply.",
+    "scopeFr": "TCP 200K/400K Live ; achats à partir du 2 novembre 2026 ; conditions du partenaire de financement.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+        "reason": "TCP 200K/400K fixed maximum drawdown."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+        "reason": "Five qualifying profitable days per request, size-specific daily profit minima; $100 minimum and tier-dependent 50%/80% split or 60% TCP400."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://help.earn2trade.com/en/articles/3849975-what-is-the-maintain-consistency-rule",
+        "reason": "30% concentration applies only to evaluation; explicitly absent in funded LiveSim/Live."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+        "reason": "News trading permitted; mandatory session closure, restricted instruments and trade copier ban."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+        "reason": "Daily loss limit, funded account limits and payout-provider charges; no LiveSim cap at these sizes."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation"
+    }
+  }
+};
+evidence["the-trading-pit"] = {
+  "ttp-futures-prime": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Futures Prime earning phase, not evaluation.",
+    "scopeFr": "Futures Prime actuel en phase financée, hors évaluation.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://www.thetradingpit.com/futures",
+        "reason": "EOD trailing floor locks at starting balance."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://www.thetradingpit.com/futures",
+        "reason": "Five $150 profitable days and seven-day requests; 50% realized profit with caps $2,500/$3,500/$5,000; new profit required."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://www.thetradingpit.com/futures",
+        "reason": "Prime funded payout conditions list profitable days and caps, no funded best-day percentage; evaluation rule separate."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.thetradingpit.com/trading-rules",
+        "reason": "News allowed in earning phase; daily forced position closure and cross-account hedging ban."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.thetradingpit.com/futures",
+        "reason": "Funded contract limits increase by EOD profit brackets; no additional funded target required to retain account."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 80,
+      "source": "https://www.thetradingpit.com/futures"
+    }
+  },
+  "ttp-futures-instant": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Futures Instant 50K/100K, funded from inception.",
+    "scopeFr": "Futures Instant 50K/100K actuel, financé dès l'ouverture.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://www.thetradingpit.com/futures",
+        "reason": "EOD trailing floor locks at starting balance."
+      },
+      "payout": {
+        "points": 0,
+        "source": "https://www.thetradingpit.com/futures",
+        "reason": "New profit goal required each cycle; five traded days, $500 minimum and sequential payout caps."
+      },
+      "consistency": {
+        "points": 0,
+        "source": "https://www.thetradingpit.com/futures",
+        "reason": "20% best-day threshold before each payout."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://www.thetradingpit.com/futures",
+        "reason": "Intraday futures; no overnight/weekend positions; programme news trading permitted."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://www.thetradingpit.com/futures",
+        "reason": "Dynamic daily pause tied to 60% of peak accumulated EOD profit; maximum two Instant accounts."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 90,
+      "source": "https://www.thetradingpit.com/futures"
+    }
+  }
+};
+evidence["trade-the-pool"] = {
+  "ttp-day-max": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Day MAX Professional account. Tier floor can reset upward.",
+    "scopeFr": "Compte Professional Day MAX actuel. Seuil ajustable par palier.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "Overall loss floor starts from tier balance minus maximum loss, resets to tier balance at 3× daily limit profit; not a standard continuous trail."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/the-program/",
+        "reason": "14-day withdrawals, minimum profit $300 ($150 on 5K), at least 20 positions; scaling restarts the withdrawal clock."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "30% best-position requirement evaluation only."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "Minimum 30 seconds and $0.10 price movement for valid trades; day-session restrictions apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "14-day inactivity timeout and mandatory risk management; scaling creates replacement account and can delay withdrawals."
+      }
+    },
+    "preset": {
+      "source": "https://tradethepool.com/program-terms/"
+    }
+  },
+  "ttp-day-flex": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Day FLEX Professional account. Tier floor can reset upward.",
+    "scopeFr": "Compte Professional Day FLEX actuel. Seuil ajustable par palier.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "Overall loss floor starts from tier balance minus maximum loss, resets to tier balance at 3× daily limit profit; not a standard continuous trail."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/the-program/",
+        "reason": "14-day withdrawals, minimum profit $300 ($150 on 5K), at least 10 positions; three 0.5% profit days per cycle."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "50% maximum single-position share of valid profit in funded phase; position-based, not best-day."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "Minimum 30 seconds and $0.10 price movement for valid trades; day-session restrictions apply."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "14-day inactivity timeout and mandatory risk management; scaling creates replacement account and can delay withdrawals."
+      }
+    },
+    "preset": {
+      "source": "https://tradethepool.com/program-terms/"
+    }
+  },
+  "ttp-swing-max": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Swing MAX Professional account. Funded swing drawdown formula not confirmed.",
+    "scopeFr": "Compte Professional Swing MAX actuel. Formule de drawdown financé swing à confirmer.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/the-program/",
+        "reason": "14-day withdrawals, minimum profit $300 ($150 on 5K), at least 5 positions; scaling restarts the withdrawal clock."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "70% maximum single-position share of valid profit in funded phase; position-based, not best-day."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "Minimum 30 seconds and $0.10 price movement for valid trades; earnings holding prohibited."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "14-day inactivity timeout and mandatory risk management; scaling creates replacement account and can delay withdrawals."
+      }
+    },
+    "preset": {
+      "source": "https://tradethepool.com/program-terms/"
+    }
+  },
+  "ttp-swing-flex": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current Swing FLEX Professional account. Funded swing drawdown formula not confirmed.",
+    "scopeFr": "Compte Professional Swing FLEX actuel. Formule de drawdown financé swing à confirmer.",
+    "assessments": {
+      "payout": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/the-program/",
+        "reason": "14-day withdrawals, minimum profit $300 ($150 on 5K), at least 5 positions; three 0.5% profit days per cycle."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "50% maximum single-position share of valid profit in funded phase; position-based, not best-day."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "Minimum 30 seconds and $0.10 price movement for valid trades; earnings holding prohibited."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/program-terms/",
+        "reason": "14-day inactivity timeout and mandatory risk management; scaling creates replacement account and can delay withdrawals."
+      }
+    },
+    "preset": {
+      "source": "https://tradethepool.com/program-terms/"
+    }
+  },
+  "ttp-edge": {
+    "checkedOn": "2026-11-28",
+    "scope": "Edge Professional 50K/100K; funded drawdown measured EOD; exact lock mechanics not confirmed.",
+    "scopeFr": "Edge Professional 50K/100K ; drawdown financé calculé en fin de journée, mécanisme de verrouillage à confirmer.",
+    "assessments": {
+      "payout": {
+        "points": 0,
+        "source": "https://tradethepool.com/the-program/",
+        "reason": "First profit goal 4%, subsequent 1%/1.5%; $500 minimum and $1,500/$2,000 cap."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/the-program/",
+        "reason": "40% funded consistency."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/the-program/",
+        "reason": "Minimum 30-second hold and $0.10 movement; position limited to 5% prior-minute stock volume."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://tradethepool.com/the-program/",
+        "reason": "Hard daily loss 2.5%/1.8%; no Pro scaling."
+      }
+    },
+    "preset": {
+      "profitSplit": 80,
+      "source": "https://tradethepool.com/the-program/"
+    }
+  }
+};
+evidence["funded-futures-network"] = {
+  "funded-futures-network-max-standard": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current 50K MAX Standard funded baseline; source terms from account card.",
+    "scopeFr": "MAX Standard 50K financé actuel ; fiche officielle.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://fundedfuturesnetwork.com/competition",
+        "reason": "$2,000 EOD trailing floor locks at starting balance plus $100."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fundedfuturesnetwork.com/competition",
+        "reason": "Same-day eligibility, $2,000 buffer, $500 minimum; first 3 caps $1,000 then $1,250, $10K aggregate per withdrawal."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://fundedfuturesnetwork.com/competition",
+        "reason": "40% funded best-day concentration."
+      },
+      "trading": {
+        "points": 0.5,
+        "source": "https://fundedfuturesnetwork.com/faq",
+        "reason": "Maximum five copy-traded accounts; daily session restrictions and funded news restrictions per existing audit."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fundedfuturesnetwork.com/competition",
+        "reason": "Live review after four payouts on one account or ten since last review; $1,250 daily loss limit."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "profitSplit": 80,
+      "source": "https://fundedfuturesnetwork.com/competition"
+    }
+  },
+  "funded-futures-network-steady": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current STEADY; unresolved conflict between general and dedicated news/automation rules.",
+    "scopeFr": "STEADY actuel ; contradiction sur les annonces et l'automatisation entre FAQ générale et fiche dédiée.",
+    "assessments": {
+      "drawdown": {
+        "points": 0.5,
+        "source": "https://steady.fundedfuturesnetwork.com/",
+        "reason": "EOD trailing drawdown, tier-dependent; no daily loss limit."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://steady.fundedfuturesnetwork.com/",
+        "reason": "Buffer equal to drawdown and sequential caps $1K–3K initially; $10K aggregate cap."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://steady.fundedfuturesnetwork.com/",
+        "reason": "52% evaluation only; no funded consistency."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://steady.fundedfuturesnetwork.com/",
+        "reason": "Live review after five payouts; exact live transition conditions require clarification."
+      }
+    },
+    "preset": {
+      "drawdown": "eod",
+      "source": "https://steady.fundedfuturesnetwork.com/"
+    }
+  }
+};
 // Reviewed six additional firms, 2026-11-28.
 evidence["audacity-capital"] = {
   "audacity-ability-challenge": {
@@ -2713,6 +3168,159 @@ addVariant("funding-pips","pips-two-step-standard","on-demand","On Demand 100%",
 addVariant("funding-pips","pips-two-step-standard","weekly-60","Weekly 60%","Retrait hebdomadaire 60%","Current Master weekly 60% option, no add-ons.","Master actuel, retrait hebdomadaire 60 %, sans option.",{"payout":{"points":0.5,"source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard","reason":"Seven-day withdrawal schedule; minimum request 1%; 60% share."}},{"drawdown":"static","lossPercent":10,"profitSplit":60,"source":"https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"});
 addVariant("funding-pips","pips-two-step-pro","on-demand","On Demand 100%","Retrait à la demande 100%","Current Master, on-demand reward route, no add-ons.","Master actuel, retrait à la demande, sans option.",{"payout":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model","reason":"Seven qualifying days of at least 0.5% each, 1% minimum reward; 100% nominal share subject to strike reductions."},"consistency":{"points":0.5,"source":"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model","reason":"35% best day, reset after each processed reward."},"funded":{"points":0,"source":"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model","reason":"1% loss per aggregated trade idea triggers cumulative strikes: second halves split, third reduces to 20%, fourth closes account; profits from warned ideas deducted."}},{"drawdown":"static","lossPercent":6,"consistency":35,"consistencyBasis":"net","source":"https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model"});
 addVariant('alpha-capital-group','alpha-pro','on-demand','On-Demand','Retrait à la demande','Pro 8/10, on-demand reward.','Pro 8/10, retrait à la demande.',{payout:{points:.5,source:"https://help.alphacapitalgroup.uk/en/articles/10102634-on-demand-performance-fee",reason:'Minimum 2% gross profit; request on demand once eligible.'},consistency:{points:.5,source:"https://help.alphacapitalgroup.uk/en/articles/10102634-on-demand-performance-fee",reason:'40% net best-day share per payout window.'}},{drawdown:'static',consistency:40,consistencyBasis:'net',source:"https://help.alphacapitalgroup.uk/en/articles/10102634-on-demand-performance-fee"});
+// Complete previously partial FXIFY entries without replacing the other verified offers.
+Object.assign(evidence.fxify,{
+  "fxi-one": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current standard funded, no paid add-ons.",
+    "scopeFr": "Compte financé standard actuel, sans option payante.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "6% highest closed-balance trailing maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "First profitable funded trade eligible, then 30 days standard; full withdrawal leaves no risk room after floor locks."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "No consistency at either stage."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "News and weekend holding allowed; EAs permitted on these challenge programmes, subject to general rules."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/",
+        "reason": "60-day inactivity breach; no ongoing funded target, standard account rules apply."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 6,
+      "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-funded-account/"
+    }
+  },
+  "fxi-two-std": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current standard funded, no paid add-ons.",
+    "scopeFr": "Compte financé standard actuel, sans option payante.",
+    "assessments": {
+      "drawdown": {
+        "points": 0,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "10% highest closed-balance trailing maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "First profitable funded trade eligible, then 30 days standard; full withdrawal leaves no risk room after floor locks."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "No consistency at either stage."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "News and weekend holding allowed; EAs permitted on these challenge programmes, subject to general rules."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/",
+        "reason": "60-day inactivity breach; no ongoing funded target, standard account rules apply."
+      }
+    },
+    "preset": {
+      "drawdown": "intraday",
+      "lossPercent": 10,
+      "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-funded-account/"
+    }
+  },
+  "fxi-two-classic": {
+    "checkedOn": "2026-11-28",
+    "scope": "Classic 14-day 80% default; 30-day 100% alternative.",
+    "scopeFr": "Classic 14 jours à 80 % ; option 30 jours à 100 %.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "10% static maximum loss."
+      },
+      "payout": {
+        "points": 0.5,
+        "source": "https://fxify.com/blog/top-prop-firms-with-two-phase-challenges/",
+        "reason": "14-day 80% or 30-day 100% choice; consistency gate counted separately."
+      },
+      "consistency": {
+        "points": 0.5,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "25% best day, historical highest daily profit persists after payout; not a simple net-cycle rule."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "News and weekend holding allowed; EAs permitted on these challenge programmes, subject to general rules."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/",
+        "reason": "60-day inactivity breach; no ongoing funded target, standard account rules apply."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 10,
+      "source": "https://fxify.com/blog/top-prop-firms-with-two-phase-challenges/",
+      "profitSplit": 80
+    }
+  },
+  "fxi-three": {
+    "checkedOn": "2026-11-28",
+    "scope": "Current standard funded, no paid add-ons.",
+    "scopeFr": "Compte financé standard actuel, sans option payante.",
+    "assessments": {
+      "drawdown": {
+        "points": 1,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "5% static maximum loss."
+      },
+      "payout": {
+        "points": 1,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "First profitable funded trade eligible, then 30 days standard; no trailing lock."
+      },
+      "consistency": {
+        "points": 1,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "No consistency at either stage."
+      },
+      "trading": {
+        "points": 1,
+        "source": "https://fxify.com/blog/why-most-traders-never-get-a-payout/",
+        "reason": "News and weekend holding allowed; EAs permitted on these challenge programmes, subject to general rules."
+      },
+      "funded": {
+        "points": 0.5,
+        "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/",
+        "reason": "60-day inactivity breach; no ongoing funded target, standard account rules apply."
+      }
+    },
+    "preset": {
+      "drawdown": "static",
+      "lossPercent": 5,
+      "source": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-funded-account/"
+    }
+  }
+});
+addVariant('fxify','fxi-two-classic','monthly-100','Monthly 100%','Mensuel 100%','Classic 30-day cycle, 100% share.','Classic cycle de 30 jours, partage 100 %.',{payout:{points:.5,source:"https://fxify.com/blog/top-prop-firms-with-two-phase-challenges/",reason:'30-day payout cycle; 100% share.'}},{drawdown:'static',lossPercent:10,profitSplit:100,source:"https://fxify.com/blog/top-prop-firms-with-two-phase-challenges/"});
 export function getProgrammeVariants(slug:string,id:string):ProgrammeVariant[]{return variants[slug]?.[id]??[]}
 
 export const CRITERIA
